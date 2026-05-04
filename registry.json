@@ -1,0 +1,108 @@
+{
+  "games": [
+    {
+      "id": "chess",
+      "name": "Chess",
+      "category": "strategy",
+      "icon": "&#9822;",
+      "iconBg": "#f0fdf4",
+      "description": "Play against the engine, analyze positions, and sharpen your tactics with puzzles.",
+      "appUrl": "https://chess.freegamestore.online",
+      "repo": "freegamestore-online/chess",
+      "cfProject": "freechessapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
+    },
+    {
+      "id": "puzzle",
+      "name": "Puzzle",
+      "category": "brain-training",
+      "icon": "&#129513;",
+      "iconBg": "#f5f3ff",
+      "description": "Logic puzzles, pattern recognition, and spatial reasoning challenges.",
+      "appUrl": "https://puzzle.freegamestore.online",
+      "repo": "freegamestore-online/puzzle",
+      "cfProject": "freepuzzle",
+      "type": "standalone",
+      "developer": "FreeGameStore"
+    },
+    {
+      "id": "tetris",
+      "name": "Tetris",
+      "category": "brain-training",
+      "icon": "&#127918;",
+      "iconBg": "#fef2f2",
+      "description": "Classic block-stacking puzzle. Seven pieces, line clearing, increasing speed. Touch and keyboard controls.",
+      "appUrl": "https://tetris.freegamestore.online",
+      "repo": "freegamestore-online/tetris",
+      "cfProject": "freetetris",
+      "type": "standalone",
+      "developer": "FreeGameStore"
+    },
+    {
+      "id": "snake",
+      "name": "Snake",
+      "category": "brain-training",
+      "icon": "&#128013;",
+      "iconBg": "#ecfdf5",
+      "description": "Classic snake game. Eat food, grow longer, don't hit yourself. Speed increases with score.",
+      "appUrl": "https://snake.freegamestore.online",
+      "repo": "freegamestore-online/snake",
+      "cfProject": "freesnake",
+      "type": "standalone",
+      "developer": "FreeGameStore"
+    },
+    {
+      "id": "minesweeper",
+      "name": "Minesweeper",
+      "category": "brain-training",
+      "icon": "&#128163;",
+      "iconBg": "#f0f9ff",
+      "description": "Classic mine-finding puzzle. Three difficulties. Flag mines, reveal safe cells, clear the board.",
+      "appUrl": "https://minesweeper.freegamestore.online",
+      "repo": "freegamestore-online/minesweeper",
+      "cfProject": "freeminesweeper",
+      "type": "standalone",
+      "developer": "FreeGameStore"
+    },
+    {
+      "id": "2048",
+      "name": "2048",
+      "category": "brain-training",
+      "icon": "&#128290;",
+      "iconBg": "#fef3c7",
+      "description": "Slide and merge tiles to reach 2048. Swipe on mobile, arrow keys on desktop. Best score saved.",
+      "appUrl": "https://2048.freegamestore.online",
+      "repo": "freegamestore-online/2048",
+      "cfProject": "free2048",
+      "type": "standalone",
+      "developer": "FreeGameStore"
+    },
+    {
+      "id": "slither",
+      "name": "Slither",
+      "category": "brain-training",
+      "icon": "&#128013;",
+      "iconBg": "#ecfdf5",
+      "description": "Slither.io-style snake game. Eat, grow, survive against AI bots.",
+      "appUrl": "https://slither.freegamestore.online",
+      "repo": "freegamestore-online/slither",
+      "cfProject": "freeslitherapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
+    },
+    {
+      "id": "racing",
+      "name": "Racing",
+      "category": "racing",
+      "icon": "&#127950;",
+      "iconBg": "#eff6ff",
+      "description": "3D endless runner. Dodge traffic, change lanes, speed increases over time. Keyboard and touch controls.",
+      "appUrl": "https://racing.freegamestore.online",
+      "repo": "freegamestore-online/racing",
+      "cfProject": "freeracingapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
+    }
+  ]
+}
