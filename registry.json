@@ -14,8 +14,11 @@
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
       "version": "1.0.0",
+      "firstPublished": "2026-04-15",
       "lastUpdated": "2026-05-04",
-      "changelog": "Initial release with engine play and puzzle mode."
+      "versions": [
+        { "version": "1.0.0", "date": "2026-04-15", "notes": "Initial release with engine play and puzzle mode." }
+      ]
     },
     {
       "id": "puzzle",
@@ -31,8 +34,11 @@
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
       "version": "1.0.0",
+      "firstPublished": "2026-04-15",
       "lastUpdated": "2026-05-04",
-      "changelog": "Initial release with logic and pattern puzzles."
+      "versions": [
+        { "version": "1.0.0", "date": "2026-04-15", "notes": "Initial release with logic and pattern puzzles." }
+      ]
     },
     {
       "id": "tetris",
@@ -48,8 +54,11 @@
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
       "version": "1.0.0",
+      "firstPublished": "2026-04-20",
       "lastUpdated": "2026-05-04",
-      "changelog": "Initial release with classic gameplay and level progression."
+      "versions": [
+        { "version": "1.0.0", "date": "2026-04-20", "notes": "Initial release with classic gameplay and level progression." }
+      ]
     },
     {
       "id": "snake",
@@ -65,8 +74,11 @@
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
       "version": "1.0.0",
+      "firstPublished": "2026-04-20",
       "lastUpdated": "2026-05-04",
-      "changelog": "Initial release with swipe and keyboard controls."
+      "versions": [
+        { "version": "1.0.0", "date": "2026-04-20", "notes": "Initial release with swipe and keyboard controls." }
+      ]
     },
     {
       "id": "minesweeper",
@@ -82,8 +94,11 @@
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
       "version": "1.0.0",
+      "firstPublished": "2026-04-22",
       "lastUpdated": "2026-05-04",
-      "changelog": "Initial release with easy, medium, and hard modes."
+      "versions": [
+        { "version": "1.0.0", "date": "2026-04-22", "notes": "Initial release with easy, medium, and hard modes." }
+      ]
     },
     {
       "id": "2048",
@@ -99,8 +114,12 @@
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
       "version": "1.1.0",
+      "firstPublished": "2026-04-25",
       "lastUpdated": "2026-05-04",
-      "changelog": "Improved how-to-play instructions explaining tile merging and game over."
+      "versions": [
+        { "version": "1.1.0", "date": "2026-05-04", "notes": "Improved how-to-play instructions explaining tile merging and game over." },
+        { "version": "1.0.0", "date": "2026-04-25", "notes": "Initial release with swipe and keyboard controls." }
+      ]
     },
     {
       "id": "slither",
@@ -116,8 +135,11 @@
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
       "version": "1.0.0",
+      "firstPublished": "2026-04-28",
       "lastUpdated": "2026-05-04",
-      "changelog": "Initial release with AI bots and boost mechanic."
+      "versions": [
+        { "version": "1.0.0", "date": "2026-04-28", "notes": "Initial release with AI bots and boost mechanic." }
+      ]
     },
     {
       "id": "racing",
@@ -133,8 +155,11 @@
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
       "version": "1.0.0",
+      "firstPublished": "2026-05-04",
       "lastUpdated": "2026-05-04",
-      "changelog": "Initial release with Three.js 3D rendering and 3-lane gameplay."
+      "versions": [
+        { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with Three.js 3D rendering and 3-lane gameplay." }
+      ]
     },
     {
       "id": "bowling",
@@ -150,8 +175,11 @@
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
       "version": "1.0.0",
+      "firstPublished": "2026-05-04",
       "lastUpdated": "2026-05-04",
-      "changelog": "Initial release with physics-based pin interaction."
+      "versions": [
+        { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with physics-based pin interaction." }
+      ]
     },
     {
       "id": "spaceshooter",
@@ -167,8 +195,11 @@
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
       "version": "1.0.0",
+      "firstPublished": "2026-05-04",
       "lastUpdated": "2026-05-04",
-      "changelog": "Initial release with enemy waves and power-ups."
+      "versions": [
+        { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with enemy waves and power-ups." }
+      ]
     },
     {
       "id": "breakout",
@@ -184,8 +215,11 @@
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
       "version": "1.0.0",
+      "firstPublished": "2026-05-04",
       "lastUpdated": "2026-05-04",
-      "changelog": "Initial release with multi-level brick layouts."
+      "versions": [
+        { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with multi-level brick layouts." }
+      ]
     },
     {
       "id": "platformer",
@@ -201,8 +235,11 @@
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
       "version": "1.0.0",
+      "firstPublished": "2026-05-04",
       "lastUpdated": "2026-05-04",
-      "changelog": "Initial release with procedural level generation."
+      "versions": [
+        { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with procedural level generation." }
+      ]
     }
   ]
 }

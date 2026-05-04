@@ -22,6 +22,17 @@ function typeLabel(type) {
   return type === 'standalone' ? 'Standalone (works offline)' : 'Connected (requires internet)';
 }
 
+// Helper: build version log HTML
+function buildVersionLog(game) {
+  const versions = game.versions || [{ version: game.version || '1.0.0', date: game.lastUpdated || 'N/A', notes: game.changelog || 'Initial release.' }];
+  return versions.map(v =>
+    `      <div style="margin-bottom: 1rem;">
+        <p><strong>v${v.version}</strong> <span style="color: var(--muted);">&mdash; ${v.date}</span></p>
+        <p style="color: var(--muted);">${v.notes}</p>
+      </div>`
+  ).join('\n');
+}
+
 // Ensure dist directories exist
 fs.mkdirSync(path.join(DIST, 'games'), { recursive: true });
 
@@ -75,8 +86,9 @@ games.forEach(game => {
     .replace(/\{\{DEVELOPER\}\}/g, game.developer)
     .replace(/\{\{AUTHOR\}\}/g, game.author || game.developer)
     .replace(/\{\{VERSION\}\}/g, game.version || '1.0.0')
+    .replace(/\{\{FIRST_PUBLISHED\}\}/g, game.firstPublished || game.lastUpdated || 'N/A')
     .replace(/\{\{LAST_UPDATED\}\}/g, game.lastUpdated || 'N/A')
-    .replace(/\{\{CHANGELOG\}\}/g, game.changelog || 'Initial release.')
+    .replace(/\{\{VERSION_LOG\}\}/g, buildVersionLog(game))
     .replace(/\{\{OFFLINE\}\}/g, offline)
     .replace(/\{\{ACCOUNT\}\}/g, account);
 
@@ -87,6 +99,7 @@ games.forEach(game => {
 
 const sitemapEntries = [
   '  <url><loc>https://freegamestore.online/</loc><priority>1.0</priority></url>',
+  '  <url><loc>https://freegamestore.online/leaderboard.html</loc><priority>0.9</priority></url>',
   '  <url><loc>https://freegamestore.online/about.html</loc><priority>0.8</priority></url>',
   '  <url><loc>https://freegamestore.online/contribute.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/guidelines.html</loc><priority>0.7</priority></url>',
@@ -119,7 +132,8 @@ const filesToCopy = [
   'contribute.html',
   'guidelines.html',
   'privacy.html',
-  'terms.html'
+  'terms.html',
+  'leaderboard.html'
 ];
 
 filesToCopy.forEach(file => {

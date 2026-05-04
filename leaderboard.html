@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leaderboard — FreeGameStore</title>
+  <meta name="description" content="See top scores across all FreeGameStore games. Anonymous, free, no sign-up required." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Leaderboard — FreeGameStore" />
+  <meta property="og:description" content="See top scores across all FreeGameStore games." />
+  <meta property="og:url" content="https://freegamestore.online/leaderboard.html" />
+  <meta property="og:image" content="https://freegamestore.online/icon-512.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .lb-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .lb-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .lb-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .lb-card-header .app-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .lb-card-header h3 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .lb-card-header .play-link {
+      margin-left: auto;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: white;
+      background: var(--accent);
+      padding: 0.3rem 0.8rem;
+      border-radius: 0.4rem;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .lb-card-header .play-link:hover { opacity: 0.85; text-decoration: none; }
+    .lb-tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .lb-tab {
+      flex: 1;
+      padding: 0.6rem;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition: color 0.15s, background 0.15s;
+    }
+    .lb-tab:hover { color: var(--ink); }
+    .lb-tab.active {
+      color: var(--accent);
+      box-shadow: inset 0 -2px 0 var(--accent);
+    }
+    .lb-rows {
+      padding: 0.5rem 0;
+      min-height: 120px;
+    }
+    .lb-row {
+      display: flex;
+      align-items: center;
+      padding: 0.45rem 1.5rem;
+      font-size: 0.88rem;
+      gap: 0.75rem;
+    }
+    .lb-rank {
+      width: 1.5rem;
+      text-align: right;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .lb-rank.gold { color: #d97706; }
+    .lb-rank.silver { color: #6b7280; }
+    .lb-rank.bronze { color: #b45309; }
+    .lb-name {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--muted);
+    }
+    .lb-score {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .lb-time {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .lb-empty {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .lb-loading {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .stats-bar {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+    .stat-value {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--accent);
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">Free<span>Game</span>Store</a>
+      <nav>
+        <a href="/">Games</a>
+        <a href="/leaderboard.html" class="active">Leaderboard</a>
+        <a href="/about.html">About</a>
+        <a href="/contribute.html">Contribute</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Leaderboard</h1>
+      <p>Top scores across all games. Play any game to get on the board — no sign-up needed.</p>
+      <div class="stats-bar" id="stats">
+        <div class="stat">
+          <span class="stat-value" id="stat-players">—</span>
+          <span class="stat-label">Total scores</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="stat-games">12</span>
+          <span class="stat-label">Games</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb-grid" id="leaderboard-grid"></div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left">
+        <a href="/" class="logo">Free<span>Game</span>Store</a>
+        <p>Free games, forever.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/about.html">About</a>
+        <a href="/contribute.html">Contribute</a>
+        <a href="/guidelines.html">Guidelines</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const API = 'https://freegamestore-leaderboard.serge-the-dev.workers.dev';
+    const GAMES = [
+      { id: 'racing', name: 'Racing', icon: '&#127950;', iconBg: '#eff6ff', url: 'https://racing.freegamestore.online' },
+      { id: 'bowling', name: 'Bowling', icon: '&#127923;', iconBg: '#fef3c7', url: 'https://bowling.freegamestore.online' },
+      { id: 'spaceshooter', name: 'Space Shooter', icon: '&#128640;', iconBg: '#eef2ff', url: 'https://spaceshooter.freegamestore.online' },
+      { id: 'breakout', name: 'Breakout', icon: '&#129513;', iconBg: '#fce7f3', url: 'https://breakout.freegamestore.online' },
+      { id: 'platformer', name: 'Platformer', icon: '&#127939;', iconBg: '#ecfdf5', url: 'https://platformer.freegamestore.online' },
+      { id: 'tetris', name: 'Tetris', icon: '&#127918;', iconBg: '#fef2f2', url: 'https://tetris.freegamestore.online' },
+      { id: 'snake', name: 'Snake', icon: '&#128013;', iconBg: '#ecfdf5', url: 'https://snake.freegamestore.online' },
+      { id: '2048', name: '2048', icon: '&#128290;', iconBg: '#fef3c7', url: 'https://2048.freegamestore.online' },
+      { id: 'slither', name: 'Slither', icon: '&#128013;', iconBg: '#ecfdf5', url: 'https://slither.freegamestore.online' },
+      { id: 'minesweeper', name: 'Minesweeper', icon: '&#128163;', iconBg: '#f0f9ff', url: 'https://minesweeper.freegamestore.online' },
+      { id: 'chess', name: 'Chess', icon: '&#9822;', iconBg: '#f0fdf4', url: 'https://chess.freegamestore.online' },
+      { id: 'puzzle', name: 'Puzzle', icon: '&#129513;', iconBg: '#f5f3ff', url: 'https://puzzle.freegamestore.online' },
+    ];
+
+    function timeAgo(dateStr) {
+      const now = Date.now();
+      const then = new Date(dateStr + 'Z').getTime();
+      const diff = Math.floor((now - then) / 1000);
+      if (diff < 60) return 'just now';
+      if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
+      if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
+      return Math.floor(diff / 86400) + 'd ago';
+    }
+
+    function rankClass(i) {
+      if (i === 0) return 'gold';
+      if (i === 1) return 'silver';
+      if (i === 2) return 'bronze';
+      return '';
+    }
+
+    function renderRows(scores, container) {
+      if (!scores.length) {
+        container.innerHTML = '<div class="lb-empty">No scores yet — be the first!</div>';
+        return;
+      }
+      container.innerHTML = scores.map((s, i) =>
+        '<div class="lb-row">' +
+          '<span class="lb-rank ' + rankClass(i) + '">' + (i + 1) + '</span>' +
+          '<span class="lb-name">' + s.player_name + '</span>' +
+          '<span class="lb-score">' + s.score.toLocaleString() + '</span>' +
+          '<span class="lb-time">' + timeAgo(s.created_at) + '</span>' +
+        '</div>'
+      ).join('');
+    }
+
+    async function loadGame(game) {
+      const card = document.getElementById('lb-' + game.id);
+      const rowsEl = card.querySelector('.lb-rows');
+      rowsEl.innerHTML = '<div class="lb-loading">Loading...</div>';
+
+      try {
+        const [topRes, recentRes] = await Promise.all([
+          fetch(API + '/api/leaderboard/' + game.id + '?limit=10'),
+          fetch(API + '/api/leaderboard/' + game.id + '/recent?limit=10'),
+        ]);
+        const topData = topRes.ok ? await topRes.json() : { scores: [] };
+        const recentData = recentRes.ok ? await recentRes.json() : { scores: [] };
+
+        card._topScores = topData.scores;
+        card._recentScores = recentData.scores;
+        card._tab = 'top';
+
+        renderRows(topData.scores, rowsEl);
+        return topData.scores.length + recentData.scores.length;
+      } catch {
+        rowsEl.innerHTML = '<div class="lb-empty">Could not load scores</div>';
+        return 0;
+      }
+    }
+
+    function buildGrid() {
+      const grid = document.getElementById('leaderboard-grid');
+      grid.innerHTML = GAMES.map(game =>
+        '<div class="lb-card" id="lb-' + game.id + '">' +
+          '<div class="lb-card-header">' +
+            '<div class="app-icon" style="background:' + game.iconBg + '">' + game.icon + '</div>' +
+            '<h3>' + game.name + '</h3>' +
+            '<a href="' + game.url + '" target="_blank" rel="noopener" class="play-link">Play</a>' +
+          '</div>' +
+          '<div class="lb-tabs">' +
+            '<button class="lb-tab active" data-tab="top" data-game="' + game.id + '">Top Scores</button>' +
+            '<button class="lb-tab" data-tab="recent" data-game="' + game.id + '">Recent</button>' +
+          '</div>' +
+          '<div class="lb-rows"><div class="lb-loading">Loading...</div></div>' +
+        '</div>'
+      ).join('');
+
+      // Tab switching
+      grid.addEventListener('click', function(e) {
+        const btn = e.target.closest('.lb-tab');
+        if (!btn) return;
+        const gameId = btn.dataset.game;
+        const tab = btn.dataset.tab;
+        const card = document.getElementById('lb-' + gameId);
+        if (!card) return;
+
+        card.querySelectorAll('.lb-tab').forEach(t => t.classList.remove('active'));
+        btn.classList.add('active');
+
+        const rowsEl = card.querySelector('.lb-rows');
+        const scores = tab === 'top' ? card._topScores : card._recentScores;
+        if (scores) renderRows(scores, rowsEl);
+      });
+    }
+
+    async function init() {
+      buildGrid();
+      let totalScores = 0;
+      const results = await Promise.all(GAMES.map(loadGame));
+      results.forEach(n => totalScores += n);
+      document.getElementById('stat-players').textContent = totalScores || '—';
+    }
+
+    init();
+  </script>
+</body>
+</html>

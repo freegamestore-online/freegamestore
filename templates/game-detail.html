@@ -34,6 +34,7 @@
       "name": "{{AUTHOR}}"
     },
     "softwareVersion": "{{VERSION}}",
+    "datePublished": "{{FIRST_PUBLISHED}}",
     "dateModified": "{{LAST_UPDATED}}",
     "license": "https://opensource.org/licenses/MIT"
   }
@@ -60,6 +61,7 @@
       <a href="/" class="logo">Free<span>Game</span>Store</a>
       <nav>
         <a href="/">Games</a>
+        <a href="/leaderboard.html">Leaderboard</a>
         <a href="https://freeappstore.online">Apps</a>
         <a href="/about.html">About</a>
         <a href="/contribute.html">Contribute</a>
@@ -104,6 +106,10 @@
         <div class="value">{{VERSION}}</div>
       </div>
       <div class="app-meta-item">
+        <div class="label">Published</div>
+        <div class="value">{{FIRST_PUBLISHED}}</div>
+      </div>
+      <div class="app-meta-item">
         <div class="label">Updated</div>
         <div class="value">{{LAST_UPDATED}}</div>
       </div>
@@ -120,9 +126,8 @@
     </section>
 
     <section class="app-section">
-      <h2>What's New</h2>
-      <p><strong>v{{VERSION}}</strong> ({{LAST_UPDATED}})</p>
-      <p>{{CHANGELOG}}</p>
+      <h2>Version History</h2>
+      {{VERSION_LOG}}
     </section>
 
     <section class="app-section">
