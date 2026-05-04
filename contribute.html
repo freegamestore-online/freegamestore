@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Build — FreeGameStore</title>
-  <meta name="description" content="Build a free game for FreeGameStore. Clone a template, write code (with AI or without), push to deploy. Open source, TypeScript, React." />
+  <meta name="description" content="Play, improve, or build games for FreeGameStore. Become a creator, clone a template, and ship your game to players worldwide." />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="style.css" />
@@ -17,7 +17,7 @@
     .card { background: var(--surface, #1a1a1a); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; }
     .card h3 { margin-bottom: 0.5rem; }
     .card p { font-size: 0.9rem; color: var(--muted); }
-    .highlight { background: var(--accent-soft, #eff6ff); border: 1px solid var(--accent); border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0; }
+    .highlight { background: var(--accent-soft, #ecfdf5); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0; }
   </style>
 </head>
 <body>
@@ -38,90 +38,126 @@
   <main class="container">
     <div class="page-header">
       <h1>Build a Game</h1>
-      <p>Create a free app and ship it to thousands of users. Use AI or code it yourself — your choice.</p>
+      <p>Play and improve existing games, or become a creator and build your own. Open source, free forever.</p>
     </div>
 
     <div class="page-content">
-      <div class="highlight">
-        <h3>3 commands to a working app</h3>
-        <div class="cmd">git clone https://github.com/freegamestore-online/template-game-canvas my-app<br>cd my-app && pnpm install<br>pnpm dev</div>
-        <p>That's it. You have a running app with the full FreeGameStore brand, dark mode, PWA support, and deployment config. Edit <code>web/src/App.tsx</code> and build your idea.</p>
-      </div>
 
-      <h2>Choose your path</h2>
+      <!-- Section 1: Play & improve games -->
+      <h2>Play &amp; improve games</h2>
+      <p>Every game on FreeGameStore is open source. You don't need to be a creator to make them better.</p>
+      <ul>
+        <li><strong>Browse games</strong> — visit the <a href="/">store</a> and play anything that interests you</li>
+        <li><strong>Report bugs</strong> — found a glitch? Open an issue on the game's <a href="https://github.com/freegamestore-online">GitHub repo</a></li>
+        <li><strong>Suggest features</strong> — ideas for new levels, modes, or improvements are always welcome</li>
+        <li><strong>Contribute via PRs</strong> — fork any game, make your changes, and submit a pull request. We review within 48 hours.</li>
+      </ul>
 
-      <div class="cards">
-        <div class="card">
-          <h3>Build with AI</h3>
-          <p>Use Claude Code, Cursor, Codex, or any AI coding tool. Point it to our <a href="https://raw.githubusercontent.com/freegamestore-online/ops/main/SKILLS.md">SKILLS.md</a> and it knows the entire platform — tech stack, brand, how to deploy.</p>
-          <div class="cmd" style="font-size:0.8rem;">Add this to your AI:<br><br>Read https://raw.githubusercontent.com/<br>freegamestore-online/ops/main/SKILLS.md</div>
-        </div>
-        <div class="card">
-          <h3>Code it yourself</h3>
-          <p>Clone a template, write TypeScript + React, push to main. Auto-deploys globally via Cloudflare Pages. No server to manage, no config to worry about.</p>
-        </div>
-        <div class="card">
-          <h3>Improve existing apps</h3>
-          <p>Every app is open source on <a href="https://github.com/freegamestore-online">GitHub</a>. Fork, fix bugs, add features, submit a PR. We review within 48 hours.</p>
-        </div>
-      </div>
+      <!-- Section 2: Become a Creator -->
+      <h2>Become a Creator</h2>
+      <p>Want to build your own game for the platform? Apply to join the creators team.</p>
 
-      <h2>Step by step</h2>
+      <h3>What creators get</h3>
+      <ul>
+        <li>Your own game hosted at <code>yourgame.freegamestore.online</code></li>
+        <li>Auto-deploy on every push to main via Cloudflare Pages</li>
+        <li>Listed in the FreeGameStore with its own game card</li>
+        <li>Access to all game templates and the shared design system</li>
+      </ul>
 
+      <h3>How to apply</h3>
       <ol class="steps">
         <li>
-          <strong>Clone the template</strong>
-          <div class="cmd">git clone https://github.com/freegamestore-online/template-game-canvas my-app</div>
-          <p>For games, use <a href="https://github.com/freegamestore-online">game templates</a> (canvas, grid, cards, 3D).</p>
+          <strong>Open an issue</strong> at <a href="https://github.com/freegamestore-online/submissions">github.com/freegamestore-online/submissions</a> with your game idea and GitHub username.
         </li>
         <li>
-          <strong>Build your app</strong>
-          <p>Edit <code>web/src/App.tsx</code>. The Shell component gives you the sidebar layout, fonts, and dark mode for free. Use <code>pnpm dev</code> for hot reload.</p>
+          <strong>Review within 48h</strong> — we'll review your proposal and get back to you.
         </li>
         <li>
-          <strong>Submit for review</strong>
-          <p>Push your code to a public GitHub repo and <a href="https://github.com/freegamestore-online/submissions/issues/new">open a submission</a>. Include your repo link and a brief description.</p>
+          <strong>Get provisioned</strong> — once approved, you're added to the creators team and your game repo is provisioned in the org.
         </li>
         <li>
-          <strong>Go live</strong>
-          <p>After approval, we provision your app — GitHub repo in our org, custom domain, auto-deploy. Your app is live at <code>yourgame.freegamestore.online</code>. Every push to main auto-deploys.</p>
+          <strong>Start coding</strong> — clone your repo, pick a template, and build your game.
         </li>
       </ol>
 
-      <h2>Tech stack</h2>
-      <p>All apps share the same foundation:</p>
-      <div class="cards">
-        <div class="card">
-          <h3>TypeScript + React 19</h3>
-          <p>Type-safe, modern React with hooks.</p>
-        </div>
-        <div class="card">
-          <h3>Vite + Tailwind CSS</h3>
-          <p>Fast builds, hot reload, utility-first CSS.</p>
-        </div>
-        <div class="card">
-          <h3>Cloudflare Pages</h3>
-          <p>Global CDN, auto-deploy on push, free forever.</p>
-        </div>
-        <div class="card">
-          <h3>PWA + Offline</h3>
-          <p>Installable, works offline, no app store needed.</p>
-        </div>
-      </div>
-
-      <h2>Rules</h2>
+      <h3>Requirements</h3>
       <ul>
         <li><strong>Free forever</strong> — no monetization, no ads, no paywalls</li>
         <li><strong>No tracking</strong> — zero analytics, cookies, or data collection</li>
         <li><strong>Open source</strong> — MIT license, public repo</li>
-        <li><strong>Works everywhere</strong> — responsive, mobile-first, PWA</li>
-        <li><strong>One app per category</strong> — check what's already built</li>
+        <li><strong>Uses the tech stack</strong> — TypeScript, React, Vite, Tailwind CSS, Cloudflare Pages</li>
       </ul>
 
+      <!-- Section 3: Start Building -->
+      <h2>Start Building</h2>
+      <p>For approved creators — here's how to go from zero to a live game.</p>
+
+      <h3>Templates</h3>
+      <p>Pick the template that matches your game type:</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Canvas (2D)</h3>
+          <p>HTML5 Canvas for 2D games — platformers, shooters, arcade classics.</p>
+        </div>
+        <div class="card">
+          <h3>Grid</h3>
+          <p>Grid-based layouts for puzzles, minesweeper, sudoku, match-3.</p>
+        </div>
+        <div class="card">
+          <h3>Cards</h3>
+          <p>Card game mechanics — solitaire, memory, deck-based games.</p>
+        </div>
+        <div class="card">
+          <h3>3D (Three.js)</h3>
+          <p>3D games with Three.js — racing, bowling, 3D puzzles.</p>
+        </div>
+      </div>
+
+      <h3>Clone and run</h3>
+      <div class="cmd">git clone https://github.com/freegamestore-online/template-game-canvas my-game</div>
+      <div class="cmd">cd my-game &amp;&amp; pnpm install</div>
+      <div class="cmd">pnpm dev</div>
+      <p>Edit <code>web/src/App.tsx</code> and start building. Hot reload is enabled by default.</p>
+
+      <h3>Test and ship</h3>
+      <div class="cmd">pnpm build</div>
+      <p>Verify the production build works locally, then push to main. Cloudflare Pages auto-deploys on every push — your game is live within minutes.</p>
+      <div class="cmd">git add -A &amp;&amp; git commit -m "my game" &amp;&amp; git push</div>
+
+      <h3>AI-assisted development</h3>
+      <p>Use Claude Code, Cursor, Codex, or any AI coding tool. Point it to our <a href="https://raw.githubusercontent.com/freegamestore-online/ops/main/SKILLS.md">SKILLS.md</a> and it knows the entire platform — tech stack, brand, templates, how to deploy.</p>
+      <div class="cmd" style="font-size:0.85rem;">Add this to your AI tool:<br><br>Read https://raw.githubusercontent.com/freegamestore-online/ops/main/SKILLS.md</div>
+
+      <h3>Game engines</h3>
+      <p>Depending on your game type, use the engine that fits best:</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Three.js</h3>
+          <p>Lightweight 3D engine. Great for simple 3D games and visualizations.</p>
+        </div>
+        <div class="card">
+          <h3>Babylon.js</h3>
+          <p>Full-featured 3D engine with physics and advanced rendering.</p>
+        </div>
+        <div class="card">
+          <h3>Phaser</h3>
+          <p>Popular 2D game framework with arcade and matter physics.</p>
+        </div>
+        <div class="card">
+          <h3>PixiJS</h3>
+          <p>Fast 2D rendering engine. Ideal for sprite-heavy games.</p>
+        </div>
+        <div class="card">
+          <h3>Kaplay</h3>
+          <p>Simple, fun game library for rapid 2D game development.</p>
+        </div>
+      </div>
+
       <div class="cta-box">
-        <h3>Ready?</h3>
-        <p>Clone the template and start building. We'll handle the rest.</p>
-        <a href="https://github.com/freegamestore-online/template-game-canvas" class="btn">Get the template &rarr;</a>
+        <h3>Ready to build?</h3>
+        <p>Open a submission issue with your game idea. We'll get you set up within 48 hours.</p>
+        <a href="https://github.com/freegamestore-online/submissions/issues/new" class="btn">Submit your game idea &rarr;</a>
       </div>
     </div>
   </main>
