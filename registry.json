@@ -11,7 +11,11 @@
       "repo": "freegamestore-online/chess",
       "cfProject": "freechessapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "lastUpdated": "2026-05-04",
+      "changelog": "Initial release with engine play and puzzle mode."
     },
     {
       "id": "puzzle",
@@ -24,7 +28,11 @@
       "repo": "freegamestore-online/puzzle",
       "cfProject": "freepuzzle",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "lastUpdated": "2026-05-04",
+      "changelog": "Initial release with logic and pattern puzzles."
     },
     {
       "id": "tetris",
@@ -37,7 +45,11 @@
       "repo": "freegamestore-online/tetris",
       "cfProject": "freetetris",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "lastUpdated": "2026-05-04",
+      "changelog": "Initial release with classic gameplay and level progression."
     },
     {
       "id": "snake",
@@ -50,7 +62,11 @@
       "repo": "freegamestore-online/snake",
       "cfProject": "freesnake",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "lastUpdated": "2026-05-04",
+      "changelog": "Initial release with swipe and keyboard controls."
     },
     {
       "id": "minesweeper",
@@ -63,7 +79,11 @@
       "repo": "freegamestore-online/minesweeper",
       "cfProject": "freeminesweeper",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "lastUpdated": "2026-05-04",
+      "changelog": "Initial release with easy, medium, and hard modes."
     },
     {
       "id": "2048",
@@ -76,7 +96,11 @@
       "repo": "freegamestore-online/2048",
       "cfProject": "free2048",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.1.0",
+      "lastUpdated": "2026-05-04",
+      "changelog": "Improved how-to-play instructions explaining tile merging and game over."
     },
     {
       "id": "slither",
@@ -89,7 +113,11 @@
       "repo": "freegamestore-online/slither",
       "cfProject": "freeslitherapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "lastUpdated": "2026-05-04",
+      "changelog": "Initial release with AI bots and boost mechanic."
     },
     {
       "id": "racing",
@@ -102,7 +130,79 @@
       "repo": "freegamestore-online/racing",
       "cfProject": "freeracingapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "lastUpdated": "2026-05-04",
+      "changelog": "Initial release with Three.js 3D rendering and 3-lane gameplay."
+    },
+    {
+      "id": "bowling",
+      "name": "Bowling",
+      "category": "sports",
+      "icon": "&#127923;",
+      "iconBg": "#fef3c7",
+      "description": "3D bowling with Babylon.js. Aim, set power, and knock down pins. Full 10-frame scoring with strikes and spares.",
+      "appUrl": "https://bowling.freegamestore.online",
+      "repo": "freegamestore-online/bowling",
+      "cfProject": "freebowlingapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "lastUpdated": "2026-05-04",
+      "changelog": "Initial release with physics-based pin interaction."
+    },
+    {
+      "id": "spaceshooter",
+      "name": "Space Shooter",
+      "category": "arcade",
+      "icon": "&#128640;",
+      "iconBg": "#eef2ff",
+      "description": "Classic space shooter built with Phaser. Destroy enemies, dodge fire, survive as long as you can.",
+      "appUrl": "https://spaceshooter.freegamestore.online",
+      "repo": "freegamestore-online/spaceshooter",
+      "cfProject": "freespaceshooterapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "lastUpdated": "2026-05-04",
+      "changelog": "Initial release with enemy waves and power-ups."
+    },
+    {
+      "id": "breakout",
+      "name": "Breakout",
+      "category": "arcade",
+      "icon": "&#129513;",
+      "iconBg": "#fce7f3",
+      "description": "Breakout built with PixiJS. Break all the bricks with the ball. Multiple levels, increasing speed.",
+      "appUrl": "https://breakout.freegamestore.online",
+      "repo": "freegamestore-online/breakout",
+      "cfProject": "freebreakoutapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "lastUpdated": "2026-05-04",
+      "changelog": "Initial release with multi-level brick layouts."
+    },
+    {
+      "id": "platformer",
+      "name": "Platformer",
+      "category": "arcade",
+      "icon": "&#127939;",
+      "iconBg": "#ecfdf5",
+      "description": "Endless platformer built with Kaplay. Jump between platforms, collect coins, don't fall.",
+      "appUrl": "https://platformer.freegamestore.online",
+      "repo": "freegamestore-online/platformer",
+      "cfProject": "freeplatformerapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "lastUpdated": "2026-05-04",
+      "changelog": "Initial release with procedural level generation."
     }
   ]
 }

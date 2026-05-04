@@ -3,17 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{NAME}} — FreeGameStore</title>
-  <meta name="description" content="Free {{NAME_LOWER}} app. {{DESCRIPTION}} Works offline, no account needed." />
+  <title>{{NAME}} — Free Online Game | FreeGameStore</title>
+  <meta name="description" content="Play {{NAME}} for free. {{DESCRIPTION}} No download, no account, works on any device." />
+  <link rel="canonical" href="https://freegamestore.online/games/{{ID}}.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{NAME}} — FreeGameStore" />
-  <meta property="og:description" content="Free {{NAME_LOWER}} app. {{DESCRIPTION}}" />
-  <meta property="og:url" content="https://freegamestore.online/apps/{{ID}}.html" />
+  <meta property="og:title" content="{{NAME}} — Free Online Game | FreeGameStore" />
+  <meta property="og:description" content="Play {{NAME}} for free. {{DESCRIPTION}}" />
+  <meta property="og:url" content="https://freegamestore.online/games/{{ID}}.html" />
   <meta property="og:image" content="https://freegamestore.online/icon-512.png" />
   <meta name="twitter:card" content="summary" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "{{NAME}}",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "{{DESCRIPTION}}",
+    "url": "{{APP_URL}}",
+    "author": {
+      "@type": "Organization",
+      "name": "{{AUTHOR}}"
+    },
+    "softwareVersion": "{{VERSION}}",
+    "dateModified": "{{LAST_UPDATED}}",
+    "license": "https://opensource.org/licenses/MIT"
+  }
+  </script>
   <style>
     .app-hero { display: flex; align-items: center; gap: 1.5rem; padding: 2rem 0 3rem; }
     .app-hero-icon { width: 80px; height: 80px; border-radius: 1.25rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; flex-shrink: 0; }
@@ -33,13 +57,14 @@
 <body>
   <header>
     <div class="container">
-      <a href="/" class="logo">Free<span>App</span>Store</a>
+      <a href="/" class="logo">Free<span>Game</span>Store</a>
       <nav>
-        <a href="/">Apps</a>
+        <a href="/">Games</a>
+        <a href="https://freeappstore.online">Apps</a>
         <a href="/about.html">About</a>
         <a href="/contribute.html">Contribute</a>
         <a href="/guidelines.html">Guidelines</a>
-        <a href="https://proappstore.online" class="pro-link">Pro</a>
+        <a href="https://progamestore.online" class="pro-link">Pro</a>
       </nav>
     </div>
   </header>
@@ -55,7 +80,7 @@
 
     <p style="font-size: 1.1rem; color: var(--muted); max-width: 600px; margin-bottom: 1.5rem;">{{DESCRIPTION}}</p>
 
-    <a class="app-cta" href="{{APP_URL}}" target="_blank" rel="noopener">Open {{NAME}} &rarr;</a>
+    <a class="app-cta" href="{{APP_URL}}" target="_blank" rel="noopener">Play {{NAME}} &rarr;</a>
 
     <div class="app-meta">
       <div class="app-meta-item">
@@ -75,6 +100,14 @@
         <div class="value">{{ACCOUNT}}</div>
       </div>
       <div class="app-meta-item">
+        <div class="label">Version</div>
+        <div class="value">{{VERSION}}</div>
+      </div>
+      <div class="app-meta-item">
+        <div class="label">Updated</div>
+        <div class="value">{{LAST_UPDATED}}</div>
+      </div>
+      <div class="app-meta-item">
         <div class="label">Source</div>
         <div class="value"><a href="https://github.com/{{REPO}}" class="source-link">GitHub</a></div>
       </div>
@@ -83,7 +116,13 @@
     <section class="app-section">
       <h2>About</h2>
       <p>{{DESCRIPTION}}</p>
-      <p style="margin-top: 0.75rem;"><strong>Type:</strong> {{TYPE_LABEL}} &middot; <strong>Developer:</strong> {{DEVELOPER}}</p>
+      <p style="margin-top: 0.75rem;"><strong>Type:</strong> {{TYPE_LABEL}} &middot; <strong>Author:</strong> {{AUTHOR}} &middot; <strong>Developer:</strong> {{DEVELOPER}}</p>
+    </section>
+
+    <section class="app-section">
+      <h2>What's New</h2>
+      <p><strong>v{{VERSION}}</strong> ({{LAST_UPDATED}})</p>
+      <p>{{CHANGELOG}}</p>
     </section>
 
     <section class="app-section">
@@ -101,7 +140,7 @@
   <footer>
     <div class="container">
       <div class="footer-left">
-        <a href="/" class="logo">Free<span>App</span>Store</a>
+        <a href="/" class="logo">Free<span>Game</span>Store</a>
         <p>Free forever, open source, privacy-first.</p>
       </div>
       <div class="footer-links">
@@ -110,8 +149,8 @@
         <a href="/guidelines.html">Guidelines</a>
         <a href="/privacy.html">Privacy</a>
         <a href="/terms.html">Terms</a>
-        <a href="https://github.com/freeappstore-online">GitHub</a>
-        <a href="https://proappstore.online" style="color:var(--pro);">Pro</a>
+        <a href="https://github.com/freegamestore-online">GitHub</a>
+        <a href="https://progamestore.online" style="color:var(--pro);">Pro</a>
       </div>
     </div>
   </footer>

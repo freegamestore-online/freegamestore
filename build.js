@@ -73,6 +73,10 @@ games.forEach(game => {
     .replace(/\{\{REPO\}\}/g, game.repo)
     .replace(/\{\{TYPE_LABEL\}\}/g, typeLabel(game.type))
     .replace(/\{\{DEVELOPER\}\}/g, game.developer)
+    .replace(/\{\{AUTHOR\}\}/g, game.author || game.developer)
+    .replace(/\{\{VERSION\}\}/g, game.version || '1.0.0')
+    .replace(/\{\{LAST_UPDATED\}\}/g, game.lastUpdated || 'N/A')
+    .replace(/\{\{CHANGELOG\}\}/g, game.changelog || 'Initial release.')
     .replace(/\{\{OFFLINE\}\}/g, offline)
     .replace(/\{\{ACCOUNT\}\}/g, account);
 
