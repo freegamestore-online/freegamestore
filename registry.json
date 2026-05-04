@@ -420,6 +420,166 @@
       "versions": [
         { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with turtle layout, hint, and shuffle." }
       ]
+    },
+    {
+      "id": "checkers",
+      "name": "Checkers",
+      "category": "strategy",
+      "icon": "&#9898;",
+      "iconBg": "#fef2f2",
+      "description": "Classic checkers vs AI. Mandatory jumps, multi-captures, king promotion. Minimax AI.",
+      "appUrl": "https://checkers.freegamestore.online",
+      "repo": "freegamestore-online/checkers",
+      "cfProject": "freecheckersapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with minimax AI and multi-jump chains." }
+      ]
+    },
+    {
+      "id": "hangman",
+      "name": "Hangman",
+      "category": "brain-training",
+      "icon": "&#128100;",
+      "iconBg": "#f5f3ff",
+      "description": "Guess the word letter by letter. Four categories. Canvas-drawn hangman. On-screen keyboard.",
+      "appUrl": "https://hangman.freegamestore.online",
+      "repo": "freegamestore-online/hangman",
+      "cfProject": "freehangmanapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with 4 word categories." }
+      ]
+    },
+    {
+      "id": "memory",
+      "name": "Memory",
+      "category": "brain-training",
+      "icon": "&#129504;",
+      "iconBg": "#ecfdf5",
+      "description": "Flip cards and find matching pairs. Three grid sizes. CSS 3D flip animations.",
+      "appUrl": "https://memory.freegamestore.online",
+      "repo": "freegamestore-online/memory",
+      "cfProject": "freememoryapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with three difficulty levels." }
+      ]
+    },
+    {
+      "id": "frogger",
+      "name": "Frogger",
+      "category": "arcade",
+      "icon": "&#128056;",
+      "iconBg": "#ecfdf5",
+      "description": "Cross roads and rivers to reach home. Dodge traffic, ride logs. Classic arcade action.",
+      "appUrl": "https://frogger.freegamestore.online",
+      "repo": "freegamestore-online/frogger",
+      "cfProject": "freefroggerapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with road and river lanes." }
+      ]
+    },
+    {
+      "id": "match3",
+      "name": "Match 3",
+      "category": "brain-training",
+      "icon": "&#128142;",
+      "iconBg": "#fce7f3",
+      "description": "Swap gems to match 3 or more. Cascades, combos, 60-second timed mode.",
+      "appUrl": "https://match3.freegamestore.online",
+      "repo": "freegamestore-online/match3",
+      "cfProject": "freematch3app",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with cascade combos and timed mode." }
+      ]
+    },
+    {
+      "id": "whackamole",
+      "name": "Whack-a-Mole",
+      "category": "arcade",
+      "icon": "&#128056;",
+      "iconBg": "#fef3c7",
+      "description": "Whack moles as they pop up! Avoid red ones. Catch golden ones for bonus. 30-second frenzy.",
+      "appUrl": "https://whackamole.freegamestore.online",
+      "repo": "freegamestore-online/whackamole",
+      "cfProject": "freewhackamoleapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with 3 mole types and 30s timer." }
+      ]
+    },
+    {
+      "id": "wordsearch",
+      "name": "Word Search",
+      "category": "brain-training",
+      "icon": "&#128269;",
+      "iconBg": "#eff6ff",
+      "description": "Find hidden words in a letter grid. Five themes. Drag to select. Timer challenge.",
+      "appUrl": "https://wordsearch.freegamestore.online",
+      "repo": "freegamestore-online/wordsearch",
+      "cfProject": "freewordsearchapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with 5 word themes." }
+      ]
+    },
+    {
+      "id": "asteroids",
+      "name": "Asteroids",
+      "category": "arcade",
+      "icon": "&#9732;",
+      "iconBg": "#f0f9ff",
+      "description": "Classic vector-style space shooter. Rotate, thrust, shoot asteroids. Wrap-around screen.",
+      "appUrl": "https://asteroids.freegamestore.online",
+      "repo": "freegamestore-online/asteroids",
+      "cfProject": "freeasteroidsapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        { "version": "1.0.0", "date": "2026-05-04", "notes": "Initial release with momentum physics and screen wrap." }
+      ]
     }
   ]
 }
