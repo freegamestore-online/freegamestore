@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -eo pipefail
 
 REPOS_DIR="${1:-/Users/serge/dev/fgs}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -18,6 +18,23 @@ declare -A PROJECT_MAP=(
   [spaceshooter]=freespaceshooterapp
   [breakout]=freebreakoutapp
   [platformer]=freeplatformerapp
+  [sudoku]=freesudokuapp
+  [pacman]=freepacmanapp
+  [pong]=freepongapp
+  [flappy]=freeflappyapp
+  [solitaire]=freesolitaireapp
+  [connect4]=freeconnect4app
+  [wordle]=freewordleapp
+  [simon]=freesimonapp
+  [mahjong]=freemahjongapp
+  [checkers]=freecheckersapp
+  [hangman]=freehangmanapp
+  [memory]=freememoryapp
+  [frogger]=freefroggerapp
+  [match3]=freematch3app
+  [whackamole]=freewhackamoleapp
+  [wordsearch]=freewordsearchapp
+  [asteroids]=freeasteroidsapp
 )
 
 for repo in "${!PROJECT_MAP[@]}"; do
