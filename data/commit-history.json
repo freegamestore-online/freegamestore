@@ -74,5 +74,1011 @@
         }
       }
     ]
+  },
+  "freegamestore-online/snake": {
+    "meta": {
+      "created_at": "2026-05-04T06:07:31Z",
+      "pushed_at": "2026-05-04T11:05:34Z"
+    },
+    "commits": [
+      {
+        "sha": "cad08cae85e3eb3c29fe792251597be0c8d40ce2",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/cad08cae85e3eb3c29fe792251597be0c8d40ce2",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "3b3351e8dbd67d16c628f37ea43282a0e62d4f2b",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/3b3351e8dbd67d16c628f37ea43282a0e62d4f2b",
+        "commit": {
+          "message": "Add leaderboard integration",
+          "author": {
+            "date": "2026-05-04T10:27:15Z"
+          }
+        }
+      },
+      {
+        "sha": "d7d6ab5245d2e034e921984b06f609c2cdac4efa",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/d7d6ab5245d2e034e921984b06f609c2cdac4efa",
+        "commit": {
+          "message": "Fix compliance: check for freegamestore.online link",
+          "author": {
+            "date": "2026-05-04T08:39:12Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/solitaire": {
+    "meta": {
+      "created_at": "2026-05-04T10:14:12Z",
+      "pushed_at": "2026-05-04T11:06:01Z"
+    },
+    "commits": [
+      {
+        "sha": "2ae00c1efea490dd1d383bc89d3bd78676d798b7",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/2ae00c1efea490dd1d383bc89d3bd78676d798b7",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "d67a0563c79d41d3ceb5a2957d4186b9b0519a63",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/d67a0563c79d41d3ceb5a2957d4186b9b0519a63",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:01:49Z"
+          }
+        }
+      },
+      {
+        "sha": "cefd73f1746e8761078d2bb2226c5c61df30eeb5",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/cefd73f1746e8761078d2bb2226c5c61df30eeb5",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:13:50Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/pacman": {
+    "meta": {
+      "created_at": "2026-05-04T10:13:58Z",
+      "pushed_at": "2026-05-04T11:05:55Z"
+    },
+    "commits": [
+      {
+        "sha": "2549d85617520b205604c61821a1c1110f26c0d6",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/2549d85617520b205604c61821a1c1110f26c0d6",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "1ed396378ffe8b420440fee4afe44a3bad7bf6d7",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/1ed396378ffe8b420440fee4afe44a3bad7bf6d7",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:01:42Z"
+          }
+        }
+      },
+      {
+        "sha": "17d21789b4b0f16ca221e4f5ef5d7f838bb5c5dd",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/17d21789b4b0f16ca221e4f5ef5d7f838bb5c5dd",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:13:50Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/platformer": {
+    "meta": {
+      "created_at": "2026-05-04T09:48:50Z",
+      "pushed_at": "2026-05-04T11:05:51Z"
+    },
+    "commits": [
+      {
+        "sha": "a5e71753757a329669d9f916bf8f4950b91387c5",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/a5e71753757a329669d9f916bf8f4950b91387c5",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "5f4ea0bc1841f4078aa4bdd5cac3f8d3d63cbc33",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/5f4ea0bc1841f4078aa4bdd5cac3f8d3d63cbc33",
+        "commit": {
+          "message": "Fix compliance: title, fonts, PWA manifest\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-04T09:52:05Z"
+          }
+        }
+      },
+      {
+        "sha": "21dd2fcf3621d094376557769a5c1a8e9c905577",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/21dd2fcf3621d094376557769a5c1a8e9c905577",
+        "commit": {
+          "message": "Initial release: Platformer with Kaplay",
+          "author": {
+            "date": "2026-05-04T09:48:29Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/sudoku": {
+    "meta": {
+      "created_at": "2026-05-04T09:58:03Z",
+      "pushed_at": "2026-05-04T11:05:53Z"
+    },
+    "commits": [
+      {
+        "sha": "553f9c615ff13ca738ede8067619bbc96bddefc7",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/553f9c615ff13ca738ede8067619bbc96bddefc7",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "5725f33bc223afc43462f03a782c5b03f760049d",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/5725f33bc223afc43462f03a782c5b03f760049d",
+        "commit": {
+          "message": "Fix CF project name in deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:02:46Z"
+          }
+        }
+      },
+      {
+        "sha": "aa0fb0e88086e4c52c3a401b09938732ef8a7d64",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/aa0fb0e88086e4c52c3a401b09938732ef8a7d64",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:01:17Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/checkers": {
+    "meta": {
+      "created_at": "2026-05-04T10:38:28Z",
+      "pushed_at": "2026-05-04T11:06:10Z"
+    },
+    "commits": [
+      {
+        "sha": "330e6ae2cc750e8e53c7df6e459f8e338514fbc7",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/330e6ae2cc750e8e53c7df6e459f8e338514fbc7",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:25Z"
+          }
+        }
+      },
+      {
+        "sha": "0c796aecd5a9f34a48becdbace652087b4435400",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/0c796aecd5a9f34a48becdbace652087b4435400",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:01:59Z"
+          }
+        }
+      },
+      {
+        "sha": "cc90e780191e4454ff60a10c7330f733b15b9240",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/cc90e780191e4454ff60a10c7330f733b15b9240",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:38:19Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/breakout": {
+    "meta": {
+      "created_at": "2026-05-04T09:48:46Z",
+      "pushed_at": "2026-05-04T11:05:49Z"
+    },
+    "commits": [
+      {
+        "sha": "5825cbedf1be26b310ea2dc7daed57b1526b1997",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/5825cbedf1be26b310ea2dc7daed57b1526b1997",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "6ed8da2f1b8364de1a8a4230aa066cc480558506",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/6ed8da2f1b8364de1a8a4230aa066cc480558506",
+        "commit": {
+          "message": "Fix compliance: title, fonts, PWA manifest\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-04T09:52:03Z"
+          }
+        }
+      },
+      {
+        "sha": "3fe757d9d36002ca082d26b4974bac740ac22d4d",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/3fe757d9d36002ca082d26b4974bac740ac22d4d",
+        "commit": {
+          "message": "Initial release: Breakout with PixiJS 8",
+          "author": {
+            "date": "2026-05-04T09:48:28Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/puzzle": {
+    "meta": {
+      "created_at": "2026-05-03T02:32:55Z",
+      "pushed_at": "2026-05-04T09:52:00Z"
+    },
+    "commits": [
+      {
+        "sha": "e6d98b04fdb771b37055c90f142f89d02372b576",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/e6d98b04fdb771b37055c90f142f89d02372b576",
+        "commit": {
+          "message": "Fix compliance: title, fonts, PWA manifest\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-04T09:51:58Z"
+          }
+        }
+      },
+      {
+        "sha": "ebd7ca09112dec9bf37e2fb7b5f4699934a56397",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/ebd7ca09112dec9bf37e2fb7b5f4699934a56397",
+        "commit": {
+          "message": "Fix compliance: check for freegamestore.online link",
+          "author": {
+            "date": "2026-05-04T08:39:05Z"
+          }
+        }
+      },
+      {
+        "sha": "d0efdf2450d08c692f226412ce53ad0e63aef6a6",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/d0efdf2450d08c692f226412ce53ad0e63aef6a6",
+        "commit": {
+          "message": "Add Cloudflare Pages auto-deploy on push to main",
+          "author": {
+            "date": "2026-05-04T08:36:59Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/connect4": {
+    "meta": {
+      "created_at": "2026-05-04T10:14:16Z",
+      "pushed_at": "2026-05-04T11:06:03Z"
+    },
+    "commits": [
+      {
+        "sha": "76489abcf955732df71d3de0f0e47dc6317a51bd",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/76489abcf955732df71d3de0f0e47dc6317a51bd",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "bad19106ff2b96f2333beada125b84d9c2c72d98",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/bad19106ff2b96f2333beada125b84d9c2c72d98",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:01:51Z"
+          }
+        }
+      },
+      {
+        "sha": "b80c58ed422e9ae766f4e060dbfb3e15a820bfc0",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/b80c58ed422e9ae766f4e060dbfb3e15a820bfc0",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:13:51Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/spaceshooter": {
+    "meta": {
+      "created_at": "2026-05-04T09:48:41Z",
+      "pushed_at": "2026-05-04T11:05:47Z"
+    },
+    "commits": [
+      {
+        "sha": "438602e31ed15874eb63a1fc3a42ff1cc02c7f29",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/438602e31ed15874eb63a1fc3a42ff1cc02c7f29",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "f84d7678a875eb384a7138b3ef1310dff7e39ada",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/f84d7678a875eb384a7138b3ef1310dff7e39ada",
+        "commit": {
+          "message": "Fix compliance: title, fonts, PWA manifest\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-04T09:52:07Z"
+          }
+        }
+      },
+      {
+        "sha": "e06976e9980c226f190067caf37706d75679844c",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/e06976e9980c226f190067caf37706d75679844c",
+        "commit": {
+          "message": "Initial release: Space shooter with Phaser 3",
+          "author": {
+            "date": "2026-05-04T09:48:26Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/minesweeper": {
+    "meta": {
+      "created_at": "2026-05-04T06:07:34Z",
+      "pushed_at": "2026-05-04T11:05:36Z"
+    },
+    "commits": [
+      {
+        "sha": "4980be18478160dc7b5f4aa3dcf8dcb167cc2b48",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/4980be18478160dc7b5f4aa3dcf8dcb167cc2b48",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "627ff2e509596aca75183cf48a69326ff2553f7b",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/627ff2e509596aca75183cf48a69326ff2553f7b",
+        "commit": {
+          "message": "Add leaderboard integration",
+          "author": {
+            "date": "2026-05-04T10:27:17Z"
+          }
+        }
+      },
+      {
+        "sha": "f99778b3b21567041d7aa70a419978cb202b1640",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/f99778b3b21567041d7aa70a419978cb202b1640",
+        "commit": {
+          "message": "Fix compliance: check for freegamestore.online link",
+          "author": {
+            "date": "2026-05-04T08:39:03Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/bowling": {
+    "meta": {
+      "created_at": "2026-05-04T09:48:37Z",
+      "pushed_at": "2026-05-04T11:05:45Z"
+    },
+    "commits": [
+      {
+        "sha": "c13804867efb8f6662fb16eb11a088c64afc121c",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/c13804867efb8f6662fb16eb11a088c64afc121c",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "343938b4d682a601a7fd0143cc9c1dcb70f40673",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/343938b4d682a601a7fd0143cc9c1dcb70f40673",
+        "commit": {
+          "message": "Improve playability: DOM HUD, fixed camera, better touch controls, strike/spare overlay",
+          "author": {
+            "date": "2026-05-04T10:21:14Z"
+          }
+        }
+      },
+      {
+        "sha": "6e069e169327ec55054976c7e9fa898c819c8bad",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/6e069e169327ec55054976c7e9fa898c819c8bad",
+        "commit": {
+          "message": "Fix compliance: title, fonts, PWA manifest\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-04T09:52:00Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/flappy": {
+    "meta": {
+      "created_at": "2026-05-04T10:14:08Z",
+      "pushed_at": "2026-05-04T11:05:59Z"
+    },
+    "commits": [
+      {
+        "sha": "e8981e5ad602eb3e76c78c77c2046bfa973c262a",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/e8981e5ad602eb3e76c78c77c2046bfa973c262a",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "2a1454b17a04555f8cdfd52f928456056ee668a3",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/2a1454b17a04555f8cdfd52f928456056ee668a3",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:01:46Z"
+          }
+        }
+      },
+      {
+        "sha": "248779fd50e62354f4234fe81ebf0f3d5b6175ac",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/248779fd50e62354f4234fe81ebf0f3d5b6175ac",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:13:50Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/pong": {
+    "meta": {
+      "created_at": "2026-05-04T10:14:03Z",
+      "pushed_at": "2026-05-04T11:05:57Z"
+    },
+    "commits": [
+      {
+        "sha": "c301c1c4cbd4b4c78831a791e4a63f065c3e6e97",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/c301c1c4cbd4b4c78831a791e4a63f065c3e6e97",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "f7a7d764ed75d3767b04df039f098965d1118705",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/f7a7d764ed75d3767b04df039f098965d1118705",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:01:44Z"
+          }
+        }
+      },
+      {
+        "sha": "79fb2cb408f7147e6be23b306fccf48185a064e6",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/79fb2cb408f7147e6be23b306fccf48185a064e6",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:13:50Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/match3": {
+    "meta": {
+      "created_at": "2026-05-04T10:38:44Z",
+      "pushed_at": "2026-05-04T11:06:19Z"
+    },
+    "commits": [
+      {
+        "sha": "24d1394ad031bd324f7b5a77622499f7592f0758",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/24d1394ad031bd324f7b5a77622499f7592f0758",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:25Z"
+          }
+        }
+      },
+      {
+        "sha": "e97ac7f4c21cf32a8d39f16435c78191c2ce256b",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/e97ac7f4c21cf32a8d39f16435c78191c2ce256b",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:02:06Z"
+          }
+        }
+      },
+      {
+        "sha": "39d59c63af85e2eaf6d96153363baa66f6d94301",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/39d59c63af85e2eaf6d96153363baa66f6d94301",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:38:20Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/whackamole": {
+    "meta": {
+      "created_at": "2026-05-04T10:38:47Z",
+      "pushed_at": "2026-05-04T11:06:21Z"
+    },
+    "commits": [
+      {
+        "sha": "c99263a2218083bfb0ae5b2a04c2cdf018820edd",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/c99263a2218083bfb0ae5b2a04c2cdf018820edd",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:25Z"
+          }
+        }
+      },
+      {
+        "sha": "c1291b54861c96314f658885470139e9540690bd",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/c1291b54861c96314f658885470139e9540690bd",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:02:08Z"
+          }
+        }
+      },
+      {
+        "sha": "6af8146c061e3efd222b100a45fc780251b101c2",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/6af8146c061e3efd222b100a45fc780251b101c2",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:38:20Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/hangman": {
+    "meta": {
+      "created_at": "2026-05-04T10:38:32Z",
+      "pushed_at": "2026-05-04T11:06:12Z"
+    },
+    "commits": [
+      {
+        "sha": "631c8e15bfe0c14c9117fed63b8f1cff26d7d42b",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/631c8e15bfe0c14c9117fed63b8f1cff26d7d42b",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:25Z"
+          }
+        }
+      },
+      {
+        "sha": "ae33cba6832a6a195f77be9562dd35631bb92e8b",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/ae33cba6832a6a195f77be9562dd35631bb92e8b",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:38:20Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/simon": {
+    "meta": {
+      "created_at": "2026-05-04T10:14:22Z",
+      "pushed_at": "2026-05-04T11:06:07Z"
+    },
+    "commits": [
+      {
+        "sha": "116f8d8389695ee071468a11ffee280b697774fd",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/116f8d8389695ee071468a11ffee280b697774fd",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:25Z"
+          }
+        }
+      },
+      {
+        "sha": "d364c03d40a75e6c2a591be7b8873432848fdea1",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/d364c03d40a75e6c2a591be7b8873432848fdea1",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:01:55Z"
+          }
+        }
+      },
+      {
+        "sha": "9097a6f43e30114cc2d0f94caaec3aa7541b11ca",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/9097a6f43e30114cc2d0f94caaec3aa7541b11ca",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:13:51Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/asteroids": {
+    "meta": {
+      "created_at": "2026-05-04T10:38:55Z",
+      "pushed_at": "2026-05-04T11:06:25Z"
+    },
+    "commits": [
+      {
+        "sha": "e889ae0ea5ca838ef5de1ee3b6289f15558572ce",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/e889ae0ea5ca838ef5de1ee3b6289f15558572ce",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:25Z"
+          }
+        }
+      },
+      {
+        "sha": "6b882be9b9559814d3f204f6b4c960dfa7b8bbb6",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/6b882be9b9559814d3f204f6b4c960dfa7b8bbb6",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:38:20Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/memory": {
+    "meta": {
+      "created_at": "2026-05-04T10:38:36Z",
+      "pushed_at": "2026-05-04T11:06:14Z"
+    },
+    "commits": [
+      {
+        "sha": "607455ca275b76a1196e2d13f802492d4bcbcb13",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/607455ca275b76a1196e2d13f802492d4bcbcb13",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:25Z"
+          }
+        }
+      },
+      {
+        "sha": "6ec9917402ea12408c1b56dee2712a851cb8d563",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/6ec9917402ea12408c1b56dee2712a851cb8d563",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:02:02Z"
+          }
+        }
+      },
+      {
+        "sha": "7c76c9b8a3fb6aed319a9f3832b9960fa669a5ad",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/7c76c9b8a3fb6aed319a9f3832b9960fa669a5ad",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:38:20Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/wordle": {
+    "meta": {
+      "created_at": "2026-05-04T10:14:20Z",
+      "pushed_at": "2026-05-04T11:06:05Z"
+    },
+    "commits": [
+      {
+        "sha": "fbab731f74a9c72357b34b1ba0dd34b55d3e1ae4",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/fbab731f74a9c72357b34b1ba0dd34b55d3e1ae4",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "ffe2b8c2bba4da08cf0cf706ad17d0eac217a153",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/ffe2b8c2bba4da08cf0cf706ad17d0eac217a153",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:01:53Z"
+          }
+        }
+      },
+      {
+        "sha": "830ceb32bf6ed7701084714c14d1a88b2441c0a7",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/830ceb32bf6ed7701084714c14d1a88b2441c0a7",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:13:51Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/slither": {
+    "meta": {
+      "created_at": "2026-05-04T06:33:48Z",
+      "pushed_at": "2026-05-04T11:05:41Z"
+    },
+    "commits": [
+      {
+        "sha": "c04662c8ef4ea6b89059759691ef19c1748839e9",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/c04662c8ef4ea6b89059759691ef19c1748839e9",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "2a4dc5b108e4bcf715957dc17f8ce307575d78e8",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/2a4dc5b108e4bcf715957dc17f8ce307575d78e8",
+        "commit": {
+          "message": "Add leaderboard integration",
+          "author": {
+            "date": "2026-05-04T10:27:21Z"
+          }
+        }
+      },
+      {
+        "sha": "1e1ce3d4f565700b45727f7d87fbf504239a0ffc",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/1e1ce3d4f565700b45727f7d87fbf504239a0ffc",
+        "commit": {
+          "message": "Fix compliance: check for freegamestore.online link",
+          "author": {
+            "date": "2026-05-04T08:39:10Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/mahjong": {
+    "meta": {
+      "created_at": "2026-05-04T10:14:26Z",
+      "pushed_at": "2026-05-04T11:06:09Z"
+    },
+    "commits": [
+      {
+        "sha": "d5e4096c4732861aa154b407be54ab429f05bdf1",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/d5e4096c4732861aa154b407be54ab429f05bdf1",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:25Z"
+          }
+        }
+      },
+      {
+        "sha": "b4f546b2475aaec2a0c24596ede6ff233976bce4",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/b4f546b2475aaec2a0c24596ede6ff233976bce4",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:01:57Z"
+          }
+        }
+      },
+      {
+        "sha": "062b22d3959d559fbc546b4a6ddf6f701c40e627",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/062b22d3959d559fbc546b4a6ddf6f701c40e627",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:13:51Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/frogger": {
+    "meta": {
+      "created_at": "2026-05-04T10:38:40Z",
+      "pushed_at": "2026-05-04T11:06:17Z"
+    },
+    "commits": [
+      {
+        "sha": "8b785d1b002c252e97f871c692b4676ac52bed3c",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/8b785d1b002c252e97f871c692b4676ac52bed3c",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:25Z"
+          }
+        }
+      },
+      {
+        "sha": "d9ab3e2d1bbf8d3286f76dae6120177b7444e702",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/d9ab3e2d1bbf8d3286f76dae6120177b7444e702",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:02:04Z"
+          }
+        }
+      },
+      {
+        "sha": "46b506b9c256c35d8c2336f5a6916b2d8cba9a45",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/46b506b9c256c35d8c2336f5a6916b2d8cba9a45",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:38:20Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/tetris": {
+    "meta": {
+      "created_at": "2026-05-04T05:54:37Z",
+      "pushed_at": "2026-05-04T11:05:32Z"
+    },
+    "commits": [
+      {
+        "sha": "518c3009b0b63f837567e15091de9b1af21347e5",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/518c3009b0b63f837567e15091de9b1af21347e5",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "2ce1ee36ad13de5630d38491031afae813b82c0c",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/2ce1ee36ad13de5630d38491031afae813b82c0c",
+        "commit": {
+          "message": "Fix mobile layout: side controls instead of below board",
+          "author": {
+            "date": "2026-05-04T10:21:12Z"
+          }
+        }
+      },
+      {
+        "sha": "d57e5553a8d7bfe149f7e8fb25343704bb8c55b9",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/d57e5553a8d7bfe149f7e8fb25343704bb8c55b9",
+        "commit": {
+          "message": "Fix compliance: check for freegamestore.online link",
+          "author": {
+            "date": "2026-05-04T08:39:15Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/wordsearch": {
+    "meta": {
+      "created_at": "2026-05-04T10:38:51Z",
+      "pushed_at": "2026-05-04T11:06:23Z"
+    },
+    "commits": [
+      {
+        "sha": "efdd405e7929e725f198b83ea7a6be2176e99276",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/efdd405e7929e725f198b83ea7a6be2176e99276",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:25Z"
+          }
+        }
+      },
+      {
+        "sha": "d42d58c3cf719d1c354ebadd6d8b6d2214aacd12",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/d42d58c3cf719d1c354ebadd6d8b6d2214aacd12",
+        "commit": {
+          "message": "Add Cloudflare Pages deploy workflow",
+          "author": {
+            "date": "2026-05-04T11:02:10Z"
+          }
+        }
+      },
+      {
+        "sha": "9379acf1ab0e989e97490d05a97cbe7ccc9071f1",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/9379acf1ab0e989e97490d05a97cbe7ccc9071f1",
+        "commit": {
+          "message": "Initial release",
+          "author": {
+            "date": "2026-05-04T10:38:20Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/racing": {
+    "meta": {
+      "created_at": "2026-05-04T06:53:40Z",
+      "pushed_at": "2026-05-04T11:05:43Z"
+    },
+    "commits": [
+      {
+        "sha": "1807cf46148cc8d48e7888efd8593316ef25dcc7",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/1807cf46148cc8d48e7888efd8593316ef25dcc7",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "c68934d60c5c851fdf9b4f57641a7671c6ea346e",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/c68934d60c5c851fdf9b4f57641a7671c6ea346e",
+        "commit": {
+          "message": "Improve playability: slower start, better camera, tap controls, on-screen arrows",
+          "author": {
+            "date": "2026-05-04T10:21:13Z"
+          }
+        }
+      },
+      {
+        "sha": "cdd28222d852fa96fc4a0baeba5aec91c90bd3e2",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/cdd28222d852fa96fc4a0baeba5aec91c90bd3e2",
+        "commit": {
+          "message": "Fix compliance: check for freegamestore.online link",
+          "author": {
+            "date": "2026-05-04T08:39:08Z"
+          }
+        }
+      }
+    ]
   }
 }
