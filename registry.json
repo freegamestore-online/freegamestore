@@ -726,6 +726,19 @@
       "cfProject": "freediceapp",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "highlow",
+      "name": "highlow",
+      "category": "Brain Training",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Will the next card be higher or lower? Build a streak.",
+      "appUrl": "https://highlow.freegamestore.online",
+      "repo": "freegamestore-online/highlow",
+      "cfProject": "freehighlowapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
