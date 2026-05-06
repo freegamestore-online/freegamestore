@@ -700,6 +700,19 @@
           "notes": "Initial release with momentum physics and screen wrap."
         }
       ]
+    },
+    {
+      "id": "quickdice",
+      "name": "quickdice",
+      "category": "Strategy",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Roll dice, see who's first.",
+      "appUrl": "https://quickdice.freegamestore.online",
+      "repo": "freegamestore-online/quickdice",
+      "cfProject": "freequickdiceapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
