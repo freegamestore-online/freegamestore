@@ -25,7 +25,6 @@
         <a href="https://freeappstore.online">Apps</a>
         <a href="/about.html">About</a>
         <a href="/contribute.html">Build</a>
-        <a href="/build-with-ai.html">Build with AI</a>
         <a href="/guidelines.html">Guidelines</a>
         <a href="https://progamestore.online" class="pro-link">Pro</a>
       </nav>
@@ -34,13 +33,31 @@
 
   <main class="container">
     <section class="apps-section" id="games" style="padding-top: 2rem;">
+      <div class="search-bar">
+        <input
+          type="search"
+          id="storefront-search"
+          placeholder="Search games + apps…"
+          autocomplete="off"
+          aria-label="Search games and apps"
+        />
+      </div>
       <div class="filter-bar">
         {{FILTER_BUTTONS}}
       </div>
-      <div class="apps-grid">
+      <div class="apps-grid" id="apps-grid">
         {{GAMES_GRID}}
       </div>
+      <p id="search-empty" hidden style="text-align: center; color: var(--muted); padding: 2rem 0;">No games match your search here.</p>
+
+      <section id="cross-store-results" hidden style="margin-top: 2.5rem;">
+        <h2 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--muted);">Also matching on FreeAppStore</h2>
+        <div class="apps-grid" id="cross-store-grid"></div>
+      </section>
     </section>
+
+    <script type="application/json" id="cross-store-registry">{{CROSS_STORE_REGISTRY}}</script>
+    <script src="/search.js" defer></script>
 
     <aside style="text-align: center; padding: 1.5rem 0 0.5rem; font-size: 0.9rem; color: var(--muted);">
       Looking for apps? Visit <a href="https://freeappstore.online" style="color: var(--accent); font-weight: 600;">FreeAppStore</a> — free-forever web apps.
@@ -56,7 +73,6 @@
       <div class="footer-links">
         <a href="/about.html">About</a>
         <a href="/contribute.html">Build</a>
-        <a href="/build-with-ai.html">Build with AI</a>
         <a href="/guidelines.html">Guidelines</a>
         <a href="/privacy.html">Privacy</a>
         <a href="/terms.html">Terms</a>

@@ -222,11 +222,11 @@ const gameCards = games.map(game => {
         </div>`;
 }).join('\n\n');
 
+// indexHtml is finalized inside the async IIFE below — cross-store
+// registry fetch is async, and we want to embed it into the page.
 let indexHtml = indexTemplate
   .replace('{{FILTER_BUTTONS}}', filterButtons)
   .replace('{{GAMES_GRID}}', gameCards);
-
-fs.writeFileSync(path.join(DIST, 'index.html'), indexHtml);
 
 // --- Generate game detail pages ---
 // Wrapped in async IIFE because this file is CJS (no top-level await).
@@ -272,15 +272,56 @@ function renderAuditBadge(summary) {
   return `<p class="audit-badge audit-pass"><span class="dot"></span> ${total}/${total} compliance checks pass</p>`;
 }
 
+async function fetchCrossStoreRegistry() {
+  // Pull the OTHER store's registry so the homepage search can
+  // federate. Failure → empty registry, search still works locally.
+  return new Promise((resolve) => {
+    const req = https.request(
+      {
+        hostname: 'raw.githubusercontent.com',
+        path: '/freeappstore-online/freeappstore/main/registry.json',
+        method: 'GET',
+      },
+      (r) => {
+        let data = '';
+        r.on('data', (c) => (data += c));
+        r.on('end', () => {
+          try {
+            const parsed = JSON.parse(data);
+            resolve({
+              items: parsed.apps ?? [],
+              domain: 'freeappstore.online',
+              path: 'apps',
+            });
+          } catch {
+            resolve({ items: [], domain: 'freeappstore.online', path: 'apps' });
+          }
+        });
+      },
+    );
+    req.on('error', () => resolve({ items: [], domain: 'freeappstore.online', path: 'apps' }));
+    req.end();
+  });
+}
+
 (async () => {
 console.log(`Fetching commit history for ${games.length} games (with disk cache fallback)...`);
-const [histories, auditMap] = await Promise.all([
+const [histories, auditMap, crossRegistry] = await Promise.all([
   fetchAllHistories(games),
   fetchAuditSummary(),
+  fetchCrossStoreRegistry(),
 ]);
+
+indexHtml = indexHtml.replace(
+  '{{CROSS_STORE_REGISTRY}}',
+  JSON.stringify(crossRegistry).replace(/</g, '\\u003c'),
+);
+fs.writeFileSync(path.join(DIST, 'index.html'), indexHtml);
+
 const okCount = histories.filter((h) => Array.isArray(h?.commits) && h.commits.length > 0).length;
 console.log(`  ${okCount}/${games.length} games got commit history`);
 console.log(`  ${auditMap.size} games have audit results`);
+console.log(`  ${crossRegistry.items.length} apps available for cross-store search`);
 
 games.forEach((game, i) => {
   const offline = game.type === 'standalone' ? 'Yes' : 'When cached';
@@ -348,6 +389,7 @@ fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap);
 
 const filesToCopy = [
   'style.css',
+  'search.js',
   'favicon.svg',
   'apple-touch-icon.png',
   'icon-192.png',
