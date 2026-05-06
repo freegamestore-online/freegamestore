@@ -713,6 +713,19 @@
       "cfProject": "freedragontapapp",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "toetap",
+      "name": "toetap",
+      "category": "Strategy",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Tap-tap puzzle.",
+      "appUrl": "https://toetap.freegamestore.online",
+      "repo": "freegamestore-online/toetap",
+      "cfProject": "freetoetapapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
