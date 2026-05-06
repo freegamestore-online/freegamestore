@@ -1118,5 +1118,61 @@
         }
       }
     ]
+  },
+  "freegamestore-online/dice": {
+    "meta": {
+      "created_at": "2026-05-06T07:50:44Z",
+      "pushed_at": "2026-05-06T07:51:19Z"
+    },
+    "commits": [
+      {
+        "sha": "258696ca1acbbb72e89681347a055afeda8671ee",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/258696ca1acbbb72e89681347a055afeda8671ee",
+        "commit": {
+          "message": "Dice v1: roll 1-6 dice, sum, recent history",
+          "author": {
+            "date": "2026-05-06T07:50:57Z"
+          }
+        }
+      },
+      {
+        "sha": "ea589200ebe4c47f08dce7dde73e9c834a2297b3",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/ea589200ebe4c47f08dce7dde73e9c834a2297b3",
+        "commit": {
+          "message": "Initial commit from canvas template",
+          "author": {
+            "date": "2026-05-06T07:49:56Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/highlow": {
+    "meta": {
+      "created_at": "2026-05-06T07:52:08Z",
+      "pushed_at": "2026-05-06T07:52:24Z"
+    },
+    "commits": [
+      {
+        "sha": "38c22098bf253517afb83b756e6afa2739478beb",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/38c22098bf253517afb83b756e6afa2739478beb",
+        "commit": {
+          "message": "High/Low v1: card guessing, streak counter, best tracker",
+          "author": {
+            "date": "2026-05-06T07:52:22Z"
+          }
+        }
+      },
+      {
+        "sha": "1a1521bd0bc57be69de54e69d2a5f36b0fa35f5a",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/1a1521bd0bc57be69de54e69d2a5f36b0fa35f5a",
+        "commit": {
+          "message": "Initial commit from canvas template",
+          "author": {
+            "date": "2026-05-06T07:51:26Z"
+          }
+        }
+      }
+    ]
   }
 }
