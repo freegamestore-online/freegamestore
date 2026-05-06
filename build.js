@@ -381,6 +381,19 @@ indexHtml = indexHtml.replace(
 );
 fs.writeFileSync(path.join(DIST, 'index.html'), indexHtml);
 
+// --- Quality Dashboard (mirrors /tmp/freeappstore/build.js) ---
+const qualityTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'quality.html'), 'utf8');
+const qualityRegistry = {
+  apps: (crossRegistry.items || []).map(a => ({ id: a.id, name: a.name, appUrl: a.appUrl })),
+  games: games.map(g => ({ id: g.id, name: g.name, appUrl: g.appUrl })),
+};
+const qualityHtml = qualityTemplate.replace(
+  '{{REGISTRIES_JSON}}',
+  JSON.stringify(qualityRegistry).replace(/</g, '\\u003c'),
+);
+fs.writeFileSync(path.join(DIST, 'quality.html'), qualityHtml);
+console.log(`  /quality dashboard generated for ${qualityRegistry.games.length} games + ${qualityRegistry.apps.length} apps`);
+
 const okCount = histories.filter((h) => Array.isArray(h?.commits) && h.commits.length > 0).length;
 console.log(`  ${okCount}/${games.length} games got commit history`);
 console.log(`  ${auditMap.size} games have audit results`);
@@ -454,6 +467,7 @@ fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap);
 const filesToCopy = [
   'style.css',
   'search.js',
+  'quality.js',
   'favicon.svg',
   'apple-touch-icon.png',
   'icon-192.png',
