@@ -165,6 +165,28 @@
 
       <p>Full reference: <a href="https://github.com/freeappstore-online/sdk/tree/main/packages/cli#readme">github.com/freeappstore-online/sdk/packages/cli</a></p>
 
+      <h2>Brand and UI rules (mandated)</h2>
+      <p>Every game on the platform looks predictable and consistent. The storefront, the detail pages, and every game share the same visual language so visitors learn the rhythm once and never relearn it. This is not a style guide suggestion — it's enforced by <code>fas check</code> and the CI workflow that runs before merge.</p>
+
+      <ul>
+        <li><strong>Use the template's CSS tokens.</strong> Colors, surfaces, lines, and spacing come from <code>--paper</code>, <code>--ink</code>, <code>--muted</code>, <code>--accent</code>, <code>--line</code>, <code>--line-strong</code>, <code>--panel</code>. Reference them via <code>var(--accent)</code>, etc. Don't redefine them in component CSS or inline styles.</li>
+        <li><strong>Brand fonts only:</strong> Manrope (body) and Fraunces (display). System and monospace fallbacks are fine. No custom display fonts — even when they'd look great. Game-rendering canvases can use any pixel-fonts inside the canvas; this rule applies to DOM/HTML text only.</li>
+        <li><strong>No custom theme.</strong> Light/dark mode comes from <code>prefers-color-scheme</code> and the template's variables. Don't ship your own theme switcher or override <code>color-scheme</code>.</li>
+      </ul>
+
+      <p>The <code>fas check</code> compliance suite (run automatically before <code>fas publish</code> and again in your repo's CI) enforces:</p>
+      <ul>
+        <li><code>No template placeholders</code> — every <code>APPNAME</code> substituted</li>
+        <li><code>No tracking SDKs</code> — none of the 8 known trackers</li>
+        <li><code>Brand fonts present</code> — Manrope and Fraunces both referenced</li>
+        <li><code>No brand overrides</code> — no game redefines a platform CSS token outside the canonical theme file; no non-brand <code>font-family</code> declarations in DOM CSS</li>
+        <li><code>PWA manifest</code> — <code>web/public/manifest.json</code> with <code>name</code>, <code>display</code>, <code>start_url</code></li>
+        <li><code>Bundle size</code> — main bundle under 300 KB gzipped</li>
+      </ul>
+
+      <p>Run them locally any time:</p>
+      <div class="cmd">fas check</div>
+
       <h3>AI-assisted development</h3>
       <p>Use Claude Code, Cursor, Codex, or any AI coding tool. Point it to our <a href="https://raw.githubusercontent.com/freegamestore-online/ops/main/SKILLS.md">SKILLS.md</a> and it knows the entire platform — tech stack, brand, templates, how to deploy.</p>
       <div class="cmd" style="font-size:0.85rem;">Add this to your AI tool:<br><br>Read https://raw.githubusercontent.com/freegamestore-online/ops/main/SKILLS.md</div>
