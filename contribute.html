@@ -114,24 +114,24 @@
         </div>
       </div>
 
-      <h3>Use the <code>fgs</code> CLI</h3>
-      <p>FreeGameStore-branded mirror of the <code>fas</code> CLI from <a href="https://freeappstore.online">FreeAppStore</a> — same identity, games-first surface. End-to-end: scaffold, check, publish, list.</p>
+      <h3>Use the <code>fas</code> CLI</h3>
+      <p>The same CLI that powers <a href="https://freeappstore.online">FreeAppStore</a> handles games too. End-to-end: scaffold, check, publish, list. A games-first <code>fgs</code> binary (<code>@freegamestore/cli</code>) is in the works — the steps below use <code>fas</code> with <code>--store games</code> until it ships.</p>
 
       <ol class="steps">
         <li>
           <strong>Install the CLI</strong>
-          <div class="cmd">npm i -g @freegamestore/cli</div>
-          <p>Requires Node 22+. Source lives in <a href="https://github.com/freeappstore-online/sdk/tree/main/packages/fgs-cli">freeappstore-online/sdk/packages/fgs-cli</a>; package on <a href="https://www.npmjs.com/package/@freegamestore/cli">npm</a>.</p>
+          <div class="cmd">npm i -g @freeappstore/cli</div>
+          <p>Requires Node 22+. Source on <a href="https://github.com/freeappstore-online/sdk">github.com/freeappstore-online/sdk</a>; package on <a href="https://www.npmjs.com/package/@freeappstore/cli">npm</a>.</p>
         </li>
         <li>
           <strong>Sign in with GitHub</strong>
-          <div class="cmd">fgs login</div>
-          <p>Device-flow OAuth — no password leaves your terminal. The session is shared with <code>fas</code>; sign in once, both CLIs use it.</p>
+          <div class="cmd">fas login</div>
+          <p>Device-flow OAuth — no password leaves your terminal.</p>
         </li>
         <li>
           <strong>Scaffold from a game template</strong>
-          <div class="cmd">fgs init my-game --template canvas</div>
-          <p>Three game templates available: <code>canvas</code> (2D arcade — default), <code>grid</code> (puzzles), <code>3d</code> (Three.js / Babylon). Each is a runnable Vite + TypeScript project.</p>
+          <div class="cmd">fas init my-game --template game-canvas</div>
+          <p>Three game templates available: <code>game-canvas</code> (2D arcade), <code>game-grid</code> (puzzles), <code>game-3d</code> (Three.js / Babylon). Each is a runnable Vite + TypeScript project.</p>
         </li>
         <li>
           <strong>Develop locally</strong>
@@ -140,12 +140,12 @@
         </li>
         <li>
           <strong>Run compliance checks</strong>
-          <div class="cmd">fgs check</div>
+          <div class="cmd">fas check</div>
           <p>Catches missing brand fonts, tracking SDKs, oversized bundles, and missing PWA manifest before you publish.</p>
         </li>
         <li>
-          <strong>Publish</strong>
-          <div class="cmd">fgs publish</div>
+          <strong>Publish as a game</strong>
+          <div class="cmd">fas publish --store games</div>
           <p>Provisions <code>github.com/freegamestore-online/my-game</code>, the Cloudflare Pages project, the DNS record, the custom subdomain at <code>my-game.freegamestore.online</code>, and the storefront entry.</p>
           <p style="font-size: 0.88rem;">Scriptable: pass <code>--name</code>, <code>--category</code>, <code>--type</code>, <code>--oneliner</code>, and <code>--yes</code>.</p>
         </li>
