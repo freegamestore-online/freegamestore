@@ -147,7 +147,12 @@
         <li>
           <strong>Run compliance checks</strong>
           <div class="cmd">fas check</div>
-          <p>Catches missing brand fonts, tracking SDKs, oversized bundles, and missing PWA manifest before you publish.</p>
+          <p>Catches missing brand fonts, tracking SDKs, oversized bundles, missing PWA manifest, and (for games) document scroll. Games must fit the viewport — no horizontal or vertical scroll on <code>html</code> / <code>body</code>.</p>
+        </li>
+        <li>
+          <strong>Verify the layout fits in a real browser (recommended for games)</strong>
+          <div class="cmd">fas screencheck</div>
+          <p>Builds, serves the dist locally, and drives a real Chromium at the <code>min_viewport_width</code> declared in your manifest in both portrait and landscape. Fails if the canvas actually overflows. Static checks see <em>intent</em>; screencheck proves <em>fit</em>. Playwright is an opt-in peer dep; the command prompts to install on first run.</p>
         </li>
         <li>
           <strong>Publish as a game</strong>
