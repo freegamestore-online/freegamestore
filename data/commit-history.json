@@ -1084,9 +1084,19 @@
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-06T05:39:48Z"
+      "pushed_at": "2026-05-06T05:41:47Z"
     },
     "commits": [
+      {
+        "sha": "23d84efb490cf07d2622ab9b70c0c62605eec8de",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/23d84efb490cf07d2622ab9b70c0c62605eec8de",
+        "commit": {
+          "message": "Stop tracking tsbuildinfo (template gitignore fixed upstream)",
+          "author": {
+            "date": "2026-05-06T05:41:41Z"
+          }
+        }
+      },
       {
         "sha": "01504a12b7f67efa324c0e4b6c4f5373bbdbc8b3",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/01504a12b7f67efa324c0e4b6c4f5373bbdbc8b3",
