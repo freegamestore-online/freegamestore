@@ -114,16 +114,56 @@
         </div>
       </div>
 
-      <h3>Clone and run</h3>
-      <div class="cmd">git clone https://github.com/freegamestore-online/template-game-canvas my-game</div>
-      <div class="cmd">cd my-game &amp;&amp; pnpm install</div>
-      <div class="cmd">pnpm dev</div>
-      <p>Edit <code>web/src/App.tsx</code> and start building. Hot reload is enabled by default.</p>
+      <h3>Use the <code>fas</code> CLI</h3>
+      <p>The same CLI that powers <a href="https://freeappstore.online">FreeAppStore</a> handles games too. End-to-end: scaffold, check, publish, list.</p>
 
-      <h3>Test and ship</h3>
-      <div class="cmd">pnpm build</div>
-      <p>Verify the production build works locally, then push to main. Cloudflare Pages auto-deploys on every push — your game is live within minutes.</p>
-      <div class="cmd">git add -A &amp;&amp; git commit -m "my game" &amp;&amp; git push</div>
+      <ol class="steps">
+        <li>
+          <strong>Install the CLI</strong>
+          <div class="cmd">npm i -g @freeappstore/cli</div>
+          <p>Requires Node 22+. Source on <a href="https://github.com/freeappstore-online/sdk">github.com/freeappstore-online/sdk</a>; package on <a href="https://www.npmjs.com/package/@freeappstore/cli">npm</a>.</p>
+        </li>
+        <li>
+          <strong>Sign in with GitHub</strong>
+          <div class="cmd">fas login</div>
+          <p>Device-flow OAuth — no password leaves your terminal.</p>
+        </li>
+        <li>
+          <strong>Scaffold from a game template</strong>
+          <div class="cmd">fas init my-game --template game-canvas</div>
+          <p>Three game templates available: <code>game-canvas</code> (2D arcade), <code>game-grid</code> (puzzles), <code>game-3d</code> (Three.js / Babylon). Each is a runnable Vite + TypeScript project.</p>
+        </li>
+        <li>
+          <strong>Develop locally</strong>
+          <div class="cmd">cd my-game &amp;&amp; pnpm install &amp;&amp; pnpm dev</div>
+          <p>Hot reload is enabled by default.</p>
+        </li>
+        <li>
+          <strong>Run compliance checks</strong>
+          <div class="cmd">fas check</div>
+          <p>Catches missing brand fonts, tracking SDKs, oversized bundles, and missing PWA manifest before you publish.</p>
+        </li>
+        <li>
+          <strong>Publish as a game</strong>
+          <div class="cmd">fas publish --store games</div>
+          <p>Provisions <code>github.com/freegamestore-online/my-game</code>, the Cloudflare Pages project, the DNS record, the custom subdomain at <code>my-game.freegamestore.online</code>, and the storefront entry.</p>
+          <p style="font-size: 0.88rem;">Scriptable: pass <code>--name</code>, <code>--category</code>, <code>--type</code>, <code>--oneliner</code>, and <code>--yes</code>.</p>
+        </li>
+        <li>
+          <strong>Push your code</strong>
+          <div class="cmd">git push upstream main</div>
+          <p>Auto-deploys via GitHub Actions in ~30 seconds. Future commits to <code>main</code> deploy automatically.</p>
+        </li>
+      </ol>
+
+      <h3>Other commands</h3>
+      <ul>
+        <li><code>fas list</code> — see all apps and games you've published</li>
+        <li><code>fas logs my-game</code> — tail Cloudflare Pages deployment logs</li>
+        <li><code>fas doctor</code> — health check (Node, git, pnpm, auth, API reachability)</li>
+      </ul>
+
+      <p>Full reference: <a href="https://github.com/freeappstore-online/sdk/tree/main/packages/cli#readme">github.com/freeappstore-online/sdk/packages/cli</a></p>
 
       <h3>AI-assisted development</h3>
       <p>Use Claude Code, Cursor, Codex, or any AI coding tool. Point it to our <a href="https://raw.githubusercontent.com/freegamestore-online/ops/main/SKILLS.md">SKILLS.md</a> and it knows the entire platform — tech stack, brand, templates, how to deploy.</p>

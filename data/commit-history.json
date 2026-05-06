@@ -1,0 +1,78 @@
+{
+  "freegamestore-online/2048": {
+    "meta": {
+      "created_at": "2026-05-04T06:07:36Z",
+      "pushed_at": "2026-05-04T11:05:38Z"
+    },
+    "commits": [
+      {
+        "sha": "1a8ca26a46d4cbdc8abb6f43e7dad85828870b87",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/1a8ca26a46d4cbdc8abb6f43e7dad85828870b87",
+        "commit": {
+          "message": "Update CLAUDE.md branding",
+          "author": {
+            "date": "2026-05-04T11:05:24Z"
+          }
+        }
+      },
+      {
+        "sha": "97b070cbd4fca803b91b009599d8204a451a74c9",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/97b070cbd4fca803b91b009599d8204a451a74c9",
+        "commit": {
+          "message": "Add leaderboard integration",
+          "author": {
+            "date": "2026-05-04T10:27:19Z"
+          }
+        }
+      },
+      {
+        "sha": "a483f906cab45559bba5f7c12a2bd88183e99a01",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/a483f906cab45559bba5f7c12a2bd88183e99a01",
+        "commit": {
+          "message": "Fix compliance: check for freegamestore.online link",
+          "author": {
+            "date": "2026-05-04T08:38:59Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/chess": {
+    "meta": {
+      "created_at": "2026-05-03T02:32:48Z",
+      "pushed_at": "2026-05-04T09:51:57Z"
+    },
+    "commits": [
+      {
+        "sha": "d5e538f67a05b2bad70e5732a9f0449067643cdf",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/d5e538f67a05b2bad70e5732a9f0449067643cdf",
+        "commit": {
+          "message": "Fix compliance: title, fonts, PWA manifest\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-04T09:51:56Z"
+          }
+        }
+      },
+      {
+        "sha": "54cdf25680c699368802cdc0a94b23e35008ea2a",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/54cdf25680c699368802cdc0a94b23e35008ea2a",
+        "commit": {
+          "message": "Fix compliance: check for freegamestore.online link",
+          "author": {
+            "date": "2026-05-04T08:39:01Z"
+          }
+        }
+      },
+      {
+        "sha": "b3c2d14f661f28ef0f93de5b6ce2fbe646681fd8",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/b3c2d14f661f28ef0f93de5b6ce2fbe646681fd8",
+        "commit": {
+          "message": "Add Cloudflare Pages auto-deploy on push to main",
+          "author": {
+            "date": "2026-05-04T08:36:57Z"
+          }
+        }
+      }
+    ]
+  }
+}

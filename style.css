@@ -577,3 +577,174 @@ footer .container {
     grid-template-columns: 1fr;
   }
 }
+/* === App detail: published line === */
+.published-line {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: -0.5rem 0 1.5rem;
+}
+.published-line time {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* === App detail: live preview in phone frame === */
+.app-split-phone {
+  text-align: center;
+}
+.phone-frame {
+  --phone-bezel: #111;
+  width: 360px;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 12px solid var(--phone-bezel);
+  border-radius: 38px;
+  background: var(--phone-bezel);
+  overflow: hidden;
+  aspect-ratio: 9 / 19.5;
+  position: relative;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.08);
+}
+.phone-frame::before {
+  /* iPhone-style notch */
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 110px; height: 22px;
+  background: var(--phone-bezel);
+  border-radius: 0 0 18px 18px;
+  z-index: 2;
+}
+.phone-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 26px;
+  background: white;
+  display: block;
+}
+.preview-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+.app-btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--border);
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.app-btn-secondary:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.preview-note {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.75rem;
+}
+
+/* === App detail: version log === */
+.version-log {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+.version-row {
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.93rem;
+}
+.version-date {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.version-msg {
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.version-sha {
+  font-family: ui-monospace, SF Mono, Menlo, monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+.version-sha:hover { color: var(--accent); }
+
+@media (max-width: 600px) {
+  .version-row {
+    grid-template-columns: 1fr auto;
+  }
+  .version-date {
+    grid-column: 1 / -1;
+    margin-bottom: -0.4rem;
+  }
+}
+
+/* === App detail: split layout (desktop = phone L / info R) === */
+.app-split {
+  display: grid;
+  gap: 2.5rem;
+  margin: 2rem 0 2.5rem;
+  /* Mobile: info first (so users read what the app does before previewing). */
+  grid-template-areas: "info" "phone";
+}
+.app-split-info  { grid-area: info; }
+.app-split-phone { grid-area: phone; }
+
+/* Inside the split, the hero stops needing its own top padding —
+   the split's margin handles the breathing room. */
+.app-split-info .app-hero {
+  padding: 0 0 1.25rem;
+}
+.app-description {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+/* The meta block, when stacked inside the right column, drops its
+   horizontal-only flex pattern in favor of a wrapping grid that fits
+   the narrower column without overflow. */
+.app-split-info .app-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+}
+.app-split-info .app-meta-item {
+  text-align: left;
+}
+
+@media (min-width: 900px) {
+  .app-split {
+    /* Phone first on desktop. The 360px column matches .phone-frame width. */
+    grid-template-columns: 360px 1fr;
+    grid-template-areas: "phone info";
+    gap: 3rem;
+    align-items: start;
+  }
+  .app-split-phone {
+    /* Sticky preview so the phone stays visible while the description
+       column scrolls. top offset clears the header. */
+    position: sticky;
+    top: 1.5rem;
+  }
+}
