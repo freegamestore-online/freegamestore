@@ -700,6 +700,19 @@
           "notes": "Initial release with momentum physics and screen wrap."
         }
       ]
+    },
+    {
+      "id": "coinflip",
+      "name": "coinflip",
+      "category": "Other (specify in description)",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Tap to flip a coin. Tracks the last 20.",
+      "appUrl": "https://coinflip.freegamestore.online",
+      "repo": "freegamestore-online/coinflip",
+      "cfProject": "freecoinflipapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
