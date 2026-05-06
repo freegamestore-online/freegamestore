@@ -1080,5 +1080,33 @@
         }
       }
     ]
+  },
+  "freegamestore-online/coinflip": {
+    "meta": {
+      "created_at": "2026-05-06T05:39:33Z",
+      "pushed_at": "2026-05-06T05:39:48Z"
+    },
+    "commits": [
+      {
+        "sha": "01504a12b7f67efa324c0e4b6c4f5373bbdbc8b3",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/01504a12b7f67efa324c0e4b6c4f5373bbdbc8b3",
+        "commit": {
+          "message": "Coin flip v1: spinning button, last-20 tally",
+          "author": {
+            "date": "2026-05-06T05:39:46Z"
+          }
+        }
+      },
+      {
+        "sha": "672912f31c8462c7f4e6f60617ae300dd613141f",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/672912f31c8462c7f4e6f60617ae300dd613141f",
+        "commit": {
+          "message": "Initial commit from game-canvas template",
+          "author": {
+            "date": "2026-05-06T05:38:39Z"
+          }
+        }
+      }
+    ]
   }
 }
