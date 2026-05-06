@@ -713,6 +713,19 @@
       "cfProject": "freecoinflipapp",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "dice",
+      "name": "dice",
+      "category": "Strategy",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Roll up to 6 dice. Tap to throw, sum auto-totals.",
+      "appUrl": "https://dice.freegamestore.online",
+      "repo": "freegamestore-online/dice",
+      "cfProject": "freediceapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
