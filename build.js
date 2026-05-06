@@ -272,6 +272,68 @@ function renderAuditBadge(summary) {
   return `<p class="audit-badge audit-pass"><span class="dot"></span> ${total}/${total} compliance checks pass</p>`;
 }
 
+function fetchManifest(appUrl) {
+  return new Promise((resolve) => {
+    try {
+      const u = new URL('/manifest.json', appUrl);
+      const req = https.request(
+        { hostname: u.hostname, path: u.pathname, method: 'GET' },
+        (r) => {
+          let data = '';
+          r.on('data', (c) => (data += c));
+          r.on('end', () => {
+            if (r.statusCode !== 200) return resolve(null);
+            try {
+              resolve(JSON.parse(data));
+            } catch {
+              resolve(null);
+            }
+          });
+        },
+      );
+      req.on('error', () => resolve(null));
+      req.setTimeout(6000, () => {
+        req.destroy();
+        resolve(null);
+      });
+      req.end();
+    } catch {
+      resolve(null);
+    }
+  });
+}
+
+function viewportCoverage(minWidth) {
+  if (minWidth <= 320) return 99;
+  if (minWidth <= 360) return 96;
+  if (minWidth <= 414) return 88;
+  if (minWidth <= 600) return 60;
+  if (minWidth <= 768) return 35;
+  if (minWidth <= 1024) return 20;
+  return 10;
+}
+
+function renderViewportBadge(manifest) {
+  if (!manifest) {
+    return '<p class="audit-badge audit-pending"><span class="dot"></span> Viewport support: unknown</p>';
+  }
+  const orientation = typeof manifest.orientation === 'string' ? manifest.orientation : null;
+  const minWidth =
+    typeof manifest.min_viewport_width === 'number' ? manifest.min_viewport_width : null;
+  if (orientation === null || minWidth === null) {
+    return '<p class="audit-badge audit-pending"><span class="dot"></span> Viewport support: not declared</p>';
+  }
+  const coverage = viewportCoverage(minWidth);
+  const orientLabel =
+    orientation === 'any'
+      ? 'portrait + landscape'
+      : orientation === 'portrait' || orientation === 'portrait-primary'
+        ? 'portrait only'
+        : 'landscape only';
+  const cls = coverage >= 90 ? 'audit-pass' : coverage >= 50 ? 'audit-warn' : 'audit-fail';
+  return `<p class="audit-badge ${cls}"><span class="dot"></span> Works on ~${coverage}% of devices · ${orientLabel} · min ${minWidth}px wide</p>`;
+}
+
 async function fetchCrossStoreRegistry() {
   // Pull the OTHER store's registry so the homepage search can
   // federate. Failure → empty registry, search still works locally.
@@ -306,10 +368,11 @@ async function fetchCrossStoreRegistry() {
 
 (async () => {
 console.log(`Fetching commit history for ${games.length} games (with disk cache fallback)...`);
-const [histories, auditMap, crossRegistry] = await Promise.all([
+const [histories, auditMap, crossRegistry, manifests] = await Promise.all([
   fetchAllHistories(games),
   fetchAuditSummary(),
   fetchCrossStoreRegistry(),
+  Promise.all(games.map((g) => fetchManifest(g.appUrl))),
 ]);
 
 indexHtml = indexHtml.replace(
@@ -345,7 +408,8 @@ games.forEach((game, i) => {
     .replace(/\{\{ACCOUNT\}\}/g, account)
     .replace(/\{\{PUBLISHED_LINE\}\}/g, renderPublishedLine(history))
     .replace(/\{\{HISTORY_SECTION\}\}/g, renderHistorySection(game.repo, history))
-    .replace(/\{\{AUDIT_BADGE\}\}/g, renderAuditBadge(auditMap.get(game.id)));
+    .replace(/\{\{AUDIT_BADGE\}\}/g, renderAuditBadge(auditMap.get(game.id)))
+    .replace(/\{\{VIEWPORT_BADGE\}\}/g, renderViewportBadge(manifests[i]));
 
   fs.writeFileSync(path.join(DIST, 'games', `${game.id}.html`), html);
 });
