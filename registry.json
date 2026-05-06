@@ -739,6 +739,19 @@
       "cfProject": "freehighlowapp",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "memorymatch",
+      "name": "memorymatch",
+      "category": "Brain Training",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Match the pairs. Time and move counter included.",
+      "appUrl": "https://memorymatch.freegamestore.online",
+      "repo": "freegamestore-online/memorymatch",
+      "cfProject": "freememorymatchapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
