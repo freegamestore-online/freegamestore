@@ -231,11 +231,56 @@ fs.writeFileSync(path.join(DIST, 'index.html'), indexHtml);
 // --- Generate game detail pages ---
 // Wrapped in async IIFE because this file is CJS (no top-level await).
 
+async function fetchAuditSummary() {
+  // Fetch /v1/audit?store=games. Failures degrade gracefully — the
+  // audit badge just doesn't render.
+  try {
+    const res = await new Promise((resolve, reject) => {
+      const req = https.request(
+        { hostname: 'api.freeappstore.online', path: '/v1/audit?store=games', method: 'GET' },
+        (r) => {
+          let data = '';
+          r.on('data', (c) => (data += c));
+          r.on('end', () => resolve({ status: r.statusCode, body: data }));
+        },
+      );
+      req.on('error', reject);
+      req.end();
+    });
+    if (res.status !== 200) return new Map();
+    const parsed = JSON.parse(res.body);
+    const map = new Map();
+    for (const s of parsed.summary ?? []) map.set(s.appId, s);
+    return map;
+  } catch (err) {
+    console.warn(`  ! could not fetch audit summary: ${err.message}`);
+    return new Map();
+  }
+}
+
+function renderAuditBadge(summary) {
+  if (!summary) {
+    return '<p class="audit-badge audit-pending"><span class="dot"></span> Not yet audited</p>';
+  }
+  const total = summary.pass + summary.warn + summary.fail;
+  if (summary.fail > 0) {
+    return `<p class="audit-badge audit-fail"><span class="dot"></span> ${summary.fail} compliance failure${summary.fail === 1 ? '' : 's'} of ${total} checks &middot; <a href="https://api.freeappstore.online/v1/audit?app=${summary.appId}">details</a></p>`;
+  }
+  if (summary.warn > 0) {
+    return `<p class="audit-badge audit-warn"><span class="dot"></span> ${summary.pass}/${total} compliance checks pass &middot; ${summary.warn} warning${summary.warn === 1 ? '' : 's'}</p>`;
+  }
+  return `<p class="audit-badge audit-pass"><span class="dot"></span> ${total}/${total} compliance checks pass</p>`;
+}
+
 (async () => {
 console.log(`Fetching commit history for ${games.length} games (with disk cache fallback)...`);
-const histories = await fetchAllHistories(games);
+const [histories, auditMap] = await Promise.all([
+  fetchAllHistories(games),
+  fetchAuditSummary(),
+]);
 const okCount = histories.filter((h) => Array.isArray(h?.commits) && h.commits.length > 0).length;
 console.log(`  ${okCount}/${games.length} games got commit history`);
+console.log(`  ${auditMap.size} games have audit results`);
 
 games.forEach((game, i) => {
   const offline = game.type === 'standalone' ? 'Yes' : 'When cached';
@@ -258,7 +303,8 @@ games.forEach((game, i) => {
     .replace(/\{\{OFFLINE\}\}/g, offline)
     .replace(/\{\{ACCOUNT\}\}/g, account)
     .replace(/\{\{PUBLISHED_LINE\}\}/g, renderPublishedLine(history))
-    .replace(/\{\{HISTORY_SECTION\}\}/g, renderHistorySection(game.repo, history));
+    .replace(/\{\{HISTORY_SECTION\}\}/g, renderHistorySection(game.repo, history))
+    .replace(/\{\{AUDIT_BADGE\}\}/g, renderAuditBadge(auditMap.get(game.id)));
 
   fs.writeFileSync(path.join(DIST, 'games', `${game.id}.html`), html);
 });
@@ -276,6 +322,11 @@ const sitemapEntries = [
   '  <url><loc>https://freegamestore.online/ai/github-copilot.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/ai/aider.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/ai/codex.html</loc><priority>0.7</priority></url>',
+  '  <url><loc>https://freegamestore.online/ai/windsurf.html</loc><priority>0.7</priority></url>',
+  '  <url><loc>https://freegamestore.online/ai/zed.html</loc><priority>0.7</priority></url>',
+  '  <url><loc>https://freegamestore.online/ai/continue.html</loc><priority>0.7</priority></url>',
+  '  <url><loc>https://freegamestore.online/ai/cline.html</loc><priority>0.7</priority></url>',
+  '  <url><loc>https://freegamestore.online/ai/chatgpt-web.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/guidelines.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/leaderboard.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/privacy.html</loc><priority>0.5</priority></url>',
