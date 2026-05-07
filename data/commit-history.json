@@ -686,9 +686,19 @@
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-06T20:57:40Z"
+      "pushed_at": "2026-05-06T21:30:57Z"
     },
     "commits": [
+      {
+        "sha": "887fbac3188ba1e833a19545a417945097624fbf",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/887fbac3188ba1e833a19545a417945097624fbf",
+        "commit": {
+          "message": "feat: ship the @freeappstore/quality reporter\n\nLets the platform Quality Dashboard at freegamestore.online/quality\naudit hangman live across every reference viewport.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-06T21:30:55Z"
+          }
+        }
+      },
       {
         "sha": "95a10a70bffabdd247da83bc266aeb7ea42129d9",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/95a10a70bffabdd247da83bc266aeb7ea42129d9",
@@ -706,16 +716,6 @@
           "message": "Auto-start the game — drop the menu screen\n\nHangman has nothing to configure pre-game (no difficulty picker, no\ntutorial, no auth) so the start screen was just a tap to skip — same\npattern tetris/2048/snake all use. First load now drops you straight\ninto a fresh round. The game-over screen still has a Play Again\nbutton because resetting state is a meaningful explicit action.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-06T16:52:09Z"
-          }
-        }
-      },
-      {
-        "sha": "6abac241862f863f9fee458e5a471bf38f03018f",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/6abac241862f863f9fee458e5a471bf38f03018f",
-        "commit": {
-          "message": "fix(layout): drop unconditional min-h-[400px] that cropped landscape phones\n\nThe wrapper forced 400px of vertical content even on iPhone landscape\n(264-358px high), clipping the bottom of the start/over screens.\nh-full + flex centering already do the right thing without the floor.\n\nVerified via fgs screencheck: ~60% → 99% device coverage.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-06T16:38:34Z"
           }
         }
       }
@@ -980,9 +980,19 @@
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-06T20:57:11Z"
+      "pushed_at": "2026-05-06T21:30:55Z"
     },
     "commits": [
+      {
+        "sha": "fd18f9e9f0032618f81919d158a3cf23d94dbdca",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/fd18f9e9f0032618f81919d158a3cf23d94dbdca",
+        "commit": {
+          "message": "feat: ship the @freeappstore/quality reporter\n\nLets the platform Quality Dashboard at freegamestore.online/quality\naudit this game live in iframes at every reference viewport. Reporter\nposts only DOM-shape numbers (no URLs, no localStorage, no identifiers)\nand is a no-op when not iframed.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-06T21:30:54Z"
+          }
+        }
+      },
       {
         "sha": "bf29bee56c0382bc8fb504723e26cdf36484c06c",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/bf29bee56c0382bc8fb504723e26cdf36484c06c",
@@ -1000,16 +1010,6 @@
           "message": "fix(layout): mobile layout — controls below board, full playfield visible\n\niPhone 15 (393×852): the previous left+board+right layout cropped both\nside controls and the rightmost grid column off-screen, because the\nheight-constrained board (aspect 10:20) plus 2×48px controls didn't\nfit under ~380px wide. Replaced with a stacked layout — board fills\nthe available vertical space, controls in a 5-col grid below.\n\nVerified via fgs screencheck: 0% → 99% device coverage.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-06T16:38:24Z"
-          }
-        }
-      },
-      {
-        "sha": "518c3009b0b63f837567e15091de9b1af21347e5",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/518c3009b0b63f837567e15091de9b1af21347e5",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
           }
         }
       }
