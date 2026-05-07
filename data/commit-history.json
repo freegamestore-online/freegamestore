@@ -40,9 +40,29 @@
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-04T09:51:57Z"
+      "pushed_at": "2026-05-07T23:10:05Z"
     },
     "commits": [
+      {
+        "sha": "f987d0e6501968760b48d6833e46b08ce368624a",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/f987d0e6501968760b48d6833e46b08ce368624a",
+        "commit": {
+          "message": "fix: force text rendering for chess pieces to prevent emoji on macOS/iOS\n\nPawn glyph U+265F renders as colored emoji on some platforms, ignoring\nSVG fill colors. Added VS15 (U+FE0E) to all piece characters to force\ntext presentation mode.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-07T23:10:03Z"
+          }
+        }
+      },
+      {
+        "sha": "b3c5bc020585de43e1dad70e3d0d949bd1e13c8c",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/b3c5bc020585de43e1dad70e3d0d949bd1e13c8c",
+        "commit": {
+          "message": "fix: viewport overflow — lock layout to 100svh, scale board on mobile\n\nScored 35/99 on quality audit. Board overflowed on phones and tablets.\nFixed by: strict height chain, max-height constraint on board with\naspect-ratio scaling, smaller info bar icons on mobile, scrollable\nsidebar, overflow:hidden at root.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-07T22:49:17Z"
+          }
+        }
+      },
       {
         "sha": "d5e538f67a05b2bad70e5732a9f0449067643cdf",
         "html_url": "https://github.com/freegamestore-online/chess/commit/d5e538f67a05b2bad70e5732a9f0449067643cdf",
@@ -50,26 +70,6 @@
           "message": "Fix compliance: title, fonts, PWA manifest\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-04T09:51:56Z"
-          }
-        }
-      },
-      {
-        "sha": "54cdf25680c699368802cdc0a94b23e35008ea2a",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/54cdf25680c699368802cdc0a94b23e35008ea2a",
-        "commit": {
-          "message": "Fix compliance: check for freegamestore.online link",
-          "author": {
-            "date": "2026-05-04T08:39:01Z"
-          }
-        }
-      },
-      {
-        "sha": "b3c2d14f661f28ef0f93de5b6ce2fbe646681fd8",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/b3c2d14f661f28ef0f93de5b6ce2fbe646681fd8",
-        "commit": {
-          "message": "Add Cloudflare Pages auto-deploy on push to main",
-          "author": {
-            "date": "2026-05-04T08:36:57Z"
           }
         }
       }
@@ -344,9 +344,19 @@
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-04T09:52:00Z"
+      "pushed_at": "2026-05-07T22:43:02Z"
     },
     "commits": [
+      {
+        "sha": "9903f311025b7358f9d49a9b6bdfe72f6d7d6586",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/9903f311025b7358f9d49a9b6bdfe72f6d7d6586",
+        "commit": {
+          "message": "fix: viewport overflow — lock layout to 100dvh with no scroll\n\nScored 0/99 on quality audit. All content overflowed on every viewport.\nFixed by: strict height chain (html/body/#root all 100dvh), flex min-h-0\nat each level, scrollable content areas within bounded containers,\nsmaller element sizes on mobile.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-07T22:43:00Z"
+          }
+        }
+      },
       {
         "sha": "e6d98b04fdb771b37055c90f142f89d02372b576",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/e6d98b04fdb771b37055c90f142f89d02372b576",
@@ -364,16 +374,6 @@
           "message": "Fix compliance: check for freegamestore.online link",
           "author": {
             "date": "2026-05-04T08:39:05Z"
-          }
-        }
-      },
-      {
-        "sha": "d0efdf2450d08c692f226412ce53ad0e63aef6a6",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/d0efdf2450d08c692f226412ce53ad0e63aef6a6",
-        "commit": {
-          "message": "Add Cloudflare Pages auto-deploy on push to main",
-          "author": {
-            "date": "2026-05-04T08:36:59Z"
           }
         }
       }
@@ -686,9 +686,19 @@
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-06T21:30:57Z"
+      "pushed_at": "2026-05-07T23:17:27Z"
     },
     "commits": [
+      {
+        "sha": "1793d26f1ca9e8a2a0ab42cf91d2ec4e9a323ba9",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/1793d26f1ca9e8a2a0ab42cf91d2ec4e9a323ba9",
+        "commit": {
+          "message": "fix: lock viewport to 100dvh with overflow hidden, remove quality SDK\n\nPrevents document scrolling on any viewport. Removed @freeappstore/quality\nSDK — games are tested externally by the platform auditor.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-07T23:17:24Z"
+          }
+        }
+      },
       {
         "sha": "887fbac3188ba1e833a19545a417945097624fbf",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/887fbac3188ba1e833a19545a417945097624fbf",
@@ -706,16 +716,6 @@
           "message": "fix(mobile): use 100dvh in Shell, not h-screen (iOS Safari URL-bar bug)\n\nSame issue surfaced on tetris: h-screen (= 100vh) makes the page\nscrollable on iOS Safari first load because 100vh is the URL-bar-\nhidden height (~852px) but the actual visible area while the URL bar\nis showing is ~750px. 100dvh tracks the real visible height.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-06T20:57:39Z"
-          }
-        }
-      },
-      {
-        "sha": "11a8bff830c8e36fde0738c95773e77e97adbe88",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/11a8bff830c8e36fde0738c95773e77e97adbe88",
-        "commit": {
-          "message": "Auto-start the game — drop the menu screen\n\nHangman has nothing to configure pre-game (no difficulty picker, no\ntutorial, no auth) so the start screen was just a tap to skip — same\npattern tetris/2048/snake all use. First load now drops you straight\ninto a fresh round. The game-over screen still has a Play Again\nbutton because resetting state is a meaningful explicit action.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-06T16:52:09Z"
           }
         }
       }
