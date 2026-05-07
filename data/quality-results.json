@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-07T22:39:21.241Z",
+  "timestamp": "2026-05-07T23:49:41.299Z",
   "games": [
     {
       "id": "chess",
       "name": "Chess",
       "url": "https://chess.freegamestore.online",
-      "score": 35,
-      "loadTimeMs": 2015,
+      "score": 99,
+      "loadTimeMs": 1837,
       "consoleErrors": [],
       "viewports": [
         {
@@ -14,11 +14,11 @@
           "label": "320x568 iPhone SE",
           "width": 320,
           "height": 568,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 320,
-          "scrollHeight": 752
+          "scrollHeight": 568
         },
         {
           "id": "p-360",
@@ -58,22 +58,22 @@
           "label": "600x800 Tablet",
           "width": 600,
           "height": 800,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 600,
-          "scrollHeight": 990
+          "scrollHeight": 800
         },
         {
           "id": "p-768",
           "label": "768x1024 iPad",
           "width": 768,
           "height": 1024,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 768,
-          "scrollHeight": 1134
+          "scrollHeight": 1024
         },
         {
           "id": "p-1024",
@@ -91,33 +91,33 @@
           "label": "568x320 iPhone SE land.",
           "width": 568,
           "height": 320,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 568,
-          "scrollHeight": 958
+          "scrollHeight": 320
         },
         {
           "id": "l-667",
           "label": "667x375 iPhone 8 land.",
           "width": 667,
           "height": 375,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 667,
-          "scrollHeight": 1033
+          "scrollHeight": 375
         },
         {
           "id": "l-736",
           "label": "736x414 iPhone+ land.",
           "width": 736,
           "height": 414,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 736,
-          "scrollHeight": 1102
+          "scrollHeight": 414
         },
         {
           "id": "l-1024",
@@ -147,8 +147,8 @@
       "id": "puzzle",
       "name": "Puzzle",
       "url": "https://puzzle.freegamestore.online",
-      "score": 0,
-      "loadTimeMs": 2500,
+      "score": 99,
+      "loadTimeMs": 1771,
       "consoleErrors": [],
       "viewports": [
         {
@@ -156,66 +156,66 @@
           "label": "320x568 iPhone SE",
           "width": 320,
           "height": 568,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 320,
-          "scrollHeight": 2188
+          "scrollHeight": 568
         },
         {
           "id": "p-360",
           "label": "360x800 Android",
           "width": 360,
           "height": 800,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 360,
-          "scrollHeight": 2152
+          "scrollHeight": 800
         },
         {
           "id": "p-393",
           "label": "393x852 iPhone 15",
           "width": 393,
           "height": 852,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 393,
-          "scrollHeight": 2152
+          "scrollHeight": 852
         },
         {
           "id": "p-414",
           "label": "414x896 iPhone 11 PM",
           "width": 414,
           "height": 896,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 414,
-          "scrollHeight": 2152
+          "scrollHeight": 896
         },
         {
           "id": "p-600",
           "label": "600x800 Tablet",
           "width": 600,
           "height": 800,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 600,
-          "scrollHeight": 2087
+          "scrollHeight": 800
         },
         {
           "id": "p-768",
           "label": "768x1024 iPad",
           "width": 768,
           "height": 1024,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 768,
-          "scrollHeight": 1402
+          "scrollHeight": 1024
         },
         {
           "id": "p-1024",
@@ -233,55 +233,55 @@
           "label": "568x320 iPhone SE land.",
           "width": 568,
           "height": 320,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 568,
-          "scrollHeight": 2087
+          "scrollHeight": 320
         },
         {
           "id": "l-667",
           "label": "667x375 iPhone 8 land.",
           "width": 667,
           "height": 375,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 667,
-          "scrollHeight": 1402
+          "scrollHeight": 375
         },
         {
           "id": "l-736",
           "label": "736x414 iPhone+ land.",
           "width": 736,
           "height": 414,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 736,
-          "scrollHeight": 1402
+          "scrollHeight": 414
         },
         {
           "id": "l-1024",
           "label": "1024x768 iPad land.",
           "width": 1024,
           "height": 768,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 1024,
-          "scrollHeight": 1260
+          "scrollHeight": 768
         },
         {
           "id": "l-1366",
           "label": "1366x1024 iPad Pro land.",
           "width": 1366,
           "height": 1024,
-          "pass": false,
+          "pass": true,
           "scrollsX": false,
-          "scrollsY": true,
+          "scrollsY": false,
           "scrollWidth": 1366,
-          "scrollHeight": 1260
+          "scrollHeight": 1024
         }
       ]
     },
@@ -290,7 +290,7 @@
       "name": "Tetris",
       "url": "https://tetris.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2398,
+      "loadTimeMs": 1608,
       "consoleErrors": [],
       "viewports": [
         {
@@ -432,7 +432,7 @@
       "name": "Snake",
       "url": "https://snake.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1925,
+      "loadTimeMs": 1594,
       "consoleErrors": [],
       "viewports": [
         {
@@ -574,7 +574,7 @@
       "name": "Minesweeper",
       "url": "https://minesweeper.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2413,
+      "loadTimeMs": 1662,
       "consoleErrors": [],
       "viewports": [
         {
@@ -716,7 +716,7 @@
       "name": "2048",
       "url": "https://2048.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1767,
+      "loadTimeMs": 1580,
       "consoleErrors": [],
       "viewports": [
         {
@@ -858,7 +858,7 @@
       "name": "Slither",
       "url": "https://slither.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1880,
+      "loadTimeMs": 1472,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1000,7 +1000,7 @@
       "name": "Racing",
       "url": "https://racing.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2560,
+      "loadTimeMs": 1758,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1142,7 +1142,7 @@
       "name": "Bowling",
       "url": "https://bowling.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2982,
+      "loadTimeMs": 1898,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1284,7 +1284,7 @@
       "name": "Space Shooter",
       "url": "https://spaceshooter.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2801,
+      "loadTimeMs": 1983,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1426,7 +1426,7 @@
       "name": "Breakout",
       "url": "https://breakout.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2676,
+      "loadTimeMs": 1673,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1568,7 +1568,7 @@
       "name": "Platformer",
       "url": "https://platformer.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2720,
+      "loadTimeMs": 1552,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1710,7 +1710,7 @@
       "name": "Sudoku",
       "url": "https://sudoku.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2734,
+      "loadTimeMs": 1465,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1852,7 +1852,7 @@
       "name": "Pac-Man",
       "url": "https://pacman.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2563,
+      "loadTimeMs": 1460,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1994,7 +1994,7 @@
       "name": "Pong",
       "url": "https://pong.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1529,
+      "loadTimeMs": 1453,
       "consoleErrors": [],
       "viewports": [
         {
@@ -2136,7 +2136,7 @@
       "name": "Flappy Bird",
       "url": "https://flappy.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2673,
+      "loadTimeMs": 1476,
       "consoleErrors": [],
       "viewports": [
         {
@@ -2278,7 +2278,7 @@
       "name": "Solitaire",
       "url": "https://solitaire.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2713,
+      "loadTimeMs": 1473,
       "consoleErrors": [],
       "viewports": [
         {
@@ -2420,7 +2420,7 @@
       "name": "Connect 4",
       "url": "https://connect4.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 3269,
+      "loadTimeMs": 1513,
       "consoleErrors": [],
       "viewports": [
         {
@@ -2562,7 +2562,7 @@
       "name": "Wordle",
       "url": "https://wordle.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2480,
+      "loadTimeMs": 1471,
       "consoleErrors": [],
       "viewports": [
         {
@@ -2704,7 +2704,7 @@
       "name": "Simon",
       "url": "https://simon.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1641,
+      "loadTimeMs": 1461,
       "consoleErrors": [],
       "viewports": [
         {
@@ -2846,7 +2846,7 @@
       "name": "Mahjong",
       "url": "https://mahjong.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1869,
+      "loadTimeMs": 1481,
       "consoleErrors": [],
       "viewports": [
         {
@@ -2988,7 +2988,7 @@
       "name": "Checkers",
       "url": "https://checkers.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2093,
+      "loadTimeMs": 1448,
       "consoleErrors": [],
       "viewports": [
         {
@@ -3130,7 +3130,7 @@
       "name": "Hangman",
       "url": "https://hangman.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2378,
+      "loadTimeMs": 1531,
       "consoleErrors": [],
       "viewports": [
         {
@@ -3272,7 +3272,7 @@
       "name": "Memory",
       "url": "https://memory.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1928,
+      "loadTimeMs": 1487,
       "consoleErrors": [],
       "viewports": [
         {
@@ -3414,7 +3414,7 @@
       "name": "Frogger",
       "url": "https://frogger.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1881,
+      "loadTimeMs": 1543,
       "consoleErrors": [],
       "viewports": [
         {
@@ -3556,7 +3556,7 @@
       "name": "Match 3",
       "url": "https://match3.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1842,
+      "loadTimeMs": 1479,
       "consoleErrors": [],
       "viewports": [
         {
@@ -3698,7 +3698,7 @@
       "name": "Whack-a-Mole",
       "url": "https://whackamole.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2731,
+      "loadTimeMs": 1570,
       "consoleErrors": [],
       "viewports": [
         {
@@ -3840,7 +3840,7 @@
       "name": "Word Search",
       "url": "https://wordsearch.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1832,
+      "loadTimeMs": 1589,
       "consoleErrors": [],
       "viewports": [
         {
@@ -3982,7 +3982,7 @@
       "name": "Asteroids",
       "url": "https://asteroids.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2509,
+      "loadTimeMs": 1651,
       "consoleErrors": [],
       "viewports": [
         {
@@ -4124,7 +4124,7 @@
       "name": "coinflip",
       "url": "https://coinflip.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1559,
+      "loadTimeMs": 1175,
       "consoleErrors": [],
       "viewports": [
         {
@@ -4266,7 +4266,7 @@
       "name": "dice",
       "url": "https://dice.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2376,
+      "loadTimeMs": 1297,
       "consoleErrors": [],
       "viewports": [
         {
@@ -4408,7 +4408,7 @@
       "name": "highlow",
       "url": "https://highlow.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1701,
+      "loadTimeMs": 1223,
       "consoleErrors": [],
       "viewports": [
         {
@@ -4550,7 +4550,7 @@
       "name": "memorymatch",
       "url": "https://memorymatch.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2227,
+      "loadTimeMs": 1171,
       "consoleErrors": [],
       "viewports": [
         {
