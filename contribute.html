@@ -96,7 +96,23 @@
         <li><strong>Uses the tech stack</strong> — TypeScript, React, Vite, Tailwind CSS, Cloudflare Pages</li>
       </ul>
 
-      <!-- Section 3: Start Building -->
+      <!-- Section 3: Workspace Setup -->
+      <h2>Workspace Setup</h2>
+      <p>Organize your repos under a consistent folder so every tool — and every AI agent — knows where to find things.</p>
+      <div class="cmd">mkdir -p ~/dev/fgs/games && cd ~/dev/fgs/games</div>
+      <p>Clone each game repo into the <code>games/</code> folder:</p>
+      <div class="cmd">git clone https://github.com/freegamestore-online/my-game.git
+# Result: ~/dev/fgs/games/my-game/</div>
+      <p>The recommended layout:</p>
+      <div class="cmd" style="white-space:pre;">~/dev/fgs/
+  games/            ← your game repos
+    chess/
+    tetris/
+    racing/
+  infra/            ← store site &amp; templates (maintainers only)</div>
+      <p>This matches the paths in <a href="https://raw.githubusercontent.com/freeappstore-online/ops/main/SKILLS.md">SKILLS.md</a>, so AI agents reading the platform guide will find your code automatically. If you also build apps, use <code>~/dev/fas/apps/</code> for <a href="https://freeappstore.online">FreeAppStore</a> projects.</p>
+
+      <!-- Section 4: Start Building -->
       <h2>Start Building</h2>
       <p>For approved creators — here's how to go from zero to a live game.</p>
 
