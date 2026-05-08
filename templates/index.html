@@ -71,30 +71,10 @@
     <!-- Right panel (desktop only) -->
     <section class="split-right" id="split-right">
       <div class="split-right-empty" id="right-empty">
-        <div class="empty-icon">&#127918;</div>
-        <h2>Select a game to play</h2>
-        <p>Pick a game from the list to play or learn more.</p>
-      </div>
-      <div class="split-right-detail" id="right-detail" hidden>
-        <div class="detail-card">
-          <div class="detail-header">
-            <div class="detail-icon" id="detail-icon"></div>
-            <div>
-              <h2 id="detail-name"></h2>
-              <div class="tag" id="detail-category"></div>
-            </div>
-          </div>
-          <p class="detail-description" id="detail-description"></p>
-          <div class="detail-actions">
-            <button class="detail-play-btn" id="detail-play-btn">&#9654; Play</button>
-            <a class="detail-newtab-btn" id="detail-newtab" href="#" target="_blank" rel="noopener">&#8599; Open in new tab</a>
-            <a class="detail-about-btn" id="detail-about" href="#">About this game &#8594;</a>
-          </div>
-        </div>
+        <p style="color:var(--muted);font-size:0.9rem;">Select a game from the list</p>
       </div>
       <div class="split-right-play" id="right-play" hidden>
         <div class="play-toolbar">
-          <button class="play-back-btn" id="play-back-btn">&#8592; Back</button>
           <span class="play-title" id="play-title"></span>
           <a class="play-newtab" id="play-newtab" href="#" target="_blank" rel="noopener">&#8599; New tab</a>
           <button class="play-fullscreen-btn" id="play-fullscreen-btn">&#9974; Fullscreen</button>
@@ -167,76 +147,27 @@
 
     /* ── Desktop split-view logic ── */
     const splitLeft = document.getElementById('split-left');
-    const splitRight = document.getElementById('split-right');
     const rightEmpty = document.getElementById('right-empty');
-    const rightDetail = document.getElementById('right-detail');
     const rightPlay = document.getElementById('right-play');
-    const detailIcon = document.getElementById('detail-icon');
-    const detailName = document.getElementById('detail-name');
-    const detailCategory = document.getElementById('detail-category');
-    const detailDescription = document.getElementById('detail-description');
-    const detailPlayBtn = document.getElementById('detail-play-btn');
-    const detailNewtab = document.getElementById('detail-newtab');
-    const detailAbout = document.getElementById('detail-about');
-    const playBackBtn = document.getElementById('play-back-btn');
     const playTitle = document.getElementById('play-title');
     const playNewtab = document.getElementById('play-newtab');
     const playFullscreenBtn = document.getElementById('play-fullscreen-btn');
     const playIframe = document.getElementById('play-iframe');
 
-    let currentGame = null; // { url, name, category, description, icon, iconBg, aboutUrl }
-
-    function showPanel(which) {
-      rightEmpty.hidden = which !== 'empty';
-      rightDetail.hidden = which !== 'detail';
-      rightPlay.hidden = which !== 'play';
-      if (which === 'play') {
-        playIframe.src = currentGame.url;
-      } else {
-        playIframe.src = 'about:blank';
-      }
-    }
-
     function selectGame(card) {
-      // Deselect previous
       const prev = splitLeft.querySelector('.app-card.selected');
       if (prev) prev.classList.remove('selected');
       card.classList.add('selected');
 
-      currentGame = {
-        url: card.dataset.appUrl,
-        name: card.dataset.name,
-        category: card.dataset.category,
-        description: card.dataset.description,
-        icon: card.dataset.icon,
-        iconBg: card.dataset.iconBg,
-        aboutUrl: card.dataset.about,
-      };
+      const url = card.dataset.appUrl;
+      const name = card.dataset.name;
 
-      // Fill detail panel
-      detailIcon.innerHTML = currentGame.icon;
-      detailIcon.style.background = currentGame.iconBg;
-      detailName.textContent = currentGame.name;
-      detailCategory.textContent = currentGame.category.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
-      detailDescription.textContent = currentGame.description;
-      detailNewtab.href = currentGame.url;
-      detailAbout.href = currentGame.aboutUrl;
-
-      showPanel('detail');
+      playTitle.textContent = name;
+      playNewtab.href = url;
+      playIframe.src = url;
+      rightEmpty.hidden = true;
+      rightPlay.hidden = false;
     }
-
-    /* Clicking Play in detail view */
-    detailPlayBtn.addEventListener('click', () => {
-      if (!currentGame) return;
-      playTitle.textContent = currentGame.name;
-      playNewtab.href = currentGame.url;
-      showPanel('play');
-    });
-
-    /* Back from play */
-    playBackBtn.addEventListener('click', () => {
-      showPanel('detail');
-    });
 
     /* Fullscreen */
     playFullscreenBtn.addEventListener('click', () => {
