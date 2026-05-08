@@ -2,9 +2,19 @@
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-08T07:28:43Z"
+      "pushed_at": "2026-05-08T09:33:26Z"
     },
     "commits": [
+      {
+        "sha": "94d58c077201f364327e2597c618d834cf56b34e",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/94d58c077201f364327e2597c618d834cf56b34e",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:18Z"
+          }
+        }
+      },
       {
         "sha": "690301e4afb34d303d038fbb68fbc8c75b460187",
         "html_url": "https://github.com/freegamestore-online/2048/commit/690301e4afb34d303d038fbb68fbc8c75b460187",
@@ -24,25 +34,25 @@
             "date": "2026-05-08T06:56:42Z"
           }
         }
-      },
-      {
-        "sha": "3776d32b11949f9cac6b45f7127195e05ba5e50b",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/3776d32b11949f9cac6b45f7127195e05ba5e50b",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:21:55Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-08T06:58:58Z"
+      "pushed_at": "2026-05-08T09:33:36Z"
     },
     "commits": [
+      {
+        "sha": "0f1fac44f2092d968a0bad253d5960a4b81585f8",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/0f1fac44f2092d968a0bad253d5960a4b81585f8",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "4cab8f0bbbb73edd4a551f5223442198cab3488f",
         "html_url": "https://github.com/freegamestore-online/chess/commit/4cab8f0bbbb73edd4a551f5223442198cab3488f",
@@ -62,25 +72,25 @@
             "date": "2026-05-08T06:23:01Z"
           }
         }
-      },
-      {
-        "sha": "d4c3c5143ba6cb851a22025e61c76710efe7850b",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/d4c3c5143ba6cb851a22025e61c76710efe7850b",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:36:09Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-08T07:28:45Z"
+      "pushed_at": "2026-05-08T09:34:15Z"
     },
     "commits": [
+      {
+        "sha": "d3eb5aa1c17d1dd7aeb518833b4d2b5faece4748",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/d3eb5aa1c17d1dd7aeb518833b4d2b5faece4748",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:20Z"
+          }
+        }
+      },
       {
         "sha": "00fe42ef0efef410ee4035efe88a6c28e0903176",
         "html_url": "https://github.com/freegamestore-online/snake/commit/00fe42ef0efef410ee4035efe88a6c28e0903176",
@@ -100,25 +110,25 @@
             "date": "2026-05-08T06:56:36Z"
           }
         }
-      },
-      {
-        "sha": "ba79653dc7304e31e1447954427de47b6893bd77",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/ba79653dc7304e31e1447954427de47b6893bd77",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:26:23Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-08T07:28:55Z"
+      "pushed_at": "2026-05-08T09:34:17Z"
     },
     "commits": [
+      {
+        "sha": "c87aac3a68e4e37f8ff27622582919d65d1f0288",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/c87aac3a68e4e37f8ff27622582919d65d1f0288",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:20Z"
+          }
+        }
+      },
       {
         "sha": "da1dbed282e5e441b279aaa3f8562058a41b1bd2",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/da1dbed282e5e441b279aaa3f8562058a41b1bd2",
@@ -138,25 +148,25 @@
             "date": "2026-05-08T06:58:46Z"
           }
         }
-      },
-      {
-        "sha": "2ca280389642e6b7d6dc4f12b7826c139b844385",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/2ca280389642e6b7d6dc4f12b7826c139b844385",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:26:33Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-08T07:01:27Z"
+      "pushed_at": "2026-05-08T09:34:02Z"
     },
     "commits": [
+      {
+        "sha": "5b244a5bc760ad7194c7c1bd67bb41e03af483f3",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/5b244a5bc760ad7194c7c1bd67bb41e03af483f3",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "481bc3fe7681b9f36f93ea3c1a60e93e9ed82546",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/481bc3fe7681b9f36f93ea3c1a60e93e9ed82546",
@@ -176,25 +186,25 @@
             "date": "2026-05-08T05:40:16Z"
           }
         }
-      },
-      {
-        "sha": "60c67fc3e62a41bd7219de3ec595fe882ce1f930",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/60c67fc3e62a41bd7219de3ec595fe882ce1f930",
-        "commit": {
-          "message": "feat: add offline support via vite-plugin-pwa\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T04:21:20Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-08T06:58:44Z"
+      "pushed_at": "2026-05-08T09:34:04Z"
     },
     "commits": [
+      {
+        "sha": "b4277fed8c25ed029b371c4bceec9dc392fc2adc",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/b4277fed8c25ed029b371c4bceec9dc392fc2adc",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "0eaff0c33a4fe790fcc23d0aae7a0cad497ade6a",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/0eaff0c33a4fe790fcc23d0aae7a0cad497ade6a",
@@ -214,25 +224,25 @@
             "date": "2026-05-08T06:25:14Z"
           }
         }
-      },
-      {
-        "sha": "5f5c36ee13a6aefbd889f80c501e509621c56a62",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/5f5c36ee13a6aefbd889f80c501e509621c56a62",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:40:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-08T07:28:39Z"
+      "pushed_at": "2026-05-08T09:34:21Z"
     },
     "commits": [
+      {
+        "sha": "d87df531aac30735481c567173300f75a8b23890",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/d87df531aac30735481c567173300f75a8b23890",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:20Z"
+          }
+        }
+      },
       {
         "sha": "1c960242cb2e2b78352ac9ecfec075d8b9ec45a1",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/1c960242cb2e2b78352ac9ecfec075d8b9ec45a1",
@@ -252,25 +262,25 @@
             "date": "2026-05-08T06:58:44Z"
           }
         }
-      },
-      {
-        "sha": "6955284134f4f5aa5a65255b446e414ea0457138",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/6955284134f4f5aa5a65255b446e414ea0457138",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:27:02Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-08T07:29:07Z"
+      "pushed_at": "2026-05-08T09:33:34Z"
     },
     "commits": [
+      {
+        "sha": "703c09296f58e9dd970ac2999f83496c1d764c2f",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/703c09296f58e9dd970ac2999f83496c1d764c2f",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "1535574fa348c84b2ecae60d6c4cee54d59e3886",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/1535574fa348c84b2ecae60d6c4cee54d59e3886",
@@ -290,25 +300,25 @@
             "date": "2026-05-08T07:02:51Z"
           }
         }
-      },
-      {
-        "sha": "36be0ec232ebc0df8b69bc06ffdd2313411b0973",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/36be0ec232ebc0df8b69bc06ffdd2313411b0973",
-        "commit": {
-          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T07:01:08Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-08T06:57:01Z"
+      "pushed_at": "2026-05-08T09:33:32Z"
     },
     "commits": [
+      {
+        "sha": "1cf3f831a480d2f0d20bdb93e9829ae78d164444",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/1cf3f831a480d2f0d20bdb93e9829ae78d164444",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "828d4c81c6915028977a951c70785f1314346e16",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/828d4c81c6915028977a951c70785f1314346e16",
@@ -328,25 +338,25 @@
             "date": "2026-05-08T06:22:41Z"
           }
         }
-      },
-      {
-        "sha": "99c426c7a67c4f5ff1d32c9dd248d9205ae63c97",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/99c426c7a67c4f5ff1d32c9dd248d9205ae63c97",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:38:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-08T06:59:00Z"
+      "pushed_at": "2026-05-08T09:34:08Z"
     },
     "commits": [
+      {
+        "sha": "5649a20d65ca0c393db1a170c2e2504d61edd48d",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/5649a20d65ca0c393db1a170c2e2504d61edd48d",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:20Z"
+          }
+        }
+      },
       {
         "sha": "587d53c5cd9efdb7d7243d4858ef31746d418dad",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/587d53c5cd9efdb7d7243d4858ef31746d418dad",
@@ -366,25 +376,25 @@
             "date": "2026-05-08T06:25:34Z"
           }
         }
-      },
-      {
-        "sha": "ba97caf3d5f66f594959f966a3eed3115a138d2f",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/ba97caf3d5f66f594959f966a3eed3115a138d2f",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:36:11Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-08T07:28:51Z"
+      "pushed_at": "2026-05-08T09:33:40Z"
     },
     "commits": [
+      {
+        "sha": "d109928546b83c8b2b387a94772c93f04ef87871",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/d109928546b83c8b2b387a94772c93f04ef87871",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "4b531898bd4d80b6ad87f4ce8040f38d43ff3d53",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/4b531898bd4d80b6ad87f4ce8040f38d43ff3d53",
@@ -404,25 +414,25 @@
             "date": "2026-05-08T06:58:47Z"
           }
         }
-      },
-      {
-        "sha": "1fd429fb9f10a67ac7e9498a02ee1eabf9501eba",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/1fd429fb9f10a67ac7e9498a02ee1eabf9501eba",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:23:21Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-08T06:58:42Z"
+      "pushed_at": "2026-05-08T09:34:19Z"
     },
     "commits": [
+      {
+        "sha": "0dbaff8537cdf671c10ad1890fdbf31fef9b46ab",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/0dbaff8537cdf671c10ad1890fdbf31fef9b46ab",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:20Z"
+          }
+        }
+      },
       {
         "sha": "f8e4926ca37ccd5fa4197838fece7906d8b639d0",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/f8e4926ca37ccd5fa4197838fece7906d8b639d0",
@@ -442,25 +452,25 @@
             "date": "2026-05-08T06:26:51Z"
           }
         }
-      },
-      {
-        "sha": "51c8dfcd042e7bd368ac5ffbb7bb1bbb29ffd446",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/51c8dfcd042e7bd368ac5ffbb7bb1bbb29ffd446",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:41:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-08T07:28:41Z"
+      "pushed_at": "2026-05-08T09:34:00Z"
     },
     "commits": [
+      {
+        "sha": "476dd69f4ae45072aad66f2dd7da9d1a1a38fcfd",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/476dd69f4ae45072aad66f2dd7da9d1a1a38fcfd",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "82ade1044ce7b0a3a34ed9e8d9d9fcaab071cbbf",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/82ade1044ce7b0a3a34ed9e8d9d9fcaab071cbbf",
@@ -480,25 +490,25 @@
             "date": "2026-05-08T06:56:41Z"
           }
         }
-      },
-      {
-        "sha": "38db81e43f07b2724a8bd68444a63ff3fa6ca4b8",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/38db81e43f07b2724a8bd68444a63ff3fa6ca4b8",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:25:03Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-08T06:58:40Z"
+      "pushed_at": "2026-05-08T09:33:30Z"
     },
     "commits": [
+      {
+        "sha": "52e0d968e6bca8b5e1faf82213ea42d79806fbb6",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/52e0d968e6bca8b5e1faf82213ea42d79806fbb6",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:18Z"
+          }
+        }
+      },
       {
         "sha": "8226b83406ff7cf527329883fe345d6df52039c5",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/8226b83406ff7cf527329883fe345d6df52039c5",
@@ -518,25 +528,25 @@
             "date": "2026-05-08T06:22:27Z"
           }
         }
-      },
-      {
-        "sha": "28b0b71649cc76f95ef925844e09cd42bc75589b",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/28b0b71649cc76f95ef925844e09cd42bc75589b",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:38:28Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-08T06:56:59Z"
+      "pushed_at": "2026-05-08T09:33:44Z"
     },
     "commits": [
+      {
+        "sha": "9a0d06ccac6a979558ad438162b067c8a9ceaedd",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/9a0d06ccac6a979558ad438162b067c8a9ceaedd",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "cf33f5a5d511037b2e2a48394980695fb8b3aec1",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/cf33f5a5d511037b2e2a48394980695fb8b3aec1",
@@ -556,25 +566,25 @@
             "date": "2026-05-08T06:23:42Z"
           }
         }
-      },
-      {
-        "sha": "4ca3275200d9c845a87765edd603c356fe7639a7",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/4ca3275200d9c845a87765edd603c356fe7639a7",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:39:07Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-08T06:56:52Z"
+      "pushed_at": "2026-05-08T09:34:06Z"
     },
     "commits": [
+      {
+        "sha": "f68ba1f15818ca521cd7fa74fd88a3b66abfc880",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/f68ba1f15818ca521cd7fa74fd88a3b66abfc880",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:20Z"
+          }
+        }
+      },
       {
         "sha": "7586578b3b33ce1efa9f9b20c007b3bd8afcad6d",
         "html_url": "https://github.com/freegamestore-online/pong/commit/7586578b3b33ce1efa9f9b20c007b3bd8afcad6d",
@@ -594,25 +604,25 @@
             "date": "2026-05-08T06:25:25Z"
           }
         }
-      },
-      {
-        "sha": "95ef196eabb0108c3c3f20989e574ecab5c32591",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/95ef196eabb0108c3c3f20989e574ecab5c32591",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:40:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-08T07:28:59Z"
+      "pushed_at": "2026-05-08T09:33:54Z"
     },
     "commits": [
+      {
+        "sha": "46b5c4b8e7539d8d46a62241b65e4b64a8510a79",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/46b5c4b8e7539d8d46a62241b65e4b64a8510a79",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "3317b660e657e7180fe25ca21c1a6ff78efe0afb",
         "html_url": "https://github.com/freegamestore-online/match3/commit/3317b660e657e7180fe25ca21c1a6ff78efe0afb",
@@ -632,25 +642,25 @@
             "date": "2026-05-08T06:58:52Z"
           }
         }
-      },
-      {
-        "sha": "77d8dc57c0fea77a204e8f23e5c11f5617e6f8e7",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/77d8dc57c0fea77a204e8f23e5c11f5617e6f8e7",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:24:33Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-08T07:29:02Z"
+      "pushed_at": "2026-05-08T09:34:25Z"
     },
     "commits": [
+      {
+        "sha": "25dde9af98916c19d34fe6bb8688bfaa7de8514d",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/25dde9af98916c19d34fe6bb8688bfaa7de8514d",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:20Z"
+          }
+        }
+      },
       {
         "sha": "39fe2b39f16259c14c6246965cd25fc96cd93306",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/39fe2b39f16259c14c6246965cd25fc96cd93306",
@@ -670,25 +680,25 @@
             "date": "2026-05-08T07:00:49Z"
           }
         }
-      },
-      {
-        "sha": "655685625ba1ee982988c9b6abc133baf8dc0904",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/655685625ba1ee982988c9b6abc133baf8dc0904",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:27:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-08T06:57:03Z"
+      "pushed_at": "2026-05-08T09:33:47Z"
     },
     "commits": [
+      {
+        "sha": "f2fe9c75132895eb692f4cd073620b9a7fc69735",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/f2fe9c75132895eb692f4cd073620b9a7fc69735",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "b2642bb4ffdee6cef1c867f7c18036f47cb8a209",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/b2642bb4ffdee6cef1c867f7c18036f47cb8a209",
@@ -708,25 +718,25 @@
             "date": "2026-05-08T06:24:02Z"
           }
         }
-      },
-      {
-        "sha": "a0ff51b4a071e0a450b387e82f55fcac31ae8a1d",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/a0ff51b4a071e0a450b387e82f55fcac31ae8a1d",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:39:27Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-08T07:29:06Z"
+      "pushed_at": "2026-05-08T09:34:12Z"
     },
     "commits": [
+      {
+        "sha": "bbe3d988e703bb82d97170019671b0a9f194152d",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/bbe3d988e703bb82d97170019671b0a9f194152d",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:20Z"
+          }
+        }
+      },
       {
         "sha": "d47bbe182db63871c21cba92dab756aeb181ae6e",
         "html_url": "https://github.com/freegamestore-online/simon/commit/d47bbe182db63871c21cba92dab756aeb181ae6e",
@@ -746,25 +756,25 @@
             "date": "2026-05-08T06:56:43Z"
           }
         }
-      },
-      {
-        "sha": "d875ce8c9a8662cc0472f0cfc20215c5711ed309",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/d875ce8c9a8662cc0472f0cfc20215c5711ed309",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:25:59Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-08T07:01:46Z"
+      "pushed_at": "2026-05-08T09:33:28Z"
     },
     "commits": [
+      {
+        "sha": "65ef95b36756316b06428bcfe83d4d0cba9bbd2a",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/65ef95b36756316b06428bcfe83d4d0cba9bbd2a",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:18Z"
+          }
+        }
+      },
       {
         "sha": "02195ed74eedd04a0e1661e048bbdbb6cd3bac5f",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/02195ed74eedd04a0e1661e048bbdbb6cd3bac5f",
@@ -784,25 +794,25 @@
             "date": "2026-05-08T06:22:05Z"
           }
         }
-      },
-      {
-        "sha": "0fd25424bef48fe544652d2a0b9bc06da1dd4ea5",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/0fd25424bef48fe544652d2a0b9bc06da1dd4ea5",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:38:08Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-08T07:28:57Z"
+      "pushed_at": "2026-05-08T09:33:56Z"
     },
     "commits": [
+      {
+        "sha": "818eb38294a4ddb490970e04006233570cc2a9fc",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/818eb38294a4ddb490970e04006233570cc2a9fc",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "ab7589139bf8fb43d2e4a964f64184ee4e97ba94",
         "html_url": "https://github.com/freegamestore-online/memory/commit/ab7589139bf8fb43d2e4a964f64184ee4e97ba94",
@@ -822,25 +832,25 @@
             "date": "2026-05-08T06:56:45Z"
           }
         }
-      },
-      {
-        "sha": "4216ce6418a6cc0735c1a04d728c2b2284bce10a",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/4216ce6418a6cc0735c1a04d728c2b2284bce10a",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:24:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-08T07:28:49Z"
+      "pushed_at": "2026-05-08T09:34:27Z"
     },
     "commits": [
+      {
+        "sha": "2de4f74bd3b294b0ca445c1b2414e3c0188c58bb",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/2de4f74bd3b294b0ca445c1b2414e3c0188c58bb",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:20Z"
+          }
+        }
+      },
       {
         "sha": "348230466442b619e15eb130af0c4b050320ee7f",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/348230466442b619e15eb130af0c4b050320ee7f",
@@ -860,25 +870,25 @@
             "date": "2026-05-08T06:56:45Z"
           }
         }
-      },
-      {
-        "sha": "4384994ba2e236225e35300e165a6d0730025106",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/4384994ba2e236225e35300e165a6d0730025106",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:27:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-08T06:58:37Z"
+      "pushed_at": "2026-05-08T09:34:13Z"
     },
     "commits": [
+      {
+        "sha": "bf6b2b8caa492916948df3029a474eed18bd50b6",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/bf6b2b8caa492916948df3029a474eed18bd50b6",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:20Z"
+          }
+        }
+      },
       {
         "sha": "0443cc3c530ecee82b5d442d17ed3fbf620b2319",
         "html_url": "https://github.com/freegamestore-online/slither/commit/0443cc3c530ecee82b5d442d17ed3fbf620b2319",
@@ -898,25 +908,25 @@
             "date": "2026-05-08T06:26:10Z"
           }
         }
-      },
-      {
-        "sha": "83a7361af57be8c780d2a5ce2a033dac9b2bca10",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/83a7361af57be8c780d2a5ce2a033dac9b2bca10",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:41:11Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-08T07:28:53Z"
+      "pushed_at": "2026-05-08T09:33:51Z"
     },
     "commits": [
+      {
+        "sha": "71f39c144a3a6483b44ded6a7e1251613dff084b",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/71f39c144a3a6483b44ded6a7e1251613dff084b",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "6b16c0d3296610b58ef14867580384b2b1ba034e",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/6b16c0d3296610b58ef14867580384b2b1ba034e",
@@ -936,25 +946,25 @@
             "date": "2026-05-08T06:58:49Z"
           }
         }
-      },
-      {
-        "sha": "f9e0550d5e56b499f8705f8536bcfc3da4096726",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/f9e0550d5e56b499f8705f8536bcfc3da4096726",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:24:23Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-08T07:01:37Z"
+      "pushed_at": "2026-05-08T09:33:46Z"
     },
     "commits": [
+      {
+        "sha": "340453bea5caa49e2dabc3bee2a83f2df635a33c",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/340453bea5caa49e2dabc3bee2a83f2df635a33c",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "bacb459103ef5e79588abe55ea97d39eb2bd8313",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/bacb459103ef5e79588abe55ea97d39eb2bd8313",
@@ -974,25 +984,25 @@
             "date": "2026-05-08T06:23:52Z"
           }
         }
-      },
-      {
-        "sha": "73718da3c1088f5e51e2cd9f5c4c9584857f1a88",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/73718da3c1088f5e51e2cd9f5c4c9584857f1a88",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:39:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-08T07:28:47Z"
+      "pushed_at": "2026-05-08T09:34:23Z"
     },
     "commits": [
+      {
+        "sha": "b80ec11e4baf5b474c6e1894b24eea1de5653fcc",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/b80ec11e4baf5b474c6e1894b24eea1de5653fcc",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:20Z"
+          }
+        }
+      },
       {
         "sha": "9c1c41462c1c524d5cee9b1ab076e98f237b6046",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/9c1c41462c1c524d5cee9b1ab076e98f237b6046",
@@ -1012,25 +1022,25 @@
             "date": "2026-05-08T06:56:37Z"
           }
         }
-      },
-      {
-        "sha": "c7f9a30de30b8a8dfaa964784346fd30228d21a5",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/c7f9a30de30b8a8dfaa964784346fd30228d21a5",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:27:14Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-08T07:29:03Z"
+      "pushed_at": "2026-05-08T09:34:29Z"
     },
     "commits": [
+      {
+        "sha": "1d13f7543d716b212483be8dddd8699b774a01ba",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/1d13f7543d716b212483be8dddd8699b774a01ba",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:20Z"
+          }
+        }
+      },
       {
         "sha": "812fb46e73c7e580be0284a26e7d19c320a1fe95",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/812fb46e73c7e580be0284a26e7d19c320a1fe95",
@@ -1050,25 +1060,25 @@
             "date": "2026-05-08T07:01:08Z"
           }
         }
-      },
-      {
-        "sha": "54d9045d8827bc739e4da0b14ddbe081c9be15cb",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/54d9045d8827bc739e4da0b14ddbe081c9be15cb",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:27:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-08T06:58:38Z"
+      "pushed_at": "2026-05-08T09:34:10Z"
     },
     "commits": [
+      {
+        "sha": "e93a5f32614226e056f51b3f262e6bbb2e91e9b6",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/e93a5f32614226e056f51b3f262e6bbb2e91e9b6",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:20Z"
+          }
+        }
+      },
       {
         "sha": "7e569b015a17ff5dda81e8f20f1562e77bc8dbd4",
         "html_url": "https://github.com/freegamestore-online/racing/commit/7e569b015a17ff5dda81e8f20f1562e77bc8dbd4",
@@ -1088,25 +1098,25 @@
             "date": "2026-05-08T06:25:49Z"
           }
         }
-      },
-      {
-        "sha": "478a90ca5778147b73316c269af4fb4ff219f245",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/478a90ca5778147b73316c269af4fb4ff219f245",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:40:51Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-08T06:58:47Z"
+      "pushed_at": "2026-05-08T09:33:38Z"
     },
     "commits": [
+      {
+        "sha": "ab4db14751e2c8a92ea85eb1a0ae02da712c4c27",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/ab4db14751e2c8a92ea85eb1a0ae02da712c4c27",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "957377de130f7a92bb649142f37dc292b302bdfa",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/957377de130f7a92bb649142f37dc292b302bdfa",
@@ -1126,25 +1136,25 @@
             "date": "2026-05-08T06:23:12Z"
           }
         }
-      },
-      {
-        "sha": "0fd96c4681fcdc7898dd7eb0304d3d04530fdf6a",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/0fd96c4681fcdc7898dd7eb0304d3d04530fdf6a",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:38:53Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-08T07:40:18Z"
+      "pushed_at": "2026-05-08T09:33:42Z"
     },
     "commits": [
+      {
+        "sha": "e0b9bd6d2caa0a0adaff450c8bcb9ecd80514f20",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/e0b9bd6d2caa0a0adaff450c8bcb9ecd80514f20",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "6d6f7e013d548dd5d4c5d8f367c26a0e7c91abec",
         "html_url": "https://github.com/freegamestore-online/dice/commit/6d6f7e013d548dd5d4c5d8f367c26a0e7c91abec",
@@ -1164,25 +1174,25 @@
             "date": "2026-05-08T06:58:17Z"
           }
         }
-      },
-      {
-        "sha": "ccdf9aa18b529940bae62c945158f777a77834a0",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/ccdf9aa18b529940bae62c945158f777a77834a0",
-        "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:23:32Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-08T06:58:54Z"
+      "pushed_at": "2026-05-08T09:33:50Z"
     },
     "commits": [
+      {
+        "sha": "8ad617e6a10fc269ede54228fdabc5031bcc152e",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/8ad617e6a10fc269ede54228fdabc5031bcc152e",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "0d0d0162687694a8de428d3d8c89f84a617dae31",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/0d0d0162687694a8de428d3d8c89f84a617dae31",
@@ -1202,25 +1212,25 @@
             "date": "2026-05-08T06:24:12Z"
           }
         }
-      },
-      {
-        "sha": "19a11245eb2b1369830611cf9cc4a0f56fe5a57f",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/19a11245eb2b1369830611cf9cc4a0f56fe5a57f",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:39:37Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-08T06:58:56Z"
+      "pushed_at": "2026-05-08T09:33:58Z"
     },
     "commits": [
+      {
+        "sha": "2aac8d2c82734a78b038f90f5f9daf7212466f92",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/2aac8d2c82734a78b038f90f5f9daf7212466f92",
+        "commit": {
+          "message": "chore: bump SDK to v0.8.0 (home icon) + clean topbar actions\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T09:33:19Z"
+          }
+        }
+      },
       {
         "sha": "2759a58392e030098338de64eb6f03eb0aed0e93",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/2759a58392e030098338de64eb6f03eb0aed0e93",
@@ -1238,16 +1248,6 @@
           "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T06:24:53Z"
-          }
-        }
-      },
-      {
-        "sha": "d2bdb7c07c4ba3860a2b3cd74aecd5fa9dbee1e4",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/d2bdb7c07c4ba3860a2b3cd74aecd5fa9dbee1e4",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:40:06Z"
           }
         }
       }
