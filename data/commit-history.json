@@ -2,9 +2,19 @@
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-08T00:39:04Z"
+      "pushed_at": "2026-05-08T02:09:38Z"
     },
     "commits": [
+      {
+        "sha": "07e4b8e92245e2581bae1e51600e8875078b2a48",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/07e4b8e92245e2581bae1e51600e8875078b2a48",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:09:36Z"
+          }
+        }
+      },
       {
         "sha": "0a4310b172607a9bfee2bc7db48f174190fa3298",
         "html_url": "https://github.com/freegamestore-online/2048/commit/0a4310b172607a9bfee2bc7db48f174190fa3298",
@@ -24,25 +34,25 @@
             "date": "2026-05-08T00:28:17Z"
           }
         }
-      },
-      {
-        "sha": "1a8ca26a46d4cbdc8abb6f43e7dad85828870b87",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/1a8ca26a46d4cbdc8abb6f43e7dad85828870b87",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-08T00:40:01Z"
+      "pushed_at": "2026-05-08T02:10:33Z"
     },
     "commits": [
+      {
+        "sha": "5ad2d3e351ac7c4a31aab3eff3f8c65c57038e52",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/5ad2d3e351ac7c4a31aab3eff3f8c65c57038e52",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:10:31Z"
+          }
+        }
+      },
       {
         "sha": "5d2020f5607aedb01589d732f77b31882ba3ab75",
         "html_url": "https://github.com/freegamestore-online/chess/commit/5d2020f5607aedb01589d732f77b31882ba3ab75",
@@ -62,25 +72,25 @@
             "date": "2026-05-08T00:27:30Z"
           }
         }
-      },
-      {
-        "sha": "f987d0e6501968760b48d6833e46b08ce368624a",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/f987d0e6501968760b48d6833e46b08ce368624a",
-        "commit": {
-          "message": "fix: force text rendering for chess pieces to prevent emoji on macOS/iOS\n\nPawn glyph U+265F renders as colored emoji on some platforms, ignoring\nSVG fill colors. Added VS15 (U+FE0E) to all piece characters to force\ntext presentation mode.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-07T23:10:03Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-08T00:42:58Z"
+      "pushed_at": "2026-05-08T02:13:19Z"
     },
     "commits": [
+      {
+        "sha": "38f603c3bdfa087954d0e37f1d7feba9aba3bd4b",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/38f603c3bdfa087954d0e37f1d7feba9aba3bd4b",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:13:17Z"
+          }
+        }
+      },
       {
         "sha": "96e0c292d05030611173c490d2b625d49404f660",
         "html_url": "https://github.com/freegamestore-online/snake/commit/96e0c292d05030611173c490d2b625d49404f660",
@@ -100,25 +110,25 @@
             "date": "2026-05-08T00:30:39Z"
           }
         }
-      },
-      {
-        "sha": "cad08cae85e3eb3c29fe792251597be0c8d40ce2",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/cad08cae85e3eb3c29fe792251597be0c8d40ce2",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-08T00:43:07Z"
+      "pushed_at": "2026-05-08T02:13:27Z"
     },
     "commits": [
+      {
+        "sha": "8aae34693ad2f96883532c6d07a47fec6117d1fa",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/8aae34693ad2f96883532c6d07a47fec6117d1fa",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:13:25Z"
+          }
+        }
+      },
       {
         "sha": "9848a037b12c66fa433ee7e53ca979e9935d191d",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/9848a037b12c66fa433ee7e53ca979e9935d191d",
@@ -138,25 +148,25 @@
             "date": "2026-05-08T00:28:24Z"
           }
         }
-      },
-      {
-        "sha": "2ae00c1efea490dd1d383bc89d3bd78676d798b7",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/2ae00c1efea490dd1d383bc89d3bd78676d798b7",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-08T00:41:52Z"
+      "pushed_at": "2026-05-08T02:12:20Z"
     },
     "commits": [
+      {
+        "sha": "a504ee6a8f375dc66e0324bd6f1148dd4cdf1d4f",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/a504ee6a8f375dc66e0324bd6f1148dd4cdf1d4f",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:12:18Z"
+          }
+        }
+      },
       {
         "sha": "2aac2d39be6ac2766d33cb1fd745ed0d1313b40a",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/2aac2d39be6ac2766d33cb1fd745ed0d1313b40a",
@@ -176,25 +186,25 @@
             "date": "2026-05-08T00:26:38Z"
           }
         }
-      },
-      {
-        "sha": "2549d85617520b205604c61821a1c1110f26c0d6",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/2549d85617520b205604c61821a1c1110f26c0d6",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-08T00:42:01Z"
+      "pushed_at": "2026-05-08T02:12:28Z"
     },
     "commits": [
+      {
+        "sha": "55bcd57ae3780eee3fdce1c49c02dd8f913e33e0",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/55bcd57ae3780eee3fdce1c49c02dd8f913e33e0",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:12:26Z"
+          }
+        }
+      },
       {
         "sha": "8b705c210aa5c28868509c177e442c78cf6e6e31",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/8b705c210aa5c28868509c177e442c78cf6e6e31",
@@ -214,25 +224,25 @@
             "date": "2026-05-08T00:31:05Z"
           }
         }
-      },
-      {
-        "sha": "a5e71753757a329669d9f916bf8f4950b91387c5",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/a5e71753757a329669d9f916bf8f4950b91387c5",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-08T00:43:28Z"
+      "pushed_at": "2026-05-08T02:13:48Z"
     },
     "commits": [
+      {
+        "sha": "78090538442aa87d62975732db9216fc8ab4b55b",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/78090538442aa87d62975732db9216fc8ab4b55b",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:13:46Z"
+          }
+        }
+      },
       {
         "sha": "5f873d5dab61d0dafe28ed3704436b716bb07e95",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/5f873d5dab61d0dafe28ed3704436b716bb07e95",
@@ -252,25 +262,25 @@
             "date": "2026-05-08T00:28:19Z"
           }
         }
-      },
-      {
-        "sha": "553f9c615ff13ca738ede8067619bbc96bddefc7",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/553f9c615ff13ca738ede8067619bbc96bddefc7",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-08T00:39:52Z"
+      "pushed_at": "2026-05-08T02:10:25Z"
     },
     "commits": [
+      {
+        "sha": "f67ed4ef912014d51976b0310414572b101e9d52",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/f67ed4ef912014d51976b0310414572b101e9d52",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:10:23Z"
+          }
+        }
+      },
       {
         "sha": "2d292f9bd265e18e1bcd49e3c89b2c4f4529cae3",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/2d292f9bd265e18e1bcd49e3c89b2c4f4529cae3",
@@ -290,25 +300,25 @@
             "date": "2026-05-08T00:28:23Z"
           }
         }
-      },
-      {
-        "sha": "330e6ae2cc750e8e53c7df6e459f8e338514fbc7",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/330e6ae2cc750e8e53c7df6e459f8e338514fbc7",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-08T00:39:44Z"
+      "pushed_at": "2026-05-08T02:10:17Z"
     },
     "commits": [
+      {
+        "sha": "0fe5d4a6ad0d3b1dc5d336e808f37a2dcdf9ce47",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/0fe5d4a6ad0d3b1dc5d336e808f37a2dcdf9ce47",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:10:15Z"
+          }
+        }
+      },
       {
         "sha": "816ecd3041f076695a6b101f5a49346e49dfc9f4",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/816ecd3041f076695a6b101f5a49346e49dfc9f4",
@@ -328,25 +338,25 @@
             "date": "2026-05-08T00:30:59Z"
           }
         }
-      },
-      {
-        "sha": "5825cbedf1be26b310ea2dc7daed57b1526b1997",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/5825cbedf1be26b310ea2dc7daed57b1526b1997",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-08T00:42:17Z"
+      "pushed_at": "2026-05-08T02:12:44Z"
     },
     "commits": [
+      {
+        "sha": "9c0a76c3e3c9caaeec1cc6ec27b2c361d1a8ebdd",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/9c0a76c3e3c9caaeec1cc6ec27b2c361d1a8ebdd",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:12:42Z"
+          }
+        }
+      },
       {
         "sha": "14ec8b7e4fec3b803b4344f48b85149d1168a016",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/14ec8b7e4fec3b803b4344f48b85149d1168a016",
@@ -366,25 +376,25 @@
             "date": "2026-05-08T00:27:32Z"
           }
         }
-      },
-      {
-        "sha": "9903f311025b7358f9d49a9b6bdfe72f6d7d6586",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/9903f311025b7358f9d49a9b6bdfe72f6d7d6586",
-        "commit": {
-          "message": "fix: viewport overflow — lock layout to 100dvh with no scroll\n\nScored 0/99 on quality audit. All content overflowed on every viewport.\nFixed by: strict height chain (html/body/#root all 100dvh), flex min-h-0\nat each level, scrollable content areas within bounded containers,\nsmaller element sizes on mobile.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-07T22:43:00Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-08T00:40:19Z"
+      "pushed_at": "2026-05-08T02:10:49Z"
     },
     "commits": [
+      {
+        "sha": "c11247296d1e1f43951bd427a416e670cb192cd0",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/c11247296d1e1f43951bd427a416e670cb192cd0",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:10:47Z"
+          }
+        }
+      },
       {
         "sha": "e87e70ebf08fd8afb3df106aa94265b288eef366",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/e87e70ebf08fd8afb3df106aa94265b288eef366",
@@ -404,25 +414,25 @@
             "date": "2026-05-08T00:28:22Z"
           }
         }
-      },
-      {
-        "sha": "76489abcf955732df71d3de0f0e47dc6317a51bd",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/76489abcf955732df71d3de0f0e47dc6317a51bd",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-08T00:43:20Z"
+      "pushed_at": "2026-05-08T02:13:40Z"
     },
     "commits": [
+      {
+        "sha": "07ff5a6b232a18789aac4ce0199e3c9f40364181",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/07ff5a6b232a18789aac4ce0199e3c9f40364181",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:13:38Z"
+          }
+        }
+      },
       {
         "sha": "2e75debd7d99b7a2e609a44857c27e6d5606e316",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/2e75debd7d99b7a2e609a44857c27e6d5606e316",
@@ -442,25 +452,25 @@
             "date": "2026-05-08T00:31:11Z"
           }
         }
-      },
-      {
-        "sha": "438602e31ed15874eb63a1fc3a42ff1cc02c7f29",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/438602e31ed15874eb63a1fc3a42ff1cc02c7f29",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-08T00:41:43Z"
+      "pushed_at": "2026-05-08T02:12:12Z"
     },
     "commits": [
+      {
+        "sha": "751fd75fee587642b4206d28f9e9eae1814915de",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/751fd75fee587642b4206d28f9e9eae1814915de",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:12:10Z"
+          }
+        }
+      },
       {
         "sha": "5850097c0792f553b34ad13fb43a55dc3507e616",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/5850097c0792f553b34ad13fb43a55dc3507e616",
@@ -480,25 +490,25 @@
             "date": "2026-05-08T00:28:18Z"
           }
         }
-      },
-      {
-        "sha": "4980be18478160dc7b5f4aa3dcf8dcb167cc2b48",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/4980be18478160dc7b5f4aa3dcf8dcb167cc2b48",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-08T00:39:32Z"
+      "pushed_at": "2026-05-08T02:10:05Z"
     },
     "commits": [
+      {
+        "sha": "d7f1a67493ce893737c1727696840b4d3308e6fb",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/d7f1a67493ce893737c1727696840b4d3308e6fb",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:10:03Z"
+          }
+        }
+      },
       {
         "sha": "b4a95b6e0621ade6784842e255ab5d09e0350a36",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/b4a95b6e0621ade6784842e255ab5d09e0350a36",
@@ -518,25 +528,25 @@
             "date": "2026-05-08T00:27:29Z"
           }
         }
-      },
-      {
-        "sha": "c13804867efb8f6662fb16eb11a088c64afc121c",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/c13804867efb8f6662fb16eb11a088c64afc121c",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-08T00:40:36Z"
+      "pushed_at": "2026-05-08T02:11:06Z"
     },
     "commits": [
+      {
+        "sha": "453b5e8934d49f96b695bbcd08b2607e08cc3349",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/453b5e8934d49f96b695bbcd08b2607e08cc3349",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:11:04Z"
+          }
+        }
+      },
       {
         "sha": "3b985d2c788b6ccaea5f90210375ed2adaacbc05",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/3b985d2c788b6ccaea5f90210375ed2adaacbc05",
@@ -556,25 +566,25 @@
             "date": "2026-05-08T00:30:54Z"
           }
         }
-      },
-      {
-        "sha": "e8981e5ad602eb3e76c78c77c2046bfa973c262a",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/e8981e5ad602eb3e76c78c77c2046bfa973c262a",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-08T00:42:09Z"
+      "pushed_at": "2026-05-08T02:12:36Z"
     },
     "commits": [
+      {
+        "sha": "1def09d012dd7a41c1f4defbff05279973841ff4",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/1def09d012dd7a41c1f4defbff05279973841ff4",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:12:34Z"
+          }
+        }
+      },
       {
         "sha": "e257c17545c0678b1ef83339bc66005e3817149e",
         "html_url": "https://github.com/freegamestore-online/pong/commit/e257c17545c0678b1ef83339bc66005e3817149e",
@@ -594,25 +604,25 @@
             "date": "2026-05-08T00:30:34Z"
           }
         }
-      },
-      {
-        "sha": "c301c1c4cbd4b4c78831a791e4a63f065c3e6e97",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/c301c1c4cbd4b4c78831a791e4a63f065c3e6e97",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-08T00:41:19Z"
+      "pushed_at": "2026-05-08T02:11:47Z"
     },
     "commits": [
+      {
+        "sha": "af89f08c274ef52e8fc3439ac5e5f203f192247e",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/af89f08c274ef52e8fc3439ac5e5f203f192247e",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:11:46Z"
+          }
+        }
+      },
       {
         "sha": "8c8d96caa6654eeaea842319eccfd6943e3a4deb",
         "html_url": "https://github.com/freegamestore-online/match3/commit/8c8d96caa6654eeaea842319eccfd6943e3a4deb",
@@ -632,25 +642,25 @@
             "date": "2026-05-08T00:26:41Z"
           }
         }
-      },
-      {
-        "sha": "24d1394ad031bd324f7b5a77622499f7592f0758",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/24d1394ad031bd324f7b5a77622499f7592f0758",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-08T00:43:45Z"
+      "pushed_at": "2026-05-08T02:14:03Z"
     },
     "commits": [
+      {
+        "sha": "8a072d4bb92c6abcaee7ba6ed9690dc3549d7a7e",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/8a072d4bb92c6abcaee7ba6ed9690dc3549d7a7e",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:14:01Z"
+          }
+        }
+      },
       {
         "sha": "7dea194a94f428b67e9dd2ba0198e8df33ea04ce",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/7dea194a94f428b67e9dd2ba0198e8df33ea04ce",
@@ -670,52 +680,42 @@
             "date": "2026-05-08T00:26:43Z"
           }
         }
-      },
-      {
-        "sha": "c99263a2218083bfb0ae5b2a04c2cdf018820edd",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/c99263a2218083bfb0ae5b2a04c2cdf018820edd",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-08T00:40:53Z"
+      "pushed_at": "2026-05-08T02:19:10Z"
     },
     "commits": [
       {
-        "sha": "b266abe30940369ef7d7f8e5b52dd3f95af2b1ee",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/b266abe30940369ef7d7f8e5b52dd3f95af2b1ee",
+        "sha": "0c11d49f4e223e73469c11b0fa3416aa4e4eadc5",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/0c11d49f4e223e73469c11b0fa3416aa4e4eadc5",
         "commit": {
-          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "message": "fix: bigger keyboard buttons (48px, 7-col grid), smaller hangman canvas\n\n4 rows of 7 letters instead of 9-col grid. Buttons are 48px tall with\n1rem font — easy to tap on phones. Hangman drawing shrinks to fill\nremaining space above keyboard. 99/99 on auditor.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-08T00:40:51Z"
+            "date": "2026-05-08T02:19:08Z"
           }
         }
       },
       {
-        "sha": "899670544d33c21acf71251bc94d04cd183f3b0b",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/899670544d33c21acf71251bc94d04cd183f3b0b",
+        "sha": "3335da66fdfd92e988009038fecbf97f7990d7bd",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/3335da66fdfd92e988009038fecbf97f7990d7bd",
         "commit": {
-          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-08T00:27:28Z"
+            "date": "2026-05-08T02:11:21Z"
           }
         }
       },
       {
-        "sha": "1793d26f1ca9e8a2a0ab42cf91d2ec4e9a323ba9",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/1793d26f1ca9e8a2a0ab42cf91d2ec4e9a323ba9",
+        "sha": "199d0d8066894a98d9cefc3d5c401eb6630fd36f",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/199d0d8066894a98d9cefc3d5c401eb6630fd36f",
         "commit": {
-          "message": "fix: lock viewport to 100dvh with overflow hidden, remove quality SDK\n\nPrevents document scrolling on any viewport. Removed @freeappstore/quality\nSDK — games are tested externally by the platform auditor.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "message": "fix: responsive layout — canvas flexes, keyboard fits all viewports\n\nCanvas fills available space (flex-1) instead of fixed 280px.\nKeyboard uses 9-col grid with aspect-square buttons instead of\n44px min-size flex-wrap. Everything fits 320x568 portrait and\n568x320 landscape. Auditor: 99/99.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-07T23:17:24Z"
+            "date": "2026-05-08T01:55:29Z"
           }
         }
       }
@@ -724,9 +724,19 @@
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-08T00:42:41Z"
+      "pushed_at": "2026-05-08T02:13:04Z"
     },
     "commits": [
+      {
+        "sha": "dfcaf4dcef8e123da829a039bb8d3e796a571710",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/dfcaf4dcef8e123da829a039bb8d3e796a571710",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:13:02Z"
+          }
+        }
+      },
       {
         "sha": "5a063f9acdd6d1ef78e4a80cb2cbe5c6b6f6fb5e",
         "html_url": "https://github.com/freegamestore-online/simon/commit/5a063f9acdd6d1ef78e4a80cb2cbe5c6b6f6fb5e",
@@ -746,25 +756,25 @@
             "date": "2026-05-08T00:26:37Z"
           }
         }
-      },
-      {
-        "sha": "116f8d8389695ee071468a11ffee280b697774fd",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/116f8d8389695ee071468a11ffee280b697774fd",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-08T00:39:12Z"
+      "pushed_at": "2026-05-08T02:09:46Z"
     },
     "commits": [
+      {
+        "sha": "4473edf700fc24cd2653985d19a7e63e4d1529a3",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/4473edf700fc24cd2653985d19a7e63e4d1529a3",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:09:44Z"
+          }
+        }
+      },
       {
         "sha": "86855cc2994737493790d3b09187f6bb275778a6",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/86855cc2994737493790d3b09187f6bb275778a6",
@@ -784,25 +794,25 @@
             "date": "2026-05-08T00:26:44Z"
           }
         }
-      },
-      {
-        "sha": "e889ae0ea5ca838ef5de1ee3b6289f15558572ce",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/e889ae0ea5ca838ef5de1ee3b6289f15558572ce",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-08T00:41:27Z"
+      "pushed_at": "2026-05-08T02:11:55Z"
     },
     "commits": [
+      {
+        "sha": "cfadb215a3225be8114927d35dc7269a69ba354b",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/cfadb215a3225be8114927d35dc7269a69ba354b",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:11:54Z"
+          }
+        }
+      },
       {
         "sha": "50a5240d79a369c291617e495a8ca13746ee3fca",
         "html_url": "https://github.com/freegamestore-online/memory/commit/50a5240d79a369c291617e495a8ca13746ee3fca",
@@ -822,25 +832,25 @@
             "date": "2026-05-08T00:26:45Z"
           }
         }
-      },
-      {
-        "sha": "607455ca275b76a1196e2d13f802492d4bcbcb13",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/607455ca275b76a1196e2d13f802492d4bcbcb13",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-08T00:43:53Z"
+      "pushed_at": "2026-05-08T02:14:11Z"
     },
     "commits": [
+      {
+        "sha": "f55db44b016c2987689de6e616f2620ca2fd8550",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/f55db44b016c2987689de6e616f2620ca2fd8550",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:14:09Z"
+          }
+        }
+      },
       {
         "sha": "c9310522742cf7692479f239225077d90760e8a3",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/c9310522742cf7692479f239225077d90760e8a3",
@@ -860,25 +870,25 @@
             "date": "2026-05-08T00:28:21Z"
           }
         }
-      },
-      {
-        "sha": "fbab731f74a9c72357b34b1ba0dd34b55d3e1ae4",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/fbab731f74a9c72357b34b1ba0dd34b55d3e1ae4",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-08T00:42:50Z"
+      "pushed_at": "2026-05-08T02:13:12Z"
     },
     "commits": [
+      {
+        "sha": "641360220f0069f6fa882cbf5f3667d506492675",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/641360220f0069f6fa882cbf5f3667d506492675",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:13:10Z"
+          }
+        }
+      },
       {
         "sha": "d81bbce6001360e1445350f31ba1f0fc29a10467",
         "html_url": "https://github.com/freegamestore-online/slither/commit/d81bbce6001360e1445350f31ba1f0fc29a10467",
@@ -898,25 +908,25 @@
             "date": "2026-05-08T00:26:46Z"
           }
         }
-      },
-      {
-        "sha": "c04662c8ef4ea6b89059759691ef19c1748839e9",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/c04662c8ef4ea6b89059759691ef19c1748839e9",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-08T00:41:11Z"
+      "pushed_at": "2026-05-08T02:11:39Z"
     },
     "commits": [
+      {
+        "sha": "89517f22b55d92d8c5867096f71889e85aa3fb82",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/89517f22b55d92d8c5867096f71889e85aa3fb82",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:11:38Z"
+          }
+        }
+      },
       {
         "sha": "8ec35dcf2fe45d96bf8c0988b109dfe2a4444947",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/8ec35dcf2fe45d96bf8c0988b109dfe2a4444947",
@@ -936,25 +946,25 @@
             "date": "2026-05-08T00:28:25Z"
           }
         }
-      },
-      {
-        "sha": "d5e4096c4732861aa154b407be54ab429f05bdf1",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/d5e4096c4732861aa154b407be54ab429f05bdf1",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-08T00:40:45Z"
+      "pushed_at": "2026-05-08T02:11:14Z"
     },
     "commits": [
+      {
+        "sha": "d52ec5691f420f97291639947fdf14355062d9a3",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/d52ec5691f420f97291639947fdf14355062d9a3",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:11:13Z"
+          }
+        }
+      },
       {
         "sha": "e2923ced8a1cb55829f7458169287160fd56aaf4",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/e2923ced8a1cb55829f7458169287160fd56aaf4",
@@ -974,25 +984,25 @@
             "date": "2026-05-08T00:26:39Z"
           }
         }
-      },
-      {
-        "sha": "8b785d1b002c252e97f871c692b4676ac52bed3c",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/8b785d1b002c252e97f871c692b4676ac52bed3c",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-08T00:43:36Z"
+      "pushed_at": "2026-05-08T02:13:56Z"
     },
     "commits": [
+      {
+        "sha": "dc5a3f2808729ba3a9ece818482fb6b41933ccb0",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/dc5a3f2808729ba3a9ece818482fb6b41933ccb0",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:13:54Z"
+          }
+        }
+      },
       {
         "sha": "3956a34d6d244a3f7224d5815c6259b729604965",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/3956a34d6d244a3f7224d5815c6259b729604965",
@@ -1012,25 +1022,25 @@
             "date": "2026-05-08T00:30:46Z"
           }
         }
-      },
-      {
-        "sha": "fd18f9e9f0032618f81919d158a3cf23d94dbdca",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/fd18f9e9f0032618f81919d158a3cf23d94dbdca",
-        "commit": {
-          "message": "feat: ship the @freeappstore/quality reporter\n\nLets the platform Quality Dashboard at freegamestore.online/quality\naudit this game live in iframes at every reference viewport. Reporter\nposts only DOM-shape numbers (no URLs, no localStorage, no identifiers)\nand is a no-op when not iframed.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-06T21:30:54Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-08T00:44:01Z"
+      "pushed_at": "2026-05-08T02:14:19Z"
     },
     "commits": [
+      {
+        "sha": "45a89623fb7cbe669f5a4d18da87c18e279ea164",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/45a89623fb7cbe669f5a4d18da87c18e279ea164",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:14:17Z"
+          }
+        }
+      },
       {
         "sha": "91850dbc9ddac48493610b272bab9cab4373f236",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/91850dbc9ddac48493610b272bab9cab4373f236",
@@ -1050,25 +1060,25 @@
             "date": "2026-05-08T00:26:43Z"
           }
         }
-      },
-      {
-        "sha": "efdd405e7929e725f198b83ea7a6be2176e99276",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/efdd405e7929e725f198b83ea7a6be2176e99276",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-08T00:42:30Z"
+      "pushed_at": "2026-05-08T02:12:56Z"
     },
     "commits": [
+      {
+        "sha": "1852529cfaf0d03fc1ef265ee7c137692f91a88d",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/1852529cfaf0d03fc1ef265ee7c137692f91a88d",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:12:54Z"
+          }
+        }
+      },
       {
         "sha": "c9dee417473d2016583608847cea253652b10dd7",
         "html_url": "https://github.com/freegamestore-online/racing/commit/c9dee417473d2016583608847cea253652b10dd7",
@@ -1088,25 +1098,25 @@
             "date": "2026-05-08T00:31:19Z"
           }
         }
-      },
-      {
-        "sha": "1807cf46148cc8d48e7888efd8593316ef25dcc7",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/1807cf46148cc8d48e7888efd8593316ef25dcc7",
-        "commit": {
-          "message": "Update CLAUDE.md branding",
-          "author": {
-            "date": "2026-05-04T11:05:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-08T00:40:10Z"
+      "pushed_at": "2026-05-08T02:10:41Z"
     },
     "commits": [
+      {
+        "sha": "a31944a37375fc6db1f0824267ca61a933e4e650",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/a31944a37375fc6db1f0824267ca61a933e4e650",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:10:40Z"
+          }
+        }
+      },
       {
         "sha": "467dfd20cc2ecc0d8479b19f5aa8c3780cea4c21",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/467dfd20cc2ecc0d8479b19f5aa8c3780cea4c21",
@@ -1126,25 +1136,25 @@
             "date": "2026-05-08T00:27:20Z"
           }
         }
-      },
-      {
-        "sha": "23d84efb490cf07d2622ab9b70c0c62605eec8de",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/23d84efb490cf07d2622ab9b70c0c62605eec8de",
-        "commit": {
-          "message": "Stop tracking tsbuildinfo (template gitignore fixed upstream)",
-          "author": {
-            "date": "2026-05-06T05:41:41Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-08T00:40:28Z"
+      "pushed_at": "2026-05-08T02:10:58Z"
     },
     "commits": [
+      {
+        "sha": "6d68cff650ead1ad4a5217eeb46174dda012a7f9",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/6d68cff650ead1ad4a5217eeb46174dda012a7f9",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:10:56Z"
+          }
+        }
+      },
       {
         "sha": "1d7c46faff21a1547a1bcd7eb0738c3eaf1db304",
         "html_url": "https://github.com/freegamestore-online/dice/commit/1d7c46faff21a1547a1bcd7eb0738c3eaf1db304",
@@ -1164,25 +1174,25 @@
             "date": "2026-05-08T00:27:21Z"
           }
         }
-      },
-      {
-        "sha": "258696ca1acbbb72e89681347a055afeda8671ee",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/258696ca1acbbb72e89681347a055afeda8671ee",
-        "commit": {
-          "message": "Dice v1: roll 1-6 dice, sum, recent history",
-          "author": {
-            "date": "2026-05-06T07:50:57Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-08T00:41:02Z"
+      "pushed_at": "2026-05-08T02:11:31Z"
     },
     "commits": [
+      {
+        "sha": "cc5677f4a72f1721cfb5f713e188cccf15bdf1df",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/cc5677f4a72f1721cfb5f713e188cccf15bdf1df",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:11:29Z"
+          }
+        }
+      },
       {
         "sha": "78d6cf0786527eb9cf7ab5cfe4c0860807283169",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/78d6cf0786527eb9cf7ab5cfe4c0860807283169",
@@ -1202,25 +1212,25 @@
             "date": "2026-05-08T00:27:22Z"
           }
         }
-      },
-      {
-        "sha": "38c22098bf253517afb83b756e6afa2739478beb",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/38c22098bf253517afb83b756e6afa2739478beb",
-        "commit": {
-          "message": "High/Low v1: card guessing, streak counter, best tracker",
-          "author": {
-            "date": "2026-05-06T07:52:22Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-08T00:41:35Z"
+      "pushed_at": "2026-05-08T02:12:04Z"
     },
     "commits": [
+      {
+        "sha": "cb26f531acf7d4dd1a7f92ff67a9b0f105da406b",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/cb26f531acf7d4dd1a7f92ff67a9b0f105da406b",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to v0.4.0 (Manrope topbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T02:12:02Z"
+          }
+        }
+      },
       {
         "sha": "f606650f16de8d31180ece7687a83f376724c726",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/f606650f16de8d31180ece7687a83f376724c726",
@@ -1238,16 +1248,6 @@
           "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T00:27:23Z"
-          }
-        }
-      },
-      {
-        "sha": "99536a621e1e408dc6221147e5befcc4c65b6fb5",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/99536a621e1e408dc6221147e5befcc4c65b6fb5",
-        "commit": {
-          "message": "Fix template's useGrid noUncheckedIndexedAccess TS error",
-          "author": {
-            "date": "2026-05-06T07:54:06Z"
           }
         }
       }
