@@ -2,9 +2,29 @@
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-04T11:05:38Z"
+      "pushed_at": "2026-05-08T00:39:04Z"
     },
     "commits": [
+      {
+        "sha": "0a4310b172607a9bfee2bc7db48f174190fa3298",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/0a4310b172607a9bfee2bc7db48f174190fa3298",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:39:02Z"
+          }
+        }
+      },
+      {
+        "sha": "5a1a03547b4f267d3353e5428709a3b927a34394",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/5a1a03547b4f267d3353e5428709a3b927a34394",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:28:17Z"
+          }
+        }
+      },
       {
         "sha": "1a8ca26a46d4cbdc8abb6f43e7dad85828870b87",
         "html_url": "https://github.com/freegamestore-online/2048/commit/1a8ca26a46d4cbdc8abb6f43e7dad85828870b87",
@@ -14,35 +34,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "97b070cbd4fca803b91b009599d8204a451a74c9",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/97b070cbd4fca803b91b009599d8204a451a74c9",
-        "commit": {
-          "message": "Add leaderboard integration",
-          "author": {
-            "date": "2026-05-04T10:27:19Z"
-          }
-        }
-      },
-      {
-        "sha": "a483f906cab45559bba5f7c12a2bd88183e99a01",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/a483f906cab45559bba5f7c12a2bd88183e99a01",
-        "commit": {
-          "message": "Fix compliance: check for freegamestore.online link",
-          "author": {
-            "date": "2026-05-04T08:38:59Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-07T23:10:05Z"
+      "pushed_at": "2026-05-08T00:40:01Z"
     },
     "commits": [
+      {
+        "sha": "5d2020f5607aedb01589d732f77b31882ba3ab75",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/5d2020f5607aedb01589d732f77b31882ba3ab75",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:39:59Z"
+          }
+        }
+      },
+      {
+        "sha": "8052ca5d8f9ea74ece5841071c0ab6830e8b8781",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/8052ca5d8f9ea74ece5841071c0ab6830e8b8781",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:27:30Z"
+          }
+        }
+      },
       {
         "sha": "f987d0e6501968760b48d6833e46b08ce368624a",
         "html_url": "https://github.com/freegamestore-online/chess/commit/f987d0e6501968760b48d6833e46b08ce368624a",
@@ -52,35 +72,35 @@
             "date": "2026-05-07T23:10:03Z"
           }
         }
-      },
-      {
-        "sha": "b3c5bc020585de43e1dad70e3d0d949bd1e13c8c",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/b3c5bc020585de43e1dad70e3d0d949bd1e13c8c",
-        "commit": {
-          "message": "fix: viewport overflow — lock layout to 100svh, scale board on mobile\n\nScored 35/99 on quality audit. Board overflowed on phones and tablets.\nFixed by: strict height chain, max-height constraint on board with\naspect-ratio scaling, smaller info bar icons on mobile, scrollable\nsidebar, overflow:hidden at root.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-07T22:49:17Z"
-          }
-        }
-      },
-      {
-        "sha": "d5e538f67a05b2bad70e5732a9f0449067643cdf",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/d5e538f67a05b2bad70e5732a9f0449067643cdf",
-        "commit": {
-          "message": "Fix compliance: title, fonts, PWA manifest\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-04T09:51:56Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-04T11:05:34Z"
+      "pushed_at": "2026-05-08T00:42:58Z"
     },
     "commits": [
+      {
+        "sha": "96e0c292d05030611173c490d2b625d49404f660",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/96e0c292d05030611173c490d2b625d49404f660",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:42:56Z"
+          }
+        }
+      },
+      {
+        "sha": "23221ce72e8911c1cdcca6a370b6122e83b1fe25",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/23221ce72e8911c1cdcca6a370b6122e83b1fe25",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:30:39Z"
+          }
+        }
+      },
       {
         "sha": "cad08cae85e3eb3c29fe792251597be0c8d40ce2",
         "html_url": "https://github.com/freegamestore-online/snake/commit/cad08cae85e3eb3c29fe792251597be0c8d40ce2",
@@ -90,35 +110,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "3b3351e8dbd67d16c628f37ea43282a0e62d4f2b",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/3b3351e8dbd67d16c628f37ea43282a0e62d4f2b",
-        "commit": {
-          "message": "Add leaderboard integration",
-          "author": {
-            "date": "2026-05-04T10:27:15Z"
-          }
-        }
-      },
-      {
-        "sha": "d7d6ab5245d2e034e921984b06f609c2cdac4efa",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/d7d6ab5245d2e034e921984b06f609c2cdac4efa",
-        "commit": {
-          "message": "Fix compliance: check for freegamestore.online link",
-          "author": {
-            "date": "2026-05-04T08:39:12Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-04T11:06:01Z"
+      "pushed_at": "2026-05-08T00:43:07Z"
     },
     "commits": [
+      {
+        "sha": "9848a037b12c66fa433ee7e53ca979e9935d191d",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/9848a037b12c66fa433ee7e53ca979e9935d191d",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:43:05Z"
+          }
+        }
+      },
+      {
+        "sha": "eb888ac1f73dbe6a75b3344432e188d9eee77b02",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/eb888ac1f73dbe6a75b3344432e188d9eee77b02",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:28:24Z"
+          }
+        }
+      },
       {
         "sha": "2ae00c1efea490dd1d383bc89d3bd78676d798b7",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/2ae00c1efea490dd1d383bc89d3bd78676d798b7",
@@ -128,35 +148,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "d67a0563c79d41d3ceb5a2957d4186b9b0519a63",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/d67a0563c79d41d3ceb5a2957d4186b9b0519a63",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:01:49Z"
-          }
-        }
-      },
-      {
-        "sha": "cefd73f1746e8761078d2bb2226c5c61df30eeb5",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/cefd73f1746e8761078d2bb2226c5c61df30eeb5",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:13:50Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-04T11:05:55Z"
+      "pushed_at": "2026-05-08T00:41:52Z"
     },
     "commits": [
+      {
+        "sha": "2aac2d39be6ac2766d33cb1fd745ed0d1313b40a",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/2aac2d39be6ac2766d33cb1fd745ed0d1313b40a",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:41:50Z"
+          }
+        }
+      },
+      {
+        "sha": "dd097a4af887e0dd8714a495bec2e49417185fc9",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/dd097a4af887e0dd8714a495bec2e49417185fc9",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:26:38Z"
+          }
+        }
+      },
       {
         "sha": "2549d85617520b205604c61821a1c1110f26c0d6",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/2549d85617520b205604c61821a1c1110f26c0d6",
@@ -166,35 +186,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "1ed396378ffe8b420440fee4afe44a3bad7bf6d7",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/1ed396378ffe8b420440fee4afe44a3bad7bf6d7",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:01:42Z"
-          }
-        }
-      },
-      {
-        "sha": "17d21789b4b0f16ca221e4f5ef5d7f838bb5c5dd",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/17d21789b4b0f16ca221e4f5ef5d7f838bb5c5dd",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:13:50Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-04T11:05:51Z"
+      "pushed_at": "2026-05-08T00:42:01Z"
     },
     "commits": [
+      {
+        "sha": "8b705c210aa5c28868509c177e442c78cf6e6e31",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/8b705c210aa5c28868509c177e442c78cf6e6e31",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:41:59Z"
+          }
+        }
+      },
+      {
+        "sha": "f6f771c71b5df1f3e4330aeac37a913ee17106e2",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/f6f771c71b5df1f3e4330aeac37a913ee17106e2",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:31:05Z"
+          }
+        }
+      },
       {
         "sha": "a5e71753757a329669d9f916bf8f4950b91387c5",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/a5e71753757a329669d9f916bf8f4950b91387c5",
@@ -204,35 +224,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "5f4ea0bc1841f4078aa4bdd5cac3f8d3d63cbc33",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/5f4ea0bc1841f4078aa4bdd5cac3f8d3d63cbc33",
-        "commit": {
-          "message": "Fix compliance: title, fonts, PWA manifest\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-04T09:52:05Z"
-          }
-        }
-      },
-      {
-        "sha": "21dd2fcf3621d094376557769a5c1a8e9c905577",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/21dd2fcf3621d094376557769a5c1a8e9c905577",
-        "commit": {
-          "message": "Initial release: Platformer with Kaplay",
-          "author": {
-            "date": "2026-05-04T09:48:29Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-04T11:05:53Z"
+      "pushed_at": "2026-05-08T00:43:28Z"
     },
     "commits": [
+      {
+        "sha": "5f873d5dab61d0dafe28ed3704436b716bb07e95",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/5f873d5dab61d0dafe28ed3704436b716bb07e95",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:43:26Z"
+          }
+        }
+      },
+      {
+        "sha": "2d385d708db3a64cf37a7675d2706f825fb3305a",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/2d385d708db3a64cf37a7675d2706f825fb3305a",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:28:19Z"
+          }
+        }
+      },
       {
         "sha": "553f9c615ff13ca738ede8067619bbc96bddefc7",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/553f9c615ff13ca738ede8067619bbc96bddefc7",
@@ -242,35 +262,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "5725f33bc223afc43462f03a782c5b03f760049d",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/5725f33bc223afc43462f03a782c5b03f760049d",
-        "commit": {
-          "message": "Fix CF project name in deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:02:46Z"
-          }
-        }
-      },
-      {
-        "sha": "aa0fb0e88086e4c52c3a401b09938732ef8a7d64",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/aa0fb0e88086e4c52c3a401b09938732ef8a7d64",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:01:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-04T11:06:10Z"
+      "pushed_at": "2026-05-08T00:39:52Z"
     },
     "commits": [
+      {
+        "sha": "2d292f9bd265e18e1bcd49e3c89b2c4f4529cae3",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/2d292f9bd265e18e1bcd49e3c89b2c4f4529cae3",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:39:50Z"
+          }
+        }
+      },
+      {
+        "sha": "6206f1c3db351ec95172d6d8c47dd66f4f7c1f94",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/6206f1c3db351ec95172d6d8c47dd66f4f7c1f94",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:28:23Z"
+          }
+        }
+      },
       {
         "sha": "330e6ae2cc750e8e53c7df6e459f8e338514fbc7",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/330e6ae2cc750e8e53c7df6e459f8e338514fbc7",
@@ -280,35 +300,35 @@
             "date": "2026-05-04T11:05:25Z"
           }
         }
-      },
-      {
-        "sha": "0c796aecd5a9f34a48becdbace652087b4435400",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/0c796aecd5a9f34a48becdbace652087b4435400",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:01:59Z"
-          }
-        }
-      },
-      {
-        "sha": "cc90e780191e4454ff60a10c7330f733b15b9240",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/cc90e780191e4454ff60a10c7330f733b15b9240",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:38:19Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-04T11:05:49Z"
+      "pushed_at": "2026-05-08T00:39:44Z"
     },
     "commits": [
+      {
+        "sha": "816ecd3041f076695a6b101f5a49346e49dfc9f4",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/816ecd3041f076695a6b101f5a49346e49dfc9f4",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:39:42Z"
+          }
+        }
+      },
+      {
+        "sha": "9dd2797f7f6d76b1bf80d2c3a8e337bc889600d9",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/9dd2797f7f6d76b1bf80d2c3a8e337bc889600d9",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:30:59Z"
+          }
+        }
+      },
       {
         "sha": "5825cbedf1be26b310ea2dc7daed57b1526b1997",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/5825cbedf1be26b310ea2dc7daed57b1526b1997",
@@ -318,35 +338,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "6ed8da2f1b8364de1a8a4230aa066cc480558506",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/6ed8da2f1b8364de1a8a4230aa066cc480558506",
-        "commit": {
-          "message": "Fix compliance: title, fonts, PWA manifest\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-04T09:52:03Z"
-          }
-        }
-      },
-      {
-        "sha": "3fe757d9d36002ca082d26b4974bac740ac22d4d",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/3fe757d9d36002ca082d26b4974bac740ac22d4d",
-        "commit": {
-          "message": "Initial release: Breakout with PixiJS 8",
-          "author": {
-            "date": "2026-05-04T09:48:28Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-07T22:43:02Z"
+      "pushed_at": "2026-05-08T00:42:17Z"
     },
     "commits": [
+      {
+        "sha": "14ec8b7e4fec3b803b4344f48b85149d1168a016",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/14ec8b7e4fec3b803b4344f48b85149d1168a016",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:42:15Z"
+          }
+        }
+      },
+      {
+        "sha": "a3b0b1bf15064081fe3d60c4c551ff2747213bd6",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/a3b0b1bf15064081fe3d60c4c551ff2747213bd6",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:27:32Z"
+          }
+        }
+      },
       {
         "sha": "9903f311025b7358f9d49a9b6bdfe72f6d7d6586",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/9903f311025b7358f9d49a9b6bdfe72f6d7d6586",
@@ -356,35 +376,35 @@
             "date": "2026-05-07T22:43:00Z"
           }
         }
-      },
-      {
-        "sha": "e6d98b04fdb771b37055c90f142f89d02372b576",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/e6d98b04fdb771b37055c90f142f89d02372b576",
-        "commit": {
-          "message": "Fix compliance: title, fonts, PWA manifest\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-04T09:51:58Z"
-          }
-        }
-      },
-      {
-        "sha": "ebd7ca09112dec9bf37e2fb7b5f4699934a56397",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/ebd7ca09112dec9bf37e2fb7b5f4699934a56397",
-        "commit": {
-          "message": "Fix compliance: check for freegamestore.online link",
-          "author": {
-            "date": "2026-05-04T08:39:05Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-04T11:06:03Z"
+      "pushed_at": "2026-05-08T00:40:19Z"
     },
     "commits": [
+      {
+        "sha": "e87e70ebf08fd8afb3df106aa94265b288eef366",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/e87e70ebf08fd8afb3df106aa94265b288eef366",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:40:17Z"
+          }
+        }
+      },
+      {
+        "sha": "9a013a935de8b1e1527c7e31605f6696a2b4a7b8",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/9a013a935de8b1e1527c7e31605f6696a2b4a7b8",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:28:22Z"
+          }
+        }
+      },
       {
         "sha": "76489abcf955732df71d3de0f0e47dc6317a51bd",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/76489abcf955732df71d3de0f0e47dc6317a51bd",
@@ -394,35 +414,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "bad19106ff2b96f2333beada125b84d9c2c72d98",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/bad19106ff2b96f2333beada125b84d9c2c72d98",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:01:51Z"
-          }
-        }
-      },
-      {
-        "sha": "b80c58ed422e9ae766f4e060dbfb3e15a820bfc0",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/b80c58ed422e9ae766f4e060dbfb3e15a820bfc0",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:13:51Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-04T11:05:47Z"
+      "pushed_at": "2026-05-08T00:43:20Z"
     },
     "commits": [
+      {
+        "sha": "2e75debd7d99b7a2e609a44857c27e6d5606e316",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/2e75debd7d99b7a2e609a44857c27e6d5606e316",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:43:18Z"
+          }
+        }
+      },
+      {
+        "sha": "e51f510e8d2103783b813361985c2cfced600a89",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/e51f510e8d2103783b813361985c2cfced600a89",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:31:11Z"
+          }
+        }
+      },
       {
         "sha": "438602e31ed15874eb63a1fc3a42ff1cc02c7f29",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/438602e31ed15874eb63a1fc3a42ff1cc02c7f29",
@@ -432,35 +452,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "f84d7678a875eb384a7138b3ef1310dff7e39ada",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/f84d7678a875eb384a7138b3ef1310dff7e39ada",
-        "commit": {
-          "message": "Fix compliance: title, fonts, PWA manifest\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-04T09:52:07Z"
-          }
-        }
-      },
-      {
-        "sha": "e06976e9980c226f190067caf37706d75679844c",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/e06976e9980c226f190067caf37706d75679844c",
-        "commit": {
-          "message": "Initial release: Space shooter with Phaser 3",
-          "author": {
-            "date": "2026-05-04T09:48:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-04T11:05:36Z"
+      "pushed_at": "2026-05-08T00:41:43Z"
     },
     "commits": [
+      {
+        "sha": "5850097c0792f553b34ad13fb43a55dc3507e616",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/5850097c0792f553b34ad13fb43a55dc3507e616",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:41:41Z"
+          }
+        }
+      },
+      {
+        "sha": "1bead424cd51158b03bf8d580f9960f29e6a94ce",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/1bead424cd51158b03bf8d580f9960f29e6a94ce",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:28:18Z"
+          }
+        }
+      },
       {
         "sha": "4980be18478160dc7b5f4aa3dcf8dcb167cc2b48",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/4980be18478160dc7b5f4aa3dcf8dcb167cc2b48",
@@ -470,35 +490,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "627ff2e509596aca75183cf48a69326ff2553f7b",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/627ff2e509596aca75183cf48a69326ff2553f7b",
-        "commit": {
-          "message": "Add leaderboard integration",
-          "author": {
-            "date": "2026-05-04T10:27:17Z"
-          }
-        }
-      },
-      {
-        "sha": "f99778b3b21567041d7aa70a419978cb202b1640",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/f99778b3b21567041d7aa70a419978cb202b1640",
-        "commit": {
-          "message": "Fix compliance: check for freegamestore.online link",
-          "author": {
-            "date": "2026-05-04T08:39:03Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-04T11:05:45Z"
+      "pushed_at": "2026-05-08T00:39:32Z"
     },
     "commits": [
+      {
+        "sha": "b4a95b6e0621ade6784842e255ab5d09e0350a36",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/b4a95b6e0621ade6784842e255ab5d09e0350a36",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:39:30Z"
+          }
+        }
+      },
+      {
+        "sha": "7b7457904baaa9f6b0aa15e42bffe30c0da4a3cf",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/7b7457904baaa9f6b0aa15e42bffe30c0da4a3cf",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:27:29Z"
+          }
+        }
+      },
       {
         "sha": "c13804867efb8f6662fb16eb11a088c64afc121c",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/c13804867efb8f6662fb16eb11a088c64afc121c",
@@ -508,35 +528,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "343938b4d682a601a7fd0143cc9c1dcb70f40673",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/343938b4d682a601a7fd0143cc9c1dcb70f40673",
-        "commit": {
-          "message": "Improve playability: DOM HUD, fixed camera, better touch controls, strike/spare overlay",
-          "author": {
-            "date": "2026-05-04T10:21:14Z"
-          }
-        }
-      },
-      {
-        "sha": "6e069e169327ec55054976c7e9fa898c819c8bad",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/6e069e169327ec55054976c7e9fa898c819c8bad",
-        "commit": {
-          "message": "Fix compliance: title, fonts, PWA manifest\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-04T09:52:00Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-04T11:05:59Z"
+      "pushed_at": "2026-05-08T00:40:36Z"
     },
     "commits": [
+      {
+        "sha": "3b985d2c788b6ccaea5f90210375ed2adaacbc05",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/3b985d2c788b6ccaea5f90210375ed2adaacbc05",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:40:34Z"
+          }
+        }
+      },
+      {
+        "sha": "f76d092233e46abbf2d62472aac0e831b10f327a",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/f76d092233e46abbf2d62472aac0e831b10f327a",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:30:54Z"
+          }
+        }
+      },
       {
         "sha": "e8981e5ad602eb3e76c78c77c2046bfa973c262a",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/e8981e5ad602eb3e76c78c77c2046bfa973c262a",
@@ -546,35 +566,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "2a1454b17a04555f8cdfd52f928456056ee668a3",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/2a1454b17a04555f8cdfd52f928456056ee668a3",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:01:46Z"
-          }
-        }
-      },
-      {
-        "sha": "248779fd50e62354f4234fe81ebf0f3d5b6175ac",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/248779fd50e62354f4234fe81ebf0f3d5b6175ac",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:13:50Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-04T11:05:57Z"
+      "pushed_at": "2026-05-08T00:42:09Z"
     },
     "commits": [
+      {
+        "sha": "e257c17545c0678b1ef83339bc66005e3817149e",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/e257c17545c0678b1ef83339bc66005e3817149e",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:42:07Z"
+          }
+        }
+      },
+      {
+        "sha": "b0335ca3d502486df54fc5c0373b4d2c902d606b",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/b0335ca3d502486df54fc5c0373b4d2c902d606b",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:30:34Z"
+          }
+        }
+      },
       {
         "sha": "c301c1c4cbd4b4c78831a791e4a63f065c3e6e97",
         "html_url": "https://github.com/freegamestore-online/pong/commit/c301c1c4cbd4b4c78831a791e4a63f065c3e6e97",
@@ -584,35 +604,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "f7a7d764ed75d3767b04df039f098965d1118705",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/f7a7d764ed75d3767b04df039f098965d1118705",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:01:44Z"
-          }
-        }
-      },
-      {
-        "sha": "79fb2cb408f7147e6be23b306fccf48185a064e6",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/79fb2cb408f7147e6be23b306fccf48185a064e6",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:13:50Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-04T11:06:19Z"
+      "pushed_at": "2026-05-08T00:41:19Z"
     },
     "commits": [
+      {
+        "sha": "8c8d96caa6654eeaea842319eccfd6943e3a4deb",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/8c8d96caa6654eeaea842319eccfd6943e3a4deb",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:41:17Z"
+          }
+        }
+      },
+      {
+        "sha": "c2aac199b5a56e6d264c36368a024c7b1ed128f0",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/c2aac199b5a56e6d264c36368a024c7b1ed128f0",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:26:41Z"
+          }
+        }
+      },
       {
         "sha": "24d1394ad031bd324f7b5a77622499f7592f0758",
         "html_url": "https://github.com/freegamestore-online/match3/commit/24d1394ad031bd324f7b5a77622499f7592f0758",
@@ -622,35 +642,35 @@
             "date": "2026-05-04T11:05:25Z"
           }
         }
-      },
-      {
-        "sha": "e97ac7f4c21cf32a8d39f16435c78191c2ce256b",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/e97ac7f4c21cf32a8d39f16435c78191c2ce256b",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:02:06Z"
-          }
-        }
-      },
-      {
-        "sha": "39d59c63af85e2eaf6d96153363baa66f6d94301",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/39d59c63af85e2eaf6d96153363baa66f6d94301",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:38:20Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-04T11:06:21Z"
+      "pushed_at": "2026-05-08T00:43:45Z"
     },
     "commits": [
+      {
+        "sha": "7dea194a94f428b67e9dd2ba0198e8df33ea04ce",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/7dea194a94f428b67e9dd2ba0198e8df33ea04ce",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:43:43Z"
+          }
+        }
+      },
+      {
+        "sha": "a0cbfb83f7a8dfa9f49ec70005ea0483848f2b50",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/a0cbfb83f7a8dfa9f49ec70005ea0483848f2b50",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:26:43Z"
+          }
+        }
+      },
       {
         "sha": "c99263a2218083bfb0ae5b2a04c2cdf018820edd",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/c99263a2218083bfb0ae5b2a04c2cdf018820edd",
@@ -660,35 +680,35 @@
             "date": "2026-05-04T11:05:25Z"
           }
         }
-      },
-      {
-        "sha": "c1291b54861c96314f658885470139e9540690bd",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/c1291b54861c96314f658885470139e9540690bd",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:02:08Z"
-          }
-        }
-      },
-      {
-        "sha": "6af8146c061e3efd222b100a45fc780251b101c2",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/6af8146c061e3efd222b100a45fc780251b101c2",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:38:20Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-07T23:17:27Z"
+      "pushed_at": "2026-05-08T00:40:53Z"
     },
     "commits": [
+      {
+        "sha": "b266abe30940369ef7d7f8e5b52dd3f95af2b1ee",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/b266abe30940369ef7d7f8e5b52dd3f95af2b1ee",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:40:51Z"
+          }
+        }
+      },
+      {
+        "sha": "899670544d33c21acf71251bc94d04cd183f3b0b",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/899670544d33c21acf71251bc94d04cd183f3b0b",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:27:28Z"
+          }
+        }
+      },
       {
         "sha": "1793d26f1ca9e8a2a0ab42cf91d2ec4e9a323ba9",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/1793d26f1ca9e8a2a0ab42cf91d2ec4e9a323ba9",
@@ -698,35 +718,35 @@
             "date": "2026-05-07T23:17:24Z"
           }
         }
-      },
-      {
-        "sha": "887fbac3188ba1e833a19545a417945097624fbf",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/887fbac3188ba1e833a19545a417945097624fbf",
-        "commit": {
-          "message": "feat: ship the @freeappstore/quality reporter\n\nLets the platform Quality Dashboard at freegamestore.online/quality\naudit hangman live across every reference viewport.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-06T21:30:55Z"
-          }
-        }
-      },
-      {
-        "sha": "95a10a70bffabdd247da83bc266aeb7ea42129d9",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/95a10a70bffabdd247da83bc266aeb7ea42129d9",
-        "commit": {
-          "message": "fix(mobile): use 100dvh in Shell, not h-screen (iOS Safari URL-bar bug)\n\nSame issue surfaced on tetris: h-screen (= 100vh) makes the page\nscrollable on iOS Safari first load because 100vh is the URL-bar-\nhidden height (~852px) but the actual visible area while the URL bar\nis showing is ~750px. 100dvh tracks the real visible height.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-06T20:57:39Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-04T11:06:07Z"
+      "pushed_at": "2026-05-08T00:42:41Z"
     },
     "commits": [
+      {
+        "sha": "5a063f9acdd6d1ef78e4a80cb2cbe5c6b6f6fb5e",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/5a063f9acdd6d1ef78e4a80cb2cbe5c6b6f6fb5e",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:42:38Z"
+          }
+        }
+      },
+      {
+        "sha": "d18ee7d3d8bb6696bae410e19daafb6ab62bd731",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/d18ee7d3d8bb6696bae410e19daafb6ab62bd731",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:26:37Z"
+          }
+        }
+      },
       {
         "sha": "116f8d8389695ee071468a11ffee280b697774fd",
         "html_url": "https://github.com/freegamestore-online/simon/commit/116f8d8389695ee071468a11ffee280b697774fd",
@@ -736,35 +756,35 @@
             "date": "2026-05-04T11:05:25Z"
           }
         }
-      },
-      {
-        "sha": "d364c03d40a75e6c2a591be7b8873432848fdea1",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/d364c03d40a75e6c2a591be7b8873432848fdea1",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:01:55Z"
-          }
-        }
-      },
-      {
-        "sha": "9097a6f43e30114cc2d0f94caaec3aa7541b11ca",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/9097a6f43e30114cc2d0f94caaec3aa7541b11ca",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:13:51Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-04T11:06:25Z"
+      "pushed_at": "2026-05-08T00:39:12Z"
     },
     "commits": [
+      {
+        "sha": "86855cc2994737493790d3b09187f6bb275778a6",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/86855cc2994737493790d3b09187f6bb275778a6",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:39:10Z"
+          }
+        }
+      },
+      {
+        "sha": "01eb9986437561258c19f728e58e2bfb041ab5f7",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/01eb9986437561258c19f728e58e2bfb041ab5f7",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:26:44Z"
+          }
+        }
+      },
       {
         "sha": "e889ae0ea5ca838ef5de1ee3b6289f15558572ce",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/e889ae0ea5ca838ef5de1ee3b6289f15558572ce",
@@ -774,25 +794,35 @@
             "date": "2026-05-04T11:05:25Z"
           }
         }
-      },
-      {
-        "sha": "6b882be9b9559814d3f204f6b4c960dfa7b8bbb6",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/6b882be9b9559814d3f204f6b4c960dfa7b8bbb6",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:38:20Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-04T11:06:14Z"
+      "pushed_at": "2026-05-08T00:41:27Z"
     },
     "commits": [
+      {
+        "sha": "50a5240d79a369c291617e495a8ca13746ee3fca",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/50a5240d79a369c291617e495a8ca13746ee3fca",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:41:25Z"
+          }
+        }
+      },
+      {
+        "sha": "128e04b42a27e283ec34049cd61e7ccf8a70ce8f",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/128e04b42a27e283ec34049cd61e7ccf8a70ce8f",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:26:45Z"
+          }
+        }
+      },
       {
         "sha": "607455ca275b76a1196e2d13f802492d4bcbcb13",
         "html_url": "https://github.com/freegamestore-online/memory/commit/607455ca275b76a1196e2d13f802492d4bcbcb13",
@@ -802,35 +832,35 @@
             "date": "2026-05-04T11:05:25Z"
           }
         }
-      },
-      {
-        "sha": "6ec9917402ea12408c1b56dee2712a851cb8d563",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/6ec9917402ea12408c1b56dee2712a851cb8d563",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:02:02Z"
-          }
-        }
-      },
-      {
-        "sha": "7c76c9b8a3fb6aed319a9f3832b9960fa669a5ad",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/7c76c9b8a3fb6aed319a9f3832b9960fa669a5ad",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:38:20Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-04T11:06:05Z"
+      "pushed_at": "2026-05-08T00:43:53Z"
     },
     "commits": [
+      {
+        "sha": "c9310522742cf7692479f239225077d90760e8a3",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/c9310522742cf7692479f239225077d90760e8a3",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:43:51Z"
+          }
+        }
+      },
+      {
+        "sha": "6b7a6599adf848a06fc486b5d9c1ef3519f360eb",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/6b7a6599adf848a06fc486b5d9c1ef3519f360eb",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:28:21Z"
+          }
+        }
+      },
       {
         "sha": "fbab731f74a9c72357b34b1ba0dd34b55d3e1ae4",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/fbab731f74a9c72357b34b1ba0dd34b55d3e1ae4",
@@ -840,35 +870,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "ffe2b8c2bba4da08cf0cf706ad17d0eac217a153",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/ffe2b8c2bba4da08cf0cf706ad17d0eac217a153",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:01:53Z"
-          }
-        }
-      },
-      {
-        "sha": "830ceb32bf6ed7701084714c14d1a88b2441c0a7",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/830ceb32bf6ed7701084714c14d1a88b2441c0a7",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:13:51Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-04T11:05:41Z"
+      "pushed_at": "2026-05-08T00:42:50Z"
     },
     "commits": [
+      {
+        "sha": "d81bbce6001360e1445350f31ba1f0fc29a10467",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/d81bbce6001360e1445350f31ba1f0fc29a10467",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:42:48Z"
+          }
+        }
+      },
+      {
+        "sha": "1a10db7ccc74a0d80fd6e980fd526de4e13fbe5a",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/1a10db7ccc74a0d80fd6e980fd526de4e13fbe5a",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:26:46Z"
+          }
+        }
+      },
       {
         "sha": "c04662c8ef4ea6b89059759691ef19c1748839e9",
         "html_url": "https://github.com/freegamestore-online/slither/commit/c04662c8ef4ea6b89059759691ef19c1748839e9",
@@ -878,35 +908,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "2a4dc5b108e4bcf715957dc17f8ce307575d78e8",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/2a4dc5b108e4bcf715957dc17f8ce307575d78e8",
-        "commit": {
-          "message": "Add leaderboard integration",
-          "author": {
-            "date": "2026-05-04T10:27:21Z"
-          }
-        }
-      },
-      {
-        "sha": "1e1ce3d4f565700b45727f7d87fbf504239a0ffc",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/1e1ce3d4f565700b45727f7d87fbf504239a0ffc",
-        "commit": {
-          "message": "Fix compliance: check for freegamestore.online link",
-          "author": {
-            "date": "2026-05-04T08:39:10Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-04T11:06:09Z"
+      "pushed_at": "2026-05-08T00:41:11Z"
     },
     "commits": [
+      {
+        "sha": "8ec35dcf2fe45d96bf8c0988b109dfe2a4444947",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/8ec35dcf2fe45d96bf8c0988b109dfe2a4444947",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:41:09Z"
+          }
+        }
+      },
+      {
+        "sha": "03242094531a5368c1dce9ea08d962609ee9d77b",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/03242094531a5368c1dce9ea08d962609ee9d77b",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:28:25Z"
+          }
+        }
+      },
       {
         "sha": "d5e4096c4732861aa154b407be54ab429f05bdf1",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/d5e4096c4732861aa154b407be54ab429f05bdf1",
@@ -916,35 +946,35 @@
             "date": "2026-05-04T11:05:25Z"
           }
         }
-      },
-      {
-        "sha": "b4f546b2475aaec2a0c24596ede6ff233976bce4",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/b4f546b2475aaec2a0c24596ede6ff233976bce4",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:01:57Z"
-          }
-        }
-      },
-      {
-        "sha": "062b22d3959d559fbc546b4a6ddf6f701c40e627",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/062b22d3959d559fbc546b4a6ddf6f701c40e627",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:13:51Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-04T11:06:17Z"
+      "pushed_at": "2026-05-08T00:40:45Z"
     },
     "commits": [
+      {
+        "sha": "e2923ced8a1cb55829f7458169287160fd56aaf4",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/e2923ced8a1cb55829f7458169287160fd56aaf4",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:40:43Z"
+          }
+        }
+      },
+      {
+        "sha": "32f998dd16d2498434b408c51805983efedbad41",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/32f998dd16d2498434b408c51805983efedbad41",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:26:39Z"
+          }
+        }
+      },
       {
         "sha": "8b785d1b002c252e97f871c692b4676ac52bed3c",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/8b785d1b002c252e97f871c692b4676ac52bed3c",
@@ -954,35 +984,35 @@
             "date": "2026-05-04T11:05:25Z"
           }
         }
-      },
-      {
-        "sha": "d9ab3e2d1bbf8d3286f76dae6120177b7444e702",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/d9ab3e2d1bbf8d3286f76dae6120177b7444e702",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:02:04Z"
-          }
-        }
-      },
-      {
-        "sha": "46b506b9c256c35d8c2336f5a6916b2d8cba9a45",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/46b506b9c256c35d8c2336f5a6916b2d8cba9a45",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:38:20Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-06T21:30:55Z"
+      "pushed_at": "2026-05-08T00:43:36Z"
     },
     "commits": [
+      {
+        "sha": "3956a34d6d244a3f7224d5815c6259b729604965",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/3956a34d6d244a3f7224d5815c6259b729604965",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:43:34Z"
+          }
+        }
+      },
+      {
+        "sha": "6bed7d824624e861222b15e106f9e9309fdc8861",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/6bed7d824624e861222b15e106f9e9309fdc8861",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:30:46Z"
+          }
+        }
+      },
       {
         "sha": "fd18f9e9f0032618f81919d158a3cf23d94dbdca",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/fd18f9e9f0032618f81919d158a3cf23d94dbdca",
@@ -992,35 +1022,35 @@
             "date": "2026-05-06T21:30:54Z"
           }
         }
-      },
-      {
-        "sha": "bf29bee56c0382bc8fb504723e26cdf36484c06c",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/bf29bee56c0382bc8fb504723e26cdf36484c06c",
-        "commit": {
-          "message": "fix(mobile): iOS Safari scrollable on initial load (100vh vs URL bar)\n\nUser reported tetris scrollable on real iPhone even though our local\nPlaywright screencheck showed 12/12 fit. Root cause:\n\n  Shell.tsx mobile branch used `h-screen` (= 100vh).\n  On iOS Safari 100vh = \"URL bar hidden\" height (~852px on iPhone 15).\n  When the URL bar IS showing on first load (~750px visible),\n  content sized to 100vh extends ~100px past the viewport.\n  Page becomes scrollable.\n\nPlaywright's iPhone emulation doesn't reproduce this because it uses\na fixed viewport — no URL bar that shows/hides. So screencheck cleared\nthe page even though it was broken on real devices. The audit doesn't\nload apps in a browser at all so it never had a chance.\n\nFix:\n- Shell mobile container uses 100dvh (dynamic viewport — tracks the\n  actual visible area as URL bar transitions).\n- <main> is overflow-hidden to block any rubber-band scroll.\n- App.tsx mobile section uses h-full to inherit instead of computing\n  its own 100svh-3.5rem (which conflicts with parent under transitions).\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-06T20:57:09Z"
-          }
-        }
-      },
-      {
-        "sha": "bcc74f4c2936e1a1e69a337974ff3578df2c85ef",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/bcc74f4c2936e1a1e69a337974ff3578df2c85ef",
-        "commit": {
-          "message": "fix(layout): mobile layout — controls below board, full playfield visible\n\niPhone 15 (393×852): the previous left+board+right layout cropped both\nside controls and the rightmost grid column off-screen, because the\nheight-constrained board (aspect 10:20) plus 2×48px controls didn't\nfit under ~380px wide. Replaced with a stacked layout — board fills\nthe available vertical space, controls in a 5-col grid below.\n\nVerified via fgs screencheck: 0% → 99% device coverage.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-06T16:38:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-04T11:06:23Z"
+      "pushed_at": "2026-05-08T00:44:01Z"
     },
     "commits": [
+      {
+        "sha": "91850dbc9ddac48493610b272bab9cab4373f236",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/91850dbc9ddac48493610b272bab9cab4373f236",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:43:59Z"
+          }
+        }
+      },
+      {
+        "sha": "1a0dfc5abe6bdd1aa6abd496588068a18de03b0c",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/1a0dfc5abe6bdd1aa6abd496588068a18de03b0c",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:26:43Z"
+          }
+        }
+      },
       {
         "sha": "efdd405e7929e725f198b83ea7a6be2176e99276",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/efdd405e7929e725f198b83ea7a6be2176e99276",
@@ -1030,35 +1060,35 @@
             "date": "2026-05-04T11:05:25Z"
           }
         }
-      },
-      {
-        "sha": "d42d58c3cf719d1c354ebadd6d8b6d2214aacd12",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/d42d58c3cf719d1c354ebadd6d8b6d2214aacd12",
-        "commit": {
-          "message": "Add Cloudflare Pages deploy workflow",
-          "author": {
-            "date": "2026-05-04T11:02:10Z"
-          }
-        }
-      },
-      {
-        "sha": "9379acf1ab0e989e97490d05a97cbe7ccc9071f1",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/9379acf1ab0e989e97490d05a97cbe7ccc9071f1",
-        "commit": {
-          "message": "Initial release",
-          "author": {
-            "date": "2026-05-04T10:38:20Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-04T11:05:43Z"
+      "pushed_at": "2026-05-08T00:42:30Z"
     },
     "commits": [
+      {
+        "sha": "c9dee417473d2016583608847cea253652b10dd7",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/c9dee417473d2016583608847cea253652b10dd7",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:42:28Z"
+          }
+        }
+      },
+      {
+        "sha": "589aaa0fb7aa7439c702cf05578882d2f0b1b432",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/589aaa0fb7aa7439c702cf05578882d2f0b1b432",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:31:19Z"
+          }
+        }
+      },
       {
         "sha": "1807cf46148cc8d48e7888efd8593316ef25dcc7",
         "html_url": "https://github.com/freegamestore-online/racing/commit/1807cf46148cc8d48e7888efd8593316ef25dcc7",
@@ -1068,35 +1098,35 @@
             "date": "2026-05-04T11:05:24Z"
           }
         }
-      },
-      {
-        "sha": "c68934d60c5c851fdf9b4f57641a7671c6ea346e",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/c68934d60c5c851fdf9b4f57641a7671c6ea346e",
-        "commit": {
-          "message": "Improve playability: slower start, better camera, tap controls, on-screen arrows",
-          "author": {
-            "date": "2026-05-04T10:21:13Z"
-          }
-        }
-      },
-      {
-        "sha": "cdd28222d852fa96fc4a0baeba5aec91c90bd3e2",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/cdd28222d852fa96fc4a0baeba5aec91c90bd3e2",
-        "commit": {
-          "message": "Fix compliance: check for freegamestore.online link",
-          "author": {
-            "date": "2026-05-04T08:39:08Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-06T05:41:47Z"
+      "pushed_at": "2026-05-08T00:40:10Z"
     },
     "commits": [
+      {
+        "sha": "467dfd20cc2ecc0d8479b19f5aa8c3780cea4c21",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/467dfd20cc2ecc0d8479b19f5aa8c3780cea4c21",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:40:08Z"
+          }
+        }
+      },
+      {
+        "sha": "8fdda16b5358b95636a5a5d444a91cdfe5c5a280",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/8fdda16b5358b95636a5a5d444a91cdfe5c5a280",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:27:20Z"
+          }
+        }
+      },
       {
         "sha": "23d84efb490cf07d2622ab9b70c0c62605eec8de",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/23d84efb490cf07d2622ab9b70c0c62605eec8de",
@@ -1106,35 +1136,35 @@
             "date": "2026-05-06T05:41:41Z"
           }
         }
-      },
-      {
-        "sha": "01504a12b7f67efa324c0e4b6c4f5373bbdbc8b3",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/01504a12b7f67efa324c0e4b6c4f5373bbdbc8b3",
-        "commit": {
-          "message": "Coin flip v1: spinning button, last-20 tally",
-          "author": {
-            "date": "2026-05-06T05:39:46Z"
-          }
-        }
-      },
-      {
-        "sha": "672912f31c8462c7f4e6f60617ae300dd613141f",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/672912f31c8462c7f4e6f60617ae300dd613141f",
-        "commit": {
-          "message": "Initial commit from game-canvas template",
-          "author": {
-            "date": "2026-05-06T05:38:39Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-06T07:51:19Z"
+      "pushed_at": "2026-05-08T00:40:28Z"
     },
     "commits": [
+      {
+        "sha": "1d7c46faff21a1547a1bcd7eb0738c3eaf1db304",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/1d7c46faff21a1547a1bcd7eb0738c3eaf1db304",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:40:26Z"
+          }
+        }
+      },
+      {
+        "sha": "3efd0d1bc12301a0317df41aede14cbfa307b202",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/3efd0d1bc12301a0317df41aede14cbfa307b202",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:27:21Z"
+          }
+        }
+      },
       {
         "sha": "258696ca1acbbb72e89681347a055afeda8671ee",
         "html_url": "https://github.com/freegamestore-online/dice/commit/258696ca1acbbb72e89681347a055afeda8671ee",
@@ -1144,25 +1174,35 @@
             "date": "2026-05-06T07:50:57Z"
           }
         }
-      },
-      {
-        "sha": "ea589200ebe4c47f08dce7dde73e9c834a2297b3",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/ea589200ebe4c47f08dce7dde73e9c834a2297b3",
-        "commit": {
-          "message": "Initial commit from canvas template",
-          "author": {
-            "date": "2026-05-06T07:49:56Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-06T07:52:24Z"
+      "pushed_at": "2026-05-08T00:41:02Z"
     },
     "commits": [
+      {
+        "sha": "78d6cf0786527eb9cf7ab5cfe4c0860807283169",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/78d6cf0786527eb9cf7ab5cfe4c0860807283169",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:41:00Z"
+          }
+        }
+      },
+      {
+        "sha": "cb75b81c1b40264a821d9c6071953ba6fe434832",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/cb75b81c1b40264a821d9c6071953ba6fe434832",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:27:22Z"
+          }
+        }
+      },
       {
         "sha": "38c22098bf253517afb83b756e6afa2739478beb",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/38c22098bf253517afb83b756e6afa2739478beb",
@@ -1172,25 +1212,35 @@
             "date": "2026-05-06T07:52:22Z"
           }
         }
-      },
-      {
-        "sha": "1a1521bd0bc57be69de54e69d2a5f36b0fa35f5a",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/1a1521bd0bc57be69de54e69d2a5f36b0fa35f5a",
-        "commit": {
-          "message": "Initial commit from canvas template",
-          "author": {
-            "date": "2026-05-06T07:51:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-06T07:54:09Z"
+      "pushed_at": "2026-05-08T00:41:35Z"
     },
     "commits": [
+      {
+        "sha": "f606650f16de8d31180ece7687a83f376724c726",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/f606650f16de8d31180ece7687a83f376724c726",
+        "commit": {
+          "message": "chore: switch SDK from @freeappstore/games to @freegamestore/games\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:41:33Z"
+          }
+        }
+      },
+      {
+        "sha": "34f974816d3dc0bce32303fc8fb2c6c2076d5642",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/34f974816d3dc0bce32303fc8fb2c6c2076d5642",
+        "commit": {
+          "message": "migrate to @freeappstore/games SDK (GameShell + GameTopbar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T00:27:23Z"
+          }
+        }
+      },
       {
         "sha": "99536a621e1e408dc6221147e5befcc4c65b6fb5",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/99536a621e1e408dc6221147e5befcc4c65b6fb5",
@@ -1198,26 +1248,6 @@
           "message": "Fix template's useGrid noUncheckedIndexedAccess TS error",
           "author": {
             "date": "2026-05-06T07:54:06Z"
-          }
-        }
-      },
-      {
-        "sha": "9b57b474f3256b6846a73b8c05448af3e11d1b06",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/9b57b474f3256b6846a73b8c05448af3e11d1b06",
-        "commit": {
-          "message": "Memory match v1: 4x4 grid, timer, move counter",
-          "author": {
-            "date": "2026-05-06T07:53:27Z"
-          }
-        }
-      },
-      {
-        "sha": "fc56325203de741a99168f4c49e89af93221789f",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/fc56325203de741a99168f4c49e89af93221789f",
-        "commit": {
-          "message": "Initial commit from grid template",
-          "author": {
-            "date": "2026-05-06T07:52:32Z"
           }
         }
       }
