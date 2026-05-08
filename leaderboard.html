@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leaderboard — FreeGameStore</title>
-  <meta name="description" content="See top scores across all FreeGameStore games. Anonymous, free, no sign-up required." />
+  <meta name="description" content="See top scores across all FreeGameStore games. Sign in to track your rank." />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Leaderboard — FreeGameStore" />
   <meta property="og:description" content="See top scores across all FreeGameStore games." />
@@ -15,121 +15,210 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    .lb-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
-      gap: 1.25rem;
-      margin-top: 2rem;
-    }
-    .lb-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-    .lb-card-header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 1.25rem 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .lb-card-header .app-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-    .lb-card-header h3 {
-      font-size: 1rem;
-      font-weight: 700;
-    }
-    .lb-card-header .play-link {
-      margin-left: auto;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: white;
-      background: var(--accent);
-      padding: 0.3rem 0.8rem;
-      border-radius: 0.4rem;
-      text-decoration: none;
-      transition: opacity 0.15s;
-    }
-    .lb-card-header .play-link:hover { opacity: 0.85; text-decoration: none; }
-    .lb-tabs {
+    /* View tabs (Overall | Per Game) */
+    .view-tabs {
       display: flex;
       gap: 0;
-      border-bottom: 1px solid var(--border);
+      margin-top: 2rem;
+      border-bottom: 2px solid var(--border);
     }
-    .lb-tab {
-      flex: 1;
-      padding: 0.6rem;
-      text-align: center;
-      font-size: 0.8rem;
-      font-weight: 600;
+    .view-tab {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.95rem;
+      font-weight: 700;
       color: var(--muted);
       background: none;
       border: none;
       cursor: pointer;
       font-family: inherit;
-      transition: color 0.15s, background 0.15s;
+      transition: color 0.15s;
+      position: relative;
     }
-    .lb-tab:hover { color: var(--ink); }
-    .lb-tab.active {
+    .view-tab:hover { color: var(--ink); }
+    .view-tab.active {
       color: var(--accent);
-      box-shadow: inset 0 -2px 0 var(--accent);
     }
+    .view-tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    /* Game selector */
+    .game-selector {
+      margin-top: 1.25rem;
+      display: none;
+    }
+    .game-selector.visible { display: block; }
+    .game-selector select {
+      width: 100%;
+      max-width: 360px;
+      padding: 0.6rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      background: var(--surface);
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    .game-selector select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+    }
+
+    /* Leaderboard table */
+    .lb-table {
+      margin-top: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .lb-table-header {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      gap: 0.75rem;
+    }
+    .lb-table-header .col-rank { width: 3rem; }
+    .lb-table-header .col-player { flex: 1; }
+    .lb-table-header .col-score { width: 7rem; text-align: right; }
+    .lb-table-header .col-games { width: 5rem; text-align: right; }
+    .lb-table-header .col-time { width: 5rem; text-align: right; }
     .lb-rows {
-      padding: 0.5rem 0;
       min-height: 120px;
     }
     .lb-row {
       display: flex;
       align-items: center;
-      padding: 0.45rem 1.5rem;
-      font-size: 0.88rem;
+      padding: 0.65rem 1.5rem;
+      font-size: 0.92rem;
       gap: 0.75rem;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.1s;
     }
+    .lb-row:last-child { border-bottom: none; }
+    .lb-row:hover { background: color-mix(in srgb, var(--accent) 4%, var(--surface)); }
+
     .lb-rank {
-      width: 1.5rem;
-      text-align: right;
-      font-weight: 700;
+      width: 3rem;
+      font-weight: 800;
+      font-size: 1.05rem;
       flex-shrink: 0;
+      text-align: center;
     }
-    .lb-rank.gold { color: #d97706; }
-    .lb-rank.silver { color: #6b7280; }
-    .lb-rank.bronze { color: #b45309; }
-    .lb-name {
+    .lb-rank.gold { color: #f59e0b; }
+    .lb-rank.silver { color: #9ca3af; }
+    .lb-rank.bronze { color: #d97706; }
+
+    .lb-player {
       flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      overflow: hidden;
+    }
+    .lb-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      object-fit: cover;
+      background: var(--border);
+    }
+    .lb-avatar-placeholder {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .lb-name {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: var(--muted);
+      font-weight: 600;
     }
     .lb-score {
+      width: 7rem;
+      text-align: right;
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
       font-weight: 700;
       font-variant-numeric: tabular-nums;
     }
+    .lb-games-played {
+      width: 5rem;
+      text-align: right;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
     .lb-time {
-      font-size: 0.75rem;
+      width: 5rem;
+      text-align: right;
+      font-size: 0.8rem;
       color: var(--muted);
     }
     .lb-empty {
-      padding: 2rem 1.5rem;
+      padding: 3rem 1.5rem;
       text-align: center;
-      font-size: 0.88rem;
+      font-size: 0.92rem;
       color: var(--muted);
+      line-height: 1.6;
     }
-    .lb-loading {
-      padding: 2rem 1.5rem;
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--muted);
+
+    /* Shimmer loading placeholders */
+    @keyframes shimmer {
+      0% { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
     }
+    .shimmer-row {
+      display: flex;
+      align-items: center;
+      padding: 0.65rem 1.5rem;
+      gap: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .shimmer-row:last-child { border-bottom: none; }
+    .shimmer-block {
+      height: 14px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, var(--border) 25%, color-mix(in srgb, var(--border) 50%, var(--surface)) 50%, var(--border) 75%);
+      background-size: 800px 100%;
+      animation: shimmer 1.5s infinite linear;
+    }
+    .shimmer-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: linear-gradient(90deg, var(--border) 25%, color-mix(in srgb, var(--border) 50%, var(--surface)) 50%, var(--border) 75%);
+      background-size: 800px 100%;
+      animation: shimmer 1.5s infinite linear;
+    }
+    .shimmer-rank { width: 1.5rem; }
+    .shimmer-name { flex: 1; max-width: 180px; }
+    .shimmer-score { width: 4rem; margin-left: auto; }
+
+    /* Stats bar */
     .stats-bar {
       display: flex;
       gap: 2rem;
@@ -150,6 +239,18 @@
       font-size: 0.85rem;
       color: var(--muted);
     }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .lb-table-header .col-games,
+      .lb-games-played { display: none; }
+      .lb-table-header .col-time,
+      .lb-time { display: none; }
+      .lb-row { padding: 0.55rem 1rem; }
+      .lb-table-header { padding: 0.6rem 1rem; }
+      .view-tab { padding: 0.65rem 1rem; font-size: 0.88rem; }
+      .lb-score { width: 5rem; }
+    }
   </style>
 </head>
 <body>
@@ -158,9 +259,12 @@
       <a href="/" class="logo">Free <span>Games</span></a>
       <nav>
         <a href="/">Games</a>
-        <a href="/leaderboard.html" class="active">Leaderboard</a>
+        <a href="https://freeappstore.online">Apps</a>
         <a href="/about.html">About</a>
         <a href="/contribute.html">Build</a>
+        <a href="/guidelines.html">Guidelines</a>
+        <a href="/quality.html">Quality</a>
+        <a href="https://progamestore.online" class="pro-link">Pro</a>
       </nav>
     </div>
   </header>
@@ -168,27 +272,49 @@
   <main class="container">
     <div class="page-header">
       <h1>Leaderboard</h1>
-      <p>Top scores across all games. Play any game to get on the board — no sign-up needed.</p>
+      <p>Top scores across all games. Play any game and sign in to appear here.</p>
       <div class="stats-bar" id="stats">
         <div class="stat">
-          <span class="stat-value" id="stat-players">—</span>
-          <span class="stat-label">Total scores</span>
+          <span class="stat-value" id="stat-players">--</span>
+          <span class="stat-label">Players</span>
         </div>
         <div class="stat">
-          <span class="stat-value" id="stat-games">29</span>
+          <span class="stat-value" id="stat-games">--</span>
           <span class="stat-label">Games</span>
         </div>
       </div>
     </div>
 
-    <div class="lb-grid" id="leaderboard-grid"></div>
+    <!-- Tabs: Overall | Per Game -->
+    <div class="view-tabs">
+      <button class="view-tab active" data-view="overall">Overall</button>
+      <button class="view-tab" data-view="per-game">Per Game</button>
+    </div>
+
+    <!-- Game selector (shown when Per Game tab active) -->
+    <div class="game-selector" id="game-selector">
+      <select id="game-select">
+        <option value="">Select a game...</option>
+      </select>
+    </div>
+
+    <!-- Leaderboard table -->
+    <div class="lb-table" id="lb-table">
+      <div class="lb-table-header" id="lb-header">
+        <span class="col-rank">Rank</span>
+        <span class="col-player">Player</span>
+        <span class="col-score">Score</span>
+        <span class="col-games">Games</span>
+      </div>
+      <div class="lb-rows" id="lb-rows"></div>
+    </div>
   </main>
 
   <footer>
     <div class="container">
       <div class="footer-left">
         <a href="/" class="logo">Free <span>Games</span></a>
-        <p>Free games, forever.</p>
+        <p>Free forever, open source, privacy-first.</p>
       </div>
       <div class="footer-links">
         <a href="/about.html">About</a>
@@ -199,47 +325,24 @@
         <a href="/terms.html">Terms</a>
         <a href="https://github.com/freegamestore-online">GitHub</a>
         <a href="https://github.com/freegamestore-online/freegamestore/discussions">Support</a>
+        <a href="https://progamestore.online" style="color:var(--pro);">Pro</a>
       </div>
     </div>
   </footer>
 
   <script>
     const API = 'https://freegamestore-leaderboard.serge-the-dev.workers.dev';
-    const GAMES = [
-      { id: 'racing', name: 'Racing', icon: '&#127950;', iconBg: '#eff6ff', url: 'https://racing.freegamestore.online' },
-      { id: 'bowling', name: 'Bowling', icon: '&#127923;', iconBg: '#fef3c7', url: 'https://bowling.freegamestore.online' },
-      { id: 'spaceshooter', name: 'Space Shooter', icon: '&#128640;', iconBg: '#eef2ff', url: 'https://spaceshooter.freegamestore.online' },
-      { id: 'breakout', name: 'Breakout', icon: '&#129513;', iconBg: '#fce7f3', url: 'https://breakout.freegamestore.online' },
-      { id: 'platformer', name: 'Platformer', icon: '&#127939;', iconBg: '#ecfdf5', url: 'https://platformer.freegamestore.online' },
-      { id: 'tetris', name: 'Tetris', icon: '&#127918;', iconBg: '#fef2f2', url: 'https://tetris.freegamestore.online' },
-      { id: 'snake', name: 'Snake', icon: '&#128013;', iconBg: '#ecfdf5', url: 'https://snake.freegamestore.online' },
-      { id: '2048', name: '2048', icon: '&#128290;', iconBg: '#fef3c7', url: 'https://2048.freegamestore.online' },
-      { id: 'slither', name: 'Slither', icon: '&#128013;', iconBg: '#ecfdf5', url: 'https://slither.freegamestore.online' },
-      { id: 'minesweeper', name: 'Minesweeper', icon: '&#128163;', iconBg: '#f0f9ff', url: 'https://minesweeper.freegamestore.online' },
-      { id: 'chess', name: 'Chess', icon: '&#9822;', iconBg: '#f0fdf4', url: 'https://chess.freegamestore.online' },
-      { id: 'puzzle', name: 'Puzzle', icon: '&#129513;', iconBg: '#f5f3ff', url: 'https://puzzle.freegamestore.online' },
-      { id: 'sudoku', name: 'Sudoku', icon: '&#129519;', iconBg: '#eff6ff', url: 'https://sudoku.freegamestore.online' },
-      { id: 'pacman', name: 'Pac-Man', icon: '&#127918;', iconBg: '#fef9c3', url: 'https://pacman.freegamestore.online' },
-      { id: 'pong', name: 'Pong', icon: '&#127955;', iconBg: '#f0f9ff', url: 'https://pong.freegamestore.online' },
-      { id: 'flappy', name: 'Flappy Bird', icon: '&#128038;', iconBg: '#ecfdf5', url: 'https://flappy.freegamestore.online' },
-      { id: 'solitaire', name: 'Solitaire', icon: '&#127183;', iconBg: '#f0fdf4', url: 'https://solitaire.freegamestore.online' },
-      { id: 'connect4', name: 'Connect 4', icon: '&#128308;', iconBg: '#eff6ff', url: 'https://connect4.freegamestore.online' },
-      { id: 'wordle', name: 'Wordle', icon: '&#129518;', iconBg: '#f0fdf4', url: 'https://wordle.freegamestore.online' },
-      { id: 'simon', name: 'Simon', icon: '&#127912;', iconBg: '#fef2f2', url: 'https://simon.freegamestore.online' },
-      { id: 'mahjong', name: 'Mahjong', icon: '&#126980;', iconBg: '#fef3c7', url: 'https://mahjong.freegamestore.online' },
-      { id: 'checkers', name: 'Checkers', icon: '&#9898;', iconBg: '#fef2f2', url: 'https://checkers.freegamestore.online' },
-      { id: 'hangman', name: 'Hangman', icon: '&#128100;', iconBg: '#f5f3ff', url: 'https://hangman.freegamestore.online' },
-      { id: 'memory', name: 'Memory', icon: '&#129504;', iconBg: '#ecfdf5', url: 'https://memory.freegamestore.online' },
-      { id: 'frogger', name: 'Frogger', icon: '&#128056;', iconBg: '#ecfdf5', url: 'https://frogger.freegamestore.online' },
-      { id: 'match3', name: 'Match 3', icon: '&#128142;', iconBg: '#fce7f3', url: 'https://match3.freegamestore.online' },
-      { id: 'whackamole', name: 'Whack-a-Mole', icon: '&#128056;', iconBg: '#fef3c7', url: 'https://whackamole.freegamestore.online' },
-      { id: 'wordsearch', name: 'Word Search', icon: '&#128269;', iconBg: '#eff6ff', url: 'https://wordsearch.freegamestore.online' },
-      { id: 'asteroids', name: 'Asteroids', icon: '&#9732;', iconBg: '#f0f9ff', url: 'https://asteroids.freegamestore.online' },
-    ];
+    const REGISTRY_URL = 'https://raw.githubusercontent.com/freegamestore-online/freegamestore/main/registry.json';
+
+    let games = [];
+    let currentView = 'overall';
+
+    // --- Helpers ---
 
     function timeAgo(dateStr) {
+      if (!dateStr) return '';
       const now = Date.now();
-      const then = new Date(dateStr + 'Z').getTime();
+      const then = new Date(dateStr.endsWith('Z') ? dateStr : dateStr + 'Z').getTime();
       const diff = Math.floor((now - then) / 1000);
       if (diff < 60) return 'just now';
       if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
@@ -254,87 +357,205 @@
       return '';
     }
 
-    function renderRows(scores, container) {
-      if (!scores.length) {
-        container.innerHTML = '<div class="lb-empty">No scores yet — be the first!</div>';
+    function escapeHtml(str) {
+      const d = document.createElement('div');
+      d.textContent = str || '';
+      return d.innerHTML;
+    }
+
+    function initial(name) {
+      return (name || '?').charAt(0).toUpperCase();
+    }
+
+    function avatarHtml(avatarUrl, name) {
+      if (avatarUrl) {
+        return '<img class="lb-avatar" src="' + escapeHtml(avatarUrl) + '" alt="" loading="lazy" onerror="this.outerHTML=\'<span class=lb-avatar-placeholder>' + initial(name) + '</span>\'">';
+      }
+      return '<span class="lb-avatar-placeholder">' + initial(name) + '</span>';
+    }
+
+    // --- Shimmer loading ---
+
+    function renderShimmer(count) {
+      const rows = document.getElementById('lb-rows');
+      let html = '';
+      for (let i = 0; i < count; i++) {
+        html += '<div class="shimmer-row">' +
+          '<div class="shimmer-block shimmer-rank"></div>' +
+          '<div class="shimmer-circle"></div>' +
+          '<div class="shimmer-block shimmer-name"></div>' +
+          '<div class="shimmer-block shimmer-score"></div>' +
+        '</div>';
+      }
+      rows.innerHTML = html;
+    }
+
+    // --- Render: Overall ---
+
+    function renderOverall(scores) {
+      const rows = document.getElementById('lb-rows');
+      if (!scores || !scores.length) {
+        rows.innerHTML = '<div class="lb-empty">No scores yet. Play a game and sign in to appear here.</div>';
         return;
       }
-      container.innerHTML = scores.map((s, i) =>
-        '<div class="lb-row">' +
+      rows.innerHTML = scores.map(function(s, i) {
+        var name = s.name || 'Anonymous';
+        return '<div class="lb-row">' +
           '<span class="lb-rank ' + rankClass(i) + '">' + (i + 1) + '</span>' +
-          '<span class="lb-name">' + s.player_name + '</span>' +
-          '<span class="lb-score">' + s.score.toLocaleString() + '</span>' +
-          '<span class="lb-time">' + timeAgo(s.created_at) + '</span>' +
-        '</div>'
-      ).join('');
+          '<span class="lb-player">' +
+            avatarHtml(s.avatar_url, name) +
+            '<span class="lb-name">' + escapeHtml(name) + '</span>' +
+          '</span>' +
+          '<span class="lb-score">' + Number(s.total_score).toLocaleString() + '</span>' +
+          '<span class="lb-games-played">' + (s.games_played || 0) + '</span>' +
+        '</div>';
+      }).join('');
     }
 
-    async function loadGame(game) {
-      const card = document.getElementById('lb-' + game.id);
-      const rowsEl = card.querySelector('.lb-rows');
-      rowsEl.innerHTML = '<div class="lb-loading">Loading...</div>';
+    // --- Render: Per-game ---
 
-      try {
-        const [topRes, recentRes] = await Promise.all([
-          fetch(API + '/api/leaderboard/' + game.id + '?limit=10'),
-          fetch(API + '/api/leaderboard/' + game.id + '/recent?limit=10'),
-        ]);
-        const topData = topRes.ok ? await topRes.json() : { scores: [] };
-        const recentData = recentRes.ok ? await recentRes.json() : { scores: [] };
+    function renderPerGame(scores) {
+      var rows = document.getElementById('lb-rows');
+      if (!scores || !scores.length) {
+        rows.innerHTML = '<div class="lb-empty">No scores yet. Play a game and sign in to appear here.</div>';
+        return;
+      }
+      rows.innerHTML = scores.map(function(s, i) {
+        var name = s.player_name || 'Anonymous';
+        return '<div class="lb-row">' +
+          '<span class="lb-rank ' + rankClass(i) + '">' + (i + 1) + '</span>' +
+          '<span class="lb-player">' +
+            avatarHtml(s.avatar_url, name) +
+            '<span class="lb-name">' + escapeHtml(name) + '</span>' +
+          '</span>' +
+          '<span class="lb-score">' + Number(s.score).toLocaleString() + '</span>' +
+          '<span class="lb-time">' + timeAgo(s.created_at) + '</span>' +
+        '</div>';
+      }).join('');
+    }
 
-        card._topScores = topData.scores;
-        card._recentScores = recentData.scores;
-        card._tab = 'top';
+    // --- Table header update ---
 
-        renderRows(topData.scores, rowsEl);
-        return topData.scores.length + recentData.scores.length;
-      } catch {
-        rowsEl.innerHTML = '<div class="lb-empty">Could not load scores</div>';
-        return 0;
+    function setTableHeader(view) {
+      var header = document.getElementById('lb-header');
+      if (view === 'overall') {
+        header.innerHTML =
+          '<span class="col-rank">Rank</span>' +
+          '<span class="col-player">Player</span>' +
+          '<span class="col-score">Total Score</span>' +
+          '<span class="col-games">Games</span>';
+      } else {
+        header.innerHTML =
+          '<span class="col-rank">Rank</span>' +
+          '<span class="col-player">Player</span>' +
+          '<span class="col-score">Score</span>' +
+          '<span class="col-time">When</span>';
       }
     }
 
-    function buildGrid() {
-      const grid = document.getElementById('leaderboard-grid');
-      grid.innerHTML = GAMES.map(game =>
-        '<div class="lb-card" id="lb-' + game.id + '">' +
-          '<div class="lb-card-header">' +
-            '<div class="app-icon" style="background:' + game.iconBg + '">' + game.icon + '</div>' +
-            '<h3>' + game.name + '</h3>' +
-            '<a href="' + game.url + '" target="_blank" rel="noopener" class="play-link">Play</a>' +
-          '</div>' +
-          '<div class="lb-tabs">' +
-            '<button class="lb-tab active" data-tab="top" data-game="' + game.id + '">Top Scores</button>' +
-            '<button class="lb-tab" data-tab="recent" data-game="' + game.id + '">Recent</button>' +
-          '</div>' +
-          '<div class="lb-rows"><div class="lb-loading">Loading...</div></div>' +
-        '</div>'
-      ).join('');
+    // --- Fetch: Overall ---
 
-      // Tab switching
-      grid.addEventListener('click', function(e) {
-        const btn = e.target.closest('.lb-tab');
-        if (!btn) return;
-        const gameId = btn.dataset.game;
-        const tab = btn.dataset.tab;
-        const card = document.getElementById('lb-' + gameId);
-        if (!card) return;
-
-        card.querySelectorAll('.lb-tab').forEach(t => t.classList.remove('active'));
-        btn.classList.add('active');
-
-        const rowsEl = card.querySelector('.lb-rows');
-        const scores = tab === 'top' ? card._topScores : card._recentScores;
-        if (scores) renderRows(scores, rowsEl);
-      });
+    async function loadOverall() {
+      setTableHeader('overall');
+      renderShimmer(8);
+      try {
+        var res = await fetch(API + '/api/leaderboard/overall?limit=50');
+        if (res.status === 204 || !res.ok) {
+          renderOverall([]);
+          return;
+        }
+        var data = await res.json();
+        renderOverall(data.scores || []);
+        // Update player count stat
+        if (data.scores && data.scores.length) {
+          document.getElementById('stat-players').textContent = data.scores.length;
+        }
+      } catch (e) {
+        renderOverall([]);
+      }
     }
 
+    // --- Fetch: Per-game ---
+
+    async function loadPerGame(gameId) {
+      if (!gameId) {
+        document.getElementById('lb-rows').innerHTML =
+          '<div class="lb-empty">Select a game above to see its leaderboard.</div>';
+        return;
+      }
+      setTableHeader('per-game');
+      renderShimmer(6);
+      try {
+        var res = await fetch(API + '/api/leaderboard/' + encodeURIComponent(gameId) + '?limit=20');
+        if (res.status === 204 || !res.ok) {
+          renderPerGame([]);
+          return;
+        }
+        var data = await res.json();
+        renderPerGame(data.scores || []);
+      } catch (e) {
+        renderPerGame([]);
+      }
+    }
+
+    // --- Fetch: Game registry ---
+
+    async function loadGames() {
+      try {
+        var res = await fetch(REGISTRY_URL);
+        if (!res.ok) return;
+        var data = await res.json();
+        // registry.json may be an array of game objects or { games: [...] }
+        games = Array.isArray(data) ? data : (data.games || []);
+        var select = document.getElementById('game-select');
+        games.forEach(function(g) {
+          var opt = document.createElement('option');
+          opt.value = g.id;
+          opt.textContent = g.name || g.id;
+          select.appendChild(opt);
+        });
+        document.getElementById('stat-games').textContent = games.length;
+      } catch (e) {
+        // Silently fail — game selector will just be empty
+      }
+    }
+
+    // --- Tab switching ---
+
+    document.querySelector('.view-tabs').addEventListener('click', function(e) {
+      var btn = e.target.closest('.view-tab');
+      if (!btn) return;
+      var view = btn.dataset.view;
+      if (view === currentView) return;
+      currentView = view;
+
+      document.querySelectorAll('.view-tab').forEach(function(t) { t.classList.remove('active'); });
+      btn.classList.add('active');
+
+      var selector = document.getElementById('game-selector');
+      if (view === 'per-game') {
+        selector.classList.add('visible');
+        var gameId = document.getElementById('game-select').value;
+        loadPerGame(gameId);
+      } else {
+        selector.classList.remove('visible');
+        loadOverall();
+      }
+    });
+
+    // --- Game selector ---
+
+    document.getElementById('game-select').addEventListener('change', function() {
+      if (currentView === 'per-game') {
+        loadPerGame(this.value);
+      }
+    });
+
+    // --- Init ---
+
     async function init() {
-      buildGrid();
-      let totalScores = 0;
-      const results = await Promise.all(GAMES.map(loadGame));
-      results.forEach(n => totalScores += n);
-      document.getElementById('stat-players').textContent = totalScores || '—';
+      await loadGames();
+      loadOverall();
     }
 
     init();
