@@ -2,9 +2,19 @@
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-08T06:57:07Z"
+      "pushed_at": "2026-05-08T07:28:43Z"
     },
     "commits": [
+      {
+        "sha": "690301e4afb34d303d038fbb68fbc8c75b460187",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/690301e4afb34d303d038fbb68fbc8c75b460187",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:28:41Z"
+          }
+        }
+      },
       {
         "sha": "70d9f62e4670d9d83cb97e19073a17c222b78ba8",
         "html_url": "https://github.com/freegamestore-online/2048/commit/70d9f62e4670d9d83cb97e19073a17c222b78ba8",
@@ -22,16 +32,6 @@
           "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T06:21:55Z"
-          }
-        }
-      },
-      {
-        "sha": "7814a22dc8e5fcfe95aaa0af02e948726cb18b5d",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/7814a22dc8e5fcfe95aaa0af02e948726cb18b5d",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:35:51Z"
           }
         }
       }
@@ -78,9 +78,19 @@
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-08T06:56:54Z"
+      "pushed_at": "2026-05-08T07:28:45Z"
     },
     "commits": [
+      {
+        "sha": "00fe42ef0efef410ee4035efe88a6c28e0903176",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/00fe42ef0efef410ee4035efe88a6c28e0903176",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:28:43Z"
+          }
+        }
+      },
       {
         "sha": "cc566f754985f67bba95c4b6871f9b38aae4696b",
         "html_url": "https://github.com/freegamestore-online/snake/commit/cc566f754985f67bba95c4b6871f9b38aae4696b",
@@ -100,25 +110,35 @@
             "date": "2026-05-08T06:26:23Z"
           }
         }
-      },
-      {
-        "sha": "d23210dd6822edf04159b97daa9a6d45204f88f9",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/d23210dd6822edf04159b97daa9a6d45204f88f9",
-        "commit": {
-          "message": "feat: add offline support via vite-plugin-pwa\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T04:18:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-08T06:26:35Z"
+      "pushed_at": "2026-05-08T07:28:55Z"
     },
     "commits": [
+      {
+        "sha": "da1dbed282e5e441b279aaa3f8562058a41b1bd2",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/da1dbed282e5e441b279aaa3f8562058a41b1bd2",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:28:53Z"
+          }
+        }
+      },
+      {
+        "sha": "e2bac37d28059701c6e006146232a4be79a4e89c",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/e2bac37d28059701c6e006146232a4be79a4e89c",
+        "commit": {
+          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T06:58:46Z"
+          }
+        }
+      },
       {
         "sha": "2ca280389642e6b7d6dc4f12b7826c139b844385",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/2ca280389642e6b7d6dc4f12b7826c139b844385",
@@ -128,35 +148,25 @@
             "date": "2026-05-08T06:26:33Z"
           }
         }
-      },
-      {
-        "sha": "7c54b707c01a9a29df476fd818aa00f9e80ff5d9",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/7c54b707c01a9a29df476fd818aa00f9e80ff5d9",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:36:02Z"
-          }
-        }
-      },
-      {
-        "sha": "20103b001c681ce61077cdebd771aaecda96e9ee",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/20103b001c681ce61077cdebd771aaecda96e9ee",
-        "commit": {
-          "message": "feat: add offline support via vite-plugin-pwa\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T04:21:54Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-08T05:40:18Z"
+      "pushed_at": "2026-05-08T07:01:27Z"
     },
     "commits": [
+      {
+        "sha": "481bc3fe7681b9f36f93ea3c1a60e93e9ed82546",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/481bc3fe7681b9f36f93ea3c1a60e93e9ed82546",
+        "commit": {
+          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T06:58:45Z"
+          }
+        }
+      },
       {
         "sha": "5d7b26dea9c745dcd0c88f48a7089058f58883c9",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/5d7b26dea9c745dcd0c88f48a7089058f58883c9",
@@ -174,16 +184,6 @@
           "message": "feat: add offline support via vite-plugin-pwa\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T04:21:20Z"
-          }
-        }
-      },
-      {
-        "sha": "fe5442c52e5ee105684c6ae818c75040aceafd68",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/fe5442c52e5ee105684c6ae818c75040aceafd68",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to v0.5.0 (safe area bottom bar)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T04:09:59Z"
           }
         }
       }
@@ -230,9 +230,29 @@
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-08T06:27:04Z"
+      "pushed_at": "2026-05-08T07:28:39Z"
     },
     "commits": [
+      {
+        "sha": "1c960242cb2e2b78352ac9ecfec075d8b9ec45a1",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/1c960242cb2e2b78352ac9ecfec075d8b9ec45a1",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:28:37Z"
+          }
+        }
+      },
+      {
+        "sha": "57eb412d8fa991f45547554d45ab3489a0a57030",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/57eb412d8fa991f45547554d45ab3489a0a57030",
+        "commit": {
+          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T06:58:44Z"
+          }
+        }
+      },
       {
         "sha": "6955284134f4f5aa5a65255b446e414ea0457138",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/6955284134f4f5aa5a65255b446e414ea0457138",
@@ -242,62 +262,42 @@
             "date": "2026-05-08T06:27:02Z"
           }
         }
-      },
-      {
-        "sha": "f838f7c5cc6ea8b35780fbc8ad72384b4bd97764",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/f838f7c5cc6ea8b35780fbc8ad72384b4bd97764",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:36:05Z"
-          }
-        }
-      },
-      {
-        "sha": "2180d14f07042530ddcab562ebf6e663ba7b2ba2",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/2180d14f07042530ddcab562ebf6e663ba7b2ba2",
-        "commit": {
-          "message": "feat: add offline support via vite-plugin-pwa\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T04:21:02Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-08T06:22:53Z"
+      "pushed_at": "2026-05-08T07:29:07Z"
     },
     "commits": [
       {
-        "sha": "8de7519e0bc0454b0bbbfd16f682fe90e0eca5d3",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/8de7519e0bc0454b0bbbfd16f682fe90e0eca5d3",
+        "sha": "1535574fa348c84b2ecae60d6c4cee54d59e3886",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/1535574fa348c84b2ecae60d6c4cee54d59e3886",
         "commit": {
-          "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-08T06:22:51Z"
+            "date": "2026-05-08T07:29:06Z"
           }
         }
       },
       {
-        "sha": "dab0cf26fc94e471ba28e469c29bd2daa074415b",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/dab0cf26fc94e471ba28e469c29bd2daa074415b",
+        "sha": "a2cf2fc2ee86da46a8473468ace32a19cd8bce5a",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/a2cf2fc2ee86da46a8473468ace32a19cd8bce5a",
         "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "message": "fix: complete AI response bug fix + add difficulty selection + rules\n\n- Update App.tsx with difficulty state, picker UI, and pass to Game\n- Add difficulty to topbar stats\n- Replace \"AI\" with \"Computer\" in description text\n- Expand rules section with controls, rules, and difficulty info\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-08T05:35:54Z"
+            "date": "2026-05-08T07:02:51Z"
           }
         }
       },
       {
-        "sha": "2f7d3ea76e9b22ab99b27185878588bef6f6d68b",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/2f7d3ea76e9b22ab99b27185878588bef6f6d68b",
+        "sha": "36be0ec232ebc0df8b69bc06ffdd2313411b0973",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/36be0ec232ebc0df8b69bc06ffdd2313411b0973",
         "commit": {
-          "message": "feat: add offline support via vite-plugin-pwa\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-08T04:23:14Z"
+            "date": "2026-05-08T07:01:08Z"
           }
         }
       }
@@ -382,9 +382,29 @@
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-08T06:23:23Z"
+      "pushed_at": "2026-05-08T07:28:51Z"
     },
     "commits": [
+      {
+        "sha": "4b531898bd4d80b6ad87f4ce8040f38d43ff3d53",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/4b531898bd4d80b6ad87f4ce8040f38d43ff3d53",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:28:50Z"
+          }
+        }
+      },
+      {
+        "sha": "8b2bd1209fec9d210dd59054a6101f0eccd44aa8",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/8b2bd1209fec9d210dd59054a6101f0eccd44aa8",
+        "commit": {
+          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T06:58:47Z"
+          }
+        }
+      },
       {
         "sha": "1fd429fb9f10a67ac7e9498a02ee1eabf9501eba",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/1fd429fb9f10a67ac7e9498a02ee1eabf9501eba",
@@ -392,26 +412,6 @@
           "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T06:23:21Z"
-          }
-        }
-      },
-      {
-        "sha": "48390427540d59afafd55f0dc96bdcb3d271de96",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/48390427540d59afafd55f0dc96bdcb3d271de96",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:35:56Z"
-          }
-        }
-      },
-      {
-        "sha": "bc4a29557e167e1d872c36462bb92bc0869ee76c",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/bc4a29557e167e1d872c36462bb92bc0869ee76c",
-        "commit": {
-          "message": "feat: add offline support via vite-plugin-pwa\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T04:22:11Z"
           }
         }
       }
@@ -458,9 +458,19 @@
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-08T06:57:05Z"
+      "pushed_at": "2026-05-08T07:28:41Z"
     },
     "commits": [
+      {
+        "sha": "82ade1044ce7b0a3a34ed9e8d9d9fcaab071cbbf",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/82ade1044ce7b0a3a34ed9e8d9d9fcaab071cbbf",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:28:39Z"
+          }
+        }
+      },
       {
         "sha": "a4473d3dc68767aeb3ec5751b82e4fc8b68034e2",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/a4473d3dc68767aeb3ec5751b82e4fc8b68034e2",
@@ -478,16 +488,6 @@
           "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T06:25:03Z"
-          }
-        }
-      },
-      {
-        "sha": "e25257b52c770e96afcc607dfb0c543f211ef48a",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/e25257b52c770e96afcc607dfb0c543f211ef48a",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:36:00Z"
           }
         }
       }
@@ -610,9 +610,29 @@
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-08T06:24:35Z"
+      "pushed_at": "2026-05-08T07:28:59Z"
     },
     "commits": [
+      {
+        "sha": "3317b660e657e7180fe25ca21c1a6ff78efe0afb",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/3317b660e657e7180fe25ca21c1a6ff78efe0afb",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:28:57Z"
+          }
+        }
+      },
+      {
+        "sha": "bd712b262f26b40fc6f112f7d5b94dff8bf599a1",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/bd712b262f26b40fc6f112f7d5b94dff8bf599a1",
+        "commit": {
+          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T06:58:52Z"
+          }
+        }
+      },
       {
         "sha": "77d8dc57c0fea77a204e8f23e5c11f5617e6f8e7",
         "html_url": "https://github.com/freegamestore-online/match3/commit/77d8dc57c0fea77a204e8f23e5c11f5617e6f8e7",
@@ -622,35 +642,35 @@
             "date": "2026-05-08T06:24:33Z"
           }
         }
-      },
-      {
-        "sha": "655d057852d2f946531d10a687997a782b301fac",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/655d057852d2f946531d10a687997a782b301fac",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:39:47Z"
-          }
-        }
-      },
-      {
-        "sha": "2fb5ec34a6e65a66477894cece339921e83c9335",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/2fb5ec34a6e65a66477894cece339921e83c9335",
-        "commit": {
-          "message": "feat: add offline support via vite-plugin-pwa\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T04:24:13Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-08T06:27:26Z"
+      "pushed_at": "2026-05-08T07:29:02Z"
     },
     "commits": [
+      {
+        "sha": "39fe2b39f16259c14c6246965cd25fc96cd93306",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/39fe2b39f16259c14c6246965cd25fc96cd93306",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:29:00Z"
+          }
+        }
+      },
+      {
+        "sha": "d03f3c8de3b09997b4e25f5fb6d3b514a8d1c147",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/d03f3c8de3b09997b4e25f5fb6d3b514a8d1c147",
+        "commit": {
+          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:00:49Z"
+          }
+        }
+      },
       {
         "sha": "655685625ba1ee982988c9b6abc133baf8dc0904",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/655685625ba1ee982988c9b6abc133baf8dc0904",
@@ -658,26 +678,6 @@
           "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T06:27:24Z"
-          }
-        }
-      },
-      {
-        "sha": "ac77ffbef2c650dbecf67668325ea67c13ca4e01",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/ac77ffbef2c650dbecf67668325ea67c13ca4e01",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:41:37Z"
-          }
-        }
-      },
-      {
-        "sha": "a0b8f140dea4b3868d572afe45ee49f322fe26db",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/a0b8f140dea4b3868d572afe45ee49f322fe26db",
-        "commit": {
-          "message": "feat: add offline support via vite-plugin-pwa\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T04:24:28Z"
           }
         }
       }
@@ -724,9 +724,19 @@
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-08T06:57:09Z"
+      "pushed_at": "2026-05-08T07:29:06Z"
     },
     "commits": [
+      {
+        "sha": "d47bbe182db63871c21cba92dab756aeb181ae6e",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/d47bbe182db63871c21cba92dab756aeb181ae6e",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:29:04Z"
+          }
+        }
+      },
       {
         "sha": "999f70dc605073fcfa30e79c5e68a1af04ca993b",
         "html_url": "https://github.com/freegamestore-online/simon/commit/999f70dc605073fcfa30e79c5e68a1af04ca993b",
@@ -746,25 +756,25 @@
             "date": "2026-05-08T06:25:59Z"
           }
         }
-      },
-      {
-        "sha": "5ffa3445ebb7b7884327a253ad7423ceb058438a",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/5ffa3445ebb7b7884327a253ad7423ceb058438a",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:41:01Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-08T06:22:07Z"
+      "pushed_at": "2026-05-08T07:01:46Z"
     },
     "commits": [
+      {
+        "sha": "02195ed74eedd04a0e1661e048bbdbb6cd3bac5f",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/02195ed74eedd04a0e1661e048bbdbb6cd3bac5f",
+        "commit": {
+          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:01:09Z"
+          }
+        }
+      },
       {
         "sha": "00f5dbedbe6ec80f4d23859dce628a4d7ef01aad",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/00f5dbedbe6ec80f4d23859dce628a4d7ef01aad",
@@ -784,25 +794,25 @@
             "date": "2026-05-08T05:38:08Z"
           }
         }
-      },
-      {
-        "sha": "ccc97890f5a8dcaf90fde10a49f77940271fb4fa",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/ccc97890f5a8dcaf90fde10a49f77940271fb4fa",
-        "commit": {
-          "message": "feat: add offline support via vite-plugin-pwa\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T04:24:57Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-08T06:57:14Z"
+      "pushed_at": "2026-05-08T07:28:57Z"
     },
     "commits": [
+      {
+        "sha": "ab7589139bf8fb43d2e4a964f64184ee4e97ba94",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/ab7589139bf8fb43d2e4a964f64184ee4e97ba94",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:28:55Z"
+          }
+        }
+      },
       {
         "sha": "0c2e4211a0897039ec9d2dc620550718f7925fae",
         "html_url": "https://github.com/freegamestore-online/memory/commit/0c2e4211a0897039ec9d2dc620550718f7925fae",
@@ -822,25 +832,25 @@
             "date": "2026-05-08T06:24:43Z"
           }
         }
-      },
-      {
-        "sha": "f89ccb6fc0d7b633f50e909951f7bfde8a95c0d6",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/f89ccb6fc0d7b633f50e909951f7bfde8a95c0d6",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:39:56Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-08T06:57:12Z"
+      "pushed_at": "2026-05-08T07:28:49Z"
     },
     "commits": [
+      {
+        "sha": "348230466442b619e15eb130af0c4b050320ee7f",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/348230466442b619e15eb130af0c4b050320ee7f",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:28:48Z"
+          }
+        }
+      },
       {
         "sha": "3733b02eabbb9580afe218fd3caa9f6f0b685e93",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/3733b02eabbb9580afe218fd3caa9f6f0b685e93",
@@ -858,16 +868,6 @@
           "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T06:27:36Z"
-          }
-        }
-      },
-      {
-        "sha": "069c2637334cc085dd3afbef5794a70605364580",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/069c2637334cc085dd3afbef5794a70605364580",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:36:07Z"
           }
         }
       }
@@ -914,9 +914,29 @@
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-08T06:24:25Z"
+      "pushed_at": "2026-05-08T07:28:53Z"
     },
     "commits": [
+      {
+        "sha": "6b16c0d3296610b58ef14867580384b2b1ba034e",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/6b16c0d3296610b58ef14867580384b2b1ba034e",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:28:52Z"
+          }
+        }
+      },
+      {
+        "sha": "e7a1532b7b8c7ac5fa4e28c01cfcdb9e8be9ca21",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/e7a1532b7b8c7ac5fa4e28c01cfcdb9e8be9ca21",
+        "commit": {
+          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T06:58:49Z"
+          }
+        }
+      },
       {
         "sha": "f9e0550d5e56b499f8705f8536bcfc3da4096726",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/f9e0550d5e56b499f8705f8536bcfc3da4096726",
@@ -926,35 +946,25 @@
             "date": "2026-05-08T06:24:23Z"
           }
         }
-      },
-      {
-        "sha": "959327318ab7ea0db26778ecd17e8ec0598506b0",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/959327318ab7ea0db26778ecd17e8ec0598506b0",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:35:58Z"
-          }
-        }
-      },
-      {
-        "sha": "9d207b6bf5898e6441200da0e786efd5ea84c3c2",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/9d207b6bf5898e6441200da0e786efd5ea84c3c2",
-        "commit": {
-          "message": "feat: add offline support via vite-plugin-pwa\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T04:22:59Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-08T06:23:54Z"
+      "pushed_at": "2026-05-08T07:01:37Z"
     },
     "commits": [
+      {
+        "sha": "bacb459103ef5e79588abe55ea97d39eb2bd8313",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/bacb459103ef5e79588abe55ea97d39eb2bd8313",
+        "commit": {
+          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T06:58:51Z"
+          }
+        }
+      },
       {
         "sha": "029aa932009a0c32f956ac97c19dafcea0267638",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/029aa932009a0c32f956ac97c19dafcea0267638",
@@ -974,25 +984,25 @@
             "date": "2026-05-08T05:39:17Z"
           }
         }
-      },
-      {
-        "sha": "a303dbb2764659dbe64bd7d52be2d6583848979c",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/a303dbb2764659dbe64bd7d52be2d6583848979c",
-        "commit": {
-          "message": "feat: add offline support via vite-plugin-pwa\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T04:23:59Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-08T06:56:57Z"
+      "pushed_at": "2026-05-08T07:28:47Z"
     },
     "commits": [
+      {
+        "sha": "9c1c41462c1c524d5cee9b1ab076e98f237b6046",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/9c1c41462c1c524d5cee9b1ab076e98f237b6046",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:28:45Z"
+          }
+        }
+      },
       {
         "sha": "b8d5955b01b402bef2a96aaec64a512cc3676fe3",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/b8d5955b01b402bef2a96aaec64a512cc3676fe3",
@@ -1012,25 +1022,35 @@
             "date": "2026-05-08T06:27:14Z"
           }
         }
-      },
-      {
-        "sha": "fab9ba0cfd15d1a4075849b119db35b904285d68",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/fab9ba0cfd15d1a4075849b119db35b904285d68",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:36:13Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-08T06:27:48Z"
+      "pushed_at": "2026-05-08T07:29:03Z"
     },
     "commits": [
+      {
+        "sha": "812fb46e73c7e580be0284a26e7d19c320a1fe95",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/812fb46e73c7e580be0284a26e7d19c320a1fe95",
+        "commit": {
+          "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:29:02Z"
+          }
+        }
+      },
+      {
+        "sha": "9ce93640968663fc62e832dc50f74dee94e2ad4e",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/9ce93640968663fc62e832dc50f74dee94e2ad4e",
+        "commit": {
+          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:01:08Z"
+          }
+        }
+      },
       {
         "sha": "54d9045d8827bc739e4da0b14ddbe081c9be15cb",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/54d9045d8827bc739e4da0b14ddbe081c9be15cb",
@@ -1038,26 +1058,6 @@
           "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T06:27:46Z"
-          }
-        }
-      },
-      {
-        "sha": "19edc500336054e6d981794bbbc76f21fc2121ff",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/19edc500336054e6d981794bbbc76f21fc2121ff",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:41:47Z"
-          }
-        }
-      },
-      {
-        "sha": "aa634c28aae851ce20831be1213d9f9042e5155f",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/aa634c28aae851ce20831be1213d9f9042e5155f",
-        "commit": {
-          "message": "feat: add offline support via vite-plugin-pwa\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T04:24:42Z"
           }
         }
       }
@@ -1142,9 +1142,19 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-08T06:58:52Z"
+      "pushed_at": "2026-05-08T07:40:18Z"
     },
     "commits": [
+      {
+        "sha": "6d6f7e013d548dd5d4c5d8f367c26a0e7c91abec",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/6d6f7e013d548dd5d4c5d8f367c26a0e7c91abec",
+        "commit": {
+          "message": "fix: 44px min touch targets on dice selector buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T07:40:16Z"
+          }
+        }
+      },
       {
         "sha": "b876472c8dd2a002e5ee77f61e404d4b47595fd5",
         "html_url": "https://github.com/freegamestore-online/dice/commit/b876472c8dd2a002e5ee77f61e404d4b47595fd5",
@@ -1162,16 +1172,6 @@
           "message": "fix: remove old manifest.json (PWA plugin generates manifest.webmanifest)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T06:23:32Z"
-          }
-        }
-      },
-      {
-        "sha": "14c5053a8f38293116a99fccd1583a82a150af4e",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/14c5053a8f38293116a99fccd1583a82a150af4e",
-        "commit": {
-          "message": "feat: add GameAuth sign-in to topbar\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T05:42:46Z"
           }
         }
       }
