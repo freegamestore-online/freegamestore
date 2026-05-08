@@ -1,126 +1,6 @@
 {
   "games": [
     {
-      "id": "chess",
-      "name": "Chess",
-      "category": "strategy",
-      "icon": "&#9822;",
-      "iconBg": "#f0fdf4",
-      "description": "Play against the engine, analyze positions, and sharpen your tactics with puzzles.",
-      "appUrl": "https://chess.freegamestore.online",
-      "repo": "freegamestore-online/chess",
-      "cfProject": "freechessapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-04-15",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-04-15",
-          "notes": "Initial release with engine play and puzzle mode."
-        }
-      ]
-    },
-    {
-      "id": "puzzle",
-      "name": "Puzzle",
-      "category": "brain-training",
-      "icon": "&#129513;",
-      "iconBg": "#f5f3ff",
-      "description": "Logic puzzles, pattern recognition, and spatial reasoning challenges.",
-      "appUrl": "https://puzzle.freegamestore.online",
-      "repo": "freegamestore-online/puzzle",
-      "cfProject": "freepuzzle",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-04-15",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-04-15",
-          "notes": "Initial release with logic and pattern puzzles."
-        }
-      ]
-    },
-    {
-      "id": "tetris",
-      "name": "Tetris",
-      "category": "brain-training",
-      "icon": "&#127918;",
-      "iconBg": "#fef2f2",
-      "description": "Classic block-stacking puzzle. Seven pieces, line clearing, increasing speed. Touch and keyboard controls.",
-      "appUrl": "https://tetris.freegamestore.online",
-      "repo": "freegamestore-online/tetris",
-      "cfProject": "freetetris",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-04-20",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-04-20",
-          "notes": "Initial release with classic gameplay and level progression."
-        }
-      ]
-    },
-    {
-      "id": "snake",
-      "name": "Snake",
-      "category": "brain-training",
-      "icon": "&#128013;",
-      "iconBg": "#ecfdf5",
-      "description": "Classic snake game. Eat food, grow longer, don't hit yourself. Speed increases with score.",
-      "appUrl": "https://snake.freegamestore.online",
-      "repo": "freegamestore-online/snake",
-      "cfProject": "freesnake",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-04-20",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-04-20",
-          "notes": "Initial release with swipe and keyboard controls."
-        }
-      ]
-    },
-    {
-      "id": "minesweeper",
-      "name": "Minesweeper",
-      "category": "brain-training",
-      "icon": "&#128163;",
-      "iconBg": "#f0f9ff",
-      "description": "Classic mine-finding puzzle. Three difficulties. Flag mines, reveal safe cells, clear the board.",
-      "appUrl": "https://minesweeper.freegamestore.online",
-      "repo": "freegamestore-online/minesweeper",
-      "cfProject": "freeminesweeper",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-04-22",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-04-22",
-          "notes": "Initial release with easy, medium, and hard modes."
-        }
-      ]
-    },
-    {
       "id": "2048",
       "name": "2048",
       "category": "brain-training",
@@ -150,39 +30,15 @@
       ]
     },
     {
-      "id": "slither",
-      "name": "Slither",
-      "category": "brain-training",
-      "icon": "&#128013;",
-      "iconBg": "#ecfdf5",
-      "description": "Slither.io-style snake game. Eat, grow, survive against AI bots.",
-      "appUrl": "https://slither.freegamestore.online",
-      "repo": "freegamestore-online/slither",
-      "cfProject": "freeslitherapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-04-28",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-04-28",
-          "notes": "Initial release with AI bots and boost mechanic."
-        }
-      ]
-    },
-    {
-      "id": "racing",
-      "name": "Racing",
-      "category": "racing",
-      "icon": "&#127950;",
-      "iconBg": "#eff6ff",
-      "description": "3D endless runner. Dodge traffic, change lanes, speed increases over time. Keyboard and touch controls.",
-      "appUrl": "https://racing.freegamestore.online",
-      "repo": "freegamestore-online/racing",
-      "cfProject": "freeracingapp",
+      "id": "asteroids",
+      "name": "Asteroids",
+      "category": "arcade",
+      "icon": "&#9732;",
+      "iconBg": "#f0f9ff",
+      "description": "Classic vector-style space shooter. Rotate, thrust, shoot asteroids. Wrap-around screen.",
+      "appUrl": "https://asteroids.freegamestore.online",
+      "repo": "freegamestore-online/asteroids",
+      "cfProject": "freeasteroidsapp",
       "type": "standalone",
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
@@ -193,7 +49,7 @@
         {
           "version": "1.0.0",
           "date": "2026-05-04",
-          "notes": "Initial release with Three.js 3D rendering and 3-lane gameplay."
+          "notes": "Initial release with momentum physics and screen wrap."
         }
       ]
     },
@@ -222,30 +78,6 @@
       ]
     },
     {
-      "id": "spaceshooter",
-      "name": "Space Shooter",
-      "category": "arcade",
-      "icon": "&#128640;",
-      "iconBg": "#eef2ff",
-      "description": "Classic space shooter built with Phaser. Destroy enemies, dodge fire, survive as long as you can.",
-      "appUrl": "https://spaceshooter.freegamestore.online",
-      "repo": "freegamestore-online/spaceshooter",
-      "cfProject": "freespaceshooterapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-05-04",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-05-04",
-          "notes": "Initial release with enemy waves and power-ups."
-        }
-      ]
-    },
-    {
       "id": "breakout",
       "name": "Breakout",
       "category": "arcade",
@@ -266,246 +98,6 @@
           "version": "1.0.0",
           "date": "2026-05-04",
           "notes": "Initial release with multi-level brick layouts."
-        }
-      ]
-    },
-    {
-      "id": "platformer",
-      "name": "Platformer",
-      "category": "arcade",
-      "icon": "&#127939;",
-      "iconBg": "#ecfdf5",
-      "description": "Endless platformer built with Kaplay. Jump between platforms, collect coins, don't fall.",
-      "appUrl": "https://platformer.freegamestore.online",
-      "repo": "freegamestore-online/platformer",
-      "cfProject": "freeplatformerapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-05-04",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-05-04",
-          "notes": "Initial release with procedural level generation."
-        }
-      ]
-    },
-    {
-      "id": "sudoku",
-      "name": "Sudoku",
-      "category": "brain-training",
-      "icon": "&#129519;",
-      "iconBg": "#eff6ff",
-      "description": "Classic 9x9 Sudoku. Three difficulties, pencil marks, timer. Fully playable on touch.",
-      "appUrl": "https://sudoku.freegamestore.online",
-      "repo": "freegamestore-online/sudoku",
-      "cfProject": "freesudokuapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-05-04",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-05-04",
-          "notes": "Initial release with three difficulty levels and leaderboard."
-        }
-      ]
-    },
-    {
-      "id": "pacman",
-      "name": "Pac-Man",
-      "category": "arcade",
-      "icon": "&#127918;",
-      "iconBg": "#fef9c3",
-      "description": "Classic maze chase. Eat dots, avoid ghosts, grab power pellets. Canvas-drawn, touch controls.",
-      "appUrl": "https://pacman.freegamestore.online",
-      "repo": "freegamestore-online/pacman",
-      "cfProject": "freepacmanapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-05-04",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-05-04",
-          "notes": "Initial release with 4 ghosts, power pellets, and swipe controls."
-        }
-      ]
-    },
-    {
-      "id": "pong",
-      "name": "Pong",
-      "category": "arcade",
-      "icon": "&#127955;",
-      "iconBg": "#f0f9ff",
-      "description": "The original video game. Play against AI. First to 11 wins. Touch drag to move paddle.",
-      "appUrl": "https://pong.freegamestore.online",
-      "repo": "freegamestore-online/pong",
-      "cfProject": "freepongapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-05-04",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-05-04",
-          "notes": "Initial release with AI opponent and touch controls."
-        }
-      ]
-    },
-    {
-      "id": "flappy",
-      "name": "Flappy Bird",
-      "category": "arcade",
-      "icon": "&#128038;",
-      "iconBg": "#ecfdf5",
-      "description": "Tap to fly through pipes. Simple, addictive, unforgiving. How far can you get?",
-      "appUrl": "https://flappy.freegamestore.online",
-      "repo": "freegamestore-online/flappy",
-      "cfProject": "freeflappyapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-05-04",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-05-04",
-          "notes": "Initial release with pipe gap difficulty scaling."
-        }
-      ]
-    },
-    {
-      "id": "solitaire",
-      "name": "Solitaire",
-      "category": "cards",
-      "icon": "&#127183;",
-      "iconBg": "#f0fdf4",
-      "description": "Klondike Solitaire. Draw 1 or 3. Undo, auto-complete, two-tap controls for touch.",
-      "appUrl": "https://solitaire.freegamestore.online",
-      "repo": "freegamestore-online/solitaire",
-      "cfProject": "freesolitaireapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-05-04",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-05-04",
-          "notes": "Initial release with Draw 1/3, undo, and auto-complete."
-        }
-      ]
-    },
-    {
-      "id": "connect4",
-      "name": "Connect 4",
-      "category": "strategy",
-      "icon": "&#128308;",
-      "iconBg": "#eff6ff",
-      "description": "Drop discs, connect four in a row. Play against minimax AI. Tap to drop.",
-      "appUrl": "https://connect4.freegamestore.online",
-      "repo": "freegamestore-online/connect4",
-      "cfProject": "freeconnect4app",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-05-04",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-05-04",
-          "notes": "Initial release with minimax AI and drop animation."
-        }
-      ]
-    },
-    {
-      "id": "wordle",
-      "name": "Wordle",
-      "category": "brain-training",
-      "icon": "&#129518;",
-      "iconBg": "#f0fdf4",
-      "description": "Guess the 5-letter word in 6 tries. Daily challenge and practice mode. On-screen keyboard.",
-      "appUrl": "https://wordle.freegamestore.online",
-      "repo": "freegamestore-online/wordle",
-      "cfProject": "freewordleapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-05-04",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-05-04",
-          "notes": "Initial release with daily and practice modes."
-        }
-      ]
-    },
-    {
-      "id": "simon",
-      "name": "Simon",
-      "category": "brain-training",
-      "icon": "&#127912;",
-      "iconBg": "#fef2f2",
-      "description": "Memory sequence game. Watch the pattern, repeat it. How many rounds can you remember?",
-      "appUrl": "https://simon.freegamestore.online",
-      "repo": "freegamestore-online/simon",
-      "cfProject": "freesimonapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-05-04",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-05-04",
-          "notes": "Initial release with audio tones and speed ramp."
-        }
-      ]
-    },
-    {
-      "id": "mahjong",
-      "name": "Mahjong",
-      "category": "brain-training",
-      "icon": "&#126980;",
-      "iconBg": "#fef3c7",
-      "description": "Mahjong Solitaire tile matching. Find and remove matching free pairs. Hint and shuffle.",
-      "appUrl": "https://mahjong.freegamestore.online",
-      "repo": "freegamestore-online/mahjong",
-      "cfProject": "freemahjongapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-05-04",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-05-04",
-          "notes": "Initial release with turtle layout, hint, and shuffle."
         }
       ]
     },
@@ -534,39 +126,52 @@
       ]
     },
     {
-      "id": "hangman",
-      "name": "Hangman",
-      "category": "brain-training",
-      "icon": "&#128100;",
-      "iconBg": "#f5f3ff",
-      "description": "Guess the word letter by letter. Four categories. Canvas-drawn hangman. On-screen keyboard.",
-      "appUrl": "https://hangman.freegamestore.online",
-      "repo": "freegamestore-online/hangman",
-      "cfProject": "freehangmanapp",
+      "id": "chess",
+      "name": "Chess",
+      "category": "strategy",
+      "icon": "&#9822;",
+      "iconBg": "#f0fdf4",
+      "description": "Play against the engine, analyze positions, and sharpen your tactics with puzzles.",
+      "appUrl": "https://chess.freegamestore.online",
+      "repo": "freegamestore-online/chess",
+      "cfProject": "freechessapp",
       "type": "standalone",
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
       "version": "1.0.0",
-      "firstPublished": "2026-05-04",
+      "firstPublished": "2026-04-15",
       "lastUpdated": "2026-05-04",
       "versions": [
         {
           "version": "1.0.0",
-          "date": "2026-05-04",
-          "notes": "Initial release with 4 word categories."
+          "date": "2026-04-15",
+          "notes": "Initial release with engine play and puzzle mode."
         }
       ]
     },
     {
-      "id": "memory",
-      "name": "Memory",
-      "category": "brain-training",
-      "icon": "&#129504;",
-      "iconBg": "#ecfdf5",
-      "description": "Flip cards and find matching pairs. Three grid sizes. CSS 3D flip animations.",
-      "appUrl": "https://memory.freegamestore.online",
-      "repo": "freegamestore-online/memory",
-      "cfProject": "freememoryapp",
+      "id": "coinflip",
+      "name": "coinflip",
+      "category": "casual",
+      "icon": "\ud83c\udfae",
+      "iconBg": "#f3f4f6",
+      "description": "Tap to flip a coin. Tracks the last 20.",
+      "appUrl": "https://coinflip.freegamestore.online",
+      "repo": "freegamestore-online/coinflip",
+      "cfProject": "freecoinflipapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
+    },
+    {
+      "id": "connect4",
+      "name": "Connect 4",
+      "category": "strategy",
+      "icon": "&#128308;",
+      "iconBg": "#eff6ff",
+      "description": "Drop discs, connect four in a row. Play against minimax AI. Tap to drop.",
+      "appUrl": "https://connect4.freegamestore.online",
+      "repo": "freegamestore-online/connect4",
+      "cfProject": "freeconnect4app",
       "type": "standalone",
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
@@ -577,7 +182,44 @@
         {
           "version": "1.0.0",
           "date": "2026-05-04",
-          "notes": "Initial release with three difficulty levels."
+          "notes": "Initial release with minimax AI and drop animation."
+        }
+      ]
+    },
+    {
+      "id": "dice",
+      "name": "dice",
+      "category": "casual",
+      "icon": "\ud83c\udfae",
+      "iconBg": "#f3f4f6",
+      "description": "Roll up to 6 dice. Tap to throw, sum auto-totals.",
+      "appUrl": "https://dice.freegamestore.online",
+      "repo": "freegamestore-online/dice",
+      "cfProject": "freediceapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
+    },
+    {
+      "id": "flappy",
+      "name": "Flappy Bird",
+      "category": "arcade",
+      "icon": "&#128038;",
+      "iconBg": "#ecfdf5",
+      "description": "Tap to fly through pipes. Simple, addictive, unforgiving. How far can you get?",
+      "appUrl": "https://flappy.freegamestore.online",
+      "repo": "freegamestore-online/flappy",
+      "cfProject": "freeflappyapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-05-04",
+          "notes": "Initial release with pipe gap difficulty scaling."
         }
       ]
     },
@@ -606,6 +248,67 @@
       ]
     },
     {
+      "id": "hangman",
+      "name": "Hangman",
+      "category": "brain-training",
+      "icon": "&#128100;",
+      "iconBg": "#f5f3ff",
+      "description": "Guess the word letter by letter. Four categories. Canvas-drawn hangman. On-screen keyboard.",
+      "appUrl": "https://hangman.freegamestore.online",
+      "repo": "freegamestore-online/hangman",
+      "cfProject": "freehangmanapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-05-04",
+          "notes": "Initial release with 4 word categories."
+        }
+      ]
+    },
+    {
+      "id": "highlow",
+      "name": "highlow",
+      "category": "cards",
+      "icon": "\ud83c\udfae",
+      "iconBg": "#f3f4f6",
+      "description": "Will the next card be higher or lower? Build a streak.",
+      "appUrl": "https://highlow.freegamestore.online",
+      "repo": "freegamestore-online/highlow",
+      "cfProject": "freehighlowapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
+    },
+    {
+      "id": "mahjong",
+      "name": "Mahjong",
+      "category": "brain-training",
+      "icon": "&#126980;",
+      "iconBg": "#fef3c7",
+      "description": "Mahjong Solitaire tile matching. Find and remove matching free pairs. Hint and shuffle.",
+      "appUrl": "https://mahjong.freegamestore.online",
+      "repo": "freegamestore-online/mahjong",
+      "cfProject": "freemahjongapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-05-04",
+          "notes": "Initial release with turtle layout, hint, and shuffle."
+        }
+      ]
+    },
+    {
       "id": "match3",
       "name": "Match 3",
       "category": "brain-training",
@@ -626,6 +329,355 @@
           "version": "1.0.0",
           "date": "2026-05-04",
           "notes": "Initial release with cascade combos and timed mode."
+        }
+      ]
+    },
+    {
+      "id": "memory",
+      "name": "Memory",
+      "category": "brain-training",
+      "icon": "&#129504;",
+      "iconBg": "#ecfdf5",
+      "description": "Flip cards and find matching pairs. Three grid sizes. CSS 3D flip animations.",
+      "appUrl": "https://memory.freegamestore.online",
+      "repo": "freegamestore-online/memory",
+      "cfProject": "freememoryapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-05-04",
+          "notes": "Initial release with three difficulty levels."
+        }
+      ]
+    },
+    {
+      "id": "memorymatch",
+      "name": "memorymatch",
+      "category": "brain-training",
+      "icon": "\ud83c\udfae",
+      "iconBg": "#f3f4f6",
+      "description": "Match the pairs. Time and move counter included.",
+      "appUrl": "https://memorymatch.freegamestore.online",
+      "repo": "freegamestore-online/memorymatch",
+      "cfProject": "freememorymatchapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
+    },
+    {
+      "id": "minesweeper",
+      "name": "Minesweeper",
+      "category": "brain-training",
+      "icon": "&#128163;",
+      "iconBg": "#f0f9ff",
+      "description": "Classic mine-finding puzzle. Three difficulties. Flag mines, reveal safe cells, clear the board.",
+      "appUrl": "https://minesweeper.freegamestore.online",
+      "repo": "freegamestore-online/minesweeper",
+      "cfProject": "freeminesweeper",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-04-22",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-04-22",
+          "notes": "Initial release with easy, medium, and hard modes."
+        }
+      ]
+    },
+    {
+      "id": "pacman",
+      "name": "Pac-Man",
+      "category": "arcade",
+      "icon": "&#127918;",
+      "iconBg": "#fef9c3",
+      "description": "Classic maze chase. Eat dots, avoid ghosts, grab power pellets. Canvas-drawn, touch controls.",
+      "appUrl": "https://pacman.freegamestore.online",
+      "repo": "freegamestore-online/pacman",
+      "cfProject": "freepacmanapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-05-04",
+          "notes": "Initial release with 4 ghosts, power pellets, and swipe controls."
+        }
+      ]
+    },
+    {
+      "id": "platformer",
+      "name": "Platformer",
+      "category": "arcade",
+      "icon": "&#127939;",
+      "iconBg": "#ecfdf5",
+      "description": "Endless platformer built with Kaplay. Jump between platforms, collect coins, don't fall.",
+      "appUrl": "https://platformer.freegamestore.online",
+      "repo": "freegamestore-online/platformer",
+      "cfProject": "freeplatformerapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-05-04",
+          "notes": "Initial release with procedural level generation."
+        }
+      ]
+    },
+    {
+      "id": "pong",
+      "name": "Pong",
+      "category": "arcade",
+      "icon": "&#127955;",
+      "iconBg": "#f0f9ff",
+      "description": "The original video game. Play against AI. First to 11 wins. Touch drag to move paddle.",
+      "appUrl": "https://pong.freegamestore.online",
+      "repo": "freegamestore-online/pong",
+      "cfProject": "freepongapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-05-04",
+          "notes": "Initial release with AI opponent and touch controls."
+        }
+      ]
+    },
+    {
+      "id": "puzzle",
+      "name": "Puzzle",
+      "category": "brain-training",
+      "icon": "&#129513;",
+      "iconBg": "#f5f3ff",
+      "description": "Logic puzzles, pattern recognition, and spatial reasoning challenges.",
+      "appUrl": "https://puzzle.freegamestore.online",
+      "repo": "freegamestore-online/puzzle",
+      "cfProject": "freepuzzle",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-04-15",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-04-15",
+          "notes": "Initial release with logic and pattern puzzles."
+        }
+      ]
+    },
+    {
+      "id": "racing",
+      "name": "Racing",
+      "category": "racing",
+      "icon": "&#127950;",
+      "iconBg": "#eff6ff",
+      "description": "3D endless runner. Dodge traffic, change lanes, speed increases over time. Keyboard and touch controls.",
+      "appUrl": "https://racing.freegamestore.online",
+      "repo": "freegamestore-online/racing",
+      "cfProject": "freeracingapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-05-04",
+          "notes": "Initial release with Three.js 3D rendering and 3-lane gameplay."
+        }
+      ]
+    },
+    {
+      "id": "simon",
+      "name": "Simon",
+      "category": "brain-training",
+      "icon": "&#127912;",
+      "iconBg": "#fef2f2",
+      "description": "Memory sequence game. Watch the pattern, repeat it. How many rounds can you remember?",
+      "appUrl": "https://simon.freegamestore.online",
+      "repo": "freegamestore-online/simon",
+      "cfProject": "freesimonapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-05-04",
+          "notes": "Initial release with audio tones and speed ramp."
+        }
+      ]
+    },
+    {
+      "id": "slither",
+      "name": "Slither",
+      "category": "brain-training",
+      "icon": "&#128013;",
+      "iconBg": "#ecfdf5",
+      "description": "Slither.io-style snake game. Eat, grow, survive against AI bots.",
+      "appUrl": "https://slither.freegamestore.online",
+      "repo": "freegamestore-online/slither",
+      "cfProject": "freeslitherapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-04-28",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-04-28",
+          "notes": "Initial release with AI bots and boost mechanic."
+        }
+      ]
+    },
+    {
+      "id": "snake",
+      "name": "Snake",
+      "category": "brain-training",
+      "icon": "&#128013;",
+      "iconBg": "#ecfdf5",
+      "description": "Classic snake game. Eat food, grow longer, don't hit yourself. Speed increases with score.",
+      "appUrl": "https://snake.freegamestore.online",
+      "repo": "freegamestore-online/snake",
+      "cfProject": "freesnake",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-04-20",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-04-20",
+          "notes": "Initial release with swipe and keyboard controls."
+        }
+      ]
+    },
+    {
+      "id": "solitaire",
+      "name": "Solitaire",
+      "category": "cards",
+      "icon": "&#127183;",
+      "iconBg": "#f0fdf4",
+      "description": "Klondike Solitaire. Draw 1 or 3. Undo, auto-complete, two-tap controls for touch.",
+      "appUrl": "https://solitaire.freegamestore.online",
+      "repo": "freegamestore-online/solitaire",
+      "cfProject": "freesolitaireapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-05-04",
+          "notes": "Initial release with Draw 1/3, undo, and auto-complete."
+        }
+      ]
+    },
+    {
+      "id": "spaceshooter",
+      "name": "Space Shooter",
+      "category": "arcade",
+      "icon": "&#128640;",
+      "iconBg": "#eef2ff",
+      "description": "Classic space shooter built with Phaser. Destroy enemies, dodge fire, survive as long as you can.",
+      "appUrl": "https://spaceshooter.freegamestore.online",
+      "repo": "freegamestore-online/spaceshooter",
+      "cfProject": "freespaceshooterapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-05-04",
+          "notes": "Initial release with enemy waves and power-ups."
+        }
+      ]
+    },
+    {
+      "id": "sudoku",
+      "name": "Sudoku",
+      "category": "brain-training",
+      "icon": "&#129519;",
+      "iconBg": "#eff6ff",
+      "description": "Classic 9x9 Sudoku. Three difficulties, pencil marks, timer. Fully playable on touch.",
+      "appUrl": "https://sudoku.freegamestore.online",
+      "repo": "freegamestore-online/sudoku",
+      "cfProject": "freesudokuapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-05-04",
+          "notes": "Initial release with three difficulty levels and leaderboard."
+        }
+      ]
+    },
+    {
+      "id": "tetris",
+      "name": "Tetris",
+      "category": "brain-training",
+      "icon": "&#127918;",
+      "iconBg": "#fef2f2",
+      "description": "Classic block-stacking puzzle. Seven pieces, line clearing, increasing speed. Touch and keyboard controls.",
+      "appUrl": "https://tetris.freegamestore.online",
+      "repo": "freegamestore-online/tetris",
+      "cfProject": "freetetris",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-04-20",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-04-20",
+          "notes": "Initial release with classic gameplay and level progression."
         }
       ]
     },
@@ -678,15 +730,15 @@
       ]
     },
     {
-      "id": "asteroids",
-      "name": "Asteroids",
-      "category": "arcade",
-      "icon": "&#9732;",
-      "iconBg": "#f0f9ff",
-      "description": "Classic vector-style space shooter. Rotate, thrust, shoot asteroids. Wrap-around screen.",
-      "appUrl": "https://asteroids.freegamestore.online",
-      "repo": "freegamestore-online/asteroids",
-      "cfProject": "freeasteroidsapp",
+      "id": "wordle",
+      "name": "Wordle",
+      "category": "brain-training",
+      "icon": "&#129518;",
+      "iconBg": "#f0fdf4",
+      "description": "Guess the 5-letter word in 6 tries. Daily challenge and practice mode. On-screen keyboard.",
+      "appUrl": "https://wordle.freegamestore.online",
+      "repo": "freegamestore-online/wordle",
+      "cfProject": "freewordleapp",
       "type": "standalone",
       "developer": "FreeGameStore",
       "author": "FreeGameStore Team",
@@ -697,61 +749,9 @@
         {
           "version": "1.0.0",
           "date": "2026-05-04",
-          "notes": "Initial release with momentum physics and screen wrap."
+          "notes": "Initial release with daily and practice modes."
         }
       ]
-    },
-    {
-      "id": "coinflip",
-      "name": "coinflip",
-      "category": "casual",
-      "icon": "\ud83c\udfae",
-      "iconBg": "#f3f4f6",
-      "description": "Tap to flip a coin. Tracks the last 20.",
-      "appUrl": "https://coinflip.freegamestore.online",
-      "repo": "freegamestore-online/coinflip",
-      "cfProject": "freecoinflipapp",
-      "type": "standalone",
-      "developer": "FreeGameStore"
-    },
-    {
-      "id": "dice",
-      "name": "dice",
-      "category": "casual",
-      "icon": "\ud83c\udfae",
-      "iconBg": "#f3f4f6",
-      "description": "Roll up to 6 dice. Tap to throw, sum auto-totals.",
-      "appUrl": "https://dice.freegamestore.online",
-      "repo": "freegamestore-online/dice",
-      "cfProject": "freediceapp",
-      "type": "standalone",
-      "developer": "FreeGameStore"
-    },
-    {
-      "id": "highlow",
-      "name": "highlow",
-      "category": "cards",
-      "icon": "\ud83c\udfae",
-      "iconBg": "#f3f4f6",
-      "description": "Will the next card be higher or lower? Build a streak.",
-      "appUrl": "https://highlow.freegamestore.online",
-      "repo": "freegamestore-online/highlow",
-      "cfProject": "freehighlowapp",
-      "type": "standalone",
-      "developer": "FreeGameStore"
-    },
-    {
-      "id": "memorymatch",
-      "name": "memorymatch",
-      "category": "brain-training",
-      "icon": "\ud83c\udfae",
-      "iconBg": "#f3f4f6",
-      "description": "Match the pairs. Time and move counter included.",
-      "appUrl": "https://memorymatch.freegamestore.online",
-      "repo": "freegamestore-online/memorymatch",
-      "cfProject": "freememorymatchapp",
-      "type": "standalone",
-      "developer": "FreeGameStore"
     }
   ]
 }

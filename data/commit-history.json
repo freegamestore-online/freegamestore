@@ -78,6 +78,7 @@
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
+<<<<<<< Updated upstream
       "pushed_at": "2026-05-08T21:27:43Z"
     },
     "commits": [
@@ -88,26 +89,56 @@
           "message": "feat: add synthesized game sounds + wire to SDK\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T21:27:41Z"
+=======
+      "pushed_at": "2026-05-08T21:46:08Z"
+    },
+    "commits": [
+      {
+        "sha": "387ec991a2c1dbcf592a2ad1beeb58bd519c438d",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/387ec991a2c1dbcf592a2ad1beeb58bd519c438d",
+        "commit": {
+          "message": "fix: auto-start snake — started=true by default\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T21:46:05Z"
+>>>>>>> Stashed changes
           }
         }
       },
       {
+<<<<<<< Updated upstream
         "sha": "4f9e7758b626ab05215340a1d1f310f33590b703",
         "html_url": "https://github.com/freegamestore-online/snake/commit/4f9e7758b626ab05215340a1d1f310f33590b703",
         "commit": {
           "message": "feat: SDK v0.10.0 — play/pause + restart icon buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T21:13:46Z"
+=======
+        "sha": "f46e4cb948149fc1e892656646a2eafa97130eee",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/f46e4cb948149fc1e892656646a2eafa97130eee",
+        "commit": {
+          "message": "feat: add synthesized game sounds + wire to SDK\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T21:27:41Z"
+>>>>>>> Stashed changes
           }
         }
       },
       {
+<<<<<<< Updated upstream
         "sha": "0ff6ddbcb935793f06b303245f34b8136cb3b569",
         "html_url": "https://github.com/freegamestore-online/snake/commit/0ff6ddbcb935793f06b303245f34b8136cb3b569",
         "commit": {
           "message": "chore: bump SDK to v0.9.0 (sound toggle, muted by default)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T20:26:30Z"
+=======
+        "sha": "4f9e7758b626ab05215340a1d1f310f33590b703",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/4f9e7758b626ab05215340a1d1f310f33590b703",
+        "commit": {
+          "message": "feat: SDK v0.10.0 — play/pause + restart icon buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T21:13:46Z"
+>>>>>>> Stashed changes
           }
         }
       }
@@ -496,6 +527,7 @@
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
+<<<<<<< Updated upstream
       "pushed_at": "2026-05-08T21:17:57Z"
     },
     "commits": [
@@ -506,26 +538,56 @@
           "message": "feat: SDK v0.10.0 — play/pause + restart icon buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T21:14:17Z"
+=======
+      "pushed_at": "2026-05-08T21:42:13Z"
+    },
+    "commits": [
+      {
+        "sha": "e5438c0de42a54d34a058d6d8572e21c0069f992",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/e5438c0de42a54d34a058d6d8572e21c0069f992",
+        "commit": {
+          "message": "fix: camera facing lane + clean up controls\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T21:42:11Z"
+>>>>>>> Stashed changes
           }
         }
       },
       {
+<<<<<<< Updated upstream
         "sha": "0f9a6bcca3b9ea0da0445058345393d5e4a7b4cc",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/0f9a6bcca3b9ea0da0445058345393d5e4a7b4cc",
         "commit": {
           "message": "chore: bump SDK to v0.9.0 (sound toggle, muted by default)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T20:21:31Z"
+=======
+        "sha": "6721c04c8abc96e92fc2fb8445e7de3eef296bb5",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/6721c04c8abc96e92fc2fb8445e7de3eef296bb5",
+        "commit": {
+          "message": "feat: SDK v0.10.0 — play/pause + restart icon buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T21:14:17Z"
+>>>>>>> Stashed changes
           }
         }
       },
       {
+<<<<<<< Updated upstream
         "sha": "be326a78ee53f304363e19807103465d3ebc5cf9",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/be326a78ee53f304363e19807103465d3ebc5cf9",
         "commit": {
           "message": "fix: remove splash screen — show game field immediately\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T20:11:53Z"
+=======
+        "sha": "0f9a6bcca3b9ea0da0445058345393d5e4a7b4cc",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/0f9a6bcca3b9ea0da0445058345393d5e4a7b4cc",
+        "commit": {
+          "message": "chore: bump SDK to v0.9.0 (sound toggle, muted by default)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T20:21:31Z"
+>>>>>>> Stashed changes
           }
         }
       }
@@ -876,6 +938,7 @@
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
+<<<<<<< Updated upstream
       "pushed_at": "2026-05-08T21:24:50Z"
     },
     "commits": [
@@ -886,26 +949,56 @@
           "message": "fix: show SDK topbar — remove fixed positioning + in-canvas HUD\n\nCanvas was position:fixed covering the topbar. Now fills GameShell\ncontent area. Removed in-canvas score HUD — score shows in topbar stats.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T21:24:48Z"
+=======
+      "pushed_at": "2026-05-08T21:36:28Z"
+    },
+    "commits": [
+      {
+        "sha": "35cbfe6b1b8d53045ebe938f5e707ad472441a4b",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/35cbfe6b1b8d53045ebe938f5e707ad472441a4b",
+        "commit": {
+          "message": "fix: canvas sizes to parent not window — topbar now visible\n\nCanvas was using window.innerWidth/Height which covered the GameShell\ntopbar. Now uses parentElement.clientWidth/Height.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T21:36:26Z"
+>>>>>>> Stashed changes
           }
         }
       },
       {
+<<<<<<< Updated upstream
         "sha": "fcece3517357efb4d53349dec060e6bd5f45501d",
         "html_url": "https://github.com/freegamestore-online/slither/commit/fcece3517357efb4d53349dec060e6bd5f45501d",
         "commit": {
           "message": "feat: SDK v0.10.0 — play/pause + restart icon buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T21:14:03Z"
+=======
+        "sha": "d16efe67b23f419d6daf51f61770a0199a45fb51",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/d16efe67b23f419d6daf51f61770a0199a45fb51",
+        "commit": {
+          "message": "fix: show SDK topbar — remove fixed positioning + in-canvas HUD\n\nCanvas was position:fixed covering the topbar. Now fills GameShell\ncontent area. Removed in-canvas score HUD — score shows in topbar stats.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T21:24:48Z"
+>>>>>>> Stashed changes
           }
         }
       },
       {
+<<<<<<< Updated upstream
         "sha": "0559a54e55902609377d0d26eed57c21bd1ef44a",
         "html_url": "https://github.com/freegamestore-online/slither/commit/0559a54e55902609377d0d26eed57c21bd1ef44a",
         "commit": {
           "message": "chore: bump SDK to v0.9.0 (sound toggle, muted by default)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T20:26:18Z"
+=======
+        "sha": "fcece3517357efb4d53349dec060e6bd5f45501d",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/fcece3517357efb4d53349dec060e6bd5f45501d",
+        "commit": {
+          "message": "feat: SDK v0.10.0 — play/pause + restart icon buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T21:14:03Z"
+>>>>>>> Stashed changes
           }
         }
       }
