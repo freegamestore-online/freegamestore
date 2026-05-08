@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <!-- Mobile header (shown < 768px) -->
+  <header class="mobile-only-header">
     <div class="container">
       <a href="/" class="logo">Free <span>Games</span></a>
       <nav>
@@ -30,40 +31,115 @@
     </div>
   </header>
 
-  <main class="container">
-    <section class="apps-section" id="games" style="padding-top: 2rem;">
-      <div class="search-bar">
+  <div class="split-layout">
+    <!-- Left panel -->
+    <aside class="split-left" id="split-left">
+      <div class="split-left-header">
+        <a href="/" class="logo">Free <span>Games</span></a>
+        <nav class="split-nav">
+          <a href="/leaderboard.html">Leaderboard</a>
+          <a href="/contribute.html">Build</a>
+          <a href="/about.html">About</a>
+          <a href="https://progamestore.online" class="pro-link">Pro</a>
+        </nav>
+      </div>
+      <div class="split-left-search">
         <input
           type="search"
           id="storefront-search"
-          placeholder="Search games + apps…"
+          placeholder="Search games + apps..."
           autocomplete="off"
           aria-label="Search games and apps"
         />
       </div>
-      <div class="filter-bar">
+      <div class="split-left-filters">
         {{FILTER_BUTTONS}}
       </div>
-      <div class="apps-grid" id="apps-grid">
+      <div class="split-left-list" id="apps-grid">
         {{GAMES_GRID}}
       </div>
-      <p id="search-empty" hidden style="text-align: center; color: var(--muted); padding: 2rem 0;">No games match your search here.</p>
-
-      <section id="cross-store-results" hidden style="margin-top: 2.5rem;">
-        <h2 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--muted);">Also matching on FreeAppStore</h2>
+      <p id="search-empty" hidden style="text-align: center; color: var(--muted); padding: 2rem 0;">No games match your search.</p>
+      <section id="cross-store-results" hidden style="margin-top: 1.5rem; padding: 0 0.75rem;">
+        <h2 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--muted);">Also on FreeAppStore</h2>
         <div class="apps-grid" id="cross-store-grid"></div>
+      </section>
+      <aside class="split-left-appstore" style="text-align: center; padding: 1rem 0.75rem; font-size: 0.85rem; color: var(--muted);">
+        Looking for apps? <a href="https://freeappstore.online" style="color: var(--accent); font-weight: 600;">FreeAppStore</a>
+      </aside>
+    </aside>
+
+    <!-- Right panel (desktop only) -->
+    <section class="split-right" id="split-right">
+      <div class="split-right-empty" id="right-empty">
+        <div class="empty-icon">&#127918;</div>
+        <h2>Select a game to play</h2>
+        <p>Pick a game from the list to play or learn more.</p>
+      </div>
+      <div class="split-right-detail" id="right-detail" hidden>
+        <div class="detail-card">
+          <div class="detail-header">
+            <div class="detail-icon" id="detail-icon"></div>
+            <div>
+              <h2 id="detail-name"></h2>
+              <div class="tag" id="detail-category"></div>
+            </div>
+          </div>
+          <p class="detail-description" id="detail-description"></p>
+          <div class="detail-actions">
+            <button class="detail-play-btn" id="detail-play-btn">&#9654; Play</button>
+            <a class="detail-newtab-btn" id="detail-newtab" href="#" target="_blank" rel="noopener">&#8599; Open in new tab</a>
+            <a class="detail-about-btn" id="detail-about" href="#">About this game &#8594;</a>
+          </div>
+        </div>
+      </div>
+      <div class="split-right-play" id="right-play" hidden>
+        <div class="play-toolbar">
+          <button class="play-back-btn" id="play-back-btn">&#8592; Back</button>
+          <span class="play-title" id="play-title"></span>
+          <a class="play-newtab" id="play-newtab" href="#" target="_blank" rel="noopener">&#8599; New tab</a>
+          <button class="play-fullscreen-btn" id="play-fullscreen-btn">&#9974; Fullscreen</button>
+        </div>
+        <div class="play-iframe-wrap">
+          <iframe id="play-iframe" allow="fullscreen; autoplay" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Mobile-only: full main with original layout -->
+  <main class="container mobile-only-main">
+    <section class="apps-section" id="games" style="padding-top: 2rem;">
+      <div class="search-bar mobile-search-bar">
+        <input
+          type="search"
+          id="storefront-search-mobile"
+          placeholder="Search games + apps..."
+          autocomplete="off"
+          aria-label="Search games and apps"
+        />
+      </div>
+      <div class="filter-bar" id="mobile-filter-bar">
+        {{FILTER_BUTTONS}}
+      </div>
+      <div class="apps-grid" id="mobile-apps-grid">
+        {{GAMES_GRID}}
+      </div>
+      <p id="mobile-search-empty" hidden style="text-align: center; color: var(--muted); padding: 2rem 0;">No games match your search here.</p>
+
+      <section id="mobile-cross-store-results" hidden style="margin-top: 2.5rem;">
+        <h2 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--muted);">Also matching on FreeAppStore</h2>
+        <div class="apps-grid" id="mobile-cross-store-grid"></div>
       </section>
     </section>
 
     <script type="application/json" id="cross-store-registry">{{CROSS_STORE_REGISTRY}}</script>
-    <script src="/search.js" defer></script>
 
     <aside style="text-align: center; padding: 1.5rem 0 0.5rem; font-size: 0.9rem; color: var(--muted);">
       Looking for apps? Visit <a href="https://freeappstore.online" style="color: var(--accent); font-weight: 600;">FreeAppStore</a> — free-forever web apps.
     </aside>
   </main>
 
-  <footer>
+  <footer class="mobile-only-footer">
     <div class="container">
       <div class="footer-left">
         <a href="/" class="logo">Free <span>Games</span></a>
@@ -82,23 +158,103 @@
     </div>
   </footer>
 
+  <script src="/search.js" defer></script>
+
   <script>
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        document.querySelectorAll('.app-card').forEach(card => {
-          if (filter === 'all' || card.dataset.category === filter) {
-            card.removeAttribute('hidden');
-          } else {
-            card.setAttribute('hidden', '');
-          }
-        });
+  (() => {
+    /* ── Detect desktop vs mobile ── */
+    const mql = window.matchMedia('(min-width: 768px)');
+
+    /* ── Desktop split-view logic ── */
+    const splitLeft = document.getElementById('split-left');
+    const splitRight = document.getElementById('split-right');
+    const rightEmpty = document.getElementById('right-empty');
+    const rightDetail = document.getElementById('right-detail');
+    const rightPlay = document.getElementById('right-play');
+    const detailIcon = document.getElementById('detail-icon');
+    const detailName = document.getElementById('detail-name');
+    const detailCategory = document.getElementById('detail-category');
+    const detailDescription = document.getElementById('detail-description');
+    const detailPlayBtn = document.getElementById('detail-play-btn');
+    const detailNewtab = document.getElementById('detail-newtab');
+    const detailAbout = document.getElementById('detail-about');
+    const playBackBtn = document.getElementById('play-back-btn');
+    const playTitle = document.getElementById('play-title');
+    const playNewtab = document.getElementById('play-newtab');
+    const playFullscreenBtn = document.getElementById('play-fullscreen-btn');
+    const playIframe = document.getElementById('play-iframe');
+
+    let currentGame = null; // { url, name, category, description, icon, iconBg, aboutUrl }
+
+    function showPanel(which) {
+      rightEmpty.hidden = which !== 'empty';
+      rightDetail.hidden = which !== 'detail';
+      rightPlay.hidden = which !== 'play';
+      if (which === 'play') {
+        playIframe.src = currentGame.url;
+      } else {
+        playIframe.src = 'about:blank';
+      }
+    }
+
+    function selectGame(card) {
+      // Deselect previous
+      const prev = splitLeft.querySelector('.app-card.selected');
+      if (prev) prev.classList.remove('selected');
+      card.classList.add('selected');
+
+      currentGame = {
+        url: card.dataset.appUrl,
+        name: card.dataset.name,
+        category: card.dataset.category,
+        description: card.dataset.description,
+        icon: card.dataset.icon,
+        iconBg: card.dataset.iconBg,
+        aboutUrl: card.dataset.about,
+      };
+
+      // Fill detail panel
+      detailIcon.innerHTML = currentGame.icon;
+      detailIcon.style.background = currentGame.iconBg;
+      detailName.textContent = currentGame.name;
+      detailCategory.textContent = currentGame.category.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
+      detailDescription.textContent = currentGame.description;
+      detailNewtab.href = currentGame.url;
+      detailAbout.href = currentGame.aboutUrl;
+
+      showPanel('detail');
+    }
+
+    /* Clicking Play in detail view */
+    detailPlayBtn.addEventListener('click', () => {
+      if (!currentGame) return;
+      playTitle.textContent = currentGame.name;
+      playNewtab.href = currentGame.url;
+      showPanel('play');
+    });
+
+    /* Back from play */
+    playBackBtn.addEventListener('click', () => {
+      showPanel('detail');
+    });
+
+    /* Fullscreen */
+    playFullscreenBtn.addEventListener('click', () => {
+      if (playIframe.requestFullscreen) playIframe.requestFullscreen();
+      else if (playIframe.webkitRequestFullscreen) playIframe.webkitRequestFullscreen();
+    });
+
+    /* ── Wire up cards in left panel (desktop) ── */
+    splitLeft.querySelectorAll('.app-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (!mql.matches) return; // mobile: let default behavior work
+        e.preventDefault();
+        selectGame(card);
       });
     });
 
-    document.querySelectorAll('.app-card').forEach(card => {
+    /* ── Wire up cards in mobile grid ── */
+    document.querySelectorAll('#mobile-apps-grid .app-card').forEach(card => {
       const aboutUrl = card.dataset.about;
       if (aboutUrl) {
         card.querySelector('.app-about').href = aboutUrl;
@@ -110,6 +266,50 @@
         });
       }
     });
+
+    /* ── Category filter (both panels) ── */
+    function setupFilters(container, gridId) {
+      container.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          container.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+          const grid = document.getElementById(gridId);
+          grid.querySelectorAll('.app-card').forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+              card.removeAttribute('hidden');
+            } else {
+              card.setAttribute('hidden', '');
+            }
+          });
+        });
+      });
+    }
+
+    setupFilters(document.querySelector('.split-left-filters'), 'apps-grid');
+    setupFilters(document.getElementById('mobile-filter-bar'), 'mobile-apps-grid');
+
+    /* ── Sync desktop search → left panel cards ── */
+    // search.js handles #storefront-search + #apps-grid for desktop.
+    // For mobile, we wire the mobile search input separately.
+    const mobileSearch = document.getElementById('storefront-search-mobile');
+    if (mobileSearch) {
+      mobileSearch.addEventListener('input', () => {
+        const q = mobileSearch.value.trim().toLowerCase();
+        const grid = document.getElementById('mobile-apps-grid');
+        const empty = document.getElementById('mobile-search-empty');
+        const cards = grid.querySelectorAll('.app-card');
+        let shown = 0;
+        cards.forEach(card => {
+          const hay = (card.textContent || '').toLowerCase() + ' ' + (card.dataset.category || '').toLowerCase();
+          const match = q === '' || hay.includes(q);
+          card.hidden = !match;
+          if (match) shown++;
+        });
+        empty.hidden = shown > 0 || q === '';
+      });
+    }
+  })();
   </script>
 </body>
 </html>

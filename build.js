@@ -209,7 +209,7 @@ const filterButtons = [
 ].join('\n        ');
 
 const gameCards = games.map(game => {
-  return `        <div class="app-card" data-category="${game.category}" data-about="/games/${game.id}.html">
+  return `        <div class="app-card" data-category="${game.category}" data-about="/games/${game.id}.html" data-app-url="${game.appUrl}" data-name="${escapeHtml(game.name)}" data-description="${escapeHtml(game.description)}" data-icon="${game.icon}" data-icon-bg="${game.iconBg}">
           <div class="app-card-header">
             <div class="app-icon" style="background: ${game.iconBg};">${game.icon}</div>
             <div>
@@ -225,8 +225,8 @@ const gameCards = games.map(game => {
 // indexHtml is finalized inside the async IIFE below — cross-store
 // registry fetch is async, and we want to embed it into the page.
 let indexHtml = indexTemplate
-  .replace('{{FILTER_BUTTONS}}', filterButtons)
-  .replace('{{GAMES_GRID}}', gameCards);
+  .replaceAll('{{FILTER_BUTTONS}}', filterButtons)
+  .replaceAll('{{GAMES_GRID}}', gameCards);
 
 // --- Generate game detail pages ---
 // Wrapped in async IIFE because this file is CJS (no top-level await).
