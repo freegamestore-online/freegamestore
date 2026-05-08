@@ -54,6 +54,19 @@
       ]
     },
     {
+      "id": "billiards",
+      "name": "Billiards",
+      "category": "strategy",
+      "icon": "&#127921;",
+      "iconBg": "#065f46",
+      "description": "8-ball pool with touch aiming and ball physics.",
+      "appUrl": "https://billiards.freegamestore.online",
+      "repo": "freegamestore-online/billiards",
+      "cfProject": "freebilliardsapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
+    },
+    {
       "id": "bowling",
       "name": "Bowling",
       "category": "sports",
