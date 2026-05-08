@@ -78,9 +78,19 @@
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-08T09:34:15Z"
+      "pushed_at": "2026-05-08T19:41:41Z"
     },
     "commits": [
+      {
+        "sha": "c89e847fd651d2ce0600d4f9de0f8dedf1c84a3c",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/c89e847fd651d2ce0600d4f9de0f8dedf1c84a3c",
+        "commit": {
+          "message": "fix: show touch d-pad on all screen sizes (iPad)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T19:41:38Z"
+          }
+        }
+      },
       {
         "sha": "d3eb5aa1c17d1dd7aeb518833b4d2b5faece4748",
         "html_url": "https://github.com/freegamestore-online/snake/commit/d3eb5aa1c17d1dd7aeb518833b4d2b5faece4748",
@@ -98,16 +108,6 @@
           "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T07:28:43Z"
-          }
-        }
-      },
-      {
-        "sha": "cc566f754985f67bba95c4b6871f9b38aae4696b",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/cc566f754985f67bba95c4b6871f9b38aae4696b",
-        "commit": {
-          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:56:36Z"
           }
         }
       }
@@ -990,9 +990,19 @@
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-08T09:34:23Z"
+      "pushed_at": "2026-05-08T19:38:01Z"
     },
     "commits": [
+      {
+        "sha": "2b2a835ae97de15dc0d3c1c84b649a20cad0b642",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/2b2a835ae97de15dc0d3c1c84b649a20cad0b642",
+        "commit": {
+          "message": "fix: show touch controls on all screen sizes (iPad fix)\n\nMerged desktop/mobile into one layout. Touch buttons always visible —\nkeyboard users ignore them, touch users need them on iPad and tablets.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-08T19:37:59Z"
+          }
+        }
+      },
       {
         "sha": "b80ec11e4baf5b474c6e1894b24eea1de5653fcc",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/b80ec11e4baf5b474c6e1894b24eea1de5653fcc",
@@ -1010,16 +1020,6 @@
           "message": "fix: enforce 44px min touch targets on all buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-08T07:28:45Z"
-          }
-        }
-      },
-      {
-        "sha": "b8d5955b01b402bef2a96aaec64a512cc3676fe3",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/b8d5955b01b402bef2a96aaec64a512cc3676fe3",
-        "commit": {
-          "message": "feat: add game rules to topbar info button\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T06:56:37Z"
           }
         }
       }
