@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-08T01:11:38.558Z",
+  "timestamp": "2026-05-08T01:21:43.013Z",
   "games": [
     {
       "id": "chess",
       "name": "Chess",
       "url": "https://chess.freegamestore.online",
       "score": 35,
-      "loadTimeMs": 1510,
+      "loadTimeMs": 1617,
       "consoleErrors": [],
       "viewports": [
         {
@@ -172,7 +172,7 @@
       "name": "Puzzle",
       "url": "https://puzzle.freegamestore.online",
       "score": 20,
-      "loadTimeMs": 1601,
+      "loadTimeMs": 1273,
       "consoleErrors": [],
       "viewports": [
         {
@@ -338,7 +338,7 @@
       "name": "Tetris",
       "url": "https://tetris.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1995,
+      "loadTimeMs": 1449,
       "consoleErrors": [],
       "viewports": [
         {
@@ -504,7 +504,7 @@
       "name": "Snake",
       "url": "https://snake.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1811,
+      "loadTimeMs": 1495,
       "consoleErrors": [],
       "viewports": [
         {
@@ -670,7 +670,7 @@
       "name": "Minesweeper",
       "url": "https://minesweeper.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1497,
+      "loadTimeMs": 1530,
       "consoleErrors": [],
       "viewports": [
         {
@@ -836,7 +836,7 @@
       "name": "2048",
       "url": "https://2048.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1467,
+      "loadTimeMs": 1500,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1002,7 +1002,7 @@
       "name": "Slither",
       "url": "https://slither.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1608,
+      "loadTimeMs": 1174,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1168,7 +1168,7 @@
       "name": "Racing",
       "url": "https://racing.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1846,
+      "loadTimeMs": 1724,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1334,7 +1334,7 @@
       "name": "Bowling",
       "url": "https://bowling.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1939,
+      "loadTimeMs": 1841,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1500,7 +1500,7 @@
       "name": "Space Shooter",
       "url": "https://spaceshooter.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1793,
+      "loadTimeMs": 1776,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1666,7 +1666,7 @@
       "name": "Breakout",
       "url": "https://breakout.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1585,
+      "loadTimeMs": 1562,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1832,7 +1832,7 @@
       "name": "Platformer",
       "url": "https://platformer.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1563,
+      "loadTimeMs": 1540,
       "consoleErrors": [],
       "viewports": [
         {
@@ -1998,7 +1998,7 @@
       "name": "Sudoku",
       "url": "https://sudoku.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1826,
+      "loadTimeMs": 1482,
       "consoleErrors": [],
       "viewports": [
         {
@@ -2164,7 +2164,7 @@
       "name": "Pac-Man",
       "url": "https://pacman.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1375,
+      "loadTimeMs": 1200,
       "consoleErrors": [],
       "viewports": [
         {
@@ -2330,7 +2330,7 @@
       "name": "Pong",
       "url": "https://pong.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1458,
+      "loadTimeMs": 1491,
       "consoleErrors": [],
       "viewports": [
         {
@@ -2496,7 +2496,7 @@
       "name": "Flappy Bird",
       "url": "https://flappy.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1850,
+      "loadTimeMs": 1459,
       "consoleErrors": [],
       "viewports": [
         {
@@ -2662,7 +2662,7 @@
       "name": "Solitaire",
       "url": "https://solitaire.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1933,
+      "loadTimeMs": 1475,
       "consoleErrors": [],
       "viewports": [
         {
@@ -2828,7 +2828,7 @@
       "name": "Connect 4",
       "url": "https://connect4.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1864,
+      "loadTimeMs": 1450,
       "consoleErrors": [],
       "viewports": [
         {
@@ -2994,7 +2994,7 @@
       "name": "Wordle",
       "url": "https://wordle.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1460,
+      "loadTimeMs": 1470,
       "consoleErrors": [],
       "viewports": [
         {
@@ -3160,7 +3160,7 @@
       "name": "Simon",
       "url": "https://simon.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1175,
+      "loadTimeMs": 1183,
       "consoleErrors": [],
       "viewports": [
         {
@@ -3326,7 +3326,7 @@
       "name": "Mahjong",
       "url": "https://mahjong.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1811,
+      "loadTimeMs": 1450,
       "consoleErrors": [],
       "viewports": [
         {
@@ -3492,7 +3492,7 @@
       "name": "Checkers",
       "url": "https://checkers.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1815,
+      "loadTimeMs": 1490,
       "consoleErrors": [],
       "viewports": [
         {
@@ -3658,7 +3658,7 @@
       "name": "Hangman",
       "url": "https://hangman.freegamestore.online",
       "score": 35,
-      "loadTimeMs": 1197,
+      "loadTimeMs": 1260,
       "consoleErrors": [],
       "viewports": [
         {
@@ -3824,7 +3824,7 @@
       "name": "Memory",
       "url": "https://memory.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1542,
+      "loadTimeMs": 1176,
       "consoleErrors": [],
       "viewports": [
         {
@@ -3990,7 +3990,7 @@
       "name": "Frogger",
       "url": "https://frogger.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1601,
+      "loadTimeMs": 1208,
       "consoleErrors": [],
       "viewports": [
         {
@@ -4156,7 +4156,7 @@
       "name": "Match 3",
       "url": "https://match3.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1523,
+      "loadTimeMs": 1184,
       "consoleErrors": [],
       "viewports": [
         {
@@ -4322,7 +4322,7 @@
       "name": "Whack-a-Mole",
       "url": "https://whackamole.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1575,
+      "loadTimeMs": 1219,
       "consoleErrors": [],
       "viewports": [
         {
@@ -4488,7 +4488,7 @@
       "name": "Word Search",
       "url": "https://wordsearch.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1566,
+      "loadTimeMs": 1203,
       "consoleErrors": [],
       "viewports": [
         {
@@ -4654,7 +4654,7 @@
       "name": "Asteroids",
       "url": "https://asteroids.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1563,
+      "loadTimeMs": 1177,
       "consoleErrors": [],
       "viewports": [
         {
@@ -4820,7 +4820,7 @@
       "name": "coinflip",
       "url": "https://coinflip.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 1526,
+      "loadTimeMs": 1163,
       "consoleErrors": [],
       "viewports": [
         {
@@ -4986,7 +4986,7 @@
       "name": "dice",
       "url": "https://dice.freegamestore.online",
       "score": 99,
-      "loadTimeMs": 2266,
+      "loadTimeMs": 1257,
       "consoleErrors": [],
       "viewports": [
         {
@@ -5152,7 +5152,7 @@
       "name": "highlow",
       "url": "https://highlow.freegamestore.online",
       "score": 96,
-      "loadTimeMs": 1577,
+      "loadTimeMs": 1239,
       "consoleErrors": [],
       "viewports": [
         {
@@ -5318,7 +5318,7 @@
       "name": "memorymatch",
       "url": "https://memorymatch.freegamestore.online",
       "score": 35,
-      "loadTimeMs": 1577,
+      "loadTimeMs": 1173,
       "consoleErrors": [],
       "viewports": [
         {
