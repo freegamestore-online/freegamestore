@@ -93,6 +93,48 @@ nav a.active { color: var(--ink); }
 nav a.pro-link { color: var(--pro); }
 nav a.pro-link:hover { color: var(--pro); opacity: 0.8; }
 
+/* Hamburger menu toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--ink);
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem 0 0.25rem;
+    border-top: 1px solid var(--border);
+    margin-top: 0.5rem;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav .nav-more {
+    display: flex;
+  }
+
+  header .container {
+    flex-wrap: wrap;
+  }
+}
+
 /* Footer */
 footer {
   padding: 3rem 0;
