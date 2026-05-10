@@ -90,8 +90,6 @@ nav a {
 
 nav a:hover { color: var(--ink); text-decoration: none; }
 nav a.active { color: var(--ink); }
-nav a.pro-link { color: var(--pro); }
-nav a.pro-link:hover { color: var(--pro); opacity: 0.8; }
 
 /* Hamburger menu toggle */
 .nav-toggle {
@@ -930,8 +928,6 @@ footer .container {
   }
 
   .split-nav a:hover { color: var(--ink); text-decoration: none; }
-  .split-nav a.pro-link { color: var(--pro); }
-  .split-nav a.pro-link:hover { opacity: 0.8; }
 
   .split-left-search {
     padding: 0.75rem;

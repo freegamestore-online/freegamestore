@@ -1218,9 +1218,19 @@
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-09T22:28:21Z"
+      "pushed_at": "2026-05-10T05:21:10Z"
     },
     "commits": [
+      {
+        "sha": "b572dbb5b7cafac7c333f996c230b6e502ab36ec",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/b572dbb5b7cafac7c333f996c230b6e502ab36ec",
+        "commit": {
+          "message": "fix: single GameShell with game-over overlay, fix test errors\n\nGame over now renders as overlay on canvas instead of replacing it.\nAdded GameAuth to topbar. Fixed compliance test css var + vitest ref.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-10T05:21:08Z"
+          }
+        }
+      },
       {
         "sha": "1eaaf105ee39c76f5a07ea3239d6c89131ba08ad",
         "html_url": "https://github.com/freegamestore-online/slither/commit/1eaaf105ee39c76f5a07ea3239d6c89131ba08ad",
@@ -1238,16 +1248,6 @@
           "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-09T22:24:46Z"
-          }
-        }
-      },
-      {
-        "sha": "b14d1ca251e1c923399e09f275423267779facee",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/b14d1ca251e1c923399e09f275423267779facee",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
           }
         }
       }
