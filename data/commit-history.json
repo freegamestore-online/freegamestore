@@ -2,9 +2,19 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-09T10:35:52Z"
+      "pushed_at": "2026-05-09T22:24:13Z"
     },
     "commits": [
+      {
+        "sha": "71609dbed4fd95d0a20b2265b22ff1af09e90dd8",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/71609dbed4fd95d0a20b2265b22ff1af09e90dd8",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:12Z"
+          }
+        }
+      },
       {
         "sha": "ea02c6a9d0491645812a1cb4ae7e17bed0811006",
         "html_url": "https://github.com/freegamestore-online/dice/commit/ea02c6a9d0491645812a1cb4ae7e17bed0811006",
@@ -24,25 +34,35 @@
             "date": "2026-05-09T04:48:48Z"
           }
         }
-      },
-      {
-        "sha": "3419d299962791b0304233922a3c837184b71e57",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/3419d299962791b0304233922a3c837184b71e57",
-        "commit": {
-          "message": "feat: SDK v0.10.0 — play/pause + restart icon buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T21:14:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-09T10:35:51Z"
+      "pushed_at": "2026-05-09T22:26:57Z"
     },
     "commits": [
+      {
+        "sha": "48acb769ca95de6dbc2007722b6826addbf0926c",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/48acb769ca95de6dbc2007722b6826addbf0926c",
+        "commit": {
+          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:26:55Z"
+          }
+        }
+      },
+      {
+        "sha": "10e0dc126af837b55045bb66d0eebdc4e69618de",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/10e0dc126af837b55045bb66d0eebdc4e69618de",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:06Z"
+          }
+        }
+      },
       {
         "sha": "fc035f15be5c82a125f697b165db9dfed1e98a92",
         "html_url": "https://github.com/freegamestore-online/chess/commit/fc035f15be5c82a125f697b165db9dfed1e98a92",
@@ -52,35 +72,35 @@
             "date": "2026-05-09T10:35:42Z"
           }
         }
-      },
-      {
-        "sha": "72a73b4393ba55fae841fec35b95199089071fc0",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/72a73b4393ba55fae841fec35b95199089071fc0",
-        "commit": {
-          "message": "fix: prevent control clipping in phone landscape\n\nMake controls horizontally scrollable and merge difficulty/color pickers\ninto a compact wrapping row for landscape viewports.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:34:27Z"
-          }
-        }
-      },
-      {
-        "sha": "bd7cff62b271008fb4d1eb02b5711d99395b464a",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/bd7cff62b271008fb4d1eb02b5711d99395b464a",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:48:08Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-09T10:35:51Z"
+      "pushed_at": "2026-05-09T22:26:48Z"
     },
     "commits": [
+      {
+        "sha": "fe40f3787b4e45ad5bfbfb6bb411d78f3a0dc3bb",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/fe40f3787b4e45ad5bfbfb6bb411d78f3a0dc3bb",
+        "commit": {
+          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:26:45Z"
+          }
+        }
+      },
+      {
+        "sha": "f80e3bbe460176a3594984cfc778b28fe1df6431",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/f80e3bbe460176a3594984cfc778b28fe1df6431",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:23:57Z"
+          }
+        }
+      },
       {
         "sha": "d38affb66c2fda7d40e77e14bcdde0fdde7ce46e",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/d38affb66c2fda7d40e77e14bcdde0fdde7ce46e",
@@ -90,35 +110,35 @@
             "date": "2026-05-09T10:35:42Z"
           }
         }
-      },
-      {
-        "sha": "f92640c34d2e06755645f59c1aae1fcbc7649ce0",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/f92640c34d2e06755645f59c1aae1fcbc7649ce0",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:46:54Z"
-          }
-        }
-      },
-      {
-        "sha": "6a693a187071e9778e8de284c71e8408e23fed34",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/6a693a187071e9778e8de284c71e8408e23fed34",
-        "commit": {
-          "message": "chore: add PWA support, remove unused Shell.tsx\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:39:56Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-09T10:35:51Z"
+      "pushed_at": "2026-05-09T22:26:59Z"
     },
     "commits": [
+      {
+        "sha": "c4c4ffffc14e5d8fd609d58879aa56b950d5c97d",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/c4c4ffffc14e5d8fd609d58879aa56b950d5c97d",
+        "commit": {
+          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:26:57Z"
+          }
+        }
+      },
+      {
+        "sha": "451c6c64b2661c73004537d1620fd29831387234",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/451c6c64b2661c73004537d1620fd29831387234",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:08Z"
+          }
+        }
+      },
       {
         "sha": "a94d957faf46de2d10ee81c4db9f018dbb92e59c",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/a94d957faf46de2d10ee81c4db9f018dbb92e59c",
@@ -128,35 +148,35 @@
             "date": "2026-05-09T10:35:42Z"
           }
         }
-      },
-      {
-        "sha": "5aea5f6b332174f8b9d750556bd7ded12d17456b",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/5aea5f6b332174f8b9d750556bd7ded12d17456b",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:48:22Z"
-          }
-        }
-      },
-      {
-        "sha": "273f9507fba68757ea2492e7723693664a3ab25d",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/273f9507fba68757ea2492e7723693664a3ab25d",
-        "commit": {
-          "message": "feat: SDK v0.10.0 — play/pause + restart icon buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T21:14:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-09T10:35:51Z"
+      "pushed_at": "2026-05-09T22:26:52Z"
     },
     "commits": [
+      {
+        "sha": "58eff00e43b2ae4f28b35f74a2943faf9bdd1a2e",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/58eff00e43b2ae4f28b35f74a2943faf9bdd1a2e",
+        "commit": {
+          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:26:50Z"
+          }
+        }
+      },
+      {
+        "sha": "e2b4b486e558afa35a1a5188c99f0a5d114aeddb",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/e2b4b486e558afa35a1a5188c99f0a5d114aeddb",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:01Z"
+          }
+        }
+      },
       {
         "sha": "094a90fa6ac7b8ac49eabf7e3e74460ac0783c8b",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/094a90fa6ac7b8ac49eabf7e3e74460ac0783c8b",
@@ -166,35 +186,25 @@
             "date": "2026-05-09T10:35:42Z"
           }
         }
-      },
-      {
-        "sha": "0258f02065cb9f2b15fb51843b52565d1ed8a454",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/0258f02065cb9f2b15fb51843b52565d1ed8a454",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:47:42Z"
-          }
-        }
-      },
-      {
-        "sha": "5a667741037f67f80b23095e68a4f5fc9081b878",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/5a667741037f67f80b23095e68a4f5fc9081b878",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:48:01Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-09T10:35:52Z"
+      "pushed_at": "2026-05-09T22:24:26Z"
     },
     "commits": [
+      {
+        "sha": "9a1b19217df587445531376b97e1ffcf187f8786",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/9a1b19217df587445531376b97e1ffcf187f8786",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:24Z"
+          }
+        }
+      },
       {
         "sha": "c09d243cd9aec852e6a150051c361f82ce18f219",
         "html_url": "https://github.com/freegamestore-online/match3/commit/c09d243cd9aec852e6a150051c361f82ce18f219",
@@ -214,25 +224,25 @@
             "date": "2026-05-09T04:50:08Z"
           }
         }
-      },
-      {
-        "sha": "e178960395e8a1b717ca2fcbc977daadfbc1b1ea",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/e178960395e8a1b717ca2fcbc977daadfbc1b1ea",
-        "commit": {
-          "message": "chore: remove unused Shell.tsx + Leaderboard.tsx\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:38:49Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:24:37Z"
     },
     "commits": [
+      {
+        "sha": "06eee2ec51c670c76a495a87fe55cb257d680a4a",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/06eee2ec51c670c76a495a87fe55cb257d680a4a",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:35Z"
+          }
+        }
+      },
       {
         "sha": "117210636d976c40c722d6a2084879e0d6da95be",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/117210636d976c40c722d6a2084879e0d6da95be",
@@ -252,25 +262,25 @@
             "date": "2026-05-09T04:51:10Z"
           }
         }
-      },
-      {
-        "sha": "c8050e5f797de4bb6b018fd24a56c927752fdd20",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/c8050e5f797de4bb6b018fd24a56c927752fdd20",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:50:13Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-09T10:35:52Z"
+      "pushed_at": "2026-05-09T22:24:22Z"
     },
     "commits": [
+      {
+        "sha": "807e930d99b023c0a685637c2ec087f03f806fe7",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/807e930d99b023c0a685637c2ec087f03f806fe7",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:20Z"
+          }
+        }
+      },
       {
         "sha": "52d03a40642ca6b7cb29542c924b6eb2acd42647",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/52d03a40642ca6b7cb29542c924b6eb2acd42647",
@@ -290,25 +300,35 @@
             "date": "2026-05-09T10:34:33Z"
           }
         }
-      },
-      {
-        "sha": "479af4faef24116351e91c11f0478c2a3008ecc8",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/479af4faef24116351e91c11f0478c2a3008ecc8",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:49:40Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-09T10:35:51Z"
+      "pushed_at": "2026-05-09T22:26:45Z"
     },
     "commits": [
+      {
+        "sha": "53f38e2fcc3b4d1733deebdb08de21979162afa8",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/53f38e2fcc3b4d1733deebdb08de21979162afa8",
+        "commit": {
+          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:26:43Z"
+          }
+        }
+      },
+      {
+        "sha": "19f84508ed7c207243576e0918f0daec95deb17f",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/19f84508ed7c207243576e0918f0daec95deb17f",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:23:55Z"
+          }
+        }
+      },
       {
         "sha": "34620a8a127cdf1703e28fd570a0b8b00375ca99",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/34620a8a127cdf1703e28fd570a0b8b00375ca99",
@@ -318,35 +338,25 @@
             "date": "2026-05-09T10:35:42Z"
           }
         }
-      },
-      {
-        "sha": "0c62b685a93f143e9379a5c95baa3e44e6c0e93f",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/0c62b685a93f143e9379a5c95baa3e44e6c0e93f",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:46:40Z"
-          }
-        }
-      },
-      {
-        "sha": "4a4d80c22b224d9b4e5e17f2940d50eda2c067ba",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/4a4d80c22b224d9b4e5e17f2940d50eda2c067ba",
-        "commit": {
-          "message": "chore: remove unused Shell.tsx + Leaderboard.tsx\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:38:38Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-09T10:35:52Z"
+      "pushed_at": "2026-05-09T22:24:28Z"
     },
     "commits": [
+      {
+        "sha": "c9023459a75121c978a4bc0a0d57fc67ccc44314",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/c9023459a75121c978a4bc0a0d57fc67ccc44314",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:26Z"
+          }
+        }
+      },
       {
         "sha": "73390a7e1f5f3ab0542a4217635ea6c521c44613",
         "html_url": "https://github.com/freegamestore-online/memory/commit/73390a7e1f5f3ab0542a4217635ea6c521c44613",
@@ -366,25 +376,25 @@
             "date": "2026-05-09T04:50:20Z"
           }
         }
-      },
-      {
-        "sha": "2b3180d1c2cd0e184bf48a452aa96ef751fa3cf4",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/2b3180d1c2cd0e184bf48a452aa96ef751fa3cf4",
-        "commit": {
-          "message": "chore: remove unused Shell.tsx + Leaderboard.tsx\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:38:51Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-09T10:35:52Z"
+      "pushed_at": "2026-05-09T22:24:18Z"
     },
     "commits": [
+      {
+        "sha": "58cc845ca731d2ea64be6a723311d09f6d22bc61",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/58cc845ca731d2ea64be6a723311d09f6d22bc61",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:16Z"
+          }
+        }
+      },
       {
         "sha": "c5b4905d3182e3876b2014976d2f8c98c4306fbf",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/c5b4905d3182e3876b2014976d2f8c98c4306fbf",
@@ -404,25 +414,35 @@
             "date": "2026-05-09T04:49:13Z"
           }
         }
-      },
-      {
-        "sha": "b4fcb6efb08e469a7b8ad6b64269c57586a60c80",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/b4fcb6efb08e469a7b8ad6b64269c57586a60c80",
-        "commit": {
-          "message": "chore: remove unused Shell.tsx + Leaderboard.tsx\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:38:45Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-09T10:35:51Z"
+      "pushed_at": "2026-05-09T22:26:50Z"
     },
     "commits": [
+      {
+        "sha": "242d46d65aa6ad5938f219f9ab71dbac6bd1a135",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/242d46d65aa6ad5938f219f9ab71dbac6bd1a135",
+        "commit": {
+          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:26:48Z"
+          }
+        }
+      },
+      {
+        "sha": "a4cc2e65c2d5735cac5a9106898ceac5cdae9cde",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/a4cc2e65c2d5735cac5a9106898ceac5cdae9cde",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:23:59Z"
+          }
+        }
+      },
       {
         "sha": "2eef51d0741cafa4cf40382f17c55a3c57e41aa0",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/2eef51d0741cafa4cf40382f17c55a3c57e41aa0",
@@ -432,35 +452,25 @@
             "date": "2026-05-09T10:35:42Z"
           }
         }
-      },
-      {
-        "sha": "dcbd22489f1f99c0b949d0689dc1b1d244aafc76",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/dcbd22489f1f99c0b949d0689dc1b1d244aafc76",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:47:22Z"
-          }
-        }
-      },
-      {
-        "sha": "8328dcd1d04d2c9b76e6a6bf55179dc45f87c758",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/8328dcd1d04d2c9b76e6a6bf55179dc45f87c758",
-        "commit": {
-          "message": "chore: remove unused Shell.tsx + Leaderboard.tsx\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:38:40Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-09T10:35:52Z"
+      "pushed_at": "2026-05-09T22:24:15Z"
     },
     "commits": [
+      {
+        "sha": "e16e5af349b08f7f80fccb9b477bb2f11af09ab4",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/e16e5af349b08f7f80fccb9b477bb2f11af09ab4",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:14Z"
+          }
+        }
+      },
       {
         "sha": "cbfdc87b5972d64b725d0f8c1be6a6a97df5d64e",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/cbfdc87b5972d64b725d0f8c1be6a6a97df5d64e",
@@ -480,25 +490,25 @@
             "date": "2026-05-09T04:49:01Z"
           }
         }
-      },
-      {
-        "sha": "714052a703734c4e25a89ff1e5e0927b660eb836",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/714052a703734c4e25a89ff1e5e0927b660eb836",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:48:44Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-09T10:35:52Z"
+      "pushed_at": "2026-05-09T22:24:24Z"
     },
     "commits": [
+      {
+        "sha": "82bd31f460a4bf07f88192ff259112cf5eb6e31f",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/82bd31f460a4bf07f88192ff259112cf5eb6e31f",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:22Z"
+          }
+        }
+      },
       {
         "sha": "dc6a90c2996c13e0d7f158cc9b98d586eb54540d",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/dc6a90c2996c13e0d7f158cc9b98d586eb54540d",
@@ -518,25 +528,25 @@
             "date": "2026-05-09T04:49:54Z"
           }
         }
-      },
-      {
-        "sha": "71437d7fa39431fb71778b77e13eb7b36ec5e5b0",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/71437d7fa39431fb71778b77e13eb7b36ec5e5b0",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:49:16Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-09T10:35:51Z"
+      "pushed_at": "2026-05-09T22:24:20Z"
     },
     "commits": [
+      {
+        "sha": "562115545bb62fe3234fd8f9f6fb7f45667f7767",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/562115545bb62fe3234fd8f9f6fb7f45667f7767",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:18Z"
+          }
+        }
+      },
       {
         "sha": "430f3cc39a2d5db6575e1876b0111368a2459ec2",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/430f3cc39a2d5db6575e1876b0111368a2459ec2",
@@ -556,25 +566,25 @@
             "date": "2026-05-09T10:34:29Z"
           }
         }
-      },
-      {
-        "sha": "5478c4635495a4160047add70882bf52194f8ab4",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/5478c4635495a4160047add70882bf52194f8ab4",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:49:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:24:33Z"
     },
     "commits": [
+      {
+        "sha": "8a0424e39ac641834d57c4b9e48be227198c4e9a",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/8a0424e39ac641834d57c4b9e48be227198c4e9a",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:31Z"
+          }
+        }
+      },
       {
         "sha": "fc19b68f67f07b8556d9b935d3edc635d962e6c2",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/fc19b68f67f07b8556d9b935d3edc635d962e6c2",
@@ -594,25 +604,25 @@
             "date": "2026-05-09T04:50:46Z"
           }
         }
-      },
-      {
-        "sha": "44a26498f4609e08887b1834b5d834e7ef118275",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/44a26498f4609e08887b1834b5d834e7ef118275",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:49:53Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:24:43Z"
     },
     "commits": [
+      {
+        "sha": "69e54cec25ef75936f1a7f0b07a7d6df1b48c0ed",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/69e54cec25ef75936f1a7f0b07a7d6df1b48c0ed",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:41Z"
+          }
+        }
+      },
       {
         "sha": "3a65643d4a90e32e8eb3e63d4e89c27810cdaf60",
         "html_url": "https://github.com/freegamestore-online/racing/commit/3a65643d4a90e32e8eb3e63d4e89c27810cdaf60",
@@ -632,25 +642,25 @@
             "date": "2026-05-09T04:51:55Z"
           }
         }
-      },
-      {
-        "sha": "f9f9cf09e7648c42845c3911523b6e0638954efc",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/f9f9cf09e7648c42845c3911523b6e0638954efc",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:50:37Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:24:41Z"
     },
     "commits": [
+      {
+        "sha": "5cc3a02b17da472db670d3d329b146764e343678",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/5cc3a02b17da472db670d3d329b146764e343678",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:39Z"
+          }
+        }
+      },
       {
         "sha": "58969d372c1d1ed8767a1baf12f1873db15101b2",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/58969d372c1d1ed8767a1baf12f1873db15101b2",
@@ -670,25 +680,25 @@
             "date": "2026-05-09T10:34:25Z"
           }
         }
-      },
-      {
-        "sha": "9b3ad24be02238f32fcf0ea917108d7030c409bc",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/9b3ad24be02238f32fcf0ea917108d7030c409bc",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:51:37Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-09T10:35:52Z"
+      "pushed_at": "2026-05-09T22:24:30Z"
     },
     "commits": [
+      {
+        "sha": "b43190cd4031f36483c2ebf43beb8a44d269391a",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/b43190cd4031f36483c2ebf43beb8a44d269391a",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:29Z"
+          }
+        }
+      },
       {
         "sha": "7a18c997a13bf255eb3cf63db4a3da9781904208",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/7a18c997a13bf255eb3cf63db4a3da9781904208",
@@ -708,25 +718,35 @@
             "date": "2026-05-09T10:34:31Z"
           }
         }
-      },
-      {
-        "sha": "84ed1d6e48449d865394f3e16baf9271c66aaf53",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/84ed1d6e48449d865394f3e16baf9271c66aaf53",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:50:33Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-09T10:35:51Z"
+      "pushed_at": "2026-05-09T22:26:43Z"
     },
     "commits": [
+      {
+        "sha": "b02f98755642c53ff9471308d5b6fa6f27d1c77a",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/b02f98755642c53ff9471308d5b6fa6f27d1c77a",
+        "commit": {
+          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:26:41Z"
+          }
+        }
+      },
+      {
+        "sha": "b20f47202bf77bec8cf1ae376bdc0166034603e1",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/b20f47202bf77bec8cf1ae376bdc0166034603e1",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:23:53Z"
+          }
+        }
+      },
       {
         "sha": "a682b5a61a5e378535c3e62acc8d69e0bf1e9d62",
         "html_url": "https://github.com/freegamestore-online/2048/commit/a682b5a61a5e378535c3e62acc8d69e0bf1e9d62",
@@ -736,35 +756,35 @@
             "date": "2026-05-09T10:35:42Z"
           }
         }
-      },
-      {
-        "sha": "5ba86967366217e62a11447727c762009f4ac248",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/5ba86967366217e62a11447727c762009f4ac248",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:46:28Z"
-          }
-        }
-      },
-      {
-        "sha": "643c95f247c4fdb559f17e4704baeb1bd2ab4bb1",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/643c95f247c4fdb559f17e4704baeb1bd2ab4bb1",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:47:30Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-09T10:35:51Z"
+      "pushed_at": "2026-05-09T22:26:55Z"
     },
     "commits": [
+      {
+        "sha": "a432d663a7b217a1c309efe26c25bc9fcb452477",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/a432d663a7b217a1c309efe26c25bc9fcb452477",
+        "commit": {
+          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:26:53Z"
+          }
+        }
+      },
+      {
+        "sha": "2e7aca8eccee4a92f6dd6d40b8f7715acc0c1dbd",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/2e7aca8eccee4a92f6dd6d40b8f7715acc0c1dbd",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:04Z"
+          }
+        }
+      },
       {
         "sha": "31fe7ca943691f4d8d4c56f31c302868dd10f1ad",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/31fe7ca943691f4d8d4c56f31c302868dd10f1ad",
@@ -774,35 +794,25 @@
             "date": "2026-05-09T10:35:42Z"
           }
         }
-      },
-      {
-        "sha": "58113e3b5fd4e251923aaee98a9433db466d887e",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/58113e3b5fd4e251923aaee98a9433db466d887e",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:47:55Z"
-          }
-        }
-      },
-      {
-        "sha": "5c67b22e1ea1b52e136517813aeceb8f3bccb396",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/5c67b22e1ea1b52e136517813aeceb8f3bccb396",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:48:12Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:24:46Z"
     },
     "commits": [
+      {
+        "sha": "472957724ad6c946276c4fd4baab5045942c34d1",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/472957724ad6c946276c4fd4baab5045942c34d1",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:44Z"
+          }
+        }
+      },
       {
         "sha": "e945c3c5ff3eb68fd484282ee641bcb40309ef27",
         "html_url": "https://github.com/freegamestore-online/simon/commit/e945c3c5ff3eb68fd484282ee641bcb40309ef27",
@@ -822,25 +832,25 @@
             "date": "2026-05-09T04:52:07Z"
           }
         }
-      },
-      {
-        "sha": "c47e5bb76b345b710c1a97890af2f3322ca48275",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/c47e5bb76b345b710c1a97890af2f3322ca48275",
-        "commit": {
-          "message": "chore: remove unused Shell.tsx + Leaderboard.tsx\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:38:57Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:24:50Z"
     },
     "commits": [
+      {
+        "sha": "b3e90af70750036e3d805e2645ee0aa432b637c6",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/b3e90af70750036e3d805e2645ee0aa432b637c6",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:48Z"
+          }
+        }
+      },
       {
         "sha": "f08fc2379f4251dc462954936df03ec7018c87cb",
         "html_url": "https://github.com/freegamestore-online/snake/commit/f08fc2379f4251dc462954936df03ec7018c87cb",
@@ -860,25 +870,25 @@
             "date": "2026-05-09T04:52:34Z"
           }
         }
-      },
-      {
-        "sha": "49bddc29e9ffb85dbfc06d679bc41dcfbf6d4025",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/49bddc29e9ffb85dbfc06d679bc41dcfbf6d4025",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:51:07Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:25:00Z"
     },
     "commits": [
+      {
+        "sha": "26a4f0809cb19c92de4aefea45ae58d1a7969ef2",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/26a4f0809cb19c92de4aefea45ae58d1a7969ef2",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:59Z"
+          }
+        }
+      },
       {
         "sha": "c1d0ba1b3e21a4e33d7ab0dc18b8861895555a0a",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/c1d0ba1b3e21a4e33d7ab0dc18b8861895555a0a",
@@ -898,25 +908,25 @@
             "date": "2026-05-09T04:53:50Z"
           }
         }
-      },
-      {
-        "sha": "00c045ce386f2c13d64543f15d0a108689b9a621",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/00c045ce386f2c13d64543f15d0a108689b9a621",
-        "commit": {
-          "message": "chore: remove unused Shell.tsx + Leaderboard.tsx\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:39:01Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:24:54Z"
     },
     "commits": [
+      {
+        "sha": "1ea7fc7ef1a9525468cfdf995b9c507400dbe479",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/1ea7fc7ef1a9525468cfdf995b9c507400dbe479",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:52Z"
+          }
+        }
+      },
       {
         "sha": "0c3bf3c5f01e85ef15dd90d59b6dadf20d7419af",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/0c3bf3c5f01e85ef15dd90d59b6dadf20d7419af",
@@ -936,25 +946,25 @@
             "date": "2026-05-09T04:53:08Z"
           }
         }
-      },
-      {
-        "sha": "0737cafb258f7c75197dc435ad524e54d6a77b19",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/0737cafb258f7c75197dc435ad524e54d6a77b19",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:51:31Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:24:58Z"
     },
     "commits": [
+      {
+        "sha": "c1c367bf2dc7cf229378e9a322b9a397c49581d9",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/c1c367bf2dc7cf229378e9a322b9a397c49581d9",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:57Z"
+          }
+        }
+      },
       {
         "sha": "fc8cd2e55915d8fd0809c8073f8fb95c416e9f9a",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/fc8cd2e55915d8fd0809c8073f8fb95c416e9f9a",
@@ -974,25 +984,25 @@
             "date": "2026-05-09T04:53:36Z"
           }
         }
-      },
-      {
-        "sha": "4958057a5286b0b00d94ba61655f321f916d1a26",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/4958057a5286b0b00d94ba61655f321f916d1a26",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:51:51Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:24:35Z"
     },
     "commits": [
+      {
+        "sha": "4e4718102ae1c6e3bb64f9ba8b9be39d76076951",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/4e4718102ae1c6e3bb64f9ba8b9be39d76076951",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:33Z"
+          }
+        }
+      },
       {
         "sha": "2cfd7915d6ffabe109e5bd5e68fbededd990dc7c",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/2cfd7915d6ffabe109e5bd5e68fbededd990dc7c",
@@ -1012,25 +1022,25 @@
             "date": "2026-05-09T04:50:58Z"
           }
         }
-      },
-      {
-        "sha": "df4d64d207c984e177ae79a0debd48728bca1413",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/df4d64d207c984e177ae79a0debd48728bca1413",
-        "commit": {
-          "message": "chore: remove unused Shell.tsx + Leaderboard.tsx\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:38:53Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:24:39Z"
     },
     "commits": [
+      {
+        "sha": "b5c988f4fe25c89ae865cfed6686b8355f9e2bb1",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/b5c988f4fe25c89ae865cfed6686b8355f9e2bb1",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:37Z"
+          }
+        }
+      },
       {
         "sha": "17a787a16ca77bbad4d2558734b8421237251870",
         "html_url": "https://github.com/freegamestore-online/pong/commit/17a787a16ca77bbad4d2558734b8421237251870",
@@ -1050,25 +1060,25 @@
             "date": "2026-05-09T04:51:24Z"
           }
         }
-      },
-      {
-        "sha": "cf21a4a19bc7f480a03a418f63a69cb0002f9c90",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/cf21a4a19bc7f480a03a418f63a69cb0002f9c90",
-        "commit": {
-          "message": "fix: remove internal canvas score display, fix touch to use container bounds\n\nRemoved canvas-drawn score text. Added onStats callback to show player/AI\nscores in topbar. Fixed touch detection to use canvas bounds instead of\nwindow.innerWidth.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:50:18Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:24:56Z"
     },
     "commits": [
+      {
+        "sha": "4419f737863e08cf9f81a1a7b523f748b1239618",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/4419f737863e08cf9f81a1a7b523f748b1239618",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:55Z"
+          }
+        }
+      },
       {
         "sha": "a2d798bed39e188888a92a9d233b893106d1a098",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/a2d798bed39e188888a92a9d233b893106d1a098",
@@ -1088,25 +1098,25 @@
             "date": "2026-05-09T04:53:22Z"
           }
         }
-      },
-      {
-        "sha": "3dddc4c106b3f9308a17ae1448844826153f7365",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/3dddc4c106b3f9308a17ae1448844826153f7365",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:51:41Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:25:04Z"
     },
     "commits": [
+      {
+        "sha": "9a3ae599a0cb512b530fe5ff07519925bdb1be2d",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/9a3ae599a0cb512b530fe5ff07519925bdb1be2d",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:25:03Z"
+          }
+        }
+      },
       {
         "sha": "44cbf745f83c856c712ce4adf5cae90709c8b2da",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/44cbf745f83c856c712ce4adf5cae90709c8b2da",
@@ -1126,25 +1136,25 @@
             "date": "2026-05-09T04:54:17Z"
           }
         }
-      },
-      {
-        "sha": "c554862784a858ec32eae389149932954e5ce553",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/c554862784a858ec32eae389149932954e5ce553",
-        "commit": {
-          "message": "chore: remove unused Shell.tsx + Leaderboard.tsx\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:39:03Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:24:52Z"
     },
     "commits": [
+      {
+        "sha": "1fa0663903b7afe29e4ca7cf55225ac5056ead2a",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/1fa0663903b7afe29e4ca7cf55225ac5056ead2a",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:50Z"
+          }
+        }
+      },
       {
         "sha": "e4f817f9bd49f1791a3da309afff59cfe22f372a",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/e4f817f9bd49f1791a3da309afff59cfe22f372a",
@@ -1164,25 +1174,25 @@
             "date": "2026-05-09T04:52:48Z"
           }
         }
-      },
-      {
-        "sha": "8f6c1ec0128c2e95831484c71c29c8692b52eabd",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/8f6c1ec0128c2e95831484c71c29c8692b52eabd",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:51:16Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:25:02Z"
     },
     "commits": [
+      {
+        "sha": "f891419a88b216f5ca1a66f7ce5a7d85f0238939",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/f891419a88b216f5ca1a66f7ce5a7d85f0238939",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:25:01Z"
+          }
+        }
+      },
       {
         "sha": "04a38086fdc307b88f424019eaf13778bdbf4949",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/04a38086fdc307b88f424019eaf13778bdbf4949",
@@ -1202,25 +1212,35 @@
             "date": "2026-05-09T04:54:03Z"
           }
         }
-      },
-      {
-        "sha": "01cc8dd4b79fc5190c80fa5e6bbc538206b8d9b8",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/01cc8dd4b79fc5190c80fa5e6bbc538206b8d9b8",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:52:11Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-09T10:35:55Z"
+      "pushed_at": "2026-05-09T22:28:21Z"
     },
     "commits": [
+      {
+        "sha": "1eaaf105ee39c76f5a07ea3239d6c89131ba08ad",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/1eaaf105ee39c76f5a07ea3239d6c89131ba08ad",
+        "commit": {
+          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:28:19Z"
+          }
+        }
+      },
+      {
+        "sha": "c1652728a19b40b2a036f7603f61a7a77f4a9d78",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/c1652728a19b40b2a036f7603f61a7a77f4a9d78",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:46Z"
+          }
+        }
+      },
       {
         "sha": "b14d1ca251e1c923399e09f275423267779facee",
         "html_url": "https://github.com/freegamestore-online/slither/commit/b14d1ca251e1c923399e09f275423267779facee",
@@ -1230,35 +1250,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "e0e46c2d0eb95fddd71a2959b26c6169a9f905d6",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/e0e46c2d0eb95fddd71a2959b26c6169a9f905d6",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:52:20Z"
-          }
-        }
-      },
-      {
-        "sha": "eb33c0174d4885b2f44d35624a4df4bb15313089",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/eb33c0174d4885b2f44d35624a4df4bb15313089",
-        "commit": {
-          "message": "chore: remove unused Shell.tsx + Leaderboard.tsx\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:38:59Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-09T10:35:51Z"
+      "pushed_at": "2026-05-09T22:24:11Z"
     },
     "commits": [
+      {
+        "sha": "0d1404a0b228ecfff057f2ebabbb49b89dc43947",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/0d1404a0b228ecfff057f2ebabbb49b89dc43947",
+        "commit": {
+          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-09T22:24:10Z"
+          }
+        }
+      },
       {
         "sha": "4c7441978a6c119e3567163f09d0abf36e97ce28",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/4c7441978a6c119e3567163f09d0abf36e97ce28",
@@ -1276,16 +1286,6 @@
           "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-09T04:48:35Z"
-          }
-        }
-      },
-      {
-        "sha": "c8b4c1d190f035467942b35c81a98365c2ba6724",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/c8b4c1d190f035467942b35c81a98365c2ba6724",
-        "commit": {
-          "message": "fix: revert skipWaiting — use safe autoUpdate instead\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-08T22:48:34Z"
           }
         }
       }
