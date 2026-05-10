@@ -13,6 +13,16 @@
   --radius: 1.25rem;
   --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06);
   --shadow-lg: 0 4px 20px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.06);
+
+  /* Unified aliases (SDK naming) */
+  --paper: #fafaf9;
+  --panel: #ffffff;
+  --line: #e5e5e5;
+  --line-strong: #d1d5db;
+  --glass: rgba(255,255,255,0.8);
+  --success: #22c55e;
+  --warning: #fbbf24;
+  --error: #ef4444;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,6 +38,13 @@
     --border: #2a2a2a;
     --shadow: 0 1px 3px rgba(0,0,0,0.2), 0 4px 12px rgba(0,0,0,0.3);
     --shadow-lg: 0 4px 20px rgba(0,0,0,0.3), 0 8px 32px rgba(0,0,0,0.4);
+
+    /* Unified aliases (SDK naming) */
+    --paper: #0f0f0f;
+    --panel: #1a1a1a;
+    --line: #2a2a2a;
+    --line-strong: #3a3a3a;
+    --glass: rgba(15,15,15,0.8);
   }
 }
 
