@@ -488,6 +488,7 @@ const filesToCopy = [
   'privacy.html',
   'terms.html',
   'build-with-ai.html',
+  'pricing.html',
 ];
 
 filesToCopy.forEach(file => {
