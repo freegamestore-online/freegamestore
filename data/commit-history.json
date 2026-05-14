@@ -2,9 +2,19 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-09T22:24:13Z"
+      "pushed_at": "2026-05-14T04:38:00Z"
     },
     "commits": [
+      {
+        "sha": "2441f54c638d20c8a85145094bfb46abe08de592",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/2441f54c638d20c8a85145094bfb46abe08de592",
+        "commit": {
+          "message": "docs: point SKILLS.md links at the public storefront copy\n\nThe previous URL pointed at freeappstore-online/ops, a private repo whose\nraw URLs 404 for non-org-members (two contributors hit this). The file is\nnow mirrored at freeappstore-online/freeappstore/SKILLS.md (public).\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-14T04:37:57Z"
+          }
+        }
+      },
       {
         "sha": "71609dbed4fd95d0a20b2265b22ff1af09e90dd8",
         "html_url": "https://github.com/freegamestore-online/dice/commit/71609dbed4fd95d0a20b2265b22ff1af09e90dd8",
@@ -22,16 +32,6 @@
           "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-09T10:35:42Z"
-          }
-        }
-      },
-      {
-        "sha": "cea7a4a9c8ade853ef1da87dbf4f5efd41107d52",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/cea7a4a9c8ade853ef1da87dbf4f5efd41107d52",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:48:48Z"
           }
         }
       }
@@ -116,9 +116,19 @@
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-09T22:26:59Z"
+      "pushed_at": "2026-05-14T04:37:57Z"
     },
     "commits": [
+      {
+        "sha": "1196d78007001ac3a7f208586783c6418977ec74",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/1196d78007001ac3a7f208586783c6418977ec74",
+        "commit": {
+          "message": "docs: point SKILLS.md links at the public storefront copy\n\nThe previous URL pointed at freeappstore-online/ops, a private repo whose\nraw URLs 404 for non-org-members (two contributors hit this). The file is\nnow mirrored at freeappstore-online/freeappstore/SKILLS.md (public).\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-14T04:37:55Z"
+          }
+        }
+      },
       {
         "sha": "c4c4ffffc14e5d8fd609d58879aa56b950d5c97d",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/c4c4ffffc14e5d8fd609d58879aa56b950d5c97d",
@@ -136,16 +146,6 @@
           "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-09T22:24:08Z"
-          }
-        }
-      },
-      {
-        "sha": "a94d957faf46de2d10ee81c4db9f018dbb92e59c",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/a94d957faf46de2d10ee81c4db9f018dbb92e59c",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
           }
         }
       }
@@ -268,9 +268,19 @@
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-09T22:24:22Z"
+      "pushed_at": "2026-05-14T04:38:03Z"
     },
     "commits": [
+      {
+        "sha": "c36f84124faf117ac81611729bd7486a6e8b7179",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/c36f84124faf117ac81611729bd7486a6e8b7179",
+        "commit": {
+          "message": "docs: point SKILLS.md links at the public storefront copy\n\nThe previous URL pointed at freeappstore-online/ops, a private repo whose\nraw URLs 404 for non-org-members (two contributors hit this). The file is\nnow mirrored at freeappstore-online/freeappstore/SKILLS.md (public).\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-14T04:38:00Z"
+          }
+        }
+      },
       {
         "sha": "807e930d99b023c0a685637c2ec087f03f806fe7",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/807e930d99b023c0a685637c2ec087f03f806fe7",
@@ -288,16 +298,6 @@
           "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-09T10:35:42Z"
-          }
-        }
-      },
-      {
-        "sha": "49b347e62a63c6992a1ed8247bb2b1f1006a7634",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/49b347e62a63c6992a1ed8247bb2b1f1006a7634",
-        "commit": {
-          "message": "fix: fit card and stats within 320px landscape height\n\nReduce card height, margins, and stat font sizes to prevent clipping\non iPhone SE landscape (568x320).\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:34:33Z"
           }
         }
       }
