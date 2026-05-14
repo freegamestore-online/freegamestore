@@ -686,9 +686,19 @@
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-09T22:24:30Z"
+      "pushed_at": "2026-05-14T04:38:06Z"
     },
     "commits": [
+      {
+        "sha": "1ed6cbcb362df81876ad93615516c7f5ecf290bc",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/1ed6cbcb362df81876ad93615516c7f5ecf290bc",
+        "commit": {
+          "message": "docs: point SKILLS.md links at the public storefront copy\n\nThe previous URL pointed at freeappstore-online/ops, a private repo whose\nraw URLs 404 for non-org-members (two contributors hit this). The file is\nnow mirrored at freeappstore-online/freeappstore/SKILLS.md (public).\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-14T04:38:03Z"
+          }
+        }
+      },
       {
         "sha": "b43190cd4031f36483c2ebf43beb8a44d269391a",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/b43190cd4031f36483c2ebf43beb8a44d269391a",
@@ -706,16 +716,6 @@
           "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-09T10:35:43Z"
-          }
-        }
-      },
-      {
-        "sha": "c71f448ac52d4e27fd88427be1ad8747374ae3b5",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/c71f448ac52d4e27fd88427be1ad8747374ae3b5",
-        "commit": {
-          "message": "fix: scale card grid for landscape phone viewports\n\nReduce card size formula to account for smaller landscape heights,\npreventing cards from being clipped.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:34:31Z"
           }
         }
       }
