@@ -2,9 +2,29 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-14T04:38:00Z"
+      "pushed_at": "2026-05-14T05:30:48Z"
     },
     "commits": [
+      {
+        "sha": "6346ffbc91af45f1f1f49c624f3e2a57835d6671",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/6346ffbc91af45f1f1f49c624f3e2a57835d6671",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:47Z"
+          }
+        }
+      },
+      {
+        "sha": "24e6f57706187576fc8c6b6aac76b62c0c63aa55",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/24e6f57706187576fc8c6b6aac76b62c0c63aa55",
+        "commit": {
+          "message": "docs(CLAUDE): drop stale platform/ + infra/ path segments\n\nThese paths never existed for external contributors and the auditor\nrepo is private. AI agents reading this CLAUDE.md were being told to\nlook in directories that don't resolve. Aligned with the post-sweep\nflat layout described in the public SKILLS.md.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-14T05:00:44Z"
+          }
+        }
+      },
       {
         "sha": "2441f54c638d20c8a85145094bfb46abe08de592",
         "html_url": "https://github.com/freegamestore-online/dice/commit/2441f54c638d20c8a85145094bfb46abe08de592",
@@ -14,35 +34,25 @@
             "date": "2026-05-14T04:37:57Z"
           }
         }
-      },
-      {
-        "sha": "71609dbed4fd95d0a20b2265b22ff1af09e90dd8",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/71609dbed4fd95d0a20b2265b22ff1af09e90dd8",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:12Z"
-          }
-        }
-      },
-      {
-        "sha": "ea02c6a9d0491645812a1cb4ae7e17bed0811006",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/ea02c6a9d0491645812a1cb4ae7e17bed0811006",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-09T22:26:57Z"
+      "pushed_at": "2026-05-14T05:30:10Z"
     },
     "commits": [
+      {
+        "sha": "265cb8bd4cf5ef9a9f2729ff6365ae0c7c9610c7",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/265cb8bd4cf5ef9a9f2729ff6365ae0c7c9610c7",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:10Z"
+          }
+        }
+      },
       {
         "sha": "48acb769ca95de6dbc2007722b6826addbf0926c",
         "html_url": "https://github.com/freegamestore-online/chess/commit/48acb769ca95de6dbc2007722b6826addbf0926c",
@@ -62,25 +72,25 @@
             "date": "2026-05-09T22:24:06Z"
           }
         }
-      },
-      {
-        "sha": "fc035f15be5c82a125f697b165db9dfed1e98a92",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/fc035f15be5c82a125f697b165db9dfed1e98a92",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-09T22:26:48Z"
+      "pushed_at": "2026-05-14T05:30:04Z"
     },
     "commits": [
+      {
+        "sha": "2c627206a9d3f7d697d78d79facab630e0b3b3fd",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/2c627206a9d3f7d697d78d79facab630e0b3b3fd",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:04Z"
+          }
+        }
+      },
       {
         "sha": "fe40f3787b4e45ad5bfbfb6bb411d78f3a0dc3bb",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/fe40f3787b4e45ad5bfbfb6bb411d78f3a0dc3bb",
@@ -100,25 +110,35 @@
             "date": "2026-05-09T22:23:57Z"
           }
         }
-      },
-      {
-        "sha": "d38affb66c2fda7d40e77e14bcdde0fdde7ce46e",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/d38affb66c2fda7d40e77e14bcdde0fdde7ce46e",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-14T04:37:57Z"
+      "pushed_at": "2026-05-14T05:30:46Z"
     },
     "commits": [
+      {
+        "sha": "d6f2bae5b2a4caebd67a9b83bb33b9169235c518",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/d6f2bae5b2a4caebd67a9b83bb33b9169235c518",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:46Z"
+          }
+        }
+      },
+      {
+        "sha": "80ceb36abc41992638bbcb66060c822e6f7d93d0",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/80ceb36abc41992638bbcb66060c822e6f7d93d0",
+        "commit": {
+          "message": "docs(CLAUDE): drop stale platform/ + infra/ path segments\n\nThese paths never existed for external contributors and the auditor\nrepo is private. AI agents reading this CLAUDE.md were being told to\nlook in directories that don't resolve. Aligned with the post-sweep\nflat layout described in the public SKILLS.md.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-14T05:00:47Z"
+          }
+        }
+      },
       {
         "sha": "1196d78007001ac3a7f208586783c6418977ec74",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/1196d78007001ac3a7f208586783c6418977ec74",
@@ -128,35 +148,25 @@
             "date": "2026-05-14T04:37:55Z"
           }
         }
-      },
-      {
-        "sha": "c4c4ffffc14e5d8fd609d58879aa56b950d5c97d",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/c4c4ffffc14e5d8fd609d58879aa56b950d5c97d",
-        "commit": {
-          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:26:57Z"
-          }
-        }
-      },
-      {
-        "sha": "451c6c64b2661c73004537d1620fd29831387234",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/451c6c64b2661c73004537d1620fd29831387234",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:08Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-09T22:26:52Z"
+      "pushed_at": "2026-05-14T05:30:07Z"
     },
     "commits": [
+      {
+        "sha": "0ee0d0faf2c7d37c82bcfb5aac2e24a76baf73aa",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/0ee0d0faf2c7d37c82bcfb5aac2e24a76baf73aa",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:07Z"
+          }
+        }
+      },
       {
         "sha": "58eff00e43b2ae4f28b35f74a2943faf9bdd1a2e",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/58eff00e43b2ae4f28b35f74a2943faf9bdd1a2e",
@@ -176,25 +186,25 @@
             "date": "2026-05-09T22:24:01Z"
           }
         }
-      },
-      {
-        "sha": "094a90fa6ac7b8ac49eabf7e3e74460ac0783c8b",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/094a90fa6ac7b8ac49eabf7e3e74460ac0783c8b",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-09T22:24:26Z"
+      "pushed_at": "2026-05-14T05:30:19Z"
     },
     "commits": [
+      {
+        "sha": "fc7691da780a219dc5e05a693c9446d6b0729954",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/fc7691da780a219dc5e05a693c9446d6b0729954",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:19Z"
+          }
+        }
+      },
       {
         "sha": "9a1b19217df587445531376b97e1ffcf187f8786",
         "html_url": "https://github.com/freegamestore-online/match3/commit/9a1b19217df587445531376b97e1ffcf187f8786",
@@ -214,25 +224,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "27fc45f109d233266e1edcd3614964c017a25674",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/27fc45f109d233266e1edcd3614964c017a25674",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:50:08Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-09T22:24:37Z"
+      "pushed_at": "2026-05-14T05:30:23Z"
     },
     "commits": [
+      {
+        "sha": "15ca9a7554d8fb19a65789cbb0f8523608be5347",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/15ca9a7554d8fb19a65789cbb0f8523608be5347",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:23Z"
+          }
+        }
+      },
       {
         "sha": "06eee2ec51c670c76a495a87fe55cb257d680a4a",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/06eee2ec51c670c76a495a87fe55cb257d680a4a",
@@ -252,25 +262,35 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "81f099a02fad2b308ab66e183913c5f304a94bb8",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/81f099a02fad2b308ab66e183913c5f304a94bb8",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:51:10Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-14T04:38:03Z"
+      "pushed_at": "2026-05-14T05:30:49Z"
     },
     "commits": [
+      {
+        "sha": "901d9588a7b18afbe81ec0c96799ff8805d78e19",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/901d9588a7b18afbe81ec0c96799ff8805d78e19",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:49Z"
+          }
+        }
+      },
+      {
+        "sha": "3599203a2785e091d20c7aa0d4c978503429a2b5",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/3599203a2785e091d20c7aa0d4c978503429a2b5",
+        "commit": {
+          "message": "docs(CLAUDE): drop stale platform/ + infra/ path segments\n\nThese paths never existed for external contributors and the auditor\nrepo is private. AI agents reading this CLAUDE.md were being told to\nlook in directories that don't resolve. Aligned with the post-sweep\nflat layout described in the public SKILLS.md.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-14T05:00:53Z"
+          }
+        }
+      },
       {
         "sha": "c36f84124faf117ac81611729bd7486a6e8b7179",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/c36f84124faf117ac81611729bd7486a6e8b7179",
@@ -280,35 +300,25 @@
             "date": "2026-05-14T04:38:00Z"
           }
         }
-      },
-      {
-        "sha": "807e930d99b023c0a685637c2ec087f03f806fe7",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/807e930d99b023c0a685637c2ec087f03f806fe7",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:20Z"
-          }
-        }
-      },
-      {
-        "sha": "52d03a40642ca6b7cb29542c924b6eb2acd42647",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/52d03a40642ca6b7cb29542c924b6eb2acd42647",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-09T22:26:45Z"
+      "pushed_at": "2026-05-14T05:30:03Z"
     },
     "commits": [
+      {
+        "sha": "1a74b8eb0b9848f68e4966b4a1eddc174b767466",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/1a74b8eb0b9848f68e4966b4a1eddc174b767466",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:03Z"
+          }
+        }
+      },
       {
         "sha": "53f38e2fcc3b4d1733deebdb08de21979162afa8",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/53f38e2fcc3b4d1733deebdb08de21979162afa8",
@@ -328,25 +338,25 @@
             "date": "2026-05-09T22:23:55Z"
           }
         }
-      },
-      {
-        "sha": "34620a8a127cdf1703e28fd570a0b8b00375ca99",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/34620a8a127cdf1703e28fd570a0b8b00375ca99",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-09T22:24:28Z"
+      "pushed_at": "2026-05-14T05:30:20Z"
     },
     "commits": [
+      {
+        "sha": "c686e3413aada1f5777044dd65491b17a92052f3",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/c686e3413aada1f5777044dd65491b17a92052f3",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:20Z"
+          }
+        }
+      },
       {
         "sha": "c9023459a75121c978a4bc0a0d57fc67ccc44314",
         "html_url": "https://github.com/freegamestore-online/memory/commit/c9023459a75121c978a4bc0a0d57fc67ccc44314",
@@ -366,25 +376,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "fd714823477f878074c21867079b136a8c174b5b",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/fd714823477f878074c21867079b136a8c174b5b",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:50:20Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-09T22:24:18Z"
+      "pushed_at": "2026-05-14T05:30:15Z"
     },
     "commits": [
+      {
+        "sha": "88a5d28678f5dcb7164234b2b3aac6438bc32db7",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/88a5d28678f5dcb7164234b2b3aac6438bc32db7",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:14Z"
+          }
+        }
+      },
       {
         "sha": "58cc845ca731d2ea64be6a723311d09f6d22bc61",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/58cc845ca731d2ea64be6a723311d09f6d22bc61",
@@ -404,25 +414,25 @@
             "date": "2026-05-09T10:35:42Z"
           }
         }
-      },
-      {
-        "sha": "829c24e57066657e2ba1d8a9a2d1a967ba8897ac",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/829c24e57066657e2ba1d8a9a2d1a967ba8897ac",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:49:13Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-09T22:26:50Z"
+      "pushed_at": "2026-05-14T05:30:06Z"
     },
     "commits": [
+      {
+        "sha": "124974c2d674d37949fd3539488140ef30c5ed4b",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/124974c2d674d37949fd3539488140ef30c5ed4b",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:06Z"
+          }
+        }
+      },
       {
         "sha": "242d46d65aa6ad5938f219f9ab71dbac6bd1a135",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/242d46d65aa6ad5938f219f9ab71dbac6bd1a135",
@@ -442,25 +452,25 @@
             "date": "2026-05-09T22:23:59Z"
           }
         }
-      },
-      {
-        "sha": "2eef51d0741cafa4cf40382f17c55a3c57e41aa0",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/2eef51d0741cafa4cf40382f17c55a3c57e41aa0",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-09T22:24:15Z"
+      "pushed_at": "2026-05-14T05:30:13Z"
     },
     "commits": [
+      {
+        "sha": "23950212dd52b4128106a1f6829fc3a87cb0bde8",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/23950212dd52b4128106a1f6829fc3a87cb0bde8",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:13Z"
+          }
+        }
+      },
       {
         "sha": "e16e5af349b08f7f80fccb9b477bb2f11af09ab4",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/e16e5af349b08f7f80fccb9b477bb2f11af09ab4",
@@ -480,25 +490,25 @@
             "date": "2026-05-09T10:35:42Z"
           }
         }
-      },
-      {
-        "sha": "365a1048cc30a8deddec381e64197d4c204d15df",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/365a1048cc30a8deddec381e64197d4c204d15df",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:49:01Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-09T22:24:24Z"
+      "pushed_at": "2026-05-14T05:30:17Z"
     },
     "commits": [
+      {
+        "sha": "20b3bd675ec2093706479af5fd8202c48189ad01",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/20b3bd675ec2093706479af5fd8202c48189ad01",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:17Z"
+          }
+        }
+      },
       {
         "sha": "82bd31f460a4bf07f88192ff259112cf5eb6e31f",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/82bd31f460a4bf07f88192ff259112cf5eb6e31f",
@@ -518,25 +528,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "f9547d27f53d7099fc3502c389e9ad71de1cf783",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/f9547d27f53d7099fc3502c389e9ad71de1cf783",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:49:54Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-09T22:24:20Z"
+      "pushed_at": "2026-05-14T05:30:16Z"
     },
     "commits": [
+      {
+        "sha": "29aebda4984c7cd471aae05c76f17562443bb36a",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/29aebda4984c7cd471aae05c76f17562443bb36a",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:16Z"
+          }
+        }
+      },
       {
         "sha": "562115545bb62fe3234fd8f9f6fb7f45667f7767",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/562115545bb62fe3234fd8f9f6fb7f45667f7767",
@@ -556,25 +566,35 @@
             "date": "2026-05-09T10:35:42Z"
           }
         }
-      },
-      {
-        "sha": "e7c54b22381555e7f3a7bfa6928a05e5b8cccebf",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/e7c54b22381555e7f3a7bfa6928a05e5b8cccebf",
-        "commit": {
-          "message": "fix: compact keyboard for small and landscape viewports\n\nUse 7-col grid with smaller gaps at 320px width. In landscape, switch to\nside-by-side layout with canvas on left and keyboard on right.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:34:29Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-09T22:24:33Z"
+      "pushed_at": "2026-05-14T05:30:52Z"
     },
     "commits": [
+      {
+        "sha": "9da74da1f5f469b7c61f9e3fc47d29e990f12106",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/9da74da1f5f469b7c61f9e3fc47d29e990f12106",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:52Z"
+          }
+        }
+      },
+      {
+        "sha": "b77900e93d056118c0a1732401741fe4b093c699",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/b77900e93d056118c0a1732401741fe4b093c699",
+        "commit": {
+          "message": "docs(CLAUDE): point SKILLS link at public copy + drop stale paths\n\nTwo fixes in one — same as the broader sweep across the other games:\n\n1. SKILLS.md URL was pointing at the private freeappstore-online/ops\n   repo, which raw.githubusercontent serves as 404 to non-org-members.\n   Switched to the public mirror at freeappstore-online/freeappstore.\n\n2. Workspace paths invented a ~/dev/fgs/platform/ nesting that doesn't\n   exist; the auditor repo is private. Aligned with the flat layout\n   used everywhere else.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-14T05:02:55Z"
+          }
+        }
+      },
       {
         "sha": "8a0424e39ac641834d57c4b9e48be227198c4e9a",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/8a0424e39ac641834d57c4b9e48be227198c4e9a",
@@ -584,35 +604,25 @@
             "date": "2026-05-09T22:24:31Z"
           }
         }
-      },
-      {
-        "sha": "fc19b68f67f07b8556d9b935d3edc635d962e6c2",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/fc19b68f67f07b8556d9b935d3edc635d962e6c2",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
-      },
-      {
-        "sha": "2b90748fbd87515a5dbc34e6f4815d5a121664ac",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/2b90748fbd87515a5dbc34e6f4815d5a121664ac",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:50:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-09T22:24:43Z"
+      "pushed_at": "2026-05-14T05:30:27Z"
     },
     "commits": [
+      {
+        "sha": "5b0c02958a7b3518a0c178eb30df6828f85907a5",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/5b0c02958a7b3518a0c178eb30df6828f85907a5",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:27Z"
+          }
+        }
+      },
       {
         "sha": "69e54cec25ef75936f1a7f0b07a7d6df1b48c0ed",
         "html_url": "https://github.com/freegamestore-online/racing/commit/69e54cec25ef75936f1a7f0b07a7d6df1b48c0ed",
@@ -632,25 +642,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "c8106f7a241ce6203e34e968b942fbed89a36b94",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/c8106f7a241ce6203e34e968b942fbed89a36b94",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:51:55Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-09T22:24:41Z"
+      "pushed_at": "2026-05-14T05:30:26Z"
     },
     "commits": [
+      {
+        "sha": "931b7151d9685447e14ac5583018cdc4871c6c4e",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/931b7151d9685447e14ac5583018cdc4871c6c4e",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:26Z"
+          }
+        }
+      },
       {
         "sha": "5cc3a02b17da472db670d3d329b146764e343678",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/5cc3a02b17da472db670d3d329b146764e343678",
@@ -670,25 +680,35 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "6a55121d5c3781f4be63ffa333541080c29dea3d",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/6a55121d5c3781f4be63ffa333541080c29dea3d",
-        "commit": {
-          "message": "fix: compact layout for small viewports\n\nReduce padding, gaps, and font sizes on mobile to prevent clipping.\nMake sections scrollable within bounded containers.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:34:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-14T04:38:06Z"
+      "pushed_at": "2026-05-14T05:30:51Z"
     },
     "commits": [
+      {
+        "sha": "f5f2c925fef2fff821025f86741c106db096ac38",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/f5f2c925fef2fff821025f86741c106db096ac38",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:50Z"
+          }
+        }
+      },
+      {
+        "sha": "9a9913d1571d24ab7d39d14e8326a0ed35588243",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/9a9913d1571d24ab7d39d14e8326a0ed35588243",
+        "commit": {
+          "message": "docs(CLAUDE): drop stale platform/ + infra/ path segments\n\nThese paths never existed for external contributors and the auditor\nrepo is private. AI agents reading this CLAUDE.md were being told to\nlook in directories that don't resolve. Aligned with the post-sweep\nflat layout described in the public SKILLS.md.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-14T05:00:50Z"
+          }
+        }
+      },
       {
         "sha": "1ed6cbcb362df81876ad93615516c7f5ecf290bc",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/1ed6cbcb362df81876ad93615516c7f5ecf290bc",
@@ -698,35 +718,25 @@
             "date": "2026-05-14T04:38:03Z"
           }
         }
-      },
-      {
-        "sha": "b43190cd4031f36483c2ebf43beb8a44d269391a",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/b43190cd4031f36483c2ebf43beb8a44d269391a",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:29Z"
-          }
-        }
-      },
-      {
-        "sha": "7a18c997a13bf255eb3cf63db4a3da9781904208",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/7a18c997a13bf255eb3cf63db4a3da9781904208",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-09T22:26:43Z"
+      "pushed_at": "2026-05-14T05:30:01Z"
     },
     "commits": [
+      {
+        "sha": "4367c3918b58d2b518b2ae17cbdfe5f79be8663c",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/4367c3918b58d2b518b2ae17cbdfe5f79be8663c",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:01Z"
+          }
+        }
+      },
       {
         "sha": "b02f98755642c53ff9471308d5b6fa6f27d1c77a",
         "html_url": "https://github.com/freegamestore-online/2048/commit/b02f98755642c53ff9471308d5b6fa6f27d1c77a",
@@ -746,25 +756,25 @@
             "date": "2026-05-09T22:23:53Z"
           }
         }
-      },
-      {
-        "sha": "a682b5a61a5e378535c3e62acc8d69e0bf1e9d62",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/a682b5a61a5e378535c3e62acc8d69e0bf1e9d62",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-09T22:26:55Z"
+      "pushed_at": "2026-05-14T05:30:09Z"
     },
     "commits": [
+      {
+        "sha": "308c5e2329926830e0f1c58c67f7c48ba44580a5",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/308c5e2329926830e0f1c58c67f7c48ba44580a5",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:08Z"
+          }
+        }
+      },
       {
         "sha": "a432d663a7b217a1c309efe26c25bc9fcb452477",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/a432d663a7b217a1c309efe26c25bc9fcb452477",
@@ -784,25 +794,25 @@
             "date": "2026-05-09T22:24:04Z"
           }
         }
-      },
-      {
-        "sha": "31fe7ca943691f4d8d4c56f31c302868dd10f1ad",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/31fe7ca943691f4d8d4c56f31c302868dd10f1ad",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-09T22:24:46Z"
+      "pushed_at": "2026-05-14T05:30:29Z"
     },
     "commits": [
+      {
+        "sha": "d1c910713a9f359c751b022224a4dddb1c8b47ec",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/d1c910713a9f359c751b022224a4dddb1c8b47ec",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:29Z"
+          }
+        }
+      },
       {
         "sha": "472957724ad6c946276c4fd4baab5045942c34d1",
         "html_url": "https://github.com/freegamestore-online/simon/commit/472957724ad6c946276c4fd4baab5045942c34d1",
@@ -822,25 +832,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "a84e86d563e18e51b234233ec53a0f6eea1b7018",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/a84e86d563e18e51b234233ec53a0f6eea1b7018",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:52:07Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-09T22:24:50Z"
+      "pushed_at": "2026-05-14T05:30:32Z"
     },
     "commits": [
+      {
+        "sha": "19b608d99d87656eeef4f7ea891d9a0c7721b4de",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/19b608d99d87656eeef4f7ea891d9a0c7721b4de",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:31Z"
+          }
+        }
+      },
       {
         "sha": "b3e90af70750036e3d805e2645ee0aa432b637c6",
         "html_url": "https://github.com/freegamestore-online/snake/commit/b3e90af70750036e3d805e2645ee0aa432b637c6",
@@ -860,25 +870,35 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "cc1d6c33e74ea23a8d6241f505cd5fb6d2aaf4f7",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/cc1d6c33e74ea23a8d6241f505cd5fb6d2aaf4f7",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:52:34Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-09T22:25:00Z"
+      "pushed_at": "2026-05-14T05:30:53Z"
     },
     "commits": [
+      {
+        "sha": "5120f1d10ded2a7ba9144e668313dafba88afe99",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/5120f1d10ded2a7ba9144e668313dafba88afe99",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:53Z"
+          }
+        }
+      },
+      {
+        "sha": "83d66514f0a665e85a7a94692f88f3e8f93272e5",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/83d66514f0a665e85a7a94692f88f3e8f93272e5",
+        "commit": {
+          "message": "docs(CLAUDE): point SKILLS link at public copy + drop stale paths\n\nTwo fixes in one — same as the broader sweep across the other games:\n\n1. SKILLS.md URL was pointing at the private freeappstore-online/ops\n   repo, which raw.githubusercontent serves as 404 to non-org-members.\n   Switched to the public mirror at freeappstore-online/freeappstore.\n\n2. Workspace paths invented a ~/dev/fgs/platform/ nesting that doesn't\n   exist; the auditor repo is private. Aligned with the flat layout\n   used everywhere else.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-14T05:03:29Z"
+          }
+        }
+      },
       {
         "sha": "26a4f0809cb19c92de4aefea45ae58d1a7969ef2",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/26a4f0809cb19c92de4aefea45ae58d1a7969ef2",
@@ -888,35 +908,25 @@
             "date": "2026-05-09T22:24:59Z"
           }
         }
-      },
-      {
-        "sha": "c1d0ba1b3e21a4e33d7ab0dc18b8861895555a0a",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/c1d0ba1b3e21a4e33d7ab0dc18b8861895555a0a",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
-      },
-      {
-        "sha": "4c99ddfb0dfe1bfbe517f16a13e797ab7a0822d7",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/4c99ddfb0dfe1bfbe517f16a13e797ab7a0822d7",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:53:50Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-09T22:24:54Z"
+      "pushed_at": "2026-05-14T05:30:35Z"
     },
     "commits": [
+      {
+        "sha": "c6d60d22ae48e746404dc8636fd11c851cabe69b",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/c6d60d22ae48e746404dc8636fd11c851cabe69b",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:35Z"
+          }
+        }
+      },
       {
         "sha": "1ea7fc7ef1a9525468cfdf995b9c507400dbe479",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/1ea7fc7ef1a9525468cfdf995b9c507400dbe479",
@@ -936,25 +946,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "4833421f403feafca8bf573211b0a661b90642ee",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/4833421f403feafca8bf573211b0a661b90642ee",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:53:08Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-09T22:24:58Z"
+      "pushed_at": "2026-05-14T05:30:39Z"
     },
     "commits": [
+      {
+        "sha": "2302f9cec44c808c7351adcefa3fb789afbbb1bf",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/2302f9cec44c808c7351adcefa3fb789afbbb1bf",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:39Z"
+          }
+        }
+      },
       {
         "sha": "c1c367bf2dc7cf229378e9a322b9a397c49581d9",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/c1c367bf2dc7cf229378e9a322b9a397c49581d9",
@@ -974,25 +984,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "494c4b5ddbba0481b0c97fb19939aa064f4077e2",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/494c4b5ddbba0481b0c97fb19939aa064f4077e2",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:53:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-09T22:24:35Z"
+      "pushed_at": "2026-05-14T05:30:22Z"
     },
     "commits": [
+      {
+        "sha": "e1053936d923e17316a007566923fa472e1e792a",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/e1053936d923e17316a007566923fa472e1e792a",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:22Z"
+          }
+        }
+      },
       {
         "sha": "4e4718102ae1c6e3bb64f9ba8b9be39d76076951",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/4e4718102ae1c6e3bb64f9ba8b9be39d76076951",
@@ -1012,25 +1022,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "f8a5b00c8924450b5adcd5978d073958505f9716",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/f8a5b00c8924450b5adcd5978d073958505f9716",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:50:58Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-09T22:24:39Z"
+      "pushed_at": "2026-05-14T05:30:25Z"
     },
     "commits": [
+      {
+        "sha": "6ec1f2a5a8ac51c5d4a4c80d52b9c609479c04c7",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/6ec1f2a5a8ac51c5d4a4c80d52b9c609479c04c7",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:24Z"
+          }
+        }
+      },
       {
         "sha": "b5c988f4fe25c89ae865cfed6686b8355f9e2bb1",
         "html_url": "https://github.com/freegamestore-online/pong/commit/b5c988f4fe25c89ae865cfed6686b8355f9e2bb1",
@@ -1050,25 +1060,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "8d87d983e73587eb99fab418fcac94e57f34a9b3",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/8d87d983e73587eb99fab418fcac94e57f34a9b3",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:51:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-09T22:24:56Z"
+      "pushed_at": "2026-05-14T05:30:38Z"
     },
     "commits": [
+      {
+        "sha": "80aacfa5640572ad3ddb5bc40b16e3702b27acd5",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/80aacfa5640572ad3ddb5bc40b16e3702b27acd5",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:37Z"
+          }
+        }
+      },
       {
         "sha": "4419f737863e08cf9f81a1a7b523f748b1239618",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/4419f737863e08cf9f81a1a7b523f748b1239618",
@@ -1088,25 +1098,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "b8e0be4e58388abded96d67bb07359f31d3cbb11",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/b8e0be4e58388abded96d67bb07359f31d3cbb11",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:53:22Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-09T22:25:04Z"
+      "pushed_at": "2026-05-14T05:30:42Z"
     },
     "commits": [
+      {
+        "sha": "a2e3d00cefa2600201183764e36d71710ee382a7",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/a2e3d00cefa2600201183764e36d71710ee382a7",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:42Z"
+          }
+        }
+      },
       {
         "sha": "9a3ae599a0cb512b530fe5ff07519925bdb1be2d",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/9a3ae599a0cb512b530fe5ff07519925bdb1be2d",
@@ -1126,25 +1136,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "693f0e69860aba939a4a9ee9c8a3edcf3a02d290",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/693f0e69860aba939a4a9ee9c8a3edcf3a02d290",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:54:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-09T22:24:52Z"
+      "pushed_at": "2026-05-14T05:30:34Z"
     },
     "commits": [
+      {
+        "sha": "ef30db9aef436306a808eda3688ffb41b150ebf2",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/ef30db9aef436306a808eda3688ffb41b150ebf2",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:34Z"
+          }
+        }
+      },
       {
         "sha": "1fa0663903b7afe29e4ca7cf55225ac5056ead2a",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/1fa0663903b7afe29e4ca7cf55225ac5056ead2a",
@@ -1164,25 +1174,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "229be63d23433e4b2e17288ddbd23cb79eb51599",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/229be63d23433e4b2e17288ddbd23cb79eb51599",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:52:48Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-09T22:25:02Z"
+      "pushed_at": "2026-05-14T05:30:41Z"
     },
     "commits": [
+      {
+        "sha": "94c6b9ed9838e6e9f0e4ed72a28d8a1a2dc5fa70",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/94c6b9ed9838e6e9f0e4ed72a28d8a1a2dc5fa70",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:40Z"
+          }
+        }
+      },
       {
         "sha": "f891419a88b216f5ca1a66f7ce5a7d85f0238939",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/f891419a88b216f5ca1a66f7ce5a7d85f0238939",
@@ -1202,25 +1212,25 @@
             "date": "2026-05-09T10:35:43Z"
           }
         }
-      },
-      {
-        "sha": "e795f7579708940663f56d4350eb20bc0ef41730",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/e795f7579708940663f56d4350eb20bc0ef41730",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:54:03Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-10T05:21:10Z"
+      "pushed_at": "2026-05-14T05:30:30Z"
     },
     "commits": [
+      {
+        "sha": "38a890da1b2b41e9d0282783131562890e372524",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/38a890da1b2b41e9d0282783131562890e372524",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:30Z"
+          }
+        }
+      },
       {
         "sha": "b572dbb5b7cafac7c333f996c230b6e502ab36ec",
         "html_url": "https://github.com/freegamestore-online/slither/commit/b572dbb5b7cafac7c333f996c230b6e502ab36ec",
@@ -1240,25 +1250,25 @@
             "date": "2026-05-09T22:28:19Z"
           }
         }
-      },
-      {
-        "sha": "c1652728a19b40b2a036f7603f61a7a77f4a9d78",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/c1652728a19b40b2a036f7603f61a7a77f4a9d78",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-09T22:24:11Z"
+      "pushed_at": "2026-05-14T05:30:11Z"
     },
     "commits": [
+      {
+        "sha": "1d8f0b3df9ae4a5f97972b28f24aab6e1552e561",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/1d8f0b3df9ae4a5f97972b28f24aab6e1552e561",
+        "commit": {
+          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "author": {
+            "date": "2026-05-14T05:30:11Z"
+          }
+        }
+      },
       {
         "sha": "0d1404a0b228ecfff057f2ebabbb49b89dc43947",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/0d1404a0b228ecfff057f2ebabbb49b89dc43947",
@@ -1276,16 +1286,6 @@
           "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-09T10:35:42Z"
-          }
-        }
-      },
-      {
-        "sha": "dcaad318d489ccaa41c37790dfd3d0537152af92",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/dcaad318d489ccaa41c37790dfd3d0537152af92",
-        "commit": {
-          "message": "chore: SDK v0.12.0 — 44px topbar buttons\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T04:48:35Z"
           }
         }
       }
