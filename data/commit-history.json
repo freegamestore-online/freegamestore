@@ -2,9 +2,19 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-14T05:30:48Z"
+      "pushed_at": "2026-05-17T02:38:23Z"
     },
     "commits": [
+      {
+        "sha": "b8ccf3c2ee7accab595cf3c272ad7f0672d908c7",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/b8ccf3c2ee7accab595cf3c272ad7f0672d908c7",
+        "commit": {
+          "message": "Bump @freegamestore/games to ^0.13.0",
+          "author": {
+            "date": "2026-05-17T02:38:21Z"
+          }
+        }
+      },
       {
         "sha": "6346ffbc91af45f1f1f49c624f3e2a57835d6671",
         "html_url": "https://github.com/freegamestore-online/dice/commit/6346ffbc91af45f1f1f49c624f3e2a57835d6671",
@@ -24,25 +34,35 @@
             "date": "2026-05-14T05:00:44Z"
           }
         }
-      },
-      {
-        "sha": "2441f54c638d20c8a85145094bfb46abe08de592",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/2441f54c638d20c8a85145094bfb46abe08de592",
-        "commit": {
-          "message": "docs: point SKILLS.md links at the public storefront copy\n\nThe previous URL pointed at freeappstore-online/ops, a private repo whose\nraw URLs 404 for non-org-members (two contributors hit this). The file is\nnow mirrored at freeappstore-online/freeappstore/SKILLS.md (public).\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-14T04:37:57Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-14T05:30:10Z"
+      "pushed_at": "2026-05-17T02:38:27Z"
     },
     "commits": [
+      {
+        "sha": "42a78a6dd76f405b7ac6413bafa1c0d001221c3e",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/42a78a6dd76f405b7ac6413bafa1c0d001221c3e",
+        "commit": {
+          "message": "Bump @freegamestore/games to ^0.13.0",
+          "author": {
+            "date": "2026-05-17T02:38:25Z"
+          }
+        }
+      },
+      {
+        "sha": "c21a7468801868bf3efd6ea7a687ecc9da949932",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/c21a7468801868bf3efd6ea7a687ecc9da949932",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:34Z"
+          }
+        }
+      },
       {
         "sha": "265cb8bd4cf5ef9a9f2729ff6365ae0c7c9610c7",
         "html_url": "https://github.com/freegamestore-online/chess/commit/265cb8bd4cf5ef9a9f2729ff6365ae0c7c9610c7",
@@ -52,35 +72,25 @@
             "date": "2026-05-14T05:30:10Z"
           }
         }
-      },
-      {
-        "sha": "48acb769ca95de6dbc2007722b6826addbf0926c",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/48acb769ca95de6dbc2007722b6826addbf0926c",
-        "commit": {
-          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:26:55Z"
-          }
-        }
-      },
-      {
-        "sha": "10e0dc126af837b55045bb66d0eebdc4e69618de",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/10e0dc126af837b55045bb66d0eebdc4e69618de",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:06Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-14T05:30:04Z"
+      "pushed_at": "2026-05-17T02:38:19Z"
     },
     "commits": [
+      {
+        "sha": "3d6935684cfaf8e081edbf84e33cd0bcf8e85d4c",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/3d6935684cfaf8e081edbf84e33cd0bcf8e85d4c",
+        "commit": {
+          "message": "Bump @freegamestore/games to ^0.13.0",
+          "author": {
+            "date": "2026-05-17T02:38:17Z"
+          }
+        }
+      },
       {
         "sha": "2c627206a9d3f7d697d78d79facab630e0b3b3fd",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/2c627206a9d3f7d697d78d79facab630e0b3b3fd",
@@ -100,25 +110,25 @@
             "date": "2026-05-09T22:26:45Z"
           }
         }
-      },
-      {
-        "sha": "f80e3bbe460176a3594984cfc778b28fe1df6431",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/f80e3bbe460176a3594984cfc778b28fe1df6431",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:23:57Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-14T05:30:46Z"
+      "pushed_at": "2026-05-17T02:38:29Z"
     },
     "commits": [
+      {
+        "sha": "04470959174254cb2014c3ab7f5a160218eb925d",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/04470959174254cb2014c3ab7f5a160218eb925d",
+        "commit": {
+          "message": "Bump @freegamestore/games to ^0.13.0",
+          "author": {
+            "date": "2026-05-17T02:38:27Z"
+          }
+        }
+      },
       {
         "sha": "d6f2bae5b2a4caebd67a9b83bb33b9169235c518",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/d6f2bae5b2a4caebd67a9b83bb33b9169235c518",
@@ -138,25 +148,35 @@
             "date": "2026-05-14T05:00:47Z"
           }
         }
-      },
-      {
-        "sha": "1196d78007001ac3a7f208586783c6418977ec74",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/1196d78007001ac3a7f208586783c6418977ec74",
-        "commit": {
-          "message": "docs: point SKILLS.md links at the public storefront copy\n\nThe previous URL pointed at freeappstore-online/ops, a private repo whose\nraw URLs 404 for non-org-members (two contributors hit this). The file is\nnow mirrored at freeappstore-online/freeappstore/SKILLS.md (public).\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-14T04:37:55Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-14T05:30:07Z"
+      "pushed_at": "2026-05-17T01:34:03Z"
     },
     "commits": [
+      {
+        "sha": "45ef6776125dbf010a4aed23bb8f5cf6951347cb",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/45ef6776125dbf010a4aed23bb8f5cf6951347cb",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:01Z"
+          }
+        }
+      },
+      {
+        "sha": "ae53e76101916ffb67a88f656cab1d0dcf99afb2",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/ae53e76101916ffb67a88f656cab1d0dcf99afb2",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:32Z"
+          }
+        }
+      },
       {
         "sha": "0ee0d0faf2c7d37c82bcfb5aac2e24a76baf73aa",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/0ee0d0faf2c7d37c82bcfb5aac2e24a76baf73aa",
@@ -166,35 +186,35 @@
             "date": "2026-05-14T05:30:07Z"
           }
         }
-      },
-      {
-        "sha": "58eff00e43b2ae4f28b35f74a2943faf9bdd1a2e",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/58eff00e43b2ae4f28b35f74a2943faf9bdd1a2e",
-        "commit": {
-          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:26:50Z"
-          }
-        }
-      },
-      {
-        "sha": "e2b4b486e558afa35a1a5188c99f0a5d114aeddb",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/e2b4b486e558afa35a1a5188c99f0a5d114aeddb",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:01Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-14T05:30:19Z"
+      "pushed_at": "2026-05-17T01:34:17Z"
     },
     "commits": [
+      {
+        "sha": "a6a1c60a413dbec3049a3c448170ca1cc6ab87c7",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/a6a1c60a413dbec3049a3c448170ca1cc6ab87c7",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:15Z"
+          }
+        }
+      },
+      {
+        "sha": "cb488a3abb6961b3c0aa44fa4b6dc771a9a4b752",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/cb488a3abb6961b3c0aa44fa4b6dc771a9a4b752",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:15Z"
+          }
+        }
+      },
       {
         "sha": "fc7691da780a219dc5e05a693c9446d6b0729954",
         "html_url": "https://github.com/freegamestore-online/match3/commit/fc7691da780a219dc5e05a693c9446d6b0729954",
@@ -204,35 +224,35 @@
             "date": "2026-05-14T05:30:19Z"
           }
         }
-      },
-      {
-        "sha": "9a1b19217df587445531376b97e1ffcf187f8786",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/9a1b19217df587445531376b97e1ffcf187f8786",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:24Z"
-          }
-        }
-      },
-      {
-        "sha": "c09d243cd9aec852e6a150051c361f82ce18f219",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/c09d243cd9aec852e6a150051c361f82ce18f219",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-14T05:30:23Z"
+      "pushed_at": "2026-05-17T01:34:27Z"
     },
     "commits": [
+      {
+        "sha": "1f70e63ec0645d0b08996f3d8470fedb50d69456",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/1f70e63ec0645d0b08996f3d8470fedb50d69456",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:25Z"
+          }
+        }
+      },
+      {
+        "sha": "bef2d2e539b7ec622016f262cc9a67a31cba2ec6",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/bef2d2e539b7ec622016f262cc9a67a31cba2ec6",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:16:41Z"
+          }
+        }
+      },
       {
         "sha": "15ca9a7554d8fb19a65789cbb0f8523608be5347",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/15ca9a7554d8fb19a65789cbb0f8523608be5347",
@@ -242,35 +262,25 @@
             "date": "2026-05-14T05:30:23Z"
           }
         }
-      },
-      {
-        "sha": "06eee2ec51c670c76a495a87fe55cb257d680a4a",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/06eee2ec51c670c76a495a87fe55cb257d680a4a",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:35Z"
-          }
-        }
-      },
-      {
-        "sha": "117210636d976c40c722d6a2084879e0d6da95be",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/117210636d976c40c722d6a2084879e0d6da95be",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-14T05:30:49Z"
+      "pushed_at": "2026-05-17T02:38:21Z"
     },
     "commits": [
+      {
+        "sha": "99ef858083fe5a0a62cbb0f2eea307c1e8f0cbb1",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/99ef858083fe5a0a62cbb0f2eea307c1e8f0cbb1",
+        "commit": {
+          "message": "Bump @freegamestore/games to ^0.13.0",
+          "author": {
+            "date": "2026-05-17T02:38:19Z"
+          }
+        }
+      },
       {
         "sha": "901d9588a7b18afbe81ec0c96799ff8805d78e19",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/901d9588a7b18afbe81ec0c96799ff8805d78e19",
@@ -290,25 +300,35 @@
             "date": "2026-05-14T05:00:53Z"
           }
         }
-      },
-      {
-        "sha": "c36f84124faf117ac81611729bd7486a6e8b7179",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/c36f84124faf117ac81611729bd7486a6e8b7179",
-        "commit": {
-          "message": "docs: point SKILLS.md links at the public storefront copy\n\nThe previous URL pointed at freeappstore-online/ops, a private repo whose\nraw URLs 404 for non-org-members (two contributors hit this). The file is\nnow mirrored at freeappstore-online/freeappstore/SKILLS.md (public).\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-14T04:38:00Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-14T05:30:03Z"
+      "pushed_at": "2026-05-17T01:33:59Z"
     },
     "commits": [
+      {
+        "sha": "e606175085a94edd584e2f3b7e0a0cb6d274b02f",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/e606175085a94edd584e2f3b7e0a0cb6d274b02f",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:33:57Z"
+          }
+        }
+      },
+      {
+        "sha": "2c9a9407efa323c842ee058c555d361ba4b6c62d",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/2c9a9407efa323c842ee058c555d361ba4b6c62d",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:16:39Z"
+          }
+        }
+      },
       {
         "sha": "1a74b8eb0b9848f68e4966b4a1eddc174b767466",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/1a74b8eb0b9848f68e4966b4a1eddc174b767466",
@@ -318,35 +338,35 @@
             "date": "2026-05-14T05:30:03Z"
           }
         }
-      },
-      {
-        "sha": "53f38e2fcc3b4d1733deebdb08de21979162afa8",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/53f38e2fcc3b4d1733deebdb08de21979162afa8",
-        "commit": {
-          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:26:43Z"
-          }
-        }
-      },
-      {
-        "sha": "19f84508ed7c207243576e0918f0daec95deb17f",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/19f84508ed7c207243576e0918f0daec95deb17f",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:23:55Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-14T05:30:20Z"
+      "pushed_at": "2026-05-17T01:34:19Z"
     },
     "commits": [
+      {
+        "sha": "ac09085db01ae2cdd05f1840df4810f844a3f909",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/ac09085db01ae2cdd05f1840df4810f844a3f909",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:17Z"
+          }
+        }
+      },
+      {
+        "sha": "c870d8abd43c399a4865732360cef5e8fa8dd341",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/c870d8abd43c399a4865732360cef5e8fa8dd341",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:16:54Z"
+          }
+        }
+      },
       {
         "sha": "c686e3413aada1f5777044dd65491b17a92052f3",
         "html_url": "https://github.com/freegamestore-online/memory/commit/c686e3413aada1f5777044dd65491b17a92052f3",
@@ -356,35 +376,35 @@
             "date": "2026-05-14T05:30:20Z"
           }
         }
-      },
-      {
-        "sha": "c9023459a75121c978a4bc0a0d57fc67ccc44314",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/c9023459a75121c978a4bc0a0d57fc67ccc44314",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:26Z"
-          }
-        }
-      },
-      {
-        "sha": "73390a7e1f5f3ab0542a4217635ea6c521c44613",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/73390a7e1f5f3ab0542a4217635ea6c521c44613",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-14T05:30:15Z"
+      "pushed_at": "2026-05-17T01:34:11Z"
     },
     "commits": [
+      {
+        "sha": "18ed1e53feb76073c7b1eb93d1ca7e743800f6d5",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/18ed1e53feb76073c7b1eb93d1ca7e743800f6d5",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:09Z"
+          }
+        }
+      },
+      {
+        "sha": "7998fbc84fd25b00b329f9dc1f4139032471f13b",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/7998fbc84fd25b00b329f9dc1f4139032471f13b",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:27Z"
+          }
+        }
+      },
       {
         "sha": "88a5d28678f5dcb7164234b2b3aac6438bc32db7",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/88a5d28678f5dcb7164234b2b3aac6438bc32db7",
@@ -394,35 +414,35 @@
             "date": "2026-05-14T05:30:14Z"
           }
         }
-      },
-      {
-        "sha": "58cc845ca731d2ea64be6a723311d09f6d22bc61",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/58cc845ca731d2ea64be6a723311d09f6d22bc61",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:16Z"
-          }
-        }
-      },
-      {
-        "sha": "c5b4905d3182e3876b2014976d2f8c98c4306fbf",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/c5b4905d3182e3876b2014976d2f8c98c4306fbf",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-14T05:30:06Z"
+      "pushed_at": "2026-05-17T01:34:01Z"
     },
     "commits": [
+      {
+        "sha": "7da5725df474f54770fe1229a05ae5e88fa4f7c9",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/7da5725df474f54770fe1229a05ae5e88fa4f7c9",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:33:59Z"
+          }
+        }
+      },
+      {
+        "sha": "c90afe345e0ab8f3e369144e6e211dbcdf1071d9",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/c90afe345e0ab8f3e369144e6e211dbcdf1071d9",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:04Z"
+          }
+        }
+      },
       {
         "sha": "124974c2d674d37949fd3539488140ef30c5ed4b",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/124974c2d674d37949fd3539488140ef30c5ed4b",
@@ -432,35 +452,35 @@
             "date": "2026-05-14T05:30:06Z"
           }
         }
-      },
-      {
-        "sha": "242d46d65aa6ad5938f219f9ab71dbac6bd1a135",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/242d46d65aa6ad5938f219f9ab71dbac6bd1a135",
-        "commit": {
-          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:26:48Z"
-          }
-        }
-      },
-      {
-        "sha": "a4cc2e65c2d5735cac5a9106898ceac5cdae9cde",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/a4cc2e65c2d5735cac5a9106898ceac5cdae9cde",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:23:59Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-14T05:30:13Z"
+      "pushed_at": "2026-05-17T01:34:09Z"
     },
     "commits": [
+      {
+        "sha": "549256ed9cc41aa9934a2d647cae6e2bec5b04a4",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/549256ed9cc41aa9934a2d647cae6e2bec5b04a4",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:07Z"
+          }
+        }
+      },
+      {
+        "sha": "e133a6f397b68dcefe91f5816ec5844a68c3071c",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/e133a6f397b68dcefe91f5816ec5844a68c3071c",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:26Z"
+          }
+        }
+      },
       {
         "sha": "23950212dd52b4128106a1f6829fc3a87cb0bde8",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/23950212dd52b4128106a1f6829fc3a87cb0bde8",
@@ -470,35 +490,35 @@
             "date": "2026-05-14T05:30:13Z"
           }
         }
-      },
-      {
-        "sha": "e16e5af349b08f7f80fccb9b477bb2f11af09ab4",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/e16e5af349b08f7f80fccb9b477bb2f11af09ab4",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:14Z"
-          }
-        }
-      },
-      {
-        "sha": "cbfdc87b5972d64b725d0f8c1be6a6a97df5d64e",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/cbfdc87b5972d64b725d0f8c1be6a6a97df5d64e",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-14T05:30:17Z"
+      "pushed_at": "2026-05-17T01:34:15Z"
     },
     "commits": [
+      {
+        "sha": "6bdfc46f1aa35b14fd2451196800bc3e8a39c188",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/6bdfc46f1aa35b14fd2451196800bc3e8a39c188",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:13Z"
+          }
+        }
+      },
+      {
+        "sha": "7e7cabe6d046b7805d8a933c8c4caeb1e7af31fa",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/7e7cabe6d046b7805d8a933c8c4caeb1e7af31fa",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:30Z"
+          }
+        }
+      },
       {
         "sha": "20b3bd675ec2093706479af5fd8202c48189ad01",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/20b3bd675ec2093706479af5fd8202c48189ad01",
@@ -508,35 +528,35 @@
             "date": "2026-05-14T05:30:17Z"
           }
         }
-      },
-      {
-        "sha": "82bd31f460a4bf07f88192ff259112cf5eb6e31f",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/82bd31f460a4bf07f88192ff259112cf5eb6e31f",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:22Z"
-          }
-        }
-      },
-      {
-        "sha": "dc6a90c2996c13e0d7f158cc9b98d586eb54540d",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/dc6a90c2996c13e0d7f158cc9b98d586eb54540d",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-14T05:30:16Z"
+      "pushed_at": "2026-05-17T01:34:13Z"
     },
     "commits": [
+      {
+        "sha": "f8b5e05b7d95cde24fc24dcd39027732a2dc2083",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/f8b5e05b7d95cde24fc24dcd39027732a2dc2083",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:11Z"
+          }
+        }
+      },
+      {
+        "sha": "b24ff781933f29c3b7e26ec8a440dea6586ff0ae",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/b24ff781933f29c3b7e26ec8a440dea6586ff0ae",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:09Z"
+          }
+        }
+      },
       {
         "sha": "29aebda4984c7cd471aae05c76f17562443bb36a",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/29aebda4984c7cd471aae05c76f17562443bb36a",
@@ -546,35 +566,35 @@
             "date": "2026-05-14T05:30:16Z"
           }
         }
-      },
-      {
-        "sha": "562115545bb62fe3234fd8f9f6fb7f45667f7767",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/562115545bb62fe3234fd8f9f6fb7f45667f7767",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:18Z"
-          }
-        }
-      },
-      {
-        "sha": "430f3cc39a2d5db6575e1876b0111368a2459ec2",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/430f3cc39a2d5db6575e1876b0111368a2459ec2",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-14T05:30:52Z"
+      "pushed_at": "2026-05-17T01:34:23Z"
     },
     "commits": [
+      {
+        "sha": "6f3ace7b2537af879117f6cad953f4b3a7064342",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/6f3ace7b2537af879117f6cad953f4b3a7064342",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:21Z"
+          }
+        }
+      },
+      {
+        "sha": "9ce0582a1417089ac99fff6bc5b1da56340d5095",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/9ce0582a1417089ac99fff6bc5b1da56340d5095",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:06Z"
+          }
+        }
+      },
       {
         "sha": "9da74da1f5f469b7c61f9e3fc47d29e990f12106",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/9da74da1f5f469b7c61f9e3fc47d29e990f12106",
@@ -584,35 +604,35 @@
             "date": "2026-05-14T05:30:52Z"
           }
         }
-      },
-      {
-        "sha": "b77900e93d056118c0a1732401741fe4b093c699",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/b77900e93d056118c0a1732401741fe4b093c699",
-        "commit": {
-          "message": "docs(CLAUDE): point SKILLS link at public copy + drop stale paths\n\nTwo fixes in one — same as the broader sweep across the other games:\n\n1. SKILLS.md URL was pointing at the private freeappstore-online/ops\n   repo, which raw.githubusercontent serves as 404 to non-org-members.\n   Switched to the public mirror at freeappstore-online/freeappstore.\n\n2. Workspace paths invented a ~/dev/fgs/platform/ nesting that doesn't\n   exist; the auditor repo is private. Aligned with the flat layout\n   used everywhere else.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-14T05:02:55Z"
-          }
-        }
-      },
-      {
-        "sha": "8a0424e39ac641834d57c4b9e48be227198c4e9a",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/8a0424e39ac641834d57c4b9e48be227198c4e9a",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:31Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-14T05:30:27Z"
+      "pushed_at": "2026-05-17T01:34:33Z"
     },
     "commits": [
+      {
+        "sha": "c44c428f7444848dab52ca5f55e13c5106588eda",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/c44c428f7444848dab52ca5f55e13c5106588eda",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:31Z"
+          }
+        }
+      },
+      {
+        "sha": "721d575c720bf597d8b8c9e883f03c7527cd3061",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/721d575c720bf597d8b8c9e883f03c7527cd3061",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:00Z"
+          }
+        }
+      },
       {
         "sha": "5b0c02958a7b3518a0c178eb30df6828f85907a5",
         "html_url": "https://github.com/freegamestore-online/racing/commit/5b0c02958a7b3518a0c178eb30df6828f85907a5",
@@ -622,35 +642,35 @@
             "date": "2026-05-14T05:30:27Z"
           }
         }
-      },
-      {
-        "sha": "69e54cec25ef75936f1a7f0b07a7d6df1b48c0ed",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/69e54cec25ef75936f1a7f0b07a7d6df1b48c0ed",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:41Z"
-          }
-        }
-      },
-      {
-        "sha": "3a65643d4a90e32e8eb3e63d4e89c27810cdaf60",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/3a65643d4a90e32e8eb3e63d4e89c27810cdaf60",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-14T05:30:26Z"
+      "pushed_at": "2026-05-17T01:34:31Z"
     },
     "commits": [
+      {
+        "sha": "32cebbf4c9718c0d803dc4a9e571b4a4d10bbfe2",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/32cebbf4c9718c0d803dc4a9e571b4a4d10bbfe2",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:29Z"
+          }
+        }
+      },
+      {
+        "sha": "e04f64c75f84c6fc504a8ed3564301754112dbf9",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/e04f64c75f84c6fc504a8ed3564301754112dbf9",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:16:58Z"
+          }
+        }
+      },
       {
         "sha": "931b7151d9685447e14ac5583018cdc4871c6c4e",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/931b7151d9685447e14ac5583018cdc4871c6c4e",
@@ -660,35 +680,25 @@
             "date": "2026-05-14T05:30:26Z"
           }
         }
-      },
-      {
-        "sha": "5cc3a02b17da472db670d3d329b146764e343678",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/5cc3a02b17da472db670d3d329b146764e343678",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:39Z"
-          }
-        }
-      },
-      {
-        "sha": "58969d372c1d1ed8767a1baf12f1873db15101b2",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/58969d372c1d1ed8767a1baf12f1873db15101b2",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-14T05:30:51Z"
+      "pushed_at": "2026-05-17T01:34:21Z"
     },
     "commits": [
+      {
+        "sha": "6cf785b9d115d5ea79c208a232cdb6e64707046c",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/6cf785b9d115d5ea79c208a232cdb6e64707046c",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:19Z"
+          }
+        }
+      },
       {
         "sha": "f5f2c925fef2fff821025f86741c106db096ac38",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/f5f2c925fef2fff821025f86741c106db096ac38",
@@ -708,25 +718,35 @@
             "date": "2026-05-14T05:00:50Z"
           }
         }
-      },
-      {
-        "sha": "1ed6cbcb362df81876ad93615516c7f5ecf290bc",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/1ed6cbcb362df81876ad93615516c7f5ecf290bc",
-        "commit": {
-          "message": "docs: point SKILLS.md links at the public storefront copy\n\nThe previous URL pointed at freeappstore-online/ops, a private repo whose\nraw URLs 404 for non-org-members (two contributors hit this). The file is\nnow mirrored at freeappstore-online/freeappstore/SKILLS.md (public).\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-14T04:38:03Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-14T05:30:01Z"
+      "pushed_at": "2026-05-17T01:33:57Z"
     },
     "commits": [
+      {
+        "sha": "79c12c835765b55a5b7f8c3971401b4b79448dc3",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/79c12c835765b55a5b7f8c3971401b4b79448dc3",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:33:55Z"
+          }
+        }
+      },
+      {
+        "sha": "9aa6d93e00a1db921bda762efb1f56f9f51c75af",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/9aa6d93e00a1db921bda762efb1f56f9f51c75af",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:16:45Z"
+          }
+        }
+      },
       {
         "sha": "4367c3918b58d2b518b2ae17cbdfe5f79be8663c",
         "html_url": "https://github.com/freegamestore-online/2048/commit/4367c3918b58d2b518b2ae17cbdfe5f79be8663c",
@@ -736,35 +756,35 @@
             "date": "2026-05-14T05:30:01Z"
           }
         }
-      },
-      {
-        "sha": "b02f98755642c53ff9471308d5b6fa6f27d1c77a",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/b02f98755642c53ff9471308d5b6fa6f27d1c77a",
-        "commit": {
-          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:26:41Z"
-          }
-        }
-      },
-      {
-        "sha": "b20f47202bf77bec8cf1ae376bdc0166034603e1",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/b20f47202bf77bec8cf1ae376bdc0166034603e1",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:23:53Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-14T05:30:09Z"
+      "pushed_at": "2026-05-17T01:34:05Z"
     },
     "commits": [
+      {
+        "sha": "792fd6290c0ad2e40c2dac6cbf1f55597fb1cfa8",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/792fd6290c0ad2e40c2dac6cbf1f55597fb1cfa8",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:03Z"
+          }
+        }
+      },
+      {
+        "sha": "3a35638e84ecf49694f81bba9ab7c6fac7c22978",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/3a35638e84ecf49694f81bba9ab7c6fac7c22978",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:16:50Z"
+          }
+        }
+      },
       {
         "sha": "308c5e2329926830e0f1c58c67f7c48ba44580a5",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/308c5e2329926830e0f1c58c67f7c48ba44580a5",
@@ -774,35 +794,35 @@
             "date": "2026-05-14T05:30:08Z"
           }
         }
-      },
-      {
-        "sha": "a432d663a7b217a1c309efe26c25bc9fcb452477",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/a432d663a7b217a1c309efe26c25bc9fcb452477",
-        "commit": {
-          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:26:53Z"
-          }
-        }
-      },
-      {
-        "sha": "2e7aca8eccee4a92f6dd6d40b8f7715acc0c1dbd",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/2e7aca8eccee4a92f6dd6d40b8f7715acc0c1dbd",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:04Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-14T05:30:29Z"
+      "pushed_at": "2026-05-17T01:34:35Z"
     },
     "commits": [
+      {
+        "sha": "80564498fd0d36489c0c1f073d242e715b24e301",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/80564498fd0d36489c0c1f073d242e715b24e301",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:33Z"
+          }
+        }
+      },
+      {
+        "sha": "ef53a76a0a18a9ead865557f94c8c3f80a77f797",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/ef53a76a0a18a9ead865557f94c8c3f80a77f797",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:13Z"
+          }
+        }
+      },
       {
         "sha": "d1c910713a9f359c751b022224a4dddb1c8b47ec",
         "html_url": "https://github.com/freegamestore-online/simon/commit/d1c910713a9f359c751b022224a4dddb1c8b47ec",
@@ -812,35 +832,35 @@
             "date": "2026-05-14T05:30:29Z"
           }
         }
-      },
-      {
-        "sha": "472957724ad6c946276c4fd4baab5045942c34d1",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/472957724ad6c946276c4fd4baab5045942c34d1",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:44Z"
-          }
-        }
-      },
-      {
-        "sha": "e945c3c5ff3eb68fd484282ee641bcb40309ef27",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/e945c3c5ff3eb68fd484282ee641bcb40309ef27",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-14T05:30:32Z"
+      "pushed_at": "2026-05-17T01:34:37Z"
     },
     "commits": [
+      {
+        "sha": "62855fc0b1f1dea3d886e13a12c1bafdd18afc43",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/62855fc0b1f1dea3d886e13a12c1bafdd18afc43",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:35Z"
+          }
+        }
+      },
+      {
+        "sha": "b35fc55cb11553f7ba2f9c267e2e559010b3b4fc",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/b35fc55cb11553f7ba2f9c267e2e559010b3b4fc",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:38Z"
+          }
+        }
+      },
       {
         "sha": "19b608d99d87656eeef4f7ea891d9a0c7721b4de",
         "html_url": "https://github.com/freegamestore-online/snake/commit/19b608d99d87656eeef4f7ea891d9a0c7721b4de",
@@ -850,35 +870,35 @@
             "date": "2026-05-14T05:30:31Z"
           }
         }
-      },
-      {
-        "sha": "b3e90af70750036e3d805e2645ee0aa432b637c6",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/b3e90af70750036e3d805e2645ee0aa432b637c6",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:48Z"
-          }
-        }
-      },
-      {
-        "sha": "f08fc2379f4251dc462954936df03ec7018c87cb",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/f08fc2379f4251dc462954936df03ec7018c87cb",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-14T05:30:53Z"
+      "pushed_at": "2026-05-17T01:34:47Z"
     },
     "commits": [
+      {
+        "sha": "33aa3b394577005d3f5cfc5005250c1e1d91b871",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/33aa3b394577005d3f5cfc5005250c1e1d91b871",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:45Z"
+          }
+        }
+      },
+      {
+        "sha": "4bc77c57823ab9316354f65ccb0eb9b59b1891fc",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/4bc77c57823ab9316354f65ccb0eb9b59b1891fc",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:11Z"
+          }
+        }
+      },
       {
         "sha": "5120f1d10ded2a7ba9144e668313dafba88afe99",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/5120f1d10ded2a7ba9144e668313dafba88afe99",
@@ -888,35 +908,35 @@
             "date": "2026-05-14T05:30:53Z"
           }
         }
-      },
-      {
-        "sha": "83d66514f0a665e85a7a94692f88f3e8f93272e5",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/83d66514f0a665e85a7a94692f88f3e8f93272e5",
-        "commit": {
-          "message": "docs(CLAUDE): point SKILLS link at public copy + drop stale paths\n\nTwo fixes in one — same as the broader sweep across the other games:\n\n1. SKILLS.md URL was pointing at the private freeappstore-online/ops\n   repo, which raw.githubusercontent serves as 404 to non-org-members.\n   Switched to the public mirror at freeappstore-online/freeappstore.\n\n2. Workspace paths invented a ~/dev/fgs/platform/ nesting that doesn't\n   exist; the auditor repo is private. Aligned with the flat layout\n   used everywhere else.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-14T05:03:29Z"
-          }
-        }
-      },
-      {
-        "sha": "26a4f0809cb19c92de4aefea45ae58d1a7969ef2",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/26a4f0809cb19c92de4aefea45ae58d1a7969ef2",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:59Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-14T05:30:35Z"
+      "pushed_at": "2026-05-17T01:34:41Z"
     },
     "commits": [
+      {
+        "sha": "d3351f126af178db207b71daf6e7670328cbb094",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/d3351f126af178db207b71daf6e7670328cbb094",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:39Z"
+          }
+        }
+      },
+      {
+        "sha": "639e40f34f5c7c8352fbce7846ba13683987f049",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/639e40f34f5c7c8352fbce7846ba13683987f049",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:36Z"
+          }
+        }
+      },
       {
         "sha": "c6d60d22ae48e746404dc8636fd11c851cabe69b",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/c6d60d22ae48e746404dc8636fd11c851cabe69b",
@@ -926,35 +946,35 @@
             "date": "2026-05-14T05:30:35Z"
           }
         }
-      },
-      {
-        "sha": "1ea7fc7ef1a9525468cfdf995b9c507400dbe479",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/1ea7fc7ef1a9525468cfdf995b9c507400dbe479",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:52Z"
-          }
-        }
-      },
-      {
-        "sha": "0c3bf3c5f01e85ef15dd90d59b6dadf20d7419af",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/0c3bf3c5f01e85ef15dd90d59b6dadf20d7419af",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-14T05:30:39Z"
+      "pushed_at": "2026-05-17T01:34:45Z"
     },
     "commits": [
+      {
+        "sha": "f9155d3ed13e1a03ec65ba3d2b1971db6bb45505",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/f9155d3ed13e1a03ec65ba3d2b1971db6bb45505",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:43Z"
+          }
+        }
+      },
+      {
+        "sha": "cd614d36d16cffe529b475083e8b496269695108",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/cd614d36d16cffe529b475083e8b496269695108",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:02Z"
+          }
+        }
+      },
       {
         "sha": "2302f9cec44c808c7351adcefa3fb789afbbb1bf",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/2302f9cec44c808c7351adcefa3fb789afbbb1bf",
@@ -964,35 +984,35 @@
             "date": "2026-05-14T05:30:39Z"
           }
         }
-      },
-      {
-        "sha": "c1c367bf2dc7cf229378e9a322b9a397c49581d9",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/c1c367bf2dc7cf229378e9a322b9a397c49581d9",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:57Z"
-          }
-        }
-      },
-      {
-        "sha": "fc8cd2e55915d8fd0809c8073f8fb95c416e9f9a",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/fc8cd2e55915d8fd0809c8073f8fb95c416e9f9a",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-14T05:30:22Z"
+      "pushed_at": "2026-05-17T01:34:25Z"
     },
     "commits": [
+      {
+        "sha": "f034fab9afccebd4aa8ac11b482f5df2e57d02a3",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/f034fab9afccebd4aa8ac11b482f5df2e57d02a3",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:23Z"
+          }
+        }
+      },
+      {
+        "sha": "809e17ed02e7a2d69a58f9f35cfb3d91b0843759",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/809e17ed02e7a2d69a58f9f35cfb3d91b0843759",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:16:43Z"
+          }
+        }
+      },
       {
         "sha": "e1053936d923e17316a007566923fa472e1e792a",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/e1053936d923e17316a007566923fa472e1e792a",
@@ -1002,35 +1022,35 @@
             "date": "2026-05-14T05:30:22Z"
           }
         }
-      },
-      {
-        "sha": "4e4718102ae1c6e3bb64f9ba8b9be39d76076951",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/4e4718102ae1c6e3bb64f9ba8b9be39d76076951",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:33Z"
-          }
-        }
-      },
-      {
-        "sha": "2cfd7915d6ffabe109e5bd5e68fbededd990dc7c",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/2cfd7915d6ffabe109e5bd5e68fbededd990dc7c",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-14T05:30:25Z"
+      "pushed_at": "2026-05-17T01:34:29Z"
     },
     "commits": [
+      {
+        "sha": "a8956a86c08ab4293a5bc8ed5ee8e7ddfdd099f2",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/a8956a86c08ab4293a5bc8ed5ee8e7ddfdd099f2",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:27Z"
+          }
+        }
+      },
+      {
+        "sha": "0af64dc34a7ed0ab3b23f6c98f64f94623aa61fc",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/0af64dc34a7ed0ab3b23f6c98f64f94623aa61fc",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:23Z"
+          }
+        }
+      },
       {
         "sha": "6ec1f2a5a8ac51c5d4a4c80d52b9c609479c04c7",
         "html_url": "https://github.com/freegamestore-online/pong/commit/6ec1f2a5a8ac51c5d4a4c80d52b9c609479c04c7",
@@ -1040,35 +1060,35 @@
             "date": "2026-05-14T05:30:24Z"
           }
         }
-      },
-      {
-        "sha": "b5c988f4fe25c89ae865cfed6686b8355f9e2bb1",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/b5c988f4fe25c89ae865cfed6686b8355f9e2bb1",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:37Z"
-          }
-        }
-      },
-      {
-        "sha": "17a787a16ca77bbad4d2558734b8421237251870",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/17a787a16ca77bbad4d2558734b8421237251870",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-14T05:30:38Z"
+      "pushed_at": "2026-05-17T01:34:43Z"
     },
     "commits": [
+      {
+        "sha": "941f6f3c09444a0d2af5b79b8e697b90da987cd1",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/941f6f3c09444a0d2af5b79b8e697b90da987cd1",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:41Z"
+          }
+        }
+      },
+      {
+        "sha": "5c2d1e47df0f9501b401aea6ed22be88cf7a6476",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/5c2d1e47df0f9501b401aea6ed22be88cf7a6476",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:21Z"
+          }
+        }
+      },
       {
         "sha": "80aacfa5640572ad3ddb5bc40b16e3702b27acd5",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/80aacfa5640572ad3ddb5bc40b16e3702b27acd5",
@@ -1078,35 +1098,35 @@
             "date": "2026-05-14T05:30:37Z"
           }
         }
-      },
-      {
-        "sha": "4419f737863e08cf9f81a1a7b523f748b1239618",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/4419f737863e08cf9f81a1a7b523f748b1239618",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:55Z"
-          }
-        }
-      },
-      {
-        "sha": "a2d798bed39e188888a92a9d233b893106d1a098",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/a2d798bed39e188888a92a9d233b893106d1a098",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-14T05:30:42Z"
+      "pushed_at": "2026-05-17T01:34:51Z"
     },
     "commits": [
+      {
+        "sha": "191e9478e1121e71358ea0528b4c70604713cba4",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/191e9478e1121e71358ea0528b4c70604713cba4",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:49Z"
+          }
+        }
+      },
+      {
+        "sha": "a5f32570e24948f5cebdb126b75f67b281d3ccd8",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/a5f32570e24948f5cebdb126b75f67b281d3ccd8",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:16:56Z"
+          }
+        }
+      },
       {
         "sha": "a2e3d00cefa2600201183764e36d71710ee382a7",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/a2e3d00cefa2600201183764e36d71710ee382a7",
@@ -1116,35 +1136,35 @@
             "date": "2026-05-14T05:30:42Z"
           }
         }
-      },
-      {
-        "sha": "9a3ae599a0cb512b530fe5ff07519925bdb1be2d",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/9a3ae599a0cb512b530fe5ff07519925bdb1be2d",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:25:03Z"
-          }
-        }
-      },
-      {
-        "sha": "44cbf745f83c856c712ce4adf5cae90709c8b2da",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/44cbf745f83c856c712ce4adf5cae90709c8b2da",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-14T05:30:34Z"
+      "pushed_at": "2026-05-17T01:34:39Z"
     },
     "commits": [
+      {
+        "sha": "e5117a925b4920c6f79482ca3393f4366497a278",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/e5117a925b4920c6f79482ca3393f4366497a278",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:37Z"
+          }
+        }
+      },
+      {
+        "sha": "c80ff209cb52a38e50f2c6d46c7116545fccc2bd",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/c80ff209cb52a38e50f2c6d46c7116545fccc2bd",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:16:48Z"
+          }
+        }
+      },
       {
         "sha": "ef30db9aef436306a808eda3688ffb41b150ebf2",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/ef30db9aef436306a808eda3688ffb41b150ebf2",
@@ -1154,35 +1174,35 @@
             "date": "2026-05-14T05:30:34Z"
           }
         }
-      },
-      {
-        "sha": "1fa0663903b7afe29e4ca7cf55225ac5056ead2a",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/1fa0663903b7afe29e4ca7cf55225ac5056ead2a",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:50Z"
-          }
-        }
-      },
-      {
-        "sha": "e4f817f9bd49f1791a3da309afff59cfe22f372a",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/e4f817f9bd49f1791a3da309afff59cfe22f372a",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-14T05:30:41Z"
+      "pushed_at": "2026-05-17T01:34:49Z"
     },
     "commits": [
+      {
+        "sha": "d928a8ea6a7ccb2c2c07943ec6aebe36ac323524",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/d928a8ea6a7ccb2c2c07943ec6aebe36ac323524",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:47Z"
+          }
+        }
+      },
+      {
+        "sha": "4c062a3c9c082f5ee1595f23cace7e783982a591",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/4c062a3c9c082f5ee1595f23cace7e783982a591",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:19Z"
+          }
+        }
+      },
       {
         "sha": "94c6b9ed9838e6e9f0e4ed72a28d8a1a2dc5fa70",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/94c6b9ed9838e6e9f0e4ed72a28d8a1a2dc5fa70",
@@ -1192,35 +1212,35 @@
             "date": "2026-05-14T05:30:40Z"
           }
         }
-      },
-      {
-        "sha": "f891419a88b216f5ca1a66f7ce5a7d85f0238939",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/f891419a88b216f5ca1a66f7ce5a7d85f0238939",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:25:01Z"
-          }
-        }
-      },
-      {
-        "sha": "04a38086fdc307b88f424019eaf13778bdbf4949",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/04a38086fdc307b88f424019eaf13778bdbf4949",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-14T05:30:30Z"
+      "pushed_at": "2026-05-17T02:38:25Z"
     },
     "commits": [
+      {
+        "sha": "22ec8a59fad5c38f71343b04af01d3464d20dadd",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/22ec8a59fad5c38f71343b04af01d3464d20dadd",
+        "commit": {
+          "message": "Bump @freegamestore/games to ^0.13.0",
+          "author": {
+            "date": "2026-05-17T02:38:23Z"
+          }
+        }
+      },
+      {
+        "sha": "e21bb7f84bb50c7ecf73703b1a8b7930827d9d5f",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/e21bb7f84bb50c7ecf73703b1a8b7930827d9d5f",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:17:17Z"
+          }
+        }
+      },
       {
         "sha": "38a890da1b2b41e9d0282783131562890e372524",
         "html_url": "https://github.com/freegamestore-online/slither/commit/38a890da1b2b41e9d0282783131562890e372524",
@@ -1230,35 +1250,35 @@
             "date": "2026-05-14T05:30:30Z"
           }
         }
-      },
-      {
-        "sha": "b572dbb5b7cafac7c333f996c230b6e502ab36ec",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/b572dbb5b7cafac7c333f996c230b6e502ab36ec",
-        "commit": {
-          "message": "fix: single GameShell with game-over overlay, fix test errors\n\nGame over now renders as overlay on canvas instead of replacing it.\nAdded GameAuth to topbar. Fixed compliance test css var + vitest ref.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-10T05:21:08Z"
-          }
-        }
-      },
-      {
-        "sha": "1eaaf105ee39c76f5a07ea3239d6c89131ba08ad",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/1eaaf105ee39c76f5a07ea3239d6c89131ba08ad",
-        "commit": {
-          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:28:19Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-14T05:30:11Z"
+      "pushed_at": "2026-05-17T01:34:07Z"
     },
     "commits": [
+      {
+        "sha": "f0060fe7f20092733cdf5f17bf42de47ecc5bdd6",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/f0060fe7f20092733cdf5f17bf42de47ecc5bdd6",
+        "commit": {
+          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "author": {
+            "date": "2026-05-17T01:34:05Z"
+          }
+        }
+      },
+      {
+        "sha": "885e18ce75acd6057a786387705d9a39b8955f10",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/885e18ce75acd6057a786387705d9a39b8955f10",
+        "commit": {
+          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "author": {
+            "date": "2026-05-17T01:16:52Z"
+          }
+        }
+      },
       {
         "sha": "1d8f0b3df9ae4a5f97972b28f24aab6e1552e561",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/1d8f0b3df9ae4a5f97972b28f24aab6e1552e561",
@@ -1266,26 +1286,6 @@
           "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
           "author": {
             "date": "2026-05-14T05:30:11Z"
-          }
-        }
-      },
-      {
-        "sha": "0d1404a0b228ecfff057f2ebabbb49b89dc43947",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/0d1404a0b228ecfff057f2ebabbb49b89dc43947",
-        "commit": {
-          "message": "chore: sync latest changes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:24:10Z"
-          }
-        }
-      },
-      {
-        "sha": "4c7441978a6c119e3567163f09d0abf36e97ce28",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/4c7441978a6c119e3567163f09d0abf36e97ce28",
-        "commit": {
-          "message": "docs: update CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T10:35:42Z"
           }
         }
       }
