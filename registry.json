@@ -817,6 +817,19 @@
       "cfProject": "freebubbleshooterapp",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "spaceinvaders",
+      "name": "spaceinvaders",
+      "category": "Arcade",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Defend the base from waves of descending invaders. They speed up as they thin.",
+      "appUrl": "https://spaceinvaders.freegamestore.online",
+      "repo": "freegamestore-online/spaceinvaders",
+      "cfProject": "freespaceinvadersapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
