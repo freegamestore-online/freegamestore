@@ -166,7 +166,7 @@
       "id": "coinflip",
       "name": "coinflip",
       "category": "casual",
-      "icon": "\ud83c\udfae",
+      "icon": "🎮",
       "iconBg": "#f3f4f6",
       "description": "Tap to flip a coin. Tracks the last 20.",
       "appUrl": "https://coinflip.freegamestore.online",
@@ -203,7 +203,7 @@
       "id": "dice",
       "name": "dice",
       "category": "casual",
-      "icon": "\ud83c\udfae",
+      "icon": "🎮",
       "iconBg": "#f3f4f6",
       "description": "Roll up to 6 dice. Tap to throw, sum auto-totals.",
       "appUrl": "https://dice.freegamestore.online",
@@ -288,7 +288,7 @@
       "id": "highlow",
       "name": "highlow",
       "category": "cards",
-      "icon": "\ud83c\udfae",
+      "icon": "🎮",
       "iconBg": "#f3f4f6",
       "description": "Will the next card be higher or lower? Build a streak.",
       "appUrl": "https://highlow.freegamestore.online",
@@ -373,7 +373,7 @@
       "id": "memorymatch",
       "name": "memorymatch",
       "category": "brain-training",
-      "icon": "\ud83c\udfae",
+      "icon": "🎮",
       "iconBg": "#f3f4f6",
       "description": "Match the pairs. Time and move counter included.",
       "appUrl": "https://memorymatch.freegamestore.online",
@@ -765,6 +765,19 @@
           "notes": "Initial release with daily and practice modes."
         }
       ]
+    },
+    {
+      "id": "tictactoe",
+      "name": "tictactoe",
+      "category": "Strategy",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Classic 3x3 vs a perfect-play AI",
+      "appUrl": "https://tictactoe.freegamestore.online",
+      "repo": "freegamestore-online/tictactoe",
+      "cfProject": "freetictactoeapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
