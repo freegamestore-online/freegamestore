@@ -804,6 +804,19 @@
       "cfProject": "freeblackjackapp",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "bubbleshooter",
+      "name": "bubbleshooter",
+      "category": "Casual",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Aim, shoot, pop colored bubble clusters. Drop the floaters.",
+      "appUrl": "https://bubbleshooter.freegamestore.online",
+      "repo": "freegamestore-online/bubbleshooter",
+      "cfProject": "freebubbleshooterapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
