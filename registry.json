@@ -778,6 +778,19 @@
       "cfProject": "freetictactoeapp",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "reversi",
+      "name": "reversi",
+      "category": "Strategy",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Othello. 8x8 board, AI plays the corners.",
+      "appUrl": "https://reversi.freegamestore.online",
+      "repo": "freegamestore-online/reversi",
+      "cfProject": "freereversiapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
