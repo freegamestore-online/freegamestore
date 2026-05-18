@@ -791,6 +791,19 @@
       "cfProject": "freereversiapp",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "blackjack",
+      "name": "blackjack",
+      "category": "Cards",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Single-deck blackjack vs dealer. Hit, stand, double down. 3:2 naturals.",
+      "appUrl": "https://blackjack.freegamestore.online",
+      "repo": "freegamestore-online/blackjack",
+      "cfProject": "freeblackjackapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
