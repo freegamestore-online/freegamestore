@@ -2,9 +2,19 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-17T02:38:23Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "5d0cf7372e887f261232692f827a32b98e875fc5",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/5d0cf7372e887f261232692f827a32b98e875fc5",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "b8ccf3c2ee7accab595cf3c272ad7f0672d908c7",
         "html_url": "https://github.com/freegamestore-online/dice/commit/b8ccf3c2ee7accab595cf3c272ad7f0672d908c7",
@@ -24,52 +34,42 @@
             "date": "2026-05-14T05:30:47Z"
           }
         }
-      },
-      {
-        "sha": "24e6f57706187576fc8c6b6aac76b62c0c63aa55",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/24e6f57706187576fc8c6b6aac76b62c0c63aa55",
-        "commit": {
-          "message": "docs(CLAUDE): drop stale platform/ + infra/ path segments\n\nThese paths never existed for external contributors and the auditor\nrepo is private. AI agents reading this CLAUDE.md were being told to\nlook in directories that don't resolve. Aligned with the post-sweep\nflat layout described in the public SKILLS.md.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-14T05:00:44Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-17T02:38:27Z"
+      "pushed_at": "2026-05-18T22:55:22Z"
     },
     "commits": [
       {
-        "sha": "42a78a6dd76f405b7ac6413bafa1c0d001221c3e",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/42a78a6dd76f405b7ac6413bafa1c0d001221c3e",
+        "sha": "474d242aacc8c8828fcacbeea8b1d2fb7793f96e",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/474d242aacc8c8828fcacbeea8b1d2fb7793f96e",
         "commit": {
-          "message": "Bump @freegamestore/games to ^0.13.0",
+          "message": "fix(pwa): NetworkFirst on HTML so fresh deploys are picked up immediately\n\nService worker was serving cached index.html with stale asset references\nafter a deploy. Vite content-hashes assets correctly, but the cached HTML\npointed at old hashes, so users saw the old version until all tabs closed.\n\nNetworkFirst on navigation requests means: when online, always fetch fresh\nHTML (3s timeout, fall back to cache). When offline, precached index.html\nstill serves via navigateFallback. Best of both worlds.\n\nAlso reformatted vite.config.ts from one 1KB line into readable structure.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T02:38:25Z"
+            "date": "2026-05-18T22:55:19Z"
           }
         }
       },
       {
-        "sha": "c21a7468801868bf3efd6ea7a687ecc9da949932",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/c21a7468801868bf3efd6ea7a687ecc9da949932",
+        "sha": "c8391504aacb9f855d75c866c7179054cedbda13",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/c8391504aacb9f855d75c866c7179054cedbda13",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "refactor(PlayTab): split into 6 focused sub-components\n\nExtract from PlayTab:\n- EvalBar — Stockfish eval visualization\n- PlayerRow — opponent / player avatar+label row (reused twice)\n- GameControls — New/Undo/Flip/Mic button row\n- DifficultyColorPicker — difficulty 1-5 + color w/b pills\n- GameOverBanner — terminal-state message + Play Again\n- VoiceInstructions — voice command cheatsheet\n\nPlayTab function: 508 → 393 lines, complexity 75 → 66\nVCQA: B 81 → B 82 (confusion C 65 → A 90)\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:34Z"
+            "date": "2026-05-18T22:48:08Z"
           }
         }
       },
       {
-        "sha": "265cb8bd4cf5ef9a9f2729ff6365ae0c7c9610c7",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/265cb8bd4cf5ef9a9f2729ff6365ae0c7c9610c7",
+        "sha": "95a28ffcabe6dc4b934bd80077133d35fef9af36",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/95a28ffcabe6dc4b934bd80077133d35fef9af36",
         "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "message": "chore: code-health pass — Cburnett pieces, VCQA fixes, build unbroken\n\n- Replace Unicode piece glyphs with Cburnett SVG set (CC-BY-SA, lichess/Wikipedia)\n- Add README, CHANGELOG, SECURITY, CONTRIBUTING (docs F 10 → covered)\n- Tighten compliance.yml permissions (default-deny + workflow scope read)\n- Add repository/license/homepage to package.json\n- Add Content-Security-Policy meta (self + Google Fonts + wasm worker)\n- Patch moderate vulns via pnpm overrides (brace-expansion, ws)\n- Rename generic vars: update → updateSettings, result → evalResult/sentence, input → spoken\n- Collapse duplicate highlight rects in Board.tsx into one conditional rect\n- Extract undoMovePair helper in PlayTab.tsx (was duplicated across voice + button)\n- Exclude src/test from tsconfig.app.json so prod build doesn't trip on node: imports\n- Ignore .vibe-check/ generated reports\n\nVCQA: B 75 → B 81 (+6 pts, 23 issues fixed)\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-14T05:30:10Z"
+            "date": "2026-05-18T20:48:11Z"
           }
         }
       }
@@ -78,9 +78,19 @@
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-17T02:38:19Z"
+      "pushed_at": "2026-05-18T22:23:26Z"
     },
     "commits": [
+      {
+        "sha": "d15d341c864f1146be158783f5e20812dedb0eb8",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/d15d341c864f1146be158783f5e20812dedb0eb8",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "3d6935684cfaf8e081edbf84e33cd0bcf8e85d4c",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/3d6935684cfaf8e081edbf84e33cd0bcf8e85d4c",
@@ -100,25 +110,25 @@
             "date": "2026-05-14T05:30:04Z"
           }
         }
-      },
-      {
-        "sha": "fe40f3787b4e45ad5bfbfb6bb411d78f3a0dc3bb",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/fe40f3787b4e45ad5bfbfb6bb411d78f3a0dc3bb",
-        "commit": {
-          "message": "test: add compliance tests\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-09T22:26:45Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-17T02:38:29Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "a861d648dc68eb4b8db84b331c003422eb9005ad",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/a861d648dc68eb4b8db84b331c003422eb9005ad",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "04470959174254cb2014c3ab7f5a160218eb925d",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/04470959174254cb2014c3ab7f5a160218eb925d",
@@ -138,25 +148,25 @@
             "date": "2026-05-14T05:30:46Z"
           }
         }
-      },
-      {
-        "sha": "80ceb36abc41992638bbcb66060c822e6f7d93d0",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/80ceb36abc41992638bbcb66060c822e6f7d93d0",
-        "commit": {
-          "message": "docs(CLAUDE): drop stale platform/ + infra/ path segments\n\nThese paths never existed for external contributors and the auditor\nrepo is private. AI agents reading this CLAUDE.md were being told to\nlook in directories that don't resolve. Aligned with the post-sweep\nflat layout described in the public SKILLS.md.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-14T05:00:47Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-17T01:34:03Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "be1e367ad829e6da23447eaff7875ca23047fa72",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/be1e367ad829e6da23447eaff7875ca23047fa72",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "45ef6776125dbf010a4aed23bb8f5cf6951347cb",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/45ef6776125dbf010a4aed23bb8f5cf6951347cb",
@@ -176,25 +186,25 @@
             "date": "2026-05-17T01:17:32Z"
           }
         }
-      },
-      {
-        "sha": "0ee0d0faf2c7d37c82bcfb5aac2e24a76baf73aa",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/0ee0d0faf2c7d37c82bcfb5aac2e24a76baf73aa",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:07Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-17T01:34:17Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "c251cc38165834cef947af8d8dd47482da0f17de",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/c251cc38165834cef947af8d8dd47482da0f17de",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "a6a1c60a413dbec3049a3c448170ca1cc6ab87c7",
         "html_url": "https://github.com/freegamestore-online/match3/commit/a6a1c60a413dbec3049a3c448170ca1cc6ab87c7",
@@ -214,25 +224,35 @@
             "date": "2026-05-17T01:17:15Z"
           }
         }
-      },
-      {
-        "sha": "fc7691da780a219dc5e05a693c9446d6b0729954",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/fc7691da780a219dc5e05a693c9446d6b0729954",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:19Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-17T01:34:27Z"
+      "pushed_at": "2026-05-18T22:46:24Z"
     },
     "commits": [
+      {
+        "sha": "60888464824d8bece51fc01f6ca1459b304a2b33",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/60888464824d8bece51fc01f6ca1459b304a2b33",
+        "commit": {
+          "message": "Add Kenney pixel-art graphics and fix StrictMode WebGL crash\n\n- 9 CC0 sprites under web/public/sprites/ from Kenney \"Pixel Platformer\"\n  and \"Background Elements\" packs (~17 KB total, served as static assets;\n  zero JS bundle impact). LICENSE.txt records attribution.\n- Sprite-based player (2-frame hop animation), tiled grass-top platforms,\n  spinning coin sprites\n- 3-layer parallax background: distant mountains, mid + near hills,\n  drifting clouds, sun with halo, sky gradient\n- Defer kaplay() into a queueMicrotask so React 19 StrictMode's\n  synchronous setup -> cleanup -> setup sequence doesn't quit-then-recreate\n  on the same canvas (which lost the WebGL context and left the game\n  loop ticking on a dead context)\n- compliance test: drop unused const that was blocking tsc -b\n- pnpm-lock: align with package.json's ^0.13.0 SDK pin\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:46:05Z"
+          }
+        }
+      },
+      {
+        "sha": "133ef46a1c7c8b474b1643d21956f5ef9f720f72",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/133ef46a1c7c8b474b1643d21956f5ef9f720f72",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "1f70e63ec0645d0b08996f3d8470fedb50d69456",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/1f70e63ec0645d0b08996f3d8470fedb50d69456",
@@ -242,35 +262,25 @@
             "date": "2026-05-17T01:34:25Z"
           }
         }
-      },
-      {
-        "sha": "bef2d2e539b7ec622016f262cc9a67a31cba2ec6",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/bef2d2e539b7ec622016f262cc9a67a31cba2ec6",
-        "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
-          "author": {
-            "date": "2026-05-17T01:16:41Z"
-          }
-        }
-      },
-      {
-        "sha": "15ca9a7554d8fb19a65789cbb0f8523608be5347",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/15ca9a7554d8fb19a65789cbb0f8523608be5347",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:23Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-17T02:38:21Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "4ffdf60c029e5eca4f15b6921547f1220a08543e",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/4ffdf60c029e5eca4f15b6921547f1220a08543e",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "99ef858083fe5a0a62cbb0f2eea307c1e8f0cbb1",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/99ef858083fe5a0a62cbb0f2eea307c1e8f0cbb1",
@@ -290,25 +300,25 @@
             "date": "2026-05-14T05:30:49Z"
           }
         }
-      },
-      {
-        "sha": "3599203a2785e091d20c7aa0d4c978503429a2b5",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/3599203a2785e091d20c7aa0d4c978503429a2b5",
-        "commit": {
-          "message": "docs(CLAUDE): drop stale platform/ + infra/ path segments\n\nThese paths never existed for external contributors and the auditor\nrepo is private. AI agents reading this CLAUDE.md were being told to\nlook in directories that don't resolve. Aligned with the post-sweep\nflat layout described in the public SKILLS.md.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-14T05:00:53Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-17T01:33:59Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "9818a5ce839b0d1024857dfde30b10f8a7dc4a41",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/9818a5ce839b0d1024857dfde30b10f8a7dc4a41",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "e606175085a94edd584e2f3b7e0a0cb6d274b02f",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/e606175085a94edd584e2f3b7e0a0cb6d274b02f",
@@ -328,25 +338,25 @@
             "date": "2026-05-17T01:16:39Z"
           }
         }
-      },
-      {
-        "sha": "1a74b8eb0b9848f68e4966b4a1eddc174b767466",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/1a74b8eb0b9848f68e4966b4a1eddc174b767466",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:03Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-17T01:34:19Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "f2b1b6ebcbce62808ef92c09a956d3954e0a08a3",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/f2b1b6ebcbce62808ef92c09a956d3954e0a08a3",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "ac09085db01ae2cdd05f1840df4810f844a3f909",
         "html_url": "https://github.com/freegamestore-online/memory/commit/ac09085db01ae2cdd05f1840df4810f844a3f909",
@@ -366,25 +376,25 @@
             "date": "2026-05-17T01:16:54Z"
           }
         }
-      },
-      {
-        "sha": "c686e3413aada1f5777044dd65491b17a92052f3",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/c686e3413aada1f5777044dd65491b17a92052f3",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:20Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-17T01:34:11Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "08aa5a836ebe705242607f7e61d40f1501015809",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/08aa5a836ebe705242607f7e61d40f1501015809",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "18ed1e53feb76073c7b1eb93d1ca7e743800f6d5",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/18ed1e53feb76073c7b1eb93d1ca7e743800f6d5",
@@ -404,52 +414,42 @@
             "date": "2026-05-17T01:17:27Z"
           }
         }
-      },
-      {
-        "sha": "88a5d28678f5dcb7164234b2b3aac6438bc32db7",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/88a5d28678f5dcb7164234b2b3aac6438bc32db7",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:14Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-17T01:34:01Z"
+      "pushed_at": "2026-05-18T23:11:53Z"
     },
     "commits": [
       {
-        "sha": "7da5725df474f54770fe1229a05ae5e88fa4f7c9",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/7da5725df474f54770fe1229a05ae5e88fa4f7c9",
+        "sha": "217e31e4128b7f6f9908ee288f0bc52ec9c94174",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/217e31e4128b7f6f9908ee288f0bc52ec9c94174",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "ci: add Cloudflare Pages deploy workflow\n\nThe repo had no .github/workflows/ at all — every push to main since\nthe PWA migration has been a no-op. The site at bowling.freegamestore.online\nis still serving the pre-vite-plugin-pwa build (manifest.json, separate\nbabylon chunk, no service worker), which is why recent fixes weren't\nvisible.\n\nMirrors the deploy.yml used across sibling games (2048, chess, pacman,\netc): build with pnpm, then `wrangler pages deploy web/dist` against\nthe freebowlingapp project. CLOUDFLARE_API_TOKEN secret expected at\nthe org level.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:33:59Z"
+            "date": "2026-05-18T23:11:51Z"
           }
         }
       },
       {
-        "sha": "c90afe345e0ab8f3e369144e6e211dbcdf1071d9",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/c90afe345e0ab8f3e369144e6e211dbcdf1071d9",
+        "sha": "05f831220887da0e6976f452b06b74180059f37d",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/05f831220887da0e6976f452b06b74180059f37d",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: harden localStorage, point arrow head along lane\n\n- App.tsx: getBestScore wraps localStorage read in try/catch, validates\n  parsed int is finite and non-negative. trySetBestScore swallows\n  setItem failures. Safari Private was previously a crash path: setItem\n  throws QuotaExceededError, which would propagate out of the game-over\n  handler. Bad data (e.g. NaN) was also a soft-lock — high score could\n  never update once corrupted.\n- Game.tsx: arrow head triangle now actually points toward the pins.\n  The Y-aligned 3-tessellation cylinder had its apex on +X; rotating .y\n  by π just moved it to -X, perpendicular to the arrow shaft. Lay it on\n  its side via rotation.x = -π/2 so the +Y apex becomes -Z (down the\n  lane), and bump height so the apex extends past the arrow body tip.\n- Game.tsx: canvas.parentElement!.appendChild → optional chaining.\n  Defensive, no behavior change in normal mount path.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:04Z"
+            "date": "2026-05-18T22:44:34Z"
           }
         }
       },
       {
-        "sha": "124974c2d674d37949fd3539488140ef30c5ed4b",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/124974c2d674d37949fd3539488140ef30c5ed4b",
+        "sha": "026be9e49691bf49ca7ad8446f321abc5ddec8ed",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/026be9e49691bf49ca7ad8446f321abc5ddec8ed",
         "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "message": "fix: patch dep vuln, add CSP, dedupe throw logic\n\n- brace-expansion 5.0.0-5.0.5 (moderate, GHSA-jxxr-4gwj-5jf2) reached\n  the build via workbox-build → glob → minimatch. Added a pnpm\n  override pinning to >=5.0.6. `pnpm audit` is now clean.\n- Content-Security-Policy meta tag on index.html. Locks scripts/\n  workers/img/connect to self; allows the Google Fonts CSS/woff2 the\n  PWA already loads.\n- handleThrowComplete: extracted nextThrow(resetAll) helper. The 10th-\n  frame branches no longer repeat `resetAllPins(); startAiming();` and\n  `hideKnockedPins(); resetStandingPins(); startAiming();` three times.\n- Renamed pin variable `body` → `pinBody` so it doesn't shadow the\n  more obvious DOM meaning.\n- .gitignore: add .vibe-check/ so the vcqa report artifacts don't get\n  committed.\n\nvcqa: B 75/100 → B 77/100, 6 issues fixed.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-14T05:30:06Z"
+            "date": "2026-05-18T22:22:11Z"
           }
         }
       }
@@ -458,9 +458,19 @@
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-17T01:34:09Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "63cfc421b9fd93bee02c8819f2556dcda5245185",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/63cfc421b9fd93bee02c8819f2556dcda5245185",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "549256ed9cc41aa9934a2d647cae6e2bec5b04a4",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/549256ed9cc41aa9934a2d647cae6e2bec5b04a4",
@@ -480,25 +490,25 @@
             "date": "2026-05-17T01:17:26Z"
           }
         }
-      },
-      {
-        "sha": "23950212dd52b4128106a1f6829fc3a87cb0bde8",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/23950212dd52b4128106a1f6829fc3a87cb0bde8",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:13Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-17T01:34:15Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "068894a8f548e5dc07d380611b88981324d77b9c",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/068894a8f548e5dc07d380611b88981324d77b9c",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "6bdfc46f1aa35b14fd2451196800bc3e8a39c188",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/6bdfc46f1aa35b14fd2451196800bc3e8a39c188",
@@ -518,25 +528,25 @@
             "date": "2026-05-17T01:17:30Z"
           }
         }
-      },
-      {
-        "sha": "20b3bd675ec2093706479af5fd8202c48189ad01",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/20b3bd675ec2093706479af5fd8202c48189ad01",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-17T01:34:13Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "3b172ac900d13fd025adef0b5caf81eb0beec484",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/3b172ac900d13fd025adef0b5caf81eb0beec484",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "f8b5e05b7d95cde24fc24dcd39027732a2dc2083",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/f8b5e05b7d95cde24fc24dcd39027732a2dc2083",
@@ -556,25 +566,25 @@
             "date": "2026-05-17T01:17:09Z"
           }
         }
-      },
-      {
-        "sha": "29aebda4984c7cd471aae05c76f17562443bb36a",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/29aebda4984c7cd471aae05c76f17562443bb36a",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:16Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-17T01:34:23Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "00133849d889905b1ab46e6a76f7ad55817732d0",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/00133849d889905b1ab46e6a76f7ad55817732d0",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "6f3ace7b2537af879117f6cad953f4b3a7064342",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/6f3ace7b2537af879117f6cad953f4b3a7064342",
@@ -594,25 +604,25 @@
             "date": "2026-05-17T01:17:06Z"
           }
         }
-      },
-      {
-        "sha": "9da74da1f5f469b7c61f9e3fc47d29e990f12106",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/9da74da1f5f469b7c61f9e3fc47d29e990f12106",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:52Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-17T01:34:33Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "53e19b1971da3b4c01f48f5afd4b1ba6c28ddc8f",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/53e19b1971da3b4c01f48f5afd4b1ba6c28ddc8f",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "c44c428f7444848dab52ca5f55e13c5106588eda",
         "html_url": "https://github.com/freegamestore-online/racing/commit/c44c428f7444848dab52ca5f55e13c5106588eda",
@@ -632,25 +642,25 @@
             "date": "2026-05-17T01:17:00Z"
           }
         }
-      },
-      {
-        "sha": "5b0c02958a7b3518a0c178eb30df6828f85907a5",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/5b0c02958a7b3518a0c178eb30df6828f85907a5",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:27Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-17T01:34:31Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "e242737052a42b670914abfd03849d38b421a189",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/e242737052a42b670914abfd03849d38b421a189",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "32cebbf4c9718c0d803dc4a9e571b4a4d10bbfe2",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/32cebbf4c9718c0d803dc4a9e571b4a4d10bbfe2",
@@ -670,25 +680,25 @@
             "date": "2026-05-17T01:16:58Z"
           }
         }
-      },
-      {
-        "sha": "931b7151d9685447e14ac5583018cdc4871c6c4e",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/931b7151d9685447e14ac5583018cdc4871c6c4e",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-17T01:34:21Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "02d4731a513c2bf16e2cef9b960f72361f77e26b",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/02d4731a513c2bf16e2cef9b960f72361f77e26b",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "6cf785b9d115d5ea79c208a232cdb6e64707046c",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/6cf785b9d115d5ea79c208a232cdb6e64707046c",
@@ -708,25 +718,25 @@
             "date": "2026-05-14T05:30:50Z"
           }
         }
-      },
-      {
-        "sha": "9a9913d1571d24ab7d39d14e8326a0ed35588243",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/9a9913d1571d24ab7d39d14e8326a0ed35588243",
-        "commit": {
-          "message": "docs(CLAUDE): drop stale platform/ + infra/ path segments\n\nThese paths never existed for external contributors and the auditor\nrepo is private. AI agents reading this CLAUDE.md were being told to\nlook in directories that don't resolve. Aligned with the post-sweep\nflat layout described in the public SKILLS.md.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-14T05:00:50Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-17T01:33:57Z"
+      "pushed_at": "2026-05-18T22:23:16Z"
     },
     "commits": [
+      {
+        "sha": "ffa065565176a8c6c12a8714a8a9a646376fc0a3",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/ffa065565176a8c6c12a8714a8a9a646376fc0a3",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:12Z"
+          }
+        }
+      },
       {
         "sha": "79c12c835765b55a5b7f8c3971401b4b79448dc3",
         "html_url": "https://github.com/freegamestore-online/2048/commit/79c12c835765b55a5b7f8c3971401b4b79448dc3",
@@ -746,25 +756,25 @@
             "date": "2026-05-17T01:16:45Z"
           }
         }
-      },
-      {
-        "sha": "4367c3918b58d2b518b2ae17cbdfe5f79be8663c",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/4367c3918b58d2b518b2ae17cbdfe5f79be8663c",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:01Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-17T01:34:05Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "46fcb84981b109f7051e82fc2150cce383c4ffd3",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/46fcb84981b109f7051e82fc2150cce383c4ffd3",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "792fd6290c0ad2e40c2dac6cbf1f55597fb1cfa8",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/792fd6290c0ad2e40c2dac6cbf1f55597fb1cfa8",
@@ -784,25 +794,25 @@
             "date": "2026-05-17T01:16:50Z"
           }
         }
-      },
-      {
-        "sha": "308c5e2329926830e0f1c58c67f7c48ba44580a5",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/308c5e2329926830e0f1c58c67f7c48ba44580a5",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:08Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-17T01:34:35Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "aa315f0f3082c3054ea2239a067b9266b2373083",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/aa315f0f3082c3054ea2239a067b9266b2373083",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "80564498fd0d36489c0c1f073d242e715b24e301",
         "html_url": "https://github.com/freegamestore-online/simon/commit/80564498fd0d36489c0c1f073d242e715b24e301",
@@ -822,25 +832,25 @@
             "date": "2026-05-17T01:17:13Z"
           }
         }
-      },
-      {
-        "sha": "d1c910713a9f359c751b022224a4dddb1c8b47ec",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/d1c910713a9f359c751b022224a4dddb1c8b47ec",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:29Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-17T01:34:37Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "2aae5f9a043015ee9efabbe63d4dacc466ed6af9",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/2aae5f9a043015ee9efabbe63d4dacc466ed6af9",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "62855fc0b1f1dea3d886e13a12c1bafdd18afc43",
         "html_url": "https://github.com/freegamestore-online/snake/commit/62855fc0b1f1dea3d886e13a12c1bafdd18afc43",
@@ -860,25 +870,25 @@
             "date": "2026-05-17T01:17:38Z"
           }
         }
-      },
-      {
-        "sha": "19b608d99d87656eeef4f7ea891d9a0c7721b4de",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/19b608d99d87656eeef4f7ea891d9a0c7721b4de",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:31Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-17T01:34:47Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "f87e040e2d5bea5c70877af9e9131d7a051edc92",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/f87e040e2d5bea5c70877af9e9131d7a051edc92",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "33aa3b394577005d3f5cfc5005250c1e1d91b871",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/33aa3b394577005d3f5cfc5005250c1e1d91b871",
@@ -898,25 +908,25 @@
             "date": "2026-05-17T01:17:11Z"
           }
         }
-      },
-      {
-        "sha": "5120f1d10ded2a7ba9144e668313dafba88afe99",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/5120f1d10ded2a7ba9144e668313dafba88afe99",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:53Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-17T01:34:41Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "3504c7332a3a822c3f1e27147b353d7368304a4b",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/3504c7332a3a822c3f1e27147b353d7368304a4b",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "d3351f126af178db207b71daf6e7670328cbb094",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/d3351f126af178db207b71daf6e7670328cbb094",
@@ -936,25 +946,25 @@
             "date": "2026-05-17T01:17:36Z"
           }
         }
-      },
-      {
-        "sha": "c6d60d22ae48e746404dc8636fd11c851cabe69b",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/c6d60d22ae48e746404dc8636fd11c851cabe69b",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-17T01:34:45Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "e07e5c507abe304cd20b2716717d46ed037d637a",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/e07e5c507abe304cd20b2716717d46ed037d637a",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "f9155d3ed13e1a03ec65ba3d2b1971db6bb45505",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/f9155d3ed13e1a03ec65ba3d2b1971db6bb45505",
@@ -974,25 +984,25 @@
             "date": "2026-05-17T01:17:02Z"
           }
         }
-      },
-      {
-        "sha": "2302f9cec44c808c7351adcefa3fb789afbbb1bf",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/2302f9cec44c808c7351adcefa3fb789afbbb1bf",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:39Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-17T01:34:25Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "29c76ac022eb916c18b7756cc551931c0508af7a",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/29c76ac022eb916c18b7756cc551931c0508af7a",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "f034fab9afccebd4aa8ac11b482f5df2e57d02a3",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/f034fab9afccebd4aa8ac11b482f5df2e57d02a3",
@@ -1012,25 +1022,25 @@
             "date": "2026-05-17T01:16:43Z"
           }
         }
-      },
-      {
-        "sha": "e1053936d923e17316a007566923fa472e1e792a",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/e1053936d923e17316a007566923fa472e1e792a",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:22Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-17T01:34:29Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "7d7e23179cfcd38f629b52578ff80216fd9b4b92",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/7d7e23179cfcd38f629b52578ff80216fd9b4b92",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "a8956a86c08ab4293a5bc8ed5ee8e7ddfdd099f2",
         "html_url": "https://github.com/freegamestore-online/pong/commit/a8956a86c08ab4293a5bc8ed5ee8e7ddfdd099f2",
@@ -1050,25 +1060,25 @@
             "date": "2026-05-17T01:17:23Z"
           }
         }
-      },
-      {
-        "sha": "6ec1f2a5a8ac51c5d4a4c80d52b9c609479c04c7",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/6ec1f2a5a8ac51c5d4a4c80d52b9c609479c04c7",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-17T01:34:43Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "1fce4a7d0956696f424c00649480c6ae09b714c1",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/1fce4a7d0956696f424c00649480c6ae09b714c1",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "941f6f3c09444a0d2af5b79b8e697b90da987cd1",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/941f6f3c09444a0d2af5b79b8e697b90da987cd1",
@@ -1088,25 +1098,25 @@
             "date": "2026-05-17T01:17:21Z"
           }
         }
-      },
-      {
-        "sha": "80aacfa5640572ad3ddb5bc40b16e3702b27acd5",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/80aacfa5640572ad3ddb5bc40b16e3702b27acd5",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:37Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-17T01:34:51Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "35c3e934c86ed55eca2a4ccea9ebee2eb31f3eb2",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/35c3e934c86ed55eca2a4ccea9ebee2eb31f3eb2",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "191e9478e1121e71358ea0528b4c70604713cba4",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/191e9478e1121e71358ea0528b4c70604713cba4",
@@ -1126,25 +1136,25 @@
             "date": "2026-05-17T01:16:56Z"
           }
         }
-      },
-      {
-        "sha": "a2e3d00cefa2600201183764e36d71710ee382a7",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/a2e3d00cefa2600201183764e36d71710ee382a7",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-17T01:34:39Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "11accad7f8b85790fdab086f6f05693135329ceb",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/11accad7f8b85790fdab086f6f05693135329ceb",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "e5117a925b4920c6f79482ca3393f4366497a278",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/e5117a925b4920c6f79482ca3393f4366497a278",
@@ -1164,25 +1174,25 @@
             "date": "2026-05-17T01:16:48Z"
           }
         }
-      },
-      {
-        "sha": "ef30db9aef436306a808eda3688ffb41b150ebf2",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/ef30db9aef436306a808eda3688ffb41b150ebf2",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:34Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-17T01:34:49Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "8f1041a5e732196160aaa51600342b33c42ada90",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/8f1041a5e732196160aaa51600342b33c42ada90",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "d928a8ea6a7ccb2c2c07943ec6aebe36ac323524",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/d928a8ea6a7ccb2c2c07943ec6aebe36ac323524",
@@ -1202,25 +1212,25 @@
             "date": "2026-05-17T01:17:19Z"
           }
         }
-      },
-      {
-        "sha": "94c6b9ed9838e6e9f0e4ed72a28d8a1a2dc5fa70",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/94c6b9ed9838e6e9f0e4ed72a28d8a1a2dc5fa70",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:40Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-17T02:38:25Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "f754df2e7488ec06f8e8a66a6e9a5590472450f4",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/f754df2e7488ec06f8e8a66a6e9a5590472450f4",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:24Z"
+          }
+        }
+      },
       {
         "sha": "22ec8a59fad5c38f71343b04af01d3464d20dadd",
         "html_url": "https://github.com/freegamestore-online/slither/commit/22ec8a59fad5c38f71343b04af01d3464d20dadd",
@@ -1240,25 +1250,25 @@
             "date": "2026-05-17T01:17:17Z"
           }
         }
-      },
-      {
-        "sha": "38a890da1b2b41e9d0282783131562890e372524",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/38a890da1b2b41e9d0282783131562890e372524",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:30Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-17T01:34:07Z"
+      "pushed_at": "2026-05-18T22:23:27Z"
     },
     "commits": [
+      {
+        "sha": "50196dc6ac748cac1137f6d863d8c184f40cc174",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/50196dc6ac748cac1137f6d863d8c184f40cc174",
+        "commit": {
+          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T22:23:23Z"
+          }
+        }
+      },
       {
         "sha": "f0060fe7f20092733cdf5f17bf42de47ecc5bdd6",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/f0060fe7f20092733cdf5f17bf42de47ecc5bdd6",
@@ -1276,16 +1286,6 @@
           "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
           "author": {
             "date": "2026-05-17T01:16:52Z"
-          }
-        }
-      },
-      {
-        "sha": "1d8f0b3df9ae4a5f97972b28f24aab6e1552e561",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/1d8f0b3df9ae4a5f97972b28f24aab6e1552e561",
-        "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
-          "author": {
-            "date": "2026-05-14T05:30:11Z"
           }
         }
       }
