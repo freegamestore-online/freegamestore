@@ -1326,5 +1326,23 @@
         }
       }
     ]
+  },
+  "freegamestore-online/blackjack": {
+    "meta": {
+      "created_at": "2026-05-18T23:17:31Z",
+      "pushed_at": "2026-05-18T23:17:43Z"
+    },
+    "commits": [
+      {
+        "sha": "7f86f60a9ef77b0301a4251d29cf367011539e28",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/7f86f60a9ef77b0301a4251d29cf367011539e28",
+        "commit": {
+          "message": "Initial commit from canvas template",
+          "author": {
+            "date": "2026-05-18T22:46:09Z"
+          }
+        }
+      }
+    ]
   }
 }
