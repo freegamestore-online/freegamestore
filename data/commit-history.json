@@ -2,9 +2,19 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-19T04:08:14Z"
+      "pushed_at": "2026-05-19T04:14:05Z"
     },
     "commits": [
+      {
+        "sha": "7646e108fec7419b97ba5b09761fb510db48f1ee",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/7646e108fec7419b97ba5b09761fb510db48f1ee",
+        "commit": {
+          "message": "fix(compliance): use correct freegamestore.online URL\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:14:02Z"
+          }
+        }
+      },
       {
         "sha": "cba1e33450550ed6a86265d0ba8aae4d6ea68d52",
         "html_url": "https://github.com/freegamestore-online/dice/commit/cba1e33450550ed6a86265d0ba8aae4d6ea68d52",
@@ -24,25 +34,35 @@
             "date": "2026-05-19T04:04:09Z"
           }
         }
-      },
-      {
-        "sha": "7d41d0b846905eac0d1c71c60f2e189a0ac6586c",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/7d41d0b846905eac0d1c71c60f2e189a0ac6586c",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:47:40Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-19T04:08:05Z"
+      "pushed_at": "2026-05-19T05:02:46Z"
     },
     "commits": [
+      {
+        "sha": "411fc8ef3d75e9677021b247f806b21df4343f8d",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/411fc8ef3d75e9677021b247f806b21df4343f8d",
+        "commit": {
+          "message": "fix(mp): on rejected move, server sends state-snapshot so client can rollback\n\nTwo adjacent issues:\n\n1. Client does an optimistic local chess.move() before sending to the\n   server (snappy UX). If the server rejects the move (race condition:\n   opponent's move arrived first), the client only gets `{type: error}`\n   and never rolls back. Result: client board ahead of true state.\n\n2. Rematch (type=new_game) handler on the client didn't clear\n   selectedSquare or stale errors, so the new game inherited cursor +\n   error state from the previous one.\n\nFix:\n- Server: extract a sendState() helper. After rejecting a move\n  ('Illegal', 'Not your turn', 'Game is over'), send a fresh state\n  snapshot to just that client. Client already handles `type: state`\n  via chess.load(fen), so optimistic moves silently roll back.\n- Client: on new_game, also clear selectedSquare + error.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T05:02:43Z"
+          }
+        }
+      },
+      {
+        "sha": "42f1850039616e947b065c65162d354d29940e1d",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/42f1850039616e947b065c65162d354d29940e1d",
+        "commit": {
+          "message": "fix(mp): show \"Opponent Resigned · You Won!\" instead of \"You Resigned\" to the winner\n\nGameOverBanner had a hard-coded \"You Resigned\" message for any\nstatus='resigned' game-over, regardless of WHICH side resigned. In MP,\nwhen the opponent resigned, the winner's banner also said \"You Resigned\"\n— factually wrong and confusing.\n\nNow branches on the playerLost prop the parent already computes\ncorrectly: my-resign → \"You Resigned\", opponent-resign → \"Opponent\nResigned · You Won!\".\n\nPlayTab (single-player) only resigns via the player's own voice\ncommand, so playerLost is always true there. No regression.\n\nFound by /qa with two browser tabs in a fresh MP game.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T05:00:24Z"
+          }
+        }
+      },
       {
         "sha": "85a7472d3776fe762b1904b634f3feefa6291935",
         "html_url": "https://github.com/freegamestore-online/chess/commit/85a7472d3776fe762b1904b634f3feefa6291935",
@@ -52,62 +72,42 @@
             "date": "2026-05-19T04:08:02Z"
           }
         }
-      },
-      {
-        "sha": "a660909b015fac0ac82b018f2820d814f64c1205",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/a660909b015fac0ac82b018f2820d814f64c1205",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:00Z"
-          }
-        }
-      },
-      {
-        "sha": "6bc968af6b8b335f39a22139adb2732897deecb9",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/6bc968af6b8b335f39a22139adb2732897deecb9",
-        "commit": {
-          "message": "feat(multiplayer): share-link 1v1 via Cloudflare Durable Objects\n\nAdds a \"Play with friend\" multiplayer mode. Click the people icon →\n\"Create game\" → get a unique /g/{id} URL. Send it to a friend. They\njoin as the opposite color. Moves sync in real time, server-validated.\n\nArchitecture:\n- web/public/_worker.js — Pages \"advanced mode\" Worker (single file)\n  - GameDO class extends DurableObject — holds a chess.js instance +\n    two WebSocket connections + game-over state\n  - Routes:\n    POST /api/game/new       → returns { id } (8-char alphanumeric)\n    GET  /api/game/{id}/ws   → WebSocket upgrade to the DO for this id\n    GET  /g/{id}             → serves index.html (SPA route)\n    *                        → static asset fallback via env.ASSETS\n  - Server validates every move; illegal/wrong-turn moves get a\n    { type: \"error\" } reply, never get broadcast\n- wrangler.jsonc — adds GAME binding + new_sqlite_classes migration\n- web/src/components/MultiplayerTab.tsx — connection hook, share-link\n  copy UI, status indicator, auto-reconnect on disconnect, resign +\n  rematch buttons. Reuses Board + GameOverBanner + PlayerRow.\n- web/src/App.tsx — adds Mode='multiplayer', /g/{id} route parsing,\n  Users icon in topbar, RulesPanel section explaining multiplayer\n\nTested locally with wrangler pages dev + two browser tabs:\n  - White creates game → unique URL\n  - Black opens URL → joins, board flips, \"Opponent\" labeled\n  - White plays e4 → black sees it within ~50ms, move list updates\n  - Black replies e5 → white sees it, turn indicator flips\n  - Server rejects out-of-turn moves\n  - Connection state shown (\"Connected · 2 players\")\n\nConstraints from platform CLAUDE.md: Free tier caps real-time rooms at\n5 concurrent × 25 connections × 50 user-hours/day. Chess multiplayer\nfits this easily — chess games are short and small-state.\n\nBuild: 285KB → 294KB JS (+9KB for MultiplayerTab). Server worker is\n~5KB plus chess.js bundled by Pages.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:02:51Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-19T04:07:46Z"
+      "pushed_at": "2026-05-19T05:02:30Z"
     },
     "commits": [
       {
-        "sha": "c6b8ba902307f94202a43dfd0df3ab2600c4b995",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/c6b8ba902307f94202a43dfd0df3ab2600c4b995",
+        "sha": "690c1f66eb4cbb8371601b6e231da0f43a4a8193",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/690c1f66eb4cbb8371601b6e231da0f43a4a8193",
         "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "Billiards: fix 3 bugs in the archery aim model\n\n- Cue stick rendered FORWARD of the cue ball at low power. The math\n  `(BALL_R + 4 + pullback - 36)` produced a NEGATIVE offset until\n  pullback ≥ 28 — so at 0% the tip was on the aim-line side instead\n  of behind the ball. Replaced with `baseGap + pullback` so the tip\n  is always behind the ball, just farther back as power rises.\n\n- SHOOT button fired the shot if your finger drifted off it mid-hold.\n  `onPointerLeave={() => releaseCharge()}` triggered on common mobile\n  slip. Replaced with `setPointerCapture` on press so the button keeps\n  receiving events until pointerup, and pointercancel now drops the\n  charge silently instead of firing.\n\n- Ball-in-hand placement could drop the cue ball INSIDE another ball\n  (no overlap check). Added a 24-pass nudge that pushes the cue ball\n  away from any overlapped ball until clear, clamped to the cushion.",
           "author": {
-            "date": "2026-05-19T04:07:44Z"
+            "date": "2026-05-19T05:02:28Z"
           }
         }
       },
       {
-        "sha": "40495c86aff519e4119f5966cdbdb746f7d0b740",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/40495c86aff519e4119f5966cdbdb746f7d0b740",
+        "sha": "3b3d2048fed2e67ead3258da90fee23378e6b345",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/3b3d2048fed2e67ead3258da90fee23378e6b345",
         "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "Billiards: switch to archery-style aim (hold to charge, release to fire)\n\nReplaces the drag-from-cue-ball gesture with a separate aim/power model:\n\n- Aim: pointer position on the canvas sets the aim line; no firing on\n  pointer-up. Move freely to fine-tune the angle.\n- Power: dedicated SHOOT button below the canvas. Hold down → power\n  charges over ~715ms to full. Release → fires (or cancels if released\n  below 8% — accidental taps don't lose your turn).\n- Visual: a cue stick now renders behind the cue ball and pulls back\n  proportionally to the charging power, with blue chalk tip + wood\n  shaft + dark butt. The power ring around the cue ball turns red\n  near max for a wind-up warning.\n- Keyboard: ← → still adjusts angle; Space (hold + release) replaces\n  the old \"tap Space to fire instantly\" with charge-and-release.\n- Ball-in-hand: tap-anywhere placement still works; shoot button is\n  disabled with explicit \"TAP TABLE TO PLACE CUE\" label.",
           "author": {
-            "date": "2026-05-19T04:03:42Z"
+            "date": "2026-05-19T04:55:07Z"
           }
         }
       },
       {
-        "sha": "56399435b2872a28853fd0fbe6d0aa50b04f8d7d",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/56399435b2872a28853fd0fbe6d0aa50b04f8d7d",
+        "sha": "f0420c3ab7343ed0f254bb5bab85e85ceae48ad7",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/f0420c3ab7343ed0f254bb5bab85e85ceae48ad7",
         "commit": {
-          "message": "Billiards: titlecase + manifest link in index.html",
+          "message": "fix(compliance): use correct freegamestore.online URL\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T03:49:24Z"
+            "date": "2026-05-19T04:13:56Z"
           }
         }
       }
@@ -116,9 +116,19 @@
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-19T04:08:08Z"
+      "pushed_at": "2026-05-19T04:14:02Z"
     },
     "commits": [
+      {
+        "sha": "8817935d834949edd4662a29731164b6d510ef22",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/8817935d834949edd4662a29731164b6d510ef22",
+        "commit": {
+          "message": "fix(compliance): use correct freegamestore.online URL\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:13:59Z"
+          }
+        }
+      },
       {
         "sha": "edc09213d5d86ca3c2a73d2268856d47a3063cec",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/edc09213d5d86ca3c2a73d2268856d47a3063cec",
@@ -138,25 +148,25 @@
             "date": "2026-05-19T04:04:03Z"
           }
         }
-      },
-      {
-        "sha": "621128fb414814dbcf2e67840820b1c04d12ec34",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/621128fb414814dbcf2e67840820b1c04d12ec34",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:47:38Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-19T04:07:56Z"
+      "pushed_at": "2026-05-19T04:11:00Z"
     },
     "commits": [
+      {
+        "sha": "11e8d2a22709431f3b3bf29001587e1354b8fa81",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/11e8d2a22709431f3b3bf29001587e1354b8fa81",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:10:57Z"
+          }
+        }
+      },
       {
         "sha": "93b9efea7911d296d101e1d813f97e15809385d8",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/93b9efea7911d296d101e1d813f97e15809385d8",
@@ -176,25 +186,25 @@
             "date": "2026-05-19T04:03:51Z"
           }
         }
-      },
-      {
-        "sha": "f1e3f7f6cf6fd2f557857f988eebfba16225e2d8",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/f1e3f7f6cf6fd2f557857f988eebfba16225e2d8",
-        "commit": {
-          "message": "fix: thicker paddle (14→22px) for better visibility and feel\n\nPaddle pill height was 14px, radius 7px — visually thin and easy to\nmiss on tall displays. Bumped to 22px tall (radius 11px) so the pill\nshape stays correct and the paddle reads as a substantial surface.\nBall reset Y already references the dynamic getPaddleY() helper, so\nno other code needed to change.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:49:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-19T04:08:33Z"
+      "pushed_at": "2026-05-19T04:11:16Z"
     },
     "commits": [
+      {
+        "sha": "cc0d5f6f17aa8b1f55d643c06d7367c603b63992",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/cc0d5f6f17aa8b1f55d643c06d7367c603b63992",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:13Z"
+          }
+        }
+      },
       {
         "sha": "4729a3547ba61b9c9f7768bb96780f2a33416a10",
         "html_url": "https://github.com/freegamestore-online/match3/commit/4729a3547ba61b9c9f7768bb96780f2a33416a10",
@@ -214,25 +224,35 @@
             "date": "2026-05-19T04:04:27Z"
           }
         }
-      },
-      {
-        "sha": "d2cbd87e0e610646200d4cc6b4088d24266f0220",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/d2cbd87e0e610646200d4cc6b4088d24266f0220",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:12:16Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-19T04:04:48Z"
+      "pushed_at": "2026-05-19T04:11:25Z"
     },
     "commits": [
+      {
+        "sha": "f72367a8f0fb3f136f952b961f3413be3121856b",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/f72367a8f0fb3f136f952b961f3413be3121856b",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:22Z"
+          }
+        }
+      },
+      {
+        "sha": "c394e907fc442227fe6540fa23fb47f63145f052",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/c394e907fc442227fe6540fa23fb47f63145f052",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:08:48Z"
+          }
+        }
+      },
       {
         "sha": "7ad726aa1637ded099e44b8f9211ad05f08f59f0",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/7ad726aa1637ded099e44b8f9211ad05f08f59f0",
@@ -242,35 +262,25 @@
             "date": "2026-05-19T04:04:46Z"
           }
         }
-      },
-      {
-        "sha": "fb0e7ba54cb1d4e55ba0a15407b3303b1e19691b",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/fb0e7ba54cb1d4e55ba0a15407b3303b1e19691b",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:47:57Z"
-          }
-        }
-      },
-      {
-        "sha": "d892a6e12d2b027ab6a5b3d95088fde54861d8f2",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/d892a6e12d2b027ab6a5b3d95088fde54861d8f2",
-        "commit": {
-          "message": "Wire @freegamestore/cli check into CI\n\nRuns every check exported by @freegamestore/compliance, including\nthe new PWA offline correctness check that catches manifest-without-\nSW, broken workbox configs, and Google Fonts that aren't cached.\n\nThe hand-rolled grep steps stay as belt-and-braces; the CLI step\nwill additionally fail CI on any new check the platform adds.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T02:33:54Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-19T04:08:27Z"
+      "pushed_at": "2026-05-19T04:14:08Z"
     },
     "commits": [
+      {
+        "sha": "b6b59c74550c98cd019940a84d48b7638bf21c96",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/b6b59c74550c98cd019940a84d48b7638bf21c96",
+        "commit": {
+          "message": "fix(compliance): use correct freegamestore.online URL\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:14:05Z"
+          }
+        }
+      },
       {
         "sha": "0c615f7ae0c98dfcb84aebe82587dcd046036ad5",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/0c615f7ae0c98dfcb84aebe82587dcd046036ad5",
@@ -290,25 +300,25 @@
             "date": "2026-05-19T04:04:21Z"
           }
         }
-      },
-      {
-        "sha": "61a8c84a395d122b5d9c5e34b7bcbe970c24f665",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/61a8c84a395d122b5d9c5e34b7bcbe970c24f665",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:47:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-19T04:07:44Z"
+      "pushed_at": "2026-05-19T04:10:57Z"
     },
     "commits": [
+      {
+        "sha": "5ece506b32af1ab53aeaf0eeb8363e4e02ed4c24",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/5ece506b32af1ab53aeaf0eeb8363e4e02ed4c24",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:10:53Z"
+          }
+        }
+      },
       {
         "sha": "e3137e53cfc5d3076af43d5a706b6316dcbc6e26",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/e3137e53cfc5d3076af43d5a706b6316dcbc6e26",
@@ -328,25 +338,25 @@
             "date": "2026-05-19T04:03:39Z"
           }
         }
-      },
-      {
-        "sha": "dcb980394a539f70def6203f2d87217e70ea0b76",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/dcb980394a539f70def6203f2d87217e70ea0b76",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:47:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-19T04:08:35Z"
+      "pushed_at": "2026-05-19T04:11:19Z"
     },
     "commits": [
+      {
+        "sha": "12eb4873f830fad0edfc75e63d31a4e5599a8a08",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/12eb4873f830fad0edfc75e63d31a4e5599a8a08",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:16Z"
+          }
+        }
+      },
       {
         "sha": "0d3c27c4e555248bad8032a3300bc7a8e0471215",
         "html_url": "https://github.com/freegamestore-online/memory/commit/0d3c27c4e555248bad8032a3300bc7a8e0471215",
@@ -366,25 +376,25 @@
             "date": "2026-05-19T04:04:30Z"
           }
         }
-      },
-      {
-        "sha": "08086624b2821806489ba4e3ff2c135b7da479e3",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/08086624b2821806489ba4e3ff2c135b7da479e3",
-        "commit": {
-          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0. This\nunblocks the Cloudflare Pages deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T02:58:23Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-19T04:08:20Z"
+      "pushed_at": "2026-05-19T04:11:06Z"
     },
     "commits": [
+      {
+        "sha": "2ca3e3d642b5d0b2b4990efd683a93eb2094c54e",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/2ca3e3d642b5d0b2b4990efd683a93eb2094c54e",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:04Z"
+          }
+        }
+      },
       {
         "sha": "3458aa9428e4ea10cb90bb0ba21e4165869c2deb",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/3458aa9428e4ea10cb90bb0ba21e4165869c2deb",
@@ -402,16 +412,6 @@
           "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:04:15Z"
-          }
-        }
-      },
-      {
-        "sha": "5e0c29484bc70633ff47c4bc4fe298a751fd7f6b",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/5e0c29484bc70633ff47c4bc4fe298a751fd7f6b",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:12:10Z"
           }
         }
       }
@@ -458,9 +458,29 @@
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-19T04:08:18Z"
+      "pushed_at": "2026-05-19T04:14:45Z"
     },
     "commits": [
+      {
+        "sha": "8455389a43d5ead72557779f017edb9508e7a30c",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/8455389a43d5ead72557779f017edb9508e7a30c",
+        "commit": {
+          "message": "fix(types): add @types/node so compliance test type-checks\n\nThe compliance test imports node:fs / node:path / __dirname. Without\n@types/node in web's devDependencies, tsc fails (TS2307, TS2304) and\nblocks the deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:14:42Z"
+          }
+        }
+      },
+      {
+        "sha": "8dce3f6173618d0b2b638d84fe843e65b971c94c",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/8dce3f6173618d0b2b638d84fe843e65b971c94c",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:01Z"
+          }
+        }
+      },
       {
         "sha": "bd233fc90cd05496464b3462a812411948c614d6",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/bd233fc90cd05496464b3462a812411948c614d6",
@@ -470,35 +490,25 @@
             "date": "2026-05-19T04:08:14Z"
           }
         }
-      },
-      {
-        "sha": "a221b632e4d63b3f74bd2f6ae39ded3372399799",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/a221b632e4d63b3f74bd2f6ae39ded3372399799",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:12Z"
-          }
-        }
-      },
-      {
-        "sha": "0d3f7d278c301c36646dc6689d74f65a03e2a8cc",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/0d3f7d278c301c36646dc6689d74f65a03e2a8cc",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:12:06Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-19T04:08:30Z"
+      "pushed_at": "2026-05-19T04:11:13Z"
     },
     "commits": [
+      {
+        "sha": "08c79f16543bff5b3cd0d5d21de6fdc7410bc1f6",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/08c79f16543bff5b3cd0d5d21de6fdc7410bc1f6",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:10Z"
+          }
+        }
+      },
       {
         "sha": "0a15cb114468b9fa63d284eadff7eb605ece803b",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/0a15cb114468b9fa63d284eadff7eb605ece803b",
@@ -518,25 +528,25 @@
             "date": "2026-05-19T04:04:24Z"
           }
         }
-      },
-      {
-        "sha": "424b4724e5ac12e0c5b7d5a758ba935961b3fbe2",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/424b4724e5ac12e0c5b7d5a758ba935961b3fbe2",
-        "commit": {
-          "message": "Add SDK audio: playTick on tile select, playClear on pair match, playLevelUp on board clear, playGameOver on no-moves-left\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T02:38:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-19T04:08:23Z"
+      "pushed_at": "2026-05-19T04:11:09Z"
     },
     "commits": [
+      {
+        "sha": "47bb15cb31de341155089888c025f41c7401c153",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/47bb15cb31de341155089888c025f41c7401c153",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:07Z"
+          }
+        }
+      },
       {
         "sha": "19617089ff3daebc7af9d6066de976fcbb04a8a9",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/19617089ff3daebc7af9d6066de976fcbb04a8a9",
@@ -556,25 +566,25 @@
             "date": "2026-05-19T04:04:18Z"
           }
         }
-      },
-      {
-        "sha": "7e98f541190f0d79b965d7cf96808bb415b48bea",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/7e98f541190f0d79b965d7cf96808bb415b48bea",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:47:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-19T04:04:40Z"
+      "pushed_at": "2026-05-19T04:08:41Z"
     },
     "commits": [
+      {
+        "sha": "8f884c29e44bfb242ae8b09275b90b812105654b",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/8f884c29e44bfb242ae8b09275b90b812105654b",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:08:39Z"
+          }
+        }
+      },
       {
         "sha": "5b3b1fe32ef306fa8bd957afbc5915754823610b",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/5b3b1fe32ef306fa8bd957afbc5915754823610b",
@@ -594,25 +604,35 @@
             "date": "2026-05-19T03:47:52Z"
           }
         }
-      },
-      {
-        "sha": "77d7c8dd0886cb6bb1f32653c0dae2950c154946",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/77d7c8dd0886cb6bb1f32653c0dae2950c154946",
-        "commit": {
-          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:03:03Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-19T04:04:57Z"
+      "pushed_at": "2026-05-19T04:11:31Z"
     },
     "commits": [
+      {
+        "sha": "575aeaf6f32b663fd7a908fc371789af89aa2576",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/575aeaf6f32b663fd7a908fc371789af89aa2576",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:28Z"
+          }
+        }
+      },
+      {
+        "sha": "b297e0f38a5ec0789cd91c26a710bee0111c5942",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/b297e0f38a5ec0789cd91c26a710bee0111c5942",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:08:58Z"
+          }
+        }
+      },
       {
         "sha": "cc4699340c53cc33c9fde5fdf25e33db4b4bc2f1",
         "html_url": "https://github.com/freegamestore-online/racing/commit/cc4699340c53cc33c9fde5fdf25e33db4b4bc2f1",
@@ -622,35 +642,25 @@
             "date": "2026-05-19T04:04:55Z"
           }
         }
-      },
-      {
-        "sha": "6cb2922a432cc3e1d116fcf12b05d92cf34a3abf",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/6cb2922a432cc3e1d116fcf12b05d92cf34a3abf",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:48:03Z"
-          }
-        }
-      },
-      {
-        "sha": "eda3731722d8f1058038f1261e7ca1a0a294b1d7",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/eda3731722d8f1058038f1261e7ca1a0a294b1d7",
-        "commit": {
-          "message": "Add SDK audio: playGameOver on crash\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:23:22Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-19T04:04:54Z"
+      "pushed_at": "2026-05-19T04:08:57Z"
     },
     "commits": [
+      {
+        "sha": "65391c3728ad61d7f4a91bc4183730163238d959",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/65391c3728ad61d7f4a91bc4183730163238d959",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:08:54Z"
+          }
+        }
+      },
       {
         "sha": "73e186721ee3ebe4ae5fa66efe3c29b09a56ad9d",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/73e186721ee3ebe4ae5fa66efe3c29b09a56ad9d",
@@ -670,25 +680,25 @@
             "date": "2026-05-19T03:48:00Z"
           }
         }
-      },
-      {
-        "sha": "a8cb5d0281835aed905370ccfdee551bd47e2476",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/a8cb5d0281835aed905370ccfdee551bd47e2476",
-        "commit": {
-          "message": "Add SDK audio: playMove on piece placement, playLevelUp on solve\n\nWires useGameSounds in PracticeTab (already inside GameShell, so the\nhook gets the real SoundProvider). Also adds 'node' to tsconfig types\nso the compliance test's __dirname/node:fs imports type-check.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:21:53Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-19T04:08:38Z"
+      "pushed_at": "2026-05-19T04:14:11Z"
     },
     "commits": [
+      {
+        "sha": "169e3b76265debcc776c0f81e0046d5aca3122ef",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/169e3b76265debcc776c0f81e0046d5aca3122ef",
+        "commit": {
+          "message": "fix(compliance): use correct freegamestore.online URL\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:14:08Z"
+          }
+        }
+      },
       {
         "sha": "c4a2a3b5981b11a2a4f2813ce597b4333dcda4f9",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/c4a2a3b5981b11a2a4f2813ce597b4333dcda4f9",
@@ -706,16 +716,6 @@
           "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:04:33Z"
-          }
-        }
-      },
-      {
-        "sha": "c51f4e5ab70b21f28288365d5dae8ea8e4f29f6f",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/c51f4e5ab70b21f28288365d5dae8ea8e4f29f6f",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:47:49Z"
           }
         }
       }
@@ -762,9 +762,19 @@
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-19T04:08:02Z"
+      "pushed_at": "2026-05-19T04:14:35Z"
     },
     "commits": [
+      {
+        "sha": "45e65b9d972d4b4649a46c3427793434954cfa0f",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/45e65b9d972d4b4649a46c3427793434954cfa0f",
+        "commit": {
+          "message": "fix(types): add @types/node so compliance test type-checks\n\nThe compliance test imports node:fs / node:path / __dirname. Without\n@types/node in web's devDependencies, tsc fails (TS2307, TS2304) and\nblocks the deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:14:33Z"
+          }
+        }
+      },
       {
         "sha": "574c06683bfce27e913b8d2c01b53484191da41c",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/574c06683bfce27e913b8d2c01b53484191da41c",
@@ -784,25 +794,35 @@
             "date": "2026-05-19T04:03:57Z"
           }
         }
-      },
-      {
-        "sha": "3c6f2ee1c5c6a4f119f51bf0196b4c63f5dfd01b",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/3c6f2ee1c5c6a4f119f51bf0196b4c63f5dfd01b",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:11:56Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-19T04:05:06Z"
+      "pushed_at": "2026-05-19T04:11:34Z"
     },
     "commits": [
+      {
+        "sha": "3c65728548faf06e0d85a94b5b5f7f1236407299",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/3c65728548faf06e0d85a94b5b5f7f1236407299",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:31Z"
+          }
+        }
+      },
+      {
+        "sha": "30bb5f735e2426481760471f327c375813c37db9",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/30bb5f735e2426481760471f327c375813c37db9",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:03Z"
+          }
+        }
+      },
       {
         "sha": "3f0ad8a83e04c13b3a83a2c4345ba5603cbc1816",
         "html_url": "https://github.com/freegamestore-online/simon/commit/3f0ad8a83e04c13b3a83a2c4345ba5603cbc1816",
@@ -812,35 +832,35 @@
             "date": "2026-05-19T04:05:03Z"
           }
         }
-      },
-      {
-        "sha": "5e206724503d1782be8d1c248e4cf9e506a7dc11",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/5e206724503d1782be8d1c248e4cf9e506a7dc11",
-        "commit": {
-          "message": "Respect platform mute toggle in playTone\n\nplayTone() created a fresh AudioContext and an oscillator every time a\ncolor flashed during the sequence and every time the player tapped a\ncolor — none of that read the platform mute state, so the topbar Mute\nbutton silently did nothing on simon.\n\nFix: playTone now takes muted as a third arg and early-returns if true.\nThe component reads useSound() once, stores it in a ref so the existing\nuseCallback hooks (showSequence, handlePress) don't have to be recreated\non every mute toggle, and passes mutedRef.current at the two call sites.\n\nDrive-by fixes to clear the pre-existing tsc errors that were blocking\nthe build:\n- Add @types/node devDep so the compliance test's node:fs/node:path\n  imports resolve\n- Drop the unused `const css = read('src/index.css')` in compliance.test.ts\n  that tripped noUnusedLocals\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T01:59:47Z"
-          }
-        }
-      },
-      {
-        "sha": "aa315f0f3082c3054ea2239a067b9266b2373083",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/aa315f0f3082c3054ea2239a067b9266b2373083",
-        "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-18T22:23:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-19T04:05:12Z"
+      "pushed_at": "2026-05-19T04:11:40Z"
     },
     "commits": [
+      {
+        "sha": "ff8c55b023dc34b74dfc965d1014f73804f42459",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/ff8c55b023dc34b74dfc965d1014f73804f42459",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:38Z"
+          }
+        }
+      },
+      {
+        "sha": "3ca93e06293d0ce7d901542f773e4e61834ecc6e",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/3ca93e06293d0ce7d901542f773e4e61834ecc6e",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:10Z"
+          }
+        }
+      },
       {
         "sha": "d7fb86495bc854f2c5123f27af16ddc541941fa7",
         "html_url": "https://github.com/freegamestore-online/snake/commit/d7fb86495bc854f2c5123f27af16ddc541941fa7",
@@ -850,35 +870,35 @@
             "date": "2026-05-19T04:05:09Z"
           }
         }
-      },
-      {
-        "sha": "18ad9da2a3892184ffeeefb003d46453aeb2550a",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/18ad9da2a3892184ffeeefb003d46453aeb2550a",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:48:14Z"
-          }
-        }
-      },
-      {
-        "sha": "0e9d2e85e803c7c177812d7cf0fd4d6540e1d3be",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/0e9d2e85e803c7c177812d7cf0fd4d6540e1d3be",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:12:33Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-19T04:05:39Z"
+      "pushed_at": "2026-05-19T04:11:49Z"
     },
     "commits": [
+      {
+        "sha": "2632b0d7ec4c48313e5a6d95010a6075b65329b7",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/2632b0d7ec4c48313e5a6d95010a6075b65329b7",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:47Z"
+          }
+        }
+      },
+      {
+        "sha": "8a57e07ebcecce7be5467c2b1b75aac5743f1816",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/8a57e07ebcecce7be5467c2b1b75aac5743f1816",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:36Z"
+          }
+        }
+      },
       {
         "sha": "9438b69a7eb3723b39e95b536a95aec5ace51052",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/9438b69a7eb3723b39e95b536a95aec5ace51052",
@@ -888,35 +908,35 @@
             "date": "2026-05-19T04:05:36Z"
           }
         }
-      },
-      {
-        "sha": "1329e23035b7cf4b0cc1b50f47a8925f47891de7",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/1329e23035b7cf4b0cc1b50f47a8925f47891de7",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:12:49Z"
-          }
-        }
-      },
-      {
-        "sha": "749189944e58a5cbdde20c8256afe7430e8e505f",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/749189944e58a5cbdde20c8256afe7430e8e505f",
-        "commit": {
-          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:07:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-19T04:05:21Z"
+      "pushed_at": "2026-05-19T04:11:43Z"
     },
     "commits": [
+      {
+        "sha": "f89738557efd5f782479aafdfe020ee9b1f6a876",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/f89738557efd5f782479aafdfe020ee9b1f6a876",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:41Z"
+          }
+        }
+      },
+      {
+        "sha": "7922b63dbe4e7689c7b81e392332d2d19dec6b89",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/7922b63dbe4e7689c7b81e392332d2d19dec6b89",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:20Z"
+          }
+        }
+      },
       {
         "sha": "56c0b5314d9bbcab494a7066949a43d92bb0c626",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/56c0b5314d9bbcab494a7066949a43d92bb0c626",
@@ -926,35 +946,35 @@
             "date": "2026-05-19T04:05:19Z"
           }
         }
-      },
-      {
-        "sha": "2c95de8ca4466ff87648a72ab1d071b6e237c13f",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/2c95de8ca4466ff87648a72ab1d071b6e237c13f",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:12:39Z"
-          }
-        }
-      },
-      {
-        "sha": "3504c7332a3a822c3f1e27147b353d7368304a4b",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/3504c7332a3a822c3f1e27147b353d7368304a4b",
-        "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-18T22:23:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-19T04:05:30Z"
+      "pushed_at": "2026-05-19T04:11:46Z"
     },
     "commits": [
+      {
+        "sha": "73a8966a4e9a221e533fca0380bf0a1f0b4fca07",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/73a8966a4e9a221e533fca0380bf0a1f0b4fca07",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:44Z"
+          }
+        }
+      },
+      {
+        "sha": "4dd32fdab0ffd376054d1ba36a9659168127500e",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/4dd32fdab0ffd376054d1ba36a9659168127500e",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:30Z"
+          }
+        }
+      },
       {
         "sha": "21678de5b3459e86e22f327652d613a31efc4e6b",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/21678de5b3459e86e22f327652d613a31efc4e6b",
@@ -964,62 +984,42 @@
             "date": "2026-05-19T04:05:28Z"
           }
         }
-      },
-      {
-        "sha": "cbf32895d78b2dcb87f9c3a9b1a955cb759f6fb4",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/cbf32895d78b2dcb87f9c3a9b1a955cb759f6fb4",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:48:22Z"
-          }
-        }
-      },
-      {
-        "sha": "23a1a7a168a38563ff90c0abd3170d017abf7018",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/23a1a7a168a38563ff90c0abd3170d017abf7018",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:12:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-19T04:04:43Z"
+      "pushed_at": "2026-05-19T04:14:50Z"
     },
     "commits": [
       {
-        "sha": "f7b664f3a41d3d86604af0de02d5a53d407a0fa0",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/f7b664f3a41d3d86604af0de02d5a53d407a0fa0",
+        "sha": "d53fe254fe80d84f6ef55083da222624fe3393bb",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/d53fe254fe80d84f6ef55083da222624fe3393bb",
         "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(types): add @types/node so compliance test type-checks\n\nThe compliance test imports node:fs / node:path / __dirname. Without\n@types/node in web's devDependencies, tsc fails (TS2307, TS2304) and\nblocks the deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T04:04:40Z"
+            "date": "2026-05-19T04:14:47Z"
           }
         }
       },
       {
-        "sha": "5faa49bcce675940776811c0edfb6072a5b43f37",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/5faa49bcce675940776811c0edfb6072a5b43f37",
+        "sha": "012dca3f4ec4a4796bec44b819cc531be59340ca",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/012dca3f4ec4a4796bec44b819cc531be59340ca",
         "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T03:12:19Z"
+            "date": "2026-05-19T04:11:19Z"
           }
         }
       },
       {
-        "sha": "9dd13ffe7117025b38faa8834f04e14483523467",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/9dd13ffe7117025b38faa8834f04e14483523467",
+        "sha": "336cb9e5235a149f0e33bb98b6b746543d637f23",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/336cb9e5235a149f0e33bb98b6b746543d637f23",
         "commit": {
-          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T03:07:07Z"
+            "date": "2026-05-19T04:08:42Z"
           }
         }
       }
@@ -1028,9 +1028,29 @@
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-19T04:04:51Z"
+      "pushed_at": "2026-05-19T04:11:28Z"
     },
     "commits": [
+      {
+        "sha": "c64b202630b07c9dee032b2ac843adf89c06aa02",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/c64b202630b07c9dee032b2ac843adf89c06aa02",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:25Z"
+          }
+        }
+      },
+      {
+        "sha": "aa9f1f859d6cff308644171dab111992505a351b",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/aa9f1f859d6cff308644171dab111992505a351b",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:08:51Z"
+          }
+        }
+      },
       {
         "sha": "f1b3d48170864f2026bfb71d4f5f4f114a176c7c",
         "html_url": "https://github.com/freegamestore-online/pong/commit/f1b3d48170864f2026bfb71d4f5f4f114a176c7c",
@@ -1040,35 +1060,35 @@
             "date": "2026-05-19T04:04:49Z"
           }
         }
-      },
-      {
-        "sha": "d47ee7d428114a9be71b8583d7844630731f29f5",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/d47ee7d428114a9be71b8583d7844630731f29f5",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:12:23Z"
-          }
-        }
-      },
-      {
-        "sha": "ed84136adb9ee2111578ef9939ecfc0422732102",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/ed84136adb9ee2111578ef9939ecfc0422732102",
-        "commit": {
-          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:07:13Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-19T04:05:24Z"
+      "pushed_at": "2026-05-19T04:19:57Z"
     },
     "commits": [
+      {
+        "sha": "59741e816365baa73112bc50c748886023d365a1",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/59741e816365baa73112bc50c748886023d365a1",
+        "commit": {
+          "message": "fix(sudoku): wire AudioBridge into JSX, fix submitScore signature\n\nEarlier audio scaffolding declared AudioBridge and audioRef but never\nmounted the bridge or called the sounds API, so tsc flagged unused\ndeclarations. Also dropped a leftover isUnitComplete helper that wasn't\nreferenced.\n\nsubmitScore(timer, name) had the wrong signature — the SDK's\nuseLeaderboard().submitScore only takes (score). Fixed.\n\nNow playing: playTick on correct cell, playError on wrong, playLevelUp\non solve.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:19:55Z"
+          }
+        }
+      },
+      {
+        "sha": "7e4a481ba65fd5e3c0f9f6cd4013936c3bc820fc",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/7e4a481ba65fd5e3c0f9f6cd4013936c3bc820fc",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:23Z"
+          }
+        }
+      },
       {
         "sha": "83840529d31f83a68ddeee8d5b26ae096e42a810",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/83840529d31f83a68ddeee8d5b26ae096e42a810",
@@ -1078,35 +1098,35 @@
             "date": "2026-05-19T04:05:22Z"
           }
         }
-      },
-      {
-        "sha": "2c7af1978ce2baef5a20939d3f1870fa565f309f",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/2c7af1978ce2baef5a20939d3f1870fa565f309f",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:12:43Z"
-          }
-        }
-      },
-      {
-        "sha": "325313b12a103880d97b02037a951c63df30eb19",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/325313b12a103880d97b02037a951c63df30eb19",
-        "commit": {
-          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:03:12Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-19T04:05:44Z"
+      "pushed_at": "2026-05-19T04:11:52Z"
     },
     "commits": [
+      {
+        "sha": "fa0cbc72a9bf3f403291e7a39b66d3c1647ae483",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/fa0cbc72a9bf3f403291e7a39b66d3c1647ae483",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:50Z"
+          }
+        }
+      },
+      {
+        "sha": "ac8b95aa28dcf0afa2572a1b4c0326ba0e06494c",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/ac8b95aa28dcf0afa2572a1b4c0326ba0e06494c",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:42Z"
+          }
+        }
+      },
       {
         "sha": "800076fcda96a96fe39c8e43c2ec2e9edeadf865",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/800076fcda96a96fe39c8e43c2ec2e9edeadf865",
@@ -1116,35 +1136,35 @@
             "date": "2026-05-19T04:05:42Z"
           }
         }
-      },
-      {
-        "sha": "326f8ba394b0fedc88d022144d73120e4f838d0c",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/326f8ba394b0fedc88d022144d73120e4f838d0c",
-        "commit": {
-          "message": "Add SDK audio: playClear on word found, playLevelUp on all words done\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:42:35Z"
-          }
-        }
-      },
-      {
-        "sha": "cef924445420f885ed83f25aeb777df641351187",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/cef924445420f885ed83f25aeb777df641351187",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:12:56Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-19T04:05:15Z"
+      "pushed_at": "2026-05-19T04:14:55Z"
     },
     "commits": [
+      {
+        "sha": "6e752eb62761f34336821b9d2a512933c6cdcd07",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/6e752eb62761f34336821b9d2a512933c6cdcd07",
+        "commit": {
+          "message": "fix(types): add @types/node so compliance test type-checks\n\nThe compliance test imports node:fs / node:path / __dirname. Without\n@types/node in web's devDependencies, tsc fails (TS2307, TS2304) and\nblocks the deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:14:52Z"
+          }
+        }
+      },
+      {
+        "sha": "4bebaf74698c9385a1e07e89aa33593352d1445b",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/4bebaf74698c9385a1e07e89aa33593352d1445b",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:13Z"
+          }
+        }
+      },
       {
         "sha": "97f72cbbd1dcd0f5d3acc4fa7c8bcbf736255b32",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/97f72cbbd1dcd0f5d3acc4fa7c8bcbf736255b32",
@@ -1154,35 +1174,25 @@
             "date": "2026-05-19T04:05:12Z"
           }
         }
-      },
-      {
-        "sha": "a0c81929f3a8ac4b21e33e7374a9b872f04f16bc",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/a0c81929f3a8ac4b21e33e7374a9b872f04f16bc",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:12:36Z"
-          }
-        }
-      },
-      {
-        "sha": "0e4fa14e11560cca39c15f2f712bb269e902f373",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/0e4fa14e11560cca39c15f2f712bb269e902f373",
-        "commit": {
-          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:07:30Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-19T04:05:41Z"
+      "pushed_at": "2026-05-19T04:09:42Z"
     },
     "commits": [
+      {
+        "sha": "ca5548f7e2f7c74bedbda896e89ecb803581e4ac",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/ca5548f7e2f7c74bedbda896e89ecb803581e4ac",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:39Z"
+          }
+        }
+      },
       {
         "sha": "bad031ab29bb721ea52b3ed4f11b6c5524b80972",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/bad031ab29bb721ea52b3ed4f11b6c5524b80972",
@@ -1202,25 +1212,35 @@
             "date": "2026-05-19T03:41:21Z"
           }
         }
-      },
-      {
-        "sha": "f519d924afbb20760c6bb64fb1b236574e07e1e1",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/f519d924afbb20760c6bb64fb1b236574e07e1e1",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:12:53Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-19T04:05:09Z"
+      "pushed_at": "2026-05-19T04:11:37Z"
     },
     "commits": [
+      {
+        "sha": "ed55e324806c513c38177f68e1810f6567a19de4",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/ed55e324806c513c38177f68e1810f6567a19de4",
+        "commit": {
+          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:11:34Z"
+          }
+        }
+      },
+      {
+        "sha": "0aa719531a499c28817d554fdb9d5a3993dabf87",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/0aa719531a499c28817d554fdb9d5a3993dabf87",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:06Z"
+          }
+        }
+      },
       {
         "sha": "496b3d0fa8454448a9aea07e78c23e54e71aaf02",
         "html_url": "https://github.com/freegamestore-online/slither/commit/496b3d0fa8454448a9aea07e78c23e54e71aaf02",
@@ -1230,35 +1250,25 @@
             "date": "2026-05-19T04:05:06Z"
           }
         }
-      },
-      {
-        "sha": "3ff39a33f65911707cd6a8005821476a86f3e4ed",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/3ff39a33f65911707cd6a8005821476a86f3e4ed",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:48:11Z"
-          }
-        }
-      },
-      {
-        "sha": "a383889aba467e1ee784a20790c912f09b333a7e",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/a383889aba467e1ee784a20790c912f09b333a7e",
-        "commit": {
-          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:03:09Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-19T04:08:11Z"
+      "pushed_at": "2026-05-19T04:14:40Z"
     },
     "commits": [
+      {
+        "sha": "fc9cbc13688c0c4121d8802796a3b71010462e77",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/fc9cbc13688c0c4121d8802796a3b71010462e77",
+        "commit": {
+          "message": "fix(types): add @types/node so compliance test type-checks\n\nThe compliance test imports node:fs / node:path / __dirname. Without\n@types/node in web's devDependencies, tsc fails (TS2307, TS2304) and\nblocks the deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:14:37Z"
+          }
+        }
+      },
       {
         "sha": "a7cac0d9795def20c70e9fd86997324d37bcbe39",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/a7cac0d9795def20c70e9fd86997324d37bcbe39",
@@ -1276,16 +1286,6 @@
           "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:04:07Z"
-          }
-        }
-      },
-      {
-        "sha": "35a2f4fc3191f0a10060e0fd428e84650397b385",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/35a2f4fc3191f0a10060e0fd428e84650397b385",
-        "commit": {
-          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:12:02Z"
           }
         }
       }
@@ -1446,9 +1446,19 @@
   "freegamestore-online/spaceinvaders": {
     "meta": {
       "created_at": "2026-05-18T23:17:56Z",
-      "pushed_at": "2026-05-19T04:05:18Z"
+      "pushed_at": "2026-05-19T04:09:20Z"
     },
     "commits": [
+      {
+        "sha": "13b9402869c270498e7ffc61c51e299a279eda33",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/13b9402869c270498e7ffc61c51e299a279eda33",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:17Z"
+          }
+        }
+      },
       {
         "sha": "798a87118282e3e09f3bbdc69166a6245f1a9b3a",
         "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/798a87118282e3e09f3bbdc69166a6245f1a9b3a",
@@ -1468,25 +1478,25 @@
             "date": "2026-05-19T03:48:17Z"
           }
         }
-      },
-      {
-        "sha": "7123f992f0c625481366d9f77365f37dd147122b",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/7123f992f0c625481366d9f77365f37dd147122b",
-        "commit": {
-          "message": "Add SDK audio: playMove on shot, playClear on alien killed, playError on bomb hit, playGameOver on death, playLevelUp on wave clear\n\nUses AudioBridge pattern: tiny ref-based child of GameShell exposes the\nuseGameSounds() return to the App scope. Required because useGameSounds\nreads SoundContext which GameShell provides INTERNALLY — calling it at\nApp level would get the disconnected default.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:45:03Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/war": {
     "meta": {
       "created_at": "2026-05-19T00:05:08Z",
-      "pushed_at": "2026-05-19T04:05:36Z"
+      "pushed_at": "2026-05-19T04:09:36Z"
     },
     "commits": [
+      {
+        "sha": "0400da7124137115e8719e66df9dba36548f0220",
+        "html_url": "https://github.com/freegamestore-online/war/commit/0400da7124137115e8719e66df9dba36548f0220",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:33Z"
+          }
+        }
+      },
       {
         "sha": "1c16114c1929860872c86ee9878f2ec595df6fb3",
         "html_url": "https://github.com/freegamestore-online/war/commit/1c16114c1929860872c86ee9878f2ec595df6fb3",
@@ -1506,25 +1516,25 @@
             "date": "2026-05-19T03:48:28Z"
           }
         }
-      },
-      {
-        "sha": "ff4c2a1f019474cbcc6554995ed4d9d9a59afc6a",
-        "html_url": "https://github.com/freegamestore-online/war/commit/ff4c2a1f019474cbcc6554995ed4d9d9a59afc6a",
-        "commit": {
-          "message": "fix: compliance.yml uses correct freegamestore.online URL\n\nThe store-link check was grepping for freeappstore.online (wrong store\ntemplate). Source already references freegamestore.online correctly;\nthis just realigns the check.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:08:16Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tanks": {
     "meta": {
       "created_at": "2026-05-19T00:51:54Z",
-      "pushed_at": "2026-05-19T04:05:27Z"
+      "pushed_at": "2026-05-19T04:09:29Z"
     },
     "commits": [
+      {
+        "sha": "a82fe7dbda204535b13bb771b5472ba0bad6c128",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/a82fe7dbda204535b13bb771b5472ba0bad6c128",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:27Z"
+          }
+        }
+      },
       {
         "sha": "76675aac450b21f8e65a993855c7728ace2b9180",
         "html_url": "https://github.com/freegamestore-online/tanks/commit/76675aac450b21f8e65a993855c7728ace2b9180",
@@ -1544,25 +1554,35 @@
             "date": "2026-05-19T03:48:20Z"
           }
         }
-      },
-      {
-        "sha": "1b76e98471b1c704b80c54929694b354c6b9a218",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/1b76e98471b1c704b80c54929694b354c6b9a218",
-        "commit": {
-          "message": "fix: compliance.yml uses correct freegamestore.online URL\n\nThe store-link check was grepping for freeappstore.online (wrong store\ntemplate). Source already references freegamestore.online correctly;\nthis just realigns the check.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:08:16Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/riichi": {
     "meta": {
       "created_at": "2026-05-19T02:31:10Z",
-      "pushed_at": "2026-05-19T04:05:03Z"
+      "pushed_at": "2026-05-19T05:09:07Z"
     },
     "commits": [
+      {
+        "sha": "3e3ad36cb56a6883136c604307d024922ace22fd",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/3e3ad36cb56a6883136c604307d024922ace22fd",
+        "commit": {
+          "message": "Make the game actually playable: waits, smarter bots, ippatsu, turn HUD\n\nFour real bugs / UX gaps fixed:\n\n1. **Ippatsu was almost always wrong.** The yaku context used\n   `state.turn === player.riichiTurn + 1` — which only matched the *first*\n   bot's discard after the declaration, missing the rest of the go-around\n   and the riichi-declarer's own next tsumo. Replaced with an explicit\n   `ippatsuActive` flag on PlayerState, set true after the declaration\n   discard and cleared on the declarer's next discard.\n\n2. **No tenpai / waits indicator.** The player had no way to know whether\n   they were one away from winning or which tiles would complete the hand,\n   making real play impossible. New `humanWaits(state)` engine function\n   plus a TENPAI badge over the hand that renders the waiting tiles as\n   small face-up tiles.\n\n3. **Riichi mode was trial-and-error.** Tapping a tile that wouldn't keep\n   the hand in tenpai silently did nothing. New `legalRiichiDiscardIndices`\n   engine helper; UI dims + disables non-legal tiles while riichi mode is\n   armed, and highlights the legal ones with the riichi-yellow outline.\n\n4. **\"Your turn\" wasn't visible to the player.** Opponents glow when\n   active, but the human side had no indicator. Added a YOUR TURN pill\n   next to the score badge.\n\nPlus the bot rewrite: replaced the \"random with isolated-honor heuristic\"\ndiscarder with a per-tile usefulness score\n   (same-tile partners + same-suit neighbours +\n    kanchan partners − honor/terminal flexibility penalty).\nBots now keep pairs and runs and discard the actually-orphan tile, which\nis roughly beginner play. Random bots gave the human winning tiles for\nfree; this stops that.\n\nEngine tests: 24/24 (added 3: ippatsu default state, humanWaits sanity,\n13-tile non-tenpai hand returns no waits). Bundle 69.4 KB gzip.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T05:09:05Z"
+          }
+        }
+      },
+      {
+        "sha": "d62809dc9cea1e78b3fd03a741afb84f75cedc06",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/d62809dc9cea1e78b3fd03a741afb84f75cedc06",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:09:01Z"
+          }
+        }
+      },
       {
         "sha": "455fed84f6c574edbcc307ebce819b111f4ca0d3",
         "html_url": "https://github.com/freegamestore-online/riichi/commit/455fed84f6c574edbcc307ebce819b111f4ca0d3",
@@ -1572,35 +1592,25 @@
             "date": "2026-05-19T04:05:00Z"
           }
         }
-      },
-      {
-        "sha": "1b336460ddfce00b3731823f7564d81be10f2f20",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/1b336460ddfce00b3731823f7564d81be10f2f20",
-        "commit": {
-          "message": "Polish UI: bigger tiles, responsive center, show dora, fix riichi-mode lock\n\n- Bump tile sizes (lg 38→48, md 28→32, sm 20→22, tile-backs 18→22). Glyph\n  font scales up to 36px on the human hand, so Unicode mahjong tile faces\n  actually render legibly on a phone.\n- Replace the fixed 360×360 centre with `min(70vmin, 460px)` so it scales\n  with the viewport — portrait phones get a big board, landscape phones\n  shrink the centre without overflowing. The whole table now has a felt-\n  green radial gradient.\n- Surface the dora indicator inside the centre HUD next to the wall-tile\n  counter, with a styled translucent panel so the round / turn / wall info\n  is readable against the discards.\n- Human hand uses `flex-wrap: nowrap` + horizontal scroll instead of\n  wrapping into two rows on narrow phones.\n- Fix the lingering riichi-arming bug: if the human entered riichi mode\n  and then state cycled (turn changed, hand state no longer tenpai-able),\n  the Cancel button vanished and the mode got stuck. Now we reset\n  riichiMode the moment canRiichi flips false, and keep the toggle button\n  visible whenever the mode is active.\n- Score uses thousand-separators (toLocaleString) and the RIICHI badge\n  swapped to high-contrast yellow.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:50:27Z"
-          }
-        }
-      },
-      {
-        "sha": "c3544b28fd81322f9f867d2ed7a0fc91e6ed8e2b",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/c3544b28fd81322f9f867d2ed7a0fc91e6ed8e2b",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:48:09Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pinball": {
     "meta": {
       "created_at": "2026-05-19T02:33:08Z",
-      "pushed_at": "2026-05-19T04:04:46Z"
+      "pushed_at": "2026-05-19T04:08:47Z"
     },
     "commits": [
+      {
+        "sha": "d2747242a5f92d28389e831275f7cf8b0a3b0d7f",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/d2747242a5f92d28389e831275f7cf8b0a3b0d7f",
+        "commit": {
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:08:45Z"
+          }
+        }
+      },
       {
         "sha": "5dbe474ae4dbac2dd191d5e9d92e0f64ef4695ec",
         "html_url": "https://github.com/freegamestore-online/pinball/commit/5dbe474ae4dbac2dd191d5e9d92e0f64ef4695ec",
@@ -1618,16 +1628,6 @@
           "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T03:47:55Z"
-          }
-        }
-      },
-      {
-        "sha": "446b3c058fb75aff01a04cf6cfe8281217d5b5b3",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/446b3c058fb75aff01a04cf6cfe8281217d5b5b3",
-        "commit": {
-          "message": "fix: compliance.yml uses correct freegamestore.online URL\n\nThe store-link check was grepping for freeappstore.online (wrong store\ntemplate). Source already references freegamestore.online correctly;\nthis just realigns the check.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:08:16Z"
           }
         }
       }
