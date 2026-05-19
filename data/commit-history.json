@@ -1549,7 +1549,7 @@
         "sha": "511ed0e91f858e9e29ee45061f68b188f7c610a8",
         "html_url": "https://github.com/freegamestore-online/tanks/commit/511ed0e91f858e9e29ee45061f68b188f7c610a8",
         "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs �� so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T06:18:46Z"
           }
