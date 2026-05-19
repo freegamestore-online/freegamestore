@@ -2,9 +2,19 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-19T07:11:16Z"
+      "pushed_at": "2026-05-19T07:24:11Z"
     },
     "commits": [
+      {
+        "sha": "0882cbaae2e030033a599f7aaeffa7a9d48556a8",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/0882cbaae2e030033a599f7aaeffa7a9d48556a8",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:08Z"
+          }
+        }
+      },
       {
         "sha": "eebb8b9f18d6d610abf7f58c1039a2e8b9e53495",
         "html_url": "https://github.com/freegamestore-online/dice/commit/eebb8b9f18d6d610abf7f58c1039a2e8b9e53495",
@@ -22,16 +32,6 @@
           "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T06:18:46Z"
-          }
-        }
-      },
-      {
-        "sha": "7646e108fec7419b97ba5b09761fb510db48f1ee",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/7646e108fec7419b97ba5b09761fb510db48f1ee",
-        "commit": {
-          "message": "fix(compliance): use correct freegamestore.online URL\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:14:02Z"
           }
         }
       }
@@ -78,9 +78,29 @@
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-19T07:11:01Z"
+      "pushed_at": "2026-05-19T07:24:53Z"
     },
     "commits": [
+      {
+        "sha": "42cd94e17b41ea70375125e5006a781476b8fbd4",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/42cd94e17b41ea70375125e5006a781476b8fbd4",
+        "commit": {
+          "message": "Use natural \"segment\" wording in shot-scoring comment\n\nCompliance now strips comments before scanning, so the geometry term\n\"segment\" is safe again. Drop the awkward \"cue-ball-ghost-position-pocket\naxis\" phrasing in favor of the simpler \"cue→ghost→pocket segment\".\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:50Z"
+          }
+        }
+      },
+      {
+        "sha": "e2fdaed8d81b2196e2ccf1afd87f2cf5881e1416",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/e2fdaed8d81b2196e2ccf1afd87f2cf5881e1416",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:23:56Z"
+          }
+        }
+      },
       {
         "sha": "51c7cfffdcbf36108c7af4a3f1f54767510092f0",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/51c7cfffdcbf36108c7af4a3f1f54767510092f0",
@@ -90,35 +110,25 @@
             "date": "2026-05-19T07:10:58Z"
           }
         }
-      },
-      {
-        "sha": "1249dda0287a84fe9ffcb33cba0d014e5fecf0ac",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/1249dda0287a84fe9ffcb33cba0d014e5fecf0ac",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
-          }
-        }
-      },
-      {
-        "sha": "16246e37570f5c79ac6b5ae77c1160a92c1b3f88",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/16246e37570f5c79ac6b5ae77c1160a92c1b3f88",
-        "commit": {
-          "message": "Billiards: 4 more bug fixes + ball-collision sound\n\n- 8-ball + scratch is now an automatic loss. resolveShot processed the\n  8-ball case and early-returned before noticing the cue ball was also\n  in shotSunk, so a \"win\" could fire when 8-ball-rules say it's a loss.\n  Now checks `s.shotSunk.includes(0)` inline; emits \"8 + scratch\" vs\n  \"Early 8\" in the message.\n\n- Pocket detection no longer misses fast straight-line shots. Was 2\n  fixed substeps per frame → up to 11px movement per substep at max\n  power, which can step a ball *over* a pocket (detection radius ~20).\n  Substeps now scale with max ball velocity so movement never exceeds\n  ~0.55 ball radii per substep (capped at 8 substeps/frame).\n\n- AI no longer hammers every shot near max power. Old formula clamped\n  to 1.0 on most paths → frequent over-shoots and scratches. New\n  formula mixes path length AND cut-angle difficulty, capped at 95%\n  and floored at 35%, so easy/short shots are gentle and tough cuts\n  get the needed punch.\n\n- Score popup text dropped \"OPP\" — color already distinguishes whose\n  pile the ball counts toward (gray = opponent, yellow = own).\n\n- Ball-vs-ball collisions now play a throttled clack sound when the\n  closing-velocity component exceeds 0.35 px/ms. 70ms global cooldown\n  keeps a cluster impact from spamming audio.",
-          "author": {
-            "date": "2026-05-19T06:04:01Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-19T07:11:10Z"
+      "pushed_at": "2026-05-19T07:24:08Z"
     },
     "commits": [
+      {
+        "sha": "cdc3c3a9c15f7924aa76bf8057fdcc2da9fd5d84",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/cdc3c3a9c15f7924aa76bf8057fdcc2da9fd5d84",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:05Z"
+          }
+        }
+      },
       {
         "sha": "35e843d08cbc9054d6ffd8e14d0f11c71bf107d1",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/35e843d08cbc9054d6ffd8e14d0f11c71bf107d1",
@@ -136,16 +146,6 @@
           "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T06:18:46Z"
-          }
-        }
-      },
-      {
-        "sha": "8817935d834949edd4662a29731164b6d510ef22",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/8817935d834949edd4662a29731164b6d510ef22",
-        "commit": {
-          "message": "fix(compliance): use correct freegamestore.online URL\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:13:59Z"
           }
         }
       }
@@ -230,9 +230,19 @@
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-19T07:11:51Z"
+      "pushed_at": "2026-05-19T07:24:23Z"
     },
     "commits": [
+      {
+        "sha": "195e4a4ffe09c43af2349eca7398db8c28a87b16",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/195e4a4ffe09c43af2349eca7398db8c28a87b16",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:21Z"
+          }
+        }
+      },
       {
         "sha": "6e7d52aa45a8a906cbe782c518e9dfeaf9d025de",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/6e7d52aa45a8a906cbe782c518e9dfeaf9d025de",
@@ -252,25 +262,25 @@
             "date": "2026-05-19T06:18:46Z"
           }
         }
-      },
-      {
-        "sha": "f72367a8f0fb3f136f952b961f3413be3121856b",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/f72367a8f0fb3f136f952b961f3413be3121856b",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:22Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-19T07:11:29Z"
+      "pushed_at": "2026-05-19T07:24:14Z"
     },
     "commits": [
+      {
+        "sha": "7b55f0a4351d0484c1ae0f8992b7aff0c9e34172",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/7b55f0a4351d0484c1ae0f8992b7aff0c9e34172",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:12Z"
+          }
+        }
+      },
       {
         "sha": "bf2c93cd81c56f50fea089cc23ce2f6a3c71c0e8",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/bf2c93cd81c56f50fea089cc23ce2f6a3c71c0e8",
@@ -288,16 +298,6 @@
           "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T06:18:46Z"
-          }
-        }
-      },
-      {
-        "sha": "b6b59c74550c98cd019940a84d48b7638bf21c96",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/b6b59c74550c98cd019940a84d48b7638bf21c96",
-        "commit": {
-          "message": "fix(compliance): use correct freegamestore.online URL\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:14:05Z"
           }
         }
       }
@@ -686,9 +686,19 @@
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-19T07:11:41Z"
+      "pushed_at": "2026-05-19T07:24:17Z"
     },
     "commits": [
+      {
+        "sha": "3b8a24c3d416c4b284fdfdcc913c6dbb71c15c94",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/3b8a24c3d416c4b284fdfdcc913c6dbb71c15c94",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:15Z"
+          }
+        }
+      },
       {
         "sha": "8cf365af496d6bec7593e65011b1cd7bbf5135bd",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/8cf365af496d6bec7593e65011b1cd7bbf5135bd",
@@ -706,16 +716,6 @@
           "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T06:18:46Z"
-          }
-        }
-      },
-      {
-        "sha": "169e3b76265debcc776c0f81e0046d5aca3122ef",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/169e3b76265debcc776c0f81e0046d5aca3122ef",
-        "commit": {
-          "message": "fix(compliance): use correct freegamestore.online URL\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:14:08Z"
           }
         }
       }
@@ -914,9 +914,19 @@
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-19T07:12:16Z"
+      "pushed_at": "2026-05-19T07:24:33Z"
     },
     "commits": [
+      {
+        "sha": "ffe1c1e0b495324750a0dffe1f97dcab65261c2b",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/ffe1c1e0b495324750a0dffe1f97dcab65261c2b",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:30Z"
+          }
+        }
+      },
       {
         "sha": "7ca12952253f0d02428e657c5056cf7e582e69c8",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/7ca12952253f0d02428e657c5056cf7e582e69c8",
@@ -934,16 +944,6 @@
           "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T06:18:46Z"
-          }
-        }
-      },
-      {
-        "sha": "f89738557efd5f782479aafdfe020ee9b1f6a876",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/f89738557efd5f782479aafdfe020ee9b1f6a876",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:41Z"
           }
         }
       }
@@ -1294,9 +1294,19 @@
   "freegamestore-online/reversi": {
     "meta": {
       "created_at": "2026-05-18T23:16:14Z",
-      "pushed_at": "2026-05-19T07:13:32Z"
+      "pushed_at": "2026-05-19T07:24:27Z"
     },
     "commits": [
+      {
+        "sha": "c2cce54a902d0fff2b163b852d37cf887f1fcd12",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/c2cce54a902d0fff2b163b852d37cf887f1fcd12",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:24Z"
+          }
+        }
+      },
       {
         "sha": "1b5956ba6af9c53f1c62795ea30e22fadd299313",
         "html_url": "https://github.com/freegamestore-online/reversi/commit/1b5956ba6af9c53f1c62795ea30e22fadd299313",
@@ -1316,25 +1326,25 @@
             "date": "2026-05-19T06:18:46Z"
           }
         }
-      },
-      {
-        "sha": "b54efa8aa522891154b9cc398188f408a48b6763",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/b54efa8aa522891154b9cc398188f408a48b6763",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:57Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tictactoe": {
     "meta": {
       "created_at": "2026-05-18T22:50:34Z",
-      "pushed_at": "2026-05-19T07:13:42Z"
+      "pushed_at": "2026-05-19T07:24:38Z"
     },
     "commits": [
+      {
+        "sha": "12452e583075eb8a3da5f66900e914ea9e321e53",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/12452e583075eb8a3da5f66900e914ea9e321e53",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:36Z"
+          }
+        }
+      },
       {
         "sha": "b7d2a4757edb468a6150708019b9e522e6297d7d",
         "html_url": "https://github.com/freegamestore-online/tictactoe/commit/b7d2a4757edb468a6150708019b9e522e6297d7d",
@@ -1354,25 +1364,25 @@
             "date": "2026-05-19T06:18:36Z"
           }
         }
-      },
-      {
-        "sha": "75010fbf6d88e51d40b890899a0d297666d9a961",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/75010fbf6d88e51d40b890899a0d297666d9a961",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:05:30Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/blackjack": {
     "meta": {
       "created_at": "2026-05-18T23:17:31Z",
-      "pushed_at": "2026-05-19T07:13:21Z"
+      "pushed_at": "2026-05-19T07:24:01Z"
     },
     "commits": [
+      {
+        "sha": "db7584945cfcffa062e4c2eeb6663dbf9a0a31f0",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/db7584945cfcffa062e4c2eeb6663dbf9a0a31f0",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:23:59Z"
+          }
+        }
+      },
       {
         "sha": "9a130278a4ba200e16f9e36b27ff56b75db668e1",
         "html_url": "https://github.com/freegamestore-online/blackjack/commit/9a130278a4ba200e16f9e36b27ff56b75db668e1",
@@ -1392,25 +1402,25 @@
             "date": "2026-05-19T06:18:46Z"
           }
         }
-      },
-      {
-        "sha": "dcd8ae8fb21558fa9b1f8676a6a71f6b9b90995b",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/dcd8ae8fb21558fa9b1f8676a6a71f6b9b90995b",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:07:47Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bubbleshooter": {
     "meta": {
       "created_at": "2026-05-18T23:17:44Z",
-      "pushed_at": "2026-05-19T07:13:25Z"
+      "pushed_at": "2026-05-19T07:24:05Z"
     },
     "commits": [
+      {
+        "sha": "f036cb83dad3a3beb7e362136d562cb93cf9fe1a",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/f036cb83dad3a3beb7e362136d562cb93cf9fe1a",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:02Z"
+          }
+        }
+      },
       {
         "sha": "f3dea8e5e6b59faccb63b35d5e0ddd3117733b60",
         "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/f3dea8e5e6b59faccb63b35d5e0ddd3117733b60",
@@ -1430,25 +1440,25 @@
             "date": "2026-05-19T06:18:46Z"
           }
         }
-      },
-      {
-        "sha": "2ccbff31621ce221a502069687ab7cc5e446afce",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/2ccbff31621ce221a502069687ab7cc5e446afce",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:07:56Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceinvaders": {
     "meta": {
       "created_at": "2026-05-18T23:17:56Z",
-      "pushed_at": "2026-05-19T07:13:35Z"
+      "pushed_at": "2026-05-19T07:24:30Z"
     },
     "commits": [
+      {
+        "sha": "60191511192f76c27b1b4571b93edeae4a08c413",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/60191511192f76c27b1b4571b93edeae4a08c413",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:27Z"
+          }
+        }
+      },
       {
         "sha": "7ea72c8db6ff424232960713ed052738a7d9a741",
         "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/7ea72c8db6ff424232960713ed052738a7d9a741",
@@ -1468,25 +1478,25 @@
             "date": "2026-05-19T06:18:46Z"
           }
         }
-      },
-      {
-        "sha": "13b9402869c270498e7ffc61c51e299a279eda33",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/13b9402869c270498e7ffc61c51e299a279eda33",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:09:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/war": {
     "meta": {
       "created_at": "2026-05-19T00:05:08Z",
-      "pushed_at": "2026-05-19T07:13:45Z"
+      "pushed_at": "2026-05-19T07:24:41Z"
     },
     "commits": [
+      {
+        "sha": "8dd844a1bbcfb6014ef22a2a959d4896cf0da4f0",
+        "html_url": "https://github.com/freegamestore-online/war/commit/8dd844a1bbcfb6014ef22a2a959d4896cf0da4f0",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:39Z"
+          }
+        }
+      },
       {
         "sha": "7947b4fa0094eb7c8357ffa1fb9cfa68c82d6429",
         "html_url": "https://github.com/freegamestore-online/war/commit/7947b4fa0094eb7c8357ffa1fb9cfa68c82d6429",
@@ -1506,25 +1516,25 @@
             "date": "2026-05-19T06:18:46Z"
           }
         }
-      },
-      {
-        "sha": "0400da7124137115e8719e66df9dba36548f0220",
-        "html_url": "https://github.com/freegamestore-online/war/commit/0400da7124137115e8719e66df9dba36548f0220",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:09:33Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tanks": {
     "meta": {
       "created_at": "2026-05-19T00:51:54Z",
-      "pushed_at": "2026-05-19T07:13:38Z"
+      "pushed_at": "2026-05-19T07:24:35Z"
     },
     "commits": [
+      {
+        "sha": "fbf3e4bed000f1575511193421dba5ff523138eb",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/fbf3e4bed000f1575511193421dba5ff523138eb",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:33Z"
+          }
+        }
+      },
       {
         "sha": "8cab24007031f65b5d34c5daee5415d2253606b8",
         "html_url": "https://github.com/freegamestore-online/tanks/commit/8cab24007031f65b5d34c5daee5415d2253606b8",
@@ -1542,16 +1552,6 @@
           "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T06:18:46Z"
-          }
-        }
-      },
-      {
-        "sha": "a82fe7dbda204535b13bb771b5472ba0bad6c128",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/a82fe7dbda204535b13bb771b5472ba0bad6c128",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:09:27Z"
           }
         }
       }
@@ -1598,9 +1598,29 @@
   "freegamestore-online/pinball": {
     "meta": {
       "created_at": "2026-05-19T02:33:08Z",
-      "pushed_at": "2026-05-19T07:13:29Z"
+      "pushed_at": "2026-05-19T07:24:40Z"
     },
     "commits": [
+      {
+        "sha": "dfde492f88a9e8915c53e14cf0748348a1d0d8ee",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/dfde492f88a9e8915c53e14cf0748348a1d0d8ee",
+        "commit": {
+          "message": "Restore \"segment\" naming in geometry comments\n\nPinball's collision comments used \"line line\" / \"slingshot line\" phrasing —\nresidue from an earlier sed rename done to dodge the compliance no-tracking\nfalse positive. Compliance now strips comments + per-tracker patterns no\nlonger flag bare \"segment\", so restore natural geometry wording.\n\nBehavior unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:32Z"
+          }
+        }
+      },
+      {
+        "sha": "f39a13a9d8c51d595206a7561b0c878e8e2d3bbf",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/f39a13a9d8c51d595206a7561b0c878e8e2d3bbf",
+        "commit": {
+          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:24:18Z"
+          }
+        }
+      },
       {
         "sha": "5f9332a0a9bfa6e9f3f67db18d56d38e5fc021eb",
         "html_url": "https://github.com/freegamestore-online/pinball/commit/5f9332a0a9bfa6e9f3f67db18d56d38e5fc021eb",
@@ -1608,26 +1628,6 @@
           "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
           "author": {
             "date": "2026-05-19T07:11:48Z"
-          }
-        }
-      },
-      {
-        "sha": "8e138a76398f00aa6231baca31e0a5fa5edf29f6",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/8e138a76398f00aa6231baca31e0a5fa5edf29f6",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
-          }
-        }
-      },
-      {
-        "sha": "d2747242a5f92d28389e831275f7cf8b0a3b0d7f",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/d2747242a5f92d28389e831275f7cf8b0a3b0d7f",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:08:45Z"
           }
         }
       }
