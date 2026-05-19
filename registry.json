@@ -869,6 +869,19 @@
       "cfProject": "freeriichiapp",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "pinball",
+      "name": "pinball",
+      "category": "Arcade",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Classic vertical pinball: 2 flippers, 4 pop bumpers, slingshots. 3 balls per game.",
+      "appUrl": "https://pinball.freegamestore.online",
+      "repo": "freegamestore-online/pinball",
+      "cfProject": "freepinballapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
