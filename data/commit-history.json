@@ -40,9 +40,19 @@
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-19T07:11:07Z"
+      "pushed_at": "2026-05-19T07:16:46Z"
     },
     "commits": [
+      {
+        "sha": "49dcacf43155953dfe64dd9161380ac9ad1937fe",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/49dcacf43155953dfe64dd9161380ac9ad1937fe",
+        "commit": {
+          "message": "feat(mp + pgn): multiplayer analysis/review + PGN export\n\nMultiplayer now has feature parity with single-player for the\npost-game learning loop:\n\n1. MultiplayerTab renders the proper MoveList component (same one\n   PlayTab uses) so review nav and analysis colors work consistently.\n2. Opening name shown from move 1 (same findOpening lookup).\n3. After game-over, \"Analyze game · review your moves\" button\n   triggers Stockfish analysis of every move by the user (skipping\n   opponent moves). Progress bar shows %.\n4. When analyses arrive, GameSummary renders: accuracy %, category\n   counts, biggest-swing-jump link.\n5. Review controls (‹ › Live) work the same as PlayTab — click any\n   move to jump the board to that position.\n6. State reset on rematch.\n\nPGN export:\n- services/pgn.ts — buildPgn() emits Seven Tag Roster + chess.js\n  movetext. copyToClipboard() with execCommand fallback.\n- \"Copy PGN\" button shown at game-over in both PlayTab and\n  MultiplayerTab. Button label flips to \"PGN copied ✓\" for 1.5s.\n- 3 regression tests for header escaping + defaults + movetext.\n\nTotal: 43 tests pass (was 40). Build clean. +13KB precache.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:16:44Z"
+          }
+        }
+      },
       {
         "sha": "415f19462ae1898ab17354a3035ef560faefdbff",
         "html_url": "https://github.com/freegamestore-online/chess/commit/415f19462ae1898ab17354a3035ef560faefdbff",
@@ -60,16 +70,6 @@
           "message": "feat(analysis): review mode + accuracy summary + opening names + better text\n\nFour-part upgrade to game analysis and learning loop. User-visible:\n\n1. Review mode. Click any move in the move list to jump the board to\n   that position. Prev/Next arrows (‹ ›) cycle through your moves.\n   \"Live\" button returns to the live game. Works mid-game (paused\n   review) and post-game. Board shows a blue \"Move N\" banner so you\n   never lose track of where you are vs the live position.\n\n2. Game-level summary (GameSummary.tsx). Renders after game-over with:\n   - 0-100 accuracy score (avg centipawn loss formula, capped)\n   - Counts: brilliants / inaccuracies / mistakes / blunders\n   - \"Biggest swing: move N (Bxf7)\" — click to jump-review that move\n   Lichess-style at-a-glance feedback.\n\n3. Opening names (services/openings.ts). Bundled ~80-line ECO table\n   covering common openings (Ruy López, Sicilian Najdorf, Nimzo-Indian,\n   etc.). Longest-prefix match. Displays in the move list header from\n   move 1. Helps beginners learn what they're playing.\n\n4. Analysis quick wins:\n   - \"Brilliant\" now requires the move to be a sacrifice (piece lands\n     on a square with a cheaper attacker) AND the position to be\n     winning (≥ 200cp). Previously any best move was \"brilliant\".\n   - Captures quantified: \"Captures a knight (3 points)\" using piece\n     point values.\n   - Mistake/blunder explanations now include the engine's punishment\n     line: \"Opponent's best reply: Nxe4.\" Pass through Stockfish's\n     post-move bestMove (added `punishment` field to evaluateMoveSF).\n   - \"Good\" move text varies by feature: develops, castles, central,\n     captures, etc., instead of always \"Solid move.\"\n\nTests: +9 (openings 6 + tests still green). Build green.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T06:29:28Z"
-          }
-        }
-      },
-      {
-        "sha": "6d943081c32d3c42d416e8fa3420ab87517a58ad",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/6d943081c32d3c42d416e8fa3420ab87517a58ad",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:21Z"
           }
         }
       }
