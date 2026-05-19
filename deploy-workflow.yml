@@ -24,6 +24,13 @@ jobs:
 
       - run: pnpm build
 
+      # Platform compliance gate — runs every check in @freegamestore/compliance,
+      # including the PWA mandate. Exits non-zero on any fail; the deploy
+      # step below never runs for non-compliant builds, so a broken game
+      # can't reach Cloudflare Pages.
+      - name: Platform compliance
+        run: npx -y @freegamestore/cli@latest check
+
       - run: npx wrangler pages deploy web/dist --project-name=$CF_PROJECT
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
