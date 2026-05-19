@@ -79,15 +79,17 @@ user can rotate freely.
 
 ## Icons
 
-You need three:
+The scaffold ships two:
 
 - `/icon-192.png` — 192×192, full-bleed, opaque background.
 - `/icon-512.png` — 512×512, same.
-- `/icon-512-maskable.png` — 512×512 with a safe zone (Android may crop a
-  circle/squircle out of this; keep your logo within the inner 80% box).
 
 Put them in `web/public/`. The compliance check `manifest` verifies the
-icons are referenced; it doesn't validate the pixels.
+`icons` array is present in the manifest; it doesn't validate the pixels.
+
+A 512×512 **maskable** variant is recommended (Android may crop a
+circle/squircle from your icon — a maskable version keeps the logo inside
+the safe zone) but not required.
 
 ## The service worker
 

@@ -5,6 +5,24 @@ description: How a game gets from your GitHub repo to a `*.freegamestore.online`
 
 The full path from "my repo is ready" to "listed on the store":
 
+## The fast path
+
+```bash
+cd my-game
+npx -y @freegamestore/cli@latest publish
+```
+
+`publish` runs compliance for you, then either:
+
+- **Auto-provisions** your repo on `freegamestore-online/<id>`, sets up
+  Cloudflare Pages bound to `<id>.freegamestore.online`, and adds your
+  registry entry — all in one command. Or…
+- **Opens a prefilled GitHub Issue** for the platform team to review when
+  auto-provision isn't available (first time on a new account, edge cases).
+
+That's it for 90% of submissions. The rest of this page is the manual path
+— useful if you want to understand what `publish` does under the hood.
+
 ## 1. Pass compliance locally
 
 ```bash

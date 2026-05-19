@@ -7,7 +7,7 @@ The fastest path to audio in a FreeGameStore game.
 
 ## 1. The setup is already done
 
-If you scaffolded with `npx fgs new`, your `App.tsx` already wraps your game
+If you scaffolded with `npx fgs init`, your `App.tsx` already wraps your game
 in `<GameShell>` and your topbar already shows the mute button. That's
 everything the audio system needs.
 

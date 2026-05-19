@@ -8,19 +8,21 @@ through a small set of CSS custom properties. The SDK components
 (`<GameShell>`, `<GameTopbar>`, `<GameButton>`) read these tokens; your
 game can read them too.
 
-## The six tokens
+## The tokens
 
 | Token | Light mode | Dark mode | What it is |
 |---|---|---|---|
-| `--paper` | `#fdfaf3` | `#0f0f0f` | The page background. The "canvas" the game sits on. |
-| `--ink`   | `#1a1a1a` | `#f0f0f0` | Primary text and high-contrast surfaces. |
-| `--accent`| `#10b981` | `#10b981` | Score numbers, primary buttons, score highlights. Same in both modes. |
-| `--muted` | `#6b7280` | `#999` | Secondary text, icon defaults, stat labels. |
-| `--line`  | `#e5e5e5` | `#2a2a2a` | Borders and dividers. |
-| `--panel` | `#f5f3f0` | `#1a1a1a` | The topbar background, dropdown menus, modals. |
+| `--paper` | `#ffffff` | `#0f0f0f` | The page background. The "canvas" the game sits on. |
+| `--ink`   | `#1a1a1a` | `#f5f5f5` | Primary text and high-contrast surfaces. |
+| `--accent`| `#2563eb` | `#2563eb` | Score numbers, primary buttons, score highlights. Override per-game to set your signature color. |
+| `--muted` | `#6b7280` | `#9ca3af` | Secondary text, icon defaults, stat labels. |
+| `--line`  | `#e5e7eb` | `#2d2d2d` | Borders and dividers. |
+| `--panel` | `#f9fafb` | `#1a1a1a` | The topbar background, dropdown menus, modals. |
 
 The scaffolded `web/src/index.css` defines these inside a
-`prefers-color-scheme` block. Don't delete it.
+`prefers-color-scheme` block. Don't delete it. The template also defines
+`--line-strong` and `--accent-soft` — supporting tones the SDK doesn't
+currently read but games are welcome to use.
 
 ## How the SDK uses them
 
@@ -38,7 +40,7 @@ everywhere — buttons, score numbers, leaderboard rank badges.
 ```css
 /* web/src/index.css */
 :root {
-  --accent: #ff6b35;  /* orange instead of green */
+  --accent: #ff6b35;  /* orange instead of the default blue */
 }
 ```
 

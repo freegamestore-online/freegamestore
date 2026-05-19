@@ -32,10 +32,10 @@ In `devDependencies` from the scaffold:
 ```json
 {
   "devDependencies": {
-    "vite": "^7",
-    "@vitejs/plugin-react": "^5",
-    "vite-plugin-pwa": "^1",
-    "typescript": "^5",
+    "vite": "^6",
+    "@vitejs/plugin-react": "^4.3",
+    "vite-plugin-pwa": "^1.3",
+    "typescript": "^5.7",
     "@types/react": "^19",
     "@types/react-dom": "^19"
   }
@@ -56,7 +56,7 @@ In `web/index.html`:
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
-  href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700;900&family=Manrope:wght@400;600;700;800&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,800&display=swap"
   rel="stylesheet"
 />
 ```
@@ -95,9 +95,14 @@ telemetry isn't allowed on the free side.
 
 ## How dependencies upgrade
 
-- **The SDK** bumps with the platform. Run `npx -y @freegamestore/cli@latest upgrade` to pull the latest version into your `web/package.json` and refresh your lockfile.
-- **React** stays on 19 until the platform itself moves. Don't unilaterally upgrade to React 20 — the SDK is built against 19.
-- **Vite / typescript / other dev tooling** — your call. The compliance suite cares about your bundle, not your tooling.
+- **The SDK** bumps with the platform. Bump `@freegamestore/games` in
+  `web/package.json` manually, then `pnpm install` to refresh the lockfile.
+  Watch the [changelog](https://github.com/freegamestore-online/platform/releases)
+  for what changed. Each minor bump can be breaking until 1.0.
+- **React** stays on 19 until the platform itself moves. Don't unilaterally
+  upgrade to React 20 — the SDK is built against 19.
+- **Vite / typescript / other dev tooling** — your call. The compliance
+  suite cares about your bundle, not your tooling.
 
 ## Related
 

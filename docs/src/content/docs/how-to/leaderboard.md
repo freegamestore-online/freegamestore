@@ -8,7 +8,7 @@ your game-over screen.
 
 ## 1. The setup is already done
 
-`<GameAuth>` is already in your topbar (from `npx fgs new`). The platform
+`<GameAuth>` is already in your topbar (from `npx fgs init`). The platform
 handles GitHub sign-in. Anonymous players can play but can't submit.
 
 ## 2. Submit a score when the game ends

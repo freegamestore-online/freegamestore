@@ -41,7 +41,7 @@ it.
 ## Next
 
 Start with [Build your first game](/docs/start/first-game/) — a 10-minute
-walkthrough from `npx fgs new` to a deployed game on a `*.freegamestore.online`
+walkthrough from `npx fgs init` to a deployed game on a `*.freegamestore.online`
 subdomain. From there: [SDK reference](/docs/sdk/overview/) for what to
 import, [How-to guides](/docs/how-to/audio/) for common patterns,
 [Compliance](/docs/compliance/why/) for what we audit and why.

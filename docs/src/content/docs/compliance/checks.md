@@ -123,9 +123,9 @@ template literals like `{{title}}` or `TODO`.
 **Pass:** Either don't ship a `CLAUDE.md` or keep it under ~50 lines that reference these docs.
 
 ### `dark-mode`
-**What:** Your game responds correctly to the system dark mode (via `prefers-color-scheme`).
-**How:** Greps for the media query in your CSS.
-**Pass:** Keep the dark-mode CSS block that ships with the scaffold.
+**What:** App responds to the system color scheme.
+**How:** Greps for `prefers-color-scheme`, `data-theme`, or `color-scheme`.
+**Pass:** **Games are auto-skipped** (full-bleed UIs pick their own palette). The check is enforced on apps, not games.
 
 ## How to run them all locally
 

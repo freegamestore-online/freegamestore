@@ -13,7 +13,7 @@ description: From zero to a deployed game in about 10 minutes.
 ## 1. Scaffold
 
 ```bash
-npx -y @freegamestore/cli@latest new my-game
+npx -y @freegamestore/cli@latest init my-game
 cd my-game/web
 pnpm install
 pnpm dev
@@ -21,6 +21,9 @@ pnpm dev
 
 That opens a working game template at `http://localhost:5173/`. It already has
 the brand shell, dark-mode support, and a stub `<Game />` you'll replace.
+
+The default template is `canvas` (2D engine). Other options: `--template grid`
+(turn-based + cells) or `--template 3d` (Babylon).
 
 ## 2. Make it your game
 
@@ -86,16 +89,13 @@ Sign-in is handled by [`<GameAuth>`](/docs/sdk/game-auth/) in the topbar.
 ## 5. Ship it
 
 ```bash
-git init
-gh repo create my-game --public --source=.
-git add . && git commit -m "first game"
-git push -u origin main
+git init && git add . && git commit -m "first game"
+npx -y @freegamestore/cli@latest publish
 ```
 
-Then open a PR against
-[`freegamestore-online/freegamestore`](https://github.com/freegamestore-online/freegamestore)
-adding your game to `registry.json`. Once merged, we provision the
-Cloudflare Pages project and `my-game.freegamestore.online` goes live on
-your next push.
+`publish` runs compliance, then either auto-provisions your repo +
+Cloudflare Pages + `my-game.freegamestore.online` DNS, or — if
+auto-provision isn't available — opens a prefilled GitHub Issue for the
+platform team to review.
 
 Full publish flow: [Publish to the storefront](/docs/start/publishing/).

@@ -69,23 +69,29 @@ inside your repo.
 The same CLI also scaffolds new games:
 
 ```bash
-npx -y @freegamestore/cli@latest new my-game
+npx -y @freegamestore/cli@latest init my-game
 ```
 
 That produces a working template at `./my-game/` with the brand shell, the
-SDK pre-wired, a stub `<Game />`, and CI workflows.
+SDK pre-wired, a stub `<Game />`, and CI workflows. Pick a template with
+`--template canvas | grid | 3d` (default: `canvas`).
 
-## Other commands
+## All commands
 
 ```bash
 npx -y @freegamestore/cli@latest --help
 ```
 
-Lists everything the CLI does. Common ones:
-
-- `new <name>` — scaffold a fresh game.
-- `check` — run compliance.
-- `upgrade` — pull the latest SDK + lockfile updates into your repo.
+| Command | What it does |
+|---|---|
+| `init <game-id>` | Scaffold a new game from a template. |
+| `check` | Run compliance against the current game directory. |
+| `publish` | Auto-provision repo + Cloudflare Pages + DNS for this game, or open a submission Issue. |
+| `login` / `logout` / `whoami` | Manage the CLI's session with the platform. |
+| `doctor` | Local health check (signed in, API reachable, tools installed). |
+| `list` | List games you've published. |
+| `logs` | Tail the Cloudflare Pages logs for one of your games. |
+| `screencheck` | Visual / layout regression check (screenshot diff). |
 
 ## When to update
 
