@@ -230,9 +230,19 @@
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-18T22:46:24Z"
+      "pushed_at": "2026-05-18T23:58:24Z"
     },
     "commits": [
+      {
+        "sha": "8187d866ef637ad73319c0397614e223e5e20e26",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/8187d866ef637ad73319c0397614e223e5e20e26",
+        "commit": {
+          "message": "Polish: letterbox canvas, swap coin sprite for blue gem, bob/sway gems\n\n- kaplay letterbox: true so the 800x600 buffer scales to fill the GameShell\n  area instead of sitting top-left with a white gutter\n- Coin sprite was an unreadable orange ember-blob at game-size; swap to\n  tile_0067 (clean blue diamond) which reads as a valuable pickup\n- Replace 180°/sec rotation (looked like a tumbling rock for a diamond\n  shape) with a hover bob (4 px sine) + small ±6° sway, phase-randomized\n  per gem so a row doesn't move in lockstep\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T23:58:22Z"
+          }
+        }
+      },
       {
         "sha": "60888464824d8bece51fc01f6ca1459b304a2b33",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/60888464824d8bece51fc01f6ca1459b304a2b33",
@@ -250,16 +260,6 @@
           "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-18T22:23:24Z"
-          }
-        }
-      },
-      {
-        "sha": "1f70e63ec0645d0b08996f3d8470fedb50d69456",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/1f70e63ec0645d0b08996f3d8470fedb50d69456",
-        "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
-          "author": {
-            "date": "2026-05-17T01:34:25Z"
           }
         }
       }
@@ -420,9 +420,29 @@
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-18T23:11:53Z"
+      "pushed_at": "2026-05-19T00:04:17Z"
     },
     "commits": [
+      {
+        "sha": "86100767ecfe6d86c21e79e2b3f78dd5b3b3ec41",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/86100767ecfe6d86c21e79e2b3f78dd5b3b3ec41",
+        "commit": {
+          "message": "fix: relax CSP so the SDK auth call and CF beacon aren't blocked\n\nThe CSP added in 026be9e was too tight and broke production. Console\nshowed:\n  - connect-src 'self' blocked https://auth.freegamestore.online/me\n    (called by @freegamestore/games' GameAuth on mount)\n  - script-src 'self' blocked Cloudflare's RUM beacon at\n    static.cloudflareinsights.com\n  - frame-ancestors 'none' was ignored anyway (only enforced via real\n    HTTP header, not <meta>)\n\nThe page rendered blank because the auth fetch failure cascaded into\nthe React tree. Verified with browse: console showed all three\nviolations, body had no text.\n\nChanges:\n- connect-src now allows https://*.freegamestore.online for the SDK\n- script-src allows https://static.cloudflareinsights.com for CF RUM\n- dropped frame-ancestors (move to _headers if we ever want it)\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T00:04:15Z"
+          }
+        }
+      },
+      {
+        "sha": "fcb47df558e027540156259fcc9aa47e9bbf0170",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/fcb47df558e027540156259fcc9aa47e9bbf0170",
+        "commit": {
+          "message": "feat: gutters, sound, wood-grain lane; add CI + compliance\n\nGame:\n- Real gutters. When the ball reaches the lane edge it drops into the\n  channel (y -0.05, x snapped to ±(LANE_WIDTH/2 + 0.25)), ballVx zeroes,\n  pin collision is skipped, throw scores 0 (\"GUTTER\" overlay shown).\n- Web Audio sound effects (no asset cost, all synthesized):\n  rolling rumble loop while the ball is in motion, lowpassed noise burst\n  on each pin hit (loud for direct impact, soft for cascading hits),\n  rising arpeggio on STRIKE, two-note flourish on SPARE, descending\n  sawtooth wail when guttered. AudioContext is created lazily on first\n  user gesture and disposed on unmount.\n- Procedural wood-grain lane texture painted into a DynamicTexture at\n  init: 8 plank seams + grain speckle, v-tiled along the lane length.\n  Replaces the flat brown StandardMaterial diffuseColor.\n- Rules popup now mentions gutters and links to freegamestore.online.\n\nCI:\n- .github/workflows/ci.yml: pnpm + typecheck on PR (matches siblings).\n- .github/workflows/compliance.yml: mirrors sibling compliance gates\n  with two bowling-specific tweaks:\n  - manifest check looks for dist/manifest.webmanifest (we generate it\n    via vite-plugin-pwa) instead of the sibling games' static\n    public/manifest.json.\n  - bundle size ceiling raised to 500KB gzip. Bowling renders in 3D via\n    Babylon, so the floor is naturally higher than the 2D games' 300KB.\n    We sit at ~334KB gzip currently.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T00:02:14Z"
+          }
+        }
+      },
       {
         "sha": "217e31e4128b7f6f9908ee288f0bc52ec9c94174",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/217e31e4128b7f6f9908ee288f0bc52ec9c94174",
@@ -430,26 +450,6 @@
           "message": "ci: add Cloudflare Pages deploy workflow\n\nThe repo had no .github/workflows/ at all — every push to main since\nthe PWA migration has been a no-op. The site at bowling.freegamestore.online\nis still serving the pre-vite-plugin-pwa build (manifest.json, separate\nbabylon chunk, no service worker), which is why recent fixes weren't\nvisible.\n\nMirrors the deploy.yml used across sibling games (2048, chess, pacman,\netc): build with pnpm, then `wrangler pages deploy web/dist` against\nthe freebowlingapp project. CLOUDFLARE_API_TOKEN secret expected at\nthe org level.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-18T23:11:51Z"
-          }
-        }
-      },
-      {
-        "sha": "05f831220887da0e6976f452b06b74180059f37d",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/05f831220887da0e6976f452b06b74180059f37d",
-        "commit": {
-          "message": "fix: harden localStorage, point arrow head along lane\n\n- App.tsx: getBestScore wraps localStorage read in try/catch, validates\n  parsed int is finite and non-negative. trySetBestScore swallows\n  setItem failures. Safari Private was previously a crash path: setItem\n  throws QuotaExceededError, which would propagate out of the game-over\n  handler. Bad data (e.g. NaN) was also a soft-lock — high score could\n  never update once corrupted.\n- Game.tsx: arrow head triangle now actually points toward the pins.\n  The Y-aligned 3-tessellation cylinder had its apex on +X; rotating .y\n  by π just moved it to -X, perpendicular to the arrow shaft. Lay it on\n  its side via rotation.x = -π/2 so the +Y apex becomes -Z (down the\n  lane), and bump height so the apex extends past the arrow body tip.\n- Game.tsx: canvas.parentElement!.appendChild → optional chaining.\n  Defensive, no behavior change in normal mount path.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-18T22:44:34Z"
-          }
-        }
-      },
-      {
-        "sha": "026be9e49691bf49ca7ad8446f321abc5ddec8ed",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/026be9e49691bf49ca7ad8446f321abc5ddec8ed",
-        "commit": {
-          "message": "fix: patch dep vuln, add CSP, dedupe throw logic\n\n- brace-expansion 5.0.0-5.0.5 (moderate, GHSA-jxxr-4gwj-5jf2) reached\n  the build via workbox-build → glob → minimatch. Added a pnpm\n  override pinning to >=5.0.6. `pnpm audit` is now clean.\n- Content-Security-Policy meta tag on index.html. Locks scripts/\n  workers/img/connect to self; allows the Google Fonts CSS/woff2 the\n  PWA already loads.\n- handleThrowComplete: extracted nextThrow(resetAll) helper. The 10th-\n  frame branches no longer repeat `resetAllPins(); startAiming();` and\n  `hideKnockedPins(); resetStandingPins(); startAiming();` three times.\n- Renamed pin variable `body` → `pinBody` so it doesn't shadow the\n  more obvious DOM meaning.\n- .gitignore: add .vibe-check/ so the vcqa report artifacts don't get\n  committed.\n\nvcqa: B 75/100 → B 77/100, 6 issues fixed.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-18T22:22:11Z"
           }
         }
       }
@@ -496,9 +496,29 @@
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-18T23:58:49Z"
     },
     "commits": [
+      {
+        "sha": "9c2418eacfe7e076203eea4e3f25b1d009dfcc08",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/9c2418eacfe7e076203eea4e3f25b1d009dfcc08",
+        "commit": {
+          "message": "chore: add Biome, README, CSP, patch brace-expansion vuln\n\nTooling polish surfaced by a vcqa scan (vibecodeqa.online — 80→85/B):\n\n- Biome 2.x (single-binary linter + formatter) replaces a missing\n  ESLint/Prettier setup; .editorconfig for non-Biome editors.\n- README at repo root (play / dev / deploy / license).\n- repository, license, engines fields in both package.json files;\n  add test/lint/format scripts at the workspace root.\n- Content-Security-Policy meta on index.html (self + fonts.googleapis,\n  no inline scripts).\n- pnpm override patches brace-expansion ≥5.0.6 (GHSA-jxxr-4gwj-5jf2,\n  transitive via vite-plugin-pwa→workbox→glob→minimatch).\n- .vibe-check/ gitignored.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T23:58:43Z"
+          }
+        }
+      },
+      {
+        "sha": "96c8033421fa40cd87b013f3df8ea8d8ce7d0dfb",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/96c8033421fa40cd87b013f3df8ea8d8ce7d0dfb",
+        "commit": {
+          "message": "fix(game): rewrite for solvability, Unicode tiles, viewport scaling\n\nThe previous build was unwinnable: layout had 151 tiles (odd) and one\ntype had 7 copies, so pairs could never clear the board. The reverse-\nconstruction generator was also failing silently and falling back to\nrandom pairing every game.\n\n- 144-tile 4-layer pyramid (88+36+16+4), all types balanced 4-of-each.\n- Replace reverse-construction with greedy forward simulation: pop two\n  free tiles, record the pair, repeat. The recorded sequence IS the\n  solution, so the game is provably winnable by construction.\n- Unicode mahjong glyphs (🀀-🀫) replace colored boxes for proper tile\n  faces; white-ivory bevel + colored ink per suit (red/green/blue/dark).\n- ResizeObserver + CSS transform auto-fit the board to the viewport\n  (mobile-friendly).\n- Remove auto-shuffle on stuck state (was an infinite useEffect loop\n  on unwinnable decks); show a manual \"tap Shuffle\" banner instead.\n- Score curve steepened: max(0, 10000 - 5·seconds).\n- Delete unused Shell.tsx (orphan since SDK migration).\n- New tests: 144 positions, 36×4 deck invariant, 25-seed solution replay\n  that plays each generated game to completion. 27/27 passing.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-18T23:58:32Z"
+          }
+        }
+      },
       {
         "sha": "068894a8f548e5dc07d380611b88981324d77b9c",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/068894a8f548e5dc07d380611b88981324d77b9c",
@@ -506,26 +526,6 @@
           "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-18T22:23:23Z"
-          }
-        }
-      },
-      {
-        "sha": "6bdfc46f1aa35b14fd2451196800bc3e8a39c188",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/6bdfc46f1aa35b14fd2451196800bc3e8a39c188",
-        "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
-          "author": {
-            "date": "2026-05-17T01:34:13Z"
-          }
-        }
-      },
-      {
-        "sha": "7e7cabe6d046b7805d8a933c8c4caeb1e7af31fa",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/7e7cabe6d046b7805d8a933c8c4caeb1e7af31fa",
-        "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
-          "author": {
-            "date": "2026-05-17T01:17:30Z"
           }
         }
       }
@@ -1294,9 +1294,19 @@
   "freegamestore-online/reversi": {
     "meta": {
       "created_at": "2026-05-18T23:16:14Z",
-      "pushed_at": "2026-05-18T23:16:28Z"
+      "pushed_at": "2026-05-18T23:24:38Z"
     },
     "commits": [
+      {
+        "sha": "c9103ed169c9d0672651cd8b60d6e94c726cc80a",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/c9103ed169c9d0672651cd8b60d6e94c726cc80a",
+        "commit": {
+          "message": "Add reversi game logic",
+          "author": {
+            "date": "2026-05-18T23:24:35Z"
+          }
+        }
+      },
       {
         "sha": "5ffb2fa2749001b81d55827441ed68774fc8b11b",
         "html_url": "https://github.com/freegamestore-online/reversi/commit/5ffb2fa2749001b81d55827441ed68774fc8b11b",
@@ -1312,9 +1322,19 @@
   "freegamestore-online/tictactoe": {
     "meta": {
       "created_at": "2026-05-18T22:50:34Z",
-      "pushed_at": "2026-05-18T23:14:09Z"
+      "pushed_at": "2026-05-18T23:24:32Z"
     },
     "commits": [
+      {
+        "sha": "97076b9134b8e47fdbe59e0e50e671eb768fcf77",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/97076b9134b8e47fdbe59e0e50e671eb768fcf77",
+        "commit": {
+          "message": "Add tictactoe game logic",
+          "author": {
+            "date": "2026-05-18T23:24:29Z"
+          }
+        }
+      },
       {
         "sha": "fa41fa4530e86b806a694bd63d4a256e8d502fc2",
         "html_url": "https://github.com/freegamestore-online/tictactoe/commit/fa41fa4530e86b806a694bd63d4a256e8d502fc2",
@@ -1330,9 +1350,19 @@
   "freegamestore-online/blackjack": {
     "meta": {
       "created_at": "2026-05-18T23:17:31Z",
-      "pushed_at": "2026-05-18T23:17:43Z"
+      "pushed_at": "2026-05-18T23:24:34Z"
     },
     "commits": [
+      {
+        "sha": "5fbd4448307b4962c56b3869bbedee87d7c72d42",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/5fbd4448307b4962c56b3869bbedee87d7c72d42",
+        "commit": {
+          "message": "Add blackjack game logic",
+          "author": {
+            "date": "2026-05-18T23:24:32Z"
+          }
+        }
+      },
       {
         "sha": "7f86f60a9ef77b0301a4251d29cf367011539e28",
         "html_url": "https://github.com/freegamestore-online/blackjack/commit/7f86f60a9ef77b0301a4251d29cf367011539e28",
@@ -1348,9 +1378,19 @@
   "freegamestore-online/bubbleshooter": {
     "meta": {
       "created_at": "2026-05-18T23:17:44Z",
-      "pushed_at": "2026-05-18T23:17:55Z"
+      "pushed_at": "2026-05-18T23:24:40Z"
     },
     "commits": [
+      {
+        "sha": "be68a9b19307817dc4c74a5e2399e2c26d7c32bd",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/be68a9b19307817dc4c74a5e2399e2c26d7c32bd",
+        "commit": {
+          "message": "Add bubbleshooter game logic",
+          "author": {
+            "date": "2026-05-18T23:24:38Z"
+          }
+        }
+      },
       {
         "sha": "1494b6e18e9022a6b96098598f8a2642594f245e",
         "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/1494b6e18e9022a6b96098598f8a2642594f245e",
@@ -1366,9 +1406,19 @@
   "freegamestore-online/spaceinvaders": {
     "meta": {
       "created_at": "2026-05-18T23:17:56Z",
-      "pushed_at": "2026-05-18T23:18:11Z"
+      "pushed_at": "2026-05-18T23:24:43Z"
     },
     "commits": [
+      {
+        "sha": "387e9fbb47c3a5bb2ac7ff4b51911f118f849742",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/387e9fbb47c3a5bb2ac7ff4b51911f118f849742",
+        "commit": {
+          "message": "Add spaceinvaders game logic",
+          "author": {
+            "date": "2026-05-18T23:24:41Z"
+          }
+        }
+      },
       {
         "sha": "701d7787baa4fdd50eb00e3ae7383c9c25df4143",
         "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/701d7787baa4fdd50eb00e3ae7383c9c25df4143",
@@ -1376,6 +1426,34 @@
           "message": "Initial commit from canvas template",
           "author": {
             "date": "2026-05-18T22:46:43Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/war": {
+    "meta": {
+      "created_at": "2026-05-19T00:05:08Z",
+      "pushed_at": "2026-05-19T00:05:30Z"
+    },
+    "commits": [
+      {
+        "sha": "9a1a48637141c85b8fc3b4680b1db2821b3e5b6e",
+        "html_url": "https://github.com/freegamestore-online/war/commit/9a1a48637141c85b8fc3b4680b1db2821b3e5b6e",
+        "commit": {
+          "message": "Add war game logic",
+          "author": {
+            "date": "2026-05-19T00:05:27Z"
+          }
+        }
+      },
+      {
+        "sha": "3eb5fc58e720b678794de1709d26a912aa0962d9",
+        "html_url": "https://github.com/freegamestore-online/war/commit/3eb5fc58e720b678794de1709d26a912aa0962d9",
+        "commit": {
+          "message": "Initial commit from canvas template",
+          "author": {
+            "date": "2026-05-19T00:02:54Z"
           }
         }
       }
