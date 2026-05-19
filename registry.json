@@ -856,6 +856,19 @@
       "cfProject": "freetanksapp",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "riichi",
+      "name": "riichi",
+      "category": "Strategy",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "4-player Riichi Mahjong vs bots — Japanese rules, single hand, real yaku detection.",
+      "appUrl": "https://riichi.freegamestore.online",
+      "repo": "freegamestore-online/riichi",
+      "cfProject": "freeriichiapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
