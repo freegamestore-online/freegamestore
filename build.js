@@ -204,7 +204,7 @@ fs.mkdirSync(path.join(DIST, 'games'), { recursive: true });
 const gameCards = games.map(game => {
   const letter = (game.name || '?').trim().charAt(0).toUpperCase();
   const iconBg = escapeHtml(game.iconBg || '#10b981');
-  return `        <div class="app-card compact" data-category="${escapeHtml(game.category)}" data-about="/games/${escapeHtml(game.id)}.html">
+  return `        <div class="app-card compact" data-id="${escapeHtml(game.id)}" data-category="${escapeHtml(game.category)}" data-about="/games/${escapeHtml(game.id)}.html">
           <div class="app-icon" style="background: ${iconBg};">
             <img src="${escapeHtml(game.appUrl)}/apple-touch-icon.png" alt="" onerror="this.replaceWith(document.createTextNode('${letter}'))" />
           </div>
@@ -471,6 +471,7 @@ fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap);
 const filesToCopy = [
   'style.css',
   'search.js',
+  'storefront.js',
   'theme.js',
   'quality.js',
   'favicon.svg',
