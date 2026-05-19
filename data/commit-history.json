@@ -40,9 +40,19 @@
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-18T22:55:22Z"
+      "pushed_at": "2026-05-19T00:41:45Z"
     },
     "commits": [
+      {
+        "sha": "e6f4d555cb6fe2bbefb837e0ef7e2ed2405f3593",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/e6f4d555cb6fe2bbefb837e0ef7e2ed2405f3593",
+        "commit": {
+          "message": "fix(layout): landscape mobile clipped 'You' row below the footer\n\nAt 812x375 the board's max-h reserved only 6rem (96px) for surrounding\nchrome, but the topbar + 2 player rows + footer take ~125px. Result:\n'You / YOUR TURN' overlapped the freegamestore.online footer link.\n\nBumped landscape:max-h to calc(100svh-8.5rem) — board shrinks from\n279→239px, both player rows now fit cleanly above the footer.\n\nFound by /qa: gameplay flow tested end-to-end (e2-e4, engine response,\nundo, flip, color swap, mid-game difficulty change, mobile portrait,\nmobile landscape, preferences/themes). Only the landscape clip bug\nneeded a fix.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T00:41:42Z"
+          }
+        }
+      },
       {
         "sha": "474d242aacc8c8828fcacbeea8b1d2fb7793f96e",
         "html_url": "https://github.com/freegamestore-online/chess/commit/474d242aacc8c8828fcacbeea8b1d2fb7793f96e",
@@ -60,16 +70,6 @@
           "message": "refactor(PlayTab): split into 6 focused sub-components\n\nExtract from PlayTab:\n- EvalBar — Stockfish eval visualization\n- PlayerRow — opponent / player avatar+label row (reused twice)\n- GameControls — New/Undo/Flip/Mic button row\n- DifficultyColorPicker — difficulty 1-5 + color w/b pills\n- GameOverBanner — terminal-state message + Play Again\n- VoiceInstructions — voice command cheatsheet\n\nPlayTab function: 508 → 393 lines, complexity 75 → 66\nVCQA: B 81 → B 82 (confusion C 65 → A 90)\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-18T22:48:08Z"
-          }
-        }
-      },
-      {
-        "sha": "95a28ffcabe6dc4b934bd80077133d35fef9af36",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/95a28ffcabe6dc4b934bd80077133d35fef9af36",
-        "commit": {
-          "message": "chore: code-health pass — Cburnett pieces, VCQA fixes, build unbroken\n\n- Replace Unicode piece glyphs with Cburnett SVG set (CC-BY-SA, lichess/Wikipedia)\n- Add README, CHANGELOG, SECURITY, CONTRIBUTING (docs F 10 → covered)\n- Tighten compliance.yml permissions (default-deny + workflow scope read)\n- Add repository/license/homepage to package.json\n- Add Content-Security-Policy meta (self + Google Fonts + wasm worker)\n- Patch moderate vulns via pnpm overrides (brace-expansion, ws)\n- Rename generic vars: update → updateSettings, result → evalResult/sentence, input → spoken\n- Collapse duplicate highlight rects in Board.tsx into one conditional rect\n- Extract undoMovePair helper in PlayTab.tsx (was duplicated across voice + button)\n- Exclude src/test from tsconfig.app.json so prod build doesn't trip on node: imports\n- Ignore .vibe-check/ generated reports\n\nVCQA: B 75 → B 81 (+6 pts, 23 issues fixed)\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-18T20:48:11Z"
           }
         }
       }
@@ -230,9 +230,19 @@
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-18T23:58:24Z"
+      "pushed_at": "2026-05-19T00:07:55Z"
     },
     "commits": [
+      {
+        "sha": "9a71703ec1d0f08b027028f05b36eab283ac11d7",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/9a71703ec1d0f08b027028f05b36eab283ac11d7",
+        "commit": {
+          "message": "Add SFX via SDK useGameSounds (jump / pickup / land / game-over)\n\nThe @freegamestore/games SDK exports useGameSounds(), which synthesizes\nshort SFX via Web Audio and automatically respects the topbar mute toggle —\nso no audio files to bundle and no per-game mute plumbing.\n\nWired:\n- playMove on jump (Space)\n- playScore on gem collide\n- playDrop on airborne -> grounded transition (tracked via wasGrounded flag)\n- playGameOver when player falls off the bottom\n\nVerified in browser: oscillator events fire at the expected times after\nclicking the topbar Unmute, silent when muted.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T00:07:52Z"
+          }
+        }
+      },
       {
         "sha": "8187d866ef637ad73319c0397614e223e5e20e26",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/8187d866ef637ad73319c0397614e223e5e20e26",
@@ -250,16 +260,6 @@
           "message": "Add Kenney pixel-art graphics and fix StrictMode WebGL crash\n\n- 9 CC0 sprites under web/public/sprites/ from Kenney \"Pixel Platformer\"\n  and \"Background Elements\" packs (~17 KB total, served as static assets;\n  zero JS bundle impact). LICENSE.txt records attribution.\n- Sprite-based player (2-frame hop animation), tiled grass-top platforms,\n  spinning coin sprites\n- 3-layer parallax background: distant mountains, mid + near hills,\n  drifting clouds, sun with halo, sky gradient\n- Defer kaplay() into a queueMicrotask so React 19 StrictMode's\n  synchronous setup -> cleanup -> setup sequence doesn't quit-then-recreate\n  on the same canvas (which lost the WebGL context and left the game\n  loop ticking on a dead context)\n- compliance test: drop unused const that was blocking tsc -b\n- pnpm-lock: align with package.json's ^0.13.0 SDK pin\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-18T22:46:05Z"
-          }
-        }
-      },
-      {
-        "sha": "133ef46a1c7c8b474b1643d21956f5ef9f720f72",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/133ef46a1c7c8b474b1643d21956f5ef9f720f72",
-        "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-18T22:23:24Z"
           }
         }
       }
@@ -420,9 +420,29 @@
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-19T00:04:17Z"
+      "pushed_at": "2026-05-19T00:26:23Z"
     },
     "commits": [
+      {
+        "sha": "1380472bcea01eaff1e167d63237693fd9cff91e",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/1380472bcea01eaff1e167d63237693fd9cff91e",
+        "commit": {
+          "message": "chore: ignore .gstack/ in repo\n\nLocal gstack tooling drops state into .gstack/; same treatment as\n.vibe-check/ so it doesn't get accidentally staged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T00:26:20Z"
+          }
+        }
+      },
+      {
+        "sha": "5dc4f7fbf5466fc18e5ee52dd2c7c40991a75810",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/5dc4f7fbf5466fc18e5ee52dd2c7c40991a75810",
+        "commit": {
+          "message": "fix: import shadowGeneratorSceneComponent side-effect\n\nThe Babylon deep-imports refactor in b38089a missed that ShadowGenerator\nneeds Lights/Shadows/shadowGeneratorSceneComponent imported as a\nside-effect — without it, `new ShadowGenerator(...)` throws\n\"ShadowGeneratorSceneComponent needs to be imported before as it\ncontains a side-effect required by your code\", the Game effect crashes,\nReact unmounts the tree, and the page renders blank.\n\nWhy no one caught it earlier:\n- the build succeeds (deep imports type-check fine in isolation)\n- the compliance/CI gates don't run WebGL in a real browser\n- /sw.js wasn't deployed pre-this-session so the old non-PWA build was\n  being served from CF, masking the bug\n- once the actual deploy started running my code, the page was blank\n  end-to-end\n\nVerified the fix end-to-end with browse on http://localhost:5174 after\nthe dev server picked up the side-effect import: root populates with\nthe GameShell + lane + pins + HUD, no console errors except the\nexpected CORS 401 on auth.freegamestore.online/me (user not logged in).\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T00:18:02Z"
+          }
+        }
+      },
       {
         "sha": "86100767ecfe6d86c21e79e2b3f78dd5b3b3ec41",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/86100767ecfe6d86c21e79e2b3f78dd5b3b3ec41",
@@ -430,26 +450,6 @@
           "message": "fix: relax CSP so the SDK auth call and CF beacon aren't blocked\n\nThe CSP added in 026be9e was too tight and broke production. Console\nshowed:\n  - connect-src 'self' blocked https://auth.freegamestore.online/me\n    (called by @freegamestore/games' GameAuth on mount)\n  - script-src 'self' blocked Cloudflare's RUM beacon at\n    static.cloudflareinsights.com\n  - frame-ancestors 'none' was ignored anyway (only enforced via real\n    HTTP header, not <meta>)\n\nThe page rendered blank because the auth fetch failure cascaded into\nthe React tree. Verified with browse: console showed all three\nviolations, body had no text.\n\nChanges:\n- connect-src now allows https://*.freegamestore.online for the SDK\n- script-src allows https://static.cloudflareinsights.com for CF RUM\n- dropped frame-ancestors (move to _headers if we ever want it)\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T00:04:15Z"
-          }
-        }
-      },
-      {
-        "sha": "fcb47df558e027540156259fcc9aa47e9bbf0170",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/fcb47df558e027540156259fcc9aa47e9bbf0170",
-        "commit": {
-          "message": "feat: gutters, sound, wood-grain lane; add CI + compliance\n\nGame:\n- Real gutters. When the ball reaches the lane edge it drops into the\n  channel (y -0.05, x snapped to ±(LANE_WIDTH/2 + 0.25)), ballVx zeroes,\n  pin collision is skipped, throw scores 0 (\"GUTTER\" overlay shown).\n- Web Audio sound effects (no asset cost, all synthesized):\n  rolling rumble loop while the ball is in motion, lowpassed noise burst\n  on each pin hit (loud for direct impact, soft for cascading hits),\n  rising arpeggio on STRIKE, two-note flourish on SPARE, descending\n  sawtooth wail when guttered. AudioContext is created lazily on first\n  user gesture and disposed on unmount.\n- Procedural wood-grain lane texture painted into a DynamicTexture at\n  init: 8 plank seams + grain speckle, v-tiled along the lane length.\n  Replaces the flat brown StandardMaterial diffuseColor.\n- Rules popup now mentions gutters and links to freegamestore.online.\n\nCI:\n- .github/workflows/ci.yml: pnpm + typecheck on PR (matches siblings).\n- .github/workflows/compliance.yml: mirrors sibling compliance gates\n  with two bowling-specific tweaks:\n  - manifest check looks for dist/manifest.webmanifest (we generate it\n    via vite-plugin-pwa) instead of the sibling games' static\n    public/manifest.json.\n  - bundle size ceiling raised to 500KB gzip. Bowling renders in 3D via\n    Babylon, so the floor is naturally higher than the 2D games' 300KB.\n    We sit at ~334KB gzip currently.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T00:02:14Z"
-          }
-        }
-      },
-      {
-        "sha": "217e31e4128b7f6f9908ee288f0bc52ec9c94174",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/217e31e4128b7f6f9908ee288f0bc52ec9c94174",
-        "commit": {
-          "message": "ci: add Cloudflare Pages deploy workflow\n\nThe repo had no .github/workflows/ at all — every push to main since\nthe PWA migration has been a no-op. The site at bowling.freegamestore.online\nis still serving the pre-vite-plugin-pwa build (manifest.json, separate\nbabylon chunk, no service worker), which is why recent fixes weren't\nvisible.\n\nMirrors the deploy.yml used across sibling games (2048, chess, pacman,\netc): build with pnpm, then `wrangler pages deploy web/dist` against\nthe freebowlingapp project. CLOUDFLARE_API_TOKEN secret expected at\nthe org level.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-18T23:11:51Z"
           }
         }
       }
@@ -1322,9 +1322,29 @@
   "freegamestore-online/tictactoe": {
     "meta": {
       "created_at": "2026-05-18T22:50:34Z",
-      "pushed_at": "2026-05-18T23:24:32Z"
+      "pushed_at": "2026-05-19T00:30:40Z"
     },
     "commits": [
+      {
+        "sha": "91220d112310fb0679e2487debf3c383fe1d2e98",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/91220d112310fb0679e2487debf3c383fe1d2e98",
+        "commit": {
+          "message": "Display streak in topbar (fix unused-var build error)",
+          "author": {
+            "date": "2026-05-19T00:30:38Z"
+          }
+        }
+      },
+      {
+        "sha": "e9f7f7c56abc2e9f9efaddbef344ea10484159f5",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/e9f7f7c56abc2e9f9efaddbef344ea10484159f5",
+        "commit": {
+          "message": "Add real tic-tac-toe game (minimax AI, was shipping template default)",
+          "author": {
+            "date": "2026-05-19T00:30:15Z"
+          }
+        }
+      },
       {
         "sha": "97076b9134b8e47fdbe59e0e50e671eb768fcf77",
         "html_url": "https://github.com/freegamestore-online/tictactoe/commit/97076b9134b8e47fdbe59e0e50e671eb768fcf77",
@@ -1332,16 +1352,6 @@
           "message": "Add tictactoe game logic",
           "author": {
             "date": "2026-05-18T23:24:29Z"
-          }
-        }
-      },
-      {
-        "sha": "fa41fa4530e86b806a694bd63d4a256e8d502fc2",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/fa41fa4530e86b806a694bd63d4a256e8d502fc2",
-        "commit": {
-          "message": "Initial commit from grid template",
-          "author": {
-            "date": "2026-05-18T22:45:55Z"
           }
         }
       }
@@ -1454,6 +1464,34 @@
           "message": "Initial commit from canvas template",
           "author": {
             "date": "2026-05-19T00:02:54Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/tanks": {
+    "meta": {
+      "created_at": "2026-05-19T00:51:54Z",
+      "pushed_at": "2026-05-19T00:52:05Z"
+    },
+    "commits": [
+      {
+        "sha": "fe6342861e085f3e92d3cbb022a8f6137b6f3f9d",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/fe6342861e085f3e92d3cbb022a8f6137b6f3f9d",
+        "commit": {
+          "message": "Add Tanks game logic (Battle City–style)",
+          "author": {
+            "date": "2026-05-19T00:52:02Z"
+          }
+        }
+      },
+      {
+        "sha": "90450f7c4221e6444b39562363505b69cd3fbd61",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/90450f7c4221e6444b39562363505b69cd3fbd61",
+        "commit": {
+          "message": "Initial commit from canvas template",
+          "author": {
+            "date": "2026-05-19T00:48:17Z"
           }
         }
       }
