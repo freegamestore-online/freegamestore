@@ -1534,5 +1534,33 @@
         }
       }
     ]
+  },
+  "freegamestore-online/pinball": {
+    "meta": {
+      "created_at": "2026-05-19T02:33:08Z",
+      "pushed_at": "2026-05-19T02:33:19Z"
+    },
+    "commits": [
+      {
+        "sha": "8c78facd03fda713195059278ee560836632ef6d",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/8c78facd03fda713195059278ee560836632ef6d",
+        "commit": {
+          "message": "Add Pinball game logic (canvas physics, flippers, bumpers, slingshots)",
+          "author": {
+            "date": "2026-05-19T02:33:16Z"
+          }
+        }
+      },
+      {
+        "sha": "9c8e8c0bc20767f0d3fbd7ea6816270c151ddefa",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/9c8e8c0bc20767f0d3fbd7ea6816270c151ddefa",
+        "commit": {
+          "message": "Initial commit from canvas template",
+          "author": {
+            "date": "2026-05-19T02:30:07Z"
+          }
+        }
+      }
+    ]
   }
 }
