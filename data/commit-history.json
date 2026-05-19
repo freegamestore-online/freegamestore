@@ -40,36 +40,36 @@
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-19T00:41:45Z"
+      "pushed_at": "2026-05-19T02:11:19Z"
     },
     "commits": [
       {
-        "sha": "e6f4d555cb6fe2bbefb837e0ef7e2ed2405f3593",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/e6f4d555cb6fe2bbefb837e0ef7e2ed2405f3593",
+        "sha": "9c6246b6bb35f59c8747fb8669d75afdb9c431fe",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/9c6246b6bb35f59c8747fb8669d75afdb9c431fe",
         "commit": {
-          "message": "fix(layout): landscape mobile clipped 'You' row below the footer\n\nAt 812x375 the board's max-h reserved only 6rem (96px) for surrounding\nchrome, but the topbar + 2 player rows + footer take ~125px. Result:\n'You / YOUR TURN' overlapped the freegamestore.online footer link.\n\nBumped landscape:max-h to calc(100svh-8.5rem) — board shrinks from\n279→239px, both player rows now fit cleanly above the footer.\n\nFound by /qa: gameplay flow tested end-to-end (e2-e4, engine response,\nundo, flip, color swap, mid-game difficulty change, mobile portrait,\nmobile landscape, preferences/themes). Only the landscape clip bug\nneeded a fix.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(eval-bar): show \"M\" instead of \"+999.99\" when Stockfish reports mate\n\nStockfish returns mate as ±99999-ish centipawns. The eval bar formatter\nshowed that as \"+999.99\" / \"-999.99\" — technically accurate but visually\nwrong. Now collapses to \"+M\" / \"-M\" when |eval| ≥ 10000.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T00:41:42Z"
+            "date": "2026-05-19T02:11:16Z"
           }
         }
       },
       {
-        "sha": "474d242aacc8c8828fcacbeea8b1d2fb7793f96e",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/474d242aacc8c8828fcacbeea8b1d2fb7793f96e",
+        "sha": "87f24e5fa9cbfac31440563f81969a1c4c7bb26f",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/87f24e5fa9cbfac31440563f81969a1c4c7bb26f",
         "commit": {
-          "message": "fix(pwa): NetworkFirst on HTML so fresh deploys are picked up immediately\n\nService worker was serving cached index.html with stale asset references\nafter a deploy. Vite content-hashes assets correctly, but the cached HTML\npointed at old hashes, so users saw the old version until all tabs closed.\n\nNetworkFirst on navigation requests means: when online, always fetch fresh\nHTML (3s timeout, fall back to cache). When offline, precached index.html\nstill serves via navigateFallback. Best of both worlds.\n\nAlso reformatted vite.config.ts from one 1KB line into readable structure.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(board): file/rank labels were unreadable — tiny + miscolored\n\nTwo bugs in the SVG board labels:\n\n1. fontSize=13 inside an 800-wide viewBox scaled to ~540px display\n   rendered as ~8.7px on screen — barely legible. Bumped to 22 (and\n   weight 700, opacity 0.6) so they sit subtly in each square corner\n   but are actually readable.\n\n2. The contrast formula included `(flipped ? 1 : 0)`, which broke the\n   logic: square colors at each viewBox position do NOT change when\n   the board flips (only WHICH file/rank is labeled there). With the\n   flipped offset, all bottom-row file labels rendered dark-on-dark\n   (or light-on-light) when playing as Black — completely invisible.\n   File labels also missed the +7 offset since they live in row 7.\n\n   Removed the flipped offset; file labels use (col + 7) % 2, rank\n   labels use row % 2.\n\n3. File labels were at y=792 — bottom edge of the viewBox — and got\n   clipped by the rounded corner + overflow:hidden. Moved to y=776.\n\nFound by /qa: noticed rank labels visible but barely; file labels\ninvisible; same again when flipped to Black.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:55:19Z"
+            "date": "2026-05-19T01:57:10Z"
           }
         }
       },
       {
-        "sha": "c8391504aacb9f855d75c866c7179054cedbda13",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/c8391504aacb9f855d75c866c7179054cedbda13",
+        "sha": "c52adb074d72d1100fc7bc2d959c4a681d41e113",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/c52adb074d72d1100fc7bc2d959c4a681d41e113",
         "commit": {
-          "message": "refactor(PlayTab): split into 6 focused sub-components\n\nExtract from PlayTab:\n- EvalBar — Stockfish eval visualization\n- PlayerRow — opponent / player avatar+label row (reused twice)\n- GameControls — New/Undo/Flip/Mic button row\n- DifficultyColorPicker — difficulty 1-5 + color w/b pills\n- GameOverBanner — terminal-state message + Play Again\n- VoiceInstructions — voice command cheatsheet\n\nPlayTab function: 508 → 393 lines, complexity 75 → 66\nVCQA: B 81 → B 82 (confusion C 65 → A 90)\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(rules): rewrite Game Rules panel — accurate, complete, properly formatted\n\nOld panel was a stale inline JSX blob: said \"Six difficulty levels\"\n(actually 5), didn't mention puzzles, listed bullets as <li> without\nlist styling so the SDK reset stripped them to plain text lines.\n\nNew panel:\n- Three sections: Playing, Puzzles, Voice control\n- Inline styles enforce list-style-disc + indentation (survives SDK reset)\n- Mentions all current features incl. puzzles, click-to-see-alternative,\n  voice command examples (\"knight to f3\", \"castle kingside\", etc.)\n- Extracted into RulesPanel component (line 48 went from a 700-char\n  inline JSX wall to <RulesPanel />)\n\nFound by /qa: opened Game Rules modal, content was wrong + ugly.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:48:08Z"
+            "date": "2026-05-19T01:31:59Z"
           }
         }
       }
@@ -420,9 +420,19 @@
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-19T00:26:23Z"
+      "pushed_at": "2026-05-19T01:59:29Z"
     },
     "commits": [
+      {
+        "sha": "84d45ae8fa3648d49ddf1ebf7ed92a32859d35a1",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/84d45ae8fa3648d49ddf1ebf7ed92a32859d35a1",
+        "commit": {
+          "message": "Respect platform mute toggle in SoundFX\n\nThe custom Web Audio in src/sound.ts plays pin clatter, ball-roll noise,\nstrike/spare flourishes — all the genre-essential sounds bowling needs.\nBut it never read the platform mute state, so clicking the topbar Mute\nbutton on bowling did nothing.\n\nFix: SoundFX gets a setMuted(boolean) method. ensureCtx() short-circuits\nto null when muted, which lets every public method early-return through\nthe existing null-context guard with one extra line. When the toggle\nflips on mid-roll, the active rolling sound is also stopped.\n\nIn Game.tsx the SDK's useSound() hook is read once at component level and\npiped into the SoundFX instance via useEffect on [muted]. SoundFX defaults\nto muted=true to match the SDK's \"muted by default\" — the very brief gap\nbetween mount and the first sync effect can't leak a sound that way.\n\nThis unblocks the audio-mute-respect compliance check now landing in\nfgs/platform.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T01:59:27Z"
+          }
+        }
+      },
       {
         "sha": "1380472bcea01eaff1e167d63237693fd9cff91e",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/1380472bcea01eaff1e167d63237693fd9cff91e",
@@ -440,16 +450,6 @@
           "message": "fix: import shadowGeneratorSceneComponent side-effect\n\nThe Babylon deep-imports refactor in b38089a missed that ShadowGenerator\nneeds Lights/Shadows/shadowGeneratorSceneComponent imported as a\nside-effect — without it, `new ShadowGenerator(...)` throws\n\"ShadowGeneratorSceneComponent needs to be imported before as it\ncontains a side-effect required by your code\", the Game effect crashes,\nReact unmounts the tree, and the page renders blank.\n\nWhy no one caught it earlier:\n- the build succeeds (deep imports type-check fine in isolation)\n- the compliance/CI gates don't run WebGL in a real browser\n- /sw.js wasn't deployed pre-this-session so the old non-PWA build was\n  being served from CF, masking the bug\n- once the actual deploy started running my code, the page was blank\n  end-to-end\n\nVerified the fix end-to-end with browse on http://localhost:5174 after\nthe dev server picked up the side-effect import: root populates with\nthe GameShell + lane + pins + HUD, no console errors except the\nexpected CORS 401 on auth.freegamestore.online/me (user not logged in).\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T00:18:02Z"
-          }
-        }
-      },
-      {
-        "sha": "86100767ecfe6d86c21e79e2b3f78dd5b3b3ec41",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/86100767ecfe6d86c21e79e2b3f78dd5b3b3ec41",
-        "commit": {
-          "message": "fix: relax CSP so the SDK auth call and CF beacon aren't blocked\n\nThe CSP added in 026be9e was too tight and broke production. Console\nshowed:\n  - connect-src 'self' blocked https://auth.freegamestore.online/me\n    (called by @freegamestore/games' GameAuth on mount)\n  - script-src 'self' blocked Cloudflare's RUM beacon at\n    static.cloudflareinsights.com\n  - frame-ancestors 'none' was ignored anyway (only enforced via real\n    HTTP header, not <meta>)\n\nThe page rendered blank because the auth fetch failure cascaded into\nthe React tree. Verified with browse: console showed all three\nviolations, body had no text.\n\nChanges:\n- connect-src now allows https://*.freegamestore.online for the SDK\n- script-src allows https://static.cloudflareinsights.com for CF RUM\n- dropped frame-ancestors (move to _headers if we ever want it)\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T00:04:15Z"
           }
         }
       }
@@ -800,9 +800,19 @@
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T01:59:50Z"
     },
     "commits": [
+      {
+        "sha": "5e206724503d1782be8d1c248e4cf9e506a7dc11",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/5e206724503d1782be8d1c248e4cf9e506a7dc11",
+        "commit": {
+          "message": "Respect platform mute toggle in playTone\n\nplayTone() created a fresh AudioContext and an oscillator every time a\ncolor flashed during the sequence and every time the player tapped a\ncolor — none of that read the platform mute state, so the topbar Mute\nbutton silently did nothing on simon.\n\nFix: playTone now takes muted as a third arg and early-returns if true.\nThe component reads useSound() once, stores it in a ref so the existing\nuseCallback hooks (showSequence, handlePress) don't have to be recreated\non every mute toggle, and passes mutedRef.current at the two call sites.\n\nDrive-by fixes to clear the pre-existing tsc errors that were blocking\nthe build:\n- Add @types/node devDep so the compliance test's node:fs/node:path\n  imports resolve\n- Drop the unused `const css = read('src/index.css')` in compliance.test.ts\n  that tripped noUnusedLocals\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T01:59:47Z"
+          }
+        }
+      },
       {
         "sha": "aa315f0f3082c3054ea2239a067b9266b2373083",
         "html_url": "https://github.com/freegamestore-online/simon/commit/aa315f0f3082c3054ea2239a067b9266b2373083",
@@ -820,16 +830,6 @@
           "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
           "author": {
             "date": "2026-05-17T01:34:33Z"
-          }
-        }
-      },
-      {
-        "sha": "ef53a76a0a18a9ead865557f94c8c3f80a77f797",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/ef53a76a0a18a9ead865557f94c8c3f80a77f797",
-        "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
-          "author": {
-            "date": "2026-05-17T01:17:13Z"
           }
         }
       }
@@ -1472,26 +1472,64 @@
   "freegamestore-online/tanks": {
     "meta": {
       "created_at": "2026-05-19T00:51:54Z",
-      "pushed_at": "2026-05-19T00:52:05Z"
+      "pushed_at": "2026-05-19T02:11:30Z"
     },
     "commits": [
       {
-        "sha": "fe6342861e085f3e92d3cbb022a8f6137b6f3f9d",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/fe6342861e085f3e92d3cbb022a8f6137b6f3f9d",
+        "sha": "06934cc3a9d97cfcb968978e7a4c2e01178689ab",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/06934cc3a9d97cfcb968978e7a4c2e01178689ab",
         "commit": {
-          "message": "Add Tanks game logic (Battle City–style)",
+          "message": "Tanks: more bug fixes\n\n- Win condition (all 5 stages cleared) now records bestScore + bestStage.\n  Previously a silent miss — they only updated on the game-over path, so\n  beating every stage didn't register as a high score.\n- One-bullet-per-tank rule (classic Battle City). Cooldown alone wasn't\n  enough — 380ms cooldown × 0.36 px/ms bullet speed = 136 px travel, far\n  short of the 364px field, so rapid-tap let players have 2-3 bullets in\n  flight at once. Tracking ownerId now strictly enforces the limit.\n- damageBullet priority fixed: when a 4-px bullet straddles a brick + a\n  steel tile, the brick was getting smashed but the outcome was reported\n  as \"steel\" — so the smash sound + visual didn't fire. New priority is\n  base > brick > steel > none.\n- Steel hits now play playTick (small click) for audio feedback. Was\n  silent before.",
           "author": {
-            "date": "2026-05-19T00:52:02Z"
+            "date": "2026-05-19T02:11:28Z"
           }
         }
       },
       {
-        "sha": "90450f7c4221e6444b39562363505b69cd3fbd61",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/90450f7c4221e6444b39562363505b69cd3fbd61",
+        "sha": "8de7d9c2d10f635c81455b4ea36c662ebef5b81d",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/8de7d9c2d10f635c81455b4ea36c662ebef5b81d",
         "commit": {
-          "message": "Initial commit from canvas template",
+          "message": "Tanks: bug fixes + visual polish\n\nBugs fixed\n- Phase transitions (stage-clear / game-over) fired their sound + setState many\n  times in a row because the if-block re-entered every animation frame between\n  setPhase() and React's next render. Flip phaseRef synchronously to one-shot it.\n- Player respawn placed the tank inside whatever enemy was sitting on the spawn\n  point — no overlap handling. Now any overlapping enemy ram-dies (worth full\n  points + popup), so the player can always emerge.\n- Bullet-vs-bullet cancel — player bullets and enemy bullets now annihilate\n  on collision (NES Battle City behavior). Pure pass-through was unrealistic.\n\nLevels\n- Added LEVEL_4 (steel-pillar corridors) and LEVEL_5 (steel-ring boss). Full\n  5-stage progression, validated: 13 rows, all spawn zones (TL/TM/TR + player)\n  clear, all 5 levels navigable with 2-wide tank.\n\nVisuals\n- Score popups (+100/+200/+400 in NES-yellow) float up from killed tanks\n  and fade over 800ms.\n- CRT scanline overlay across the field (1px every 3px, multiply-blended).\n- Outer brown-gradient frame around the canvas with a chunky yellow border —\n  closer to the NES Battle City cabinet feel.\n- Drop-shadow on score-popup text for readability against any tile.",
           "author": {
-            "date": "2026-05-19T00:48:17Z"
+            "date": "2026-05-19T02:04:18Z"
+          }
+        }
+      },
+      {
+        "sha": "a777b56c4fea69d2cda5fab01883567ec58157c6",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/a777b56c4fea69d2cda5fab01883567ec58157c6",
+        "commit": {
+          "message": "Tanks: stages + progression, tank-vs-tank collision, NES-style UI\n\nLevels & progression\n- 3 distinct stage layouts (open / brick / steel-maze) of escalating difficulty\n- Stage state machine: intro → stage-intro → playing → stage-clear → next stage / over / won\n- \"STAGE N\" overlay on entry (1.8s)\n- Stage-clear summary screen: kills by enemy kind × points + survive bonus + running total\n- Player keeps lives & score across stages; lose-all-lives or eagle-hit ends the run\n- \"Best score\" + \"Top stage reached\" persisted via useHighScore\n\nTank-vs-tank collision (was ghost-mode)\n- tryMove now takes a `others` list and rejects moves that overlap any live tank\n- Player blocked by enemies; enemies blocked by player + each other\n- Stuck enemies redirect quickly (aiTimer drops to 120ms on blocked move)\n\nEnemy variety\n- 3 kinds: basic (1 hp, 100 pts), fast (1 hp, faster, 200 pts), armor (3 hp, slow, 400 pts)\n- HP indicator dots on multi-hit tanks\n- Per-kind colors: silver / white / gold\n\nUI closer to historical Battle City\n- Enemy queue strip above the field — one mini-tank icon per un-spawned enemy\n- Title now includes current stage: \"Tanks · Stage N\"\n- Stage-clear breakdown matches NES bookkeeping layout\n- Bullets visually distinct (player/enemy)",
+          "author": {
+            "date": "2026-05-19T01:35:38Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/riichi": {
+    "meta": {
+      "created_at": "2026-05-19T02:31:10Z",
+      "pushed_at": "2026-05-19T02:31:28Z"
+    },
+    "commits": [
+      {
+        "sha": "3dcf027e2e93e7989c7cc8bcdf212cd97dfc93db",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/3dcf027e2e93e7989c7cc8bcdf212cd97dfc93db",
+        "commit": {
+          "message": "Build single-player Riichi v0.2 engine + UI\n\nPure-TS engine under web/src/engine/:\n- tiles.ts: 34-type tile system, Unicode glyphs, parseHand/formatHand helpers\n- wall.ts: 136-tile shuffled wall + dead wall + dora indicator + deal\n- evaluator.ts: 14-tile shape decomposer (standard / chiitoitsu / kokushi)\n                with isTenpai and waits helpers\n- yaku.ts: subset detector (Riichi, Ippatsu, Menzen Tsumo, Pinfu, Tanyao,\n           Yakuhai for round/seat winds + dragons, Iipeikou, Toitoi,\n           Honitsu, Chinitsu, Chiitoitsu, Kokushi)\n- score.ts: naive fu (30 / 25 chiitoitsu) + han + base-point lookup with\n            mangan/haneman/baiman/sanbaiman/yakuman caps; per-payer\n            transfers with round-up-to-100\n- game.ts: state machine for one kyoku — human seat 0 vs three random-\n           discard bots, riichi/tsumo/ron actions for the human\n\nUI under web/src/components/Board.tsx:\n- Bottom row: 13-tile hand + drawn tile (lifted), tap to discard\n- 3 opponents shown as tile-back rows (top/left/right)\n- 4 discard piles in the centre of the table\n- Riichi / Tsumo / Ron buttons surface only when legal\n- Win modal with yaku list, han/fu, points, and the round's score table\n\nv0.2 cuts (documented in App.tsx rules popover):\n- No calling chi/pon/kan — fully closed hands only\n- Bots never call, riichi, or tsumo\n- Single hand per session, no honba/round progression\n- Fixed fu (30 standard, 25 chiitoitsu)\n- Rare yaku (sanshoku/ittsuu/chanta/haitei/rinshan/etc.) not detected\n- Multiplayer over FGS rooms is planned but not implemented\n\n16 tests pass (12 evaluator + 4 scoring integration).\nfgs check: all hard checks pass, bundle 68 KB gzip / 224 KB raw.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T02:31:01Z"
+          }
+        }
+      },
+      {
+        "sha": "7e45b4fa6c22d2514f63b38f80d81b8d97891cb3",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/7e45b4fa6c22d2514f63b38f80d81b8d97891cb3",
+        "commit": {
+          "message": "Initial commit from grid template",
+          "author": {
+            "date": "2026-05-19T02:01:19Z"
           }
         }
       }
