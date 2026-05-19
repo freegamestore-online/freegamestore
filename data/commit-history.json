@@ -78,9 +78,19 @@
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-19T05:02:30Z"
+      "pushed_at": "2026-05-19T06:04:03Z"
     },
     "commits": [
+      {
+        "sha": "16246e37570f5c79ac6b5ae77c1160a92c1b3f88",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/16246e37570f5c79ac6b5ae77c1160a92c1b3f88",
+        "commit": {
+          "message": "Billiards: 4 more bug fixes + ball-collision sound\n\n- 8-ball + scratch is now an automatic loss. resolveShot processed the\n  8-ball case and early-returned before noticing the cue ball was also\n  in shotSunk, so a \"win\" could fire when 8-ball-rules say it's a loss.\n  Now checks `s.shotSunk.includes(0)` inline; emits \"8 + scratch\" vs\n  \"Early 8\" in the message.\n\n- Pocket detection no longer misses fast straight-line shots. Was 2\n  fixed substeps per frame → up to 11px movement per substep at max\n  power, which can step a ball *over* a pocket (detection radius ~20).\n  Substeps now scale with max ball velocity so movement never exceeds\n  ~0.55 ball radii per substep (capped at 8 substeps/frame).\n\n- AI no longer hammers every shot near max power. Old formula clamped\n  to 1.0 on most paths → frequent over-shoots and scratches. New\n  formula mixes path length AND cut-angle difficulty, capped at 95%\n  and floored at 35%, so easy/short shots are gentle and tough cuts\n  get the needed punch.\n\n- Score popup text dropped \"OPP\" — color already distinguishes whose\n  pile the ball counts toward (gray = opponent, yellow = own).\n\n- Ball-vs-ball collisions now play a throttled clack sound when the\n  closing-velocity component exceeds 0.35 px/ms. 70ms global cooldown\n  keeps a cluster impact from spamming audio.",
+          "author": {
+            "date": "2026-05-19T06:04:01Z"
+          }
+        }
+      },
       {
         "sha": "690c1f66eb4cbb8371601b6e231da0f43a4a8193",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/690c1f66eb4cbb8371601b6e231da0f43a4a8193",
@@ -98,16 +108,6 @@
           "message": "Billiards: switch to archery-style aim (hold to charge, release to fire)\n\nReplaces the drag-from-cue-ball gesture with a separate aim/power model:\n\n- Aim: pointer position on the canvas sets the aim line; no firing on\n  pointer-up. Move freely to fine-tune the angle.\n- Power: dedicated SHOOT button below the canvas. Hold down → power\n  charges over ~715ms to full. Release → fires (or cancels if released\n  below 8% — accidental taps don't lose your turn).\n- Visual: a cue stick now renders behind the cue ball and pulls back\n  proportionally to the charging power, with blue chalk tip + wood\n  shaft + dark butt. The power ring around the cue ball turns red\n  near max for a wind-up warning.\n- Keyboard: ← → still adjusts angle; Space (hold + release) replaces\n  the old \"tap Space to fire instantly\" with charge-and-release.\n- Ball-in-hand: tap-anywhere placement still works; shoot button is\n  disabled with explicit \"TAP TABLE TO PLACE CUE\" label.",
           "author": {
             "date": "2026-05-19T04:55:07Z"
-          }
-        }
-      },
-      {
-        "sha": "f0420c3ab7343ed0f254bb5bab85e85ceae48ad7",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/f0420c3ab7343ed0f254bb5bab85e85ceae48ad7",
-        "commit": {
-          "message": "fix(compliance): use correct freegamestore.online URL\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:13:56Z"
           }
         }
       }
