@@ -2,9 +2,29 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-19T07:24:11Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "d3e3aae01f8974aa387add034900e61af492903b",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/d3e3aae01f8974aa387add034900e61af492903b",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "91c7a61c0dae1d65914a25bbf35d65980c4b45b9",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/91c7a61c0dae1d65914a25bbf35d65980c4b45b9",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "0882cbaae2e030033a599f7aaeffa7a9d48556a8",
         "html_url": "https://github.com/freegamestore-online/dice/commit/0882cbaae2e030033a599f7aaeffa7a9d48556a8",
@@ -14,62 +34,42 @@
             "date": "2026-05-19T07:24:08Z"
           }
         }
-      },
-      {
-        "sha": "eebb8b9f18d6d610abf7f58c1039a2e8b9e53495",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/eebb8b9f18d6d610abf7f58c1039a2e8b9e53495",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:14Z"
-          }
-        }
-      },
-      {
-        "sha": "6bbbdb61bfaf399c91354a7171fa336c336cfc39",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/6bbbdb61bfaf399c91354a7171fa336c336cfc39",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-19T07:16:46Z"
+      "pushed_at": "2026-05-19T23:06:32Z"
     },
     "commits": [
       {
-        "sha": "49dcacf43155953dfe64dd9161380ac9ad1937fe",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/49dcacf43155953dfe64dd9161380ac9ad1937fe",
+        "sha": "66823a8149511bc712b1ce49c969bff080aede56",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/66823a8149511bc712b1ce49c969bff080aede56",
         "commit": {
-          "message": "feat(mp + pgn): multiplayer analysis/review + PGN export\n\nMultiplayer now has feature parity with single-player for the\npost-game learning loop:\n\n1. MultiplayerTab renders the proper MoveList component (same one\n   PlayTab uses) so review nav and analysis colors work consistently.\n2. Opening name shown from move 1 (same findOpening lookup).\n3. After game-over, \"Analyze game · review your moves\" button\n   triggers Stockfish analysis of every move by the user (skipping\n   opponent moves). Progress bar shows %.\n4. When analyses arrive, GameSummary renders: accuracy %, category\n   counts, biggest-swing-jump link.\n5. Review controls (‹ › Live) work the same as PlayTab — click any\n   move to jump the board to that position.\n6. State reset on rematch.\n\nPGN export:\n- services/pgn.ts — buildPgn() emits Seven Tag Roster + chess.js\n  movetext. copyToClipboard() with execCommand fallback.\n- \"Copy PGN\" button shown at game-over in both PlayTab and\n  MultiplayerTab. Button label flips to \"PGN copied ✓\" for 1.5s.\n- 3 regression tests for header escaping + defaults + movetext.\n\nTotal: 43 tests pass (was 40). Build clean. +13KB precache.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "Strip multiplayer — moving to ProGameStore\n\nCloudflare Pages can't host a Worker that defines a Durable Object class,\nso the WebSocket-backed multiplayer was failing every deploy. Per the\nplatform decision in ~/dev/stores/CLAUDE.md (2026-05-20), real-time rooms\nare now a Pro-tier feature, not Free. Multiplayer chess will live at\nprogamestore-online/chess once PGS is built out.\n\nRemoved:\n- web/public/_worker.js (the GameDO Worker)\n- web/src/components/MultiplayerTab.tsx\n- /multiplayer + /g/<id> routes in App.tsx\n- Multiplayer button in the topbar\n- Manual sw.js registration in index.html (VitePWA handles it)\n- Durable Objects + migrations blocks in wrangler.jsonc\n\nThe full multiplayer code is staged at ~/dev/stores/pgs/games/chess/ for\nthe eventual PGS launch.\n\nKept: local play vs. engine, puzzles, voice control, preferences,\nanalysis, eval bar, move list — everything that doesn't need a server.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T07:16:44Z"
+            "date": "2026-05-19T23:06:30Z"
           }
         }
       },
       {
-        "sha": "415f19462ae1898ab17354a3035ef560faefdbff",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/415f19462ae1898ab17354a3035ef560faefdbff",
+        "sha": "4d7a18056e0af1043f5368617a59faec43c02a00",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/4d7a18056e0af1043f5368617a59faec43c02a00",
         "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T07:11:04Z"
+            "date": "2026-05-19T22:01:36Z"
           }
         }
       },
       {
-        "sha": "e13c5e8c8a1b12aa437b6fd6ed631f7f49f8c603",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/e13c5e8c8a1b12aa437b6fd6ed631f7f49f8c603",
+        "sha": "cfde18dc071ec0e0c5e2e7ed069a33feed01bbf3",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/cfde18dc071ec0e0c5e2e7ed069a33feed01bbf3",
         "commit": {
-          "message": "feat(analysis): review mode + accuracy summary + opening names + better text\n\nFour-part upgrade to game analysis and learning loop. User-visible:\n\n1. Review mode. Click any move in the move list to jump the board to\n   that position. Prev/Next arrows (‹ ›) cycle through your moves.\n   \"Live\" button returns to the live game. Works mid-game (paused\n   review) and post-game. Board shows a blue \"Move N\" banner so you\n   never lose track of where you are vs the live position.\n\n2. Game-level summary (GameSummary.tsx). Renders after game-over with:\n   - 0-100 accuracy score (avg centipawn loss formula, capped)\n   - Counts: brilliants / inaccuracies / mistakes / blunders\n   - \"Biggest swing: move N (Bxf7)\" — click to jump-review that move\n   Lichess-style at-a-glance feedback.\n\n3. Opening names (services/openings.ts). Bundled ~80-line ECO table\n   covering common openings (Ruy López, Sicilian Najdorf, Nimzo-Indian,\n   etc.). Longest-prefix match. Displays in the move list header from\n   move 1. Helps beginners learn what they're playing.\n\n4. Analysis quick wins:\n   - \"Brilliant\" now requires the move to be a sacrifice (piece lands\n     on a square with a cheaper attacker) AND the position to be\n     winning (≥ 200cp). Previously any best move was \"brilliant\".\n   - Captures quantified: \"Captures a knight (3 points)\" using piece\n     point values.\n   - Mistake/blunder explanations now include the engine's punishment\n     line: \"Opponent's best reply: Nxe4.\" Pass through Stockfish's\n     post-move bestMove (added `punishment` field to evaluateMoveSF).\n   - \"Good\" move text varies by feature: develops, castles, central,\n     captures, etc., instead of always \"Solid move.\"\n\nTests: +9 (openings 6 + tests still green). Build green.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "feat(play): Hint button shows engine's best move as live arrow\n\nPressing Hint on your turn calls Stockfish (or minimax fallback) and\ndraws a yellow arrow on the live board from the recommended source to\ntarget square. The arrow clears automatically on the next move. The\nbutton is only enabled when it's your turn, and shows a \"Hint…\" label\nwhile the engine is thinking.\n\nBoard gains a new `liveArrow` prop that renders independently of the\npreview-mode arrow used for alternative-move review.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T06:29:28Z"
+            "date": "2026-05-19T22:00:07Z"
           }
         }
       }
@@ -78,9 +78,29 @@
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-19T07:24:53Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "0a6c00d122db847aa70be1fc6301a9f288e25a6a",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/0a6c00d122db847aa70be1fc6301a9f288e25a6a",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:35Z"
+          }
+        }
+      },
+      {
+        "sha": "886afbd3ba2097f607767f31084d3f611d15a87a",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/886afbd3ba2097f607767f31084d3f611d15a87a",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "42cd94e17b41ea70375125e5006a781476b8fbd4",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/42cd94e17b41ea70375125e5006a781476b8fbd4",
@@ -90,35 +110,35 @@
             "date": "2026-05-19T07:24:50Z"
           }
         }
-      },
-      {
-        "sha": "e2fdaed8d81b2196e2ccf1afd87f2cf5881e1416",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/e2fdaed8d81b2196e2ccf1afd87f2cf5881e1416",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:23:56Z"
-          }
-        }
-      },
-      {
-        "sha": "51c7cfffdcbf36108c7af4a3f1f54767510092f0",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/51c7cfffdcbf36108c7af4a3f1f54767510092f0",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:10:58Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-19T07:24:08Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "fd1c7a65015deb4a0f9e1e3c9ce1ab745bbbef3c",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/fd1c7a65015deb4a0f9e1e3c9ce1ab745bbbef3c",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "e8bc7cef495ce6f2687449ec15f09a76883d06ac",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/e8bc7cef495ce6f2687449ec15f09a76883d06ac",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "cdc3c3a9c15f7924aa76bf8057fdcc2da9fd5d84",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/cdc3c3a9c15f7924aa76bf8057fdcc2da9fd5d84",
@@ -128,35 +148,35 @@
             "date": "2026-05-19T07:24:05Z"
           }
         }
-      },
-      {
-        "sha": "35e843d08cbc9054d6ffd8e14d0f11c71bf107d1",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/35e843d08cbc9054d6ffd8e14d0f11c71bf107d1",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:08Z"
-          }
-        }
-      },
-      {
-        "sha": "727332dc7fe87ecaf0cfd540579b3c5215beca4d",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/727332dc7fe87ecaf0cfd540579b3c5215beca4d",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-19T06:23:53Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "5284bc4eda160d6e30b013f7128ce8554d3566fd",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/5284bc4eda160d6e30b013f7128ce8554d3566fd",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "dbad0acab8f5744dc35c97c9ec912164f2bc0364",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/dbad0acab8f5744dc35c97c9ec912164f2bc0364",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:25Z"
+          }
+        }
+      },
       {
         "sha": "e464ff8b7aead2a0c46bf01bb78fd8b875a606d5",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/e464ff8b7aead2a0c46bf01bb78fd8b875a606d5",
@@ -166,35 +186,35 @@
             "date": "2026-05-19T06:23:50Z"
           }
         }
-      },
-      {
-        "sha": "d5db566e08cbb009280f0c3f65a772e1d083c166",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/d5db566e08cbb009280f0c3f65a772e1d083c166",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:21Z"
-          }
-        }
-      },
-      {
-        "sha": "11e8d2a22709431f3b3bf29001587e1354b8fa81",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/11e8d2a22709431f3b3bf29001587e1354b8fa81",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:10:57Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-19T07:11:35Z"
+      "pushed_at": "2026-05-19T22:01:37Z"
     },
     "commits": [
+      {
+        "sha": "bd00a7a3aea909f91f41848973814b1c18b9d81d",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/bd00a7a3aea909f91f41848973814b1c18b9d81d",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:34Z"
+          }
+        }
+      },
+      {
+        "sha": "98993c575b17aaa4b52a8f1f018dd4132a072309",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/98993c575b17aaa4b52a8f1f018dd4132a072309",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:27Z"
+          }
+        }
+      },
       {
         "sha": "e37c61ff61d71975f3e77c74ce94c48d472bc1e2",
         "html_url": "https://github.com/freegamestore-online/match3/commit/e37c61ff61d71975f3e77c74ce94c48d472bc1e2",
@@ -204,62 +224,42 @@
             "date": "2026-05-19T07:11:32Z"
           }
         }
-      },
-      {
-        "sha": "8043f0160d688dacbda9d99300f9359c4df68f1b",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/8043f0160d688dacbda9d99300f9359c4df68f1b",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "cc0d5f6f17aa8b1f55d643c06d7367c603b63992",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/cc0d5f6f17aa8b1f55d643c06d7367c603b63992",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:13Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-19T07:24:23Z"
+      "pushed_at": "2026-05-19T22:18:23Z"
     },
     "commits": [
       {
-        "sha": "195e4a4ffe09c43af2349eca7398db8c28a87b16",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/195e4a4ffe09c43af2349eca7398db8c28a87b16",
+        "sha": "07ee2302b2325bd939b39171fe7cfde4e0bbe1da",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/07ee2302b2325bd939b39171fe7cfde4e0bbe1da",
         "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "Game.tsx: first coin in a chain shouldn't already cash at ×2\n\nbumpMult() ran before the coin was credited, so the very first coin of a\nfresh chain applied at ×2 even though no chain existed yet. Apply mult\nfirst (which is 1 on a cold start), then bump it so the *next* coin\nhits at ×2. Matches the \"first match starts the combo\" intuition.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T07:24:21Z"
+            "date": "2026-05-19T22:18:20Z"
           }
         }
       },
       {
-        "sha": "6e7d52aa45a8a906cbe782c518e9dfeaf9d025de",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/6e7d52aa45a8a906cbe782c518e9dfeaf9d025de",
+        "sha": "cbb254f629d3684bdc39f448d5cab8d434bc129d",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/cbb254f629d3684bdc39f448d5cab8d434bc129d",
         "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
+          "message": "Features: combo multiplier, spike hazards, power-ups\n\nCombo:\n- Each coin pickup extends a 3s window; consecutive pickups stack a ×2/×3/×4\n  multiplier on coin value. Distance scoring stays 1× so idling can't\n  build a combo.\n- Multiplier shown both in the topbar (Combo stat appears when > 1) and\n  big at the top-center of the play area, with a decay bar underneath.\n\nHazards:\n- Some platforms spawn with red saw-tooth strips inset from the edges.\n  Touching one is lethal.\n- Spawn rate ramps from 0% (first 15s) to 32% by 90s, so early game stays\n  forgiving.\n\nPower-ups (~8% of coin-bearing platforms):\n- Blue double-jump: one extra mid-air jump for 8s. Sparkles on use.\n- Purple slow-mo: world ticks at 45% for 3s; controls stay at full speed\n  so it's an offensive ability, not just a \"pause to think\" cheat.\n- Gold shield: absorbs one spike hit (bounce + combo reset) or one fall.\n  Pulsing aura while active.\n- Active power-ups stack as small badges in the top-left with charges or\n  time remaining. Slow-mo paints a faint purple tint over the play area.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T07:11:48Z"
+            "date": "2026-05-19T22:14:41Z"
           }
         }
       },
       {
-        "sha": "402a3cffdaf2d26c057223dfeb1a3b4044f838bd",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/402a3cffdaf2d26c057223dfeb1a3b4044f838bd",
+        "sha": "f6a741f149bd1233c0327f041c7da4607346f5db",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/f6a741f149bd1233c0327f041c7da4607346f5db",
         "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T06:18:46Z"
+            "date": "2026-05-19T22:01:36Z"
           }
         }
       }
@@ -268,9 +268,29 @@
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-19T07:24:14Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "dc9c09a94d7c782127a54341f1aff5b0dd24b89c",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/dc9c09a94d7c782127a54341f1aff5b0dd24b89c",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:35Z"
+          }
+        }
+      },
+      {
+        "sha": "cfd1c7f62d6577b9f3fb392933a6afde78d05f41",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/cfd1c7f62d6577b9f3fb392933a6afde78d05f41",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:25Z"
+          }
+        }
+      },
       {
         "sha": "7b55f0a4351d0484c1ae0f8992b7aff0c9e34172",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/7b55f0a4351d0484c1ae0f8992b7aff0c9e34172",
@@ -280,35 +300,35 @@
             "date": "2026-05-19T07:24:12Z"
           }
         }
-      },
-      {
-        "sha": "bf2c93cd81c56f50fea089cc23ce2f6a3c71c0e8",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/bf2c93cd81c56f50fea089cc23ce2f6a3c71c0e8",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:26Z"
-          }
-        }
-      },
-      {
-        "sha": "1080def314a565a13fbecde1ef78f7dcc97bf3fa",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/1080def314a565a13fbecde1ef78f7dcc97bf3fa",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-19T07:10:58Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "d1ed5fc3e271b3ed9069515f44c0bfdc56436c6e",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/d1ed5fc3e271b3ed9069515f44c0bfdc56436c6e",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:35Z"
+          }
+        }
+      },
+      {
+        "sha": "ff282f94c2b623c8de49467b0ef607f65fb4ec45",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/ff282f94c2b623c8de49467b0ef607f65fb4ec45",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "f8ba5874fc8007f086acefeaacf37cfe43d7b22a",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/f8ba5874fc8007f086acefeaacf37cfe43d7b22a",
@@ -318,35 +338,35 @@
             "date": "2026-05-19T07:10:55Z"
           }
         }
-      },
-      {
-        "sha": "ac6033051f22c46d87b82dece83e015bbf31e608",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/ac6033051f22c46d87b82dece83e015bbf31e608",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:21Z"
-          }
-        }
-      },
-      {
-        "sha": "5ece506b32af1ab53aeaf0eeb8363e4e02ed4c24",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/5ece506b32af1ab53aeaf0eeb8363e4e02ed4c24",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:10:53Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-19T07:11:38Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "21b16964032606024d1bc8417e6274ca5ce1b769",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/21b16964032606024d1bc8417e6274ca5ce1b769",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "5e8f037cb555877b8d58883629d7a0f519a2b8ec",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/5e8f037cb555877b8d58883629d7a0f519a2b8ec",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "bcaa64d69f5b53d43a0aa453b19b1101a4e7fd06",
         "html_url": "https://github.com/freegamestore-online/memory/commit/bcaa64d69f5b53d43a0aa453b19b1101a4e7fd06",
@@ -356,35 +376,35 @@
             "date": "2026-05-19T07:11:35Z"
           }
         }
-      },
-      {
-        "sha": "02bdb984f291a463a7c44d40f0ce5251319fc363",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/02bdb984f291a463a7c44d40f0ce5251319fc363",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "12eb4873f830fad0edfc75e63d31a4e5599a8a08",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/12eb4873f830fad0edfc75e63d31a4e5599a8a08",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:16Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-19T07:11:23Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "f51b1e20967ff29e4a4398c6b26c29ea9e490f08",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/f51b1e20967ff29e4a4398c6b26c29ea9e490f08",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:35Z"
+          }
+        }
+      },
+      {
+        "sha": "bfd3a28928f7c9ed5997ed33a005323ea89f8eb9",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/bfd3a28928f7c9ed5997ed33a005323ea89f8eb9",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "ab9d77a35de5f477feb05f1ddba48eb3388e5a20",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/ab9d77a35de5f477feb05f1ddba48eb3388e5a20",
@@ -394,35 +414,35 @@
             "date": "2026-05-19T07:11:20Z"
           }
         }
-      },
-      {
-        "sha": "30dbcd2f23c8b79cf2ec8866fa8b502a3c9e6038",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/30dbcd2f23c8b79cf2ec8866fa8b502a3c9e6038",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "2ca3e3d642b5d0b2b4990efd683a93eb2094c54e",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/2ca3e3d642b5d0b2b4990efd683a93eb2094c54e",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:04Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-19T06:24:34Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "7228da90f44856e958d8540a1bf723857db9ca52",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/7228da90f44856e958d8540a1bf723857db9ca52",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "984ecd4514b481c172abef75884e4757499ed211",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/984ecd4514b481c172abef75884e4757499ed211",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:42:57Z"
+          }
+        }
+      },
       {
         "sha": "f9021dea6a130f0a71d41c96a95dc0b7adc10b47",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/f9021dea6a130f0a71d41c96a95dc0b7adc10b47",
@@ -432,35 +452,35 @@
             "date": "2026-05-19T06:24:31Z"
           }
         }
-      },
-      {
-        "sha": "b1efe5e06c1564a2f7d4e865dfa5e02200f6400f",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/b1efe5e06c1564a2f7d4e865dfa5e02200f6400f",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nReplaces the 60+ line inline build/compliance/deploy pipeline with a\n~15-line caller of freegamestore-online/freegamestore's reusable\nworkflow. Same behavior — pinned CLI 0.1.9, build + compliance on\npush AND PR, wrangler deploy gated on push-to-main — but the entire\npipeline now lives in one place and bumps come as one upstream PR\ninstead of 43.\n\nAlso drops the now-redundant ci.yml (typecheck-on-PR) and\ncompliance.yml (grep-based file checks). The reusable workflow's\nbuild step covers typecheck via tsc -b, and @freegamestore/cli covers\nthe grep checks more comprehensively.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:23:41Z"
-          }
-        }
-      },
-      {
-        "sha": "95080005e729e026ed5b7ae3ad24c4639cc54734",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/95080005e729e026ed5b7ae3ad24c4639cc54734",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:12Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-19T07:11:20Z"
+      "pushed_at": "2026-05-19T22:01:38Z"
     },
     "commits": [
+      {
+        "sha": "2c2491c790fad85fc37b03921b25ff11104f2465",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/2c2491c790fad85fc37b03921b25ff11104f2465",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:35Z"
+          }
+        }
+      },
+      {
+        "sha": "7e733fad663ce0fce9ded21b9cfc0e37400d3d36",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/7e733fad663ce0fce9ded21b9cfc0e37400d3d36",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "6b78985c0d6f1b229278307b3d088091b6647ca6",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/6b78985c0d6f1b229278307b3d088091b6647ca6",
@@ -470,35 +490,35 @@
             "date": "2026-05-19T07:11:17Z"
           }
         }
-      },
-      {
-        "sha": "efe27fb800116e67910ec3531f01f6311a9a547e",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/efe27fb800116e67910ec3531f01f6311a9a547e",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:21Z"
-          }
-        }
-      },
-      {
-        "sha": "8455389a43d5ead72557779f017edb9508e7a30c",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/8455389a43d5ead72557779f017edb9508e7a30c",
-        "commit": {
-          "message": "fix(types): add @types/node so compliance test type-checks\n\nThe compliance test imports node:fs / node:path / __dirname. Without\n@types/node in web's devDependencies, tsc fails (TS2307, TS2304) and\nblocks the deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:14:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-19T07:11:32Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "35ee463f561ebc2d033d439d49b6c69c10ff9b25",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/35ee463f561ebc2d033d439d49b6c69c10ff9b25",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "7c25538047d9d2d56b76b865702dff7dc17097ea",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/7c25538047d9d2d56b76b865702dff7dc17097ea",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:27Z"
+          }
+        }
+      },
       {
         "sha": "db3d6b88f6b036df5c7ef3e77a8311da4bf196ce",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/db3d6b88f6b036df5c7ef3e77a8311da4bf196ce",
@@ -508,35 +528,35 @@
             "date": "2026-05-19T07:11:29Z"
           }
         }
-      },
-      {
-        "sha": "7563f8dcba4824be56d4376e32c39e00e5cc78ae",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/7563f8dcba4824be56d4376e32c39e00e5cc78ae",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "08c79f16543bff5b3cd0d5d21de6fdc7410bc1f6",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/08c79f16543bff5b3cd0d5d21de6fdc7410bc1f6",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:10Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-19T07:11:26Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "523bd99909eed77250a45498baa2433639eea2b5",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/523bd99909eed77250a45498baa2433639eea2b5",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "454f39d4b61d8f0807f6f4639ca1f24a978b63e5",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/454f39d4b61d8f0807f6f4639ca1f24a978b63e5",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "7be5ffe1a4a79eda5e6a7c6cfb767e5e9f2c42cd",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/7be5ffe1a4a79eda5e6a7c6cfb767e5e9f2c42cd",
@@ -546,35 +566,35 @@
             "date": "2026-05-19T07:11:23Z"
           }
         }
-      },
-      {
-        "sha": "55e71e9a8311fa435a63b6067235b7db6458df71",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/55e71e9a8311fa435a63b6067235b7db6458df71",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "47bb15cb31de341155089888c025f41c7401c153",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/47bb15cb31de341155089888c025f41c7401c153",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:07Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-19T07:11:44Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "eeef49557289e83f0f7d481139d9fa25d306ee32",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/eeef49557289e83f0f7d481139d9fa25d306ee32",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "45614bfbdaa4d9eb2e7538765d6ac78a8f95884b",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/45614bfbdaa4d9eb2e7538765d6ac78a8f95884b",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "9cabdf9a9d9bed91e28f746d5056693c8d86a38c",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/9cabdf9a9d9bed91e28f746d5056693c8d86a38c",
@@ -584,35 +604,35 @@
             "date": "2026-05-19T07:11:42Z"
           }
         }
-      },
-      {
-        "sha": "5b7b0fd07ca2bdba1cb39c79acba8a21b0726937",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/5b7b0fd07ca2bdba1cb39c79acba8a21b0726937",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "8f884c29e44bfb242ae8b09275b90b812105654b",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/8f884c29e44bfb242ae8b09275b90b812105654b",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:08:39Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-19T07:12:00Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "484837258479dfc9e6dbb663a70bd25f1b8271a4",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/484837258479dfc9e6dbb663a70bd25f1b8271a4",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "f3d70651b7b836aa77065e02c07289f5f484dff1",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/f3d70651b7b836aa77065e02c07289f5f484dff1",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "451cd2d57bcf459986098bc40e40b59d3838ef77",
         "html_url": "https://github.com/freegamestore-online/racing/commit/451cd2d57bcf459986098bc40e40b59d3838ef77",
@@ -622,35 +642,35 @@
             "date": "2026-05-19T07:11:58Z"
           }
         }
-      },
-      {
-        "sha": "6797a4b2f060132cec3f82716a9c16ef448b6b7f",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/6797a4b2f060132cec3f82716a9c16ef448b6b7f",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "575aeaf6f32b663fd7a908fc371789af89aa2576",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/575aeaf6f32b663fd7a908fc371789af89aa2576",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:28Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-19T07:11:57Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "79aa31b8fe122ba2a2b045505fced2fbd24d0f65",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/79aa31b8fe122ba2a2b045505fced2fbd24d0f65",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "78092c9c20c6130becaf0abe53dc22b9415b28c5",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/78092c9c20c6130becaf0abe53dc22b9415b28c5",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "2e5f69d2b82a4c37486b8c0594a405ce083cb5b9",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/2e5f69d2b82a4c37486b8c0594a405ce083cb5b9",
@@ -660,35 +680,35 @@
             "date": "2026-05-19T07:11:55Z"
           }
         }
-      },
-      {
-        "sha": "6d5667c0352795c0cbaba0e7e0a880d91a3bd7d6",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/6d5667c0352795c0cbaba0e7e0a880d91a3bd7d6",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "65391c3728ad61d7f4a91bc4183730163238d959",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/65391c3728ad61d7f4a91bc4183730163238d959",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:08:54Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-19T07:24:17Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "e263a4a9b9e8effd74d7938e19cea6ad44d590fc",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/e263a4a9b9e8effd74d7938e19cea6ad44d590fc",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "65976388c7aba6d23c9a2697306d0bb471b0f206",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/65976388c7aba6d23c9a2697306d0bb471b0f206",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "3b8a24c3d416c4b284fdfdcc913c6dbb71c15c94",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/3b8a24c3d416c4b284fdfdcc913c6dbb71c15c94",
@@ -698,35 +718,35 @@
             "date": "2026-05-19T07:24:15Z"
           }
         }
-      },
-      {
-        "sha": "8cf365af496d6bec7593e65011b1cd7bbf5135bd",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/8cf365af496d6bec7593e65011b1cd7bbf5135bd",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:38Z"
-          }
-        }
-      },
-      {
-        "sha": "d78e82ec7da1e85952041fe2612f4659ac699533",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/d78e82ec7da1e85952041fe2612f4659ac699533",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-19T07:10:54Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "8b0160f63c611d3fc5c90594916978115c187a93",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/8b0160f63c611d3fc5c90594916978115c187a93",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "ad8de46c1ab0ff1fea40300294f378ebfabab54f",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/ad8de46c1ab0ff1fea40300294f378ebfabab54f",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:12Z"
+          }
+        }
+      },
       {
         "sha": "b1a9daa9fd9ecb5551e1ad69f71d76b48ea1f60f",
         "html_url": "https://github.com/freegamestore-online/2048/commit/b1a9daa9fd9ecb5551e1ad69f71d76b48ea1f60f",
@@ -736,35 +756,35 @@
             "date": "2026-05-19T07:10:52Z"
           }
         }
-      },
-      {
-        "sha": "b8bc39efc01775857df36b551bfec518103ff728",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/b8bc39efc01775857df36b551bfec518103ff728",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:21Z"
-          }
-        }
-      },
-      {
-        "sha": "51f5ac3164de230f8cd3ec0adc9710d745bdc2ea",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/51f5ac3164de230f8cd3ec0adc9710d745bdc2ea",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:07:38Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-19T07:11:04Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "0bdcf25ea7acdc6a82bfd75f15cc526646193b1c",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/0bdcf25ea7acdc6a82bfd75f15cc526646193b1c",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "388be83250b42bd30c99f09dc752418488588d4d",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/388be83250b42bd30c99f09dc752418488588d4d",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:25Z"
+          }
+        }
+      },
       {
         "sha": "51a89f01be18a2cfc3cdb98453964ea33766b18e",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/51a89f01be18a2cfc3cdb98453964ea33766b18e",
@@ -774,35 +794,35 @@
             "date": "2026-05-19T07:11:01Z"
           }
         }
-      },
-      {
-        "sha": "0125dd1f02fdd45c3a712974ec4e0b6ccf373a35",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/0125dd1f02fdd45c3a712974ec4e0b6ccf373a35",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:21Z"
-          }
-        }
-      },
-      {
-        "sha": "45e65b9d972d4b4649a46c3427793434954cfa0f",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/45e65b9d972d4b4649a46c3427793434954cfa0f",
-        "commit": {
-          "message": "fix(types): add @types/node so compliance test type-checks\n\nThe compliance test imports node:fs / node:path / __dirname. Without\n@types/node in web's devDependencies, tsc fails (TS2307, TS2304) and\nblocks the deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:14:33Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-19T07:12:04Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "e41f5dc84000a09bfb1e4693e7cc487e0faa7888",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/e41f5dc84000a09bfb1e4693e7cc487e0faa7888",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "318abffebc0db8a0474d8e3a62ac058a7592748f",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/318abffebc0db8a0474d8e3a62ac058a7592748f",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "5293cf6d8c91c4919778fa7f7a293d900dda4ae6",
         "html_url": "https://github.com/freegamestore-online/simon/commit/5293cf6d8c91c4919778fa7f7a293d900dda4ae6",
@@ -812,35 +832,35 @@
             "date": "2026-05-19T07:12:01Z"
           }
         }
-      },
-      {
-        "sha": "114a1e130e1f142dca38200c7e2ec642b6a371e3",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/114a1e130e1f142dca38200c7e2ec642b6a371e3",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "3c65728548faf06e0d85a94b5b5f7f1236407299",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/3c65728548faf06e0d85a94b5b5f7f1236407299",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:31Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-19T07:12:10Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "51d29182e47107881110b89cfebf17196bc99be2",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/51d29182e47107881110b89cfebf17196bc99be2",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "2b888787b7535f61a924dc7d09f558ec39c88a1e",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/2b888787b7535f61a924dc7d09f558ec39c88a1e",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "866091b68986e7b5725063a23544222172bc7e01",
         "html_url": "https://github.com/freegamestore-online/snake/commit/866091b68986e7b5725063a23544222172bc7e01",
@@ -850,35 +870,35 @@
             "date": "2026-05-19T07:12:07Z"
           }
         }
-      },
-      {
-        "sha": "c6ac7da97ecd5b6d6eacf5e677d816f4ec12b5f6",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/c6ac7da97ecd5b6d6eacf5e677d816f4ec12b5f6",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "ff8c55b023dc34b74dfc965d1014f73804f42459",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/ff8c55b023dc34b74dfc965d1014f73804f42459",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:38Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-19T07:12:25Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "903ca4792383949bd5a07c09fd491bf83bb758a4",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/903ca4792383949bd5a07c09fd491bf83bb758a4",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "305062c3b1d76872120579c4a13b24cbea3301b9",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/305062c3b1d76872120579c4a13b24cbea3301b9",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "7e778bb26fea5a87df2f36f9a5f84d4bb481e2cb",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/7e778bb26fea5a87df2f36f9a5f84d4bb481e2cb",
@@ -888,35 +908,35 @@
             "date": "2026-05-19T07:12:23Z"
           }
         }
-      },
-      {
-        "sha": "21900bfe870024365b4fc453ec1934cd58a47b36",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/21900bfe870024365b4fc453ec1934cd58a47b36",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "2632b0d7ec4c48313e5a6d95010a6075b65329b7",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/2632b0d7ec4c48313e5a6d95010a6075b65329b7",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:47Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-19T07:29:51Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "60cb93b7904863855a46c83e135be42fdde84fe3",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/60cb93b7904863855a46c83e135be42fdde84fe3",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "ae48e518ebd0547d15fcc50e95bc1c0e78c7f5cc",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/ae48e518ebd0547d15fcc50e95bc1c0e78c7f5cc",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:27Z"
+          }
+        }
+      },
       {
         "sha": "74c7990613fd6c9443e83a9de4a731227fa87071",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/74c7990613fd6c9443e83a9de4a731227fa87071",
@@ -926,35 +946,35 @@
             "date": "2026-05-19T07:29:48Z"
           }
         }
-      },
-      {
-        "sha": "ffe1c1e0b495324750a0dffe1f97dcab65261c2b",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/ffe1c1e0b495324750a0dffe1f97dcab65261c2b",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:30Z"
-          }
-        }
-      },
-      {
-        "sha": "7ca12952253f0d02428e657c5056cf7e582e69c8",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/7ca12952253f0d02428e657c5056cf7e582e69c8",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:13Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-19T07:12:22Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "8a11d8a9a2abae7916a343ff22eeffb6ba708290",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/8a11d8a9a2abae7916a343ff22eeffb6ba708290",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "b6b2ea7419ada3a648db1300b8e0d017f10a1580",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/b6b2ea7419ada3a648db1300b8e0d017f10a1580",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:28Z"
+          }
+        }
+      },
       {
         "sha": "4d78477f6f9527ceb976c19fbe3590908ed4a33b",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/4d78477f6f9527ceb976c19fbe3590908ed4a33b",
@@ -964,35 +984,35 @@
             "date": "2026-05-19T07:12:20Z"
           }
         }
-      },
-      {
-        "sha": "254bdac4f556ec6b24533a41c294491fa0f476ba",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/254bdac4f556ec6b24533a41c294491fa0f476ba",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "73a8966a4e9a221e533fca0380bf0a1f0b4fca07",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/73a8966a4e9a221e533fca0380bf0a1f0b4fca07",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:44Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-19T07:11:48Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "c9ffb049aa777f160b96c60b131f1e9e8c2ac6d6",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/c9ffb049aa777f160b96c60b131f1e9e8c2ac6d6",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "af3989954fbd2fd857b34d6919b0f0f92e6ad930",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/af3989954fbd2fd857b34d6919b0f0f92e6ad930",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:27Z"
+          }
+        }
+      },
       {
         "sha": "e7d16688878e373611a2dea7247e5a94a8f5eeb5",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/e7d16688878e373611a2dea7247e5a94a8f5eeb5",
@@ -1002,35 +1022,35 @@
             "date": "2026-05-19T07:11:45Z"
           }
         }
-      },
-      {
-        "sha": "81948f40a31c4346b29b87165ab65f34269ac125",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/81948f40a31c4346b29b87165ab65f34269ac125",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "d53fe254fe80d84f6ef55083da222624fe3393bb",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/d53fe254fe80d84f6ef55083da222624fe3393bb",
-        "commit": {
-          "message": "fix(types): add @types/node so compliance test type-checks\n\nThe compliance test imports node:fs / node:path / __dirname. Without\n@types/node in web's devDependencies, tsc fails (TS2307, TS2304) and\nblocks the deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:14:47Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-19T07:11:54Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "39c02a5b1286ac63ef1dd11d87f699d8f8836b6a",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/39c02a5b1286ac63ef1dd11d87f699d8f8836b6a",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "672942f770e692e9e70d68eba1aceceab71a926e",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/672942f770e692e9e70d68eba1aceceab71a926e",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "78a7e6f0e80fa9ea04411f2604edf8ed2d2b6ae1",
         "html_url": "https://github.com/freegamestore-online/pong/commit/78a7e6f0e80fa9ea04411f2604edf8ed2d2b6ae1",
@@ -1040,35 +1060,35 @@
             "date": "2026-05-19T07:11:52Z"
           }
         }
-      },
-      {
-        "sha": "60233c5f9aa683af34b5846752123467dbec9144",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/60233c5f9aa683af34b5846752123467dbec9144",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "c64b202630b07c9dee032b2ac843adf89c06aa02",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/c64b202630b07c9dee032b2ac843adf89c06aa02",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-19T07:12:19Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "1f6b674981bce1bec290526df0c7270a68e7555a",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/1f6b674981bce1bec290526df0c7270a68e7555a",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:35Z"
+          }
+        }
+      },
+      {
+        "sha": "b921d888364f97aabffb1babad3d1c48423d9bea",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/b921d888364f97aabffb1babad3d1c48423d9bea",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "5f475f94898001dff29a0b82ceeab514ad7e8526",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/5f475f94898001dff29a0b82ceeab514ad7e8526",
@@ -1078,35 +1098,35 @@
             "date": "2026-05-19T07:12:17Z"
           }
         }
-      },
-      {
-        "sha": "b7e7a5e16ff8be6e78b5794440a58675e7af6995",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/b7e7a5e16ff8be6e78b5794440a58675e7af6995",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "59741e816365baa73112bc50c748886023d365a1",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/59741e816365baa73112bc50c748886023d365a1",
-        "commit": {
-          "message": "fix(sudoku): wire AudioBridge into JSX, fix submitScore signature\n\nEarlier audio scaffolding declared AudioBridge and audioRef but never\nmounted the bridge or called the sounds API, so tsc flagged unused\ndeclarations. Also dropped a leftover isUnitComplete helper that wasn't\nreferenced.\n\nsubmitScore(timer, name) had the wrong signature — the SDK's\nuseLeaderboard().submitScore only takes (score). Fixed.\n\nNow playing: playTick on correct cell, playError on wrong, playLevelUp\non solve.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:19:55Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-19T07:12:31Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "3a064f88d1cb91ea851dc8aa13b59b13eca755e9",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/3a064f88d1cb91ea851dc8aa13b59b13eca755e9",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "4d93f40ed4580718845cdf479748cb8a559ba8aa",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/4d93f40ed4580718845cdf479748cb8a559ba8aa",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:25Z"
+          }
+        }
+      },
       {
         "sha": "db78dbcef4aa8a88c2112f6f5924cec5763e8125",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/db78dbcef4aa8a88c2112f6f5924cec5763e8125",
@@ -1116,35 +1136,35 @@
             "date": "2026-05-19T07:12:29Z"
           }
         }
-      },
-      {
-        "sha": "3ed53b9d4be7f9b4ba59c10df5ec1d8720213438",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/3ed53b9d4be7f9b4ba59c10df5ec1d8720213438",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "fa0cbc72a9bf3f403291e7a39b66d3c1647ae483",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/fa0cbc72a9bf3f403291e7a39b66d3c1647ae483",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:50Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-19T07:12:13Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "b546dda80a71344ca4401a5a23876404bfe9a31a",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/b546dda80a71344ca4401a5a23876404bfe9a31a",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "3c7ea9f71cf0eb0277a36a4538d0df6957bebe5b",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/3c7ea9f71cf0eb0277a36a4538d0df6957bebe5b",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "c37286ac771ad347846908b3683291e0c5168192",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/c37286ac771ad347846908b3683291e0c5168192",
@@ -1154,35 +1174,35 @@
             "date": "2026-05-19T07:12:10Z"
           }
         }
-      },
-      {
-        "sha": "046e4b03cf98058aa2e8ae64e60c74b1b80b5e31",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/046e4b03cf98058aa2e8ae64e60c74b1b80b5e31",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "6e752eb62761f34336821b9d2a512933c6cdcd07",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/6e752eb62761f34336821b9d2a512933c6cdcd07",
-        "commit": {
-          "message": "fix(types): add @types/node so compliance test type-checks\n\nThe compliance test imports node:fs / node:path / __dirname. Without\n@types/node in web's devDependencies, tsc fails (TS2307, TS2304) and\nblocks the deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:14:52Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-19T07:12:28Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "cc472082257734060816282c043bb97d4ac5a7eb",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/cc472082257734060816282c043bb97d4ac5a7eb",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "e0a0a6420fb0727469ab204e87999534594cf366",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/e0a0a6420fb0727469ab204e87999534594cf366",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "1b216a8c2b9b6367af74b4c91fc1ba27586bd302",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/1b216a8c2b9b6367af74b4c91fc1ba27586bd302",
@@ -1192,35 +1212,35 @@
             "date": "2026-05-19T07:12:26Z"
           }
         }
-      },
-      {
-        "sha": "fe62c874088606553d5d84b592e0cbced8af783e",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/fe62c874088606553d5d84b592e0cbced8af783e",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "ca5548f7e2f7c74bedbda896e89ecb803581e4ac",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/ca5548f7e2f7c74bedbda896e89ecb803581e4ac",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:09:39Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-19T07:12:06Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "a42dba16b41f220259e8a65d26b8499391cc8c64",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/a42dba16b41f220259e8a65d26b8499391cc8c64",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "bdf874cfbebdc7957a919726c255682375806a51",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/bdf874cfbebdc7957a919726c255682375806a51",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "eb21210eee79ad4db95f446051e5ac6b33ea48a7",
         "html_url": "https://github.com/freegamestore-online/slither/commit/eb21210eee79ad4db95f446051e5ac6b33ea48a7",
@@ -1230,35 +1250,35 @@
             "date": "2026-05-19T07:12:04Z"
           }
         }
-      },
-      {
-        "sha": "812ac3439ed33af63e8305e05bacf21d0e790e76",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/812ac3439ed33af63e8305e05bacf21d0e790e76",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:22Z"
-          }
-        }
-      },
-      {
-        "sha": "ed55e324806c513c38177f68e1810f6567a19de4",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/ed55e324806c513c38177f68e1810f6567a19de4",
-        "commit": {
-          "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:11:34Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-19T07:11:13Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "dd5a398cb8bb7b65d7513f4e794037804fb4458e",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/dd5a398cb8bb7b65d7513f4e794037804fb4458e",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "6062ffd24f0f21b4ad54dce6d37f96a2da16c831",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/6062ffd24f0f21b4ad54dce6d37f96a2da16c831",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:25Z"
+          }
+        }
+      },
       {
         "sha": "b31485ef35d48b668929ad2d9723c32f39173e97",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/b31485ef35d48b668929ad2d9723c32f39173e97",
@@ -1268,35 +1288,35 @@
             "date": "2026-05-19T07:11:10Z"
           }
         }
-      },
-      {
-        "sha": "84b4a2c1cda5db8d466d61736e398fd685421210",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/84b4a2c1cda5db8d466d61736e398fd685421210",
-        "commit": {
-          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:01:21Z"
-          }
-        }
-      },
-      {
-        "sha": "fc9cbc13688c0c4121d8802796a3b71010462e77",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/fc9cbc13688c0c4121d8802796a3b71010462e77",
-        "commit": {
-          "message": "fix(types): add @types/node so compliance test type-checks\n\nThe compliance test imports node:fs / node:path / __dirname. Without\n@types/node in web's devDependencies, tsc fails (TS2307, TS2304) and\nblocks the deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:14:37Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/reversi": {
     "meta": {
       "created_at": "2026-05-18T23:16:14Z",
-      "pushed_at": "2026-05-19T07:24:27Z"
+      "pushed_at": "2026-05-19T22:01:37Z"
     },
     "commits": [
+      {
+        "sha": "403ef2124bec9f15863b5224810abe7a86f4df9b",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/403ef2124bec9f15863b5224810abe7a86f4df9b",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:33Z"
+          }
+        }
+      },
+      {
+        "sha": "7ad819fbd202e5cc3771fac49118e7ac02d271fd",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/7ad819fbd202e5cc3771fac49118e7ac02d271fd",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:12Z"
+          }
+        }
+      },
       {
         "sha": "c2cce54a902d0fff2b163b852d37cf887f1fcd12",
         "html_url": "https://github.com/freegamestore-online/reversi/commit/c2cce54a902d0fff2b163b852d37cf887f1fcd12",
@@ -1306,35 +1326,35 @@
             "date": "2026-05-19T07:24:24Z"
           }
         }
-      },
-      {
-        "sha": "1b5956ba6af9c53f1c62795ea30e22fadd299313",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/1b5956ba6af9c53f1c62795ea30e22fadd299313",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:01Z"
-          }
-        }
-      },
-      {
-        "sha": "077028ecfe850547f35133806f0515abfc649584",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/077028ecfe850547f35133806f0515abfc649584",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tictactoe": {
     "meta": {
       "created_at": "2026-05-18T22:50:34Z",
-      "pushed_at": "2026-05-19T07:24:38Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "23e5018c10690a2b552515e321fa4cb1bbf1843f",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/23e5018c10690a2b552515e321fa4cb1bbf1843f",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "0fdad576217559091ed286197b706492f12256ef",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/0fdad576217559091ed286197b706492f12256ef",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:22Z"
+          }
+        }
+      },
       {
         "sha": "12452e583075eb8a3da5f66900e914ea9e321e53",
         "html_url": "https://github.com/freegamestore-online/tictactoe/commit/12452e583075eb8a3da5f66900e914ea9e321e53",
@@ -1344,35 +1364,35 @@
             "date": "2026-05-19T07:24:36Z"
           }
         }
-      },
-      {
-        "sha": "b7d2a4757edb468a6150708019b9e522e6297d7d",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/b7d2a4757edb468a6150708019b9e522e6297d7d",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:23Z"
-          }
-        }
-      },
-      {
-        "sha": "3846689f8f23e3fc69e4d5a75cf514d93f481b78",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/3846689f8f23e3fc69e4d5a75cf514d93f481b78",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/blackjack": {
     "meta": {
       "created_at": "2026-05-18T23:17:31Z",
-      "pushed_at": "2026-05-19T07:24:01Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "21bebea4744fb41119343840abfdeec4ed4e098f",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/21bebea4744fb41119343840abfdeec4ed4e098f",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "b3de19d0a1a764521c9e97680c29f00432de0946",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/b3de19d0a1a764521c9e97680c29f00432de0946",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "db7584945cfcffa062e4c2eeb6663dbf9a0a31f0",
         "html_url": "https://github.com/freegamestore-online/blackjack/commit/db7584945cfcffa062e4c2eeb6663dbf9a0a31f0",
@@ -1382,35 +1402,35 @@
             "date": "2026-05-19T07:23:59Z"
           }
         }
-      },
-      {
-        "sha": "9a130278a4ba200e16f9e36b27ff56b75db668e1",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/9a130278a4ba200e16f9e36b27ff56b75db668e1",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:01Z"
-          }
-        }
-      },
-      {
-        "sha": "f9223fc570ec46d3fd05cd2cbaac773313ec5d13",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/f9223fc570ec46d3fd05cd2cbaac773313ec5d13",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bubbleshooter": {
     "meta": {
       "created_at": "2026-05-18T23:17:44Z",
-      "pushed_at": "2026-05-19T07:24:05Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "15ba8fa43513f23e3b0c8a721d0d569b5fc47d40",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/15ba8fa43513f23e3b0c8a721d0d569b5fc47d40",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "6ca730b78369302b789a145bca4b3a678939ce7b",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/6ca730b78369302b789a145bca4b3a678939ce7b",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:27Z"
+          }
+        }
+      },
       {
         "sha": "f036cb83dad3a3beb7e362136d562cb93cf9fe1a",
         "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/f036cb83dad3a3beb7e362136d562cb93cf9fe1a",
@@ -1420,35 +1440,35 @@
             "date": "2026-05-19T07:24:02Z"
           }
         }
-      },
-      {
-        "sha": "f3dea8e5e6b59faccb63b35d5e0ddd3117733b60",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/f3dea8e5e6b59faccb63b35d5e0ddd3117733b60",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:01Z"
-          }
-        }
-      },
-      {
-        "sha": "853f92d242e35fc079e481b0efe9812efe835a54",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/853f92d242e35fc079e481b0efe9812efe835a54",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceinvaders": {
     "meta": {
       "created_at": "2026-05-18T23:17:56Z",
-      "pushed_at": "2026-05-19T07:24:30Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "d7cb2b4a1e034ded9484a5370053df1d06482e2c",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/d7cb2b4a1e034ded9484a5370053df1d06482e2c",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "9dc496fcbe2bc0967a46d9c3ce370cac473ba93c",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/9dc496fcbe2bc0967a46d9c3ce370cac473ba93c",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:25Z"
+          }
+        }
+      },
       {
         "sha": "60191511192f76c27b1b4571b93edeae4a08c413",
         "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/60191511192f76c27b1b4571b93edeae4a08c413",
@@ -1458,35 +1478,35 @@
             "date": "2026-05-19T07:24:27Z"
           }
         }
-      },
-      {
-        "sha": "7ea72c8db6ff424232960713ed052738a7d9a741",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/7ea72c8db6ff424232960713ed052738a7d9a741",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:13Z"
-          }
-        }
-      },
-      {
-        "sha": "dd108ddb640216a349d9121624781b8978e57875",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/dd108ddb640216a349d9121624781b8978e57875",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/war": {
     "meta": {
       "created_at": "2026-05-19T00:05:08Z",
-      "pushed_at": "2026-05-19T07:24:41Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "f536ef4f9ce1efa2f1f0c8acb14948f6966174ca",
+        "html_url": "https://github.com/freegamestore-online/war/commit/f536ef4f9ce1efa2f1f0c8acb14948f6966174ca",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:35Z"
+          }
+        }
+      },
+      {
+        "sha": "cf51812dee5ee77cb2e31576fd17c500f8124af2",
+        "html_url": "https://github.com/freegamestore-online/war/commit/cf51812dee5ee77cb2e31576fd17c500f8124af2",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:25Z"
+          }
+        }
+      },
       {
         "sha": "8dd844a1bbcfb6014ef22a2a959d4896cf0da4f0",
         "html_url": "https://github.com/freegamestore-online/war/commit/8dd844a1bbcfb6014ef22a2a959d4896cf0da4f0",
@@ -1496,35 +1516,35 @@
             "date": "2026-05-19T07:24:39Z"
           }
         }
-      },
-      {
-        "sha": "7947b4fa0094eb7c8357ffa1fb9cfa68c82d6429",
-        "html_url": "https://github.com/freegamestore-online/war/commit/7947b4fa0094eb7c8357ffa1fb9cfa68c82d6429",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:23Z"
-          }
-        }
-      },
-      {
-        "sha": "c2dc4d54acc8d1f2ac183a07dd7380159375d2f1",
-        "html_url": "https://github.com/freegamestore-online/war/commit/c2dc4d54acc8d1f2ac183a07dd7380159375d2f1",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tanks": {
     "meta": {
       "created_at": "2026-05-19T00:51:54Z",
-      "pushed_at": "2026-05-19T07:24:35Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "22beee6e719c1c5974d76e39dc69fefc0aa05fcb",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/22beee6e719c1c5974d76e39dc69fefc0aa05fcb",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "1184f995fbc2531df86068f5d0503a260447919c",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/1184f995fbc2531df86068f5d0503a260447919c",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:27Z"
+          }
+        }
+      },
       {
         "sha": "fbf3e4bed000f1575511193421dba5ff523138eb",
         "html_url": "https://github.com/freegamestore-online/tanks/commit/fbf3e4bed000f1575511193421dba5ff523138eb",
@@ -1534,35 +1554,35 @@
             "date": "2026-05-19T07:24:33Z"
           }
         }
-      },
-      {
-        "sha": "8cab24007031f65b5d34c5daee5415d2253606b8",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/8cab24007031f65b5d34c5daee5415d2253606b8",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:20Z"
-          }
-        }
-      },
-      {
-        "sha": "511ed0e91f858e9e29ee45061f68b188f7c610a8",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/511ed0e91f858e9e29ee45061f68b188f7c610a8",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs �� so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/riichi": {
     "meta": {
       "created_at": "2026-05-19T02:31:10Z",
-      "pushed_at": "2026-05-19T07:13:25Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "19900e7c1bdd06d963deb8220d003a0656522f4a",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/19900e7c1bdd06d963deb8220d003a0656522f4a",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:36Z"
+          }
+        }
+      },
+      {
+        "sha": "de8abec13032bc43898c9eecd75f913637c3e27b",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/de8abec13032bc43898c9eecd75f913637c3e27b",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:12Z"
+          }
+        }
+      },
       {
         "sha": "5c38a5f92b774a099648675cf01aa6182a6a6c3b",
         "html_url": "https://github.com/freegamestore-online/riichi/commit/5c38a5f92b774a099648675cf01aa6182a6a6c3b",
@@ -1572,35 +1592,35 @@
             "date": "2026-05-19T07:13:22Z"
           }
         }
-      },
-      {
-        "sha": "ace34f626141b981928a40820d13bea54398d733",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/ace34f626141b981928a40820d13bea54398d733",
-        "commit": {
-          "message": "Open calls: pon + chi (open melds, yaku adjusted, bot AI)\n\nRiichi without calls was technically Mahjong-shaped solitaire. Adding pon\nand chi makes hands branchy and competitive. Skipped kan — replacement\ndraws, dora flips, and shouminkan/ankan distinctions add a lot of corners\nfor marginal gameplay value.\n\nDATA MODEL\n- New OpenMeld type ({type, baseTile, called, from}). PlayerState gains\n  a `melds: OpenMeld[]` field; concealed `hand` shrinks by 3 per call.\n- clone / newGame / nextHand carry melds.\n\nEVALUATOR / YAKU\n- evaluateHand(concealed, openMeldCount): accepts open-meld count, validates\n  concealed-tile budget = 14 - 3·count, only tries chiitoitsu / kokushi when\n  fully concealed.\n- isTenpai / waits gain the same openMeldCount parameter.\n- detectYaku(concealed, winTile, openMelds, ctx): rebuilds the all-tile view\n  from concealed + meld tiles for tile-content yaku (tanyao / honitsu /\n  chinitsu); shape-driven yaku merge open + concealed melds for triplet/run\n  counts (so e.g. yakuhai fires on an open pon).\n- Closed-only yaku (riichi / ippatsu / menzen tsumo / pinfu / iipeikou)\n  correctly skipped when melds.length > 0. Honitsu / chinitsu use the open\n  variant han values.\n- canDeclareRiichi blocks when any open meld exists.\n\nCALLS\n- canPon(state, seat): 2 in hand, not your own discard, not riichi-locked.\n- chiOptions(state, seat): only next-seat, numbered tile, returns the\n  base-tile of each possible run (handles 3 cases: tile-2,-1; tile-1,+1;\n  tile,+1,+2).\n- callPon / callChi: build the meld, remove the consumed tiles from hand,\n  pop the called tile off the discarder's pile, jump active to caller in\n  awaiting-discard, kill ippatsu globally.\n- discard() now resolves bot calls in priority order: ron first, then pon.\n  maybeBotPon only fires on yakuhai (dragons or matching seat/round wind)\n  so bots don't pon themselves into yaku-less hands.\n\nUI\n- Open melds render to the right of the concealed hand (md size for human)\n  and in the opponent rows (sm size).\n- Call window: Ron / Pon / Chi / Pass buttons surface whenever the human\n  has any call after a discard; the advance-after-draw timer holds the\n  window open until the human picks something.\n- riichiMode auto-resets when canRiichi becomes false (already existed,\n  unchanged).\n\nTESTS\n- 5 new pon / chi tests: canPon detection, callPon meld + turn shift,\n  chiOptions next-seat-only and base-tile enumeration, callChi tile\n  removal + claim, riichi-locked players can't call. Total 33/33.\n\nBundle 71 KB gzip / 243 KB raw, all hard checks pass.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:27:50Z"
-          }
-        }
-      },
-      {
-        "sha": "f2a81641ebae479cef03f6be182ba3d702cbdd91",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/f2a81641ebae479cef03f6be182ba3d702cbdd91",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pinball": {
     "meta": {
       "created_at": "2026-05-19T02:33:08Z",
-      "pushed_at": "2026-05-19T07:24:40Z"
+      "pushed_at": "2026-05-19T22:01:39Z"
     },
     "commits": [
+      {
+        "sha": "c84b8bcd440b2443a7ee081316cf873bd2ebe05e",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/c84b8bcd440b2443a7ee081316cf873bd2ebe05e",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T22:01:35Z"
+          }
+        }
+      },
+      {
+        "sha": "9f82c93a0dad0a8ecf513306adc72e4fc9d486e1",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/9f82c93a0dad0a8ecf513306adc72e4fc9d486e1",
+        "commit": {
+          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T21:46:26Z"
+          }
+        }
+      },
       {
         "sha": "dfde492f88a9e8915c53e14cf0748348a1d0d8ee",
         "html_url": "https://github.com/freegamestore-online/pinball/commit/dfde492f88a9e8915c53e14cf0748348a1d0d8ee",
@@ -1608,26 +1628,6 @@
           "message": "Restore \"segment\" naming in geometry comments\n\nPinball's collision comments used \"line line\" / \"slingshot line\" phrasing —\nresidue from an earlier sed rename done to dodge the compliance no-tracking\nfalse positive. Compliance now strips comments + per-tracker patterns no\nlonger flag bare \"segment\", so restore natural geometry wording.\n\nBehavior unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T07:24:32Z"
-          }
-        }
-      },
-      {
-        "sha": "f39a13a9d8c51d595206a7561b0c878e8e2d3bbf",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/f39a13a9d8c51d595206a7561b0c878e8e2d3bbf",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:18Z"
-          }
-        }
-      },
-      {
-        "sha": "5f9332a0a9bfa6e9f3f67db18d56d38e5fc021eb",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/5f9332a0a9bfa6e9f3f67db18d56d38e5fc021eb",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:48Z"
           }
         }
       }
