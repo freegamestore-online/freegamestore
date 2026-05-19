@@ -914,9 +914,19 @@
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-19T07:24:33Z"
+      "pushed_at": "2026-05-19T07:29:51Z"
     },
     "commits": [
+      {
+        "sha": "74c7990613fd6c9443e83a9de4a731227fa87071",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/74c7990613fd6c9443e83a9de4a731227fa87071",
+        "commit": {
+          "message": "chore: regenerate pnpm-lock.yaml after SDK bump to 0.13\n\npackage.json was bumped to @freegamestore/games ^0.13.0 but the\nlockfile still had ^0.12.0, breaking pnpm install --frozen-lockfile\nin CI.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T07:29:48Z"
+          }
+        }
+      },
       {
         "sha": "ffe1c1e0b495324750a0dffe1f97dcab65261c2b",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/ffe1c1e0b495324750a0dffe1f97dcab65261c2b",
@@ -934,16 +944,6 @@
           "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
           "author": {
             "date": "2026-05-19T07:12:13Z"
-          }
-        }
-      },
-      {
-        "sha": "b4a4b1770f01cab3944a2aec5533f2e557b42643",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/b4a4b1770f01cab3944a2aec5533f2e557b42643",
-        "commit": {
-          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:18:46Z"
           }
         }
       }
