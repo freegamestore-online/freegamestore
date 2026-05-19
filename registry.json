@@ -830,6 +830,19 @@
       "cfProject": "freespaceinvadersapp",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "war",
+      "name": "war",
+      "category": "Cards",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Classic 2-player War: high card wins, ties trigger war. Beat the deck.",
+      "appUrl": "https://war.freegamestore.online",
+      "repo": "freegamestore-online/war",
+      "cfProject": "freewarapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
