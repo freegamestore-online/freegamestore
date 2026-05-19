@@ -2,9 +2,19 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-19T04:14:05Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "6bbbdb61bfaf399c91354a7171fa336c336cfc39",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/6bbbdb61bfaf399c91354a7171fa336c336cfc39",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "7646e108fec7419b97ba5b09761fb510db48f1ee",
         "html_url": "https://github.com/freegamestore-online/dice/commit/7646e108fec7419b97ba5b09761fb510db48f1ee",
@@ -22,16 +32,6 @@
           "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:08:11Z"
-          }
-        }
-      },
-      {
-        "sha": "d03607aa3f9147d9929383e57088db746cdcd3d3",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/d03607aa3f9147d9929383e57088db746cdcd3d3",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:09Z"
           }
         }
       }
@@ -78,9 +78,19 @@
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-19T06:04:03Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "1249dda0287a84fe9ffcb33cba0d014e5fecf0ac",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/1249dda0287a84fe9ffcb33cba0d014e5fecf0ac",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "16246e37570f5c79ac6b5ae77c1160a92c1b3f88",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/16246e37570f5c79ac6b5ae77c1160a92c1b3f88",
@@ -100,25 +110,25 @@
             "date": "2026-05-19T05:02:28Z"
           }
         }
-      },
-      {
-        "sha": "3b3d2048fed2e67ead3258da90fee23378e6b345",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/3b3d2048fed2e67ead3258da90fee23378e6b345",
-        "commit": {
-          "message": "Billiards: switch to archery-style aim (hold to charge, release to fire)\n\nReplaces the drag-from-cue-ball gesture with a separate aim/power model:\n\n- Aim: pointer position on the canvas sets the aim line; no firing on\n  pointer-up. Move freely to fine-tune the angle.\n- Power: dedicated SHOOT button below the canvas. Hold down → power\n  charges over ~715ms to full. Release → fires (or cancels if released\n  below 8% — accidental taps don't lose your turn).\n- Visual: a cue stick now renders behind the cue ball and pulls back\n  proportionally to the charging power, with blue chalk tip + wood\n  shaft + dark butt. The power ring around the cue ball turns red\n  near max for a wind-up warning.\n- Keyboard: ← → still adjusts angle; Space (hold + release) replaces\n  the old \"tap Space to fire instantly\" with charge-and-release.\n- Ball-in-hand: tap-anywhere placement still works; shoot button is\n  disabled with explicit \"TAP TABLE TO PLACE CUE\" label.",
-          "author": {
-            "date": "2026-05-19T04:55:07Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-19T04:14:02Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "727332dc7fe87ecaf0cfd540579b3c5215beca4d",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/727332dc7fe87ecaf0cfd540579b3c5215beca4d",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "8817935d834949edd4662a29731164b6d510ef22",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/8817935d834949edd4662a29731164b6d510ef22",
@@ -136,16 +146,6 @@
           "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:08:05Z"
-          }
-        }
-      },
-      {
-        "sha": "2a6f1126a316d0e311dd5cc94b91cdc98b26c19d",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/2a6f1126a316d0e311dd5cc94b91cdc98b26c19d",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:03Z"
           }
         }
       }
@@ -230,9 +230,19 @@
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-19T04:11:25Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "402a3cffdaf2d26c057223dfeb1a3b4044f838bd",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/402a3cffdaf2d26c057223dfeb1a3b4044f838bd",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "f72367a8f0fb3f136f952b961f3413be3121856b",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/f72367a8f0fb3f136f952b961f3413be3121856b",
@@ -252,25 +262,25 @@
             "date": "2026-05-19T04:08:48Z"
           }
         }
-      },
-      {
-        "sha": "7ad726aa1637ded099e44b8f9211ad05f08f59f0",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/7ad726aa1637ded099e44b8f9211ad05f08f59f0",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-19T04:14:08Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "1080def314a565a13fbecde1ef78f7dcc97bf3fa",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/1080def314a565a13fbecde1ef78f7dcc97bf3fa",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "b6b59c74550c98cd019940a84d48b7638bf21c96",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/b6b59c74550c98cd019940a84d48b7638bf21c96",
@@ -288,16 +298,6 @@
           "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:08:24Z"
-          }
-        }
-      },
-      {
-        "sha": "b4b8ced4a1a5254aef7741ccf25f4cd158c66973",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/b4b8ced4a1a5254aef7741ccf25f4cd158c66973",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:21Z"
           }
         }
       }
@@ -686,9 +686,19 @@
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-19T04:14:11Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "d78e82ec7da1e85952041fe2612f4659ac699533",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/d78e82ec7da1e85952041fe2612f4659ac699533",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "169e3b76265debcc776c0f81e0046d5aca3122ef",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/169e3b76265debcc776c0f81e0046d5aca3122ef",
@@ -706,16 +716,6 @@
           "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:08:36Z"
-          }
-        }
-      },
-      {
-        "sha": "85c9b9c58fa5c2f6a415949ae0e895bf1cb1fb67",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/85c9b9c58fa5c2f6a415949ae0e895bf1cb1fb67",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:33Z"
           }
         }
       }
@@ -914,9 +914,19 @@
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-19T04:11:43Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "b4a4b1770f01cab3944a2aec5533f2e557b42643",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/b4a4b1770f01cab3944a2aec5533f2e557b42643",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "f89738557efd5f782479aafdfe020ee9b1f6a876",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/f89738557efd5f782479aafdfe020ee9b1f6a876",
@@ -934,16 +944,6 @@
           "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:09:20Z"
-          }
-        }
-      },
-      {
-        "sha": "56c0b5314d9bbcab494a7066949a43d92bb0c626",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/56c0b5314d9bbcab494a7066949a43d92bb0c626",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:05:19Z"
           }
         }
       }
@@ -1294,9 +1294,19 @@
   "freegamestore-online/reversi": {
     "meta": {
       "created_at": "2026-05-18T23:16:14Z",
-      "pushed_at": "2026-05-19T04:05:00Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "077028ecfe850547f35133806f0515abfc649584",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/077028ecfe850547f35133806f0515abfc649584",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "b54efa8aa522891154b9cc398188f408a48b6763",
         "html_url": "https://github.com/freegamestore-online/reversi/commit/b54efa8aa522891154b9cc398188f408a48b6763",
@@ -1316,25 +1326,25 @@
             "date": "2026-05-19T03:48:55Z"
           }
         }
-      },
-      {
-        "sha": "7924580bdd585e7b20aeca89505848bbb11ec20b",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/7924580bdd585e7b20aeca89505848bbb11ec20b",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:48:06Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tictactoe": {
     "meta": {
       "created_at": "2026-05-18T22:50:34Z",
-      "pushed_at": "2026-05-19T04:05:33Z"
+      "pushed_at": "2026-05-19T06:18:38Z"
     },
     "commits": [
+      {
+        "sha": "3846689f8f23e3fc69e4d5a75cf514d93f481b78",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/3846689f8f23e3fc69e4d5a75cf514d93f481b78",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:36Z"
+          }
+        }
+      },
       {
         "sha": "75010fbf6d88e51d40b890899a0d297666d9a961",
         "html_url": "https://github.com/freegamestore-online/tictactoe/commit/75010fbf6d88e51d40b890899a0d297666d9a961",
@@ -1354,25 +1364,25 @@
             "date": "2026-05-19T03:49:09Z"
           }
         }
-      },
-      {
-        "sha": "543c0ba5257c120e9b2ba133f07b5f2279804018",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/543c0ba5257c120e9b2ba133f07b5f2279804018",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:48:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/blackjack": {
     "meta": {
       "created_at": "2026-05-18T23:17:31Z",
-      "pushed_at": "2026-05-19T04:07:49Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "f9223fc570ec46d3fd05cd2cbaac773313ec5d13",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/f9223fc570ec46d3fd05cd2cbaac773313ec5d13",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "dcd8ae8fb21558fa9b1f8676a6a71f6b9b90995b",
         "html_url": "https://github.com/freegamestore-online/blackjack/commit/dcd8ae8fb21558fa9b1f8676a6a71f6b9b90995b",
@@ -1392,25 +1402,25 @@
             "date": "2026-05-19T04:03:45Z"
           }
         }
-      },
-      {
-        "sha": "cf747f1a3d2b98ad1c946e8a7b53881e23bf91fe",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/cf747f1a3d2b98ad1c946e8a7b53881e23bf91fe",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:47:32Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bubbleshooter": {
     "meta": {
       "created_at": "2026-05-18T23:17:44Z",
-      "pushed_at": "2026-05-19T04:07:59Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "853f92d242e35fc079e481b0efe9812efe835a54",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/853f92d242e35fc079e481b0efe9812efe835a54",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "2ccbff31621ce221a502069687ab7cc5e446afce",
         "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/2ccbff31621ce221a502069687ab7cc5e446afce",
@@ -1430,25 +1440,25 @@
             "date": "2026-05-19T04:03:54Z"
           }
         }
-      },
-      {
-        "sha": "67ec5cac1beb516efd0812e2c76c997a0e8e29c0",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/67ec5cac1beb516efd0812e2c76c997a0e8e29c0",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:47:34Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceinvaders": {
     "meta": {
       "created_at": "2026-05-18T23:17:56Z",
-      "pushed_at": "2026-05-19T04:09:20Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "dd108ddb640216a349d9121624781b8978e57875",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/dd108ddb640216a349d9121624781b8978e57875",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "13b9402869c270498e7ffc61c51e299a279eda33",
         "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/13b9402869c270498e7ffc61c51e299a279eda33",
@@ -1468,25 +1478,25 @@
             "date": "2026-05-19T04:05:16Z"
           }
         }
-      },
-      {
-        "sha": "238f8b821e57723e24dc9ced446605adf667efdc",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/238f8b821e57723e24dc9ced446605adf667efdc",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:48:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/war": {
     "meta": {
       "created_at": "2026-05-19T00:05:08Z",
-      "pushed_at": "2026-05-19T04:09:36Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "c2dc4d54acc8d1f2ac183a07dd7380159375d2f1",
+        "html_url": "https://github.com/freegamestore-online/war/commit/c2dc4d54acc8d1f2ac183a07dd7380159375d2f1",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "0400da7124137115e8719e66df9dba36548f0220",
         "html_url": "https://github.com/freegamestore-online/war/commit/0400da7124137115e8719e66df9dba36548f0220",
@@ -1506,25 +1516,25 @@
             "date": "2026-05-19T04:05:33Z"
           }
         }
-      },
-      {
-        "sha": "fee5cc1a9039a990f5a117247e80e2d26c07d81d",
-        "html_url": "https://github.com/freegamestore-online/war/commit/fee5cc1a9039a990f5a117247e80e2d26c07d81d",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:48:28Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tanks": {
     "meta": {
       "created_at": "2026-05-19T00:51:54Z",
-      "pushed_at": "2026-05-19T04:09:29Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "511ed0e91f858e9e29ee45061f68b188f7c610a8",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/511ed0e91f858e9e29ee45061f68b188f7c610a8",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "a82fe7dbda204535b13bb771b5472ba0bad6c128",
         "html_url": "https://github.com/freegamestore-online/tanks/commit/a82fe7dbda204535b13bb771b5472ba0bad6c128",
@@ -1544,25 +1554,35 @@
             "date": "2026-05-19T04:05:25Z"
           }
         }
-      },
-      {
-        "sha": "25b6ed5050d7f7895292b89cf7943832bf42cb46",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/25b6ed5050d7f7895292b89cf7943832bf42cb46",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:48:20Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/riichi": {
     "meta": {
       "created_at": "2026-05-19T02:31:10Z",
-      "pushed_at": "2026-05-19T05:09:07Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "f2a81641ebae479cef03f6be182ba3d702cbdd91",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/f2a81641ebae479cef03f6be182ba3d702cbdd91",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
+      {
+        "sha": "46a569b4e3cbce4ab3a1f956859b4266891663e9",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/46a569b4e3cbce4ab3a1f956859b4266891663e9",
+        "commit": {
+          "message": "Multi-hand East round + bots that can win + honba/riichi sticks\n\nRiichi as one isolated hand felt like a demo; now it's a real session.\n\nENGINE\n- GameState gains handNumber (1..4 East), honba, riichiSticks, roundComplete.\n- nextHand(state): advances dealer on non-dealer win, keeps dealer + bumps\n  honba on dealer win or exhaustive draw, marks round complete past East 4.\n- declareTsumoFor(state, seat) and commitRonFor(state, ronner) replace the\n  hard-coded HUMAN_SEAT versions; declareTsumo/commitRon kept as thin wrappers.\n- maybeBotRon(state): after every discard, scan seats in priority order\n  starting at discarder+1. Stop at the human if they can ron (UI handles).\n  Bots between discarder and human auto-call and win.\n- botDiscard now tsumos when its hand wins before considering a discard.\n- declareRiichi deposits 1000pts onto the table as a riichi stick.\n- Both win paths now pay out honba (100/payer tsumo, 300 total ron) AND\n  the riichi-stick pot to the winner. Result modal reports the correct\n  totalPoints including bonuses.\n\nUI\n- HUD: round label is now \"E-1\" style with hand number, plus honba and\n  stick counters when nonzero.\n- Result modal: \"Next hand →\" or \"Finish round →\" depending on whether\n  the next hand would push past East 4. Points use thousand-separators.\n- New RoundCompleteModal: medal-ranked final scores, \"Start new round\"\n  button that resets to East-1 honba 0.\n- Reducer gains a `next-hand` action that calls into engine `nextHand`.\n\nTESTS\n- 4 new turn-flow tests cover non-dealer-win rotation, dealer-renchan\n  bumping honba, the round-complete trigger past East 4, and the nextHand\n  guard against being called mid-hand. Total 28/28.\n\nBundle 69.8 KB gzip.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:07:17Z"
+          }
+        }
+      },
       {
         "sha": "3e3ad36cb56a6883136c604307d024922ace22fd",
         "html_url": "https://github.com/freegamestore-online/riichi/commit/3e3ad36cb56a6883136c604307d024922ace22fd",
@@ -1572,35 +1592,25 @@
             "date": "2026-05-19T05:09:05Z"
           }
         }
-      },
-      {
-        "sha": "d62809dc9cea1e78b3fd03a741afb84f75cedc06",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/d62809dc9cea1e78b3fd03a741afb84f75cedc06",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:09:01Z"
-          }
-        }
-      },
-      {
-        "sha": "455fed84f6c574edbcc307ebce819b111f4ca0d3",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/455fed84f6c574edbcc307ebce819b111f4ca0d3",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:05:00Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pinball": {
     "meta": {
       "created_at": "2026-05-19T02:33:08Z",
-      "pushed_at": "2026-05-19T04:08:47Z"
+      "pushed_at": "2026-05-19T06:18:49Z"
     },
     "commits": [
+      {
+        "sha": "8e138a76398f00aa6231baca31e0a5fa5edf29f6",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/8e138a76398f00aa6231baca31e0a5fa5edf29f6",
+        "commit": {
+          "message": "Gate Cloudflare Pages build on platform compliance via prebuild\n\nAdds a `prebuild` script to web/package.json that runs\n`npx @freegamestore/cli@latest check` before `vite build`. pnpm\nfires prebuild automatically whenever build runs — so the\nCloudflare Pages build command (`pnpm build`) now gates on\nplatform compliance. A failing check aborts the build and CF\nPages skips the deploy.\n\nThis repo has no deploy.yml (CF Pages uses its built-in git\nintegration), so this is the only way to enforce the mandate at\ndeploy time.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:18:46Z"
+          }
+        }
+      },
       {
         "sha": "d2747242a5f92d28389e831275f7cf8b0a3b0d7f",
         "html_url": "https://github.com/freegamestore-online/pinball/commit/d2747242a5f92d28389e831275f7cf8b0a3b0d7f",
@@ -1618,16 +1628,6 @@
           "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:04:43Z"
-          }
-        }
-      },
-      {
-        "sha": "e1fb57aaf5815717b723e92e311bfb000e2e8fb8",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/e1fb57aaf5815717b723e92e311bfb000e2e8fb8",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:47:55Z"
           }
         }
       }
