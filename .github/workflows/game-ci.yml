@@ -1,0 +1,84 @@
+name: Game CI / Deploy (reusable)
+
+# Reusable workflow that every sibling game in freegamestore-online/* calls
+# from its own .github/workflows/deploy.yml.
+#
+# Why this exists:
+#   - 43 games shouldn't each carry ~70 lines of identical yaml that drifts
+#     out of sync.
+#   - Pinning the compliance CLI / wrangler / node versions in ONE place
+#     means a single PR here lifts the whole platform forward.
+#   - The build/compliance/deploy pipeline is provably the same for every
+#     game — no per-repo accidental divergence.
+#
+# Each game's caller file is ~15 lines:
+#   on: { push: { branches: [main] }, pull_request: { branches: [main] } }
+#   jobs:
+#     ci-and-deploy:
+#       uses: freegamestore-online/freegamestore/.github/workflows/game-ci.yml@main
+#       with:
+#         cf_project: freebowlingapp
+#       permissions: { contents: read, deployments: write }
+#       secrets: inherit
+
+on:
+  workflow_call:
+    inputs:
+      cf_project:
+        description: "Cloudflare Pages project name, e.g. freebowlingapp"
+        required: true
+        type: string
+      compliance_cli_version:
+        description: "Pinned @freegamestore/cli version for the compliance gate"
+        required: false
+        type: string
+        default: "0.1.9"
+      node_version:
+        description: "Node.js major version"
+        required: false
+        type: string
+        default: "22"
+      cloudflare_account_id:
+        description: "Cloudflare account ID (same across the platform)"
+        required: false
+        type: string
+        default: "c1089bfcc43c1c6c2aa89e584e86f0bc"
+    secrets:
+      CLOUDFLARE_API_TOKEN:
+        required: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node_version }}
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      # Platform compliance — runs every check the CLI ships (bundle size,
+      # brand fonts, tracking SDKs, PWA manifest, store link, audio mute,
+      # viewport, brand-token leaks). Pinned version so a CLI release can't
+      # silently flip green deploys to red.
+      - name: Platform compliance
+        run: npx -y "@freegamestore/cli@${{ inputs.compliance_cli_version }}" check
+
+      # Deploy only on a push to main, never on PRs. Reusable workflow runs
+      # under the caller's event context, so this if-guard does the right
+      # thing whether called from a PR build or a main-branch push.
+      - name: Deploy to Cloudflare Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: npx wrangler pages deploy web/dist --project-name=${{ inputs.cf_project }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ inputs.cloudflare_account_id }}
