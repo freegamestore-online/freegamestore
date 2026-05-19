@@ -31,12 +31,25 @@ jobs:
         with:
           node-version: 22
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       # GITHUB_TOKEN lifts the GitHub API rate limit from 60 → 5000 req/hr,
       # which build.js needs to fetch each game's commit history at build
       # time without the deploy ever rate-limiting.
       - run: node build.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # SDK docs site — Astro Starlight builds into ../dist/docs so the
+      # storefront and docs ship in a single wrangler deploy. Lives at
+      # freegamestore.online/docs/.
+      - name: Build docs site
+        working-directory: docs
+        run: |
+          pnpm install --frozen-lockfile=false
+          pnpm build
 
       # Persist the refreshed history cache so CF Pages' no-token build
       # can read it instead of hitting the rate-limited API. [skip ci]
