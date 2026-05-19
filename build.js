@@ -200,33 +200,30 @@ fs.mkdirSync(path.join(DIST, 'games'), { recursive: true });
 
 // --- Generate index.html ---
 
-const categories = [...new Set(games.map(a => a.category))];
-const filterButtons = [
-  '<button class="filter-btn active" data-filter="all">All</button>',
-  ...categories.map(cat =>
-    `<button class="filter-btn" data-filter="${cat}">${categoryLabel(cat)}</button>`
-  )
-].join('\n        ');
-
+// Build game cards — compact letter-badge layout, Figma 2026
 const gameCards = games.map(game => {
-  return `        <div class="app-card" data-category="${game.category}" data-about="/games/${game.id}.html" data-app-url="${game.appUrl}" data-name="${escapeHtml(game.name)}" data-description="${escapeHtml(game.description)}" data-icon="${game.icon}" data-icon-bg="${game.iconBg}">
-          <div class="app-card-header">
-            <div class="app-icon" style="background: ${game.iconBg};">${game.icon}</div>
-            <div>
-              <h3>${game.name}</h3>
-              <div class="tag">${categoryLabel(game.category)}</div>
-            </div>
+  const letter = (game.name || '?').trim().charAt(0).toUpperCase();
+  const iconBg = escapeHtml(game.iconBg || '#10b981');
+  return `        <div class="app-card compact" data-category="${escapeHtml(game.category)}" data-about="/games/${escapeHtml(game.id)}.html">
+          <div class="app-icon" style="background: ${iconBg};">
+            <img src="${escapeHtml(game.appUrl)}/apple-touch-icon.png" alt="" onerror="this.replaceWith(document.createTextNode('${letter}'))" />
           </div>
-          <p>${game.description}</p>
-          <div class="app-actions"><a href="${game.appUrl}" target="_blank" rel="noopener" class="app-btn-open">Play</a><a href="" class="app-link app-about">About &rarr;</a></div>
+          <div class="app-body">
+            <span class="app-name">${escapeHtml(game.name)}</span>
+            <span class="app-meta">${escapeHtml(categoryLabel(game.category))}</span>
+          </div>
+          <a href="${escapeHtml(game.appUrl)}" target="_blank" rel="noopener" class="app-cta" aria-label="Play ${escapeHtml(game.name)}">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="6,4 20,12 6,20" /></svg>
+            <span class="cta-label">Play</span>
+          </a>
         </div>`;
 }).join('\n\n');
 
 // indexHtml is finalized inside the async IIFE below — cross-store
 // registry fetch is async, and we want to embed it into the page.
 let indexHtml = indexTemplate
-  .replaceAll('{{FILTER_BUTTONS}}', filterButtons)
-  .replaceAll('{{GAMES_GRID}}', gameCards);
+  .replaceAll('{{GAMES_GRID}}', gameCards)
+  .replaceAll('{{GAMES_COUNT}}', String(games.length));
 
 // --- Generate game detail pages ---
 // Wrapped in async IIFE because this file is CJS (no top-level await).
@@ -474,6 +471,7 @@ fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap);
 const filesToCopy = [
   'style.css',
   'search.js',
+  'theme.js',
   'quality.js',
   'favicon.svg',
   'apple-touch-icon.png',

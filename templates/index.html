@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>FreeGameStore — Free-Forever Web Games</title>
   <meta name="description" content="A platform of free-forever web games. No charges, no plans, no paywalls. Works on mobile, tablet, and desktop. Open source." />
   <meta property="og:type" content="website" />
@@ -13,108 +13,160 @@
   <meta name="twitter:card" content="summary" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+  <!-- Apply theme before paint to avoid flash. Reads localStorage then falls back to system preference. -->
+  <script>
+    (function(){try{var s=localStorage.getItem('fgs-theme');var d=s?s==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();
+  </script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Full-width header — always visible -->
   <header>
     <div class="container">
-      <a href="/" class="logo">Free <span>Games</span></a>
-      <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
-      </button>
+      <a href="/" class="brand" aria-label="FreeGameStore — Games Marketplace">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="4"></rect><line x1="8" y1="12" x2="6" y2="12"></line><line x1="7" y1="11" x2="7" y2="13"></line><circle cx="16" cy="11" r="1" fill="currentColor"></circle><circle cx="18" cy="13" r="1" fill="currentColor"></circle></svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">GameStore</span>
+          <span class="brand-tag">Free Web Games</span>
+        </span>
+      </a>
+
       <nav>
         <a href="/">Games</a>
         <a href="https://freeappstore.online">Apps</a>
         <a href="/about.html">About</a>
         <a href="/get-started.html">Get Started</a>
-        <a href="/docs/">Docs</a>
         <a href="/guidelines.html">Guidelines</a>
-        <a href="/pricing.html">Pricing</a>
+        <a href="/docs/">Docs</a>
       </nav>
+
+      <div class="header-right">
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <div class="split-layout">
-    <!-- Left panel -->
-    <aside class="split-left" id="split-left">
-      <div class="split-left-search">
+  <main class="container">
+    <section class="apps-section" id="games">
+      <div class="mode-tabs" role="tablist" aria-label="Search mode">
+        <button class="mode-tab active" type="button" data-mode="ai" role="tab" aria-selected="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2zm6 10l1 3 3 1-3 1-1 3-1-3-3-1 3-1 1-3zm-13 4l.8 2.2L8 19l-2.2.8L5 22l-.8-2.2L2 19l2.2-.8L5 16z"/></svg>
+          AI Assistant
+        </button>
+        <button class="mode-tab" type="button" data-mode="search" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          Simple Search
+        </button>
+      </div>
+
+      <div class="input-wrap" id="aiInputWrap">
+        <svg class="input-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2zm6 10l1 3 3 1-3 1-1 3-1-3-3-1 3-1 1-3z"/></svg>
         <input
+          class="prompt-input"
+          id="ai-prompt"
+          type="text"
+          placeholder="Tell me the kind of game you want and I'll suggest some..."
+          autocomplete="off"
+          aria-label="Describe what you want and we'll recommend games"
+        />
+      </div>
+
+      <div class="input-wrap" id="searchInputWrap" hidden>
+        <svg class="input-icon muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input
+          class="search-input"
           type="search"
           id="storefront-search"
-          placeholder="Search games + apps..."
+          placeholder="Search games + apps…"
           autocomplete="off"
           aria-label="Search games and apps"
         />
       </div>
-      <div class="split-left-filters">
-        {{FILTER_BUTTONS}}
-      </div>
-      <div class="split-left-list" id="apps-grid">
-        {{GAMES_GRID}}
-      </div>
-      <p id="search-empty" hidden style="text-align: center; color: var(--muted); padding: 2rem 0;">No games match your search.</p>
-      <section id="cross-store-results" hidden style="margin-top: 1.5rem; padding: 0 0.75rem;">
-        <h2 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--muted);">Also on FreeAppStore</h2>
-        <div class="apps-grid" id="cross-store-grid"></div>
-      </section>
-      <aside class="split-left-appstore" style="text-align: center; padding: 1rem 0.75rem; font-size: 0.85rem; color: var(--muted);">
-        Looking for apps? <a href="https://freeappstore.online" style="color: var(--accent); font-weight: 600;">FreeAppStore</a>
-      </aside>
-    </aside>
 
-    <!-- Right panel (desktop only) -->
-    <section class="split-right" id="split-right">
-      <div class="split-right-empty" id="right-empty">
-        <p style="color:var(--muted);font-size:0.9rem;">Select a game from the list</p>
-      </div>
-      <div class="split-right-play" id="right-play" hidden>
-        <div class="play-toolbar">
-          <span class="play-title" id="play-title"></span>
-          <a class="play-newtab" id="play-newtab" href="#" target="_blank" rel="noopener">&#8599; New tab</a>
-          <button class="play-fullscreen-btn" id="play-fullscreen-btn">&#9974; Fullscreen</button>
+      <div class="apps-header">
+        <div class="apps-header-title">
+          <h2>All Games</h2>
+          <div class="count" id="apps-count">{{GAMES_COUNT}} total</div>
         </div>
-        <div class="play-iframe-wrap">
-          <iframe id="play-iframe" allow="fullscreen; autoplay" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+        <div class="apps-tabs" role="tablist" aria-label="Sort games">
+          <button class="apps-tab active" type="button" data-sort="featured" role="tab" aria-selected="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            Featured
+          </button>
+          <button class="apps-tab" type="button" data-sort="top" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM5 4h2v3a3 3 0 0 1-3-3M17 4h2a3 3 0 0 1-3 3V4z"/></svg>
+            Top Rated
+          </button>
+          <button class="apps-tab" type="button" data-sort="active" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 12 7 12 10 5 14 19 17 12 21 12"/></svg>
+            Most Played
+          </button>
+          <button class="apps-tab" type="button" data-sort="popular" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17c1.5 0 2.5-1 2.5-2.5 0-3-4-3-4-6 0-1.5 1-2.5 2.5-2.5 1.5 0 2.5 1 2.5 2.5"/><path d="M12 22c4.97 0 9-4.03 9-9 0-5-3-7-5-9 0 4-3 5-5 7s-3 4-3 6c0 3 2 5 4 5z"/></svg>
+            Popular
+          </button>
         </div>
       </div>
-    </section>
-  </div>
 
-  <!-- Mobile-only: full main with original layout -->
-  <main class="container mobile-only-main">
-    <section class="apps-section" id="games" style="padding-top: 2rem;">
-      <div class="search-bar mobile-search-bar">
-        <input
-          type="search"
-          id="storefront-search-mobile"
-          placeholder="Search games + apps..."
-          autocomplete="off"
-          aria-label="Search games and apps"
-        />
-      </div>
-      <div class="filter-bar" id="mobile-filter-bar">
-        {{FILTER_BUTTONS}}
-      </div>
-      <div class="apps-grid" id="mobile-apps-grid">
-        {{GAMES_GRID}}
-      </div>
-      <p id="mobile-search-empty" hidden style="text-align: center; color: var(--muted); padding: 2rem 0;">No games match your search here.</p>
+      <div class="split-layout">
+        <div class="apps-pane">
+          <div class="apps-grid compact" id="apps-grid">
+            {{GAMES_GRID}}
+          </div>
 
-      <section id="mobile-cross-store-results" hidden style="margin-top: 2.5rem;">
-        <h2 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--muted);">Also matching on FreeAppStore</h2>
-        <div class="apps-grid" id="mobile-cross-store-grid"></div>
-      </section>
+          <p id="search-empty" hidden>No games match your search here.</p>
+
+          <section id="cross-store-results" hidden style="margin-top: 2.5rem;">
+            <h2>Also matching on FreeAppStore</h2>
+            <div class="apps-grid compact" id="cross-store-grid"></div>
+          </section>
+        </div>
+
+        <aside class="preview-pane" id="previewPane" aria-label="Game preview">
+          <div class="preview-toolbar">
+            <div class="preview-title" id="previewTitle">No game selected<span class="preview-host"></span></div>
+            <button class="preview-btn" id="previewAbout" type="button" title="View details" aria-label="View details" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            </button>
+            <button class="preview-btn" id="previewFullscreen" type="button" title="Fullscreen" aria-label="Fullscreen" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7V3h4M21 7V3h-4M3 17v4h4M21 17v4h-4"/></svg>
+            </button>
+            <button class="preview-btn" id="previewNewTab" type="button" title="Open in new tab" aria-label="Open in new tab" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7"/><path d="M10 14L21 3"/><path d="M21 13v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7"/></svg>
+            </button>
+            <button class="preview-btn" id="previewClose" type="button" title="Close preview" aria-label="Close preview" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+          <div class="preview-body">
+            <div class="preview-empty" id="previewEmpty">
+              <span class="empty-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6,4 20,12 6,20"/></svg>
+              </span>
+              <span class="empty-title">Pick any game to play it here</span>
+              <span class="empty-tip">Click a game on the left and it loads instantly in this pane. Use <strong>⛶</strong> for fullscreen or <strong>↗</strong> to pop it into a new tab.</span>
+            </div>
+            <iframe class="preview-frame" id="previewFrame" title="Game preview" allow="fullscreen; autoplay; gamepad" sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-downloads" referrerpolicy="no-referrer-when-downgrade" loading="lazy" hidden></iframe>
+          </div>
+        </aside>
+      </div>
     </section>
 
     <script type="application/json" id="cross-store-registry">{{CROSS_STORE_REGISTRY}}</script>
+    <script src="/search.js" defer></script>
 
     <aside style="text-align: center; padding: 1.5rem 0 0.5rem; font-size: 0.9rem; color: var(--muted);">
       Looking for apps? Visit <a href="https://freeappstore.online" style="color: var(--accent); font-weight: 600;">FreeAppStore</a> — free-forever web apps.
     </aside>
   </main>
 
-  <footer class="mobile-only-footer">
+  <footer>
     <div class="container">
       <div class="footer-left">
         <a href="/" class="logo">Free <span>Games</span></a>
@@ -133,109 +185,192 @@
     </div>
   </footer>
 
-  <script src="/search.js" defer></script>
-
   <script>
-  (() => {
-    /* ── Detect desktop vs mobile ── */
-    const mql = window.matchMedia('(min-width: 768px)');
+    // Theme toggle is wired by theme.js (so it works site-wide).
 
-    /* ── Desktop split-view logic ── */
-    const splitLeft = document.getElementById('split-left');
-    const rightEmpty = document.getElementById('right-empty');
-    const rightPlay = document.getElementById('right-play');
-    const playTitle = document.getElementById('play-title');
-    const playNewtab = document.getElementById('play-newtab');
-    const playFullscreenBtn = document.getElementById('play-fullscreen-btn');
-    const playIframe = document.getElementById('play-iframe');
-
-    function selectGame(card) {
-      const prev = splitLeft.querySelector('.app-card.selected');
-      if (prev) prev.classList.remove('selected');
-      card.classList.add('selected');
-
-      const url = card.dataset.appUrl;
-      const name = card.dataset.name;
-
-      playTitle.textContent = name;
-      playNewtab.href = url;
-      playIframe.src = url;
-      rightEmpty.hidden = true;
-      rightPlay.hidden = false;
-    }
-
-    /* Fullscreen */
-    playFullscreenBtn.addEventListener('click', () => {
-      if (playIframe.requestFullscreen) playIframe.requestFullscreen();
-      else if (playIframe.webkitRequestFullscreen) playIframe.webkitRequestFullscreen();
-    });
-
-    /* ── Wire up cards in left panel (desktop) ── */
-    splitLeft.querySelectorAll('.app-card').forEach(card => {
-      card.addEventListener('click', (e) => {
-        if (!mql.matches) return; // mobile: let default behavior work
-        e.preventDefault();
-        selectGame(card);
+    // --- Mode tabs (AI Assistant / Simple Search) ---
+    (function () {
+      var aiWrap = document.getElementById('aiInputWrap');
+      var searchWrap = document.getElementById('searchInputWrap');
+      var aiInput = document.getElementById('ai-prompt');
+      document.querySelectorAll('.mode-tab').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          document.querySelectorAll('.mode-tab').forEach(function (t) {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          var mode = tab.dataset.mode;
+          if (mode === 'ai') {
+            aiWrap.hidden = false;
+            searchWrap.hidden = true;
+            aiInput.focus();
+          } else {
+            aiWrap.hidden = true;
+            searchWrap.hidden = false;
+            var sb = document.getElementById('storefront-search');
+            if (sb) sb.focus();
+          }
+        });
       });
-    });
-
-    /* ── Wire up cards in mobile grid ── */
-    document.querySelectorAll('#mobile-apps-grid .app-card').forEach(card => {
-      const aboutUrl = card.dataset.about;
-      if (aboutUrl) {
-        card.querySelector('.app-about').href = aboutUrl;
-        card.style.cursor = 'pointer';
-        card.addEventListener('click', e => {
-          if (!e.target.closest('.app-btn-open')) {
-            window.location.href = aboutUrl;
+      if (aiInput) {
+        aiInput.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' && aiInput.value.trim()) {
+            e.preventDefault();
+            var sb = document.getElementById('storefront-search');
+            if (sb) {
+              sb.value = aiInput.value;
+              sb.dispatchEvent(new Event('input', { bubbles: true }));
+              document.querySelector('.mode-tab[data-mode="search"]').click();
+            }
           }
         });
       }
+    })();
+
+    // --- Sort tabs (visual only for now — same registry shown for all) ---
+    document.querySelectorAll('.apps-tab').forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        document.querySelectorAll('.apps-tab').forEach(function (t) {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+      });
     });
 
-    /* ── Category filter (both panels) ── */
-    function setupFilters(container, gridId) {
-      container.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          container.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          const filter = btn.dataset.filter;
-          const grid = document.getElementById(gridId);
-          grid.querySelectorAll('.app-card').forEach(card => {
-            if (filter === 'all' || card.dataset.category === filter) {
-              card.removeAttribute('hidden');
-            } else {
-              card.setAttribute('hidden', '');
-            }
-          });
+    // --- Split-pane preview: load games inline on desktop, fall back to new tab on mobile ---
+    (function () {
+      var SPLIT_MQ = window.matchMedia('(min-width: 1024px)');
+      var pane = document.getElementById('previewPane');
+      var frame = document.getElementById('previewFrame');
+      var empty = document.getElementById('previewEmpty');
+      var title = document.getElementById('previewTitle');
+      var btnNewTab = document.getElementById('previewNewTab');
+      var btnAbout = document.getElementById('previewAbout');
+      var btnClose = document.getElementById('previewClose');
+      var btnFullscreen = document.getElementById('previewFullscreen');
+      var current = null;
+
+      function activate(card) {
+        document.querySelectorAll('.app-card.compact.is-active').forEach(function (c) { c.classList.remove('is-active'); });
+        if (card) card.classList.add('is-active');
+      }
+
+      function setTitle(name, url) {
+        var host = '';
+        try { host = url ? new URL(url).host : ''; } catch (e) {}
+        title.innerHTML = '';
+        title.appendChild(document.createTextNode(name || 'No game selected'));
+        if (host) {
+          var hs = document.createElement('span');
+          hs.className = 'preview-host';
+          hs.textContent = host;
+          title.appendChild(hs);
+        }
+      }
+
+      function loadInPane(meta, card) {
+        current = meta;
+        pane.classList.add('is-loading');
+        frame.hidden = false;
+        empty.hidden = true;
+        btnNewTab.hidden = false;
+        btnAbout.hidden = false;
+        btnClose.hidden = false;
+        btnFullscreen.hidden = false;
+        setTitle(meta.name, meta.url);
+        frame.src = meta.url;
+        activate(card);
+        frame.addEventListener('load', function once() {
+          pane.classList.remove('is-loading');
+          frame.removeEventListener('load', once);
+        });
+        try {
+          var u = new URL(window.location.href);
+          u.searchParams.set('game', meta.id);
+          history.replaceState(null, '', u.toString());
+        } catch (e) {}
+      }
+
+      function clearPane() {
+        current = null;
+        frame.removeAttribute('src');
+        frame.hidden = true;
+        empty.hidden = false;
+        btnNewTab.hidden = true;
+        btnAbout.hidden = true;
+        btnClose.hidden = true;
+        btnFullscreen.hidden = true;
+        setTitle(null, '');
+        activate(null);
+        pane.classList.remove('is-loading');
+        try {
+          var u = new URL(window.location.href);
+          u.searchParams.delete('game');
+          history.replaceState(null, '', u.pathname + (u.search ? u.search : '') + u.hash);
+        } catch (e) {}
+      }
+
+      function cardMeta(card) {
+        var cta = card.querySelector('.app-cta');
+        var name = card.querySelector('.app-name');
+        var nameText = 'Game';
+        if (name) {
+          var n = name.firstChild;
+          while (n && n.nodeType !== Node.TEXT_NODE) n = n.nextSibling;
+          nameText = (n && n.textContent.trim()) || name.textContent.trim();
+        }
+        return {
+          id: ((card.dataset.about || '').split('/').pop() || '').replace(/\.html$/, ''),
+          name: nameText,
+          url: cta ? cta.getAttribute('href') : null,
+          aboutUrl: card.dataset.about || null,
+        };
+      }
+
+      document.querySelectorAll('#apps-grid .app-card.compact').forEach(function (card) {
+        var aboutUrl = card.dataset.about;
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', function (e) {
+          var onCta = !!e.target.closest('.app-cta');
+          if (SPLIT_MQ.matches) {
+            e.preventDefault();
+            loadInPane(cardMeta(card), card);
+            return;
+          }
+          if (!onCta && aboutUrl) window.location.href = aboutUrl;
         });
       });
-    }
 
-    setupFilters(document.querySelector('.split-left-filters'), 'apps-grid');
-    setupFilters(document.getElementById('mobile-filter-bar'), 'mobile-apps-grid');
-
-    /* ── Sync desktop search → left panel cards ── */
-    // search.js handles #storefront-search + #apps-grid for desktop.
-    // For mobile, we wire the mobile search input separately.
-    const mobileSearch = document.getElementById('storefront-search-mobile');
-    if (mobileSearch) {
-      mobileSearch.addEventListener('input', () => {
-        const q = mobileSearch.value.trim().toLowerCase();
-        const grid = document.getElementById('mobile-apps-grid');
-        const empty = document.getElementById('mobile-search-empty');
-        const cards = grid.querySelectorAll('.app-card');
-        let shown = 0;
-        cards.forEach(card => {
-          const hay = (card.textContent || '').toLowerCase() + ' ' + (card.dataset.category || '').toLowerCase();
-          const match = q === '' || hay.includes(q);
-          card.hidden = !match;
-          if (match) shown++;
-        });
-        empty.hidden = shown > 0 || q === '';
+      btnNewTab.addEventListener('click', function () {
+        if (current && current.url) window.open(current.url, '_blank', 'noopener');
       });
-    }
-  })();
+      btnAbout.addEventListener('click', function () {
+        if (current && current.aboutUrl) window.location.href = current.aboutUrl;
+      });
+      btnClose.addEventListener('click', clearPane);
+      btnFullscreen.addEventListener('click', function () {
+        if (frame.requestFullscreen) frame.requestFullscreen();
+        else if (frame.webkitRequestFullscreen) frame.webkitRequestFullscreen();
+      });
+
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var wantId = params.get('game') || params.get('app');
+        if (wantId && SPLIT_MQ.matches) {
+          var match = document.querySelector('#apps-grid .app-card.compact[data-about$="/' + wantId + '"]');
+          if (match) loadInPane(cardMeta(match), match);
+        }
+      } catch (e) {}
+
+      SPLIT_MQ.addEventListener && SPLIT_MQ.addEventListener('change', function (e) {
+        if (!e.matches) activate(null);
+      });
+    })();
   </script>
+  <script src="/theme.js"></script>
 </body>
 </html>
