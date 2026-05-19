@@ -95,51 +95,73 @@ for repo in "$GAMES_DIR"/*/; do
 
   mkdir -p "$repo/.github/workflows"
   new_yaml=$(render_workflow "$cf_project")
-  existing=""
-  [ -f "$repo/.github/workflows/deploy.yml" ] && existing=$(cat "$repo/.github/workflows/deploy.yml")
 
-  if [ "$existing" = "$new_yaml" ]; then
-    echo "skip $name (already migrated)"
+  # Always (re)write deploy.yml and remove redundant old workflows. Let git
+  # decide whether anything actually changed — that way we catch the case
+  # where deploy.yml content is already correct but ci.yml/compliance.yml
+  # still sit on remote, OR where the local file was updated previously
+  # but never committed/pushed.
+  printf '%s\n' "$new_yaml" > "$repo/.github/workflows/deploy.yml"
+  rm -f "$repo/.github/workflows/ci.yml" "$repo/.github/workflows/compliance.yml"
+
+  pushd "$repo" >/dev/null
+
+  # Some repos use "origin", others use "upstream". Pick whichever exists.
+  remote="origin"
+  if ! git remote get-url origin >/dev/null 2>&1; then
+    if git remote get-url upstream >/dev/null 2>&1; then
+      remote="upstream"
+    else
+      echo "   no usable remote (origin/upstream); skipping"
+      popd >/dev/null
+      failed=$((failed+1))
+      continue
+    fi
+  fi
+
+  git add -A .github/workflows/ >/dev/null
+  has_staged_changes=0
+  if ! git diff --cached --quiet -- .github/workflows/; then
+    has_staged_changes=1
+  fi
+  has_unpushed_commits=0
+  if ! git diff --quiet "$remote/main" HEAD -- .github/workflows/ 2>/dev/null; then
+    has_unpushed_commits=1
+  fi
+
+  if [ "$has_staged_changes" = "0" ] && [ "$has_unpushed_commits" = "0" ]; then
+    echo "skip $name (already up-to-date locally and on remote)"
+    popd >/dev/null
     skipped=$((skipped+1))
     continue
   fi
 
   echo "→ $name  (cf_project=$cf_project)"
-  printf '%s\n' "$new_yaml" > "$repo/.github/workflows/deploy.yml"
-
-  # Remove redundant old workflows — typecheck-on-PR ci.yml and grep-based
-  # compliance.yml are both superseded by the centralized pipeline.
-  rm -f "$repo/.github/workflows/ci.yml" "$repo/.github/workflows/compliance.yml"
-
   if [ "$PUSH" = "1" ]; then
-    pushd "$repo" >/dev/null
-    git add .github/workflows/
-    if git diff --cached --quiet; then
-      echo "   (no changes to commit)"
-      popd >/dev/null
-      skipped=$((skipped+1))
-      continue
-    fi
-    if ! git commit -m "ci: switch deploy.yml to reusable game-ci workflow
+    if [ "$has_staged_changes" = "1" ]; then
+      if ! git commit -m "ci: switch deploy.yml to reusable game-ci workflow
 
 Caller for freegamestore-online/freegamestore's reusable workflow.
 Pipeline definition is centralized; per-game file is just the
 cf_project plumbing." >/dev/null 2>&1; then
-      echo "   commit FAILED"
+        echo "   commit FAILED"
+        failed=$((failed+1))
+        popd >/dev/null
+        continue
+      fi
+    fi
+    if git push "$remote" main >/dev/null 2>&1; then
+      echo "   pushed (remote=$remote)"
+    else
+      echo "   push FAILED (remote=$remote)"
       failed=$((failed+1))
       popd >/dev/null
       continue
     fi
-    if git push origin main >/dev/null 2>&1; then
-      echo "   pushed"
-    else
-      echo "   push FAILED"
-      failed=$((failed+1))
-    fi
-    popd >/dev/null
   else
     echo "   (dry-run; pass --push to commit + push)"
   fi
+  popd >/dev/null
   migrated=$((migrated+1))
 done
 
