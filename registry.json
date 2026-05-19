@@ -843,6 +843,19 @@
       "cfProject": "freewarapp",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "tanks",
+      "name": "tanks",
+      "category": "Arcade",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Battle City tanks: defend the eagle, destroy 8 enemy tanks. Bricks crumble, steel doesn't.",
+      "appUrl": "https://tanks.freegamestore.online",
+      "repo": "freegamestore-online/tanks",
+      "cfProject": "freetanksapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
