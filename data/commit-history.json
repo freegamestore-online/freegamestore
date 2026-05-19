@@ -2,36 +2,36 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:08:14Z"
     },
     "commits": [
       {
-        "sha": "5d0cf7372e887f261232692f827a32b98e875fc5",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/5d0cf7372e887f261232692f827a32b98e875fc5",
+        "sha": "cba1e33450550ed6a86265d0ba8aae4d6ea68d52",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/cba1e33450550ed6a86265d0ba8aae4d6ea68d52",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:08:11Z"
           }
         }
       },
       {
-        "sha": "b8ccf3c2ee7accab595cf3c272ad7f0672d908c7",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/b8ccf3c2ee7accab595cf3c272ad7f0672d908c7",
+        "sha": "d03607aa3f9147d9929383e57088db746cdcd3d3",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/d03607aa3f9147d9929383e57088db746cdcd3d3",
         "commit": {
-          "message": "Bump @freegamestore/games to ^0.13.0",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T02:38:21Z"
+            "date": "2026-05-19T04:04:09Z"
           }
         }
       },
       {
-        "sha": "6346ffbc91af45f1f1f49c624f3e2a57835d6671",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/6346ffbc91af45f1f1f49c624f3e2a57835d6671",
+        "sha": "7d41d0b846905eac0d1c71c60f2e189a0ac6586c",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/7d41d0b846905eac0d1c71c60f2e189a0ac6586c",
         "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-14T05:30:47Z"
+            "date": "2026-05-19T03:47:40Z"
           }
         }
       }
@@ -40,36 +40,36 @@
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-19T02:11:19Z"
+      "pushed_at": "2026-05-19T04:08:05Z"
     },
     "commits": [
       {
-        "sha": "9c6246b6bb35f59c8747fb8669d75afdb9c431fe",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/9c6246b6bb35f59c8747fb8669d75afdb9c431fe",
+        "sha": "85a7472d3776fe762b1904b634f3feefa6291935",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/85a7472d3776fe762b1904b634f3feefa6291935",
         "commit": {
-          "message": "fix(eval-bar): show \"M\" instead of \"+999.99\" when Stockfish reports mate\n\nStockfish returns mate as ±99999-ish centipawns. The eval bar formatter\nshowed that as \"+999.99\" / \"-999.99\" — technically accurate but visually\nwrong. Now collapses to \"+M\" / \"-M\" when |eval| ≥ 10000.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T02:11:16Z"
+            "date": "2026-05-19T04:08:02Z"
           }
         }
       },
       {
-        "sha": "87f24e5fa9cbfac31440563f81969a1c4c7bb26f",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/87f24e5fa9cbfac31440563f81969a1c4c7bb26f",
+        "sha": "a660909b015fac0ac82b018f2820d814f64c1205",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/a660909b015fac0ac82b018f2820d814f64c1205",
         "commit": {
-          "message": "fix(board): file/rank labels were unreadable — tiny + miscolored\n\nTwo bugs in the SVG board labels:\n\n1. fontSize=13 inside an 800-wide viewBox scaled to ~540px display\n   rendered as ~8.7px on screen — barely legible. Bumped to 22 (and\n   weight 700, opacity 0.6) so they sit subtly in each square corner\n   but are actually readable.\n\n2. The contrast formula included `(flipped ? 1 : 0)`, which broke the\n   logic: square colors at each viewBox position do NOT change when\n   the board flips (only WHICH file/rank is labeled there). With the\n   flipped offset, all bottom-row file labels rendered dark-on-dark\n   (or light-on-light) when playing as Black — completely invisible.\n   File labels also missed the +7 offset since they live in row 7.\n\n   Removed the flipped offset; file labels use (col + 7) % 2, rank\n   labels use row % 2.\n\n3. File labels were at y=792 — bottom edge of the viewBox — and got\n   clipped by the rounded corner + overflow:hidden. Moved to y=776.\n\nFound by /qa: noticed rank labels visible but barely; file labels\ninvisible; same again when flipped to Black.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T01:57:10Z"
+            "date": "2026-05-19T04:04:00Z"
           }
         }
       },
       {
-        "sha": "c52adb074d72d1100fc7bc2d959c4a681d41e113",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/c52adb074d72d1100fc7bc2d959c4a681d41e113",
+        "sha": "6bc968af6b8b335f39a22139adb2732897deecb9",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/6bc968af6b8b335f39a22139adb2732897deecb9",
         "commit": {
-          "message": "fix(rules): rewrite Game Rules panel — accurate, complete, properly formatted\n\nOld panel was a stale inline JSX blob: said \"Six difficulty levels\"\n(actually 5), didn't mention puzzles, listed bullets as <li> without\nlist styling so the SDK reset stripped them to plain text lines.\n\nNew panel:\n- Three sections: Playing, Puzzles, Voice control\n- Inline styles enforce list-style-disc + indentation (survives SDK reset)\n- Mentions all current features incl. puzzles, click-to-see-alternative,\n  voice command examples (\"knight to f3\", \"castle kingside\", etc.)\n- Extracted into RulesPanel component (line 48 went from a 700-char\n  inline JSX wall to <RulesPanel />)\n\nFound by /qa: opened Game Rules modal, content was wrong + ugly.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "feat(multiplayer): share-link 1v1 via Cloudflare Durable Objects\n\nAdds a \"Play with friend\" multiplayer mode. Click the people icon →\n\"Create game\" → get a unique /g/{id} URL. Send it to a friend. They\njoin as the opposite color. Moves sync in real time, server-validated.\n\nArchitecture:\n- web/public/_worker.js — Pages \"advanced mode\" Worker (single file)\n  - GameDO class extends DurableObject — holds a chess.js instance +\n    two WebSocket connections + game-over state\n  - Routes:\n    POST /api/game/new       → returns { id } (8-char alphanumeric)\n    GET  /api/game/{id}/ws   → WebSocket upgrade to the DO for this id\n    GET  /g/{id}             → serves index.html (SPA route)\n    *                        → static asset fallback via env.ASSETS\n  - Server validates every move; illegal/wrong-turn moves get a\n    { type: \"error\" } reply, never get broadcast\n- wrangler.jsonc — adds GAME binding + new_sqlite_classes migration\n- web/src/components/MultiplayerTab.tsx — connection hook, share-link\n  copy UI, status indicator, auto-reconnect on disconnect, resign +\n  rematch buttons. Reuses Board + GameOverBanner + PlayerRow.\n- web/src/App.tsx — adds Mode='multiplayer', /g/{id} route parsing,\n  Users icon in topbar, RulesPanel section explaining multiplayer\n\nTested locally with wrangler pages dev + two browser tabs:\n  - White creates game → unique URL\n  - Black opens URL → joins, board flips, \"Opponent\" labeled\n  - White plays e4 → black sees it within ~50ms, move list updates\n  - Black replies e5 → white sees it, turn indicator flips\n  - Server rejects out-of-turn moves\n  - Connection state shown (\"Connected · 2 players\")\n\nConstraints from platform CLAUDE.md: Free tier caps real-time rooms at\n5 concurrent × 25 connections × 50 user-hours/day. Chess multiplayer\nfits this easily — chess games are short and small-state.\n\nBuild: 285KB → 294KB JS (+9KB for MultiplayerTab). Server worker is\n~5KB plus chess.js bundled by Pages.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T01:31:59Z"
+            "date": "2026-05-19T04:02:51Z"
           }
         }
       }
@@ -78,36 +78,36 @@
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-18T22:23:26Z"
+      "pushed_at": "2026-05-19T04:07:46Z"
     },
     "commits": [
       {
-        "sha": "d15d341c864f1146be158783f5e20812dedb0eb8",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/d15d341c864f1146be158783f5e20812dedb0eb8",
+        "sha": "c6b8ba902307f94202a43dfd0df3ab2600c4b995",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/c6b8ba902307f94202a43dfd0df3ab2600c4b995",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:07:44Z"
           }
         }
       },
       {
-        "sha": "3d6935684cfaf8e081edbf84e33cd0bcf8e85d4c",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/3d6935684cfaf8e081edbf84e33cd0bcf8e85d4c",
+        "sha": "40495c86aff519e4119f5966cdbdb746f7d0b740",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/40495c86aff519e4119f5966cdbdb746f7d0b740",
         "commit": {
-          "message": "Bump @freegamestore/games to ^0.13.0",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T02:38:17Z"
+            "date": "2026-05-19T04:03:42Z"
           }
         }
       },
       {
-        "sha": "2c627206a9d3f7d697d78d79facab630e0b3b3fd",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/2c627206a9d3f7d697d78d79facab630e0b3b3fd",
+        "sha": "56399435b2872a28853fd0fbe6d0aa50b04f8d7d",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/56399435b2872a28853fd0fbe6d0aa50b04f8d7d",
         "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "message": "Billiards: titlecase + manifest link in index.html",
           "author": {
-            "date": "2026-05-14T05:30:04Z"
+            "date": "2026-05-19T03:49:24Z"
           }
         }
       }
@@ -116,36 +116,36 @@
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:08:08Z"
     },
     "commits": [
       {
-        "sha": "a861d648dc68eb4b8db84b331c003422eb9005ad",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/a861d648dc68eb4b8db84b331c003422eb9005ad",
+        "sha": "edc09213d5d86ca3c2a73d2268856d47a3063cec",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/edc09213d5d86ca3c2a73d2268856d47a3063cec",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:08:05Z"
           }
         }
       },
       {
-        "sha": "04470959174254cb2014c3ab7f5a160218eb925d",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/04470959174254cb2014c3ab7f5a160218eb925d",
+        "sha": "2a6f1126a316d0e311dd5cc94b91cdc98b26c19d",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/2a6f1126a316d0e311dd5cc94b91cdc98b26c19d",
         "commit": {
-          "message": "Bump @freegamestore/games to ^0.13.0",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T02:38:27Z"
+            "date": "2026-05-19T04:04:03Z"
           }
         }
       },
       {
-        "sha": "d6f2bae5b2a4caebd67a9b83bb33b9169235c518",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/d6f2bae5b2a4caebd67a9b83bb33b9169235c518",
+        "sha": "621128fb414814dbcf2e67840820b1c04d12ec34",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/621128fb414814dbcf2e67840820b1c04d12ec34",
         "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-14T05:30:46Z"
+            "date": "2026-05-19T03:47:38Z"
           }
         }
       }
@@ -154,36 +154,36 @@
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:07:56Z"
     },
     "commits": [
       {
-        "sha": "be1e367ad829e6da23447eaff7875ca23047fa72",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/be1e367ad829e6da23447eaff7875ca23047fa72",
+        "sha": "93b9efea7911d296d101e1d813f97e15809385d8",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/93b9efea7911d296d101e1d813f97e15809385d8",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:07:53Z"
           }
         }
       },
       {
-        "sha": "45ef6776125dbf010a4aed23bb8f5cf6951347cb",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/45ef6776125dbf010a4aed23bb8f5cf6951347cb",
+        "sha": "cdc42b336832c6618b0c30a1c8dcf7702dac075a",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/cdc42b336832c6618b0c30a1c8dcf7702dac075a",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:01Z"
+            "date": "2026-05-19T04:03:51Z"
           }
         }
       },
       {
-        "sha": "ae53e76101916ffb67a88f656cab1d0dcf99afb2",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/ae53e76101916ffb67a88f656cab1d0dcf99afb2",
+        "sha": "f1e3f7f6cf6fd2f557857f988eebfba16225e2d8",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/f1e3f7f6cf6fd2f557857f988eebfba16225e2d8",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: thicker paddle (14→22px) for better visibility and feel\n\nPaddle pill height was 14px, radius 7px — visually thin and easy to\nmiss on tall displays. Bumped to 22px tall (radius 11px) so the pill\nshape stays correct and the paddle reads as a substantial surface.\nBall reset Y already references the dynamic getPaddleY() helper, so\nno other code needed to change.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:32Z"
+            "date": "2026-05-19T03:49:24Z"
           }
         }
       }
@@ -192,36 +192,36 @@
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:08:33Z"
     },
     "commits": [
       {
-        "sha": "c251cc38165834cef947af8d8dd47482da0f17de",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/c251cc38165834cef947af8d8dd47482da0f17de",
+        "sha": "4729a3547ba61b9c9f7768bb96780f2a33416a10",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/4729a3547ba61b9c9f7768bb96780f2a33416a10",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:08:30Z"
           }
         }
       },
       {
-        "sha": "a6a1c60a413dbec3049a3c448170ca1cc6ab87c7",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/a6a1c60a413dbec3049a3c448170ca1cc6ab87c7",
+        "sha": "6b1584d292838463649fe678fa7b640f35499400",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/6b1584d292838463649fe678fa7b640f35499400",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:15Z"
+            "date": "2026-05-19T04:04:27Z"
           }
         }
       },
       {
-        "sha": "cb488a3abb6961b3c0aa44fa4b6dc771a9a4b752",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/cb488a3abb6961b3c0aa44fa4b6dc771a9a4b752",
+        "sha": "d2cbd87e0e610646200d4cc6b4088d24266f0220",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/d2cbd87e0e610646200d4cc6b4088d24266f0220",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:15Z"
+            "date": "2026-05-19T03:12:16Z"
           }
         }
       }
@@ -230,36 +230,36 @@
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-19T00:07:55Z"
+      "pushed_at": "2026-05-19T04:04:48Z"
     },
     "commits": [
       {
-        "sha": "9a71703ec1d0f08b027028f05b36eab283ac11d7",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/9a71703ec1d0f08b027028f05b36eab283ac11d7",
+        "sha": "7ad726aa1637ded099e44b8f9211ad05f08f59f0",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/7ad726aa1637ded099e44b8f9211ad05f08f59f0",
         "commit": {
-          "message": "Add SFX via SDK useGameSounds (jump / pickup / land / game-over)\n\nThe @freegamestore/games SDK exports useGameSounds(), which synthesizes\nshort SFX via Web Audio and automatically respects the topbar mute toggle —\nso no audio files to bundle and no per-game mute plumbing.\n\nWired:\n- playMove on jump (Space)\n- playScore on gem collide\n- playDrop on airborne -> grounded transition (tracked via wasGrounded flag)\n- playGameOver when player falls off the bottom\n\nVerified in browser: oscillator events fire at the expected times after\nclicking the topbar Unmute, silent when muted.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T00:07:52Z"
+            "date": "2026-05-19T04:04:46Z"
           }
         }
       },
       {
-        "sha": "8187d866ef637ad73319c0397614e223e5e20e26",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/8187d866ef637ad73319c0397614e223e5e20e26",
+        "sha": "fb0e7ba54cb1d4e55ba0a15407b3303b1e19691b",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/fb0e7ba54cb1d4e55ba0a15407b3303b1e19691b",
         "commit": {
-          "message": "Polish: letterbox canvas, swap coin sprite for blue gem, bob/sway gems\n\n- kaplay letterbox: true so the 800x600 buffer scales to fill the GameShell\n  area instead of sitting top-left with a white gutter\n- Coin sprite was an unreadable orange ember-blob at game-size; swap to\n  tile_0067 (clean blue diamond) which reads as a valuable pickup\n- Replace 180°/sec rotation (looked like a tumbling rock for a diamond\n  shape) with a hover bob (4 px sine) + small ±6° sway, phase-randomized\n  per gem so a row doesn't move in lockstep\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T23:58:22Z"
+            "date": "2026-05-19T03:47:57Z"
           }
         }
       },
       {
-        "sha": "60888464824d8bece51fc01f6ca1459b304a2b33",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/60888464824d8bece51fc01f6ca1459b304a2b33",
+        "sha": "d892a6e12d2b027ab6a5b3d95088fde54861d8f2",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/d892a6e12d2b027ab6a5b3d95088fde54861d8f2",
         "commit": {
-          "message": "Add Kenney pixel-art graphics and fix StrictMode WebGL crash\n\n- 9 CC0 sprites under web/public/sprites/ from Kenney \"Pixel Platformer\"\n  and \"Background Elements\" packs (~17 KB total, served as static assets;\n  zero JS bundle impact). LICENSE.txt records attribution.\n- Sprite-based player (2-frame hop animation), tiled grass-top platforms,\n  spinning coin sprites\n- 3-layer parallax background: distant mountains, mid + near hills,\n  drifting clouds, sun with halo, sky gradient\n- Defer kaplay() into a queueMicrotask so React 19 StrictMode's\n  synchronous setup -> cleanup -> setup sequence doesn't quit-then-recreate\n  on the same canvas (which lost the WebGL context and left the game\n  loop ticking on a dead context)\n- compliance test: drop unused const that was blocking tsc -b\n- pnpm-lock: align with package.json's ^0.13.0 SDK pin\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "Wire @freegamestore/cli check into CI\n\nRuns every check exported by @freegamestore/compliance, including\nthe new PWA offline correctness check that catches manifest-without-\nSW, broken workbox configs, and Google Fonts that aren't cached.\n\nThe hand-rolled grep steps stay as belt-and-braces; the CLI step\nwill additionally fail CI on any new check the platform adds.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:46:05Z"
+            "date": "2026-05-19T02:33:54Z"
           }
         }
       }
@@ -268,36 +268,36 @@
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:08:27Z"
     },
     "commits": [
       {
-        "sha": "4ffdf60c029e5eca4f15b6921547f1220a08543e",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/4ffdf60c029e5eca4f15b6921547f1220a08543e",
+        "sha": "0c615f7ae0c98dfcb84aebe82587dcd046036ad5",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/0c615f7ae0c98dfcb84aebe82587dcd046036ad5",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:08:24Z"
           }
         }
       },
       {
-        "sha": "99ef858083fe5a0a62cbb0f2eea307c1e8f0cbb1",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/99ef858083fe5a0a62cbb0f2eea307c1e8f0cbb1",
+        "sha": "b4b8ced4a1a5254aef7741ccf25f4cd158c66973",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/b4b8ced4a1a5254aef7741ccf25f4cd158c66973",
         "commit": {
-          "message": "Bump @freegamestore/games to ^0.13.0",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T02:38:19Z"
+            "date": "2026-05-19T04:04:21Z"
           }
         }
       },
       {
-        "sha": "901d9588a7b18afbe81ec0c96799ff8805d78e19",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/901d9588a7b18afbe81ec0c96799ff8805d78e19",
+        "sha": "61a8c84a395d122b5d9c5e34b7bcbe970c24f665",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/61a8c84a395d122b5d9c5e34b7bcbe970c24f665",
         "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-14T05:30:49Z"
+            "date": "2026-05-19T03:47:46Z"
           }
         }
       }
@@ -306,36 +306,36 @@
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:07:44Z"
     },
     "commits": [
       {
-        "sha": "9818a5ce839b0d1024857dfde30b10f8a7dc4a41",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/9818a5ce839b0d1024857dfde30b10f8a7dc4a41",
+        "sha": "e3137e53cfc5d3076af43d5a706b6316dcbc6e26",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/e3137e53cfc5d3076af43d5a706b6316dcbc6e26",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:07:41Z"
           }
         }
       },
       {
-        "sha": "e606175085a94edd584e2f3b7e0a0cb6d274b02f",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/e606175085a94edd584e2f3b7e0a0cb6d274b02f",
+        "sha": "954c8806a340e3d902f963cded5d2dca27884583",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/954c8806a340e3d902f963cded5d2dca27884583",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:33:57Z"
+            "date": "2026-05-19T04:03:39Z"
           }
         }
       },
       {
-        "sha": "2c9a9407efa323c842ee058c555d361ba4b6c62d",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/2c9a9407efa323c842ee058c555d361ba4b6c62d",
+        "sha": "dcb980394a539f70def6203f2d87217e70ea0b76",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/dcb980394a539f70def6203f2d87217e70ea0b76",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:16:39Z"
+            "date": "2026-05-19T03:47:26Z"
           }
         }
       }
@@ -344,36 +344,36 @@
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:08:35Z"
     },
     "commits": [
       {
-        "sha": "f2b1b6ebcbce62808ef92c09a956d3954e0a08a3",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/f2b1b6ebcbce62808ef92c09a956d3954e0a08a3",
+        "sha": "0d3c27c4e555248bad8032a3300bc7a8e0471215",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/0d3c27c4e555248bad8032a3300bc7a8e0471215",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:08:33Z"
           }
         }
       },
       {
-        "sha": "ac09085db01ae2cdd05f1840df4810f844a3f909",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/ac09085db01ae2cdd05f1840df4810f844a3f909",
+        "sha": "ee6df3a86e906853b757c26cfbceab2e281c2fe1",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/ee6df3a86e906853b757c26cfbceab2e281c2fe1",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:17Z"
+            "date": "2026-05-19T04:04:30Z"
           }
         }
       },
       {
-        "sha": "c870d8abd43c399a4865732360cef5e8fa8dd341",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/c870d8abd43c399a4865732360cef5e8fa8dd341",
+        "sha": "08086624b2821806489ba4e3ff2c135b7da479e3",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/08086624b2821806489ba4e3ff2c135b7da479e3",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0. This\nunblocks the Cloudflare Pages deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:16:54Z"
+            "date": "2026-05-19T02:58:23Z"
           }
         }
       }
@@ -382,36 +382,36 @@
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:08:20Z"
     },
     "commits": [
       {
-        "sha": "08aa5a836ebe705242607f7e61d40f1501015809",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/08aa5a836ebe705242607f7e61d40f1501015809",
+        "sha": "3458aa9428e4ea10cb90bb0ba21e4165869c2deb",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/3458aa9428e4ea10cb90bb0ba21e4165869c2deb",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:08:18Z"
           }
         }
       },
       {
-        "sha": "18ed1e53feb76073c7b1eb93d1ca7e743800f6d5",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/18ed1e53feb76073c7b1eb93d1ca7e743800f6d5",
+        "sha": "e536ca95ad148ae6fefa14ae9e21bc0c5ca2136f",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/e536ca95ad148ae6fefa14ae9e21bc0c5ca2136f",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:09Z"
+            "date": "2026-05-19T04:04:15Z"
           }
         }
       },
       {
-        "sha": "7998fbc84fd25b00b329f9dc1f4139032471f13b",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/7998fbc84fd25b00b329f9dc1f4139032471f13b",
+        "sha": "5e0c29484bc70633ff47c4bc4fe298a751fd7f6b",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/5e0c29484bc70633ff47c4bc4fe298a751fd7f6b",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:27Z"
+            "date": "2026-05-19T03:12:10Z"
           }
         }
       }
@@ -420,36 +420,36 @@
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-19T01:59:29Z"
+      "pushed_at": "2026-05-19T04:07:53Z"
     },
     "commits": [
       {
-        "sha": "84d45ae8fa3648d49ddf1ebf7ed92a32859d35a1",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/84d45ae8fa3648d49ddf1ebf7ed92a32859d35a1",
+        "sha": "6e8a320b917cab5146c2543696f6fcb019d73f34",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/6e8a320b917cab5146c2543696f6fcb019d73f34",
         "commit": {
-          "message": "Respect platform mute toggle in SoundFX\n\nThe custom Web Audio in src/sound.ts plays pin clatter, ball-roll noise,\nstrike/spare flourishes — all the genre-essential sounds bowling needs.\nBut it never read the platform mute state, so clicking the topbar Mute\nbutton on bowling did nothing.\n\nFix: SoundFX gets a setMuted(boolean) method. ensureCtx() short-circuits\nto null when muted, which lets every public method early-return through\nthe existing null-context guard with one extra line. When the toggle\nflips on mid-roll, the active rolling sound is also stopped.\n\nIn Game.tsx the SDK's useSound() hook is read once at component level and\npiped into the SoundFX instance via useEffect on [muted]. SoundFX defaults\nto muted=true to match the SDK's \"muted by default\" — the very brief gap\nbetween mount and the first sync effect can't leak a sound that way.\n\nThis unblocks the audio-mute-respect compliance check now landing in\nfgs/platform.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T01:59:27Z"
+            "date": "2026-05-19T04:07:50Z"
           }
         }
       },
       {
-        "sha": "1380472bcea01eaff1e167d63237693fd9cff91e",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/1380472bcea01eaff1e167d63237693fd9cff91e",
+        "sha": "899396104460ba79ce039bd5b734696e2b8e14b8",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/899396104460ba79ce039bd5b734696e2b8e14b8",
         "commit": {
-          "message": "chore: ignore .gstack/ in repo\n\nLocal gstack tooling drops state into .gstack/; same treatment as\n.vibe-check/ so it doesn't get accidentally staged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T00:26:20Z"
+            "date": "2026-05-19T04:03:48Z"
           }
         }
       },
       {
-        "sha": "5dc4f7fbf5466fc18e5ee52dd2c7c40991a75810",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/5dc4f7fbf5466fc18e5ee52dd2c7c40991a75810",
+        "sha": "2191b9dc0d460dc736369503a36e99dfe3fce803",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/2191b9dc0d460dc736369503a36e99dfe3fce803",
         "commit": {
-          "message": "fix: import shadowGeneratorSceneComponent side-effect\n\nThe Babylon deep-imports refactor in b38089a missed that ShadowGenerator\nneeds Lights/Shadows/shadowGeneratorSceneComponent imported as a\nside-effect — without it, `new ShadowGenerator(...)` throws\n\"ShadowGeneratorSceneComponent needs to be imported before as it\ncontains a side-effect required by your code\", the Game effect crashes,\nReact unmounts the tree, and the page renders blank.\n\nWhy no one caught it earlier:\n- the build succeeds (deep imports type-check fine in isolation)\n- the compliance/CI gates don't run WebGL in a real browser\n- /sw.js wasn't deployed pre-this-session so the old non-PWA build was\n  being served from CF, masking the bug\n- once the actual deploy started running my code, the page was blank\n  end-to-end\n\nVerified the fix end-to-end with browse on http://localhost:5174 after\nthe dev server picked up the side-effect import: root populates with\nthe GameShell + lane + pins + HUD, no console errors except the\nexpected CORS 401 on auth.freegamestore.online/me (user not logged in).\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix: aim direction now matches spin direction\n\nAfter flipping spin to camera-natural (\"drag right = curve right\"),\nthe AIM phase was left with the inverse mapping: dragging right or\npressing ArrowRight moved the ball to the camera-LEFT, because aimX\nwas still naive (positive = +X = camera-left in Babylon's left-handed\ncoords with the camera looking down -Z).\n\nSame gesture, opposite effect across two adjacent phases — confusing.\n\nFlipped both the drag delta (×-0.015 instead of ×+0.015) and the arrow\nkeys (ArrowLeft now +=, ArrowRight now -=) so all aim/spin controls\nagree: right input = camera-right ball motion. aimX still represents\nthe ball's true world-X position, which keeps the render code clean.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T00:18:02Z"
+            "date": "2026-05-19T02:52:51Z"
           }
         }
       }
@@ -458,36 +458,36 @@
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:08:18Z"
     },
     "commits": [
       {
-        "sha": "63cfc421b9fd93bee02c8819f2556dcda5245185",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/63cfc421b9fd93bee02c8819f2556dcda5245185",
+        "sha": "bd233fc90cd05496464b3462a812411948c614d6",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/bd233fc90cd05496464b3462a812411948c614d6",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:08:14Z"
           }
         }
       },
       {
-        "sha": "549256ed9cc41aa9934a2d647cae6e2bec5b04a4",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/549256ed9cc41aa9934a2d647cae6e2bec5b04a4",
+        "sha": "a221b632e4d63b3f74bd2f6ae39ded3372399799",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/a221b632e4d63b3f74bd2f6ae39ded3372399799",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:07Z"
+            "date": "2026-05-19T04:04:12Z"
           }
         }
       },
       {
-        "sha": "e133a6f397b68dcefe91f5816ec5844a68c3071c",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/e133a6f397b68dcefe91f5816ec5844a68c3071c",
+        "sha": "0d3f7d278c301c36646dc6689d74f65a03e2a8cc",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/0d3f7d278c301c36646dc6689d74f65a03e2a8cc",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:26Z"
+            "date": "2026-05-19T03:12:06Z"
           }
         }
       }
@@ -496,36 +496,36 @@
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-18T23:58:49Z"
+      "pushed_at": "2026-05-19T04:08:30Z"
     },
     "commits": [
       {
-        "sha": "9c2418eacfe7e076203eea4e3f25b1d009dfcc08",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/9c2418eacfe7e076203eea4e3f25b1d009dfcc08",
+        "sha": "0a15cb114468b9fa63d284eadff7eb605ece803b",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/0a15cb114468b9fa63d284eadff7eb605ece803b",
         "commit": {
-          "message": "chore: add Biome, README, CSP, patch brace-expansion vuln\n\nTooling polish surfaced by a vcqa scan (vibecodeqa.online — 80→85/B):\n\n- Biome 2.x (single-binary linter + formatter) replaces a missing\n  ESLint/Prettier setup; .editorconfig for non-Biome editors.\n- README at repo root (play / dev / deploy / license).\n- repository, license, engines fields in both package.json files;\n  add test/lint/format scripts at the workspace root.\n- Content-Security-Policy meta on index.html (self + fonts.googleapis,\n  no inline scripts).\n- pnpm override patches brace-expansion ≥5.0.6 (GHSA-jxxr-4gwj-5jf2,\n  transitive via vite-plugin-pwa→workbox→glob→minimatch).\n- .vibe-check/ gitignored.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T23:58:43Z"
+            "date": "2026-05-19T04:08:27Z"
           }
         }
       },
       {
-        "sha": "96c8033421fa40cd87b013f3df8ea8d8ce7d0dfb",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/96c8033421fa40cd87b013f3df8ea8d8ce7d0dfb",
+        "sha": "a2696cd61b6891df6cfc19788436b5fc60fa4575",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/a2696cd61b6891df6cfc19788436b5fc60fa4575",
         "commit": {
-          "message": "fix(game): rewrite for solvability, Unicode tiles, viewport scaling\n\nThe previous build was unwinnable: layout had 151 tiles (odd) and one\ntype had 7 copies, so pairs could never clear the board. The reverse-\nconstruction generator was also failing silently and falling back to\nrandom pairing every game.\n\n- 144-tile 4-layer pyramid (88+36+16+4), all types balanced 4-of-each.\n- Replace reverse-construction with greedy forward simulation: pop two\n  free tiles, record the pair, repeat. The recorded sequence IS the\n  solution, so the game is provably winnable by construction.\n- Unicode mahjong glyphs (🀀-🀫) replace colored boxes for proper tile\n  faces; white-ivory bevel + colored ink per suit (red/green/blue/dark).\n- ResizeObserver + CSS transform auto-fit the board to the viewport\n  (mobile-friendly).\n- Remove auto-shuffle on stuck state (was an infinite useEffect loop\n  on unwinnable decks); show a manual \"tap Shuffle\" banner instead.\n- Score curve steepened: max(0, 10000 - 5·seconds).\n- Delete unused Shell.tsx (orphan since SDK migration).\n- New tests: 144 positions, 36×4 deck invariant, 25-seed solution replay\n  that plays each generated game to completion. 27/27 passing.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T23:58:32Z"
+            "date": "2026-05-19T04:04:24Z"
           }
         }
       },
       {
-        "sha": "068894a8f548e5dc07d380611b88981324d77b9c",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/068894a8f548e5dc07d380611b88981324d77b9c",
+        "sha": "424b4724e5ac12e0c5b7d5a758ba935961b3fbe2",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/424b4724e5ac12e0c5b7d5a758ba935961b3fbe2",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "Add SDK audio: playTick on tile select, playClear on pair match, playLevelUp on board clear, playGameOver on no-moves-left\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T02:38:17Z"
           }
         }
       }
@@ -534,36 +534,36 @@
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:08:23Z"
     },
     "commits": [
       {
-        "sha": "3b172ac900d13fd025adef0b5caf81eb0beec484",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/3b172ac900d13fd025adef0b5caf81eb0beec484",
+        "sha": "19617089ff3daebc7af9d6066de976fcbb04a8a9",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/19617089ff3daebc7af9d6066de976fcbb04a8a9",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:08:21Z"
           }
         }
       },
       {
-        "sha": "f8b5e05b7d95cde24fc24dcd39027732a2dc2083",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/f8b5e05b7d95cde24fc24dcd39027732a2dc2083",
+        "sha": "272d625fc865ae285c4ac15cc9787644eaa40e01",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/272d625fc865ae285c4ac15cc9787644eaa40e01",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:11Z"
+            "date": "2026-05-19T04:04:18Z"
           }
         }
       },
       {
-        "sha": "b24ff781933f29c3b7e26ec8a440dea6586ff0ae",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/b24ff781933f29c3b7e26ec8a440dea6586ff0ae",
+        "sha": "7e98f541190f0d79b965d7cf96808bb415b48bea",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/7e98f541190f0d79b965d7cf96808bb415b48bea",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:09Z"
+            "date": "2026-05-19T03:47:43Z"
           }
         }
       }
@@ -572,36 +572,36 @@
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:04:40Z"
     },
     "commits": [
       {
-        "sha": "00133849d889905b1ab46e6a76f7ad55817732d0",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/00133849d889905b1ab46e6a76f7ad55817732d0",
+        "sha": "5b3b1fe32ef306fa8bd957afbc5915754823610b",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/5b3b1fe32ef306fa8bd957afbc5915754823610b",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:04:37Z"
           }
         }
       },
       {
-        "sha": "6f3ace7b2537af879117f6cad953f4b3a7064342",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/6f3ace7b2537af879117f6cad953f4b3a7064342",
+        "sha": "31d62a1b6ea776d316041c0a725457ecd4e0eecd",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/31d62a1b6ea776d316041c0a725457ecd4e0eecd",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:21Z"
+            "date": "2026-05-19T03:47:52Z"
           }
         }
       },
       {
-        "sha": "9ce0582a1417089ac99fff6bc5b1da56340d5095",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/9ce0582a1417089ac99fff6bc5b1da56340d5095",
+        "sha": "77d7c8dd0886cb6bb1f32653c0dae2950c154946",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/77d7c8dd0886cb6bb1f32653c0dae2950c154946",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:06Z"
+            "date": "2026-05-19T03:03:03Z"
           }
         }
       }
@@ -610,36 +610,36 @@
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:04:57Z"
     },
     "commits": [
       {
-        "sha": "53e19b1971da3b4c01f48f5afd4b1ba6c28ddc8f",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/53e19b1971da3b4c01f48f5afd4b1ba6c28ddc8f",
+        "sha": "cc4699340c53cc33c9fde5fdf25e33db4b4bc2f1",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/cc4699340c53cc33c9fde5fdf25e33db4b4bc2f1",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:24Z"
+            "date": "2026-05-19T04:04:55Z"
           }
         }
       },
       {
-        "sha": "c44c428f7444848dab52ca5f55e13c5106588eda",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/c44c428f7444848dab52ca5f55e13c5106588eda",
+        "sha": "6cb2922a432cc3e1d116fcf12b05d92cf34a3abf",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/6cb2922a432cc3e1d116fcf12b05d92cf34a3abf",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:31Z"
+            "date": "2026-05-19T03:48:03Z"
           }
         }
       },
       {
-        "sha": "721d575c720bf597d8b8c9e883f03c7527cd3061",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/721d575c720bf597d8b8c9e883f03c7527cd3061",
+        "sha": "eda3731722d8f1058038f1261e7ca1a0a294b1d7",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/eda3731722d8f1058038f1261e7ca1a0a294b1d7",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "Add SDK audio: playGameOver on crash\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:00Z"
+            "date": "2026-05-19T03:23:22Z"
           }
         }
       }
@@ -648,36 +648,36 @@
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:04:54Z"
     },
     "commits": [
       {
-        "sha": "e242737052a42b670914abfd03849d38b421a189",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/e242737052a42b670914abfd03849d38b421a189",
+        "sha": "73e186721ee3ebe4ae5fa66efe3c29b09a56ad9d",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/73e186721ee3ebe4ae5fa66efe3c29b09a56ad9d",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:24Z"
+            "date": "2026-05-19T04:04:52Z"
           }
         }
       },
       {
-        "sha": "32cebbf4c9718c0d803dc4a9e571b4a4d10bbfe2",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/32cebbf4c9718c0d803dc4a9e571b4a4d10bbfe2",
+        "sha": "c6a751bc5ce5f261ed6a00f06b13773fdfd6c8ab",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/c6a751bc5ce5f261ed6a00f06b13773fdfd6c8ab",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:29Z"
+            "date": "2026-05-19T03:48:00Z"
           }
         }
       },
       {
-        "sha": "e04f64c75f84c6fc504a8ed3564301754112dbf9",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/e04f64c75f84c6fc504a8ed3564301754112dbf9",
+        "sha": "a8cb5d0281835aed905370ccfdee551bd47e2476",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/a8cb5d0281835aed905370ccfdee551bd47e2476",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "Add SDK audio: playMove on piece placement, playLevelUp on solve\n\nWires useGameSounds in PracticeTab (already inside GameShell, so the\nhook gets the real SoundProvider). Also adds 'node' to tsconfig types\nso the compliance test's __dirname/node:fs imports type-check.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:16:58Z"
+            "date": "2026-05-19T03:21:53Z"
           }
         }
       }
@@ -686,36 +686,36 @@
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:08:38Z"
     },
     "commits": [
       {
-        "sha": "02d4731a513c2bf16e2cef9b960f72361f77e26b",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/02d4731a513c2bf16e2cef9b960f72361f77e26b",
+        "sha": "c4a2a3b5981b11a2a4f2813ce597b4333dcda4f9",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/c4a2a3b5981b11a2a4f2813ce597b4333dcda4f9",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:08:36Z"
           }
         }
       },
       {
-        "sha": "6cf785b9d115d5ea79c208a232cdb6e64707046c",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/6cf785b9d115d5ea79c208a232cdb6e64707046c",
+        "sha": "85c9b9c58fa5c2f6a415949ae0e895bf1cb1fb67",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/85c9b9c58fa5c2f6a415949ae0e895bf1cb1fb67",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:19Z"
+            "date": "2026-05-19T04:04:33Z"
           }
         }
       },
       {
-        "sha": "f5f2c925fef2fff821025f86741c106db096ac38",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/f5f2c925fef2fff821025f86741c106db096ac38",
+        "sha": "c51f4e5ab70b21f28288365d5dae8ea8e4f29f6f",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/c51f4e5ab70b21f28288365d5dae8ea8e4f29f6f",
         "commit": {
-          "message": "docs(CLAUDE): adopt slim per-repo shape\n\nRefactors this CLAUDE.md to the slim convention documented in\nSKILLS.md. Platform-wide knowledge (tech stack, brand, deploy,\nmobile rules, paths) lives in SKILLS.md as the single source of\ntruth -- duplicating it per repo just creates drift surface area\nthat breaks AI agents over time. This file now only carries\nwhat is unique to this repo.",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-14T05:30:50Z"
+            "date": "2026-05-19T03:47:49Z"
           }
         }
       }
@@ -724,36 +724,36 @@
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-18T22:23:16Z"
+      "pushed_at": "2026-05-19T04:07:41Z"
     },
     "commits": [
       {
-        "sha": "ffa065565176a8c6c12a8714a8a9a646376fc0a3",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/ffa065565176a8c6c12a8714a8a9a646376fc0a3",
+        "sha": "51f5ac3164de230f8cd3ec0adc9710d745bdc2ea",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/51f5ac3164de230f8cd3ec0adc9710d745bdc2ea",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:12Z"
+            "date": "2026-05-19T04:07:38Z"
           }
         }
       },
       {
-        "sha": "79c12c835765b55a5b7f8c3971401b4b79448dc3",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/79c12c835765b55a5b7f8c3971401b4b79448dc3",
+        "sha": "1a7adfd5c417c967ac51fe74e28c520d66b6b690",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/1a7adfd5c417c967ac51fe74e28c520d66b6b690",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:33:55Z"
+            "date": "2026-05-19T04:03:36Z"
           }
         }
       },
       {
-        "sha": "9aa6d93e00a1db921bda762efb1f56f9f51c75af",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/9aa6d93e00a1db921bda762efb1f56f9f51c75af",
+        "sha": "0ddd2afd393cf4056f3d901fa3ac9abe3155202c",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/0ddd2afd393cf4056f3d901fa3ac9abe3155202c",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:16:45Z"
+            "date": "2026-05-19T03:47:23Z"
           }
         }
       }
@@ -762,36 +762,36 @@
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:08:02Z"
     },
     "commits": [
       {
-        "sha": "46fcb84981b109f7051e82fc2150cce383c4ffd3",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/46fcb84981b109f7051e82fc2150cce383c4ffd3",
+        "sha": "574c06683bfce27e913b8d2c01b53484191da41c",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/574c06683bfce27e913b8d2c01b53484191da41c",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:07:59Z"
           }
         }
       },
       {
-        "sha": "792fd6290c0ad2e40c2dac6cbf1f55597fb1cfa8",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/792fd6290c0ad2e40c2dac6cbf1f55597fb1cfa8",
+        "sha": "3515eca3aded214c8e098c832a90a3b8c9e5a277",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/3515eca3aded214c8e098c832a90a3b8c9e5a277",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:03Z"
+            "date": "2026-05-19T04:03:57Z"
           }
         }
       },
       {
-        "sha": "3a35638e84ecf49694f81bba9ab7c6fac7c22978",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/3a35638e84ecf49694f81bba9ab7c6fac7c22978",
+        "sha": "3c6f2ee1c5c6a4f119f51bf0196b4c63f5dfd01b",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/3c6f2ee1c5c6a4f119f51bf0196b4c63f5dfd01b",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:16:50Z"
+            "date": "2026-05-19T03:11:56Z"
           }
         }
       }
@@ -800,9 +800,19 @@
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-19T01:59:50Z"
+      "pushed_at": "2026-05-19T04:05:06Z"
     },
     "commits": [
+      {
+        "sha": "3f0ad8a83e04c13b3a83a2c4345ba5603cbc1816",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/3f0ad8a83e04c13b3a83a2c4345ba5603cbc1816",
+        "commit": {
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:05:03Z"
+          }
+        }
+      },
       {
         "sha": "5e206724503d1782be8d1c248e4cf9e506a7dc11",
         "html_url": "https://github.com/freegamestore-online/simon/commit/5e206724503d1782be8d1c248e4cf9e506a7dc11",
@@ -822,52 +832,42 @@
             "date": "2026-05-18T22:23:24Z"
           }
         }
-      },
-      {
-        "sha": "80564498fd0d36489c0c1f073d242e715b24e301",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/80564498fd0d36489c0c1f073d242e715b24e301",
-        "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
-          "author": {
-            "date": "2026-05-17T01:34:33Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:05:12Z"
     },
     "commits": [
       {
-        "sha": "2aae5f9a043015ee9efabbe63d4dacc466ed6af9",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/2aae5f9a043015ee9efabbe63d4dacc466ed6af9",
+        "sha": "d7fb86495bc854f2c5123f27af16ddc541941fa7",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/d7fb86495bc854f2c5123f27af16ddc541941fa7",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:24Z"
+            "date": "2026-05-19T04:05:09Z"
           }
         }
       },
       {
-        "sha": "62855fc0b1f1dea3d886e13a12c1bafdd18afc43",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/62855fc0b1f1dea3d886e13a12c1bafdd18afc43",
+        "sha": "18ad9da2a3892184ffeeefb003d46453aeb2550a",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/18ad9da2a3892184ffeeefb003d46453aeb2550a",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:35Z"
+            "date": "2026-05-19T03:48:14Z"
           }
         }
       },
       {
-        "sha": "b35fc55cb11553f7ba2f9c267e2e559010b3b4fc",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/b35fc55cb11553f7ba2f9c267e2e559010b3b4fc",
+        "sha": "0e9d2e85e803c7c177812d7cf0fd4d6540e1d3be",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/0e9d2e85e803c7c177812d7cf0fd4d6540e1d3be",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:38Z"
+            "date": "2026-05-19T03:12:33Z"
           }
         }
       }
@@ -876,36 +876,36 @@
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:05:39Z"
     },
     "commits": [
       {
-        "sha": "f87e040e2d5bea5c70877af9e9131d7a051edc92",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/f87e040e2d5bea5c70877af9e9131d7a051edc92",
+        "sha": "9438b69a7eb3723b39e95b536a95aec5ace51052",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/9438b69a7eb3723b39e95b536a95aec5ace51052",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:24Z"
+            "date": "2026-05-19T04:05:36Z"
           }
         }
       },
       {
-        "sha": "33aa3b394577005d3f5cfc5005250c1e1d91b871",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/33aa3b394577005d3f5cfc5005250c1e1d91b871",
+        "sha": "1329e23035b7cf4b0cc1b50f47a8925f47891de7",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/1329e23035b7cf4b0cc1b50f47a8925f47891de7",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:45Z"
+            "date": "2026-05-19T03:12:49Z"
           }
         }
       },
       {
-        "sha": "4bc77c57823ab9316354f65ccb0eb9b59b1891fc",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/4bc77c57823ab9316354f65ccb0eb9b59b1891fc",
+        "sha": "749189944e58a5cbdde20c8256afe7430e8e505f",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/749189944e58a5cbdde20c8256afe7430e8e505f",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:11Z"
+            "date": "2026-05-19T03:07:35Z"
           }
         }
       }
@@ -914,9 +914,29 @@
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:05:21Z"
     },
     "commits": [
+      {
+        "sha": "56c0b5314d9bbcab494a7066949a43d92bb0c626",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/56c0b5314d9bbcab494a7066949a43d92bb0c626",
+        "commit": {
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T04:05:19Z"
+          }
+        }
+      },
+      {
+        "sha": "2c95de8ca4466ff87648a72ab1d071b6e237c13f",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/2c95de8ca4466ff87648a72ab1d071b6e237c13f",
+        "commit": {
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T03:12:39Z"
+          }
+        }
+      },
       {
         "sha": "3504c7332a3a822c3f1e27147b353d7368304a4b",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/3504c7332a3a822c3f1e27147b353d7368304a4b",
@@ -926,62 +946,42 @@
             "date": "2026-05-18T22:23:24Z"
           }
         }
-      },
-      {
-        "sha": "d3351f126af178db207b71daf6e7670328cbb094",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/d3351f126af178db207b71daf6e7670328cbb094",
-        "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
-          "author": {
-            "date": "2026-05-17T01:34:39Z"
-          }
-        }
-      },
-      {
-        "sha": "639e40f34f5c7c8352fbce7846ba13683987f049",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/639e40f34f5c7c8352fbce7846ba13683987f049",
-        "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
-          "author": {
-            "date": "2026-05-17T01:17:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:05:30Z"
     },
     "commits": [
       {
-        "sha": "e07e5c507abe304cd20b2716717d46ed037d637a",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/e07e5c507abe304cd20b2716717d46ed037d637a",
+        "sha": "21678de5b3459e86e22f327652d613a31efc4e6b",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/21678de5b3459e86e22f327652d613a31efc4e6b",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:24Z"
+            "date": "2026-05-19T04:05:28Z"
           }
         }
       },
       {
-        "sha": "f9155d3ed13e1a03ec65ba3d2b1971db6bb45505",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/f9155d3ed13e1a03ec65ba3d2b1971db6bb45505",
+        "sha": "cbf32895d78b2dcb87f9c3a9b1a955cb759f6fb4",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/cbf32895d78b2dcb87f9c3a9b1a955cb759f6fb4",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:43Z"
+            "date": "2026-05-19T03:48:22Z"
           }
         }
       },
       {
-        "sha": "cd614d36d16cffe529b475083e8b496269695108",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/cd614d36d16cffe529b475083e8b496269695108",
+        "sha": "23a1a7a168a38563ff90c0abd3170d017abf7018",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/23a1a7a168a38563ff90c0abd3170d017abf7018",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:02Z"
+            "date": "2026-05-19T03:12:46Z"
           }
         }
       }
@@ -990,36 +990,36 @@
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:04:43Z"
     },
     "commits": [
       {
-        "sha": "29c76ac022eb916c18b7756cc551931c0508af7a",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/29c76ac022eb916c18b7756cc551931c0508af7a",
+        "sha": "f7b664f3a41d3d86604af0de02d5a53d407a0fa0",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/f7b664f3a41d3d86604af0de02d5a53d407a0fa0",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:04:40Z"
           }
         }
       },
       {
-        "sha": "f034fab9afccebd4aa8ac11b482f5df2e57d02a3",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/f034fab9afccebd4aa8ac11b482f5df2e57d02a3",
+        "sha": "5faa49bcce675940776811c0edfb6072a5b43f37",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/5faa49bcce675940776811c0edfb6072a5b43f37",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:23Z"
+            "date": "2026-05-19T03:12:19Z"
           }
         }
       },
       {
-        "sha": "809e17ed02e7a2d69a58f9f35cfb3d91b0843759",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/809e17ed02e7a2d69a58f9f35cfb3d91b0843759",
+        "sha": "9dd13ffe7117025b38faa8834f04e14483523467",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/9dd13ffe7117025b38faa8834f04e14483523467",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:16:43Z"
+            "date": "2026-05-19T03:07:07Z"
           }
         }
       }
@@ -1028,36 +1028,36 @@
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:04:51Z"
     },
     "commits": [
       {
-        "sha": "7d7e23179cfcd38f629b52578ff80216fd9b4b92",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/7d7e23179cfcd38f629b52578ff80216fd9b4b92",
+        "sha": "f1b3d48170864f2026bfb71d4f5f4f114a176c7c",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/f1b3d48170864f2026bfb71d4f5f4f114a176c7c",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:24Z"
+            "date": "2026-05-19T04:04:49Z"
           }
         }
       },
       {
-        "sha": "a8956a86c08ab4293a5bc8ed5ee8e7ddfdd099f2",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/a8956a86c08ab4293a5bc8ed5ee8e7ddfdd099f2",
+        "sha": "d47ee7d428114a9be71b8583d7844630731f29f5",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/d47ee7d428114a9be71b8583d7844630731f29f5",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:27Z"
+            "date": "2026-05-19T03:12:23Z"
           }
         }
       },
       {
-        "sha": "0af64dc34a7ed0ab3b23f6c98f64f94623aa61fc",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/0af64dc34a7ed0ab3b23f6c98f64f94623aa61fc",
+        "sha": "ed84136adb9ee2111578ef9939ecfc0422732102",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/ed84136adb9ee2111578ef9939ecfc0422732102",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:23Z"
+            "date": "2026-05-19T03:07:13Z"
           }
         }
       }
@@ -1066,36 +1066,36 @@
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:05:24Z"
     },
     "commits": [
       {
-        "sha": "1fce4a7d0956696f424c00649480c6ae09b714c1",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/1fce4a7d0956696f424c00649480c6ae09b714c1",
+        "sha": "83840529d31f83a68ddeee8d5b26ae096e42a810",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/83840529d31f83a68ddeee8d5b26ae096e42a810",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:24Z"
+            "date": "2026-05-19T04:05:22Z"
           }
         }
       },
       {
-        "sha": "941f6f3c09444a0d2af5b79b8e697b90da987cd1",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/941f6f3c09444a0d2af5b79b8e697b90da987cd1",
+        "sha": "2c7af1978ce2baef5a20939d3f1870fa565f309f",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/2c7af1978ce2baef5a20939d3f1870fa565f309f",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:41Z"
+            "date": "2026-05-19T03:12:43Z"
           }
         }
       },
       {
-        "sha": "5c2d1e47df0f9501b401aea6ed22be88cf7a6476",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/5c2d1e47df0f9501b401aea6ed22be88cf7a6476",
+        "sha": "325313b12a103880d97b02037a951c63df30eb19",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/325313b12a103880d97b02037a951c63df30eb19",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:21Z"
+            "date": "2026-05-19T03:03:12Z"
           }
         }
       }
@@ -1104,36 +1104,36 @@
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:05:44Z"
     },
     "commits": [
       {
-        "sha": "35c3e934c86ed55eca2a4ccea9ebee2eb31f3eb2",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/35c3e934c86ed55eca2a4ccea9ebee2eb31f3eb2",
+        "sha": "800076fcda96a96fe39c8e43c2ec2e9edeadf865",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/800076fcda96a96fe39c8e43c2ec2e9edeadf865",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:24Z"
+            "date": "2026-05-19T04:05:42Z"
           }
         }
       },
       {
-        "sha": "191e9478e1121e71358ea0528b4c70604713cba4",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/191e9478e1121e71358ea0528b4c70604713cba4",
+        "sha": "326f8ba394b0fedc88d022144d73120e4f838d0c",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/326f8ba394b0fedc88d022144d73120e4f838d0c",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "Add SDK audio: playClear on word found, playLevelUp on all words done\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:49Z"
+            "date": "2026-05-19T03:42:35Z"
           }
         }
       },
       {
-        "sha": "a5f32570e24948f5cebdb126b75f67b281d3ccd8",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/a5f32570e24948f5cebdb126b75f67b281d3ccd8",
+        "sha": "cef924445420f885ed83f25aeb777df641351187",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/cef924445420f885ed83f25aeb777df641351187",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:16:56Z"
+            "date": "2026-05-19T03:12:56Z"
           }
         }
       }
@@ -1142,36 +1142,36 @@
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:05:15Z"
     },
     "commits": [
       {
-        "sha": "11accad7f8b85790fdab086f6f05693135329ceb",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/11accad7f8b85790fdab086f6f05693135329ceb",
+        "sha": "97f72cbbd1dcd0f5d3acc4fa7c8bcbf736255b32",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/97f72cbbd1dcd0f5d3acc4fa7c8bcbf736255b32",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:24Z"
+            "date": "2026-05-19T04:05:12Z"
           }
         }
       },
       {
-        "sha": "e5117a925b4920c6f79482ca3393f4366497a278",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/e5117a925b4920c6f79482ca3393f4366497a278",
+        "sha": "a0c81929f3a8ac4b21e33e7374a9b872f04f16bc",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/a0c81929f3a8ac4b21e33e7374a9b872f04f16bc",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:37Z"
+            "date": "2026-05-19T03:12:36Z"
           }
         }
       },
       {
-        "sha": "c80ff209cb52a38e50f2c6d46c7116545fccc2bd",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/c80ff209cb52a38e50f2c6d46c7116545fccc2bd",
+        "sha": "0e4fa14e11560cca39c15f2f712bb269e902f373",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/0e4fa14e11560cca39c15f2f712bb269e902f373",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:16:48Z"
+            "date": "2026-05-19T03:07:30Z"
           }
         }
       }
@@ -1180,36 +1180,36 @@
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:05:41Z"
     },
     "commits": [
       {
-        "sha": "8f1041a5e732196160aaa51600342b33c42ada90",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/8f1041a5e732196160aaa51600342b33c42ada90",
+        "sha": "bad031ab29bb721ea52b3ed4f11b6c5524b80972",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/bad031ab29bb721ea52b3ed4f11b6c5524b80972",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:24Z"
+            "date": "2026-05-19T04:05:39Z"
           }
         }
       },
       {
-        "sha": "d928a8ea6a7ccb2c2c07943ec6aebe36ac323524",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/d928a8ea6a7ccb2c2c07943ec6aebe36ac323524",
+        "sha": "0ee509b0da46e65b424fe79ddad2ff060959e1f6",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/0ee509b0da46e65b424fe79ddad2ff060959e1f6",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "Add SDK audio: playTick on guess, playLevelUp on solve, playGameOver on lose\n\nAlso add @types/node so the compliance test's node:fs imports type-check.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:47Z"
+            "date": "2026-05-19T03:41:21Z"
           }
         }
       },
       {
-        "sha": "4c062a3c9c082f5ee1595f23cace7e783982a591",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/4c062a3c9c082f5ee1595f23cace7e783982a591",
+        "sha": "f519d924afbb20760c6bb64fb1b236574e07e1e1",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/f519d924afbb20760c6bb64fb1b236574e07e1e1",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:19Z"
+            "date": "2026-05-19T03:12:53Z"
           }
         }
       }
@@ -1218,36 +1218,36 @@
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:05:09Z"
     },
     "commits": [
       {
-        "sha": "f754df2e7488ec06f8e8a66a6e9a5590472450f4",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/f754df2e7488ec06f8e8a66a6e9a5590472450f4",
+        "sha": "496b3d0fa8454448a9aea07e78c23e54e71aaf02",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/496b3d0fa8454448a9aea07e78c23e54e71aaf02",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:24Z"
+            "date": "2026-05-19T04:05:06Z"
           }
         }
       },
       {
-        "sha": "22ec8a59fad5c38f71343b04af01d3464d20dadd",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/22ec8a59fad5c38f71343b04af01d3464d20dadd",
+        "sha": "3ff39a33f65911707cd6a8005821476a86f3e4ed",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/3ff39a33f65911707cd6a8005821476a86f3e4ed",
         "commit": {
-          "message": "Bump @freegamestore/games to ^0.13.0",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T02:38:23Z"
+            "date": "2026-05-19T03:48:11Z"
           }
         }
       },
       {
-        "sha": "e21bb7f84bb50c7ecf73703b1a8b7930827d9d5f",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/e21bb7f84bb50c7ecf73703b1a8b7930827d9d5f",
+        "sha": "a383889aba467e1ee784a20790c912f09b333a7e",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/a383889aba467e1ee784a20790c912f09b333a7e",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: regenerate pnpm-lock.yaml for ^0.13.0 SDK pin\n\nCI's --frozen-lockfile refused to install because the lockfile specifier\nwas still ^0.12.0 while package.json had been bumped to ^0.13.0.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:17:17Z"
+            "date": "2026-05-19T03:03:09Z"
           }
         }
       }
@@ -1256,36 +1256,36 @@
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-18T22:23:27Z"
+      "pushed_at": "2026-05-19T04:08:11Z"
     },
     "commits": [
       {
-        "sha": "50196dc6ac748cac1137f6d863d8c184f40cc174",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/50196dc6ac748cac1137f6d863d8c184f40cc174",
+        "sha": "a7cac0d9795def20c70e9fd86997324d37bcbe39",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/a7cac0d9795def20c70e9fd86997324d37bcbe39",
         "commit": {
-          "message": "Fix PWA offline correctness in workbox config\n\nThree offline-from-homescreen failure modes caught by the new\n@freegamestore/compliance PWA-offline check:\n\n- Raise maximumFileSizeToCacheInBytes to 10 MB so the main bundle\n  is precached (default 2 MB silently drops bigger chunks).\n- Add runtimeCaching for fonts.googleapis.com / fonts.gstatic.com\n  so Google Fonts work on cold offline launch in iOS standalone.\n- Extend globPatterns to wasm + json so non-default asset types\n  (e.g. stockfish.wasm) get precached.\n\nMirrors the reference config in the bowling repo.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:23:23Z"
+            "date": "2026-05-19T04:08:08Z"
           }
         }
       },
       {
-        "sha": "f0060fe7f20092733cdf5f17bf42de47ecc5bdd6",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/f0060fe7f20092733cdf5f17bf42de47ecc5bdd6",
+        "sha": "73a66abcec679e840eb87d50f539f40740182234",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/73a66abcec679e840eb87d50f539f40740182234",
         "commit": {
-          "message": "Fix build: vitest types, unused var, use SDK Leaderboard (^0.13.0)",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:34:05Z"
+            "date": "2026-05-19T04:04:07Z"
           }
         }
       },
       {
-        "sha": "885e18ce75acd6057a786387705d9a39b8955f10",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/885e18ce75acd6057a786387705d9a39b8955f10",
+        "sha": "35a2f4fc3191f0a10060e0fd428e84650397b385",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/35a2f4fc3191f0a10060e0fd428e84650397b385",
         "commit": {
-          "message": "Use useLeaderboard from @freegamestore/games instead of local copy",
+          "message": "fix: drop unused `const css` in compliance test\n\ntsc was blocking the build via TS6133 (declared but never read) — the\nvariable lives inside the \"no banned content\" describe block that only\nchecks appTsx. The earlier `const css` inside the \"index.css\" describe\nblock (which IS used by the brand-token assertions) is untouched.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-17T01:16:52Z"
+            "date": "2026-05-19T03:12:02Z"
           }
         }
       }
@@ -1294,26 +1294,36 @@
   "freegamestore-online/reversi": {
     "meta": {
       "created_at": "2026-05-18T23:16:14Z",
-      "pushed_at": "2026-05-18T23:24:38Z"
+      "pushed_at": "2026-05-19T04:05:00Z"
     },
     "commits": [
       {
-        "sha": "c9103ed169c9d0672651cd8b60d6e94c726cc80a",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/c9103ed169c9d0672651cd8b60d6e94c726cc80a",
+        "sha": "b54efa8aa522891154b9cc398188f408a48b6763",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/b54efa8aa522891154b9cc398188f408a48b6763",
         "commit": {
-          "message": "Add reversi game logic",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T23:24:35Z"
+            "date": "2026-05-19T04:04:57Z"
           }
         }
       },
       {
-        "sha": "5ffb2fa2749001b81d55827441ed68774fc8b11b",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/5ffb2fa2749001b81d55827441ed68774fc8b11b",
+        "sha": "d97dd48789928f798f8b5f18bad44b0104203787",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/d97dd48789928f798f8b5f18bad44b0104203787",
         "commit": {
-          "message": "Initial commit from grid template",
+          "message": "Convert reversi into a real installable PWA\n\nWas failing the new PWA offline correctness check: index.html linked\n/manifest.json but vite.config.ts had no VitePWA → service worker was\nnever registered → installable but couldn't load offline from home\nscreen. Also referenced /icons/icon-192.png and /icons/icon-512.png\nthat didn't exist in public/.\n\nFix mirrors the canonical pattern used in bowling, 2048, etc.:\n  - Add vite-plugin-pwa to devDeps; pnpm install regenerates lockfile.\n  - Replace vite.config.ts with a full VitePWA setup — proper\n    workbox config (raised cap, fonts runtime caching, wasm/json in\n    globPatterns), and manifest defined inline so the plugin\n    generates manifest.webmanifest at build.\n  - Drop the static <link rel=\"manifest\"> from index.html (plugin\n    injects its own).\n  - Delete web/public/manifest.json (plugin generates).\n  - Copy icon-192.png and icon-512.png from the canonical set\n    (currently held in bowling).\n\nPreserves theme_color (#2563eb) and background_color (#ffffff)\nfrom the prior manifest.json. Does not touch web/src/App.tsx —\nleft to a sibling agent's in-flight work.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:46:23Z"
+            "date": "2026-05-19T03:48:55Z"
+          }
+        }
+      },
+      {
+        "sha": "7924580bdd585e7b20aeca89505848bbb11ec20b",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/7924580bdd585e7b20aeca89505848bbb11ec20b",
+        "commit": {
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T03:48:06Z"
           }
         }
       }
@@ -1322,36 +1332,36 @@
   "freegamestore-online/tictactoe": {
     "meta": {
       "created_at": "2026-05-18T22:50:34Z",
-      "pushed_at": "2026-05-19T00:30:40Z"
+      "pushed_at": "2026-05-19T04:05:33Z"
     },
     "commits": [
       {
-        "sha": "91220d112310fb0679e2487debf3c383fe1d2e98",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/91220d112310fb0679e2487debf3c383fe1d2e98",
+        "sha": "75010fbf6d88e51d40b890899a0d297666d9a961",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/75010fbf6d88e51d40b890899a0d297666d9a961",
         "commit": {
-          "message": "Display streak in topbar (fix unused-var build error)",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T00:30:38Z"
+            "date": "2026-05-19T04:05:30Z"
           }
         }
       },
       {
-        "sha": "e9f7f7c56abc2e9f9efaddbef344ea10484159f5",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/e9f7f7c56abc2e9f9efaddbef344ea10484159f5",
+        "sha": "2dfee7a0eb3d834e4693e926bd2bc2a83a790495",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/2dfee7a0eb3d834e4693e926bd2bc2a83a790495",
         "commit": {
-          "message": "Add real tic-tac-toe game (minimax AI, was shipping template default)",
+          "message": "Convert tictactoe into a real installable PWA\n\nWas failing the new PWA offline correctness check: index.html linked\n/manifest.json but vite.config.ts had no VitePWA → service worker was\nnever registered → installable but couldn't load offline from home\nscreen.\n\nFix mirrors the canonical pattern in bowling/2048/etc: add\nvite-plugin-pwa, full workbox config in vite.config.ts, drop static\nmanifest link + file (plugin generates), add the icon-192/512 the\nmanifest references.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T00:30:15Z"
+            "date": "2026-05-19T03:49:09Z"
           }
         }
       },
       {
-        "sha": "97076b9134b8e47fdbe59e0e50e671eb768fcf77",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/97076b9134b8e47fdbe59e0e50e671eb768fcf77",
+        "sha": "543c0ba5257c120e9b2ba133f07b5f2279804018",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/543c0ba5257c120e9b2ba133f07b5f2279804018",
         "commit": {
-          "message": "Add tictactoe game logic",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T23:24:29Z"
+            "date": "2026-05-19T03:48:25Z"
           }
         }
       }
@@ -1360,26 +1370,36 @@
   "freegamestore-online/blackjack": {
     "meta": {
       "created_at": "2026-05-18T23:17:31Z",
-      "pushed_at": "2026-05-18T23:24:34Z"
+      "pushed_at": "2026-05-19T04:07:49Z"
     },
     "commits": [
       {
-        "sha": "5fbd4448307b4962c56b3869bbedee87d7c72d42",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/5fbd4448307b4962c56b3869bbedee87d7c72d42",
+        "sha": "dcd8ae8fb21558fa9b1f8676a6a71f6b9b90995b",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/dcd8ae8fb21558fa9b1f8676a6a71f6b9b90995b",
         "commit": {
-          "message": "Add blackjack game logic",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T23:24:32Z"
+            "date": "2026-05-19T04:07:47Z"
           }
         }
       },
       {
-        "sha": "7f86f60a9ef77b0301a4251d29cf367011539e28",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/7f86f60a9ef77b0301a4251d29cf367011539e28",
+        "sha": "a5f1ab736af6e83b45153d19d5aaf57153c4d91e",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/a5f1ab736af6e83b45153d19d5aaf57153c4d91e",
         "commit": {
-          "message": "Initial commit from canvas template",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:46:09Z"
+            "date": "2026-05-19T04:03:45Z"
+          }
+        }
+      },
+      {
+        "sha": "cf747f1a3d2b98ad1c946e8a7b53881e23bf91fe",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/cf747f1a3d2b98ad1c946e8a7b53881e23bf91fe",
+        "commit": {
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T03:47:32Z"
           }
         }
       }
@@ -1388,26 +1408,36 @@
   "freegamestore-online/bubbleshooter": {
     "meta": {
       "created_at": "2026-05-18T23:17:44Z",
-      "pushed_at": "2026-05-18T23:24:40Z"
+      "pushed_at": "2026-05-19T04:07:59Z"
     },
     "commits": [
       {
-        "sha": "be68a9b19307817dc4c74a5e2399e2c26d7c32bd",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/be68a9b19307817dc4c74a5e2399e2c26d7c32bd",
+        "sha": "2ccbff31621ce221a502069687ab7cc5e446afce",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/2ccbff31621ce221a502069687ab7cc5e446afce",
         "commit": {
-          "message": "Add bubbleshooter game logic",
+          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T23:24:38Z"
+            "date": "2026-05-19T04:07:56Z"
           }
         }
       },
       {
-        "sha": "1494b6e18e9022a6b96098598f8a2642594f245e",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/1494b6e18e9022a6b96098598f8a2642594f245e",
+        "sha": "657e561b804ce2af1389feee33234c5855ea4b5e",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/657e561b804ce2af1389feee33234c5855ea4b5e",
         "commit": {
-          "message": "Initial commit from canvas template",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:46:32Z"
+            "date": "2026-05-19T04:03:54Z"
+          }
+        }
+      },
+      {
+        "sha": "67ec5cac1beb516efd0812e2c76c997a0e8e29c0",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/67ec5cac1beb516efd0812e2c76c997a0e8e29c0",
+        "commit": {
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T03:47:34Z"
           }
         }
       }
@@ -1416,26 +1446,36 @@
   "freegamestore-online/spaceinvaders": {
     "meta": {
       "created_at": "2026-05-18T23:17:56Z",
-      "pushed_at": "2026-05-18T23:24:43Z"
+      "pushed_at": "2026-05-19T04:05:18Z"
     },
     "commits": [
       {
-        "sha": "387e9fbb47c3a5bb2ac7ff4b51911f118f849742",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/387e9fbb47c3a5bb2ac7ff4b51911f118f849742",
+        "sha": "798a87118282e3e09f3bbdc69166a6245f1a9b3a",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/798a87118282e3e09f3bbdc69166a6245f1a9b3a",
         "commit": {
-          "message": "Add spaceinvaders game logic",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T23:24:41Z"
+            "date": "2026-05-19T04:05:16Z"
           }
         }
       },
       {
-        "sha": "701d7787baa4fdd50eb00e3ae7383c9c25df4143",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/701d7787baa4fdd50eb00e3ae7383c9c25df4143",
+        "sha": "238f8b821e57723e24dc9ced446605adf667efdc",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/238f8b821e57723e24dc9ced446605adf667efdc",
         "commit": {
-          "message": "Initial commit from canvas template",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-18T22:46:43Z"
+            "date": "2026-05-19T03:48:17Z"
+          }
+        }
+      },
+      {
+        "sha": "7123f992f0c625481366d9f77365f37dd147122b",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/7123f992f0c625481366d9f77365f37dd147122b",
+        "commit": {
+          "message": "Add SDK audio: playMove on shot, playClear on alien killed, playError on bomb hit, playGameOver on death, playLevelUp on wave clear\n\nUses AudioBridge pattern: tiny ref-based child of GameShell exposes the\nuseGameSounds() return to the App scope. Required because useGameSounds\nreads SoundContext which GameShell provides INTERNALLY — calling it at\nApp level would get the disconnected default.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T03:45:03Z"
           }
         }
       }
@@ -1444,26 +1484,36 @@
   "freegamestore-online/war": {
     "meta": {
       "created_at": "2026-05-19T00:05:08Z",
-      "pushed_at": "2026-05-19T00:05:30Z"
+      "pushed_at": "2026-05-19T04:05:36Z"
     },
     "commits": [
       {
-        "sha": "9a1a48637141c85b8fc3b4680b1db2821b3e5b6e",
-        "html_url": "https://github.com/freegamestore-online/war/commit/9a1a48637141c85b8fc3b4680b1db2821b3e5b6e",
+        "sha": "1c16114c1929860872c86ee9878f2ec595df6fb3",
+        "html_url": "https://github.com/freegamestore-online/war/commit/1c16114c1929860872c86ee9878f2ec595df6fb3",
         "commit": {
-          "message": "Add war game logic",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T00:05:27Z"
+            "date": "2026-05-19T04:05:33Z"
           }
         }
       },
       {
-        "sha": "3eb5fc58e720b678794de1709d26a912aa0962d9",
-        "html_url": "https://github.com/freegamestore-online/war/commit/3eb5fc58e720b678794de1709d26a912aa0962d9",
+        "sha": "fee5cc1a9039a990f5a117247e80e2d26c07d81d",
+        "html_url": "https://github.com/freegamestore-online/war/commit/fee5cc1a9039a990f5a117247e80e2d26c07d81d",
         "commit": {
-          "message": "Initial commit from canvas template",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T00:02:54Z"
+            "date": "2026-05-19T03:48:28Z"
+          }
+        }
+      },
+      {
+        "sha": "ff4c2a1f019474cbcc6554995ed4d9d9a59afc6a",
+        "html_url": "https://github.com/freegamestore-online/war/commit/ff4c2a1f019474cbcc6554995ed4d9d9a59afc6a",
+        "commit": {
+          "message": "fix: compliance.yml uses correct freegamestore.online URL\n\nThe store-link check was grepping for freeappstore.online (wrong store\ntemplate). Source already references freegamestore.online correctly;\nthis just realigns the check.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T03:08:16Z"
           }
         }
       }
@@ -1472,36 +1522,36 @@
   "freegamestore-online/tanks": {
     "meta": {
       "created_at": "2026-05-19T00:51:54Z",
-      "pushed_at": "2026-05-19T02:11:30Z"
+      "pushed_at": "2026-05-19T04:05:27Z"
     },
     "commits": [
       {
-        "sha": "06934cc3a9d97cfcb968978e7a4c2e01178689ab",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/06934cc3a9d97cfcb968978e7a4c2e01178689ab",
+        "sha": "76675aac450b21f8e65a993855c7728ace2b9180",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/76675aac450b21f8e65a993855c7728ace2b9180",
         "commit": {
-          "message": "Tanks: more bug fixes\n\n- Win condition (all 5 stages cleared) now records bestScore + bestStage.\n  Previously a silent miss — they only updated on the game-over path, so\n  beating every stage didn't register as a high score.\n- One-bullet-per-tank rule (classic Battle City). Cooldown alone wasn't\n  enough — 380ms cooldown × 0.36 px/ms bullet speed = 136 px travel, far\n  short of the 364px field, so rapid-tap let players have 2-3 bullets in\n  flight at once. Tracking ownerId now strictly enforces the limit.\n- damageBullet priority fixed: when a 4-px bullet straddles a brick + a\n  steel tile, the brick was getting smashed but the outcome was reported\n  as \"steel\" — so the smash sound + visual didn't fire. New priority is\n  base > brick > steel > none.\n- Steel hits now play playTick (small click) for audio feedback. Was\n  silent before.",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T02:11:28Z"
+            "date": "2026-05-19T04:05:25Z"
           }
         }
       },
       {
-        "sha": "8de7d9c2d10f635c81455b4ea36c662ebef5b81d",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/8de7d9c2d10f635c81455b4ea36c662ebef5b81d",
+        "sha": "25b6ed5050d7f7895292b89cf7943832bf42cb46",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/25b6ed5050d7f7895292b89cf7943832bf42cb46",
         "commit": {
-          "message": "Tanks: bug fixes + visual polish\n\nBugs fixed\n- Phase transitions (stage-clear / game-over) fired their sound + setState many\n  times in a row because the if-block re-entered every animation frame between\n  setPhase() and React's next render. Flip phaseRef synchronously to one-shot it.\n- Player respawn placed the tank inside whatever enemy was sitting on the spawn\n  point — no overlap handling. Now any overlapping enemy ram-dies (worth full\n  points + popup), so the player can always emerge.\n- Bullet-vs-bullet cancel — player bullets and enemy bullets now annihilate\n  on collision (NES Battle City behavior). Pure pass-through was unrealistic.\n\nLevels\n- Added LEVEL_4 (steel-pillar corridors) and LEVEL_5 (steel-ring boss). Full\n  5-stage progression, validated: 13 rows, all spawn zones (TL/TM/TR + player)\n  clear, all 5 levels navigable with 2-wide tank.\n\nVisuals\n- Score popups (+100/+200/+400 in NES-yellow) float up from killed tanks\n  and fade over 800ms.\n- CRT scanline overlay across the field (1px every 3px, multiply-blended).\n- Outer brown-gradient frame around the canvas with a chunky yellow border —\n  closer to the NES Battle City cabinet feel.\n- Drop-shadow on score-popup text for readability against any tile.",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T02:04:18Z"
+            "date": "2026-05-19T03:48:20Z"
           }
         }
       },
       {
-        "sha": "a777b56c4fea69d2cda5fab01883567ec58157c6",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/a777b56c4fea69d2cda5fab01883567ec58157c6",
+        "sha": "1b76e98471b1c704b80c54929694b354c6b9a218",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/1b76e98471b1c704b80c54929694b354c6b9a218",
         "commit": {
-          "message": "Tanks: stages + progression, tank-vs-tank collision, NES-style UI\n\nLevels & progression\n- 3 distinct stage layouts (open / brick / steel-maze) of escalating difficulty\n- Stage state machine: intro → stage-intro → playing → stage-clear → next stage / over / won\n- \"STAGE N\" overlay on entry (1.8s)\n- Stage-clear summary screen: kills by enemy kind × points + survive bonus + running total\n- Player keeps lives & score across stages; lose-all-lives or eagle-hit ends the run\n- \"Best score\" + \"Top stage reached\" persisted via useHighScore\n\nTank-vs-tank collision (was ghost-mode)\n- tryMove now takes a `others` list and rejects moves that overlap any live tank\n- Player blocked by enemies; enemies blocked by player + each other\n- Stuck enemies redirect quickly (aiTimer drops to 120ms on blocked move)\n\nEnemy variety\n- 3 kinds: basic (1 hp, 100 pts), fast (1 hp, faster, 200 pts), armor (3 hp, slow, 400 pts)\n- HP indicator dots on multi-hit tanks\n- Per-kind colors: silver / white / gold\n\nUI closer to historical Battle City\n- Enemy queue strip above the field — one mini-tank icon per un-spawned enemy\n- Title now includes current stage: \"Tanks · Stage N\"\n- Stage-clear breakdown matches NES bookkeeping layout\n- Bullets visually distinct (player/enemy)",
+          "message": "fix: compliance.yml uses correct freegamestore.online URL\n\nThe store-link check was grepping for freeappstore.online (wrong store\ntemplate). Source already references freegamestore.online correctly;\nthis just realigns the check.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T01:35:38Z"
+            "date": "2026-05-19T03:08:16Z"
           }
         }
       }
@@ -1510,26 +1560,36 @@
   "freegamestore-online/riichi": {
     "meta": {
       "created_at": "2026-05-19T02:31:10Z",
-      "pushed_at": "2026-05-19T02:31:28Z"
+      "pushed_at": "2026-05-19T04:05:03Z"
     },
     "commits": [
       {
-        "sha": "3dcf027e2e93e7989c7cc8bcdf212cd97dfc93db",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/3dcf027e2e93e7989c7cc8bcdf212cd97dfc93db",
+        "sha": "455fed84f6c574edbcc307ebce819b111f4ca0d3",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/455fed84f6c574edbcc307ebce819b111f4ca0d3",
         "commit": {
-          "message": "Build single-player Riichi v0.2 engine + UI\n\nPure-TS engine under web/src/engine/:\n- tiles.ts: 34-type tile system, Unicode glyphs, parseHand/formatHand helpers\n- wall.ts: 136-tile shuffled wall + dead wall + dora indicator + deal\n- evaluator.ts: 14-tile shape decomposer (standard / chiitoitsu / kokushi)\n                with isTenpai and waits helpers\n- yaku.ts: subset detector (Riichi, Ippatsu, Menzen Tsumo, Pinfu, Tanyao,\n           Yakuhai for round/seat winds + dragons, Iipeikou, Toitoi,\n           Honitsu, Chinitsu, Chiitoitsu, Kokushi)\n- score.ts: naive fu (30 / 25 chiitoitsu) + han + base-point lookup with\n            mangan/haneman/baiman/sanbaiman/yakuman caps; per-payer\n            transfers with round-up-to-100\n- game.ts: state machine for one kyoku — human seat 0 vs three random-\n           discard bots, riichi/tsumo/ron actions for the human\n\nUI under web/src/components/Board.tsx:\n- Bottom row: 13-tile hand + drawn tile (lifted), tap to discard\n- 3 opponents shown as tile-back rows (top/left/right)\n- 4 discard piles in the centre of the table\n- Riichi / Tsumo / Ron buttons surface only when legal\n- Win modal with yaku list, han/fu, points, and the round's score table\n\nv0.2 cuts (documented in App.tsx rules popover):\n- No calling chi/pon/kan — fully closed hands only\n- Bots never call, riichi, or tsumo\n- Single hand per session, no honba/round progression\n- Fixed fu (30 standard, 25 chiitoitsu)\n- Rare yaku (sanshoku/ittsuu/chanta/haitei/rinshan/etc.) not detected\n- Multiplayer over FGS rooms is planned but not implemented\n\n16 tests pass (12 evaluator + 4 scoring integration).\nfgs check: all hard checks pass, bundle 68 KB gzip / 224 KB raw.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T02:31:01Z"
+            "date": "2026-05-19T04:05:00Z"
           }
         }
       },
       {
-        "sha": "7e45b4fa6c22d2514f63b38f80d81b8d97891cb3",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/7e45b4fa6c22d2514f63b38f80d81b8d97891cb3",
+        "sha": "1b336460ddfce00b3731823f7564d81be10f2f20",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/1b336460ddfce00b3731823f7564d81be10f2f20",
         "commit": {
-          "message": "Initial commit from grid template",
+          "message": "Polish UI: bigger tiles, responsive center, show dora, fix riichi-mode lock\n\n- Bump tile sizes (lg 38→48, md 28→32, sm 20→22, tile-backs 18→22). Glyph\n  font scales up to 36px on the human hand, so Unicode mahjong tile faces\n  actually render legibly on a phone.\n- Replace the fixed 360×360 centre with `min(70vmin, 460px)` so it scales\n  with the viewport — portrait phones get a big board, landscape phones\n  shrink the centre without overflowing. The whole table now has a felt-\n  green radial gradient.\n- Surface the dora indicator inside the centre HUD next to the wall-tile\n  counter, with a styled translucent panel so the round / turn / wall info\n  is readable against the discards.\n- Human hand uses `flex-wrap: nowrap` + horizontal scroll instead of\n  wrapping into two rows on narrow phones.\n- Fix the lingering riichi-arming bug: if the human entered riichi mode\n  and then state cycled (turn changed, hand state no longer tenpai-able),\n  the Cancel button vanished and the mode got stuck. Now we reset\n  riichiMode the moment canRiichi flips false, and keep the toggle button\n  visible whenever the mode is active.\n- Score uses thousand-separators (toLocaleString) and the RIICHI badge\n  swapped to high-contrast yellow.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T02:01:19Z"
+            "date": "2026-05-19T03:50:27Z"
+          }
+        }
+      },
+      {
+        "sha": "c3544b28fd81322f9f867d2ed7a0fc91e6ed8e2b",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/c3544b28fd81322f9f867d2ed7a0fc91e6ed8e2b",
+        "commit": {
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T03:48:09Z"
           }
         }
       }
@@ -1538,26 +1598,36 @@
   "freegamestore-online/pinball": {
     "meta": {
       "created_at": "2026-05-19T02:33:08Z",
-      "pushed_at": "2026-05-19T02:33:19Z"
+      "pushed_at": "2026-05-19T04:04:46Z"
     },
     "commits": [
       {
-        "sha": "8c78facd03fda713195059278ee560836632ef6d",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/8c78facd03fda713195059278ee560836632ef6d",
+        "sha": "5dbe474ae4dbac2dd191d5e9d92e0f64ef4695ec",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/5dbe474ae4dbac2dd191d5e9d92e0f64ef4695ec",
         "commit": {
-          "message": "Add Pinball game logic (canvas physics, flippers, bumpers, slingshots)",
+          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T02:33:16Z"
+            "date": "2026-05-19T04:04:43Z"
           }
         }
       },
       {
-        "sha": "9c8e8c0bc20767f0d3fbd7ea6816270c151ddefa",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/9c8e8c0bc20767f0d3fbd7ea6816270c151ddefa",
+        "sha": "e1fb57aaf5815717b723e92e311bfb000e2e8fb8",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/e1fb57aaf5815717b723e92e311bfb000e2e8fb8",
         "commit": {
-          "message": "Initial commit from canvas template",
+          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-19T02:30:07Z"
+            "date": "2026-05-19T03:47:55Z"
+          }
+        }
+      },
+      {
+        "sha": "446b3c058fb75aff01a04cf6cfe8281217d5b5b3",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/446b3c058fb75aff01a04cf6cfe8281217d5b5b3",
+        "commit": {
+          "message": "fix: compliance.yml uses correct freegamestore.online URL\n\nThe store-link check was grepping for freeappstore.online (wrong store\ntemplate). Source already references freegamestore.online correctly;\nthis just realigns the check.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T03:08:16Z"
           }
         }
       }
