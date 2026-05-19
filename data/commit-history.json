@@ -154,9 +154,19 @@
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-19T06:01:24Z"
+      "pushed_at": "2026-05-19T06:23:53Z"
     },
     "commits": [
+      {
+        "sha": "e464ff8b7aead2a0c46bf01bb78fd8b875a606d5",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/e464ff8b7aead2a0c46bf01bb78fd8b875a606d5",
+        "commit": {
+          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nReplaces the inline build/compliance/deploy pipeline with a thin\ncaller of freegamestore-online/freegamestore's reusable workflow.\nSame behavior, single source of truth for the pipeline.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:23:50Z"
+          }
+        }
+      },
       {
         "sha": "d5db566e08cbb009280f0c3f65a772e1d083c166",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/d5db566e08cbb009280f0c3f65a772e1d083c166",
@@ -174,16 +184,6 @@
           "message": "fix(compliance): attribute freegamestore.online in main.tsx\n\nThe 'FreeGameStore link' compliance check greps web/src/ for the store\nURL. Adding the attribution as a top-of-file comment in main.tsx\nsatisfies the check without touching gameplay code.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:10:57Z"
-          }
-        }
-      },
-      {
-        "sha": "93b9efea7911d296d101e1d813f97e15809385d8",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/93b9efea7911d296d101e1d813f97e15809385d8",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:07:53Z"
           }
         }
       }
@@ -420,9 +420,29 @@
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-19T06:01:14Z"
+      "pushed_at": "2026-05-19T06:24:34Z"
     },
     "commits": [
+      {
+        "sha": "f9021dea6a130f0a71d41c96a95dc0b7adc10b47",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/f9021dea6a130f0a71d41c96a95dc0b7adc10b47",
+        "commit": {
+          "message": "ci: drop ci.yml and compliance.yml — superseded by reusable workflow\n\nci.yml was a single typecheck-on-PR step; the new reusable workflow's\nbuild step does `tsc -b` as part of `pnpm build`, covering it.\n\ncompliance.yml was 50+ lines of grep-based file checks (tracking SDKs,\nbrand fonts, manifest fields, bundle size). All of these are now run\nby @freegamestore/cli inside the reusable workflow, and that CLI\ncovers more (brand-token leaks, audio mute hook, store link, etc.)\nthan the hand-rolled grep checks did.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:24:31Z"
+          }
+        }
+      },
+      {
+        "sha": "b1efe5e06c1564a2f7d4e865dfa5e02200f6400f",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/b1efe5e06c1564a2f7d4e865dfa5e02200f6400f",
+        "commit": {
+          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nReplaces the 60+ line inline build/compliance/deploy pipeline with a\n~15-line caller of freegamestore-online/freegamestore's reusable\nworkflow. Same behavior — pinned CLI 0.1.9, build + compliance on\npush AND PR, wrangler deploy gated on push-to-main — but the entire\npipeline now lives in one place and bumps come as one upstream PR\ninstead of 43.\n\nAlso drops the now-redundant ci.yml (typecheck-on-PR) and\ncompliance.yml (grep-based file checks). The reusable workflow's\nbuild step covers typecheck via tsc -b, and @freegamestore/cli covers\nthe grep checks more comprehensively.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:23:41Z"
+          }
+        }
+      },
       {
         "sha": "95080005e729e026ed5b7ae3ad24c4639cc54734",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/95080005e729e026ed5b7ae3ad24c4639cc54734",
@@ -430,26 +450,6 @@
           "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T06:01:12Z"
-          }
-        }
-      },
-      {
-        "sha": "6e8a320b917cab5146c2543696f6fcb019d73f34",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/6e8a320b917cab5146c2543696f6fcb019d73f34",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:07:50Z"
-          }
-        }
-      },
-      {
-        "sha": "899396104460ba79ce039bd5b734696e2b8e14b8",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/899396104460ba79ce039bd5b734696e2b8e14b8",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:03:48Z"
           }
         }
       }
@@ -1560,9 +1560,19 @@
   "freegamestore-online/riichi": {
     "meta": {
       "created_at": "2026-05-19T02:31:10Z",
-      "pushed_at": "2026-05-19T06:18:49Z"
+      "pushed_at": "2026-05-19T06:27:53Z"
     },
     "commits": [
+      {
+        "sha": "ace34f626141b981928a40820d13bea54398d733",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/ace34f626141b981928a40820d13bea54398d733",
+        "commit": {
+          "message": "Open calls: pon + chi (open melds, yaku adjusted, bot AI)\n\nRiichi without calls was technically Mahjong-shaped solitaire. Adding pon\nand chi makes hands branchy and competitive. Skipped kan — replacement\ndraws, dora flips, and shouminkan/ankan distinctions add a lot of corners\nfor marginal gameplay value.\n\nDATA MODEL\n- New OpenMeld type ({type, baseTile, called, from}). PlayerState gains\n  a `melds: OpenMeld[]` field; concealed `hand` shrinks by 3 per call.\n- clone / newGame / nextHand carry melds.\n\nEVALUATOR / YAKU\n- evaluateHand(concealed, openMeldCount): accepts open-meld count, validates\n  concealed-tile budget = 14 - 3·count, only tries chiitoitsu / kokushi when\n  fully concealed.\n- isTenpai / waits gain the same openMeldCount parameter.\n- detectYaku(concealed, winTile, openMelds, ctx): rebuilds the all-tile view\n  from concealed + meld tiles for tile-content yaku (tanyao / honitsu /\n  chinitsu); shape-driven yaku merge open + concealed melds for triplet/run\n  counts (so e.g. yakuhai fires on an open pon).\n- Closed-only yaku (riichi / ippatsu / menzen tsumo / pinfu / iipeikou)\n  correctly skipped when melds.length > 0. Honitsu / chinitsu use the open\n  variant han values.\n- canDeclareRiichi blocks when any open meld exists.\n\nCALLS\n- canPon(state, seat): 2 in hand, not your own discard, not riichi-locked.\n- chiOptions(state, seat): only next-seat, numbered tile, returns the\n  base-tile of each possible run (handles 3 cases: tile-2,-1; tile-1,+1;\n  tile,+1,+2).\n- callPon / callChi: build the meld, remove the consumed tiles from hand,\n  pop the called tile off the discarder's pile, jump active to caller in\n  awaiting-discard, kill ippatsu globally.\n- discard() now resolves bot calls in priority order: ron first, then pon.\n  maybeBotPon only fires on yakuhai (dragons or matching seat/round wind)\n  so bots don't pon themselves into yaku-less hands.\n\nUI\n- Open melds render to the right of the concealed hand (md size for human)\n  and in the opponent rows (sm size).\n- Call window: Ron / Pon / Chi / Pass buttons surface whenever the human\n  has any call after a discard; the advance-after-draw timer holds the\n  window open until the human picks something.\n- riichiMode auto-resets when canRiichi becomes false (already existed,\n  unchanged).\n\nTESTS\n- 5 new pon / chi tests: canPon detection, callPon meld + turn shift,\n  chiOptions next-seat-only and base-tile enumeration, callChi tile\n  removal + claim, riichi-locked players can't call. Total 33/33.\n\nBundle 71 KB gzip / 243 KB raw, all hard checks pass.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:27:50Z"
+          }
+        }
+      },
       {
         "sha": "f2a81641ebae479cef03f6be182ba3d702cbdd91",
         "html_url": "https://github.com/freegamestore-online/riichi/commit/f2a81641ebae479cef03f6be182ba3d702cbdd91",
@@ -1580,16 +1590,6 @@
           "message": "Multi-hand East round + bots that can win + honba/riichi sticks\n\nRiichi as one isolated hand felt like a demo; now it's a real session.\n\nENGINE\n- GameState gains handNumber (1..4 East), honba, riichiSticks, roundComplete.\n- nextHand(state): advances dealer on non-dealer win, keeps dealer + bumps\n  honba on dealer win or exhaustive draw, marks round complete past East 4.\n- declareTsumoFor(state, seat) and commitRonFor(state, ronner) replace the\n  hard-coded HUMAN_SEAT versions; declareTsumo/commitRon kept as thin wrappers.\n- maybeBotRon(state): after every discard, scan seats in priority order\n  starting at discarder+1. Stop at the human if they can ron (UI handles).\n  Bots between discarder and human auto-call and win.\n- botDiscard now tsumos when its hand wins before considering a discard.\n- declareRiichi deposits 1000pts onto the table as a riichi stick.\n- Both win paths now pay out honba (100/payer tsumo, 300 total ron) AND\n  the riichi-stick pot to the winner. Result modal reports the correct\n  totalPoints including bonuses.\n\nUI\n- HUD: round label is now \"E-1\" style with hand number, plus honba and\n  stick counters when nonzero.\n- Result modal: \"Next hand →\" or \"Finish round →\" depending on whether\n  the next hand would push past East 4. Points use thousand-separators.\n- New RoundCompleteModal: medal-ranked final scores, \"Start new round\"\n  button that resets to East-1 honba 0.\n- Reducer gains a `next-hand` action that calls into engine `nextHand`.\n\nTESTS\n- 4 new turn-flow tests cover non-dealer-win rotation, dealer-renchan\n  bumping honba, the round-complete trigger past East 4, and the nextHand\n  guard against being called mid-hand. Total 28/28.\n\nBundle 69.8 KB gzip.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T06:07:17Z"
-          }
-        }
-      },
-      {
-        "sha": "3e3ad36cb56a6883136c604307d024922ace22fd",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/3e3ad36cb56a6883136c604307d024922ace22fd",
-        "commit": {
-          "message": "Make the game actually playable: waits, smarter bots, ippatsu, turn HUD\n\nFour real bugs / UX gaps fixed:\n\n1. **Ippatsu was almost always wrong.** The yaku context used\n   `state.turn === player.riichiTurn + 1` — which only matched the *first*\n   bot's discard after the declaration, missing the rest of the go-around\n   and the riichi-declarer's own next tsumo. Replaced with an explicit\n   `ippatsuActive` flag on PlayerState, set true after the declaration\n   discard and cleared on the declarer's next discard.\n\n2. **No tenpai / waits indicator.** The player had no way to know whether\n   they were one away from winning or which tiles would complete the hand,\n   making real play impossible. New `humanWaits(state)` engine function\n   plus a TENPAI badge over the hand that renders the waiting tiles as\n   small face-up tiles.\n\n3. **Riichi mode was trial-and-error.** Tapping a tile that wouldn't keep\n   the hand in tenpai silently did nothing. New `legalRiichiDiscardIndices`\n   engine helper; UI dims + disables non-legal tiles while riichi mode is\n   armed, and highlights the legal ones with the riichi-yellow outline.\n\n4. **\"Your turn\" wasn't visible to the player.** Opponents glow when\n   active, but the human side had no indicator. Added a YOUR TURN pill\n   next to the score badge.\n\nPlus the bot rewrite: replaced the \"random with isolated-honor heuristic\"\ndiscarder with a per-tile usefulness score\n   (same-tile partners + same-suit neighbours +\n    kanchan partners − honor/terminal flexibility penalty).\nBots now keep pairs and runs and discard the actually-orphan tile, which\nis roughly beginner play. Random bots gave the human winning tiles for\nfree; this stops that.\n\nEngine tests: 24/24 (added 3: ippatsu default state, humanWaits sanity,\n13-tile non-tenpai hand returns no waits). Bundle 69.4 KB gzip.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T05:09:05Z"
           }
         }
       }
