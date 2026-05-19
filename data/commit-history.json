@@ -40,9 +40,29 @@
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-19T05:02:46Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "6d943081c32d3c42d416e8fa3420ab87517a58ad",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/6d943081c32d3c42d416e8fa3420ab87517a58ad",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:21Z"
+          }
+        }
+      },
+      {
+        "sha": "814e410545794822544ae41b10719196860b3275",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/814e410545794822544ae41b10719196860b3275",
+        "commit": {
+          "message": "fix(voice): describeMoveSpoken broken for capture-promotions + check suffix\n\nTwo voice-narration bugs found by reading the code carefully:\n\n1. Pawn capture-promotion like \"exd8=Q\" was parsed wrong: the target\n   detection took clean.slice(-2) AFTER stripping 'x' but BEFORE\n   stripping '=Q', yielding target = \"=Q\". Result: voice said\n   \"White pawn takes on = Q, promotes to queen.\"\n\n   Now strips the =X suffix first, so target correctly resolves to \"d8\":\n   \"White pawn takes on d 8, promotes to queen.\"\n\n2. Check/checkmate suffix produced a stray period: any move with '+'\n   or '#' had \". Check!\" or \". Checkmate!\" appended, then the final\n   `return desc + '.'` added another period → \"Check!.\" Cosmetic but\n   wrong. Now returns early for those branches; only non-check/mate\n   moves get the trailing period.\n\nAdd 6 regression tests covering pawn moves, captures, castling,\npromotions (with + without capture, with + without check), and check/\ncheckmate suffixes. Total: 34 tests pass (was 28).\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T05:59:41Z"
+          }
+        }
+      },
       {
         "sha": "411fc8ef3d75e9677021b247f806b21df4343f8d",
         "html_url": "https://github.com/freegamestore-online/chess/commit/411fc8ef3d75e9677021b247f806b21df4343f8d",
@@ -50,26 +70,6 @@
           "message": "fix(mp): on rejected move, server sends state-snapshot so client can rollback\n\nTwo adjacent issues:\n\n1. Client does an optimistic local chess.move() before sending to the\n   server (snappy UX). If the server rejects the move (race condition:\n   opponent's move arrived first), the client only gets `{type: error}`\n   and never rolls back. Result: client board ahead of true state.\n\n2. Rematch (type=new_game) handler on the client didn't clear\n   selectedSquare or stale errors, so the new game inherited cursor +\n   error state from the previous one.\n\nFix:\n- Server: extract a sendState() helper. After rejecting a move\n  ('Illegal', 'Not your turn', 'Game is over'), send a fresh state\n  snapshot to just that client. Client already handles `type: state`\n  via chess.load(fen), so optimistic moves silently roll back.\n- Client: on new_game, also clear selectedSquare + error.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T05:02:43Z"
-          }
-        }
-      },
-      {
-        "sha": "42f1850039616e947b065c65162d354d29940e1d",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/42f1850039616e947b065c65162d354d29940e1d",
-        "commit": {
-          "message": "fix(mp): show \"Opponent Resigned · You Won!\" instead of \"You Resigned\" to the winner\n\nGameOverBanner had a hard-coded \"You Resigned\" message for any\nstatus='resigned' game-over, regardless of WHICH side resigned. In MP,\nwhen the opponent resigned, the winner's banner also said \"You Resigned\"\n— factually wrong and confusing.\n\nNow branches on the playerLost prop the parent already computes\ncorrectly: my-resign → \"You Resigned\", opponent-resign → \"Opponent\nResigned · You Won!\".\n\nPlayTab (single-player) only resigns via the player's own voice\ncommand, so playerLost is always true there. No regression.\n\nFound by /qa with two browser tabs in a fresh MP game.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T05:00:24Z"
-          }
-        }
-      },
-      {
-        "sha": "85a7472d3776fe762b1904b634f3feefa6291935",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/85a7472d3776fe762b1904b634f3feefa6291935",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:08:02Z"
           }
         }
       }
@@ -154,9 +154,19 @@
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-19T04:11:00Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "d5db566e08cbb009280f0c3f65a772e1d083c166",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/d5db566e08cbb009280f0c3f65a772e1d083c166",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:21Z"
+          }
+        }
+      },
       {
         "sha": "11e8d2a22709431f3b3bf29001587e1354b8fa81",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/11e8d2a22709431f3b3bf29001587e1354b8fa81",
@@ -176,25 +186,25 @@
             "date": "2026-05-19T04:07:53Z"
           }
         }
-      },
-      {
-        "sha": "cdc42b336832c6618b0c30a1c8dcf7702dac075a",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/cdc42b336832c6618b0c30a1c8dcf7702dac075a",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:03:51Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-19T04:11:16Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "8043f0160d688dacbda9d99300f9359c4df68f1b",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/8043f0160d688dacbda9d99300f9359c4df68f1b",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "cc0d5f6f17aa8b1f55d643c06d7367c603b63992",
         "html_url": "https://github.com/freegamestore-online/match3/commit/cc0d5f6f17aa8b1f55d643c06d7367c603b63992",
@@ -212,16 +222,6 @@
           "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:08:30Z"
-          }
-        }
-      },
-      {
-        "sha": "6b1584d292838463649fe678fa7b640f35499400",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/6b1584d292838463649fe678fa7b640f35499400",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:27Z"
           }
         }
       }
@@ -306,9 +306,19 @@
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-19T04:10:57Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "ac6033051f22c46d87b82dece83e015bbf31e608",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/ac6033051f22c46d87b82dece83e015bbf31e608",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:21Z"
+          }
+        }
+      },
       {
         "sha": "5ece506b32af1ab53aeaf0eeb8363e4e02ed4c24",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/5ece506b32af1ab53aeaf0eeb8363e4e02ed4c24",
@@ -328,25 +338,25 @@
             "date": "2026-05-19T04:07:41Z"
           }
         }
-      },
-      {
-        "sha": "954c8806a340e3d902f963cded5d2dca27884583",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/954c8806a340e3d902f963cded5d2dca27884583",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:03:39Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-19T04:11:19Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "02bdb984f291a463a7c44d40f0ce5251319fc363",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/02bdb984f291a463a7c44d40f0ce5251319fc363",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "12eb4873f830fad0edfc75e63d31a4e5599a8a08",
         "html_url": "https://github.com/freegamestore-online/memory/commit/12eb4873f830fad0edfc75e63d31a4e5599a8a08",
@@ -366,25 +376,25 @@
             "date": "2026-05-19T04:08:33Z"
           }
         }
-      },
-      {
-        "sha": "ee6df3a86e906853b757c26cfbceab2e281c2fe1",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/ee6df3a86e906853b757c26cfbceab2e281c2fe1",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:30Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-19T04:11:06Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "30dbcd2f23c8b79cf2ec8866fa8b502a3c9e6038",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/30dbcd2f23c8b79cf2ec8866fa8b502a3c9e6038",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "2ca3e3d642b5d0b2b4990efd683a93eb2094c54e",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/2ca3e3d642b5d0b2b4990efd683a93eb2094c54e",
@@ -404,25 +414,25 @@
             "date": "2026-05-19T04:08:18Z"
           }
         }
-      },
-      {
-        "sha": "e536ca95ad148ae6fefa14ae9e21bc0c5ca2136f",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/e536ca95ad148ae6fefa14ae9e21bc0c5ca2136f",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:15Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-19T04:07:53Z"
+      "pushed_at": "2026-05-19T06:01:14Z"
     },
     "commits": [
+      {
+        "sha": "95080005e729e026ed5b7ae3ad24c4639cc54734",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/95080005e729e026ed5b7ae3ad24c4639cc54734",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:12Z"
+          }
+        }
+      },
       {
         "sha": "6e8a320b917cab5146c2543696f6fcb019d73f34",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/6e8a320b917cab5146c2543696f6fcb019d73f34",
@@ -442,25 +452,25 @@
             "date": "2026-05-19T04:03:48Z"
           }
         }
-      },
-      {
-        "sha": "2191b9dc0d460dc736369503a36e99dfe3fce803",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/2191b9dc0d460dc736369503a36e99dfe3fce803",
-        "commit": {
-          "message": "fix: aim direction now matches spin direction\n\nAfter flipping spin to camera-natural (\"drag right = curve right\"),\nthe AIM phase was left with the inverse mapping: dragging right or\npressing ArrowRight moved the ball to the camera-LEFT, because aimX\nwas still naive (positive = +X = camera-left in Babylon's left-handed\ncoords with the camera looking down -Z).\n\nSame gesture, opposite effect across two adjacent phases — confusing.\n\nFlipped both the drag delta (×-0.015 instead of ×+0.015) and the arrow\nkeys (ArrowLeft now +=, ArrowRight now -=) so all aim/spin controls\nagree: right input = camera-right ball motion. aimX still represents\nthe ball's true world-X position, which keeps the render code clean.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T02:52:51Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-19T04:14:45Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "efe27fb800116e67910ec3531f01f6311a9a547e",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/efe27fb800116e67910ec3531f01f6311a9a547e",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:21Z"
+          }
+        }
+      },
       {
         "sha": "8455389a43d5ead72557779f017edb9508e7a30c",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/8455389a43d5ead72557779f017edb9508e7a30c",
@@ -480,25 +490,25 @@
             "date": "2026-05-19T04:11:01Z"
           }
         }
-      },
-      {
-        "sha": "bd233fc90cd05496464b3462a812411948c614d6",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/bd233fc90cd05496464b3462a812411948c614d6",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:08:14Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-19T04:11:13Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "7563f8dcba4824be56d4376e32c39e00e5cc78ae",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/7563f8dcba4824be56d4376e32c39e00e5cc78ae",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "08c79f16543bff5b3cd0d5d21de6fdc7410bc1f6",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/08c79f16543bff5b3cd0d5d21de6fdc7410bc1f6",
@@ -518,25 +528,25 @@
             "date": "2026-05-19T04:08:27Z"
           }
         }
-      },
-      {
-        "sha": "a2696cd61b6891df6cfc19788436b5fc60fa4575",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/a2696cd61b6891df6cfc19788436b5fc60fa4575",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-19T04:11:09Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "55e71e9a8311fa435a63b6067235b7db6458df71",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/55e71e9a8311fa435a63b6067235b7db6458df71",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "47bb15cb31de341155089888c025f41c7401c153",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/47bb15cb31de341155089888c025f41c7401c153",
@@ -556,25 +566,25 @@
             "date": "2026-05-19T04:08:21Z"
           }
         }
-      },
-      {
-        "sha": "272d625fc865ae285c4ac15cc9787644eaa40e01",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/272d625fc865ae285c4ac15cc9787644eaa40e01",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:18Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-19T04:08:41Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "5b7b0fd07ca2bdba1cb39c79acba8a21b0726937",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/5b7b0fd07ca2bdba1cb39c79acba8a21b0726937",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "8f884c29e44bfb242ae8b09275b90b812105654b",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/8f884c29e44bfb242ae8b09275b90b812105654b",
@@ -594,25 +604,25 @@
             "date": "2026-05-19T04:04:37Z"
           }
         }
-      },
-      {
-        "sha": "31d62a1b6ea776d316041c0a725457ecd4e0eecd",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/31d62a1b6ea776d316041c0a725457ecd4e0eecd",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:47:52Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-19T04:11:31Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "6797a4b2f060132cec3f82716a9c16ef448b6b7f",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/6797a4b2f060132cec3f82716a9c16ef448b6b7f",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "575aeaf6f32b663fd7a908fc371789af89aa2576",
         "html_url": "https://github.com/freegamestore-online/racing/commit/575aeaf6f32b663fd7a908fc371789af89aa2576",
@@ -632,25 +642,25 @@
             "date": "2026-05-19T04:08:58Z"
           }
         }
-      },
-      {
-        "sha": "cc4699340c53cc33c9fde5fdf25e33db4b4bc2f1",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/cc4699340c53cc33c9fde5fdf25e33db4b4bc2f1",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:55Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-19T04:08:57Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "6d5667c0352795c0cbaba0e7e0a880d91a3bd7d6",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/6d5667c0352795c0cbaba0e7e0a880d91a3bd7d6",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "65391c3728ad61d7f4a91bc4183730163238d959",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/65391c3728ad61d7f4a91bc4183730163238d959",
@@ -668,16 +678,6 @@
           "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:04:52Z"
-          }
-        }
-      },
-      {
-        "sha": "c6a751bc5ce5f261ed6a00f06b13773fdfd6c8ab",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/c6a751bc5ce5f261ed6a00f06b13773fdfd6c8ab",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:48:00Z"
           }
         }
       }
@@ -724,9 +724,19 @@
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-19T04:07:41Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "b8bc39efc01775857df36b551bfec518103ff728",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/b8bc39efc01775857df36b551bfec518103ff728",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:21Z"
+          }
+        }
+      },
       {
         "sha": "51f5ac3164de230f8cd3ec0adc9710d745bdc2ea",
         "html_url": "https://github.com/freegamestore-online/2048/commit/51f5ac3164de230f8cd3ec0adc9710d745bdc2ea",
@@ -746,25 +756,25 @@
             "date": "2026-05-19T04:03:36Z"
           }
         }
-      },
-      {
-        "sha": "0ddd2afd393cf4056f3d901fa3ac9abe3155202c",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/0ddd2afd393cf4056f3d901fa3ac9abe3155202c",
-        "commit": {
-          "message": "fix(ci): PWA manifest check now finds vite-plugin-pwa output\n\nThe old check ran `find web/public -name \"manifest.json\"` which never\nmatches — vite-plugin-pwa emits `manifest.webmanifest` into `web/dist/`\nduring the build step that runs earlier in this same workflow. Update\nthe path and filename so the check actually verifies what gets shipped.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:47:23Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-19T04:14:35Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "0125dd1f02fdd45c3a712974ec4e0b6ccf373a35",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/0125dd1f02fdd45c3a712974ec4e0b6ccf373a35",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:21Z"
+          }
+        }
+      },
       {
         "sha": "45e65b9d972d4b4649a46c3427793434954cfa0f",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/45e65b9d972d4b4649a46c3427793434954cfa0f",
@@ -784,25 +794,25 @@
             "date": "2026-05-19T04:07:59Z"
           }
         }
-      },
-      {
-        "sha": "3515eca3aded214c8e098c832a90a3b8c9e5a277",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/3515eca3aded214c8e098c832a90a3b8c9e5a277",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:03:57Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-19T04:11:34Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "114a1e130e1f142dca38200c7e2ec642b6a371e3",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/114a1e130e1f142dca38200c7e2ec642b6a371e3",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "3c65728548faf06e0d85a94b5b5f7f1236407299",
         "html_url": "https://github.com/freegamestore-online/simon/commit/3c65728548faf06e0d85a94b5b5f7f1236407299",
@@ -822,25 +832,25 @@
             "date": "2026-05-19T04:09:03Z"
           }
         }
-      },
-      {
-        "sha": "3f0ad8a83e04c13b3a83a2c4345ba5603cbc1816",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/3f0ad8a83e04c13b3a83a2c4345ba5603cbc1816",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:05:03Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-19T04:11:40Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "c6ac7da97ecd5b6d6eacf5e677d816f4ec12b5f6",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/c6ac7da97ecd5b6d6eacf5e677d816f4ec12b5f6",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "ff8c55b023dc34b74dfc965d1014f73804f42459",
         "html_url": "https://github.com/freegamestore-online/snake/commit/ff8c55b023dc34b74dfc965d1014f73804f42459",
@@ -860,25 +870,25 @@
             "date": "2026-05-19T04:09:10Z"
           }
         }
-      },
-      {
-        "sha": "d7fb86495bc854f2c5123f27af16ddc541941fa7",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/d7fb86495bc854f2c5123f27af16ddc541941fa7",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:05:09Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-19T04:11:49Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "21900bfe870024365b4fc453ec1934cd58a47b36",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/21900bfe870024365b4fc453ec1934cd58a47b36",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "2632b0d7ec4c48313e5a6d95010a6075b65329b7",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/2632b0d7ec4c48313e5a6d95010a6075b65329b7",
@@ -896,16 +906,6 @@
           "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:09:36Z"
-          }
-        }
-      },
-      {
-        "sha": "9438b69a7eb3723b39e95b536a95aec5ace51052",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/9438b69a7eb3723b39e95b536a95aec5ace51052",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:05:36Z"
           }
         }
       }
@@ -952,9 +952,19 @@
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-19T04:11:46Z"
+      "pushed_at": "2026-05-19T06:01:25Z"
     },
     "commits": [
+      {
+        "sha": "254bdac4f556ec6b24533a41c294491fa0f476ba",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/254bdac4f556ec6b24533a41c294491fa0f476ba",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "73a8966a4e9a221e533fca0380bf0a1f0b4fca07",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/73a8966a4e9a221e533fca0380bf0a1f0b4fca07",
@@ -974,25 +984,25 @@
             "date": "2026-05-19T04:09:30Z"
           }
         }
-      },
-      {
-        "sha": "21678de5b3459e86e22f327652d613a31efc4e6b",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/21678de5b3459e86e22f327652d613a31efc4e6b",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:05:28Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-19T04:14:50Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "81948f40a31c4346b29b87165ab65f34269ac125",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/81948f40a31c4346b29b87165ab65f34269ac125",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "d53fe254fe80d84f6ef55083da222624fe3393bb",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/d53fe254fe80d84f6ef55083da222624fe3393bb",
@@ -1012,25 +1022,25 @@
             "date": "2026-05-19T04:11:19Z"
           }
         }
-      },
-      {
-        "sha": "336cb9e5235a149f0e33bb98b6b746543d637f23",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/336cb9e5235a149f0e33bb98b6b746543d637f23",
-        "commit": {
-          "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:08:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-19T04:11:28Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "60233c5f9aa683af34b5846752123467dbec9144",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/60233c5f9aa683af34b5846752123467dbec9144",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "c64b202630b07c9dee032b2ac843adf89c06aa02",
         "html_url": "https://github.com/freegamestore-online/pong/commit/c64b202630b07c9dee032b2ac843adf89c06aa02",
@@ -1050,25 +1060,25 @@
             "date": "2026-05-19T04:08:51Z"
           }
         }
-      },
-      {
-        "sha": "f1b3d48170864f2026bfb71d4f5f4f114a176c7c",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/f1b3d48170864f2026bfb71d4f5f4f114a176c7c",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:49Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-19T04:19:57Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "b7e7a5e16ff8be6e78b5794440a58675e7af6995",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/b7e7a5e16ff8be6e78b5794440a58675e7af6995",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "59741e816365baa73112bc50c748886023d365a1",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/59741e816365baa73112bc50c748886023d365a1",
@@ -1088,25 +1098,25 @@
             "date": "2026-05-19T04:09:23Z"
           }
         }
-      },
-      {
-        "sha": "83840529d31f83a68ddeee8d5b26ae096e42a810",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/83840529d31f83a68ddeee8d5b26ae096e42a810",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:05:22Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-19T04:11:52Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "3ed53b9d4be7f9b4ba59c10df5ec1d8720213438",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/3ed53b9d4be7f9b4ba59c10df5ec1d8720213438",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "fa0cbc72a9bf3f403291e7a39b66d3c1647ae483",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/fa0cbc72a9bf3f403291e7a39b66d3c1647ae483",
@@ -1126,25 +1136,25 @@
             "date": "2026-05-19T04:09:42Z"
           }
         }
-      },
-      {
-        "sha": "800076fcda96a96fe39c8e43c2ec2e9edeadf865",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/800076fcda96a96fe39c8e43c2ec2e9edeadf865",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:05:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-19T04:14:55Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "046e4b03cf98058aa2e8ae64e60c74b1b80b5e31",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/046e4b03cf98058aa2e8ae64e60c74b1b80b5e31",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "6e752eb62761f34336821b9d2a512933c6cdcd07",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/6e752eb62761f34336821b9d2a512933c6cdcd07",
@@ -1164,25 +1174,25 @@
             "date": "2026-05-19T04:09:13Z"
           }
         }
-      },
-      {
-        "sha": "97f72cbbd1dcd0f5d3acc4fa7c8bcbf736255b32",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/97f72cbbd1dcd0f5d3acc4fa7c8bcbf736255b32",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:05:12Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-19T04:09:42Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "fe62c874088606553d5d84b592e0cbced8af783e",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/fe62c874088606553d5d84b592e0cbced8af783e",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "ca5548f7e2f7c74bedbda896e89ecb803581e4ac",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/ca5548f7e2f7c74bedbda896e89ecb803581e4ac",
@@ -1202,25 +1212,25 @@
             "date": "2026-05-19T04:05:39Z"
           }
         }
-      },
-      {
-        "sha": "0ee509b0da46e65b424fe79ddad2ff060959e1f6",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/0ee509b0da46e65b424fe79ddad2ff060959e1f6",
-        "commit": {
-          "message": "Add SDK audio: playTick on guess, playLevelUp on solve, playGameOver on lose\n\nAlso add @types/node so the compliance test's node:fs imports type-check.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T03:41:21Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-19T04:11:37Z"
+      "pushed_at": "2026-05-19T06:01:25Z"
     },
     "commits": [
+      {
+        "sha": "812ac3439ed33af63e8305e05bacf21d0e790e76",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/812ac3439ed33af63e8305e05bacf21d0e790e76",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:22Z"
+          }
+        }
+      },
       {
         "sha": "ed55e324806c513c38177f68e1810f6567a19de4",
         "html_url": "https://github.com/freegamestore-online/slither/commit/ed55e324806c513c38177f68e1810f6567a19de4",
@@ -1240,25 +1250,25 @@
             "date": "2026-05-19T04:09:06Z"
           }
         }
-      },
-      {
-        "sha": "496b3d0fa8454448a9aea07e78c23e54e71aaf02",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/496b3d0fa8454448a9aea07e78c23e54e71aaf02",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:05:06Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-19T04:14:40Z"
+      "pushed_at": "2026-05-19T06:01:24Z"
     },
     "commits": [
+      {
+        "sha": "84b4a2c1cda5db8d466d61736e398fd685421210",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/84b4a2c1cda5db8d466d61736e398fd685421210",
+        "commit": {
+          "message": "deploy: gate Cloudflare Pages on platform compliance\n\nInserts `npx @freegamestore/cli@latest check` between `pnpm build`\nand `wrangler pages deploy`. If the platform-compliance check exits\nnon-zero (e.g. the new PWA mandate fails), the deploy step never\nruns and the broken build can't reach production.\n\nUniversal enforcement — every push to main goes through this gate\nregardless of whether the repo has a separate compliance.yml.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-19T06:01:21Z"
+          }
+        }
+      },
       {
         "sha": "fc9cbc13688c0c4121d8802796a3b71010462e77",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/fc9cbc13688c0c4121d8802796a3b71010462e77",
@@ -1276,16 +1286,6 @@
           "message": "fix(vite): drop min_viewport_width from inline manifest\n\nvite-plugin-pwa types reject unknown manifest fields (TS2353) and\nmin_viewport_width is platform-custom, not standard PWA. orientation\nstays — it's a real PWA field. The central viewport-support check\ntreats min_viewport_width as a warn anyway, not a fail.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T04:08:08Z"
-          }
-        }
-      },
-      {
-        "sha": "73a66abcec679e840eb87d50f539f40740182234",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/73a66abcec679e840eb87d50f539f40740182234",
-        "commit": {
-          "message": "fix(compliance): declare orientation + --bg token\n\nTwo pre-existing central-compliance gaps that have been failing the\n\"Viewport support\" and \"Brand tokens defined\" checks for the whole\ngame catalog:\n\n- web/vite.config.ts inline PWA manifest now declares\n  `orientation: \"any\"` and `min_viewport_width: 360`, so the storefront\n  coverage badge has values to display and the central viewport-support\n  check passes.\n- web/src/index.css now defines `--bg` as an alias of `--paper`, so the\n  brand-tokens check sees the game token (`--bg`) it expects for games.\n  Existing rules using `var(--paper)` keep working unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T04:04:07Z"
           }
         }
       }
