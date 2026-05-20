@@ -2,9 +2,19 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "569a006198cced7fb876636c63a750a2ecd6eda9",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/569a006198cced7fb876636c63a750a2ecd6eda9",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "d3e3aae01f8974aa387add034900e61af492903b",
         "html_url": "https://github.com/freegamestore-online/dice/commit/d3e3aae01f8974aa387add034900e61af492903b",
@@ -24,25 +34,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "0882cbaae2e030033a599f7aaeffa7a9d48556a8",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/0882cbaae2e030033a599f7aaeffa7a9d48556a8",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:08Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-19T23:06:32Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "d30c0915993fdf01440c5e3e2369bccdd3011392",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/d30c0915993fdf01440c5e3e2369bccdd3011392",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "66823a8149511bc712b1ce49c969bff080aede56",
         "html_url": "https://github.com/freegamestore-online/chess/commit/66823a8149511bc712b1ce49c969bff080aede56",
@@ -62,25 +72,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "cfde18dc071ec0e0c5e2e7ed069a33feed01bbf3",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/cfde18dc071ec0e0c5e2e7ed069a33feed01bbf3",
-        "commit": {
-          "message": "feat(play): Hint button shows engine's best move as live arrow\n\nPressing Hint on your turn calls Stockfish (or minimax fallback) and\ndraws a yellow arrow on the live board from the recommended source to\ntarget square. The arrow clears automatically on the next move. The\nbutton is only enabled when it's your turn, and shows a \"Hint…\" label\nwhile the engine is thinking.\n\nBoard gains a new `liveArrow` prop that renders independently of the\npreview-mode arrow used for alternative-move review.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:00:07Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "be630a942ef9e25f84b2f24d8530e017816e72db",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/be630a942ef9e25f84b2f24d8530e017816e72db",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "0a6c00d122db847aa70be1fc6301a9f288e25a6a",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/0a6c00d122db847aa70be1fc6301a9f288e25a6a",
@@ -100,25 +110,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "42cd94e17b41ea70375125e5006a781476b8fbd4",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/42cd94e17b41ea70375125e5006a781476b8fbd4",
-        "commit": {
-          "message": "Use natural \"segment\" wording in shot-scoring comment\n\nCompliance now strips comments before scanning, so the geometry term\n\"segment\" is safe again. Drop the awkward \"cue-ball-ghost-position-pocket\naxis\" phrasing in favor of the simpler \"cue→ghost→pocket segment\".\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:50Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "a5de1dfcc81a3a14f49cae8e303b7544831806ed",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/a5de1dfcc81a3a14f49cae8e303b7544831806ed",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "fd1c7a65015deb4a0f9e1e3c9ce1ab745bbbef3c",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/fd1c7a65015deb4a0f9e1e3c9ce1ab745bbbef3c",
@@ -138,25 +148,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "cdc3c3a9c15f7924aa76bf8057fdcc2da9fd5d84",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/cdc3c3a9c15f7924aa76bf8057fdcc2da9fd5d84",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:05Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-20T01:20:51Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "a0c4b4b0906b9d76d69e8b2564327a860ad65a95",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/a0c4b4b0906b9d76d69e8b2564327a860ad65a95",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "634be465582ad0f477d6f7415dd3b2dc2173a768",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/634be465582ad0f477d6f7415dd3b2dc2173a768",
@@ -176,25 +186,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "dbad0acab8f5744dc35c97c9ec912164f2bc0364",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/dbad0acab8f5744dc35c97c9ec912164f2bc0364",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-19T22:01:37Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "7e62d9e6a00373ddb5a831b91577b0cb39cd964a",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/7e62d9e6a00373ddb5a831b91577b0cb39cd964a",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "bd00a7a3aea909f91f41848973814b1c18b9d81d",
         "html_url": "https://github.com/freegamestore-online/match3/commit/bd00a7a3aea909f91f41848973814b1c18b9d81d",
@@ -214,25 +224,25 @@
             "date": "2026-05-19T21:46:27Z"
           }
         }
-      },
-      {
-        "sha": "e37c61ff61d71975f3e77c74ce94c48d472bc1e2",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/e37c61ff61d71975f3e77c74ce94c48d472bc1e2",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:32Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-20T01:21:27Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "c539302c7be41c89c8f0d4371562f46eede19379",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/c539302c7be41c89c8f0d4371562f46eede19379",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "95b10b6ef3366a69f229ed71362f5c58bd027e13",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/95b10b6ef3366a69f229ed71362f5c58bd027e13",
@@ -252,25 +262,25 @@
             "date": "2026-05-19T22:18:20Z"
           }
         }
-      },
-      {
-        "sha": "cbb254f629d3684bdc39f448d5cab8d434bc129d",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/cbb254f629d3684bdc39f448d5cab8d434bc129d",
-        "commit": {
-          "message": "Features: combo multiplier, spike hazards, power-ups\n\nCombo:\n- Each coin pickup extends a 3s window; consecutive pickups stack a ×2/×3/×4\n  multiplier on coin value. Distance scoring stays 1× so idling can't\n  build a combo.\n- Multiplier shown both in the topbar (Combo stat appears when > 1) and\n  big at the top-center of the play area, with a decay bar underneath.\n\nHazards:\n- Some platforms spawn with red saw-tooth strips inset from the edges.\n  Touching one is lethal.\n- Spawn rate ramps from 0% (first 15s) to 32% by 90s, so early game stays\n  forgiving.\n\nPower-ups (~8% of coin-bearing platforms):\n- Blue double-jump: one extra mid-air jump for 8s. Sparkles on use.\n- Purple slow-mo: world ticks at 45% for 3s; controls stay at full speed\n  so it's an offensive ability, not just a \"pause to think\" cheat.\n- Gold shield: absorbs one spike hit (bounce + combo reset) or one fall.\n  Pulsing aura while active.\n- Active power-ups stack as small badges in the top-left with charges or\n  time remaining. Slow-mo paints a faint purple tint over the play area.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:14:41Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "4a0c8943d16de68ca1adc7898f7b28dc3e9af301",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/4a0c8943d16de68ca1adc7898f7b28dc3e9af301",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "dc9c09a94d7c782127a54341f1aff5b0dd24b89c",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/dc9c09a94d7c782127a54341f1aff5b0dd24b89c",
@@ -290,25 +300,25 @@
             "date": "2026-05-19T21:46:25Z"
           }
         }
-      },
-      {
-        "sha": "7b55f0a4351d0484c1ae0f8992b7aff0c9e34172",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/7b55f0a4351d0484c1ae0f8992b7aff0c9e34172",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:12Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "87bc64d1ba0028666f0489d510c7acb2be6f0cc8",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/87bc64d1ba0028666f0489d510c7acb2be6f0cc8",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "d1ed5fc3e271b3ed9069515f44c0bfdc56436c6e",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/d1ed5fc3e271b3ed9069515f44c0bfdc56436c6e",
@@ -328,25 +338,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "f8ba5874fc8007f086acefeaacf37cfe43d7b22a",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/f8ba5874fc8007f086acefeaacf37cfe43d7b22a",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:10:55Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "2f957dad571397d2eccb2b60a6e55bf081eaa1c3",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/2f957dad571397d2eccb2b60a6e55bf081eaa1c3",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "21b16964032606024d1bc8417e6274ca5ce1b769",
         "html_url": "https://github.com/freegamestore-online/memory/commit/21b16964032606024d1bc8417e6274ca5ce1b769",
@@ -366,25 +376,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "bcaa64d69f5b53d43a0aa453b19b1101a4e7fd06",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/bcaa64d69f5b53d43a0aa453b19b1101a4e7fd06",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "db06750605f165aba2b87e773b9bb891cc283a7f",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/db06750605f165aba2b87e773b9bb891cc283a7f",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "f51b1e20967ff29e4a4398c6b26c29ea9e490f08",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/f51b1e20967ff29e4a4398c6b26c29ea9e490f08",
@@ -404,25 +414,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "ab9d77a35de5f477feb05f1ddba48eb3388e5a20",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/ab9d77a35de5f477feb05f1ddba48eb3388e5a20",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:20Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "fa6585cbd01d09c82ecceaee9932e2e52536c186",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/fa6585cbd01d09c82ecceaee9932e2e52536c186",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "7228da90f44856e958d8540a1bf723857db9ca52",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/7228da90f44856e958d8540a1bf723857db9ca52",
@@ -442,25 +452,25 @@
             "date": "2026-05-19T21:42:57Z"
           }
         }
-      },
-      {
-        "sha": "f9021dea6a130f0a71d41c96a95dc0b7adc10b47",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/f9021dea6a130f0a71d41c96a95dc0b7adc10b47",
-        "commit": {
-          "message": "ci: drop ci.yml and compliance.yml — superseded by reusable workflow\n\nci.yml was a single typecheck-on-PR step; the new reusable workflow's\nbuild step does `tsc -b` as part of `pnpm build`, covering it.\n\ncompliance.yml was 50+ lines of grep-based file checks (tracking SDKs,\nbrand fonts, manifest fields, bundle size). All of these are now run\nby @freegamestore/cli inside the reusable workflow, and that CLI\ncovers more (brand-token leaks, audio mute hook, store link, etc.)\nthan the hand-rolled grep checks did.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:24:31Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-20T01:21:09Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "ea364c9f19a22ad5364e8ec307ffedb8520b15ba",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/ea364c9f19a22ad5364e8ec307ffedb8520b15ba",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "02f3ad61330a881bfd47988d4864bc586e9c9b09",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/02f3ad61330a881bfd47988d4864bc586e9c9b09",
@@ -480,25 +490,25 @@
             "date": "2026-05-19T22:01:35Z"
           }
         }
-      },
-      {
-        "sha": "7e733fad663ce0fce9ded21b9cfc0e37400d3d36",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/7e733fad663ce0fce9ded21b9cfc0e37400d3d36",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-20T01:21:15Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "0021a68f7053f8c695aa18f92f192f6d98457c47",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/0021a68f7053f8c695aa18f92f192f6d98457c47",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "19fb83c428a264ba7cdfe0ee5b5eda2efb13d29c",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/19fb83c428a264ba7cdfe0ee5b5eda2efb13d29c",
@@ -518,25 +528,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "7c25538047d9d2d56b76b865702dff7dc17097ea",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/7c25538047d9d2d56b76b865702dff7dc17097ea",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:27Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "7516ea1718be1cd61e9d7e13d5dd7343888b95e1",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/7516ea1718be1cd61e9d7e13d5dd7343888b95e1",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "523bd99909eed77250a45498baa2433639eea2b5",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/523bd99909eed77250a45498baa2433639eea2b5",
@@ -556,25 +566,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "7be5ffe1a4a79eda5e6a7c6cfb767e5e9f2c42cd",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/7be5ffe1a4a79eda5e6a7c6cfb767e5e9f2c42cd",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:23Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-20T01:21:21Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "ee6dda9001f1e20e400544d908c8f0c1b84ac973",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/ee6dda9001f1e20e400544d908c8f0c1b84ac973",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "15f34acecc65ecfc7e98192d040cea3fcd6186b7",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/15f34acecc65ecfc7e98192d040cea3fcd6186b7",
@@ -594,25 +604,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "45614bfbdaa4d9eb2e7538765d6ac78a8f95884b",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/45614bfbdaa4d9eb2e7538765d6ac78a8f95884b",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-20T01:21:43Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "b41663e1d17105abefced264750dfb2a9853a127",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/b41663e1d17105abefced264750dfb2a9853a127",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "b820ce2a4f4217efc17547649a3861eabbb0fc73",
         "html_url": "https://github.com/freegamestore-online/racing/commit/b820ce2a4f4217efc17547649a3861eabbb0fc73",
@@ -632,25 +642,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "f3d70651b7b836aa77065e02c07289f5f484dff1",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/f3d70651b7b836aa77065e02c07289f5f484dff1",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "568d7e4eb1c21dc3bd394ad9ed55c2d268b58da6",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/568d7e4eb1c21dc3bd394ad9ed55c2d268b58da6",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "79aa31b8fe122ba2a2b045505fced2fbd24d0f65",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/79aa31b8fe122ba2a2b045505fced2fbd24d0f65",
@@ -670,25 +680,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "2e5f69d2b82a4c37486b8c0594a405ce083cb5b9",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/2e5f69d2b82a4c37486b8c0594a405ce083cb5b9",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:55Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "4eb76b11ff69cfa920ebc4c0d2f4599064dbec7e",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/4eb76b11ff69cfa920ebc4c0d2f4599064dbec7e",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "e263a4a9b9e8effd74d7938e19cea6ad44d590fc",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/e263a4a9b9e8effd74d7938e19cea6ad44d590fc",
@@ -708,25 +718,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "3b8a24c3d416c4b284fdfdcc913c6dbb71c15c94",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/3b8a24c3d416c4b284fdfdcc913c6dbb71c15c94",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:15Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-20T02:34:40Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "aca845a2a62f19d6ea60da4da819a1905d72ed65",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/aca845a2a62f19d6ea60da4da819a1905d72ed65",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "8ae4b43f100191221f6c4fd3f36c9c195372b102",
         "html_url": "https://github.com/freegamestore-online/2048/commit/8ae4b43f100191221f6c4fd3f36c9c195372b102",
@@ -746,25 +756,25 @@
             "date": "2026-05-20T02:33:27Z"
           }
         }
-      },
-      {
-        "sha": "167c2c4ebd2efcb05a48a2c3e4829ce9c386eb19",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/167c2c4ebd2efcb05a48a2c3e4829ce9c386eb19",
-        "commit": {
-          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
-          "author": {
-            "date": "2026-05-20T01:20:39Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-20T01:20:57Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "1de20accab95bed15cc3b6b4cc076d2dc5cc8f61",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/1de20accab95bed15cc3b6b4cc076d2dc5cc8f61",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "de28ed2c3af957e1d6ae914d849169a1f76cdd12",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/de28ed2c3af957e1d6ae914d849169a1f76cdd12",
@@ -784,25 +794,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "388be83250b42bd30c99f09dc752418488588d4d",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/388be83250b42bd30c99f09dc752418488588d4d",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "1a57564229b627c017323d5b7c42756a660001ce",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/1a57564229b627c017323d5b7c42756a660001ce",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "e41f5dc84000a09bfb1e4693e7cc487e0faa7888",
         "html_url": "https://github.com/freegamestore-online/simon/commit/e41f5dc84000a09bfb1e4693e7cc487e0faa7888",
@@ -822,25 +832,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "5293cf6d8c91c4919778fa7f7a293d900dda4ae6",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/5293cf6d8c91c4919778fa7f7a293d900dda4ae6",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:01Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-20T01:22:24Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "b23ef6f928d45074234426a225d1cd8c240e79fd",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/b23ef6f928d45074234426a225d1cd8c240e79fd",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "2b63875c0c50c0345d70dbb848322a842e9aa047",
         "html_url": "https://github.com/freegamestore-online/snake/commit/2b63875c0c50c0345d70dbb848322a842e9aa047",
@@ -860,25 +870,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "2b888787b7535f61a924dc7d09f558ec39c88a1e",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/2b888787b7535f61a924dc7d09f558ec39c88a1e",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "1ef7744605f67710033ee6fa383767c220a21d8d",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/1ef7744605f67710033ee6fa383767c220a21d8d",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:33Z"
+          }
+        }
+      },
       {
         "sha": "903ca4792383949bd5a07c09fd491bf83bb758a4",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/903ca4792383949bd5a07c09fd491bf83bb758a4",
@@ -898,25 +908,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "7e778bb26fea5a87df2f36f9a5f84d4bb481e2cb",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/7e778bb26fea5a87df2f36f9a5f84d4bb481e2cb",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:23Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-20T01:21:59Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "b23bc08b76f63b1b81f781689b897939d4629438",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/b23bc08b76f63b1b81f781689b897939d4629438",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "4e09af5bf6167cd2137ed29a467860885eca6062",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/4e09af5bf6167cd2137ed29a467860885eca6062",
@@ -936,25 +946,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "ae48e518ebd0547d15fcc50e95bc1c0e78c7f5cc",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/ae48e518ebd0547d15fcc50e95bc1c0e78c7f5cc",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:27Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-20T01:22:11Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "8e0c5c0f459e05d800d48768d764714e28dce907",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/8e0c5c0f459e05d800d48768d764714e28dce907",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:33Z"
+          }
+        }
+      },
       {
         "sha": "bd0635568c9aa138b5e819b3a2bd31c4235e2067",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/bd0635568c9aa138b5e819b3a2bd31c4235e2067",
@@ -974,25 +984,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "b6b2ea7419ada3a648db1300b8e0d017f10a1580",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/b6b2ea7419ada3a648db1300b8e0d017f10a1580",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:28Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "96e85a5c1e3d3257c23e7aaa47d3886ecb3b7df5",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/96e85a5c1e3d3257c23e7aaa47d3886ecb3b7df5",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "c9ffb049aa777f160b96c60b131f1e9e8c2ac6d6",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/c9ffb049aa777f160b96c60b131f1e9e8c2ac6d6",
@@ -1012,25 +1022,25 @@
             "date": "2026-05-19T21:46:27Z"
           }
         }
-      },
-      {
-        "sha": "e7d16688878e373611a2dea7247e5a94a8f5eeb5",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/e7d16688878e373611a2dea7247e5a94a8f5eeb5",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:45Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-20T01:21:33Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "49e265bfa90d11f3857f06efd221597d4ba0be95",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/49e265bfa90d11f3857f06efd221597d4ba0be95",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "dd45f9acdf4ab2d04b98dab94445aedf6ee6b1e1",
         "html_url": "https://github.com/freegamestore-online/pong/commit/dd45f9acdf4ab2d04b98dab94445aedf6ee6b1e1",
@@ -1050,25 +1060,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "672942f770e692e9e70d68eba1aceceab71a926e",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/672942f770e692e9e70d68eba1aceceab71a926e",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-20T01:22:04Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "e1d6711989a77a0ed85a43ec50e85e5f7f4d8a7a",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/e1d6711989a77a0ed85a43ec50e85e5f7f4d8a7a",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "cf174f5a6d005413d1f1605de8b3c88889156385",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/cf174f5a6d005413d1f1605de8b3c88889156385",
@@ -1088,25 +1098,25 @@
             "date": "2026-05-19T22:01:35Z"
           }
         }
-      },
-      {
-        "sha": "b921d888364f97aabffb1babad3d1c48423d9bea",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/b921d888364f97aabffb1babad3d1c48423d9bea",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:38Z"
     },
     "commits": [
+      {
+        "sha": "0362a8bc484b56acc7fb9d91850790f16b6761e5",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/0362a8bc484b56acc7fb9d91850790f16b6761e5",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:35Z"
+          }
+        }
+      },
       {
         "sha": "3a064f88d1cb91ea851dc8aa13b59b13eca755e9",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/3a064f88d1cb91ea851dc8aa13b59b13eca755e9",
@@ -1126,25 +1136,25 @@
             "date": "2026-05-19T21:46:25Z"
           }
         }
-      },
-      {
-        "sha": "db78dbcef4aa8a88c2112f6f5924cec5763e8125",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/db78dbcef4aa8a88c2112f6f5924cec5763e8125",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:29Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-20T01:21:50Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "2556998c3c3d8cfb9dd8325266615d22597c88cf",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/2556998c3c3d8cfb9dd8325266615d22597c88cf",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "8465237013ede6f91353c952d4772b65cc471894",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/8465237013ede6f91353c952d4772b65cc471894",
@@ -1164,25 +1174,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "3c7ea9f71cf0eb0277a36a4538d0df6957bebe5b",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/3c7ea9f71cf0eb0277a36a4538d0df6957bebe5b",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-20T01:22:17Z"
+      "pushed_at": "2026-05-20T04:47:37Z"
     },
     "commits": [
+      {
+        "sha": "a19b12e45fb458dea036c0962da5c4e8c1567fac",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/a19b12e45fb458dea036c0962da5c4e8c1567fac",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:35Z"
+          }
+        }
+      },
       {
         "sha": "17575e65e2580380fcca698caac340fcd6825dd9",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/17575e65e2580380fcca698caac340fcd6825dd9",
@@ -1202,25 +1212,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "e0a0a6420fb0727469ab204e87999534594cf366",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/e0a0a6420fb0727469ab204e87999534594cf366",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:35Z"
     },
     "commits": [
+      {
+        "sha": "8e5b2e5e8c9fb818b809d354b3789580dac3c978",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/8e5b2e5e8c9fb818b809d354b3789580dac3c978",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "a42dba16b41f220259e8a65d26b8499391cc8c64",
         "html_url": "https://github.com/freegamestore-online/slither/commit/a42dba16b41f220259e8a65d26b8499391cc8c64",
@@ -1240,25 +1250,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "eb21210eee79ad4db95f446051e5ac6b33ea48a7",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/eb21210eee79ad4db95f446051e5ac6b33ea48a7",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:04Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-20T01:21:03Z"
+      "pushed_at": "2026-05-20T04:47:32Z"
     },
     "commits": [
+      {
+        "sha": "e47bad5c566f710606e32c9721706afe5e50f091",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/e47bad5c566f710606e32c9721706afe5e50f091",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "395e2bc7ee6d3bd82f5c7a3c3f7922fee870834d",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/395e2bc7ee6d3bd82f5c7a3c3f7922fee870834d",
@@ -1278,25 +1288,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "6062ffd24f0f21b4ad54dce6d37f96a2da16c831",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/6062ffd24f0f21b4ad54dce6d37f96a2da16c831",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/reversi": {
     "meta": {
       "created_at": "2026-05-18T23:16:14Z",
-      "pushed_at": "2026-05-19T22:01:37Z"
+      "pushed_at": "2026-05-20T04:48:08Z"
     },
     "commits": [
+      {
+        "sha": "30595127fc06b62b29f88a492a29f6b1d4eeb954",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/30595127fc06b62b29f88a492a29f6b1d4eeb954",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "403ef2124bec9f15863b5224810abe7a86f4df9b",
         "html_url": "https://github.com/freegamestore-online/reversi/commit/403ef2124bec9f15863b5224810abe7a86f4df9b",
@@ -1316,25 +1326,25 @@
             "date": "2026-05-19T21:46:12Z"
           }
         }
-      },
-      {
-        "sha": "c2cce54a902d0fff2b163b852d37cf887f1fcd12",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/c2cce54a902d0fff2b163b852d37cf887f1fcd12",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tictactoe": {
     "meta": {
       "created_at": "2026-05-18T22:50:34Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:48:20Z"
     },
     "commits": [
+      {
+        "sha": "2170d510abd79c50c27842022267ea5f9b8301a2",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/2170d510abd79c50c27842022267ea5f9b8301a2",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:33Z"
+          }
+        }
+      },
       {
         "sha": "23e5018c10690a2b552515e321fa4cb1bbf1843f",
         "html_url": "https://github.com/freegamestore-online/tictactoe/commit/23e5018c10690a2b552515e321fa4cb1bbf1843f",
@@ -1354,25 +1364,25 @@
             "date": "2026-05-19T21:46:22Z"
           }
         }
-      },
-      {
-        "sha": "12452e583075eb8a3da5f66900e914ea9e321e53",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/12452e583075eb8a3da5f66900e914ea9e321e53",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/blackjack": {
     "meta": {
       "created_at": "2026-05-18T23:17:31Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:47:59Z"
     },
     "commits": [
+      {
+        "sha": "c4f0e32f8ad4dfa30f0c471971a6baaee6a74890",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/c4f0e32f8ad4dfa30f0c471971a6baaee6a74890",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "21bebea4744fb41119343840abfdeec4ed4e098f",
         "html_url": "https://github.com/freegamestore-online/blackjack/commit/21bebea4744fb41119343840abfdeec4ed4e098f",
@@ -1392,25 +1402,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "db7584945cfcffa062e4c2eeb6663dbf9a0a31f0",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/db7584945cfcffa062e4c2eeb6663dbf9a0a31f0",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:23:59Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bubbleshooter": {
     "meta": {
       "created_at": "2026-05-18T23:17:44Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:48:03Z"
     },
     "commits": [
+      {
+        "sha": "3c56bc429d5c48a20c203168c21c0cd1e52a6040",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/3c56bc429d5c48a20c203168c21c0cd1e52a6040",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:29Z"
+          }
+        }
+      },
       {
         "sha": "15ba8fa43513f23e3b0c8a721d0d569b5fc47d40",
         "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/15ba8fa43513f23e3b0c8a721d0d569b5fc47d40",
@@ -1430,25 +1440,25 @@
             "date": "2026-05-19T21:46:27Z"
           }
         }
-      },
-      {
-        "sha": "f036cb83dad3a3beb7e362136d562cb93cf9fe1a",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/f036cb83dad3a3beb7e362136d562cb93cf9fe1a",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:02Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceinvaders": {
     "meta": {
       "created_at": "2026-05-18T23:17:56Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:48:14Z"
     },
     "commits": [
+      {
+        "sha": "56c7eacc45f3c4c4fa7fb8d927fcc38015e15d92",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/56c7eacc45f3c4c4fa7fb8d927fcc38015e15d92",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "d7cb2b4a1e034ded9484a5370053df1d06482e2c",
         "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/d7cb2b4a1e034ded9484a5370053df1d06482e2c",
@@ -1468,25 +1478,25 @@
             "date": "2026-05-19T21:46:25Z"
           }
         }
-      },
-      {
-        "sha": "60191511192f76c27b1b4571b93edeae4a08c413",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/60191511192f76c27b1b4571b93edeae4a08c413",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:27Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/war": {
     "meta": {
       "created_at": "2026-05-19T00:05:08Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:48:23Z"
     },
     "commits": [
+      {
+        "sha": "a64aec458d62f565ed161a7cb2ac73680c2834bb",
+        "html_url": "https://github.com/freegamestore-online/war/commit/a64aec458d62f565ed161a7cb2ac73680c2834bb",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:33Z"
+          }
+        }
+      },
       {
         "sha": "f536ef4f9ce1efa2f1f0c8acb14948f6966174ca",
         "html_url": "https://github.com/freegamestore-online/war/commit/f536ef4f9ce1efa2f1f0c8acb14948f6966174ca",
@@ -1506,25 +1516,25 @@
             "date": "2026-05-19T21:46:25Z"
           }
         }
-      },
-      {
-        "sha": "8dd844a1bbcfb6014ef22a2a959d4896cf0da4f0",
-        "html_url": "https://github.com/freegamestore-online/war/commit/8dd844a1bbcfb6014ef22a2a959d4896cf0da4f0",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:39Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tanks": {
     "meta": {
       "created_at": "2026-05-19T00:51:54Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:48:17Z"
     },
     "commits": [
+      {
+        "sha": "57dbbd3711970e4f92d936cbd0982a4a090e8202",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/57dbbd3711970e4f92d936cbd0982a4a090e8202",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "22beee6e719c1c5974d76e39dc69fefc0aa05fcb",
         "html_url": "https://github.com/freegamestore-online/tanks/commit/22beee6e719c1c5974d76e39dc69fefc0aa05fcb",
@@ -1544,25 +1554,25 @@
             "date": "2026-05-19T21:46:27Z"
           }
         }
-      },
-      {
-        "sha": "fbf3e4bed000f1575511193421dba5ff523138eb",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/fbf3e4bed000f1575511193421dba5ff523138eb",
-        "commit": {
-          "message": "ci: drop stale prebuild hook calling @freegamestore/cli@latest\n\nThe hook ran the compliance CLI from inside web/, the wrong cwd:\nLICENSE is one level up, web/index.html resolves to web/web/index.html,\nand the VitePWA manifest source path can't match. Every game with this\nhook fails compliance with phantom errors.\n\nThe reusable workflow at freegamestore-online/freegamestore runs the\nsame CLI from the repo root with a pinned version, so this prebuild\nis redundant and actively breaking deploys.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:33Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/riichi": {
     "meta": {
       "created_at": "2026-05-19T02:31:10Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:48:11Z"
     },
     "commits": [
+      {
+        "sha": "cc00ad8167251345aaa8e0c47e3893c4190555fd",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/cc00ad8167251345aaa8e0c47e3893c4190555fd",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "19900e7c1bdd06d963deb8220d003a0656522f4a",
         "html_url": "https://github.com/freegamestore-online/riichi/commit/19900e7c1bdd06d963deb8220d003a0656522f4a",
@@ -1582,25 +1592,25 @@
             "date": "2026-05-19T21:46:12Z"
           }
         }
-      },
-      {
-        "sha": "5c38a5f92b774a099648675cf01aa6182a6a6c3b",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/5c38a5f92b774a099648675cf01aa6182a6a6c3b",
-        "commit": {
-          "message": "fix(test): non-null assertions on melds[0] for strict TS",
-          "author": {
-            "date": "2026-05-19T07:13:22Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pinball": {
     "meta": {
       "created_at": "2026-05-19T02:33:08Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T04:48:05Z"
     },
     "commits": [
+      {
+        "sha": "585934d501aa6acb24d97c2aad0df09ddb7350f5",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/585934d501aa6acb24d97c2aad0df09ddb7350f5",
+        "commit": {
+          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
+          "author": {
+            "date": "2026-05-20T04:47:32Z"
+          }
+        }
+      },
       {
         "sha": "c84b8bcd440b2443a7ee081316cf873bd2ebe05e",
         "html_url": "https://github.com/freegamestore-online/pinball/commit/c84b8bcd440b2443a7ee081316cf873bd2ebe05e",
@@ -1618,16 +1628,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T21:46:26Z"
-          }
-        }
-      },
-      {
-        "sha": "dfde492f88a9e8915c53e14cf0748348a1d0d8ee",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/dfde492f88a9e8915c53e14cf0748348a1d0d8ee",
-        "commit": {
-          "message": "Restore \"segment\" naming in geometry comments\n\nPinball's collision comments used \"line line\" / \"slingshot line\" phrasing —\nresidue from an earlier sed rename done to dodge the compliance no-tracking\nfalse positive. Compliance now strips comments + per-tracker patterns no\nlonger flag bare \"segment\", so restore natural geometry wording.\n\nBehavior unchanged.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:24:32Z"
           }
         }
       }
