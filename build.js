@@ -9,6 +9,28 @@ const DIST = path.join(ROOT, 'dist');
 const registry = JSON.parse(fs.readFileSync(path.join(ROOT, 'registry.json'), 'utf8'));
 const games = registry.games;
 
+// Registry shape validator — stop malformed/malicious entries at build time.
+const ID_RE = /^[a-z0-9][a-z0-9-]*$/;
+const COLOR_RE = /^#(?:[0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/;
+const URL_RE = /^https:\/\/[a-z0-9.-]+\.freegamestore\.online(?:\/.*)?$/;
+function validateRegistry(items) {
+  const errors = [];
+  for (const g of items) {
+    if (!g.id || !ID_RE.test(g.id)) errors.push(`bad id: ${JSON.stringify(g.id)}`);
+    if (!g.name || typeof g.name !== 'string') errors.push(`${g.id}: missing name`);
+    if (!g.appUrl || !URL_RE.test(g.appUrl)) errors.push(`${g.id}: appUrl must be https://*.freegamestore.online, got ${JSON.stringify(g.appUrl)}`);
+    if (g.iconBg && !COLOR_RE.test(g.iconBg)) errors.push(`${g.id}: iconBg must be a #hex color, got ${JSON.stringify(g.iconBg)}`);
+    if (g.category != null && (typeof g.category !== 'string' || g.category.length > 80 || /[\x00-\x1f]/.test(g.category))) {
+      errors.push(`${g.id}: bad category ${JSON.stringify(g.category)}`);
+    }
+  }
+  if (errors.length) {
+    console.error('Registry validation failed:\n  - ' + errors.join('\n  - '));
+    process.exit(1);
+  }
+}
+validateRegistry(games);
+
 // Read templates
 const indexTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'index.html'), 'utf8');
 const detailTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'game-detail.html'), 'utf8');
@@ -202,13 +224,12 @@ fs.mkdirSync(path.join(DIST, 'games'), { recursive: true });
 
 // Build game cards — compact letter-badge layout, Figma 2026
 const gameCards = games.map(game => {
-  // Escape for safe use inside the single-quoted JS string in the img.onerror handler —
-  // names starting with ' or \ would otherwise break out.
-  const letter = (game.name || '?').trim().charAt(0).toUpperCase().replace(/[\\']/g, '\\$&');
+  // Letter fallback on data-attribute; storefront.js binds the error handler.
+  const letter = escapeHtml((game.name || '?').trim().charAt(0).toUpperCase());
   const iconBg = escapeHtml(game.iconBg || '#10b981');
   return `        <div class="app-card compact" data-id="${escapeHtml(game.id)}" data-category="${escapeHtml(game.category)}" data-about="/games/${escapeHtml(game.id)}.html">
-          <div class="app-icon" style="background: ${iconBg};">
-            <img src="${escapeHtml(game.appUrl)}/apple-touch-icon.png" alt="" onerror="this.replaceWith(document.createTextNode('${letter}'))" />
+          <div class="app-icon" data-letter="${letter}" style="background: ${iconBg};">
+            <img src="${escapeHtml(game.appUrl)}/apple-touch-icon.png" alt="" loading="lazy" />
           </div>
           <div class="app-body">
             <span class="app-name">${escapeHtml(game.name)}</span>
@@ -493,6 +514,17 @@ const filesToCopy = [
   'get-started.html',
   'SKILLS.md',
 ];
+
+// Security headers via CF Pages _headers (must be HTTP headers, not meta tags).
+fs.writeFileSync(path.join(DIST, '_headers'), [
+  '/*',
+  '  X-Frame-Options: DENY',
+  '  X-Content-Type-Options: nosniff',
+  '  Referrer-Policy: strict-origin-when-cross-origin',
+  '  Permissions-Policy: geolocation=(), microphone=(), camera=()',
+  '  Content-Security-Policy: frame-ancestors \'none\'',
+  '',
+].join('\n'));
 
 filesToCopy.forEach(file => {
   const src = path.join(ROOT, file);
