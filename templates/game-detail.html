@@ -188,68 +188,9 @@
       </div>
     </div>
   </footer>
-  <script>
-    // Reload-preview button: bumps a cache-bust query so iframe re-fetches.
-    document.querySelectorAll('[data-action="reload-preview"]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const iframe = document.querySelector('.phone-frame iframe');
-        if (!iframe) return;
-        const url = new URL(iframe.src);
-        url.searchParams.set('_r', Date.now().toString(36));
-        iframe.src = url.toString();
-      });
-    });
-  </script>
-  <script>
-  (function() {
-    var APP_ID = '{{ID}}';
-    var STORE = 'games';
-    var API = 'https://api.freeappstore.online';
-    var KEY = 'fgs_voted_' + APP_ID;
-    var upBtn = document.getElementById('rate-up');
-    var downBtn = document.getElementById('rate-down');
-    var countUp = document.getElementById('count-up');
-    var countDown = document.getElementById('count-down');
-    var status = document.getElementById('rating-status');
-
-    fetch(API + '/ratings?ids=' + STORE + ':' + APP_ID)
-      .then(function(r) { return r.json(); })
-      .then(function(data) {
-        var rating = data[STORE + ':' + APP_ID] || { up: 0, down: 0 };
-        countUp.textContent = rating.up;
-        countDown.textContent = rating.down;
-      })
-      .catch(function() {});
-
-    var voted = localStorage.getItem(KEY);
-    if (voted) {
-      status.textContent = 'You voted ' + (voted === 'up' ? '\uD83D\uDC4D' : '\uD83D\uDC4E');
-      upBtn.disabled = true;
-      downBtn.disabled = true;
-      upBtn.style.opacity = voted === 'up' ? '1' : '0.4';
-      downBtn.style.opacity = voted === 'down' ? '1' : '0.4';
-    }
-
-    function vote(dir) {
-      if (localStorage.getItem(KEY)) return;
-      localStorage.setItem(KEY, dir);
-      status.textContent = 'Thanks!';
-      upBtn.disabled = true;
-      downBtn.disabled = true;
-      upBtn.style.opacity = dir === 'up' ? '1' : '0.4';
-      downBtn.style.opacity = dir === 'down' ? '1' : '0.4';
-      var el = dir === 'up' ? countUp : countDown;
-      el.textContent = parseInt(el.textContent) + 1;
-      fetch(API + '/ratings', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: APP_ID, store: STORE, vote: dir })
-      }).catch(function() {});
-    }
-
-    upBtn.addEventListener('click', function() { vote('up'); });
-    downBtn.addEventListener('click', function() { vote('down'); });
-  })();
-  </script>
+  <!-- Per-page data island; read by /detail-page.js. No inline JS = CSP stays locked. -->
+  <script type="application/json" id="page-data">{"id":"{{ID}}"}</script>
+  <script src="/theme.js" defer></script>
+  <script src="/detail-page.js" defer></script>
 </body>
 </html>

@@ -530,6 +530,7 @@ const filesToCopy = [
   'search.js',
   'storefront.js',
   'theme.js',
+  'detail-page.js',
   'quality.js',
   'favicon.svg',
   'apple-touch-icon.png',
@@ -549,14 +550,34 @@ const filesToCopy = [
   'SKILLS.md',
 ];
 
-// Security headers via CF Pages _headers (must be HTTP headers, not meta tags).
+// Security headers via CF Pages _headers — single source of truth for CSP and
+// every other security header. <meta> CSP intentionally absent (frame-ancestors,
+// report-to, HSTS can't ride in <meta>). script-src hash whitelists only the
+// inline theme bootstrap.
+const csp = [
+  "default-src 'self'",
+  "img-src 'self' https://*.freegamestore.online https://*.freeappstore.online data:",
+  `script-src 'self' '${inlineScriptHash}'`,
+  "style-src 'self'",
+  "font-src 'self'",
+  "connect-src 'self' https://*.freegamestore.online https://api.freeappstore.online",
+  "frame-src https://*.freegamestore.online https://*.freeappstore.online https://*.progamestore.online",
+  "frame-ancestors 'none'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "upgrade-insecure-requests",
+].join('; ');
+
 fs.writeFileSync(path.join(DIST, '_headers'), [
   '/*',
   '  X-Frame-Options: DENY',
   '  X-Content-Type-Options: nosniff',
   '  Referrer-Policy: strict-origin-when-cross-origin',
-  '  Permissions-Policy: geolocation=(), microphone=(), camera=()',
-  '  Content-Security-Policy: frame-ancestors \'none\'',
+  '  Strict-Transport-Security: max-age=31536000; includeSubDomains',
+  '  Cross-Origin-Opener-Policy: same-origin',
+  '  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), midi=()',
+  `  Content-Security-Policy: ${csp}`,
+  `  Content-Security-Policy-Report-Only: ${csp}`,
   '',
 ].join('\n'));
 

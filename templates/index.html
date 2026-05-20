@@ -15,8 +15,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
-  <!-- CSP: lock down what the page can load + ban iframing the storefront (anti-clickjack). -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; script-src 'self' '{{INLINE_SCRIPT_HASH}}'; style-src 'self'; font-src 'self'; connect-src 'self' https://*.freegamestore.online https://api.freeappstore.online; frame-src https://*.freegamestore.online https://*.freeappstore.online https://*.progamestore.online; base-uri 'self';" />
+  <!-- CSP lives in dist/_headers (HTTP-header source of truth). -->
   <!-- Apply theme before paint to avoid flash. Reads localStorage then falls back to system preference. -->
   <script>
     (function(){try{var s=localStorage.getItem('fgs-theme');var d=s?s==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();
