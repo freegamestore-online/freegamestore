@@ -20,6 +20,18 @@ name: Game CI / Deploy (reusable)
 #         cf_project: freebowlingapp
 #       permissions: { contents: read, deployments: write }
 #       secrets: inherit
+#
+# Two-job design (compliance → deploy):
+#   The compliance job runs untrusted code — `npx @freegamestore/cli`
+#   ultimately resolves to whatever npm serves and runs in the runner. By
+#   placing the deploy in a separate job with `needs: compliance`, the
+#   Cloudflare deploy token NEVER co-exists in the same runner process
+#   with the compliance CLI. A compromised CLI release can fail the
+#   build, but cannot exfiltrate the CF token (it's only present in the
+#   second job's environment) and cannot tamper with the artifact in a
+#   way that survives the artifact upload/download round-trip without
+#   detection. The compliance job has no secrets at all; the deploy job
+#   has only what it strictly needs.
 
 on:
   workflow_call:
@@ -29,10 +41,10 @@ on:
         required: true
         type: string
       compliance_cli_version:
-        description: "Pinned @freegamestore/cli version for the compliance gate"
+        description: "Pinned @freegamestore/cli version for the compliance gate. Bump deliberately."
         required: false
         type: string
-        default: "0.1.14"
+        default: "0.1.17"
       node_version:
         description: "Node.js major version"
         required: false
@@ -48,7 +60,11 @@ on:
         required: true
 
 jobs:
-  build-and-deploy:
+  # Build + compliance check. NO secrets in this job's env — if the
+  # pinned CLI version is compromised, the worst it can do is fail
+  # this job (blocking deploy) or upload a tampered artifact. Either
+  # is recoverable.
+  compliance:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -73,11 +89,40 @@ jobs:
       - name: Platform compliance
         run: npx -y "@freegamestore/cli@${{ inputs.compliance_cli_version }}" check
 
-      # Deploy only on a push to main, never on PRs. Reusable workflow runs
-      # under the caller's event context, so this if-guard does the right
-      # thing whether called from a PR build or a main-branch push.
+      # Hand the built artifact off to the deploy job. `if-no-files-found:
+      # error` means we'd rather hard-fail than silently deploy nothing.
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-dist
+          path: web/dist
+          retention-days: 1
+          if-no-files-found: error
+
+  # Deploy job — runs only on push-to-main, holds the CF deploy token,
+  # never installs from npm again. It downloads the artifact produced
+  # by the compliance job and ships it via wrangler. Because the only
+  # action here is `wrangler pages deploy` against a known artifact
+  # path, the attack surface is whatever wrangler itself runs.
+  deploy:
+    needs: compliance
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: web-dist
+          path: web/dist
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node_version }}
+
       - name: Deploy to Cloudflare Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npx wrangler pages deploy web/dist --project-name=${{ inputs.cf_project }}
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
