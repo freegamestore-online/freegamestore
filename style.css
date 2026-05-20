@@ -1569,3 +1569,8 @@ html.dark .quality-badge.grade-f { background: #450a0a; color: #fca5a5; }
   border-color: rgba(239, 68, 68, 0.3);
 }
 .preview-empty.is-error .empty-title { color: var(--ink-strong); }
+
+/* Template utility classes — enable style-src 'self' (no 'unsafe-inline'). */
+.text-accent-bold { color: var(--accent); font-weight: 600; }
+.mt-section { margin-top: 2.5rem; }
+.aside-note { text-align: center; padding: 1.5rem 0 0.5rem; font-size: 0.9rem; color: var(--muted); }

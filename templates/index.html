@@ -16,7 +16,7 @@
   <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
   <!-- CSP: lock down what the page can load + ban iframing the storefront (anti-clickjack). -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; script-src 'self' '{{INLINE_SCRIPT_HASH}}'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://*.freegamestore.online https://api.freeappstore.online; frame-src https://*.freegamestore.online https://*.freeappstore.online https://*.progamestore.online; base-uri 'self';" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; script-src 'self' '{{INLINE_SCRIPT_HASH}}'; style-src 'self'; font-src 'self'; connect-src 'self' https://*.freegamestore.online https://api.freeappstore.online; frame-src https://*.freegamestore.online https://*.freeappstore.online https://*.progamestore.online; base-uri 'self';" />
   <!-- Apply theme before paint to avoid flash. Reads localStorage then falls back to system preference. -->
   <script>
     (function(){try{var s=localStorage.getItem('fgs-theme');var d=s?s==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();
@@ -125,7 +125,7 @@
 
           <p id="search-empty" hidden>No games match your search here.</p>
 
-          <section id="cross-store-results" hidden style="margin-top: 2.5rem;">
+          <section id="cross-store-results" hidden class="mt-section">
             <h2>Also matching on FreeAppStore</h2>
             <div class="apps-grid compact" id="cross-store-grid"></div>
           </section>
@@ -164,8 +164,8 @@
     <script type="application/json" id="cross-store-registry">{{CROSS_STORE_REGISTRY}}</script>
     <script src="/search.js" defer></script>
 
-    <aside style="text-align: center; padding: 1.5rem 0 0.5rem; font-size: 0.9rem; color: var(--muted);">
-      Looking for apps? Visit <a href="https://freeappstore.online" style="color: var(--accent); font-weight: 600;">FreeAppStore</a> — free-forever web apps.
+    <aside class="aside-note">
+      Looking for apps? Visit <a href="https://freeappstore.online" class="text-accent-bold">FreeAppStore</a> — free-forever web apps.
     </aside>
   </main>
 

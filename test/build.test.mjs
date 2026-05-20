@@ -203,6 +203,20 @@ test("CSP + security headers ship correctly", () => {
   }
 });
 
+test("style-src is locked too (no 'unsafe-inline'), index.html has zero inline style=", () => {
+  const { tmp, tmpDist } = runBuild();
+  try {
+    const indexHtml = readFileSync(join(tmpDist, "index.html"), "utf8");
+    const csp = indexHtml.match(/Content-Security-Policy"\s+content="([^"]+)"/)?.[1] ?? '';
+    const styleSrc = (csp.match(/style-src[^;]*/) || [''])[0];
+    assert.ok(!styleSrc.includes("'unsafe-inline'"), `style-src still 'unsafe-inline': ${styleSrc}`);
+    const bodyHtml = indexHtml.replace(/<head>[\s\S]*?<\/head>/, '');
+    assert.ok(!/\sstyle="/.test(bodyHtml), `inline style= survived in body`);
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
 test("CSP locks script-src with hash, no 'unsafe-inline' on scripts", () => {
   const { tmp, tmpDist } = runBuild();
   try {
