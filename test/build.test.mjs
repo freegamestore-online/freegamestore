@@ -182,3 +182,36 @@ test("CSP + security headers ship correctly", () => {
     rmSync(tmp, { recursive: true, force: true });
   }
 });
+
+test("CSP locks script-src with hash, no 'unsafe-inline' on scripts", () => {
+  const { tmp, tmpDist } = runBuild();
+  try {
+    const indexHtml = readFileSync(join(tmpDist, "index.html"), "utf8");
+    const csp = indexHtml.match(/Content-Security-Policy"\s+content="([^"]+)"/)?.[1] ?? '';
+    assert.ok(csp, "CSP meta tag missing");
+    const scriptSrc = (csp.match(/script-src[^;]*/) || [''])[0];
+    assert.ok(scriptSrc.includes("'sha256-"), `script-src needs sha256 hash: ${scriptSrc}`);
+    assert.ok(!scriptSrc.includes("'unsafe-inline'"), `script-src has unsafe-inline: ${scriptSrc}`);
+    assert.ok(!csp.includes("raw.githubusercontent.com"), "raw.githubusercontent.com leaked into runtime CSP");
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
+test("validator rejects duplicate ids and unbounded/ctrl-char names", () => {
+  let r = runBuildWithRegistry([{ ...VALID_GAME }, { ...VALID_GAME }]);
+  try {
+    assert.equal(r.ok, false);
+    assert.match(r.stderr, /duplicate id/);
+  } finally { rmSync(r.tmp, { recursive: true, force: true }); }
+  r = runBuildWithRegistry([{ ...VALID_GAME, name: "x".repeat(200) }]);
+  try {
+    assert.equal(r.ok, false);
+    assert.match(r.stderr, /name must be 1-80 chars/);
+  } finally { rmSync(r.tmp, { recursive: true, force: true }); }
+  r = runBuildWithRegistry([{ ...VALID_GAME, name: "tab" + String.fromCharCode(9) + "name" }]);
+  try {
+    assert.equal(r.ok, false);
+    assert.match(r.stderr, /name must be/);
+  } finally { rmSync(r.tmp, { recursive: true, force: true }); }
+});

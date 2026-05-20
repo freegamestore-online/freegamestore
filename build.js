@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+const crypto = require('crypto');
 
 const ROOT = __dirname;
 // DIST and the registry path can be overridden via env vars so the test
@@ -17,15 +18,25 @@ const games = registry.games;
 const ID_RE = /^[a-z0-9][a-z0-9-]*$/;
 const COLOR_RE = /^#(?:[0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/;
 const URL_RE = /^https:\/\/[a-z0-9.-]+\.freegamestore\.online(?:\/.*)?$/;
+function safeText(s, max) {
+  return typeof s === 'string' && s.length > 0 && s.length <= max && !/[\x00-\x1f\x7f]/.test(s);
+}
 function validateRegistry(items) {
   const errors = [];
+  const seenIds = new Set();
   for (const g of items) {
     if (!g.id || !ID_RE.test(g.id)) errors.push(`bad id: ${JSON.stringify(g.id)}`);
-    if (!g.name || typeof g.name !== 'string') errors.push(`${g.id}: missing name`);
+    else if (seenIds.has(g.id)) errors.push(`duplicate id: ${JSON.stringify(g.id)}`);
+    else seenIds.add(g.id);
+    if (!safeText(g.name, 80)) errors.push(`${g.id}: name must be 1-80 chars without control chars`);
     if (!g.appUrl || !URL_RE.test(g.appUrl)) errors.push(`${g.id}: appUrl must be https://*.freegamestore.online, got ${JSON.stringify(g.appUrl)}`);
     if (g.iconBg && !COLOR_RE.test(g.iconBg)) errors.push(`${g.id}: iconBg must be a #hex color, got ${JSON.stringify(g.iconBg)}`);
-    if (g.category != null && (typeof g.category !== 'string' || g.category.length > 80 || /[\x00-\x1f]/.test(g.category))) {
-      errors.push(`${g.id}: bad category ${JSON.stringify(g.category)}`);
+    if (g.category != null && !safeText(g.category, 80)) errors.push(`${g.id}: bad category ${JSON.stringify(g.category)}`);
+    if (g.description != null && !safeText(g.description, 500)) errors.push(`${g.id}: description must be 1-500 chars without control chars`);
+    if (g.developer != null && !safeText(g.developer, 60)) errors.push(`${g.id}: bad developer ${JSON.stringify(g.developer)}`);
+    if (g.author != null && !safeText(g.author, 60)) errors.push(`${g.id}: bad author ${JSON.stringify(g.author)}`);
+    if (g.repo != null && (typeof g.repo !== 'string' || g.repo.length > 100 || !/^[\w.-]+\/[\w.-]+$/.test(g.repo))) {
+      errors.push(`${g.id}: repo must be "owner/name", got ${JSON.stringify(g.repo)}`);
     }
   }
   if (errors.length) {
@@ -246,9 +257,19 @@ const gameCards = games.map(game => {
         </div>`;
 }).join('\n\n');
 
+// SHA-256 of the inline no-flash theme bootstrap so CSP can whitelist it
+// without 'unsafe-inline'. The bootstrap is the first <script> inside <head>.
+const inlineScriptMatch = indexTemplate.match(/<head>[\s\S]*?<script>([\s\S]*?)<\/script>/);
+if (!inlineScriptMatch) {
+  console.error('Could not locate the inline bootstrap <script> for CSP hashing');
+  process.exit(1);
+}
+const inlineScriptHash = 'sha256-' + crypto.createHash('sha256').update(inlineScriptMatch[1]).digest('base64');
+
 // indexHtml is finalized inside the async IIFE below — cross-store
 // registry fetch is async, and we want to embed it into the page.
 let indexHtml = indexTemplate
+  .replaceAll('{{INLINE_SCRIPT_HASH}}', inlineScriptHash)
   .replaceAll('{{GAMES_GRID}}', gameCards)
   .replaceAll('{{GAMES_COUNT}}', String(games.length));
 
