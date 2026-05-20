@@ -724,9 +724,29 @@
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-20T01:20:41Z"
+      "pushed_at": "2026-05-20T02:34:40Z"
     },
     "commits": [
+      {
+        "sha": "8ae4b43f100191221f6c4fd3f36c9c195372b102",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/8ae4b43f100191221f6c4fd3f36c9c195372b102",
+        "commit": {
+          "message": "ci: remove verify stamp (workflow refactor confirmed working)",
+          "author": {
+            "date": "2026-05-20T02:34:38Z"
+          }
+        }
+      },
+      {
+        "sha": "f4ea2adea420f5f4aac6a1b9aff44b449c3e65d5",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/f4ea2adea420f5f4aac6a1b9aff44b449c3e65d5",
+        "commit": {
+          "message": "ci: verify new two-job game-ci.yml works\n\nTrivial stamp file to trigger the reusable workflow. Will be removed\nin the next commit once the run succeeds.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-20T02:33:27Z"
+          }
+        }
+      },
       {
         "sha": "167c2c4ebd2efcb05a48a2c3e4829ce9c386eb19",
         "html_url": "https://github.com/freegamestore-online/2048/commit/167c2c4ebd2efcb05a48a2c3e4829ce9c386eb19",
@@ -734,26 +754,6 @@
           "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
           "author": {
             "date": "2026-05-20T01:20:39Z"
-          }
-        }
-      },
-      {
-        "sha": "8b0160f63c611d3fc5c90594916978115c187a93",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/8b0160f63c611d3fc5c90594916978115c187a93",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
-      },
-      {
-        "sha": "ad8de46c1ab0ff1fea40300294f378ebfabab54f",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/ad8de46c1ab0ff1fea40300294f378ebfabab54f",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:12Z"
           }
         }
       }
