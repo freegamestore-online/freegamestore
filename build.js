@@ -3,10 +3,14 @@ const path = require('path');
 const https = require('https');
 
 const ROOT = __dirname;
-const DIST = path.join(ROOT, 'dist');
+// DIST and the registry path can be overridden via env vars so the test
+// suite in test/build.test.mjs can run a parallel build against a temp
+// registry without touching real outputs.
+const DIST = process.env.FGS_DIST ? path.resolve(process.env.FGS_DIST) : path.join(ROOT, 'dist');
+const REGISTRY_PATH = process.env.FGS_REGISTRY_PATH ? path.resolve(process.env.FGS_REGISTRY_PATH) : path.join(ROOT, 'registry.json');
 
 // Read registry
-const registry = JSON.parse(fs.readFileSync(path.join(ROOT, 'registry.json'), 'utf8'));
+const registry = JSON.parse(fs.readFileSync(REGISTRY_PATH, 'utf8'));
 const games = registry.games;
 
 // Registry shape validator — stop malformed/malicious entries at build time.
@@ -431,19 +435,22 @@ games.forEach((game, i) => {
   const account = game.type === 'standalone' ? 'Not required' : 'Not required';
   const history = histories[i];
 
+  // XSS defense: every user-facing field that's not pre-validated to a
+  // safe shape (id, iconBg, appUrl all pass the validator above) is
+  // escaped here. NAME / DESCRIPTION / AUTHOR / DEVELOPER are free-form.
   let html = detailTemplate
-    .replace(/\{\{NAME\}\}/g, game.name)
-    .replace(/\{\{NAME_LOWER\}\}/g, game.name.toLowerCase())
-    .replace(/\{\{ID\}\}/g, game.id)
-    .replace(/\{\{ICON\}\}/g, game.icon)
-    .replace(/\{\{ICON_BG\}\}/g, game.iconBg)
-    .replace(/\{\{CATEGORY_LABEL\}\}/g, categoryLabel(game.category))
-    .replace(/\{\{DESCRIPTION\}\}/g, game.description)
-    .replace(/\{\{APP_URL\}\}/g, game.appUrl)
-    .replace(/\{\{REPO\}\}/g, game.repo)
-    .replace(/\{\{TYPE_LABEL\}\}/g, typeLabel(game.type))
-    .replace(/\{\{DEVELOPER\}\}/g, game.developer || 'FreeGameStore')
-    .replace(/\{\{AUTHOR\}\}/g, game.author || game.developer || 'FreeGameStore')
+    .replace(/\{\{NAME\}\}/g, escapeHtml(game.name))
+    .replace(/\{\{NAME_LOWER\}\}/g, escapeHtml(game.name.toLowerCase()))
+    .replace(/\{\{ID\}\}/g, escapeHtml(game.id))
+    .replace(/\{\{ICON\}\}/g, game.icon) // pre-validated HTML entity from registry
+    .replace(/\{\{ICON_BG\}\}/g, escapeHtml(game.iconBg))
+    .replace(/\{\{CATEGORY_LABEL\}\}/g, escapeHtml(categoryLabel(game.category)))
+    .replace(/\{\{DESCRIPTION\}\}/g, escapeHtml(game.description))
+    .replace(/\{\{APP_URL\}\}/g, escapeHtml(game.appUrl))
+    .replace(/\{\{REPO\}\}/g, escapeHtml(game.repo))
+    .replace(/\{\{TYPE_LABEL\}\}/g, escapeHtml(typeLabel(game.type)))
+    .replace(/\{\{DEVELOPER\}\}/g, escapeHtml(game.developer || 'FreeGameStore'))
+    .replace(/\{\{AUTHOR\}\}/g, escapeHtml(game.author || game.developer || 'FreeGameStore'))
     .replace(/\{\{OFFLINE\}\}/g, offline)
     .replace(/\{\{ACCOUNT\}\}/g, account)
     .replace(/\{\{PUBLISHED_LINE\}\}/g, renderPublishedLine(history))
