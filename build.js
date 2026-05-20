@@ -238,12 +238,17 @@ fs.mkdirSync(path.join(DIST, 'games'), { recursive: true });
 // --- Generate index.html ---
 
 // Build game cards — compact letter-badge layout, Figma 2026
+// Per-card icon backgrounds live in dist/card-styles.css so a malformed
+// iconBg slipping past validation never reaches an HTML style attribute.
+function escapeAttrCss(s) { return String(s).replace(/[^a-z0-9_-]/gi, '_'); }
+const cardIconBackgrounds = games
+  .map(g => `.app-card[data-id="${escapeAttrCss(g.id)}"] .app-icon { background: ${g.iconBg || '#10b981'}; }`)
+  .join('\n');
+
 const gameCards = games.map(game => {
-  // Letter fallback on data-attribute; storefront.js binds the error handler.
   const letter = escapeHtml((game.name || '?').trim().charAt(0).toUpperCase());
-  const iconBg = escapeHtml(game.iconBg || '#10b981');
   return `        <div class="app-card compact" data-id="${escapeHtml(game.id)}" data-category="${escapeHtml(game.category)}" data-about="/games/${escapeHtml(game.id)}.html">
-          <div class="app-icon" data-letter="${letter}" style="background: ${iconBg};">
+          <div class="app-icon" data-letter="${letter}">
             <img src="${escapeHtml(game.appUrl)}/apple-touch-icon.png" alt="" loading="lazy" />
           </div>
           <div class="app-body">
@@ -425,6 +430,7 @@ indexHtml = indexHtml.replace(
   JSON.stringify(crossRegistry).replace(/</g, '\\u003c'),
 );
 fs.writeFileSync(path.join(DIST, 'index.html'), indexHtml);
+fs.writeFileSync(path.join(DIST, 'card-styles.css'), cardIconBackgrounds + '\n');
 
 // --- Quality Dashboard (mirrors /tmp/freeappstore/build.js) ---
 const qualityTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'quality.html'), 'utf8');

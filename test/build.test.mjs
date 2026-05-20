@@ -170,6 +170,26 @@ test("no inline onerror= attributes survive the build", () => {
   }
 });
 
+test("cards have no inline style attribute; iconBg lives in card-styles.css", () => {
+  const { tmp, tmpDist, registry } = runBuild();
+  try {
+    const indexHtml = readFileSync(join(tmpDist, "index.html"), "utf8");
+    assert.ok(
+      !/<div class="app-icon" data-letter="[^"]*" style=/.test(indexHtml),
+      "inline style= leaked onto .app-icon",
+    );
+    const css = readFileSync(join(tmpDist, "card-styles.css"), "utf8");
+    for (const g of registry.games) {
+      assert.ok(
+        css.includes(`.app-card[data-id="${g.id}"] .app-icon`),
+        `card-styles.css missing rule for "${g.id}"`,
+      );
+    }
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
 test("CSP + security headers ship correctly", () => {
   const { tmp, tmpDist } = runBuild();
   try {
