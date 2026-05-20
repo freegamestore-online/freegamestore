@@ -161,7 +161,7 @@
     </section>
 
     <script type="application/json" id="cross-store-registry">{{CROSS_STORE_REGISTRY}}</script>
-    <script src="/search.js" defer></script>
+    <script src="/search.js" integrity="{{SRI_SEARCH_JS}}" defer></script>
 
     <aside class="aside-note">
       Looking for apps? Visit <a href="https://freeappstore.online" class="text-accent-bold">FreeAppStore</a> — free-forever web apps.
@@ -187,7 +187,7 @@
     </div>
   </footer>
 
-  <script src="/storefront.js" defer></script>
-  <script src="/theme.js"></script>
+  <script src="/storefront.js" integrity="{{SRI_STOREFRONT_JS}}" defer></script>
+  <script src="/theme.js" integrity="{{SRI_THEME_JS}}"></script>
 </body>
 </html>

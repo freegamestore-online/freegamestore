@@ -271,12 +271,28 @@ if (!inlineScriptMatch) {
 }
 const inlineScriptHash = 'sha256-' + crypto.createHash('sha256').update(inlineScriptMatch[1]).digest('base64');
 
+// SRI hashes for local scripts — browsers refuse to execute if the file
+// content changes (CDN compromise, in-flight tamper).
+function sriHash(filename) {
+  const content = fs.readFileSync(path.join(ROOT, filename));
+  return 'sha256-' + crypto.createHash('sha256').update(content).digest('base64');
+}
+const sriHashes = {
+  SEARCH_JS: sriHash('search.js'),
+  STOREFRONT_JS: sriHash('storefront.js'),
+  THEME_JS: sriHash('theme.js'),
+  DETAIL_PAGE_JS: sriHash('detail-page.js'),
+};
+
 // indexHtml is finalized inside the async IIFE below — cross-store
 // registry fetch is async, and we want to embed it into the page.
 let indexHtml = indexTemplate
   .replaceAll('{{INLINE_SCRIPT_HASH}}', inlineScriptHash)
   .replaceAll('{{GAMES_GRID}}', gameCards)
   .replaceAll('{{GAMES_COUNT}}', String(games.length));
+for (const [k, v] of Object.entries(sriHashes)) {
+  indexHtml = indexHtml.replaceAll(`{{SRI_${k}}}`, v);
+}
 
 // --- Generate game detail pages ---
 // Wrapped in async IIFE because this file is CJS (no top-level await).
@@ -484,6 +500,10 @@ games.forEach((game, i) => {
     .replace(/\{\{HISTORY_SECTION\}\}/g, renderHistorySection(game.repo, history))
     .replace(/\{\{AUDIT_BADGE\}\}/g, renderAuditBadge(auditMap.get(game.id)))
     .replace(/\{\{VIEWPORT_BADGE\}\}/g, renderViewportBadge(manifests[i]));
+
+  for (const [k, v] of Object.entries(sriHashes)) {
+    html = html.replaceAll(`{{SRI_${k}}}`, v);
+  }
 
   fs.writeFileSync(path.join(DIST, 'games', `${game.id}.html`), html);
 });
