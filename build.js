@@ -586,6 +586,9 @@ const csp = [
   "base-uri 'self'",
   "object-src 'none'",
   "upgrade-insecure-requests",
+  // CSP3 reporting + back-compat directive.
+  "report-to csp-endpoint",
+  "report-uri /v1/csp-report",
 ].join('; ');
 
 fs.writeFileSync(path.join(DIST, '_headers'), [
@@ -596,6 +599,7 @@ fs.writeFileSync(path.join(DIST, '_headers'), [
   '  Strict-Transport-Security: max-age=31536000; includeSubDomains',
   '  Cross-Origin-Opener-Policy: same-origin',
   '  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), midi=()',
+  '  Reporting-Endpoints: csp-endpoint="/v1/csp-report"',
   `  Content-Security-Policy: ${csp}`,
   `  Content-Security-Policy-Report-Only: ${csp}`,
   '',
