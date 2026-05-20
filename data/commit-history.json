@@ -154,9 +154,19 @@
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:20:51Z"
     },
     "commits": [
+      {
+        "sha": "634be465582ad0f477d6f7415dd3b2dc2173a768",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/634be465582ad0f477d6f7415dd3b2dc2173a768",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:20:49Z"
+          }
+        }
+      },
       {
         "sha": "5284bc4eda160d6e30b013f7128ce8554d3566fd",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/5284bc4eda160d6e30b013f7128ce8554d3566fd",
@@ -174,16 +184,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T21:46:25Z"
-          }
-        }
-      },
-      {
-        "sha": "e464ff8b7aead2a0c46bf01bb78fd8b875a606d5",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/e464ff8b7aead2a0c46bf01bb78fd8b875a606d5",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nReplaces the inline build/compliance/deploy pipeline with a thin\ncaller of freegamestore-online/freegamestore's reusable workflow.\nSame behavior, single source of truth for the pipeline.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T06:23:50Z"
           }
         }
       }
@@ -230,9 +230,19 @@
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-19T22:18:23Z"
+      "pushed_at": "2026-05-20T01:21:27Z"
     },
     "commits": [
+      {
+        "sha": "95b10b6ef3366a69f229ed71362f5c58bd027e13",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/95b10b6ef3366a69f229ed71362f5c58bd027e13",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:21:24Z"
+          }
+        }
+      },
       {
         "sha": "07ee2302b2325bd939b39171fe7cfde4e0bbe1da",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/07ee2302b2325bd939b39171fe7cfde4e0bbe1da",
@@ -250,16 +260,6 @@
           "message": "Features: combo multiplier, spike hazards, power-ups\n\nCombo:\n- Each coin pickup extends a 3s window; consecutive pickups stack a ×2/×3/×4\n  multiplier on coin value. Distance scoring stays 1× so idling can't\n  build a combo.\n- Multiplier shown both in the topbar (Combo stat appears when > 1) and\n  big at the top-center of the play area, with a decay bar underneath.\n\nHazards:\n- Some platforms spawn with red saw-tooth strips inset from the edges.\n  Touching one is lethal.\n- Spawn rate ramps from 0% (first 15s) to 32% by 90s, so early game stays\n  forgiving.\n\nPower-ups (~8% of coin-bearing platforms):\n- Blue double-jump: one extra mid-air jump for 8s. Sparkles on use.\n- Purple slow-mo: world ticks at 45% for 3s; controls stay at full speed\n  so it's an offensive ability, not just a \"pause to think\" cheat.\n- Gold shield: absorbs one spike hit (bounce + combo reset) or one fall.\n  Pulsing aura while active.\n- Active power-ups stack as small badges in the top-left with charges or\n  time remaining. Slow-mo paints a faint purple tint over the play area.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T22:14:41Z"
-          }
-        }
-      },
-      {
-        "sha": "f6a741f149bd1233c0327f041c7da4607346f5db",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/f6a741f149bd1233c0327f041c7da4607346f5db",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
           }
         }
       }
@@ -458,9 +458,19 @@
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-19T22:01:38Z"
+      "pushed_at": "2026-05-20T01:21:09Z"
     },
     "commits": [
+      {
+        "sha": "02f3ad61330a881bfd47988d4864bc586e9c9b09",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/02f3ad61330a881bfd47988d4864bc586e9c9b09",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:21:06Z"
+          }
+        }
+      },
       {
         "sha": "2c2491c790fad85fc37b03921b25ff11104f2465",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/2c2491c790fad85fc37b03921b25ff11104f2465",
@@ -480,25 +490,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "6b78985c0d6f1b229278307b3d088091b6647ca6",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/6b78985c0d6f1b229278307b3d088091b6647ca6",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:21:15Z"
     },
     "commits": [
+      {
+        "sha": "19fb83c428a264ba7cdfe0ee5b5eda2efb13d29c",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/19fb83c428a264ba7cdfe0ee5b5eda2efb13d29c",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:21:13Z"
+          }
+        }
+      },
       {
         "sha": "35ee463f561ebc2d033d439d49b6c69c10ff9b25",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/35ee463f561ebc2d033d439d49b6c69c10ff9b25",
@@ -516,16 +526,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T21:46:27Z"
-          }
-        }
-      },
-      {
-        "sha": "db3d6b88f6b036df5c7ef3e77a8311da4bf196ce",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/db3d6b88f6b036df5c7ef3e77a8311da4bf196ce",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:29Z"
           }
         }
       }
@@ -572,9 +572,19 @@
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:21:21Z"
     },
     "commits": [
+      {
+        "sha": "15f34acecc65ecfc7e98192d040cea3fcd6186b7",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/15f34acecc65ecfc7e98192d040cea3fcd6186b7",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:21:18Z"
+          }
+        }
+      },
       {
         "sha": "eeef49557289e83f0f7d481139d9fa25d306ee32",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/eeef49557289e83f0f7d481139d9fa25d306ee32",
@@ -594,25 +604,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "9cabdf9a9d9bed91e28f746d5056693c8d86a38c",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/9cabdf9a9d9bed91e28f746d5056693c8d86a38c",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:21:43Z"
     },
     "commits": [
+      {
+        "sha": "b820ce2a4f4217efc17547649a3861eabbb0fc73",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/b820ce2a4f4217efc17547649a3861eabbb0fc73",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:21:41Z"
+          }
+        }
+      },
       {
         "sha": "484837258479dfc9e6dbb663a70bd25f1b8271a4",
         "html_url": "https://github.com/freegamestore-online/racing/commit/484837258479dfc9e6dbb663a70bd25f1b8271a4",
@@ -630,16 +640,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T21:46:26Z"
-          }
-        }
-      },
-      {
-        "sha": "451cd2d57bcf459986098bc40e40b59d3838ef77",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/451cd2d57bcf459986098bc40e40b59d3838ef77",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:58Z"
           }
         }
       }
@@ -724,9 +724,19 @@
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:20:41Z"
     },
     "commits": [
+      {
+        "sha": "167c2c4ebd2efcb05a48a2c3e4829ce9c386eb19",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/167c2c4ebd2efcb05a48a2c3e4829ce9c386eb19",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:20:39Z"
+          }
+        }
+      },
       {
         "sha": "8b0160f63c611d3fc5c90594916978115c187a93",
         "html_url": "https://github.com/freegamestore-online/2048/commit/8b0160f63c611d3fc5c90594916978115c187a93",
@@ -746,25 +756,25 @@
             "date": "2026-05-19T21:46:12Z"
           }
         }
-      },
-      {
-        "sha": "b1a9daa9fd9ecb5551e1ad69f71d76b48ea1f60f",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/b1a9daa9fd9ecb5551e1ad69f71d76b48ea1f60f",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:10:52Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:20:57Z"
     },
     "commits": [
+      {
+        "sha": "de28ed2c3af957e1d6ae914d849169a1f76cdd12",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/de28ed2c3af957e1d6ae914d849169a1f76cdd12",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:20:54Z"
+          }
+        }
+      },
       {
         "sha": "0bdcf25ea7acdc6a82bfd75f15cc526646193b1c",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/0bdcf25ea7acdc6a82bfd75f15cc526646193b1c",
@@ -782,16 +792,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T21:46:25Z"
-          }
-        }
-      },
-      {
-        "sha": "51a89f01be18a2cfc3cdb98453964ea33766b18e",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/51a89f01be18a2cfc3cdb98453964ea33766b18e",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:01Z"
           }
         }
       }
@@ -838,9 +838,19 @@
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:22:24Z"
     },
     "commits": [
+      {
+        "sha": "2b63875c0c50c0345d70dbb848322a842e9aa047",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/2b63875c0c50c0345d70dbb848322a842e9aa047",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:22:22Z"
+          }
+        }
+      },
       {
         "sha": "51d29182e47107881110b89cfebf17196bc99be2",
         "html_url": "https://github.com/freegamestore-online/snake/commit/51d29182e47107881110b89cfebf17196bc99be2",
@@ -858,16 +868,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T21:46:26Z"
-          }
-        }
-      },
-      {
-        "sha": "866091b68986e7b5725063a23544222172bc7e01",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/866091b68986e7b5725063a23544222172bc7e01",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:07Z"
           }
         }
       }
@@ -914,9 +914,19 @@
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:21:59Z"
     },
     "commits": [
+      {
+        "sha": "4e09af5bf6167cd2137ed29a467860885eca6062",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/4e09af5bf6167cd2137ed29a467860885eca6062",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:21:57Z"
+          }
+        }
+      },
       {
         "sha": "60cb93b7904863855a46c83e135be42fdde84fe3",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/60cb93b7904863855a46c83e135be42fdde84fe3",
@@ -936,25 +946,25 @@
             "date": "2026-05-19T21:46:27Z"
           }
         }
-      },
-      {
-        "sha": "74c7990613fd6c9443e83a9de4a731227fa87071",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/74c7990613fd6c9443e83a9de4a731227fa87071",
-        "commit": {
-          "message": "chore: regenerate pnpm-lock.yaml after SDK bump to 0.13\n\npackage.json was bumped to @freegamestore/games ^0.13.0 but the\nlockfile still had ^0.12.0, breaking pnpm install --frozen-lockfile\nin CI.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T07:29:48Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:22:11Z"
     },
     "commits": [
+      {
+        "sha": "bd0635568c9aa138b5e819b3a2bd31c4235e2067",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/bd0635568c9aa138b5e819b3a2bd31c4235e2067",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:22:08Z"
+          }
+        }
+      },
       {
         "sha": "8a11d8a9a2abae7916a343ff22eeffb6ba708290",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/8a11d8a9a2abae7916a343ff22eeffb6ba708290",
@@ -972,16 +982,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T21:46:28Z"
-          }
-        }
-      },
-      {
-        "sha": "4d78477f6f9527ceb976c19fbe3590908ed4a33b",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/4d78477f6f9527ceb976c19fbe3590908ed4a33b",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:20Z"
           }
         }
       }
@@ -1028,9 +1028,19 @@
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:21:33Z"
     },
     "commits": [
+      {
+        "sha": "dd45f9acdf4ab2d04b98dab94445aedf6ee6b1e1",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/dd45f9acdf4ab2d04b98dab94445aedf6ee6b1e1",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:21:30Z"
+          }
+        }
+      },
       {
         "sha": "39c02a5b1286ac63ef1dd11d87f699d8f8836b6a",
         "html_url": "https://github.com/freegamestore-online/pong/commit/39c02a5b1286ac63ef1dd11d87f699d8f8836b6a",
@@ -1050,25 +1060,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "78a7e6f0e80fa9ea04411f2604edf8ed2d2b6ae1",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/78a7e6f0e80fa9ea04411f2604edf8ed2d2b6ae1",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:52Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:22:04Z"
     },
     "commits": [
+      {
+        "sha": "cf174f5a6d005413d1f1605de8b3c88889156385",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/cf174f5a6d005413d1f1605de8b3c88889156385",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:22:02Z"
+          }
+        }
+      },
       {
         "sha": "1f6b674981bce1bec290526df0c7270a68e7555a",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/1f6b674981bce1bec290526df0c7270a68e7555a",
@@ -1086,16 +1096,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T21:46:26Z"
-          }
-        }
-      },
-      {
-        "sha": "5f475f94898001dff29a0b82ceeab514ad7e8526",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/5f475f94898001dff29a0b82ceeab514ad7e8526",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:17Z"
           }
         }
       }
@@ -1142,9 +1142,19 @@
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:21:50Z"
     },
     "commits": [
+      {
+        "sha": "8465237013ede6f91353c952d4772b65cc471894",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/8465237013ede6f91353c952d4772b65cc471894",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:21:48Z"
+          }
+        }
+      },
       {
         "sha": "b546dda80a71344ca4401a5a23876404bfe9a31a",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/b546dda80a71344ca4401a5a23876404bfe9a31a",
@@ -1164,25 +1174,25 @@
             "date": "2026-05-19T21:46:26Z"
           }
         }
-      },
-      {
-        "sha": "c37286ac771ad347846908b3683291e0c5168192",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/c37286ac771ad347846908b3683291e0c5168192",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:10Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:22:17Z"
     },
     "commits": [
+      {
+        "sha": "17575e65e2580380fcca698caac340fcd6825dd9",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/17575e65e2580380fcca698caac340fcd6825dd9",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:22:14Z"
+          }
+        }
+      },
       {
         "sha": "cc472082257734060816282c043bb97d4ac5a7eb",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/cc472082257734060816282c043bb97d4ac5a7eb",
@@ -1200,16 +1210,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T21:46:26Z"
-          }
-        }
-      },
-      {
-        "sha": "1b216a8c2b9b6367af74b4c91fc1ba27586bd302",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/1b216a8c2b9b6367af74b4c91fc1ba27586bd302",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:12:26Z"
           }
         }
       }
@@ -1256,9 +1256,19 @@
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-19T22:01:39Z"
+      "pushed_at": "2026-05-20T01:21:03Z"
     },
     "commits": [
+      {
+        "sha": "395e2bc7ee6d3bd82f5c7a3c3f7922fee870834d",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/395e2bc7ee6d3bd82f5c7a3c3f7922fee870834d",
+        "commit": {
+          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
+          "author": {
+            "date": "2026-05-20T01:21:00Z"
+          }
+        }
+      },
       {
         "sha": "dd5a398cb8bb7b65d7513f4e794037804fb4458e",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/dd5a398cb8bb7b65d7513f4e794037804fb4458e",
@@ -1276,16 +1286,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T21:46:25Z"
-          }
-        }
-      },
-      {
-        "sha": "b31485ef35d48b668929ad2d9723c32f39173e97",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/b31485ef35d48b668929ad2d9723c32f39173e97",
-        "commit": {
-          "message": "ci: switch deploy.yml to reusable game-ci workflow\n\nCaller for freegamestore-online/freegamestore's reusable workflow.\nPipeline definition is centralized; per-game file is just the\ncf_project plumbing.",
-          "author": {
-            "date": "2026-05-19T07:11:10Z"
           }
         }
       }
