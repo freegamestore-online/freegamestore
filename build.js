@@ -202,7 +202,9 @@ fs.mkdirSync(path.join(DIST, 'games'), { recursive: true });
 
 // Build game cards — compact letter-badge layout, Figma 2026
 const gameCards = games.map(game => {
-  const letter = (game.name || '?').trim().charAt(0).toUpperCase();
+  // Escape for safe use inside the single-quoted JS string in the img.onerror handler —
+  // names starting with ' or \ would otherwise break out.
+  const letter = (game.name || '?').trim().charAt(0).toUpperCase().replace(/[\\']/g, '\\$&');
   const iconBg = escapeHtml(game.iconBg || '#10b981');
   return `        <div class="app-card compact" data-id="${escapeHtml(game.id)}" data-category="${escapeHtml(game.category)}" data-about="/games/${escapeHtml(game.id)}.html">
           <div class="app-icon" style="background: ${iconBg};">

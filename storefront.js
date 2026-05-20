@@ -77,6 +77,35 @@
     var btnClose = document.getElementById('previewClose');
     var btnFullscreen = document.getElementById('previewFullscreen');
     var current = null;
+    var loadTimeout = null;
+    var loadToken = 0;
+
+    var emptyTitleEl = empty && empty.querySelector('.empty-title');
+    var emptyTipEl = empty && empty.querySelector('.empty-tip');
+    var ORIGINAL_EMPTY_TITLE = emptyTitleEl ? emptyTitleEl.textContent : '';
+    var ORIGINAL_EMPTY_TIP_HTML = emptyTipEl ? emptyTipEl.innerHTML : '';
+
+    /* SECURITY: the iframe loads game URLs under *.freegamestore.online — all
+     * first-party today. Sandbox allows same-origin + scripts because games need
+     * their own state (high scores, save files) and gamepad/fullscreen APIs.
+     * Revisit before opening third-party game submissions. */
+    function restoreEmpty() {
+      if (emptyTitleEl) emptyTitleEl.textContent = ORIGINAL_EMPTY_TITLE;
+      if (emptyTipEl) emptyTipEl.innerHTML = ORIGINAL_EMPTY_TIP_HTML;
+      if (empty) empty.classList.remove('is-error');
+    }
+
+    function showLoadError(meta) {
+      if (loadTimeout) { clearTimeout(loadTimeout); loadTimeout = null; }
+      pane.classList.remove('is-loading');
+      frame.hidden = true;
+      if (empty) {
+        empty.hidden = false;
+        empty.classList.add('is-error');
+        if (emptyTitleEl) emptyTitleEl.textContent = (meta.name || 'This game') + " can't embed here";
+        if (emptyTipEl) emptyTipEl.innerHTML = 'It blocks iframes. Click <strong>↗ New tab</strong> to launch it normally.';
+      }
+    }
 
     function activate(card) {
       document.querySelectorAll('.app-card.compact.is-active').forEach(function (c) {
@@ -109,6 +138,7 @@
 
     function loadInPane(meta, card) {
       current = meta;
+      restoreEmpty();
       pane.classList.add('is-loading');
       frame.hidden = false;
       empty.hidden = true;
@@ -117,20 +147,38 @@
       if (btnFullscreen) btnFullscreen.hidden = false;
       btnClose.hidden = false;
       setTitle(meta.name, meta.url);
-      frame.src = meta.url;
       activate(card);
-      frame.addEventListener('load', function once() {
-        pane.classList.remove('is-loading');
-        frame.removeEventListener('load', once);
-      });
       setUrlParam(meta.id);
+
+      // Pre-flight reachability — catches DNS / network errors that the
+      // iframe load event misses (browsers fire `load` on their own error pages).
+      var token = ++loadToken;
+      fetch(meta.url, { method: 'GET', mode: 'no-cors', cache: 'no-store', credentials: 'omit' })
+        .then(function () {
+          if (token !== loadToken) return;
+          frame.src = meta.url;
+          if (loadTimeout) clearTimeout(loadTimeout);
+          loadTimeout = setTimeout(function () { showLoadError(meta); }, 10000);
+          frame.addEventListener('load', function once() {
+            pane.classList.remove('is-loading');
+            frame.removeEventListener('load', once);
+            if (loadTimeout) { clearTimeout(loadTimeout); loadTimeout = null; }
+          });
+        })
+        .catch(function () {
+          if (token !== loadToken) return;
+          showLoadError(meta);
+        });
     }
 
     function clearPane() {
       current = null;
+      loadToken++;
+      if (loadTimeout) { clearTimeout(loadTimeout); loadTimeout = null; }
       frame.removeAttribute('src');
       frame.hidden = true;
       empty.hidden = false;
+      restoreEmpty();
       btnNewTab.hidden = true;
       if (btnAbout) btnAbout.hidden = true;
       if (btnFullscreen) btnFullscreen.hidden = true;
