@@ -27,7 +27,8 @@
           "date": "2026-04-25",
           "notes": "Initial release with swipe and keyboard controls."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "asteroids",
@@ -51,7 +52,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with momentum physics and screen wrap."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "billiards",
@@ -64,7 +66,8 @@
       "repo": "freegamestore-online/billiards",
       "cfProject": "freebilliardsapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     },
     {
       "id": "bowling",
@@ -88,7 +91,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with physics-based pin interaction."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "breakout",
@@ -112,7 +116,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with multi-level brick layouts."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "checkers",
@@ -136,7 +141,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with minimax AI and multi-jump chains."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "chess",
@@ -160,7 +166,8 @@
           "date": "2026-04-15",
           "notes": "Initial release with engine play and puzzle mode."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "coinflip",
@@ -173,7 +180,8 @@
       "repo": "freegamestore-online/coinflip",
       "cfProject": "freecoinflipapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     },
     {
       "id": "connect4",
@@ -197,7 +205,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with minimax AI and drop animation."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "dice",
@@ -210,7 +219,8 @@
       "repo": "freegamestore-online/dice",
       "cfProject": "freediceapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     },
     {
       "id": "flappy",
@@ -234,7 +244,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with pipe gap difficulty scaling."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "frogger",
@@ -258,7 +269,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with road and river lanes."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "hangman",
@@ -282,7 +294,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with 4 word categories."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "highlow",
@@ -295,7 +308,8 @@
       "repo": "freegamestore-online/highlow",
       "cfProject": "freehighlowapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     },
     {
       "id": "mahjong",
@@ -319,7 +333,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with turtle layout, hint, and shuffle."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "match3",
@@ -343,7 +358,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with cascade combos and timed mode."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "memory",
@@ -367,7 +383,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with three difficulty levels."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "memorymatch",
@@ -380,7 +397,8 @@
       "repo": "freegamestore-online/memorymatch",
       "cfProject": "freememorymatchapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     },
     {
       "id": "minesweeper",
@@ -404,7 +422,8 @@
           "date": "2026-04-22",
           "notes": "Initial release with easy, medium, and hard modes."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "pacman",
@@ -428,7 +447,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with 4 ghosts, power pellets, and swipe controls."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "platformer",
@@ -452,7 +472,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with procedural level generation."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "pong",
@@ -476,7 +497,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with AI opponent and touch controls."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "puzzle",
@@ -500,7 +522,8 @@
           "date": "2026-04-15",
           "notes": "Initial release with logic and pattern puzzles."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "racing",
@@ -524,7 +547,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with Three.js 3D rendering and 3-lane gameplay."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "simon",
@@ -548,7 +572,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with audio tones and speed ramp."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "slither",
@@ -572,7 +597,8 @@
           "date": "2026-04-28",
           "notes": "Initial release with AI bots and boost mechanic."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "snake",
@@ -596,7 +622,8 @@
           "date": "2026-04-20",
           "notes": "Initial release with swipe and keyboard controls."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "solitaire",
@@ -620,7 +647,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with Draw 1/3, undo, and auto-complete."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "spaceshooter",
@@ -644,7 +672,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with enemy waves and power-ups."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "sudoku",
@@ -668,7 +697,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with three difficulty levels and leaderboard."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "tetris",
@@ -692,7 +722,8 @@
           "date": "2026-04-20",
           "notes": "Initial release with classic gameplay and level progression."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "whackamole",
@@ -716,7 +747,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with 3 mole types and 30s timer."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "wordsearch",
@@ -740,7 +772,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with 5 word themes."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "wordle",
@@ -764,7 +797,8 @@
           "date": "2026-05-04",
           "notes": "Initial release with daily and practice modes."
         }
-      ]
+      ],
+      "hostedOn": "r2"
     },
     {
       "id": "tictactoe",
@@ -777,7 +811,8 @@
       "repo": "freegamestore-online/tictactoe",
       "cfProject": "freetictactoeapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     },
     {
       "id": "reversi",
@@ -790,7 +825,8 @@
       "repo": "freegamestore-online/reversi",
       "cfProject": "freereversiapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     },
     {
       "id": "blackjack",
@@ -803,7 +839,8 @@
       "repo": "freegamestore-online/blackjack",
       "cfProject": "freeblackjackapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     },
     {
       "id": "bubbleshooter",
@@ -816,7 +853,8 @@
       "repo": "freegamestore-online/bubbleshooter",
       "cfProject": "freebubbleshooterapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     },
     {
       "id": "spaceinvaders",
@@ -829,7 +867,8 @@
       "repo": "freegamestore-online/spaceinvaders",
       "cfProject": "freespaceinvadersapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     },
     {
       "id": "war",
@@ -842,7 +881,8 @@
       "repo": "freegamestore-online/war",
       "cfProject": "freewarapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     },
     {
       "id": "tanks",
@@ -855,7 +895,8 @@
       "repo": "freegamestore-online/tanks",
       "cfProject": "freetanksapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     },
     {
       "id": "riichi",
@@ -868,7 +909,8 @@
       "repo": "freegamestore-online/riichi",
       "cfProject": "freeriichiapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     },
     {
       "id": "pinball",
@@ -881,7 +923,8 @@
       "repo": "freegamestore-online/pinball",
       "cfProject": "freepinballapp",
       "type": "standalone",
-      "developer": "FreeGameStore"
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
     }
   ]
 }
