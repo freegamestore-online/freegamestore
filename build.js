@@ -50,6 +50,14 @@ validateRegistry(games);
 const indexTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'index.html'), 'utf8');
 const detailTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'game-detail.html'), 'utf8');
 
+// CF Web Analytics — token from FGS_CF_BEACON_TOKEN at build time. Snippet is
+// the standard CF Insights beacon; cookieless, no PII. If unset, an HTML
+// comment is emitted so the page validates but no beacon ships.
+const CF_BEACON_TOKEN = (process.env.FGS_CF_BEACON_TOKEN || '').trim();
+const CF_BEACON_SNIPPET = CF_BEACON_TOKEN && /^[a-f0-9]{32,}$/i.test(CF_BEACON_TOKEN)
+  ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"${CF_BEACON_TOKEN}"}'></script>`
+  : '<!-- CF Web Analytics: FGS_CF_BEACON_TOKEN unset at build time -->';
+
 // Helper: format category label (brain-training -> Brain Training)
 function categoryLabel(cat) {
   return cat.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
@@ -287,6 +295,7 @@ const sriHashes = {
 // indexHtml is finalized inside the async IIFE below — cross-store
 // registry fetch is async, and we want to embed it into the page.
 let indexHtml = indexTemplate
+  .replaceAll('__CF_BEACON__', CF_BEACON_SNIPPET)
   .replaceAll('{{INLINE_SCRIPT_HASH}}', inlineScriptHash)
   .replaceAll('{{GAMES_GRID}}', gameCards)
   .replaceAll('{{GAMES_COUNT}}', String(games.length));
@@ -461,10 +470,12 @@ const qualityRegistry = {
       description: 'Deliberately-broken control cases. Each scenario reproduces a known layout bug to verify the platform auditor flags it correctly.' },
   ],
 };
-const qualityHtml = qualityTemplate.replace(
-  '{{REGISTRIES_JSON}}',
-  JSON.stringify(qualityRegistry).replace(/</g, '\\u003c'),
-);
+const qualityHtml = qualityTemplate
+  .replaceAll('__CF_BEACON__', CF_BEACON_SNIPPET)
+  .replace(
+    '{{REGISTRIES_JSON}}',
+    JSON.stringify(qualityRegistry).replace(/</g, '\\u003c'),
+  );
 fs.writeFileSync(path.join(DIST, 'quality.html'), qualityHtml);
 console.log(`  /quality dashboard generated for ${qualityRegistry.games.length} games + ${qualityRegistry.apps.length} apps`);
 
@@ -482,6 +493,7 @@ games.forEach((game, i) => {
   // safe shape (id, iconBg, appUrl all pass the validator above) is
   // escaped here. NAME / DESCRIPTION / AUTHOR / DEVELOPER are free-form.
   let html = detailTemplate
+    .replaceAll('__CF_BEACON__', CF_BEACON_SNIPPET)
     .replace(/\{\{NAME\}\}/g, escapeHtml(game.name))
     .replace(/\{\{NAME_LOWER\}\}/g, escapeHtml(game.name.toLowerCase()))
     .replace(/\{\{ID\}\}/g, escapeHtml(game.id))
@@ -515,6 +527,8 @@ const sitemapEntries = [
   '  <url><loc>https://freegamestore.online/</loc><priority>1.0</priority></url>',
   '  <url><loc>https://freegamestore.online/about.html</loc><priority>0.8</priority></url>',
   '  <url><loc>https://freegamestore.online/contribute.html</loc><priority>0.7</priority></url>',
+  '  <url><loc>https://freegamestore.online/get-started.html</loc><priority>0.9</priority></url>',
+  '  <url><loc>https://freegamestore.online/pricing.html</loc><priority>0.8</priority></url>',
   '  <url><loc>https://freegamestore.online/build-with-ai.html</loc><priority>0.85</priority></url>',
   '  <url><loc>https://freegamestore.online/ai/claude-code.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/ai/cursor.html</loc><priority>0.7</priority></url>',
@@ -577,10 +591,10 @@ const filesToCopy = [
 const csp = [
   "default-src 'self'",
   "img-src 'self' https://*.freegamestore.online https://*.freeappstore.online data:",
-  `script-src 'self' '${inlineScriptHash}'`,
+  `script-src 'self' '${inlineScriptHash}' https://static.cloudflareinsights.com`,
   "style-src 'self'",
   "font-src 'self'",
-  "connect-src 'self' https://*.freegamestore.online https://api.freeappstore.online",
+  "connect-src 'self' https://*.freegamestore.online https://api.freeappstore.online https://cloudflareinsights.com",
   "frame-src https://*.freegamestore.online https://*.freeappstore.online https://*.progamestore.online",
   "frame-ancestors 'none'",
   "base-uri 'self'",

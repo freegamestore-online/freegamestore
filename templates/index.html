@@ -11,6 +11,34 @@
   <meta property="og:url" content="https://freegamestore.online/" />
   <meta property="og:image" content="https://freegamestore.online/icon-512.png" />
   <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://freegamestore.online/" />
+  <!-- WebSite + SearchAction JSON-LD for sitelinks search; Organization
+       gives knowledge-panel signal. -->
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://freegamestore.online/#website",
+        "url": "https://freegamestore.online/",
+        "name": "FreeGameStore",
+        "description": "A platform of free-forever web games. No charges, no plans, no paywalls.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://freegamestore.online/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://freegamestore.online/#org",
+        "name": "FreeGameStore",
+        "url": "https://freegamestore.online/",
+        "logo": "https://freegamestore.online/icon-512.png",
+        "sameAs": ["https://github.com/freegamestore-online"]
+      }
+    ]
+  }</script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
@@ -22,6 +50,8 @@
   </script>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="card-styles.css" />
+  <!-- CF Web Analytics — cookieless, no PII. Token injected at build time from FGS_CF_BEACON_TOKEN. -->
+  __CF_BEACON__
 </head>
 <body>
   <header>
