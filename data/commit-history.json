@@ -2,9 +2,19 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:29:01Z"
     },
     "commits": [
+      {
+        "sha": "7776459ab40ff862bc122571490b33cb951b1d8a",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/7776459ab40ff862bc122571490b33cb951b1d8a",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:28:58Z"
+          }
+        }
+      },
       {
         "sha": "569a006198cced7fb876636c63a750a2ecd6eda9",
         "html_url": "https://github.com/freegamestore-online/dice/commit/569a006198cced7fb876636c63a750a2ecd6eda9",
@@ -24,25 +34,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "91c7a61c0dae1d65914a25bbf35d65980c4b45b9",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/91c7a61c0dae1d65914a25bbf35d65980c4b45b9",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:28:52Z"
     },
     "commits": [
+      {
+        "sha": "4cc85a65dcb90ddfd7e9824edebfddf74c972927",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/4cc85a65dcb90ddfd7e9824edebfddf74c972927",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:28:50Z"
+          }
+        }
+      },
       {
         "sha": "d30c0915993fdf01440c5e3e2369bccdd3011392",
         "html_url": "https://github.com/freegamestore-online/chess/commit/d30c0915993fdf01440c5e3e2369bccdd3011392",
@@ -62,25 +72,25 @@
             "date": "2026-05-19T23:06:30Z"
           }
         }
-      },
-      {
-        "sha": "4d7a18056e0af1043f5368617a59faec43c02a00",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/4d7a18056e0af1043f5368617a59faec43c02a00",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:28:36Z"
     },
     "commits": [
+      {
+        "sha": "619f0aa92c2826ee729d22b88c6f1ed79a82dbb0",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/619f0aa92c2826ee729d22b88c6f1ed79a82dbb0",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:28:33Z"
+          }
+        }
+      },
       {
         "sha": "be630a942ef9e25f84b2f24d8530e017816e72db",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/be630a942ef9e25f84b2f24d8530e017816e72db",
@@ -100,25 +110,25 @@
             "date": "2026-05-19T22:01:35Z"
           }
         }
-      },
-      {
-        "sha": "886afbd3ba2097f607767f31084d3f611d15a87a",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/886afbd3ba2097f607767f31084d3f611d15a87a",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:28:55Z"
     },
     "commits": [
+      {
+        "sha": "22a1b98b4c4d726d244bfc114063c68733ab1c9f",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/22a1b98b4c4d726d244bfc114063c68733ab1c9f",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:28:53Z"
+          }
+        }
+      },
       {
         "sha": "a5de1dfcc81a3a14f49cae8e303b7544831806ed",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/a5de1dfcc81a3a14f49cae8e303b7544831806ed",
@@ -138,25 +148,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "e8bc7cef495ce6f2687449ec15f09a76883d06ac",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/e8bc7cef495ce6f2687449ec15f09a76883d06ac",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:28:44Z"
     },
     "commits": [
+      {
+        "sha": "939bdc6f072a8a99e350e47b67856e1089981933",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/939bdc6f072a8a99e350e47b67856e1089981933",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:28:42Z"
+          }
+        }
+      },
       {
         "sha": "a0c4b4b0906b9d76d69e8b2564327a860ad65a95",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/a0c4b4b0906b9d76d69e8b2564327a860ad65a95",
@@ -176,25 +186,25 @@
             "date": "2026-05-20T01:20:49Z"
           }
         }
-      },
-      {
-        "sha": "5284bc4eda160d6e30b013f7128ce8554d3566fd",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/5284bc4eda160d6e30b013f7128ce8554d3566fd",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:29:18Z"
     },
     "commits": [
+      {
+        "sha": "f5ee0e93b0417be854cdc9b8a3fb14c23ca6025c",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/f5ee0e93b0417be854cdc9b8a3fb14c23ca6025c",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:15Z"
+          }
+        }
+      },
       {
         "sha": "7e62d9e6a00373ddb5a831b91577b0cb39cd964a",
         "html_url": "https://github.com/freegamestore-online/match3/commit/7e62d9e6a00373ddb5a831b91577b0cb39cd964a",
@@ -214,25 +224,25 @@
             "date": "2026-05-19T22:01:34Z"
           }
         }
-      },
-      {
-        "sha": "98993c575b17aaa4b52a8f1f018dd4132a072309",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/98993c575b17aaa4b52a8f1f018dd4132a072309",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:27Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-21T02:29:29Z"
     },
     "commits": [
+      {
+        "sha": "925e2542916b2666aacddfae7e7b25fd09d89f3d",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/925e2542916b2666aacddfae7e7b25fd09d89f3d",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:26Z"
+          }
+        }
+      },
       {
         "sha": "c539302c7be41c89c8f0d4371562f46eede19379",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/c539302c7be41c89c8f0d4371562f46eede19379",
@@ -252,25 +262,25 @@
             "date": "2026-05-20T01:21:24Z"
           }
         }
-      },
-      {
-        "sha": "07ee2302b2325bd939b39171fe7cfde4e0bbe1da",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/07ee2302b2325bd939b39171fe7cfde4e0bbe1da",
-        "commit": {
-          "message": "Game.tsx: first coin in a chain shouldn't already cash at ×2\n\nbumpMult() ran before the coin was credited, so the very first coin of a\nfresh chain applied at ×2 even though no chain existed yet. Apply mult\nfirst (which is 1 on a cold start), then bump it so the *next* coin\nhits at ×2. Matches the \"first match starts the combo\" intuition.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:18:20Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:29:12Z"
     },
     "commits": [
+      {
+        "sha": "a16a44587704771f89767d999c3ef78e4b396df5",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/a16a44587704771f89767d999c3ef78e4b396df5",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:10Z"
+          }
+        }
+      },
       {
         "sha": "4a0c8943d16de68ca1adc7898f7b28dc3e9af301",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/4a0c8943d16de68ca1adc7898f7b28dc3e9af301",
@@ -290,25 +300,25 @@
             "date": "2026-05-19T22:01:35Z"
           }
         }
-      },
-      {
-        "sha": "cfd1c7f62d6577b9f3fb392933a6afde78d05f41",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/cfd1c7f62d6577b9f3fb392933a6afde78d05f41",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:28:33Z"
     },
     "commits": [
+      {
+        "sha": "d78f78d383744b2037baae05020e543bbdb7b7d3",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/d78f78d383744b2037baae05020e543bbdb7b7d3",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:28:30Z"
+          }
+        }
+      },
       {
         "sha": "87bc64d1ba0028666f0489d510c7acb2be6f0cc8",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/87bc64d1ba0028666f0489d510c7acb2be6f0cc8",
@@ -326,16 +336,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T22:01:35Z"
-          }
-        }
-      },
-      {
-        "sha": "ff282f94c2b623c8de49467b0ef607f65fb4ec45",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/ff282f94c2b623c8de49467b0ef607f65fb4ec45",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
           }
         }
       }
@@ -382,9 +382,19 @@
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:29:06Z"
     },
     "commits": [
+      {
+        "sha": "ef0e9ef368d7db03b9b836787d04dbb7fcc2f291",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/ef0e9ef368d7db03b9b836787d04dbb7fcc2f291",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:04Z"
+          }
+        }
+      },
       {
         "sha": "db06750605f165aba2b87e773b9bb891cc283a7f",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/db06750605f165aba2b87e773b9bb891cc283a7f",
@@ -404,25 +414,25 @@
             "date": "2026-05-19T22:01:35Z"
           }
         }
-      },
-      {
-        "sha": "bfd3a28928f7c9ed5997ed33a005323ea89f8eb9",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/bfd3a28928f7c9ed5997ed33a005323ea89f8eb9",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:28:41Z"
     },
     "commits": [
+      {
+        "sha": "dbebe5da04f9ca309ccd187c33d40b8dcafef18c",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/dbebe5da04f9ca309ccd187c33d40b8dcafef18c",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:28:39Z"
+          }
+        }
+      },
       {
         "sha": "fa6585cbd01d09c82ecceaee9932e2e52536c186",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/fa6585cbd01d09c82ecceaee9932e2e52536c186",
@@ -442,25 +452,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "984ecd4514b481c172abef75884e4757499ed211",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/984ecd4514b481c172abef75884e4757499ed211",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:42:57Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:29:04Z"
     },
     "commits": [
+      {
+        "sha": "e98513f6a7e5441dff35c94991595475b0afae76",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/e98513f6a7e5441dff35c94991595475b0afae76",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:01Z"
+          }
+        }
+      },
       {
         "sha": "ea364c9f19a22ad5364e8ec307ffedb8520b15ba",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/ea364c9f19a22ad5364e8ec307ffedb8520b15ba",
@@ -480,25 +490,25 @@
             "date": "2026-05-20T01:21:06Z"
           }
         }
-      },
-      {
-        "sha": "2c2491c790fad85fc37b03921b25ff11104f2465",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/2c2491c790fad85fc37b03921b25ff11104f2465",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:29:15Z"
     },
     "commits": [
+      {
+        "sha": "76e1f7ea7719771070218765b08a735b644721cf",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/76e1f7ea7719771070218765b08a735b644721cf",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:12Z"
+          }
+        }
+      },
       {
         "sha": "0021a68f7053f8c695aa18f92f192f6d98457c47",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/0021a68f7053f8c695aa18f92f192f6d98457c47",
@@ -518,25 +528,25 @@
             "date": "2026-05-20T01:21:13Z"
           }
         }
-      },
-      {
-        "sha": "35ee463f561ebc2d033d439d49b6c69c10ff9b25",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/35ee463f561ebc2d033d439d49b6c69c10ff9b25",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:29:09Z"
     },
     "commits": [
+      {
+        "sha": "557eb39ec990395656454ec46e66c72b1be23446",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/557eb39ec990395656454ec46e66c72b1be23446",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:07Z"
+          }
+        }
+      },
       {
         "sha": "7516ea1718be1cd61e9d7e13d5dd7343888b95e1",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/7516ea1718be1cd61e9d7e13d5dd7343888b95e1",
@@ -554,16 +564,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T22:01:36Z"
-          }
-        }
-      },
-      {
-        "sha": "454f39d4b61d8f0807f6f4639ca1f24a978b63e5",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/454f39d4b61d8f0807f6f4639ca1f24a978b63e5",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
           }
         }
       }
@@ -648,9 +648,19 @@
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-21T02:29:35Z"
     },
     "commits": [
+      {
+        "sha": "ee389ebc45a3f378d04baa4594368f12c1c8d84b",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/ee389ebc45a3f378d04baa4594368f12c1c8d84b",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:32Z"
+          }
+        }
+      },
       {
         "sha": "568d7e4eb1c21dc3bd394ad9ed55c2d268b58da6",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/568d7e4eb1c21dc3bd394ad9ed55c2d268b58da6",
@@ -670,25 +680,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "78092c9c20c6130becaf0abe53dc22b9415b28c5",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/78092c9c20c6130becaf0abe53dc22b9415b28c5",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-21T02:29:21Z"
     },
     "commits": [
+      {
+        "sha": "4f93b1c2f60c543faef60f06ade78c979f26f0ab",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/4f93b1c2f60c543faef60f06ade78c979f26f0ab",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:18Z"
+          }
+        }
+      },
       {
         "sha": "4eb76b11ff69cfa920ebc4c0d2f4599064dbec7e",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/4eb76b11ff69cfa920ebc4c0d2f4599064dbec7e",
@@ -708,25 +718,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "65976388c7aba6d23c9a2697306d0bb471b0f206",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/65976388c7aba6d23c9a2697306d0bb471b0f206",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:28:30Z"
     },
     "commits": [
+      {
+        "sha": "868265d0e14844fcc3140e712b793ed0bf41342b",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/868265d0e14844fcc3140e712b793ed0bf41342b",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:28:28Z"
+          }
+        }
+      },
       {
         "sha": "aca845a2a62f19d6ea60da4da819a1905d72ed65",
         "html_url": "https://github.com/freegamestore-online/2048/commit/aca845a2a62f19d6ea60da4da819a1905d72ed65",
@@ -746,25 +756,25 @@
             "date": "2026-05-20T02:34:38Z"
           }
         }
-      },
-      {
-        "sha": "f4ea2adea420f5f4aac6a1b9aff44b449c3e65d5",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/f4ea2adea420f5f4aac6a1b9aff44b449c3e65d5",
-        "commit": {
-          "message": "ci: verify new two-job game-ci.yml works\n\nTrivial stamp file to trigger the reusable workflow. Will be removed\nin the next commit once the run succeeds.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-20T02:33:27Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:28:50Z"
     },
     "commits": [
+      {
+        "sha": "d85dbf2ee37efa4dcd64d914d78c419655e7dbc7",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/d85dbf2ee37efa4dcd64d914d78c419655e7dbc7",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:28:47Z"
+          }
+        }
+      },
       {
         "sha": "1de20accab95bed15cc3b6b4cc076d2dc5cc8f61",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/1de20accab95bed15cc3b6b4cc076d2dc5cc8f61",
@@ -784,25 +794,25 @@
             "date": "2026-05-20T01:20:54Z"
           }
         }
-      },
-      {
-        "sha": "0bdcf25ea7acdc6a82bfd75f15cc526646193b1c",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/0bdcf25ea7acdc6a82bfd75f15cc526646193b1c",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-21T02:29:40Z"
     },
     "commits": [
+      {
+        "sha": "c8652b3995364f9d12fda62483f50962d59f4f38",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/c8652b3995364f9d12fda62483f50962d59f4f38",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:38Z"
+          }
+        }
+      },
       {
         "sha": "1a57564229b627c017323d5b7c42756a660001ce",
         "html_url": "https://github.com/freegamestore-online/simon/commit/1a57564229b627c017323d5b7c42756a660001ce",
@@ -822,25 +832,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "318abffebc0db8a0474d8e3a62ac058a7592748f",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/318abffebc0db8a0474d8e3a62ac058a7592748f",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-21T02:29:43Z"
     },
     "commits": [
+      {
+        "sha": "a3257538649990c8bedbf85e3e9e1b35b0cfc436",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/a3257538649990c8bedbf85e3e9e1b35b0cfc436",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:41Z"
+          }
+        }
+      },
       {
         "sha": "b23ef6f928d45074234426a225d1cd8c240e79fd",
         "html_url": "https://github.com/freegamestore-online/snake/commit/b23ef6f928d45074234426a225d1cd8c240e79fd",
@@ -860,25 +870,25 @@
             "date": "2026-05-20T01:22:22Z"
           }
         }
-      },
-      {
-        "sha": "51d29182e47107881110b89cfebf17196bc99be2",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/51d29182e47107881110b89cfebf17196bc99be2",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-21T02:30:06Z"
     },
     "commits": [
+      {
+        "sha": "fe48f38cc548584e2aed8d990ac993ef6a70e335",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/fe48f38cc548584e2aed8d990ac993ef6a70e335",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:30:04Z"
+          }
+        }
+      },
       {
         "sha": "1ef7744605f67710033ee6fa383767c220a21d8d",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/1ef7744605f67710033ee6fa383767c220a21d8d",
@@ -898,25 +908,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "305062c3b1d76872120579c4a13b24cbea3301b9",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/305062c3b1d76872120579c4a13b24cbea3301b9",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-21T02:29:52Z"
     },
     "commits": [
+      {
+        "sha": "c517fe8c61f446d4f4cc22371e013c5b9a3f65b3",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/c517fe8c61f446d4f4cc22371e013c5b9a3f65b3",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:49Z"
+          }
+        }
+      },
       {
         "sha": "b23bc08b76f63b1b81f781689b897939d4629438",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/b23bc08b76f63b1b81f781689b897939d4629438",
@@ -936,25 +946,25 @@
             "date": "2026-05-20T01:21:57Z"
           }
         }
-      },
-      {
-        "sha": "60cb93b7904863855a46c83e135be42fdde84fe3",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/60cb93b7904863855a46c83e135be42fdde84fe3",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-21T02:30:01Z"
     },
     "commits": [
+      {
+        "sha": "720aa8f374545ff4a9149e5a63e931df109e634f",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/720aa8f374545ff4a9149e5a63e931df109e634f",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:58Z"
+          }
+        }
+      },
       {
         "sha": "8e0c5c0f459e05d800d48768d764714e28dce907",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/8e0c5c0f459e05d800d48768d764714e28dce907",
@@ -974,25 +984,25 @@
             "date": "2026-05-20T01:22:08Z"
           }
         }
-      },
-      {
-        "sha": "8a11d8a9a2abae7916a343ff22eeffb6ba708290",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/8a11d8a9a2abae7916a343ff22eeffb6ba708290",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-21T02:29:23Z"
     },
     "commits": [
+      {
+        "sha": "5c4649754c7d1f65d35869df3261a3d361a6c069",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/5c4649754c7d1f65d35869df3261a3d361a6c069",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:21Z"
+          }
+        }
+      },
       {
         "sha": "96e85a5c1e3d3257c23e7aaa47d3886ecb3b7df5",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/96e85a5c1e3d3257c23e7aaa47d3886ecb3b7df5",
@@ -1012,25 +1022,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "af3989954fbd2fd857b34d6919b0f0f92e6ad930",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/af3989954fbd2fd857b34d6919b0f0f92e6ad930",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:27Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-21T02:29:32Z"
     },
     "commits": [
+      {
+        "sha": "3e4b2032d3d171e1aa95bed66f933226f917b809",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/3e4b2032d3d171e1aa95bed66f933226f917b809",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:29Z"
+          }
+        }
+      },
       {
         "sha": "49e265bfa90d11f3857f06efd221597d4ba0be95",
         "html_url": "https://github.com/freegamestore-online/pong/commit/49e265bfa90d11f3857f06efd221597d4ba0be95",
@@ -1050,25 +1060,25 @@
             "date": "2026-05-20T01:21:30Z"
           }
         }
-      },
-      {
-        "sha": "39c02a5b1286ac63ef1dd11d87f699d8f8836b6a",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/39c02a5b1286ac63ef1dd11d87f699d8f8836b6a",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-21T02:29:55Z"
     },
     "commits": [
+      {
+        "sha": "d54f5020f17840d5727b61b3a0733b9a38aeb1a6",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/d54f5020f17840d5727b61b3a0733b9a38aeb1a6",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:52Z"
+          }
+        }
+      },
       {
         "sha": "e1d6711989a77a0ed85a43ec50e85e5f7f4d8a7a",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/e1d6711989a77a0ed85a43ec50e85e5f7f4d8a7a",
@@ -1086,16 +1096,6 @@
           "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
           "author": {
             "date": "2026-05-20T01:22:02Z"
-          }
-        }
-      },
-      {
-        "sha": "1f6b674981bce1bec290526df0c7270a68e7555a",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/1f6b674981bce1bec290526df0c7270a68e7555a",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:35Z"
           }
         }
       }
@@ -1142,9 +1142,19 @@
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-21T02:29:46Z"
     },
     "commits": [
+      {
+        "sha": "52e716c40db26691d2f3fb238eb9904275f7aee9",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/52e716c40db26691d2f3fb238eb9904275f7aee9",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:44Z"
+          }
+        }
+      },
       {
         "sha": "2556998c3c3d8cfb9dd8325266615d22597c88cf",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/2556998c3c3d8cfb9dd8325266615d22597c88cf",
@@ -1162,16 +1172,6 @@
           "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
           "author": {
             "date": "2026-05-20T01:21:48Z"
-          }
-        }
-      },
-      {
-        "sha": "b546dda80a71344ca4401a5a23876404bfe9a31a",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/b546dda80a71344ca4401a5a23876404bfe9a31a",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
           }
         }
       }
@@ -1256,9 +1256,19 @@
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-20T04:47:32Z"
+      "pushed_at": "2026-05-21T02:28:58Z"
     },
     "commits": [
+      {
+        "sha": "4dc85170f95216f4b96429833f82aeb681074dd7",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/4dc85170f95216f4b96429833f82aeb681074dd7",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:28:56Z"
+          }
+        }
+      },
       {
         "sha": "e47bad5c566f710606e32c9721706afe5e50f091",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/e47bad5c566f710606e32c9721706afe5e50f091",
@@ -1276,16 +1286,6 @@
           "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
           "author": {
             "date": "2026-05-20T01:21:00Z"
-          }
-        }
-      },
-      {
-        "sha": "dd5a398cb8bb7b65d7513f4e794037804fb4458e",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/dd5a398cb8bb7b65d7513f4e794037804fb4458e",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
           }
         }
       }
@@ -1332,9 +1332,19 @@
   "freegamestore-online/tictactoe": {
     "meta": {
       "created_at": "2026-05-18T22:50:34Z",
-      "pushed_at": "2026-05-20T04:48:20Z"
+      "pushed_at": "2026-05-21T02:30:03Z"
     },
     "commits": [
+      {
+        "sha": "3480a902c8376c3a5cbd870511e2a81175fc7253",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/3480a902c8376c3a5cbd870511e2a81175fc7253",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:30:01Z"
+          }
+        }
+      },
       {
         "sha": "2170d510abd79c50c27842022267ea5f9b8301a2",
         "html_url": "https://github.com/freegamestore-online/tictactoe/commit/2170d510abd79c50c27842022267ea5f9b8301a2",
@@ -1354,25 +1364,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "0fdad576217559091ed286197b706492f12256ef",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/0fdad576217559091ed286197b706492f12256ef",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:22Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/blackjack": {
     "meta": {
       "created_at": "2026-05-18T23:17:31Z",
-      "pushed_at": "2026-05-20T04:47:59Z"
+      "pushed_at": "2026-05-21T02:28:39Z"
     },
     "commits": [
+      {
+        "sha": "f4947480de7ba28feae7850a6ead44eb8c933ae9",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/f4947480de7ba28feae7850a6ead44eb8c933ae9",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:28:36Z"
+          }
+        }
+      },
       {
         "sha": "c4f0e32f8ad4dfa30f0c471971a6baaee6a74890",
         "html_url": "https://github.com/freegamestore-online/blackjack/commit/c4f0e32f8ad4dfa30f0c471971a6baaee6a74890",
@@ -1392,25 +1402,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "b3de19d0a1a764521c9e97680c29f00432de0946",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/b3de19d0a1a764521c9e97680c29f00432de0946",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bubbleshooter": {
     "meta": {
       "created_at": "2026-05-18T23:17:44Z",
-      "pushed_at": "2026-05-20T04:48:03Z"
+      "pushed_at": "2026-05-21T02:28:47Z"
     },
     "commits": [
+      {
+        "sha": "dabe8861e74019e26416f72209bcbe62bed4196a",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/dabe8861e74019e26416f72209bcbe62bed4196a",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:28:44Z"
+          }
+        }
+      },
       {
         "sha": "3c56bc429d5c48a20c203168c21c0cd1e52a6040",
         "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/3c56bc429d5c48a20c203168c21c0cd1e52a6040",
@@ -1430,25 +1440,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "6ca730b78369302b789a145bca4b3a678939ce7b",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/6ca730b78369302b789a145bca4b3a678939ce7b",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:27Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceinvaders": {
     "meta": {
       "created_at": "2026-05-18T23:17:56Z",
-      "pushed_at": "2026-05-20T04:48:14Z"
+      "pushed_at": "2026-05-21T02:29:49Z"
     },
     "commits": [
+      {
+        "sha": "b4a5036960ef7978254f6fd3b01512180a283de7",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/b4a5036960ef7978254f6fd3b01512180a283de7",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:47Z"
+          }
+        }
+      },
       {
         "sha": "56c7eacc45f3c4c4fa7fb8d927fcc38015e15d92",
         "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/56c7eacc45f3c4c4fa7fb8d927fcc38015e15d92",
@@ -1466,16 +1476,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T22:01:36Z"
-          }
-        }
-      },
-      {
-        "sha": "9dc496fcbe2bc0967a46d9c3ce370cac473ba93c",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/9dc496fcbe2bc0967a46d9c3ce370cac473ba93c",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:25Z"
           }
         }
       }
@@ -1522,9 +1522,19 @@
   "freegamestore-online/tanks": {
     "meta": {
       "created_at": "2026-05-19T00:51:54Z",
-      "pushed_at": "2026-05-20T04:48:17Z"
+      "pushed_at": "2026-05-21T02:29:58Z"
     },
     "commits": [
+      {
+        "sha": "46d34f5121e6a5eeec8b72aef9f36ced38bf8192",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/46d34f5121e6a5eeec8b72aef9f36ced38bf8192",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:55Z"
+          }
+        }
+      },
       {
         "sha": "57dbbd3711970e4f92d936cbd0982a4a090e8202",
         "html_url": "https://github.com/freegamestore-online/tanks/commit/57dbbd3711970e4f92d936cbd0982a4a090e8202",
@@ -1544,25 +1554,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "1184f995fbc2531df86068f5d0503a260447919c",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/1184f995fbc2531df86068f5d0503a260447919c",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:27Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/riichi": {
     "meta": {
       "created_at": "2026-05-19T02:31:10Z",
-      "pushed_at": "2026-05-20T04:48:11Z"
+      "pushed_at": "2026-05-21T02:29:38Z"
     },
     "commits": [
+      {
+        "sha": "e59c15e292572f5cca0245d8461b19e43d90a455",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/e59c15e292572f5cca0245d8461b19e43d90a455",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:35Z"
+          }
+        }
+      },
       {
         "sha": "cc00ad8167251345aaa8e0c47e3893c4190555fd",
         "html_url": "https://github.com/freegamestore-online/riichi/commit/cc00ad8167251345aaa8e0c47e3893c4190555fd",
@@ -1582,25 +1592,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "de8abec13032bc43898c9eecd75f913637c3e27b",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/de8abec13032bc43898c9eecd75f913637c3e27b",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:12Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pinball": {
     "meta": {
       "created_at": "2026-05-19T02:33:08Z",
-      "pushed_at": "2026-05-20T04:48:05Z"
+      "pushed_at": "2026-05-21T02:29:26Z"
     },
     "commits": [
+      {
+        "sha": "b7a49ec0a0e9ff19c2c9afaf8fbc3c464108a56e",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/b7a49ec0a0e9ff19c2c9afaf8fbc3c464108a56e",
+        "commit": {
+          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "author": {
+            "date": "2026-05-21T02:29:24Z"
+          }
+        }
+      },
       {
         "sha": "585934d501aa6acb24d97c2aad0df09ddb7350f5",
         "html_url": "https://github.com/freegamestore-online/pinball/commit/585934d501aa6acb24d97c2aad0df09ddb7350f5",
@@ -1618,16 +1628,6 @@
           "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T22:01:35Z"
-          }
-        }
-      },
-      {
-        "sha": "9f82c93a0dad0a8ecf513306adc72e4fc9d486e1",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/9f82c93a0dad0a8ecf513306adc72e4fc9d486e1",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
           }
         }
       }
