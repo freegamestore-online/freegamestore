@@ -1,6 +1,8 @@
-/** Site-wide theme toggle + mobile nav for FreeGameStore. Runs on every page.
+/** Site-wide theme toggle + text-size toggle + mobile nav for FreeGameStore.
+ *  Runs on every page.
  *  - Applies stored or system theme (storefront also applies inline in <head> to avoid flash).
  *  - Injects a moon/sun toggle button into the header if one isn't already there.
+ *  - Injects text-size toggle (A / A+ / A-) into .header-right.
  *  - Injects mobile hamburger menu + overlay. */
 
 (function () {
@@ -17,10 +19,9 @@
 
   // ── Theme: apply stored / preferred mode ──
   try {
-    var stored = localStorage.getItem("fgs-theme");
-    var preferDark = stored ? stored === "dark"
-      : window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (preferDark) document.documentElement.classList.add("dark");
+    var stored = localStorage.getItem("stores-theme");
+    var preferDark = stored === "dark" || (!stored || stored === "system") && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (preferDark) document.documentElement.dataset.theme = "dark";
   } catch (e) {}
 
   // ── Theme toggle button (skip if storefront already shipped one) ──
@@ -44,10 +45,44 @@
   if (themeBtn && !themeBtn.dataset.bound) {
     themeBtn.dataset.bound = "1";
     themeBtn.addEventListener("click", function () {
-      var isDark = document.documentElement.classList.toggle("dark");
-      try { localStorage.setItem("fgs-theme", isDark ? "dark" : "light"); } catch (e) {}
+      var isDark = document.documentElement.dataset.theme !== "dark";
+      if (isDark) document.documentElement.dataset.theme = "dark";
+      else delete document.documentElement.dataset.theme;
+      try { localStorage.setItem("stores-theme", isDark ? "dark" : "light"); } catch (e) {}
     });
   }
+
+  // ── Text-size toggle ──
+  (function () {
+    var sizes = ['', 'lg', 'sm'];
+    var labels = ['A', 'A+', 'A\u2013'];
+    var headerRight = document.querySelector('.header-right');
+    if (!headerRight) return;
+    var btn = document.createElement('button');
+    btn.className = 'text-size-toggle';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Change text size');
+    btn.title = 'Change text size';
+    function currentIndex() {
+      var cur = document.documentElement.dataset.text || '';
+      var idx = sizes.indexOf(cur);
+      return idx < 0 ? 0 : idx;
+    }
+    function render() { btn.textContent = labels[currentIndex()]; }
+    render();
+    btn.addEventListener('click', function () {
+      var next = (currentIndex() + 1) % sizes.length;
+      if (sizes[next]) {
+        document.documentElement.dataset.text = sizes[next];
+        try { localStorage.setItem('stores-text-size', sizes[next]); } catch (e) {}
+      } else {
+        delete document.documentElement.dataset.text;
+        try { localStorage.removeItem('stores-text-size'); } catch (e) {}
+      }
+      render();
+    });
+    headerRight.insertBefore(btn, headerRight.firstChild);
+  })();
 
   // ── Mobile hamburger menu ──
   var nav = document.querySelector("header nav");
