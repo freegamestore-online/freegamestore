@@ -655,6 +655,16 @@ if (fs.existsSync(fixtureSrcDir)) {
   }
 }
 
+// .well-known/ — MCP discovery and other standards
+const wellKnownSrc = path.join(ROOT, '.well-known');
+if (fs.existsSync(wellKnownSrc)) {
+  const wellKnownDest = path.join(DIST, '.well-known');
+  fs.mkdirSync(wellKnownDest, { recursive: true });
+  for (const f of fs.readdirSync(wellKnownSrc)) {
+    fs.copyFileSync(path.join(wellKnownSrc, f), path.join(wellKnownDest, f));
+  }
+}
+
 console.log(`Built ${games.length} game cards into dist/index.html`);
 console.log(`Generated ${games.length} detail pages in dist/games/`);
 console.log('Generated dist/sitemap.xml');
