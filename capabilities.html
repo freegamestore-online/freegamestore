@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Capabilities — FreeGameStore</title>
-  <meta name="description" content="What can you build in a browser today? WebGPU, WebGL, Gamepad API, Web Audio, WASM, and 50+ modern APIs — with browser support for Chrome, Firefox, Safari, and Edge." />
+  <title>Platform Capabilities — FreeGameStore</title>
+  <meta name="description" content="Everything the FreeGameStore platform gives you for free. Game SDK, auth, leaderboards, UI components, hosting, compliance, and more." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Web Capabilities — FreeGameStore" />
-  <meta property="og:description" content="Modern browser APIs that make native games unnecessary. See what's possible with browser games today." />
+  <meta property="og:title" content="Platform Capabilities — FreeGameStore" />
+  <meta property="og:description" content="Everything the platform gives you for free. Game SDK, auth, leaderboards, hosting, and more." />
   <meta property="og:url" content="https://freegamestore.online/capabilities" />
   <meta property="og:image" content="https://freegamestore.online/icon-512.png" />
   <meta name="twitter:card" content="summary" />
@@ -17,23 +17,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>(function(){try{var p=localStorage.getItem('stores-theme');var d=p==='dark'||(!p||p==='system')&&matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.dataset.theme='dark';var t=localStorage.getItem('stores-text-size');if(t)document.documentElement.dataset.text=t;}catch(e){}})()</script>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .cap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 3rem; }
-    .cap-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; background: var(--panel); transition: border-color 0.15s; }
-    .cap-card:hover { border-color: var(--accent); }
-    .cap-card h4 { font-size: 1rem; font-weight: 700; color: var(--ink-strong); margin-bottom: 0.25rem; }
-    .cap-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.45; margin-bottom: 0.75rem; }
-    .cap-card .browsers { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .cap-card .b { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.72rem; font-weight: 600; color: var(--muted); letter-spacing: 0.02em; }
-    .cap-card .b .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-    .dot-y { background: #22c55e; }
-    .dot-p { background: #eab308; }
-    .dot-n { background: #ef4444; }
-    .cap-card .use { font-size: 0.75rem; color: var(--accent); font-weight: 600; margin-top: 0.5rem; }
-    .legend { display: flex; gap: 1.5rem; margin-bottom: 2rem; font-size: 0.82rem; color: var(--muted); flex-wrap: wrap; }
-    .legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
-    .section-intro { font-size: 0.95rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .cap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2.5rem; }
+    .cap-card { border: 1px solid var(--line); border-radius: 1rem; padding: 1.25rem; background: var(--panel); }
+    .cap-card h3 { margin: 0 0 0.35rem; font-size: 1rem; }
+    .cap-card p { margin: 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
+    .cap-card code { font-size: 0.8rem; background: var(--paper); border: 1px solid var(--line); padding: 0.1em 0.3em; border-radius: 0.25rem; }
+    .cap-card .cap-tag { display: inline-block; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.15rem 0.45rem; border-radius: 9999px; margin-bottom: 0.5rem; }
+    .cap-tag-free { background: #dcfce7; color: #16a34a; }
+    .cap-tag-pro { background: #ede9fe; color: #7c3aed; }
+    .upgrade-banner { border: 1px solid var(--line); border-radius: 1rem; padding: 1.5rem; background: var(--panel); text-align: center; margin: 2rem 0; }
+    .upgrade-banner h3 { margin: 0 0 0.5rem; }
+    .upgrade-banner p { color: var(--muted); font-size: 0.9rem; margin: 0 0 1rem; }
+    .upgrade-banner a { display: inline-block; padding: 0.6rem 1.5rem; background: var(--accent); color: #fff; border-radius: 0.5rem; font-weight: 600; text-decoration: none; font-size: 0.9rem; }
+    :root[data-theme="dark"] .cap-tag-free { background: #064e3b; color: #6ee7b7; }
+    :root[data-theme="dark"] .cap-tag-pro { background: #4c1d95; color: #c4b5fd; }
   </style>
 </head>
 <body>
@@ -55,465 +55,118 @@
 
   <main class="container">
     <div class="page-header">
-      <h1>Web Capabilities</h1>
-      <p>What can you build in a browser today? More than you think. These APIs are available right now &mdash; no app store, no install, no native code.</p>
+      <h1>Platform Capabilities</h1>
+      <p>Everything you get when you build on FreeGameStore. One SDK, zero infrastructure, free forever. For the raw browser APIs these build on, see <a href="/browser-apis.html">Browser APIs</a>.</p>
     </div>
 
     <div class="page-content">
 
-      <div class="legend">
-        <span><span class="dot dot-y"></span> Supported</span>
-        <span><span class="dot dot-p"></span> Partial</span>
-        <span><span class="dot dot-n"></span> Not supported</span>
-        <span style="color: var(--ink); font-weight: 600;">Browsers: Chrome 126+ &middot; Firefox 128+ &middot; Safari 18+ &middot; Edge 126+</span>
-      </div>
-
-      <!-- ====== GRAPHICS & RENDERING ====== -->
-      <h2>Graphics &amp; Rendering</h2>
-      <p class="section-intro">GPU-accelerated 2D/3D rendering &mdash; the backbone of every browser game.</p>
+      <h2>Included free</h2>
       <div class="cap-grid">
-
         <div class="cap-card">
-          <h4>WebGPU</h4>
-          <p>Next-gen GPU API. Compute shaders, modern rendering pipeline, ML inference on the GPU. Successor to WebGL.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-n"></span>Firefox</span>
-            <span class="b"><span class="dot dot-p"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: 3D games, particle systems, GPU-driven physics</p>
+          <span class="cap-tag cap-tag-free">Free</span>
+          <h3>GameShell</h3>
+          <p>Full-viewport game container. Locks to 100svh, prevents scroll, manages safe areas. Your game fills the screen. <code>&lt;GameShell&gt;</code></p>
         </div>
-
         <div class="cap-card">
-          <h4>WebGL 2</h4>
-          <p>OpenGL ES 3.0 in the browser. Stable, universal. Powers Three.js, Babylon.js, PixiJS, and most browser games.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: 3D games, racing, flight sims, FPS</p>
+          <span class="cap-tag cap-tag-free">Free</span>
+          <h3>GameTopbar</h3>
+          <p>Brand-consistent topbar with score, timer, and custom stats. Back button, theme toggle, sound toggle built in. <code>&lt;GameTopbar score={42} /&gt;</code></p>
         </div>
-
         <div class="cap-card">
-          <h4>Canvas 2D</h4>
-          <p>Immediate-mode 2D drawing. Fast, simple, everywhere. The engine behind Snake, Pong, Asteroids, and platformers.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Arcade games, puzzle games, card games</p>
+          <span class="cap-tag cap-tag-free">Free</span>
+          <h3>Auth (Google OAuth)</h3>
+          <p>One-click sign in via auth.freegamestore.online. SSO across all games. Session persists in localStorage. <code>useAuth()</code></p>
         </div>
-
         <div class="cap-card">
-          <h4>OffscreenCanvas</h4>
-          <p>Render canvas in a Web Worker &mdash; no jank on the main thread. Critical for complex games and physics simulations.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Heavy rendering, physics engines, procedural generation</p>
+          <span class="cap-tag cap-tag-free">Free</span>
+          <h3>Leaderboards</h3>
+          <p>Global leaderboards backed by D1. Submit scores, fetch top entries, show player rank. <code>useLeaderboard()</code></p>
         </div>
-
         <div class="cap-card">
-          <h4>View Transitions</h4>
-          <p>Animated page transitions with a single CSS rule. Smooth transitions between game menus and screens.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-n"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Polished menu systems, level select screens</p>
+          <span class="cap-tag cap-tag-free">Free</span>
+          <h3>Sound System</h3>
+          <p>Game audio with mute toggle that persists. Respects user preference across sessions. <code>useGameSounds()</code> / <code>useSound()</code></p>
         </div>
-
+        <div class="cap-card">
+          <span class="cap-tag cap-tag-free">Free</span>
+          <h3>Game Over Screen</h3>
+          <p>Standard game-over overlay with score, personal best, play again, and leaderboard submit. <code>&lt;GameOverScreen&gt;</code></p>
+        </div>
+        <div class="cap-card">
+          <span class="cap-tag cap-tag-free">Free</span>
+          <h3>UI Kit (14 components)</h3>
+          <p>GameButton, GameModal, GameConfirm, GameAuth, GameThemeToggle, GameTextSizeToggle, Leaderboard, and more. All dark-mode aware.</p>
+        </div>
+        <div class="cap-card">
+          <span class="cap-tag cap-tag-free">Free</span>
+          <h3>Dark Mode + Text Size</h3>
+          <p>System-aware dark mode with manual toggle. Text size adjustment for accessibility. Persists in localStorage.</p>
+        </div>
+        <div class="cap-card">
+          <span class="cap-tag cap-tag-free">Free</span>
+          <h3>Static Hosting (R2)</h3>
+          <p>Push to main = live. GitHub Actions builds, uploads to R2. Zero egress fees. Sub-50ms globally. <code>*.freegamestore.online</code></p>
+        </div>
+        <div class="cap-card">
+          <span class="cap-tag cap-tag-free">Free</span>
+          <h3>Game Templates</h3>
+          <p>Canvas, 3D (Three.js), Grid, Cards, Phaser, Kaplay, PixiJS, Babylon.js. Pre-configured with SDK, topbar, and deploy pipeline.</p>
+        </div>
+        <div class="cap-card">
+          <span class="cap-tag cap-tag-free">Free</span>
+          <h3>CLI + Compliance</h3>
+          <p><code>fgs create</code>, <code>fgs check</code>, <code>fgs publish</code>. Automated brand, bundle size, PWA, dark mode, and viewport checks on every push.</p>
+        </div>
+        <div class="cap-card">
+          <span class="cap-tag cap-tag-free">Free</span>
+          <h3>Quality Dashboard</h3>
+          <p>Public quality scores for every game. Compliance checks, audit results, and last-updated dates visible to players.</p>
+        </div>
       </div>
 
-      <!-- ====== INPUT & CONTROLLERS ====== -->
-      <h2>Input &amp; Controllers</h2>
-      <p class="section-intro">Gamepads, touch, keyboard, pointer lock &mdash; every input method a game needs.</p>
+      <div class="upgrade-banner">
+        <h3>Need multiplayer?</h3>
+        <p>Real-time rooms, server-side AI, custom domains, cloud save, and daily challenges.</p>
+        <a href="https://progamestore.online">Upgrade to ProGameStore &rarr;</a>
+      </div>
+
+      <h2>Pro capabilities (ProGameStore, $9/mo)</h2>
       <div class="cap-grid">
-
         <div class="cap-card">
-          <h4>Gamepad API</h4>
-          <p>Xbox, PlayStation, and generic controllers. Vibration, analog sticks, buttons. Plug in and play.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Console-quality controls for racing, fighting, platformers</p>
+          <span class="cap-tag cap-tag-pro">Pro</span>
+          <h3>Real-time Multiplayer</h3>
+          <p>WebSocket rooms via Durable Objects. Server-authoritative game state. Turn-based and real-time. Lobbies, matchmaking, spectating.</p>
         </div>
-
         <div class="cap-card">
-          <h4>Pointer Lock</h4>
-          <p>Hide the cursor and get raw mouse movement. Essential for first-person and mouse-look cameras.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: FPS, flight sims, 3D exploration</p>
+          <span class="cap-tag cap-tag-pro">Pro</span>
+          <h3>Server-side AI</h3>
+          <p>Workers AI included. NPC dialogue, procedural generation, adaptive difficulty, AI opponents &mdash; no user key needed.</p>
         </div>
-
         <div class="cap-card">
-          <h4>Touch Events</h4>
-          <p>Multi-touch support. Pinch, swipe, rotate &mdash; mobile-native input for mobile-first games.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Mobile arcade, puzzle, card games</p>
+          <span class="cap-tag cap-tag-pro">Pro</span>
+          <h3>Cloud Save Sync</h3>
+          <p>Save game state to the cloud. Resume on any device. Automatic conflict resolution.</p>
         </div>
-
         <div class="cap-card">
-          <h4>Vibration API</h4>
-          <p>Haptic feedback on mobile devices. Buzz on impact, pulse on score, rumble on explosion.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-n"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Tactile feedback for mobile games</p>
+          <span class="cap-tag cap-tag-pro">Pro</span>
+          <h3>Custom Domain</h3>
+          <p>Serve your game from <code>your-domain.com</code> instead of a subdomain.</p>
         </div>
-
         <div class="cap-card">
-          <h4>Accelerometer &amp; Gyroscope</h4>
-          <p>Motion and orientation sensors. Tilt-to-steer, device-as-controller, motion-controlled gameplay.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Tilt racing, marble maze, balance games</p>
+          <span class="cap-tag cap-tag-pro">Pro</span>
+          <h3>Cron / Daily Challenges</h3>
+          <p>Scheduled Workers for daily puzzles, timed events, leaderboard resets, and seasonal content.</p>
         </div>
-
-      </div>
-
-      <!-- ====== AUDIO ====== -->
-      <h2>Audio</h2>
-      <p class="section-intro">Spatial audio, synthesis, and real-time effects &mdash; the sound engine games deserve.</p>
-      <div class="cap-grid">
-
         <div class="cap-card">
-          <h4>Web Audio API</h4>
-          <p>Professional audio graph. Spatial 3D audio, real-time effects, synthesis, mixing. No plugins needed.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Sound effects, spatial audio, music, procedural audio</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>AudioWorklet</h4>
-          <p>Custom audio processing on a dedicated thread. Sample-level DSP without blocking the game loop.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Custom synthesizers, real-time audio effects, voice chat</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>Speech Synthesis</h4>
-          <p>Text-to-speech with multiple voices and languages. Narration, accessibility, NPC dialogue.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Narrated adventures, accessible games, voice feedback</p>
-        </div>
-
-      </div>
-
-      <!-- ====== PERFORMANCE & COMPUTE ====== -->
-      <h2>Performance &amp; Compute</h2>
-      <p class="section-intro">Native-speed code in the browser. Multi-threading, SIMD, and compiled languages.</p>
-      <div class="cap-grid">
-
-        <div class="cap-card">
-          <h4>WebAssembly (WASM)</h4>
-          <p>Run C, C++, Rust, Go at near-native speed. Port existing game engines to the browser. Unity and Godot use WASM.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Physics engines, game engine ports, emulators</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>Web Workers</h4>
-          <p>Background threads. Run AI, pathfinding, physics, and procedural generation without blocking the game loop.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: AI opponents, world generation, pathfinding</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>SharedArrayBuffer</h4>
-          <p>Shared memory between workers. Enables true multi-threading with atomics for game engines.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Multi-threaded game engines, real-time physics</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>WASM SIMD</h4>
-          <p>Single Instruction, Multiple Data. Process 4+ values in one CPU cycle. Critical for physics, collision, and particle systems.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Particle systems, collision detection, matrix math</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>requestAnimationFrame</h4>
-          <p>V-synced game loop. 60fps (or 120fps) with automatic throttling when the tab is hidden.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Every game that renders frames</p>
-        </div>
-
-      </div>
-
-      <!-- ====== NETWORKING ====== -->
-      <h2>Networking</h2>
-      <p class="section-intro">Real-time connections for multiplayer, leaderboards, and live updates.</p>
-      <div class="cap-grid">
-
-        <div class="cap-card">
-          <h4>WebSocket</h4>
-          <p>Full-duplex persistent connection. Turn-based multiplayer, chat, live game state sync.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Turn-based multiplayer, chat, lobbies</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>WebRTC</h4>
-          <p>Peer-to-peer data channels. Low-latency multiplayer without a server in the middle.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Real-time multiplayer, P2P game state, voice chat</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>WebTransport</h4>
-          <p>HTTP/3-based transport. Unreliable datagrams for action games &mdash; lower latency than WebSocket.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-n"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Fast-paced multiplayer, real-time action games</p>
-        </div>
-
-      </div>
-
-      <!-- ====== STORAGE ====== -->
-      <h2>Storage</h2>
-      <p class="section-intro">Save games, cache assets, and work offline &mdash; all client-side.</p>
-      <div class="cap-grid">
-
-        <div class="cap-card">
-          <h4>IndexedDB</h4>
-          <p>Structured client-side database. Save game state, player profiles, level progress. No size limit (quota-managed).</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Save systems, offline levels, asset caching</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>Origin Private File System</h4>
-          <p>High-performance file storage in a sandboxed file system. Cache large assets like textures and audio.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Asset pipelines, replay storage, user-generated content</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>Cache API + Service Worker</h4>
-          <p>Cache game assets for instant load and offline play. The foundation of installable PWA games.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Offline games, instant-loading PWAs</p>
-        </div>
-
-      </div>
-
-      <!-- ====== PLATFORM INTEGRATION ====== -->
-      <h2>Platform Integration</h2>
-      <p class="section-intro">OS-level features that make browser games feel native.</p>
-      <div class="cap-grid">
-
-        <div class="cap-card">
-          <h4>Fullscreen API</h4>
-          <p>Go fullscreen. Essential for immersive games. One click, total focus.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Any game that benefits from immersion</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>Screen Wake Lock</h4>
-          <p>Prevent the screen from dimming or locking during gameplay.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Mobile games, idle games, long sessions</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>Web Share API</h4>
-          <p>Native share sheet. Share scores, screenshots, and replays to any app.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Score sharing, replay sharing, social features</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>Push Notifications</h4>
-          <p>Real push notifications &mdash; even when the game isn't open. Daily challenges, turn reminders, leaderboard updates.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Daily challenges, turn-based notifications</p>
-        </div>
-
-        <div class="cap-card">
-          <h4>Clipboard API</h4>
-          <p>Copy and paste. Share puzzle codes, seed values, or game state as text.</p>
-          <div class="browsers">
-            <span class="b"><span class="dot dot-y"></span>Chrome</span>
-            <span class="b"><span class="dot dot-y"></span>Firefox</span>
-            <span class="b"><span class="dot dot-y"></span>Safari</span>
-            <span class="b"><span class="dot dot-y"></span>Edge</span>
-          </div>
-          <p class="use">Build: Wordle-style result sharing, level codes</p>
-        </div>
-
-      </div>
-
-      <!-- ====== WHAT YOU CAN BUILD ====== -->
-      <h2>What You Can Build</h2>
-      <p>These are real game categories that are fully possible with today's browser APIs &mdash; no native code, no app store.</p>
-      <div class="cap-grid">
-        <div class="cap-card" style="border-color: var(--accent);">
-          <h4>2D Arcade</h4>
-          <p>Snake, Pac-Man, Breakout, Asteroids, Frogger. Canvas 2D + requestAnimationFrame + Web Audio.</p>
-        </div>
-        <div class="cap-card" style="border-color: var(--accent);">
-          <h4>3D Games</h4>
-          <p>Racing, bowling, billiards, flight sims. WebGL 2 + Three.js or Babylon.js + physics engines.</p>
-        </div>
-        <div class="cap-card" style="border-color: var(--accent);">
-          <h4>Puzzle &amp; Board</h4>
-          <p>Chess, checkers, 2048, Sudoku, Wordle, Minesweeper. DOM or Canvas + touch + save state.</p>
-        </div>
-        <div class="cap-card" style="border-color: var(--accent);">
-          <h4>Card Games</h4>
-          <p>Solitaire, Memory, Blackjack, War. CSS transforms + drag &amp; drop + smooth animations.</p>
-        </div>
-        <div class="cap-card" style="border-color: var(--accent);">
-          <h4>Multiplayer</h4>
-          <p>Turn-based (chess, checkers) or real-time (racing, shooters). WebSocket + WebRTC + Durable Objects.</p>
-        </div>
-        <div class="cap-card" style="border-color: var(--accent);">
-          <h4>Retro &amp; Emulation</h4>
-          <p>Run classic console games via WASM-compiled emulators. Game Boy, NES, SNES &mdash; in a tab.</p>
+          <span class="cap-tag cap-tag-pro">Pro</span>
+          <h3>Proprietary Source</h3>
+          <p>No MIT requirement. Keep your source code private. Build commercial games.</p>
         </div>
       </div>
 
-      <h2>What Browsers Still Can't Do</h2>
-      <p>Some things genuinely require native. Be honest about the gaps.</p>
-      <table>
-        <thead><tr><th>Capability</th><th>Status</th><th>Notes</th></tr></thead>
-        <tbody>
-          <tr><td>Background execution (always-on)</td><td>Limited</td><td>Service workers wake on push/sync, but can't run a game loop in the background</td></tr>
-          <tr><td>Raw GPU access</td><td>Partial</td><td>WebGPU is powerful but not Vulkan/Metal-level. Sufficient for 99% of browser games</td></tr>
-          <tr><td>Low-level networking (raw UDP)</td><td>No</td><td>WebTransport unreliable datagrams cover most real-time game needs</td></tr>
-          <tr><td>Native controller rumble (advanced)</td><td>Partial</td><td>Basic vibration works; dual-motor HD rumble is not exposed</td></tr>
-          <tr><td>VR/AR (immersive)</td><td>Partial</td><td>WebXR exists but device/browser support is still fragmented</td></tr>
-          <tr><td>Multi-window (split-screen)</td><td>No</td><td>Can't open multiple synced game windows on one screen reliably</td></tr>
-        </tbody>
-      </table>
-
-      <h2>Start Building</h2>
-      <p>The browser is the most powerful game platform ever created. Every API on this page is available to FreeGameStore games out of the box. Start from a template, publish in minutes.</p>
-      <pre><code>npx @freegamestore/cli create my-game --template canvas
-cd my-game && pnpm dev</code></pre>
-      <p><a href="/get-started.html">Get started &rarr;</a></p>
+      <h2>What about browser APIs?</h2>
+      <p>The platform capabilities above are what FreeGameStore provides on top of the browser. For the full list of browser-native APIs available to your game (WebGPU, Gamepad, Web Audio, WASM, and 40+ more), see <a href="/browser-apis.html">Browser APIs &rarr;</a></p>
 
     </div>
   </main>
@@ -529,6 +182,7 @@ cd my-game && pnpm dev</code></pre>
         <a href="/contribute.html">Build</a>
         <a href="/docs/">Docs</a>
         <a href="/capabilities.html">Capabilities</a>
+        <a href="/browser-apis.html">Browser APIs</a>
         <a href="/guidelines.html">Guidelines</a>
         <a href="/privacy.html">Privacy</a>
         <a href="/terms.html">Terms</a>
