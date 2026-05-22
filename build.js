@@ -573,6 +573,7 @@ const today = new Date().toISOString().split('T')[0];
 const sitemapEntries = [
   '  <url><loc>https://freegamestore.online/</loc><priority>1.0</priority></url>',
   '  <url><loc>https://freegamestore.online/about.html</loc><priority>0.8</priority></url>',
+  '  <url><loc>https://freegamestore.online/capabilities.html</loc><priority>0.8</priority></url>',
   '  <url><loc>https://freegamestore.online/docs.html</loc><priority>0.85</priority></url>',
   '  <url><loc>https://freegamestore.online/contribute.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/get-started.html</loc><priority>0.9</priority></url>',
@@ -633,6 +634,7 @@ const filesToCopy = [
   'SKILLS.md',
   'llms.txt',
   'docs.html',
+  'capabilities.html',
   'prism.js',
   'prism-autodetect.js',
 ];
