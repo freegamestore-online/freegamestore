@@ -49,6 +49,7 @@ validateRegistry(games);
 // Read templates
 const indexTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'index.html'), 'utf8');
 const detailTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'game-detail.html'), 'utf8');
+const developersTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'developers.html'), 'utf8');
 
 // CF Web Analytics — token from FGS_CF_BEACON_TOKEN at build time. Snippet is
 // the standard CF Insights beacon; cookieless, no PII. If unset, an HTML
@@ -483,6 +484,48 @@ const qualityHtml = qualityTemplate
 fs.writeFileSync(path.join(DIST, 'quality.html'), qualityHtml);
 console.log(`  /quality dashboard generated for ${qualityRegistry.games.length} games + ${qualityRegistry.apps.length} apps`);
 
+// --- Generate developers.html ---
+// Extract unique developers from registry. Each game has a `developer` field
+// (free-form string). We also check for an optional `creatorGithub` field for
+// the avatar URL; if absent, fall back to the org avatar.
+const devMap = new Map();
+for (const game of games) {
+  const name = game.developer || 'FreeGameStore';
+  if (!devMap.has(name)) {
+    devMap.set(name, { name, github: game.creatorGithub || null, games: [] });
+  }
+  devMap.get(name).games.push(game);
+}
+const uniqueDevs = Array.from(devMap.values());
+
+const devCards = uniqueDevs.map(dev => {
+  const gameCount = dev.games.length;
+  const avatarUrl = dev.github
+    ? `https://github.com/${escapeHtml(dev.github)}.png?size=200`
+    : 'https://github.com/freegamestore-online.png?size=200';
+  const linkUrl = dev.github
+    ? `https://github.com/${escapeHtml(dev.github)}`
+    : 'https://github.com/freegamestore-online';
+  const badgesHtml = '<span class="dev-badge platform">Platform</span>';
+  return `        <a class="dev-card" href="${linkUrl}" target="_blank" rel="noopener">
+          <img class="dev-avatar" src="${avatarUrl}" alt="${escapeHtml(dev.name)}" loading="lazy" />
+          <div class="dev-card-body">
+            <span class="dev-card-name">${escapeHtml(dev.name)}</span>
+            <div class="dev-badges">${badgesHtml}</div>
+            <span class="dev-card-stats">${gameCount} game${gameCount === 1 ? '' : 's'}</span>
+          </div>
+        </a>`;
+}).join('\n');
+
+let developersHtml = developersTemplate
+  .replaceAll('__CF_BEACON__', CF_BEACON_SNIPPET)
+  .replaceAll('{{DEVELOPERS_GRID}}', devCards);
+for (const [k, v] of Object.entries(sriHashes)) {
+  developersHtml = developersHtml.replaceAll(`{{SRI_${k}}}`, v);
+}
+fs.writeFileSync(path.join(DIST, 'developers.html'), developersHtml);
+console.log(`  developers page generated (${uniqueDevs.length} developer${uniqueDevs.length === 1 ? '' : 's'})`);
+
 const okCount = histories.filter((h) => Array.isArray(h?.commits) && h.commits.length > 0).length;
 console.log(`  ${okCount}/${games.length} games got commit history`);
 console.log(`  ${auditMap.size} games have audit results`);
@@ -547,6 +590,7 @@ const sitemapEntries = [
   '  <url><loc>https://freegamestore.online/ai/chatgpt-web.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/guidelines.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/leaderboard.html</loc><priority>0.7</priority></url>',
+  '  <url><loc>https://freegamestore.online/developers.html</loc><priority>0.8</priority></url>',
   '  <url><loc>https://freegamestore.online/privacy.html</loc><priority>0.5</priority></url>',
   '  <url><loc>https://freegamestore.online/terms.html</loc><priority>0.5</priority></url>',
   ...games.map(game =>
