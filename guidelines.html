@@ -15,23 +15,6 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .spec-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem; }
-    .spec-table th, .spec-table td { padding: 0.6rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
-    .spec-table th { font-weight: 700; color: var(--ink); }
-    .spec-table td { color: var(--muted); }
-    .spec-table code { background: var(--surface); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.82rem; }
-    .color-swatch { display: inline-block; width: 16px; height: 16px; border-radius: 4px; vertical-align: middle; margin-right: 0.4rem; border: 1px solid var(--border); }
-    .code-block { background: var(--surface); border: 1px solid var(--border); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; font-size: 0.82rem; line-height: 1.7; margin: 1rem 0; }
-    .code-block code { background: none; padding: 0; }
-    .rule-card { background: var(--surface); border: 1px solid var(--border); border-radius: 1rem; padding: 1.25rem; margin: 0.75rem 0; }
-    .rule-card strong { display: block; margin-bottom: 0.25rem; }
-    .rule-card p { font-size: 0.88rem; color: var(--muted); margin: 0; }
-    .section-nav { background: var(--surface); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 2rem; }
-    .section-nav h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.75rem; }
-    .section-nav a { display: block; font-size: 0.85rem; color: var(--accent); text-decoration: none; padding: 0.25rem 0; }
-    .section-nav a:hover { text-decoration: underline; }
-  </style>
 </head>
 <body>
   <header>
@@ -102,8 +85,8 @@
       <h3>Wordmark</h3>
       <p>The logo is a wordmark, not an icon. Written as one word with "Game" highlighted in the platform accent color:</p>
       <ul>
-        <li><strong>Free<span style="color:var(--accent)">Game</span>Store</strong> — emerald accent (<code>#10b981</code>)</li>
-        <li><strong>Pro<span style="color:var(--pro)">Game</span>Store</strong> — amber accent (<code>#d97706</code>)</li>
+        <li><strong>Free<span class="accent-text-highlight">Game</span>Store</strong> — emerald accent (<code>#10b981</code>)</li>
+        <li><strong>Pro<span class="pro-callout">Game</span>Store</strong> — amber accent (<code>#d97706</code>)</li>
       </ul>
 
       <h3>Naming rules</h3>
@@ -130,14 +113,14 @@
 
       <table class="spec-table">
         <tr><th>Token</th><th>Light</th><th>Dark</th><th>Usage</th></tr>
-        <tr><td><code>--bg</code></td><td><span class="color-swatch" style="background:#fafaf9"></span>#fafaf9</td><td><span class="color-swatch" style="background:#0f0f0f"></span>#0f0f0f</td><td>Page background</td></tr>
-        <tr><td><code>--surface</code></td><td><span class="color-swatch" style="background:#ffffff"></span>#ffffff</td><td><span class="color-swatch" style="background:#1a1a1a"></span>#1a1a1a</td><td>Card/panel background</td></tr>
-        <tr><td><code>--ink</code></td><td><span class="color-swatch" style="background:#1a1a1a"></span>#1a1a1a</td><td><span class="color-swatch" style="background:#f0f0f0"></span>#f0f0f0</td><td>Primary text</td></tr>
-        <tr><td><code>--muted</code></td><td><span class="color-swatch" style="background:#6b6b6b"></span>#6b6b6b</td><td><span class="color-swatch" style="background:#999999"></span>#999999</td><td>Secondary text</td></tr>
-        <tr><td><code>--border</code></td><td><span class="color-swatch" style="background:#e5e5e5"></span>#e5e5e5</td><td><span class="color-swatch" style="background:#2a2a2a"></span>#2a2a2a</td><td>Borders</td></tr>
-        <tr><td><code>--accent</code></td><td><span class="color-swatch" style="background:#10b981"></span>#10b981</td><td><span class="color-swatch" style="background:#34d399"></span>#34d399</td><td>Primary accent (emerald)</td></tr>
-        <tr><td><code>--accent-soft</code></td><td><span class="color-swatch" style="background:#ecfdf5"></span>#ecfdf5</td><td><span class="color-swatch" style="background:#1a2e26"></span>#1a2e26</td><td>Accent background</td></tr>
-        <tr><td><code>--pro</code></td><td><span class="color-swatch" style="background:#d97706"></span>#d97706</td><td><span class="color-swatch" style="background:#fbbf24"></span>#fbbf24</td><td>Pro accent (amber)</td></tr>
+        <tr><td><code>--bg</code></td><td><span class="color-swatch" data-swatch="bg-l"></span>#fafaf9</td><td><span class="color-swatch" data-swatch="bg-d"></span>#0f0f0f</td><td>Page background</td></tr>
+        <tr><td><code>--surface</code></td><td><span class="color-swatch" data-swatch="surface-l"></span>#ffffff</td><td><span class="color-swatch" data-swatch="surface-d"></span>#1a1a1a</td><td>Card/panel background</td></tr>
+        <tr><td><code>--ink</code></td><td><span class="color-swatch" data-swatch="ink-l"></span>#1a1a1a</td><td><span class="color-swatch" data-swatch="ink-d"></span>#f0f0f0</td><td>Primary text</td></tr>
+        <tr><td><code>--muted</code></td><td><span class="color-swatch" data-swatch="muted-l"></span>#6b6b6b</td><td><span class="color-swatch" data-swatch="muted-d"></span>#999999</td><td>Secondary text</td></tr>
+        <tr><td><code>--border</code></td><td><span class="color-swatch" data-swatch="border-l"></span>#e5e5e5</td><td><span class="color-swatch" data-swatch="border-d"></span>#2a2a2a</td><td>Borders</td></tr>
+        <tr><td><code>--accent</code></td><td><span class="color-swatch" data-swatch="accent-l"></span>#10b981</td><td><span class="color-swatch" data-swatch="accent-d"></span>#34d399</td><td>Primary accent (emerald)</td></tr>
+        <tr><td><code>--accent-soft</code></td><td><span class="color-swatch" data-swatch="accent-soft-l"></span>#ecfdf5</td><td><span class="color-swatch" data-swatch="accent-soft-d"></span>#1a2e26</td><td>Accent background</td></tr>
+        <tr><td><code>--pro</code></td><td><span class="color-swatch" data-swatch="pro-l"></span>#d97706</td><td><span class="color-swatch" data-swatch="pro-d"></span>#fbbf24</td><td>Pro accent (amber)</td></tr>
       </table>
 
       <!-- Typography -->

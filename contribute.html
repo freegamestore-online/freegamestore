@@ -15,17 +15,6 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .steps { counter-reset: step; list-style: none; padding: 0; }
-    .steps li { counter-increment: step; margin-bottom: 1.5rem; padding-left: 2.5rem; position: relative; }
-    .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-    .cmd { background: var(--surface, #1a1a1a); border: 1px solid var(--border); border-radius: 0.75rem; padding: 1rem 1.25rem; margin: 0.75rem 0; font-family: monospace; font-size: 0.9rem; overflow-x: auto; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-    .card { background: var(--surface, #1a1a1a); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; }
-    .card h3 { margin-bottom: 0.5rem; }
-    .card p { font-size: 0.9rem; color: var(--muted); }
-    .highlight { background: var(--accent-soft, #ecfdf5); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0; }
-  </style>
 </head>
 <body>
   <header>
@@ -52,9 +41,9 @@
 
     <div class="page-content">
 
-      <div class="highlight" style="border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0;">
-        <h3 style="margin-bottom: 0.5rem;">Building with AI? Start there.</h3>
-        <p style="margin-bottom: 0.75rem;">FreeGameStore is AI-first. Drop our <a href="https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md">SKILLS.md</a> into Claude Code, Cursor, GitHub Copilot, Aider, or Codex — your agent already knows the brand rules, the privacy mandates, the CLI, and the deploy flow before it writes a line of code.</p>
+      <div class="highlight highlight-callout">
+        <h3>Building with AI? Start there.</h3>
+        <p>FreeGameStore is AI-first. Drop our <a href="https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md">SKILLS.md</a> into Claude Code, Cursor, GitHub Copilot, Aider, or Codex — your agent already knows the brand rules, the privacy mandates, the CLI, and the deploy flow before it writes a line of code.</p>
         <a href="/build-with-ai.html" class="btn">Build with AI &rarr;</a>
       </div>
 
@@ -112,7 +101,7 @@
       <div class="cmd">git clone https://github.com/freegamestore-online/my-game.git
 # Result: ~/dev/fgs/games/my-game/</div>
       <p>The recommended layout:</p>
-      <div class="cmd" style="white-space:pre;">~/dev/fgs/
+      <div class="cmd cmd-pre">~/dev/fgs/
   games/            ← your game repos
     chess/
     tetris/
@@ -183,7 +172,7 @@
           <strong>Publish as a game</strong>
           <div class="cmd">fas publish --store games</div>
           <p>Provisions <code>github.com/freegamestore-online/my-game</code>, the Cloudflare Pages project, the DNS record, the custom subdomain at <code>my-game.freegamestore.online</code>, and the storefront entry.</p>
-          <p style="font-size: 0.88rem;">Scriptable: pass <code>--name</code>, <code>--category</code>, <code>--type</code>, <code>--oneliner</code>, and <code>--yes</code>.</p>
+          <p class="text-sm">Scriptable: pass <code>--name</code>, <code>--category</code>, <code>--type</code>, <code>--oneliner</code>, and <code>--yes</code>.</p>
         </li>
         <li>
           <strong>Push your code</strong>
@@ -225,7 +214,7 @@
 
       <h3>AI-assisted development</h3>
       <p>Use Claude Code, Cursor, Codex, or any AI coding tool. Point it to our <a href="https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md">SKILLS.md</a> and it knows the entire platform — tech stack, brand, templates, how to deploy.</p>
-      <div class="cmd" style="font-size:0.85rem;">Add this to your AI tool:<br><br>Read https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md</div>
+      <div class="cmd cmd-small">Add this to your AI tool:<br><br>Read https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md</div>
 
       <h3>Game engines</h3>
       <p>Depending on your game type, use the engine that fits best:</p>

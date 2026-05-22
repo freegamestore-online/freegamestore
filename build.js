@@ -196,7 +196,7 @@ function renderHistorySection(repo, history) {
   if (!history.commits || history.commits.length === 0) {
     return `<section class="app-section">
       <h2>Recent updates</h2>
-      <p style="color: var(--muted);">No updates yet — check back after the first deploy.</p>
+      <p class="text-muted">No updates yet — check back after the first deploy.</p>
       <p><a class="source-link" href="${githubAllUrl}" target="_blank" rel="noopener">See full history on GitHub &rarr;</a></p>
     </section>`;
   }
@@ -218,7 +218,7 @@ function renderHistorySection(repo, history) {
       <ul class="version-log">
 ${items}
       </ul>
-      <p style="margin-top: 0.75rem;"><a class="source-link" href="${githubAllUrl}" target="_blank" rel="noopener">See full history on GitHub &rarr;</a></p>
+      <p class="mt-sm"><a class="source-link" href="${githubAllUrl}" target="_blank" rel="noopener">See full history on GitHub &rarr;</a></p>
     </section>`;
 }
 
@@ -250,7 +250,11 @@ fs.mkdirSync(path.join(DIST, 'games'), { recursive: true });
 // iconBg slipping past validation never reaches an HTML style attribute.
 function escapeAttrCss(s) { return String(s).replace(/[^a-z0-9_-]/gi, '_'); }
 const cardIconBackgrounds = games
-  .map(g => `.app-card[data-id="${escapeAttrCss(g.id)}"] .app-icon { background: ${g.iconBg || '#10b981'}; }`)
+  .map(g => {
+    const bg = g.iconBg || '#10b981';
+    const id = escapeAttrCss(g.id);
+    return `.app-card[data-id="${id}"] .app-icon { background: ${bg}; }\n.app-hero-icon[data-id="${id}"] { background: ${bg}; }`;
+  })
   .join('\n');
 
 const gameCards = games.map(game => {
