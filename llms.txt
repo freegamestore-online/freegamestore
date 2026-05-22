@@ -1,0 +1,32 @@
+# FreeGameStore
+
+> FreeGameStore is a free, open-source game platform where developers publish PWA games at `<name>.freegamestore.online`. Games are built with TypeScript and any rendering approach (Canvas, WebGL, DOM, Phaser, Kaplay, Pixi, Babylon.js), deployed via GitHub Actions to Cloudflare R2. The platform provides an SDK with auth, per-user storage, real-time rooms, leaderboards, and UI components. Every game is free forever, MIT-licensed, and privacy-first (zero tracking). For the full AI agent guide, see [SKILLS.md](https://freegamestore.online/SKILLS.md).
+
+## AI Agent Integration
+
+- [SKILLS.md](https://freegamestore.online/SKILLS.md): Complete platform guide for AI agents. Tech stack, SDK reference, game templates, deploy flow, compliance rules. Point your AI agent here.
+- [MCP Server](https://mcp.freeappstore.online/mcp): Remote MCP server (Streamable HTTP) covering the whole platform family. Tools: `deploy_status`, `app_info`, `sdk_reference`, `platform_guide`, `list_apps`. Connect with `npx mcp-remote https://mcp.freeappstore.online/mcp`.
+- [Platform Skills (FAS)](https://freeappstore.online/skills.md): Shared platform guide covering SDK, CLI, and conventions used across FreeAppStore and FreeGameStore.
+
+## For Developers
+
+- [Build with AI](https://freegamestore.online/build-with-ai.html): Step-by-step guide to building a game with Claude Code, Cursor, Codex, or any AI tool.
+- [Get Started](https://freegamestore.online/get-started.html): Manual setup guide without AI.
+- [Guidelines](https://freegamestore.online/guidelines.html): Tech stack, project structure, brand rules, compliance checks, templates.
+- [Contribute](https://freegamestore.online/contribute.html): How to become a creator and publish games.
+
+## Platform
+
+- [Game Catalog](https://freegamestore.online/): Browse all published games.
+- [Leaderboard](https://freegamestore.online/leaderboard.html): Cross-game leaderboard rankings.
+- [Quality Reports](https://freegamestore.online/quality.html): Automated quality scores for every game.
+- [Pricing](https://freegamestore.online/pricing.html): Free vs Pro feature comparison and cost breakdown.
+- [Platform Source](https://github.com/freegamestore-online/platform): Games SDK, CLI, and compliance source code.
+
+## Optional
+
+- [About](https://freegamestore.online/about.html): What FreeGameStore is and how it works.
+- [Privacy Policy](https://freegamestore.online/privacy.html): Zero tracking, no cookies, localStorage only.
+- [Terms of Service](https://freegamestore.online/terms.html): MIT license required, free forever.
+- [FreeAppStore](https://freeappstore.online/): Sister platform for free web apps.
+- [ProAppStore](https://proappstore.online/): Pro tier with uncapped rooms, AI proxy, custom domains.

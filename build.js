@@ -586,6 +586,7 @@ const filesToCopy = [
   'pricing.html',
   'get-started.html',
   'SKILLS.md',
+  'llms.txt',
 ];
 
 // Security headers via CF Pages _headers — single source of truth for CSP and
