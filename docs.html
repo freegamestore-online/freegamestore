@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Docs — FreeGameStore</title>
+  <meta name="description" content="FreeGameStore Games SDK documentation. GameShell, GameTopbar, leaderboards, sound effects, and React hooks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Docs — FreeGameStore" />
+  <meta property="og:description" content="Games SDK docs: components, hooks, leaderboard, sound effects." />
+  <meta property="og:url" content="https://freegamestore.online/docs" />
+  <meta property="og:image" content="https://freegamestore.online/icon-512.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://freegamestore.online/docs" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">Free <span>Games</span></a>
+      <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h14M3 10h14M3 15h14"/></svg></button>
+      <nav>
+        <a href="/">Games</a>
+        <a href="https://freeappstore.online">Apps</a>
+        <a href="/about.html">About</a>
+        <a href="/get-started.html">Get Started</a>
+        <a href="/guidelines.html">Guidelines</a>
+        <a href="/docs.html">Docs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Documentation</h1>
+      <p>Everything you need to build a game. One SDK, brand-consistent, scroll-free.</p>
+    </div>
+
+    <div class="page-content">
+
+      <h2>Quick Start</h2>
+      <pre><code>npm i @freegamestore/games</code></pre>
+      <pre><code>import { GameShell, GameTopbar } from '@freegamestore/games'
+
+export default function App() {
+  return (
+    &lt;GameShell topbar={&lt;GameTopbar title="My Game" score={0} /&gt;}&gt;
+      {/* your game canvas */}
+    &lt;/GameShell&gt;
+  )
+}</code></pre>
+
+      <h2>GameShell</h2>
+      <p>Root layout wrapper. Locks the viewport to <code>100svh</code>, prevents document scroll, disables text selection. Every game wraps its content in this.</p>
+      <pre><code>&lt;GameShell topbar={&lt;GameTopbar title="Tetris" score={42} /&gt;}&gt;
+  &lt;TetrisBoard /&gt;
+&lt;/GameShell&gt;</code></pre>
+      <table>
+        <thead><tr><th>Prop</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>topbar</code></td><td><code>ReactNode?</code></td><td>Topbar element (typically GameTopbar)</td></tr>
+          <tr><td><code>children</code></td><td><code>ReactNode</code></td><td>Game content, fills remaining viewport</td></tr>
+        </tbody>
+      </table>
+
+      <h2>GameTopbar</h2>
+      <p>Standard topbar for all games. Same font, padding, and colors everywhere.</p>
+      <pre><code>// Simple: just a score
+&lt;GameTopbar title="Snake" score={42} /&gt;
+
+// Custom stats + play/pause + rules
+&lt;GameTopbar
+  title="Pac-Man"
+  stats={[
+    { label: 'Score', value: 1200, accent: true },
+    { label: 'Lives', value: 3 },
+    { label: 'Level', value: 5 },
+  ]}
+  rules={&lt;p&gt;Eat all the dots. Avoid ghosts.&lt;/p&gt;}
+  onPlayPause={togglePause}
+  paused={isPaused}
+  onRestart={restart}
+  actions={&lt;&gt;&lt;GameThemeToggle /&gt;&lt;GameTextSizeToggle /&gt;&lt;/&gt;}
+/&gt;</code></pre>
+      <table>
+        <thead><tr><th>Prop</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>title</code></td><td><code>string?</code></td><td>Game name, left side</td></tr>
+          <tr><td><code>score</code></td><td><code>number?</code></td><td>Convenience for single-score games</td></tr>
+          <tr><td><code>stats</code></td><td><code>GameTopbarStat[]?</code></td><td>Custom stat lineup (replaces score)</td></tr>
+          <tr><td><code>actions</code></td><td><code>ReactNode?</code></td><td>Right-side buttons (max 2)</td></tr>
+          <tr><td><code>rules</code></td><td><code>ReactNode?</code></td><td>Instructions, shows info icon overlay</td></tr>
+          <tr><td><code>onPlayPause</code></td><td><code>() =&gt; void?</code></td><td>Renders play/pause button</td></tr>
+          <tr><td><code>paused</code></td><td><code>boolean?</code></td><td>Controls play/pause icon state</td></tr>
+          <tr><td><code>onRestart</code></td><td><code>() =&gt; void?</code></td><td>Renders restart button</td></tr>
+        </tbody>
+      </table>
+
+      <h2>GameOverScreen</h2>
+      <p>Standard game-over overlay with score, high score, and play again button. Renders on top of the game board.</p>
+      <pre><code>&lt;GameOverScreen
+  score={42}
+  highScore={100}
+  onPlayAgain={() =&gt; reset()}
+/&gt;</code></pre>
+
+      <h2>GameModal</h2>
+      <p>Fullscreen modal for rules, settings, confirmations. Closes on backdrop click or Escape.</p>
+      <pre><code>&lt;GameModal open={showRules} onClose={() =&gt; setShowRules(false)} title="Rules"&gt;
+  &lt;p&gt;Eat dots. Avoid ghosts. Collect power pellets.&lt;/p&gt;
+&lt;/GameModal&gt;</code></pre>
+
+      <h2>GameConfirm</h2>
+      <p>Confirm/cancel dialog for quit, restart, or destructive actions.</p>
+      <pre><code>&lt;GameConfirm
+  open={showQuit}
+  title="Quit Game?"
+  message="Your progress will be lost."
+  confirmLabel="Quit"
+  variant="danger"
+  onConfirm={quit}
+  onCancel={() =&gt; setShowQuit(false)}
+/&gt;</code></pre>
+
+      <h2>GameButton</h2>
+      <p>Standard game button. Four variants, three sizes.</p>
+      <pre><code>&lt;GameButton variant="primary" size="lg" onClick={start}&gt;Play&lt;/GameButton&gt;
+&lt;GameButton variant="secondary" size="md"&gt;Settings&lt;/GameButton&gt;
+&lt;GameButton variant="danger" size="md"&gt;Quit&lt;/GameButton&gt;
+&lt;GameButton variant="ghost" size="sm"&gt;Skip&lt;/GameButton&gt;</code></pre>
+
+      <h2>GameAuth</h2>
+      <p>Sign-in button. Google OAuth via the FGS auth worker.</p>
+      <pre><code>&lt;GameAuth /&gt;</code></pre>
+
+      <h2>GameThemeToggle + GameTextSizeToggle</h2>
+      <p>Compact toggles for the topbar <code>actions</code> slot. 28px square, no props.</p>
+      <pre><code>import { GameThemeToggle, GameTextSizeToggle } from '@freegamestore/games'
+
+&lt;GameTopbar
+  title="Chess"
+  actions={&lt;&gt;&lt;GameThemeToggle /&gt;&lt;GameTextSizeToggle /&gt;&lt;/&gt;}
+/&gt;</code></pre>
+
+      <h2>Leaderboard</h2>
+      <p>Renders a leaderboard table. Pass entries from <code>useLeaderboard()</code>.</p>
+      <pre><code>&lt;Leaderboard entries={entries} /&gt;</code></pre>
+
+      <h2>Hooks</h2>
+
+      <h3>useLeaderboard</h3>
+      <p>Submit scores and fetch rankings from the FGS leaderboard worker.</p>
+      <pre><code>import { useLeaderboard } from '@freegamestore/games'
+
+const { submitScore, entries, loading } = useLeaderboard('tetris')
+
+// On game over:
+await submitScore(42)</code></pre>
+
+      <h3>useAuth</h3>
+      <p>Google OAuth state. Used internally by GameAuth. Rarely needed directly.</p>
+      <pre><code>const { user, signIn, signOut } = useAuth()</code></pre>
+
+      <h3>useGameSounds</h3>
+      <p>Synthesized sound effects for common game events.</p>
+      <pre><code>const sounds = useGameSounds()
+
+sounds.move()     // piece moved
+sounds.rotate()   // piece rotated
+sounds.drop()     // piece dropped
+sounds.clear()    // line cleared
+sounds.levelUp()  // level up
+sounds.gameOver() // game over</code></pre>
+
+      <h3>useSound</h3>
+      <p>Low-level sound context. Mute/unmute state shared across all hooks.</p>
+      <pre><code>const { muted, toggleMute } = useSound()</code></pre>
+
+      <h2>Exports</h2>
+      <table>
+        <thead><tr><th>Import path</th><th>What you get</th></tr></thead>
+        <tbody>
+          <tr><td><code>@freegamestore/games</code></td><td><code>GameShell</code>, <code>GameTopbar</code>, <code>GameAuth</code>, <code>GameButton</code>, <code>GameModal</code>, <code>GameOverScreen</code>, <code>GameConfirm</code>, <code>GameThemeToggle</code>, <code>GameTextSizeToggle</code>, <code>Leaderboard</code>, <code>useAuth</code>, <code>useLeaderboard</code>, <code>useGameSounds</code>, <code>useSound</code></td></tr>
+        </tbody>
+      </table>
+
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://www.npmjs.com/package/@freegamestore/games">@freegamestore/games on npm</a></li>
+        <li><a href="https://github.com/freegamestore-online/platform">Platform source code</a></li>
+        <li><a href="https://freeappstore.online">FreeAppStore (sister store)</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left">
+        <a href="/" class="logo">Free <span>Games</span></a>
+        <p>Free forever, open source, privacy-first.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/about.html">About</a>
+        <a href="/contribute.html">Build</a>
+        <a href="/docs.html">Docs</a>
+        <a href="/guidelines.html">Guidelines</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="https://github.com/freegamestore-online">GitHub</a>
+      </div>
+    </div>
+  </footer>
+  <script src="/prism.js" defer></script>
+  <script src="/prism-autodetect.js" defer></script>
+</body>
+</html>
