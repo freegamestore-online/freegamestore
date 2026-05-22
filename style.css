@@ -1684,7 +1684,7 @@ footer .container {
 .copy-line.copied::after { content: 'copied!'; color: #a6e3a1; opacity: 1; }
 
 /* ---- /guidelines ---- */
-.spec-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem; }
+.spec-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .spec-table th, .spec-table td { padding: 0.6rem 0.75rem; text-align: left; border-bottom: 1px solid var(--line); }
 .spec-table th { font-weight: 700; color: var(--ink); }
 .spec-table td { color: var(--muted); }
