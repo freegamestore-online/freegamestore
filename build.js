@@ -268,7 +268,7 @@ const gameCards = games.map(game => {
             <span class="app-name">${escapeHtml(game.name)}</span>
             <span class="app-meta">${escapeHtml(categoryLabel(game.category))}</span>
           </div>
-          <a href="${escapeHtml(game.appUrl)}" target="_blank" rel="noopener" class="app-cta" aria-label="Play ${escapeHtml(game.name)}">
+          <a href="${escapeHtml(game.appUrl)}" rel="noopener" class="app-cta" aria-label="Play ${escapeHtml(game.name)}">
             <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="6,4 20,12 6,20" /></svg>
             <span class="cta-label">Play</span>
           </a>
