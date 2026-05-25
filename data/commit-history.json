@@ -2,9 +2,19 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-21T02:29:01Z"
+      "pushed_at": "2026-05-25T10:15:30Z"
     },
     "commits": [
+      {
+        "sha": "fac37736c67c1bdccc34f59b37313cb3762c76a8",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/fac37736c67c1bdccc34f59b37313cb3762c76a8",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:21Z"
+          }
+        }
+      },
       {
         "sha": "7776459ab40ff862bc122571490b33cb951b1d8a",
         "html_url": "https://github.com/freegamestore-online/dice/commit/7776459ab40ff862bc122571490b33cb951b1d8a",
@@ -22,16 +32,6 @@
           "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
           "author": {
             "date": "2026-05-20T04:47:29Z"
-          }
-        }
-      },
-      {
-        "sha": "d3e3aae01f8974aa387add034900e61af492903b",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/d3e3aae01f8974aa387add034900e61af492903b",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
           }
         }
       }
@@ -67,7 +67,7 @@
         "sha": "66823a8149511bc712b1ce49c969bff080aede56",
         "html_url": "https://github.com/freegamestore-online/chess/commit/66823a8149511bc712b1ce49c969bff080aede56",
         "commit": {
-          "message": "Strip multiplayer — moving to ProGameStore\n\nCloudflare Pages can't host a Worker that defines a Durable Object class,\nso the WebSocket-backed multiplayer was failing every deploy. Per the\nplatform decision in ~/dev/stores/CLAUDE.md (2026-05-20), real-time rooms\nare now a Pro-tier feature, not Free. Multiplayer chess will live at\nprogamestore-online/chess once PGS is built out.\n\nRemoved:\n- web/public/_worker.js (the GameDO Worker)\n- web/src/components/MultiplayerTab.tsx\n- /multiplayer + /g/<id> routes in App.tsx\n- Multiplayer button in the topbar\n- Manual sw.js registration in index.html (VitePWA handles it)\n- Durable Objects + migrations blocks in wrangler.jsonc\n\nThe full multiplayer code is staged at ~/dev/stores/pgs/games/chess/ for\nthe eventual PGS launch.\n\nKept: local play vs. engine, puzzles, voice control, preferences,\nanalysis, eval bar, move list �� everything that doesn't need a server.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "Strip multiplayer — moving to ProGameStore\n\nCloudflare Pages can't host a Worker that defines a Durable Object class,\nso the WebSocket-backed multiplayer was failing every deploy. Per the\nplatform decision in ~/dev/stores/CLAUDE.md (2026-05-20), real-time rooms\nare now a Pro-tier feature, not Free. Multiplayer chess will live at\nprogamestore-online/chess once PGS is built out.\n\nRemoved:\n- web/public/_worker.js (the GameDO Worker)\n- web/src/components/MultiplayerTab.tsx\n- /multiplayer + /g/<id> routes in App.tsx\n- Multiplayer button in the topbar\n- Manual sw.js registration in index.html (VitePWA handles it)\n- Durable Objects + migrations blocks in wrangler.jsonc\n\nThe full multiplayer code is staged at ~/dev/stores/pgs/games/chess/ for\nthe eventual PGS launch.\n\nKept: local play vs. engine, puzzles, voice control, preferences,\nanalysis, eval bar, move list — everything that doesn't need a server.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-19T23:06:30Z"
           }
@@ -78,9 +78,19 @@
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-21T02:28:36Z"
+      "pushed_at": "2026-05-25T10:15:12Z"
     },
     "commits": [
+      {
+        "sha": "59705e748de68c5b6f3dc61183f789c2e455960b",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/59705e748de68c5b6f3dc61183f789c2e455960b",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:13Z"
+          }
+        }
+      },
       {
         "sha": "619f0aa92c2826ee729d22b88c6f1ed79a82dbb0",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/619f0aa92c2826ee729d22b88c6f1ed79a82dbb0",
@@ -100,25 +110,25 @@
             "date": "2026-05-20T04:47:29Z"
           }
         }
-      },
-      {
-        "sha": "0a6c00d122db847aa70be1fc6301a9f288e25a6a",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/0a6c00d122db847aa70be1fc6301a9f288e25a6a",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-21T02:28:55Z"
+      "pushed_at": "2026-05-25T10:15:24Z"
     },
     "commits": [
+      {
+        "sha": "938268159f149d9f59df4703a9e94e6ac45feb63",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/938268159f149d9f59df4703a9e94e6ac45feb63",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:18Z"
+          }
+        }
+      },
       {
         "sha": "22a1b98b4c4d726d244bfc114063c68733ab1c9f",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/22a1b98b4c4d726d244bfc114063c68733ab1c9f",
@@ -138,25 +148,25 @@
             "date": "2026-05-20T04:47:29Z"
           }
         }
-      },
-      {
-        "sha": "fd1c7a65015deb4a0f9e1e3c9ce1ab745bbbef3c",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/fd1c7a65015deb4a0f9e1e3c9ce1ab745bbbef3c",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-21T02:28:44Z"
+      "pushed_at": "2026-05-25T10:15:18Z"
     },
     "commits": [
+      {
+        "sha": "002f2ed66e46f6b1d05c06b27bf9463e19d39a80",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/002f2ed66e46f6b1d05c06b27bf9463e19d39a80",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:16Z"
+          }
+        }
+      },
       {
         "sha": "939bdc6f072a8a99e350e47b67856e1089981933",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/939bdc6f072a8a99e350e47b67856e1089981933",
@@ -176,25 +186,25 @@
             "date": "2026-05-20T04:47:29Z"
           }
         }
-      },
-      {
-        "sha": "634be465582ad0f477d6f7415dd3b2dc2173a768",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/634be465582ad0f477d6f7415dd3b2dc2173a768",
-        "commit": {
-          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
-          "author": {
-            "date": "2026-05-20T01:20:49Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-21T02:29:18Z"
+      "pushed_at": "2026-05-25T10:15:49Z"
     },
     "commits": [
+      {
+        "sha": "97f64836c34ec46cb306862d0f4d17e633e948b0",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/97f64836c34ec46cb306862d0f4d17e633e948b0",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:28Z"
+          }
+        }
+      },
       {
         "sha": "f5ee0e93b0417be854cdc9b8a3fb14c23ca6025c",
         "html_url": "https://github.com/freegamestore-online/match3/commit/f5ee0e93b0417be854cdc9b8a3fb14c23ca6025c",
@@ -214,25 +224,25 @@
             "date": "2026-05-20T04:47:29Z"
           }
         }
-      },
-      {
-        "sha": "bd00a7a3aea909f91f41848973814b1c18b9d81d",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/bd00a7a3aea909f91f41848973814b1c18b9d81d",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:34Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-21T02:29:29Z"
+      "pushed_at": "2026-05-25T10:16:01Z"
     },
     "commits": [
+      {
+        "sha": "2d8d929dab5fac759bfd08b84ec9e2441a7d2eb6",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/2d8d929dab5fac759bfd08b84ec9e2441a7d2eb6",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:33Z"
+          }
+        }
+      },
       {
         "sha": "925e2542916b2666aacddfae7e7b25fd09d89f3d",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/925e2542916b2666aacddfae7e7b25fd09d89f3d",
@@ -252,25 +262,25 @@
             "date": "2026-05-20T04:47:32Z"
           }
         }
-      },
-      {
-        "sha": "95b10b6ef3366a69f229ed71362f5c58bd027e13",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/95b10b6ef3366a69f229ed71362f5c58bd027e13",
-        "commit": {
-          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
-          "author": {
-            "date": "2026-05-20T01:21:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-21T02:29:12Z"
+      "pushed_at": "2026-05-25T10:15:43Z"
     },
     "commits": [
+      {
+        "sha": "34ca6266aa23cf066e2e331bc09ea028d4125486",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/34ca6266aa23cf066e2e331bc09ea028d4125486",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:26Z"
+          }
+        }
+      },
       {
         "sha": "a16a44587704771f89767d999c3ef78e4b396df5",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/a16a44587704771f89767d999c3ef78e4b396df5",
@@ -290,25 +300,25 @@
             "date": "2026-05-20T04:47:29Z"
           }
         }
-      },
-      {
-        "sha": "dc9c09a94d7c782127a54341f1aff5b0dd24b89c",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/dc9c09a94d7c782127a54341f1aff5b0dd24b89c",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-21T02:28:33Z"
+      "pushed_at": "2026-05-25T10:15:09Z"
     },
     "commits": [
+      {
+        "sha": "0094976caa02e71e0cdf52c3a3d48cb965e4af73",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/0094976caa02e71e0cdf52c3a3d48cb965e4af73",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:12Z"
+          }
+        }
+      },
       {
         "sha": "d78f78d383744b2037baae05020e543bbdb7b7d3",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/d78f78d383744b2037baae05020e543bbdb7b7d3",
@@ -328,25 +338,25 @@
             "date": "2026-05-20T04:47:29Z"
           }
         }
-      },
-      {
-        "sha": "d1ed5fc3e271b3ed9069515f44c0bfdc56436c6e",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/d1ed5fc3e271b3ed9069515f44c0bfdc56436c6e",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-25T10:15:52Z"
     },
     "commits": [
+      {
+        "sha": "eef85b37007478f111a19d41da035aaf5156c530",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/eef85b37007478f111a19d41da035aaf5156c530",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:30Z"
+          }
+        }
+      },
       {
         "sha": "2f957dad571397d2eccb2b60a6e55bf081eaa1c3",
         "html_url": "https://github.com/freegamestore-online/memory/commit/2f957dad571397d2eccb2b60a6e55bf081eaa1c3",
@@ -366,25 +376,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "5e8f037cb555877b8d58883629d7a0f519a2b8ec",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/5e8f037cb555877b8d58883629d7a0f519a2b8ec",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-21T02:29:06Z"
+      "pushed_at": "2026-05-25T10:15:37Z"
     },
     "commits": [
+      {
+        "sha": "ea6b331c8c6614190f644757f491f3420d6f65e3",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/ea6b331c8c6614190f644757f491f3420d6f65e3",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:23Z"
+          }
+        }
+      },
       {
         "sha": "ef0e9ef368d7db03b9b836787d04dbb7fcc2f291",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/ef0e9ef368d7db03b9b836787d04dbb7fcc2f291",
@@ -404,25 +414,25 @@
             "date": "2026-05-20T04:47:29Z"
           }
         }
-      },
-      {
-        "sha": "f51b1e20967ff29e4a4398c6b26c29ea9e490f08",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/f51b1e20967ff29e4a4398c6b26c29ea9e490f08",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-21T02:28:41Z"
+      "pushed_at": "2026-05-25T10:15:15Z"
     },
     "commits": [
+      {
+        "sha": "1a06cf1a86298a303faca330488334fe0c7d8b2b",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/1a06cf1a86298a303faca330488334fe0c7d8b2b",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:15Z"
+          }
+        }
+      },
       {
         "sha": "dbebe5da04f9ca309ccd187c33d40b8dcafef18c",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/dbebe5da04f9ca309ccd187c33d40b8dcafef18c",
@@ -442,25 +452,25 @@
             "date": "2026-05-20T04:47:29Z"
           }
         }
-      },
-      {
-        "sha": "7228da90f44856e958d8540a1bf723857db9ca52",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/7228da90f44856e958d8540a1bf723857db9ca52",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-21T02:29:04Z"
+      "pushed_at": "2026-05-25T10:15:34Z"
     },
     "commits": [
+      {
+        "sha": "a9279e697cf890b861b0a74251904123020b1ef4",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/a9279e697cf890b861b0a74251904123020b1ef4",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:22Z"
+          }
+        }
+      },
       {
         "sha": "e98513f6a7e5441dff35c94991595475b0afae76",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/e98513f6a7e5441dff35c94991595475b0afae76",
@@ -480,25 +490,25 @@
             "date": "2026-05-20T04:47:29Z"
           }
         }
-      },
-      {
-        "sha": "02f3ad61330a881bfd47988d4864bc586e9c9b09",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/02f3ad61330a881bfd47988d4864bc586e9c9b09",
-        "commit": {
-          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
-          "author": {
-            "date": "2026-05-20T01:21:06Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-21T02:29:15Z"
+      "pushed_at": "2026-05-25T10:15:46Z"
     },
     "commits": [
+      {
+        "sha": "b55317e2f354cf5445e61fa28ccff9378462e64f",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/b55317e2f354cf5445e61fa28ccff9378462e64f",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:27Z"
+          }
+        }
+      },
       {
         "sha": "76e1f7ea7719771070218765b08a735b644721cf",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/76e1f7ea7719771070218765b08a735b644721cf",
@@ -518,25 +528,25 @@
             "date": "2026-05-20T04:47:29Z"
           }
         }
-      },
-      {
-        "sha": "19fb83c428a264ba7cdfe0ee5b5eda2efb13d29c",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/19fb83c428a264ba7cdfe0ee5b5eda2efb13d29c",
-        "commit": {
-          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
-          "author": {
-            "date": "2026-05-20T01:21:13Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-21T02:29:09Z"
+      "pushed_at": "2026-05-25T10:15:40Z"
     },
     "commits": [
+      {
+        "sha": "5535243dd79d8b1a4102f27002865b1c14b35071",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/5535243dd79d8b1a4102f27002865b1c14b35071",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:24Z"
+          }
+        }
+      },
       {
         "sha": "557eb39ec990395656454ec46e66c72b1be23446",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/557eb39ec990395656454ec46e66c72b1be23446",
@@ -556,25 +566,25 @@
             "date": "2026-05-20T04:47:29Z"
           }
         }
-      },
-      {
-        "sha": "523bd99909eed77250a45498baa2433639eea2b5",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/523bd99909eed77250a45498baa2433639eea2b5",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-25T10:15:58Z"
     },
     "commits": [
+      {
+        "sha": "15661f505c8c9c267fb428fab7a3102fd8b427bf",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/15661f505c8c9c267fb428fab7a3102fd8b427bf",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:32Z"
+          }
+        }
+      },
       {
         "sha": "ee6dda9001f1e20e400544d908c8f0c1b84ac973",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/ee6dda9001f1e20e400544d908c8f0c1b84ac973",
@@ -594,25 +604,25 @@
             "date": "2026-05-20T01:21:18Z"
           }
         }
-      },
-      {
-        "sha": "eeef49557289e83f0f7d481139d9fa25d306ee32",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/eeef49557289e83f0f7d481139d9fa25d306ee32",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-25T10:16:07Z"
     },
     "commits": [
+      {
+        "sha": "d3dd2eda63292e7f345a48413cc8d43f1d059fd9",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/d3dd2eda63292e7f345a48413cc8d43f1d059fd9",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:35Z"
+          }
+        }
+      },
       {
         "sha": "b41663e1d17105abefced264750dfb2a9853a127",
         "html_url": "https://github.com/freegamestore-online/racing/commit/b41663e1d17105abefced264750dfb2a9853a127",
@@ -630,16 +640,6 @@
           "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
           "author": {
             "date": "2026-05-20T01:21:41Z"
-          }
-        }
-      },
-      {
-        "sha": "484837258479dfc9e6dbb663a70bd25f1b8271a4",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/484837258479dfc9e6dbb663a70bd25f1b8271a4",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
           }
         }
       }
@@ -686,9 +686,19 @@
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-21T02:29:21Z"
+      "pushed_at": "2026-05-25T10:15:55Z"
     },
     "commits": [
+      {
+        "sha": "72ea49f82bedfa5864660e5fd85a77e64b8d068b",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/72ea49f82bedfa5864660e5fd85a77e64b8d068b",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:31Z"
+          }
+        }
+      },
       {
         "sha": "4f93b1c2f60c543faef60f06ade78c979f26f0ab",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/4f93b1c2f60c543faef60f06ade78c979f26f0ab",
@@ -708,25 +718,25 @@
             "date": "2026-05-20T04:47:32Z"
           }
         }
-      },
-      {
-        "sha": "e263a4a9b9e8effd74d7938e19cea6ad44d590fc",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/e263a4a9b9e8effd74d7938e19cea6ad44d590fc",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-21T02:28:30Z"
+      "pushed_at": "2026-05-25T10:15:05Z"
     },
     "commits": [
+      {
+        "sha": "a5e0aad751219f45bcb781a2713809fed278b653",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/a5e0aad751219f45bcb781a2713809fed278b653",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:10Z"
+          }
+        }
+      },
       {
         "sha": "868265d0e14844fcc3140e712b793ed0bf41342b",
         "html_url": "https://github.com/freegamestore-online/2048/commit/868265d0e14844fcc3140e712b793ed0bf41342b",
@@ -746,25 +756,25 @@
             "date": "2026-05-20T04:47:29Z"
           }
         }
-      },
-      {
-        "sha": "8ae4b43f100191221f6c4fd3f36c9c195372b102",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/8ae4b43f100191221f6c4fd3f36c9c195372b102",
-        "commit": {
-          "message": "ci: remove verify stamp (workflow refactor confirmed working)",
-          "author": {
-            "date": "2026-05-20T02:34:38Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-21T02:28:50Z"
+      "pushed_at": "2026-05-25T10:15:21Z"
     },
     "commits": [
+      {
+        "sha": "2963e002382f280411071a05da19d9b8bc37c6b3",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/2963e002382f280411071a05da19d9b8bc37c6b3",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:17Z"
+          }
+        }
+      },
       {
         "sha": "d85dbf2ee37efa4dcd64d914d78c419655e7dbc7",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/d85dbf2ee37efa4dcd64d914d78c419655e7dbc7",
@@ -784,25 +794,25 @@
             "date": "2026-05-20T04:47:29Z"
           }
         }
-      },
-      {
-        "sha": "de28ed2c3af957e1d6ae914d849169a1f76cdd12",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/de28ed2c3af957e1d6ae914d849169a1f76cdd12",
-        "commit": {
-          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
-          "author": {
-            "date": "2026-05-20T01:20:54Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-21T02:29:40Z"
+      "pushed_at": "2026-05-25T10:16:10Z"
     },
     "commits": [
+      {
+        "sha": "dcc3cb783255916165508f9d8d9ed9c11e232abd",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/dcc3cb783255916165508f9d8d9ed9c11e232abd",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:37Z"
+          }
+        }
+      },
       {
         "sha": "c8652b3995364f9d12fda62483f50962d59f4f38",
         "html_url": "https://github.com/freegamestore-online/simon/commit/c8652b3995364f9d12fda62483f50962d59f4f38",
@@ -822,25 +832,25 @@
             "date": "2026-05-20T04:47:32Z"
           }
         }
-      },
-      {
-        "sha": "e41f5dc84000a09bfb1e4693e7cc487e0faa7888",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/e41f5dc84000a09bfb1e4693e7cc487e0faa7888",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-21T02:29:43Z"
+      "pushed_at": "2026-05-25T10:16:17Z"
     },
     "commits": [
+      {
+        "sha": "8469cda56fd01f8618d014181defca01ba1ff70d",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/8469cda56fd01f8618d014181defca01ba1ff70d",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:39Z"
+          }
+        }
+      },
       {
         "sha": "a3257538649990c8bedbf85e3e9e1b35b0cfc436",
         "html_url": "https://github.com/freegamestore-online/snake/commit/a3257538649990c8bedbf85e3e9e1b35b0cfc436",
@@ -860,25 +870,25 @@
             "date": "2026-05-20T04:47:32Z"
           }
         }
-      },
-      {
-        "sha": "2b63875c0c50c0345d70dbb848322a842e9aa047",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/2b63875c0c50c0345d70dbb848322a842e9aa047",
-        "commit": {
-          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
-          "author": {
-            "date": "2026-05-20T01:22:22Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-21T02:30:06Z"
+      "pushed_at": "2026-05-25T10:16:32Z"
     },
     "commits": [
+      {
+        "sha": "ae92b256cb024b2079fd5eb23050b2bf75fdbc99",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/ae92b256cb024b2079fd5eb23050b2bf75fdbc99",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:45Z"
+          }
+        }
+      },
       {
         "sha": "fe48f38cc548584e2aed8d990ac993ef6a70e335",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/fe48f38cc548584e2aed8d990ac993ef6a70e335",
@@ -898,25 +908,25 @@
             "date": "2026-05-20T04:47:33Z"
           }
         }
-      },
-      {
-        "sha": "903ca4792383949bd5a07c09fd491bf83bb758a4",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/903ca4792383949bd5a07c09fd491bf83bb758a4",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-21T02:29:52Z"
+      "pushed_at": "2026-05-25T10:16:23Z"
     },
     "commits": [
+      {
+        "sha": "76f442838e004f8a1c4fb5bd171826cc917c116b",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/76f442838e004f8a1c4fb5bd171826cc917c116b",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:41Z"
+          }
+        }
+      },
       {
         "sha": "c517fe8c61f446d4f4cc22371e013c5b9a3f65b3",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/c517fe8c61f446d4f4cc22371e013c5b9a3f65b3",
@@ -936,25 +946,25 @@
             "date": "2026-05-20T04:47:32Z"
           }
         }
-      },
-      {
-        "sha": "4e09af5bf6167cd2137ed29a467860885eca6062",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/4e09af5bf6167cd2137ed29a467860885eca6062",
-        "commit": {
-          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
-          "author": {
-            "date": "2026-05-20T01:21:57Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-21T02:30:01Z"
+      "pushed_at": "2026-05-25T10:16:29Z"
     },
     "commits": [
+      {
+        "sha": "c39ba7ee6e85a6061dabef2182918ad3ee71ba3b",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/c39ba7ee6e85a6061dabef2182918ad3ee71ba3b",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:44Z"
+          }
+        }
+      },
       {
         "sha": "720aa8f374545ff4a9149e5a63e931df109e634f",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/720aa8f374545ff4a9149e5a63e931df109e634f",
@@ -972,16 +982,6 @@
           "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
           "author": {
             "date": "2026-05-20T04:47:33Z"
-          }
-        }
-      },
-      {
-        "sha": "bd0635568c9aa138b5e819b3a2bd31c4235e2067",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/bd0635568c9aa138b5e819b3a2bd31c4235e2067",
-        "commit": {
-          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
-          "author": {
-            "date": "2026-05-20T01:22:08Z"
           }
         }
       }
@@ -1028,9 +1028,19 @@
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-21T02:29:32Z"
+      "pushed_at": "2026-05-25T10:16:04Z"
     },
     "commits": [
+      {
+        "sha": "40dfded0745b7d22d5e8ba93acb3c5ebc6460aa5",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/40dfded0745b7d22d5e8ba93acb3c5ebc6460aa5",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:34Z"
+          }
+        }
+      },
       {
         "sha": "3e4b2032d3d171e1aa95bed66f933226f917b809",
         "html_url": "https://github.com/freegamestore-online/pong/commit/3e4b2032d3d171e1aa95bed66f933226f917b809",
@@ -1050,25 +1060,25 @@
             "date": "2026-05-20T04:47:32Z"
           }
         }
-      },
-      {
-        "sha": "dd45f9acdf4ab2d04b98dab94445aedf6ee6b1e1",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/dd45f9acdf4ab2d04b98dab94445aedf6ee6b1e1",
-        "commit": {
-          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
-          "author": {
-            "date": "2026-05-20T01:21:30Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-21T02:29:55Z"
+      "pushed_at": "2026-05-25T10:16:26Z"
     },
     "commits": [
+      {
+        "sha": "363284e0fb7d70691c4f13c01f4f267ccb430f55",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/363284e0fb7d70691c4f13c01f4f267ccb430f55",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:42Z"
+          }
+        }
+      },
       {
         "sha": "d54f5020f17840d5727b61b3a0733b9a38aeb1a6",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/d54f5020f17840d5727b61b3a0733b9a38aeb1a6",
@@ -1088,25 +1098,25 @@
             "date": "2026-05-20T04:47:32Z"
           }
         }
-      },
-      {
-        "sha": "cf174f5a6d005413d1f1605de8b3c88889156385",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/cf174f5a6d005413d1f1605de8b3c88889156385",
-        "commit": {
-          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
-          "author": {
-            "date": "2026-05-20T01:22:02Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-20T04:47:38Z"
+      "pushed_at": "2026-05-25T10:16:38Z"
     },
     "commits": [
+      {
+        "sha": "686e410b6f0a9d6f564b7e9bb27bcfc61ae7b8cf",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/686e410b6f0a9d6f564b7e9bb27bcfc61ae7b8cf",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:47Z"
+          }
+        }
+      },
       {
         "sha": "0362a8bc484b56acc7fb9d91850790f16b6761e5",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/0362a8bc484b56acc7fb9d91850790f16b6761e5",
@@ -1126,25 +1136,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "4d93f40ed4580718845cdf479748cb8a559ba8aa",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/4d93f40ed4580718845cdf479748cb8a559ba8aa",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-21T02:29:46Z"
+      "pushed_at": "2026-05-25T10:16:20Z"
     },
     "commits": [
+      {
+        "sha": "0ed5aa3ce72c0eef40041134153900518bc0b1cd",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/0ed5aa3ce72c0eef40041134153900518bc0b1cd",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:40Z"
+          }
+        }
+      },
       {
         "sha": "52e716c40db26691d2f3fb238eb9904275f7aee9",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/52e716c40db26691d2f3fb238eb9904275f7aee9",
@@ -1164,25 +1174,25 @@
             "date": "2026-05-20T04:47:32Z"
           }
         }
-      },
-      {
-        "sha": "8465237013ede6f91353c952d4772b65cc471894",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/8465237013ede6f91353c952d4772b65cc471894",
-        "commit": {
-          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
-          "author": {
-            "date": "2026-05-20T01:21:48Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-20T04:47:37Z"
+      "pushed_at": "2026-05-25T10:16:35Z"
     },
     "commits": [
+      {
+        "sha": "a8d23fea318c6c1aaed03ae0bb6765356b87335c",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/a8d23fea318c6c1aaed03ae0bb6765356b87335c",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:46Z"
+          }
+        }
+      },
       {
         "sha": "a19b12e45fb458dea036c0962da5c4e8c1567fac",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/a19b12e45fb458dea036c0962da5c4e8c1567fac",
@@ -1202,25 +1212,25 @@
             "date": "2026-05-20T01:22:14Z"
           }
         }
-      },
-      {
-        "sha": "cc472082257734060816282c043bb97d4ac5a7eb",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/cc472082257734060816282c043bb97d4ac5a7eb",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-20T04:47:35Z"
+      "pushed_at": "2026-05-25T10:16:13Z"
     },
     "commits": [
+      {
+        "sha": "f05c12be3f623b3dd13a1161afd188c03c93800d",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/f05c12be3f623b3dd13a1161afd188c03c93800d",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:38Z"
+          }
+        }
+      },
       {
         "sha": "8e5b2e5e8c9fb818b809d354b3789580dac3c978",
         "html_url": "https://github.com/freegamestore-online/slither/commit/8e5b2e5e8c9fb818b809d354b3789580dac3c978",
@@ -1240,25 +1250,25 @@
             "date": "2026-05-19T22:01:36Z"
           }
         }
-      },
-      {
-        "sha": "bdf874cfbebdc7957a919726c255682375806a51",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/bdf874cfbebdc7957a919726c255682375806a51",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T21:46:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-21T02:28:58Z"
+      "pushed_at": "2026-05-25T10:15:27Z"
     },
     "commits": [
+      {
+        "sha": "20405433bf86712c63d4dd6b7a1e163ed085c4bf",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/20405433bf86712c63d4dd6b7a1e163ed085c4bf",
+        "commit": {
+          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-25T10:14:19Z"
+          }
+        }
+      },
       {
         "sha": "4dc85170f95216f4b96429833f82aeb681074dd7",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/4dc85170f95216f4b96429833f82aeb681074dd7",
@@ -1276,16 +1286,6 @@
           "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
           "author": {
             "date": "2026-05-20T04:47:29Z"
-          }
-        }
-      },
-      {
-        "sha": "395e2bc7ee6d3bd82f5c7a3c3f7922fee870834d",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/395e2bc7ee6d3bd82f5c7a3c3f7922fee870834d",
-        "commit": {
-          "message": "deps: bump @freegamestore/games to ^0.13.3 (leaderboard route fix)",
-          "author": {
-            "date": "2026-05-20T01:21:00Z"
           }
         }
       }
