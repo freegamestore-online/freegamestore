@@ -41,7 +41,7 @@
 
     <div class="ai-hero">
       <h1>Build a free game with AI.</h1>
-      <p class="ai-lead">FreeGameStore is AI-first. Drop our <a href="https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md">SKILLS.md</a> into your AI tool of choice, and the agent already knows the brand rules, the privacy mandates, the CLI, and the deploy flow before it writes a line of code. Ship a real, free, MIT-licensed game in an afternoon.</p>
+      <p class="ai-lead">FreeGameStore is AI-first. Drop our <a href="https://freegamestore.online/skills.md">SKILLS.md</a> into your AI tool of choice, and the agent already knows the brand rules, the privacy mandates, the CLI, and the deploy flow before it writes a line of code. Ship a real, free, MIT-licensed game in an afternoon.</p>
     </div>
 
     <h2>Pick your tool</h2>
@@ -107,12 +107,12 @@
     tetris/
     racing/
   platform/         ← store site &amp; templates (maintainers only)</div>
-    <p>This matches the paths in <a href="https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md">SKILLS.md</a>. For apps, use <code>~/dev/fas/apps/</code>.</p>
+    <p>This matches the paths in <a href="https://freegamestore.online/skills.md">SKILLS.md</a>. For apps, use <code>~/dev/fas/apps/</code>.</p>
 
     <h2>Or any other tool</h2>
     <p>Roo Code, Sweep, Open Hands, Smol Developer, the new Anthropic SDK agent — all of them work. The pattern is the same:</p>
     <ol class="steps">
-      <li><strong>Install the FreeGameStore CLI:</strong> <code>npm i -g @freeappstore/cli</code> then <code>fas login</code>.</li>
+      <li><strong>Install the FreeGameStore CLI:</strong> <code>npm i -g @freegamestore/cli</code> then <code>fas login</code>.</li>
       <li><strong>Scaffold:</strong> <code>fas init my-game --template game-canvas</code>.</li>
       <li><strong>Tell your AI tool to read SKILLS.md.</strong> Drop the URL in the project's instruction file (CLAUDE.md, .cursorrules, .github/copilot-instructions.md, AGENTS.md, CONVENTIONS.md, system prompt, …).</li>
       <li><strong>Build.</strong> The agent edits <code>web/src/App.tsx</code> and supporting files using the Shell layout, brand tokens, and brand fonts.</li>
@@ -123,7 +123,7 @@
 
     <div class="callout">
       <strong>The platform context lives at:</strong>
-      <div class="cmd">https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md</div>
+      <div class="cmd">https://freegamestore.online/skills.md</div>
       <p>Drop that URL in your tool's instruction file. The agent fetches it on demand and writes platform-aware code.</p>
     </div>
 
@@ -140,7 +140,7 @@
     <ul>
       <li><a href="/contribute.html">Manual / non-AI build flow</a> — the same steps without an agent.</li>
       <li><a href="/guidelines.html">Platform guidelines</a> — what gets approved and what doesn't.</li>
-      <li><a href="https://github.com/freeappstore-online/platform">FreeGameStore SDK source</a> — CLI, compliance package, backend.</li>
+      <li><a href="https://github.com/freegamestore-online/platform">FreeGameStore SDK source</a> — CLI, compliance package, backend.</li>
       <li><a href="https://freeappstore.online/build-with-ai.html">FreeAppStore's AI guide</a> — sister storefront, same flow.</li>
     </ul>
 

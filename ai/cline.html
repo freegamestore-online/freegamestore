@@ -34,12 +34,12 @@
   <main class="container">
 
     <h1>Cline on FreeGameStore</h1>
-    <p class="ai-lead">Build a free game using Cline. The agent reads the platform's <a href="https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md">SKILLS.md</a> and knows the brand rules, the CLI, and the deploy flow before it writes a line of code.</p>
+    <p class="ai-lead">Build a free game using Cline. The agent reads the platform's <a href="https://freegamestore.online/skills.md">SKILLS.md</a> and knows the brand rules, the CLI, and the deploy flow before it writes a line of code.</p>
 
     <div class="callout">
       <strong>Before you start:</strong> install Node 22+ and the FreeGameStore CLI.
-      <div class="cmd">npm i -g @freeappstore/cli
-fas login</div>
+      <div class="cmd">npm i -g @freegamestore/cli
+fgs login</div>
     </div>
 
 
@@ -51,7 +51,7 @@ fas login</div>
       </li>
       <li>
         <strong>Scaffold the game</strong>
-        <div class="cmd">fas init my-game --template game-canvas
+        <div class="cmd">fgs init my-game --template game-canvas
 code my-game</div>
       </li>
       <li>
@@ -61,7 +61,7 @@ code my-game</div>
 
 # Platform: FreeGameStore
 
-Always follow https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md.
+Always follow https://freegamestore.online/skills.md.
 
 Hard rules:
 - Manrope + Fraunces fonts only.
@@ -92,12 +92,12 @@ EOF</div>
       </li>
       <li>
         <strong>Run compliance checks</strong>
-        <div class="cmd">fas check</div>
+        <div class="cmd">fgs check</div>
         <p>Catches missing brand fonts, tracking SDKs, oversized bundles, and missing PWA manifest before publish.</p>
       </li>
       <li>
         <strong>Publish</strong>
-        <div class="cmd">fas publish --store games</div>
+        <div class="cmd">fgs publish --store games</div>
         <p>Provisions <code>github.com/freegamestore-online/my-game</code>, the Cloudflare Pages project, the DNS record, custom subdomain at <code>my-game.freegamestore.online</code>, and the storefront entry — atomically.</p>
       </li>
       <li>
@@ -113,14 +113,14 @@ EOF</div>
       <li>Use the platform's CSS tokens (<code>--accent</code>, <code>--ink</code>, <code>--paper</code>, …) — never redefine them.</li>
       <li>Use Manrope (body) + Fraunces (display) — never custom display fonts.</li>
       <li>Refuse to add Google Analytics, Plausible, Mixpanel, or any tracker.</li>
-      <li>Use <code>localStorage</code> for persistence (or <code>@freeappstore/sdk</code> KV for connected games).</li>
+      <li>Use <code>localStorage</code> for persistence (or <code>@freegamestore/games</code> KV for connected games).</li>
       <li>Push to <code>main</code> for deploy. Never <code>wrangler pages deploy</code> manually.</li>
       <li>Never ask you for Cloudflare or GitHub tokens.</li>
     </ul>
-    <p>The compliance suite (<code>fas check</code>) enforces all of the above on every push, so even if the AI slips, the platform catches it.</p>
+    <p>The compliance suite (<code>fgs check</code>) enforces all of the above on every push, so even if the AI slips, the platform catches it.</p>
 
     <h2>Get the source</h2>
-    <p>The CLI, SDK, and compliance package live at <a href="https://github.com/freeappstore-online/platform">https://github.com/freeappstore-online/platform</a>. Reading the source is allowed — and often illuminating when you're trying to coax a difficult prompt.</p>
+    <p>The CLI, SDK, and compliance package live at <a href="https://github.com/freegamestore-online/platform">https://github.com/freegamestore-online/platform</a>. Reading the source is allowed — and often illuminating when you're trying to coax a difficult prompt.</p>
 
 
     <h2>Tips for Cline specifically</h2>

@@ -47,7 +47,7 @@
 
       <div class="highlight highlight-callout">
         <h3>Building with AI? Start there.</h3>
-        <p>FreeGameStore is AI-first. Drop our <a href="https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md">SKILLS.md</a> into Claude Code, Cursor, GitHub Copilot, Aider, or Codex — your agent already knows the brand rules, the privacy mandates, the CLI, and the deploy flow before it writes a line of code.</p>
+        <p>FreeGameStore is AI-first. Drop our <a href="https://freegamestore.online/skills.md">SKILLS.md</a> into Claude Code, Cursor, GitHub Copilot, Aider, or Codex — your agent already knows the brand rules, the privacy mandates, the CLI, and the deploy flow before it writes a line of code.</p>
         <a href="/build-with-ai.html" class="btn">Build with AI &rarr;</a>
       </div>
 
@@ -111,7 +111,7 @@
     tetris/
     racing/
   platform/         ← store site &amp; templates (maintainers only)</div>
-      <p>This matches the paths in <a href="https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md">SKILLS.md</a>, so AI agents reading the platform guide will find your code automatically. If you also build apps, use <code>~/dev/fas/apps/</code> for <a href="https://freeappstore.online">FreeAppStore</a> projects.</p>
+      <p>This matches the paths in <a href="https://freegamestore.online/skills.md">SKILLS.md</a>, so AI agents reading the platform guide will find your code automatically. If you also build apps, use <code>~/dev/fas/apps/</code> for <a href="https://freeappstore.online">FreeAppStore</a> projects.</p>
 
       <!-- Section 4: Start Building -->
       <h2>Start Building</h2>
@@ -138,23 +138,23 @@
         </div>
       </div>
 
-      <h3>Use the <code>fas</code> CLI</h3>
-      <p>The same CLI that powers <a href="https://freeappstore.online">FreeAppStore</a> handles games too. End-to-end: scaffold, check, publish, list. A games-first <code>fgs</code> binary (<code>@freegamestore/cli</code>) is in the works — the steps below use <code>fas</code> with <code>--store games</code> until it ships.</p>
+      <h3>Use the <code>fgs</code> CLI</h3>
+      <p>The FreeGameStore CLI. End-to-end: scaffold, check, publish, list.</p>
 
       <ol class="steps">
         <li>
           <strong>Install the CLI</strong>
-          <div class="cmd">npm i -g @freeappstore/cli</div>
-          <p>Requires Node 22+. Source on <a href="https://github.com/freeappstore-online/platform">github.com/freeappstore-online/platform</a>; package on <a href="https://www.npmjs.com/package/@freeappstore/cli">npm</a>.</p>
+          <div class="cmd">npm i -g @freegamestore/cli</div>
+          <p>Requires Node 22+. Source on <a href="https://github.com/freegamestore-online/platform">github.com/freegamestore-online/platform</a>; package on <a href="https://www.npmjs.com/package/@freegamestore/cli">npm</a>.</p>
         </li>
         <li>
           <strong>Sign in with GitHub</strong>
-          <div class="cmd">fas login</div>
+          <div class="cmd">fgs login</div>
           <p>Device-flow OAuth — no password leaves your terminal.</p>
         </li>
         <li>
           <strong>Scaffold from a game template</strong>
-          <div class="cmd">fas init my-game --template game-canvas</div>
+          <div class="cmd">fgs init my-game --template game-canvas</div>
           <p>Three game templates available: <code>game-canvas</code> (2D arcade), <code>game-grid</code> (puzzles), <code>game-3d</code> (Three.js / Babylon). Each is a runnable Vite + TypeScript project.</p>
         </li>
         <li>
@@ -164,17 +164,17 @@
         </li>
         <li>
           <strong>Run compliance checks</strong>
-          <div class="cmd">fas check</div>
+          <div class="cmd">fgs check</div>
           <p>Catches missing brand fonts, tracking SDKs, oversized bundles, missing PWA manifest, and (for games) document scroll. Games must fit the viewport — no horizontal or vertical scroll on <code>html</code> / <code>body</code>.</p>
         </li>
         <li>
           <strong>Verify the layout fits in a real browser (recommended for games)</strong>
-          <div class="cmd">fas screencheck</div>
+          <div class="cmd">fgs screencheck</div>
           <p>Builds, serves the dist locally, and drives a real Chromium at the <code>min_viewport_width</code> declared in your manifest in both portrait and landscape. Fails if the canvas actually overflows. Static checks see <em>intent</em>; screencheck proves <em>fit</em>. Playwright is an opt-in peer dep; the command prompts to install on first run.</p>
         </li>
         <li>
           <strong>Publish as a game</strong>
-          <div class="cmd">fas publish --store games</div>
+          <div class="cmd">fgs publish</div>
           <p>Provisions <code>github.com/freegamestore-online/my-game</code>, the Cloudflare Pages project, the DNS record, the custom subdomain at <code>my-game.freegamestore.online</code>, and the storefront entry.</p>
           <p class="text-sm">Scriptable: pass <code>--name</code>, <code>--category</code>, <code>--type</code>, <code>--oneliner</code>, and <code>--yes</code>.</p>
         </li>
@@ -187,15 +187,15 @@
 
       <h3>Other commands</h3>
       <ul>
-        <li><code>fas list</code> — see all apps and games you've published</li>
-        <li><code>fas logs my-game</code> — tail Cloudflare Pages deployment logs</li>
-        <li><code>fas doctor</code> — health check (Node, git, pnpm, auth, API reachability)</li>
+        <li><code>fgs list</code> — see all apps and games you've published</li>
+        <li><code>fgs logs my-game</code> — tail Cloudflare Pages deployment logs</li>
+        <li><code>fgs doctor</code> — health check (Node, git, pnpm, auth, API reachability)</li>
       </ul>
 
-      <p>Full reference: <a href="https://github.com/freeappstore-online/platform/tree/main/packages/cli#readme">github.com/freeappstore-online/platform/packages/cli</a></p>
+      <p>Full reference: <a href="https://github.com/freegamestore-online/platform/tree/main/packages/cli#readme">github.com/freegamestore-online/platform/packages/cli</a></p>
 
       <h2>Brand and UI rules (mandated)</h2>
-      <p>Every game on the platform looks predictable and consistent. The storefront, the detail pages, and every game share the same visual language so visitors learn the rhythm once and never relearn it. This is not a style guide suggestion — it's enforced by <code>fas check</code> and the CI workflow that runs before merge.</p>
+      <p>Every game on the platform looks predictable and consistent. The storefront, the detail pages, and every game share the same visual language so visitors learn the rhythm once and never relearn it. This is not a style guide suggestion — it's enforced by <code>fgs check</code> and the CI workflow that runs before merge.</p>
 
       <ul>
         <li><strong>Use the template's CSS tokens.</strong> Colors, surfaces, lines, and spacing come from <code>--paper</code>, <code>--ink</code>, <code>--muted</code>, <code>--accent</code>, <code>--line</code>, <code>--line-strong</code>, <code>--panel</code>. Reference them via <code>var(--accent)</code>, etc. Don't redefine them in component CSS or inline styles.</li>
@@ -203,7 +203,7 @@
         <li><strong>No custom theme.</strong> Light/dark mode comes from <code>prefers-color-scheme</code> and the template's variables. Don't ship your own theme switcher or override <code>color-scheme</code>.</li>
       </ul>
 
-      <p>The <code>fas check</code> compliance suite (run automatically before <code>fas publish</code> and again in your repo's CI) enforces:</p>
+      <p>The <code>fgs check</code> compliance suite (run automatically before <code>fas publish</code> and again in your repo's CI) enforces:</p>
       <ul>
         <li><code>No template placeholders</code> — every <code>APPNAME</code> substituted</li>
         <li><code>No tracking SDKs</code> — none of the 8 known trackers</li>
@@ -214,11 +214,11 @@
       </ul>
 
       <p>Run them locally any time:</p>
-      <div class="cmd">fas check</div>
+      <div class="cmd">fgs check</div>
 
       <h3>AI-assisted development</h3>
-      <p>Use Claude Code, Cursor, Codex, or any AI coding tool. Point it to our <a href="https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md">SKILLS.md</a> and it knows the entire platform — tech stack, brand, templates, how to deploy.</p>
-      <div class="cmd cmd-small">Add this to your AI tool:<br><br>Read https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md</div>
+      <p>Use Claude Code, Cursor, Codex, or any AI coding tool. Point it to our <a href="https://freegamestore.online/skills.md">SKILLS.md</a> and it knows the entire platform — tech stack, brand, templates, how to deploy.</p>
+      <div class="cmd cmd-small">Add this to your AI tool:<br><br>Read https://freegamestore.online/skills.md</div>
 
       <h3>Game engines</h3>
       <p>Depending on your game type, use the engine that fits best:</p>
@@ -249,7 +249,7 @@
       <ul>
         <li><strong>Developer questions</strong> — <a href="https://github.com/freegamestore-online/freegamestore/discussions">GitHub Discussions</a></li>
         <li><strong>Bug reports</strong> — open an issue on your game's <a href="https://github.com/freegamestore-online">GitHub repo</a></li>
-        <li><strong>Platform docs</strong> — <a href="https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md">SKILLS.md</a> (the full AI guide)</li>
+        <li><strong>Platform docs</strong> — <a href="https://freegamestore.online/skills.md">SKILLS.md</a> (the full AI guide)</li>
       </ul>
 
       <div class="cta-box">
