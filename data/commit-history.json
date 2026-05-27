@@ -1730,9 +1730,19 @@
   "freegamestore-online/musicbot": {
     "meta": {
       "created_at": "2026-05-27T14:50:52Z",
-      "pushed_at": "2026-05-27T14:52:30Z"
+      "pushed_at": "2026-05-27T23:46:01Z"
     },
     "commits": [
+      {
+        "sha": "1e9a2ffaf9d7d4ebeba8a48749e6051e63f3c6be",
+        "html_url": "https://github.com/freegamestore-online/musicbot/commit/1e9a2ffaf9d7d4ebeba8a48749e6051e63f3c6be",
+        "commit": {
+          "message": "fix: add PWA setup (vite-plugin-pwa, manifest, icons, meta tags)\n\nRequired for FGS compliance and deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T23:45:38Z"
+          }
+        }
+      },
       {
         "sha": "58601fb8b0c3693dd43d54fede4e1fd8c8db9bfc",
         "html_url": "https://github.com/freegamestore-online/musicbot/commit/58601fb8b0c3693dd43d54fede4e1fd8c8db9bfc",
@@ -1752,25 +1762,25 @@
             "date": "2026-05-27T14:51:38Z"
           }
         }
-      },
-      {
-        "sha": "376ecb6fca69cbb802e2006b64d5466e7311a39f",
-        "html_url": "https://github.com/freegamestore-online/musicbot/commit/376ecb6fca69cbb802e2006b64d5466e7311a39f",
-        "commit": {
-          "message": "feat: initial release of MusicBot — music programming game\n\nWrite code to compose melodies with a piano roll, progressive levels,\nand a built-in Web Audio synth.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T14:51:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pixelcode": {
     "meta": {
       "created_at": "2026-05-27T14:50:59Z",
-      "pushed_at": "2026-05-27T14:52:13Z"
+      "pushed_at": "2026-05-27T23:46:04Z"
     },
     "commits": [
+      {
+        "sha": "4f7cb4b7669feb5c112f1e334a7ce627ef2378f5",
+        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/4f7cb4b7669feb5c112f1e334a7ce627ef2378f5",
+        "commit": {
+          "message": "fix: add PWA setup (vite-plugin-pwa, manifest, icons, meta tags)\n\nRequired for FGS compliance and deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T23:45:50Z"
+          }
+        }
+      },
       {
         "sha": "19d33456c00ef8d1b56638179ba403d6ca1c9a69",
         "html_url": "https://github.com/freegamestore-online/pixelcode/commit/19d33456c00ef8d1b56638179ba403d6ca1c9a69",
@@ -1786,9 +1796,19 @@
   "freegamestore-online/roboclean": {
     "meta": {
       "created_at": "2026-05-27T14:51:03Z",
-      "pushed_at": "2026-05-27T14:52:17Z"
+      "pushed_at": "2026-05-27T23:46:07Z"
     },
     "commits": [
+      {
+        "sha": "7c30291a2cf64b8abd6139c541ed60bd8b1f2a7e",
+        "html_url": "https://github.com/freegamestore-online/roboclean/commit/7c30291a2cf64b8abd6139c541ed60bd8b1f2a7e",
+        "commit": {
+          "message": "fix: add PWA setup (vite-plugin-pwa, manifest, icons, meta tags)\n\nRequired for FGS compliance and deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T23:45:52Z"
+          }
+        }
+      },
       {
         "sha": "ba59418666726f0dbb45652f4d2354afb6c16e91",
         "html_url": "https://github.com/freegamestore-online/roboclean/commit/ba59418666726f0dbb45652f4d2354afb6c16e91",
@@ -1804,9 +1824,19 @@
   "freegamestore-online/turtlecode": {
     "meta": {
       "created_at": "2026-05-27T14:51:06Z",
-      "pushed_at": "2026-05-27T14:52:21Z"
+      "pushed_at": "2026-05-27T23:46:10Z"
     },
     "commits": [
+      {
+        "sha": "7ab65024991ee641f960c7e7aa918db2f00aa28c",
+        "html_url": "https://github.com/freegamestore-online/turtlecode/commit/7ab65024991ee641f960c7e7aa918db2f00aa28c",
+        "commit": {
+          "message": "fix: add PWA setup (vite-plugin-pwa, manifest, icons, meta tags)\n\nRequired for FGS compliance and deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T23:45:54Z"
+          }
+        }
+      },
       {
         "sha": "ef0495f30de2452973c5e0d279330b53bfe76947",
         "html_url": "https://github.com/freegamestore-online/turtlecode/commit/ef0495f30de2452973c5e0d279330b53bfe76947",
