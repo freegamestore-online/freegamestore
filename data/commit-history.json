@@ -1726,5 +1726,97 @@
         }
       }
     ]
+  },
+  "freegamestore-online/musicbot": {
+    "meta": {
+      "created_at": "2026-05-27T14:50:52Z",
+      "pushed_at": "2026-05-27T14:52:30Z"
+    },
+    "commits": [
+      {
+        "sha": "58601fb8b0c3693dd43d54fede4e1fd8c8db9bfc",
+        "html_url": "https://github.com/freegamestore-online/musicbot/commit/58601fb8b0c3693dd43d54fede4e1fd8c8db9bfc",
+        "commit": {
+          "message": "chore: align .gitignore with canonical game template\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T14:52:27Z"
+          }
+        }
+      },
+      {
+        "sha": "430495cfe16a084b01aacbecdbeff8a701c0c29b",
+        "html_url": "https://github.com/freegamestore-online/musicbot/commit/430495cfe16a084b01aacbecdbeff8a701c0c29b",
+        "commit": {
+          "message": "fix: add .gitignore and remove node_modules from tracking\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T14:51:38Z"
+          }
+        }
+      },
+      {
+        "sha": "376ecb6fca69cbb802e2006b64d5466e7311a39f",
+        "html_url": "https://github.com/freegamestore-online/musicbot/commit/376ecb6fca69cbb802e2006b64d5466e7311a39f",
+        "commit": {
+          "message": "feat: initial release of MusicBot — music programming game\n\nWrite code to compose melodies with a piano roll, progressive levels,\nand a built-in Web Audio synth.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T14:51:17Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/pixelcode": {
+    "meta": {
+      "created_at": "2026-05-27T14:50:59Z",
+      "pushed_at": "2026-05-27T14:52:13Z"
+    },
+    "commits": [
+      {
+        "sha": "19d33456c00ef8d1b56638179ba403d6ca1c9a69",
+        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/19d33456c00ef8d1b56638179ba403d6ca1c9a69",
+        "commit": {
+          "message": "feat: initial release of PixelCode — pixel art coding game\n\nWrite code to paint pixel art on a grid. Learn programming with colors,\ndots, lines, and loops through 12 progressive levels.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T14:52:09Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/roboclean": {
+    "meta": {
+      "created_at": "2026-05-27T14:51:03Z",
+      "pushed_at": "2026-05-27T14:52:17Z"
+    },
+    "commits": [
+      {
+        "sha": "ba59418666726f0dbb45652f4d2354afb6c16e91",
+        "html_url": "https://github.com/freegamestore-online/roboclean/commit/ba59418666726f0dbb45652f4d2354afb6c16e91",
+        "commit": {
+          "message": "feat: initial release of RoboClean — robot cleaning coding game\n\nProgram a robot vacuum to clean rooms. Learn loops, conditionals, and\nsensors through 12 progressive levels plus sandbox mode.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T14:52:13Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/turtlecode": {
+    "meta": {
+      "created_at": "2026-05-27T14:51:06Z",
+      "pushed_at": "2026-05-27T14:52:21Z"
+    },
+    "commits": [
+      {
+        "sha": "ef0495f30de2452973c5e0d279330b53bfe76947",
+        "html_url": "https://github.com/freegamestore-online/turtlecode/commit/ef0495f30de2452973c5e0d279330b53bfe76947",
+        "commit": {
+          "message": "feat: initial release of TurtleCode — turtle graphics coding game\n\nWrite Logo-style code to draw with a turtle. Learn angles, loops, and\nfunctions through 15 progressive levels.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T14:52:18Z"
+          }
+        }
+      }
+    ]
   }
 }
