@@ -40,9 +40,19 @@
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-27T12:16:26Z"
+      "pushed_at": "2026-05-27T12:19:01Z"
     },
     "commits": [
+      {
+        "sha": "e81361719c2812cb7025200abdd507a07d9cafc0",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/e81361719c2812cb7025200abdd507a07d9cafc0",
+        "commit": {
+          "message": "fix: remove external Lichess API fetch from PuzzleTab\n\nRemoves the fetch to https://lichess.org/api/puzzle/daily and all\nrelated daily-puzzle state/UI. The component now uses only the\nbundled /puzzles.json data, satisfying the offline + privacy mandate.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:58Z"
+          }
+        }
+      },
       {
         "sha": "c969361db71bd6df17dbeb04870c9c1cc39d517a",
         "html_url": "https://github.com/freegamestore-online/chess/commit/c969361db71bd6df17dbeb04870c9c1cc39d517a",
@@ -62,25 +72,25 @@
             "date": "2026-05-26T04:18:00Z"
           }
         }
-      },
-      {
-        "sha": "4cc85a65dcb90ddfd7e9824edebfddf74c972927",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/4cc85a65dcb90ddfd7e9824edebfddf74c972927",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:28:50Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-27T12:16:03Z"
+      "pushed_at": "2026-05-27T12:18:26Z"
     },
     "commits": [
+      {
+        "sha": "10346f88766263f82f4f069f6b6735bd3b48581b",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/10346f88766263f82f4f069f6b6735bd3b48581b",
+        "commit": {
+          "message": "fix: add maskable icon purpose to PWA manifest\n\nAdds \"purpose\": \"any maskable\" to icon entries in manifest.json\nfor PWA compliance.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:04Z"
+          }
+        }
+      },
       {
         "sha": "aaba00a2854805a2d8bb39e5a85a1a2cc6a07e85",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/aaba00a2854805a2d8bb39e5a85a1a2cc6a07e85",
@@ -98,16 +108,6 @@
           "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-26T04:17:41Z"
-          }
-        }
-      },
-      {
-        "sha": "59705e748de68c5b6f3dc61183f789c2e455960b",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/59705e748de68c5b6f3dc61183f789c2e455960b",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:13Z"
           }
         }
       }
@@ -572,9 +572,19 @@
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-26T04:18:40Z"
+      "pushed_at": "2026-05-27T12:19:49Z"
     },
     "commits": [
+      {
+        "sha": "f086d8553b791e79fe7812f2b0db4e9297b31e77",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/f086d8553b791e79fe7812f2b0db4e9297b31e77",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:17:27Z"
+          }
+        }
+      },
       {
         "sha": "47288099699e2d6cdda8ceb9d81d6d92e785ae87",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/47288099699e2d6cdda8ceb9d81d6d92e785ae87",
@@ -594,25 +604,25 @@
             "date": "2026-05-25T10:14:32Z"
           }
         }
-      },
-      {
-        "sha": "ee6dda9001f1e20e400544d908c8f0c1b84ac973",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/ee6dda9001f1e20e400544d908c8f0c1b84ac973",
-        "commit": {
-          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
-          "author": {
-            "date": "2026-05-20T04:47:32Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-26T04:18:59Z"
+      "pushed_at": "2026-05-27T12:18:29Z"
     },
     "commits": [
+      {
+        "sha": "2a82f008bd7288d545330217c18ff7a7c5c166df",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/2a82f008bd7288d545330217c18ff7a7c5c166df",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:25Z"
+          }
+        }
+      },
       {
         "sha": "9e841dbde87ef02992fb18933a201aeb141ace64",
         "html_url": "https://github.com/freegamestore-online/racing/commit/9e841dbde87ef02992fb18933a201aeb141ace64",
@@ -632,25 +642,25 @@
             "date": "2026-05-25T10:14:35Z"
           }
         }
-      },
-      {
-        "sha": "b41663e1d17105abefced264750dfb2a9853a127",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/b41663e1d17105abefced264750dfb2a9853a127",
-        "commit": {
-          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
-          "author": {
-            "date": "2026-05-20T04:47:32Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-26T04:18:57Z"
+      "pushed_at": "2026-05-27T12:18:20Z"
     },
     "commits": [
+      {
+        "sha": "ab9f7d0520d10969a7631f2cd51100ae1c3b3838",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/ab9f7d0520d10969a7631f2cd51100ae1c3b3838",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:15Z"
+          }
+        }
+      },
       {
         "sha": "591847ccea9914fec874b895cfa634c5d8ea15f4",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/591847ccea9914fec874b895cfa634c5d8ea15f4",
@@ -668,16 +678,6 @@
           "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
           "author": {
             "date": "2026-05-21T02:29:32Z"
-          }
-        }
-      },
-      {
-        "sha": "568d7e4eb1c21dc3bd394ad9ed55c2d268b58da6",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/568d7e4eb1c21dc3bd394ad9ed55c2d268b58da6",
-        "commit": {
-          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
-          "author": {
-            "date": "2026-05-20T04:47:32Z"
           }
         }
       }
@@ -800,9 +800,19 @@
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-26T04:19:08Z"
+      "pushed_at": "2026-05-27T12:18:40Z"
     },
     "commits": [
+      {
+        "sha": "dcf56868593608c4608dcbd848895a0149e83f34",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/dcf56868593608c4608dcbd848895a0149e83f34",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:37Z"
+          }
+        }
+      },
       {
         "sha": "2c02692376401ec04ef36736a1fc5520e8f4577f",
         "html_url": "https://github.com/freegamestore-online/simon/commit/2c02692376401ec04ef36736a1fc5520e8f4577f",
@@ -822,25 +832,25 @@
             "date": "2026-05-25T10:14:37Z"
           }
         }
-      },
-      {
-        "sha": "c8652b3995364f9d12fda62483f50962d59f4f38",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/c8652b3995364f9d12fda62483f50962d59f4f38",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:29:38Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-26T04:19:14Z"
+      "pushed_at": "2026-05-27T12:18:48Z"
     },
     "commits": [
+      {
+        "sha": "dedcb78fc5ab30081c3b7c4da70cb316c7c049b5",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/dedcb78fc5ab30081c3b7c4da70cb316c7c049b5",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:45Z"
+          }
+        }
+      },
       {
         "sha": "a63d41c00b58f83dc1479a6010db77c9cd6f1b32",
         "html_url": "https://github.com/freegamestore-online/snake/commit/a63d41c00b58f83dc1479a6010db77c9cd6f1b32",
@@ -860,25 +870,25 @@
             "date": "2026-05-25T10:14:39Z"
           }
         }
-      },
-      {
-        "sha": "a3257538649990c8bedbf85e3e9e1b35b0cfc436",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/a3257538649990c8bedbf85e3e9e1b35b0cfc436",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:29:41Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-26T04:19:42Z"
+      "pushed_at": "2026-05-27T12:19:34Z"
     },
     "commits": [
+      {
+        "sha": "4fb67dff34accef895b1ca961da1ba83627d507a",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/4fb67dff34accef895b1ca961da1ba83627d507a",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:19:31Z"
+          }
+        }
+      },
       {
         "sha": "0f1dc6d4fb2525fb505e1dfeeb7685ebb0db136e",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/0f1dc6d4fb2525fb505e1dfeeb7685ebb0db136e",
@@ -898,25 +908,25 @@
             "date": "2026-05-25T10:14:45Z"
           }
         }
-      },
-      {
-        "sha": "fe48f38cc548584e2aed8d990ac993ef6a70e335",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/fe48f38cc548584e2aed8d990ac993ef6a70e335",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:30:04Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-26T04:19:23Z"
+      "pushed_at": "2026-05-27T12:18:59Z"
     },
     "commits": [
+      {
+        "sha": "121f309e85a5e95093bd10cd85bec680c66320af",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/121f309e85a5e95093bd10cd85bec680c66320af",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:56Z"
+          }
+        }
+      },
       {
         "sha": "288d7121863577c9fed173de92be0d31b8f74b21",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/288d7121863577c9fed173de92be0d31b8f74b21",
@@ -936,25 +946,25 @@
             "date": "2026-05-25T10:14:41Z"
           }
         }
-      },
-      {
-        "sha": "c517fe8c61f446d4f4cc22371e013c5b9a3f65b3",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/c517fe8c61f446d4f4cc22371e013c5b9a3f65b3",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:29:49Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-26T04:19:33Z"
+      "pushed_at": "2026-05-27T12:19:18Z"
     },
     "commits": [
+      {
+        "sha": "7a2a9ef9614f29df016014420f5c1948d7e38a7b",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/7a2a9ef9614f29df016014420f5c1948d7e38a7b",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:19:08Z"
+          }
+        }
+      },
       {
         "sha": "455b27744c8bd19d4acbdf86ec150be4dcad6f51",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/455b27744c8bd19d4acbdf86ec150be4dcad6f51",
@@ -972,16 +982,6 @@
           "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-25T10:14:44Z"
-          }
-        }
-      },
-      {
-        "sha": "720aa8f374545ff4a9149e5a63e931df109e634f",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/720aa8f374545ff4a9149e5a63e931df109e634f",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:29:58Z"
           }
         }
       }
@@ -1066,9 +1066,19 @@
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-26T04:19:26Z"
+      "pushed_at": "2026-05-27T12:19:03Z"
     },
     "commits": [
+      {
+        "sha": "ab202df06ccc5c2f7d2357d46b9984b04167a73c",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/ab202df06ccc5c2f7d2357d46b9984b04167a73c",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:59Z"
+          }
+        }
+      },
       {
         "sha": "712089aa835486dfa13a4e024f3d51b5551bbc84",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/712089aa835486dfa13a4e024f3d51b5551bbc84",
@@ -1088,25 +1098,25 @@
             "date": "2026-05-25T10:14:42Z"
           }
         }
-      },
-      {
-        "sha": "d54f5020f17840d5727b61b3a0733b9a38aeb1a6",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/d54f5020f17840d5727b61b3a0733b9a38aeb1a6",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:29:52Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-26T04:19:48Z"
+      "pushed_at": "2026-05-27T12:19:41Z"
     },
     "commits": [
+      {
+        "sha": "281af40acb594fb0913c42178665b5bb6e757f55",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/281af40acb594fb0913c42178665b5bb6e757f55",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:19:38Z"
+          }
+        }
+      },
       {
         "sha": "5addb6d97480066fbd79b7a7d10e60f2b6f5c084",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/5addb6d97480066fbd79b7a7d10e60f2b6f5c084",
@@ -1126,25 +1136,25 @@
             "date": "2026-05-25T10:14:47Z"
           }
         }
-      },
-      {
-        "sha": "0362a8bc484b56acc7fb9d91850790f16b6761e5",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/0362a8bc484b56acc7fb9d91850790f16b6761e5",
-        "commit": {
-          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
-          "author": {
-            "date": "2026-05-20T04:47:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-26T04:19:17Z"
+      "pushed_at": "2026-05-27T12:18:52Z"
     },
     "commits": [
+      {
+        "sha": "0854d4699905bbb7b9092f969ffe4ed4b376f331",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/0854d4699905bbb7b9092f969ffe4ed4b376f331",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:48Z"
+          }
+        }
+      },
       {
         "sha": "4e5ee58ce4ba0bb5401c433dcd03797df3dec68d",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/4e5ee58ce4ba0bb5401c433dcd03797df3dec68d",
@@ -1164,25 +1174,25 @@
             "date": "2026-05-25T10:14:40Z"
           }
         }
-      },
-      {
-        "sha": "52e716c40db26691d2f3fb238eb9904275f7aee9",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/52e716c40db26691d2f3fb238eb9904275f7aee9",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:29:44Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-26T04:19:45Z"
+      "pushed_at": "2026-05-27T12:19:37Z"
     },
     "commits": [
+      {
+        "sha": "7cc578f48b596ccc354efe3a3eeffda2ab116b79",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/7cc578f48b596ccc354efe3a3eeffda2ab116b79",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:19:34Z"
+          }
+        }
+      },
       {
         "sha": "529df976ba48456b2effbc1cd23595a2ca1aff85",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/529df976ba48456b2effbc1cd23595a2ca1aff85",
@@ -1202,25 +1212,25 @@
             "date": "2026-05-25T10:14:46Z"
           }
         }
-      },
-      {
-        "sha": "a19b12e45fb458dea036c0962da5c4e8c1567fac",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/a19b12e45fb458dea036c0962da5c4e8c1567fac",
-        "commit": {
-          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
-          "author": {
-            "date": "2026-05-20T04:47:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-26T04:19:11Z"
+      "pushed_at": "2026-05-27T12:18:44Z"
     },
     "commits": [
+      {
+        "sha": "6014faf87550a67984f72c97c3d38534a76c6687",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/6014faf87550a67984f72c97c3d38534a76c6687",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:41Z"
+          }
+        }
+      },
       {
         "sha": "27a310153fdc5f4c70139d6470cab572590e44c4",
         "html_url": "https://github.com/freegamestore-online/slither/commit/27a310153fdc5f4c70139d6470cab572590e44c4",
@@ -1238,16 +1248,6 @@
           "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-25T10:14:38Z"
-          }
-        }
-      },
-      {
-        "sha": "8e5b2e5e8c9fb818b809d354b3789580dac3c978",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/8e5b2e5e8c9fb818b809d354b3789580dac3c978",
-        "commit": {
-          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
-          "author": {
-            "date": "2026-05-20T04:47:32Z"
           }
         }
       }
@@ -1294,9 +1294,19 @@
   "freegamestore-online/reversi": {
     "meta": {
       "created_at": "2026-05-18T23:16:14Z",
-      "pushed_at": "2026-05-26T04:19:02Z"
+      "pushed_at": "2026-05-27T12:18:33Z"
     },
     "commits": [
+      {
+        "sha": "809ed1c3e4d9f18734569cb62225b025a8130b69",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/809ed1c3e4d9f18734569cb62225b025a8130b69",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:29Z"
+          }
+        }
+      },
       {
         "sha": "a92c176cdc5d8816b8704713e3caacd70d4382e3",
         "html_url": "https://github.com/freegamestore-online/reversi/commit/a92c176cdc5d8816b8704713e3caacd70d4382e3",
@@ -1316,25 +1326,25 @@
             "date": "2026-05-20T04:47:32Z"
           }
         }
-      },
-      {
-        "sha": "403ef2124bec9f15863b5224810abe7a86f4df9b",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/403ef2124bec9f15863b5224810abe7a86f4df9b",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:33Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tictactoe": {
     "meta": {
       "created_at": "2026-05-18T22:50:34Z",
-      "pushed_at": "2026-05-26T04:19:36Z"
+      "pushed_at": "2026-05-27T12:19:24Z"
     },
     "commits": [
+      {
+        "sha": "f7e3a07c2406abb06ef013cf25baab5dcdad4c2d",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/f7e3a07c2406abb06ef013cf25baab5dcdad4c2d",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:19:19Z"
+          }
+        }
+      },
       {
         "sha": "e105e5cc3630a422969543aa99f054a02475b9a7",
         "html_url": "https://github.com/freegamestore-online/tictactoe/commit/e105e5cc3630a422969543aa99f054a02475b9a7",
@@ -1354,25 +1364,25 @@
             "date": "2026-05-21T02:30:01Z"
           }
         }
-      },
-      {
-        "sha": "2170d510abd79c50c27842022267ea5f9b8301a2",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/2170d510abd79c50c27842022267ea5f9b8301a2",
-        "commit": {
-          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
-          "author": {
-            "date": "2026-05-20T04:47:33Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/blackjack": {
     "meta": {
       "created_at": "2026-05-18T23:17:31Z",
-      "pushed_at": "2026-05-27T12:16:07Z"
+      "pushed_at": "2026-05-27T12:18:30Z"
     },
     "commits": [
+      {
+        "sha": "0f973fa34e51ef3e9477449afe9281b1ffe9a7aa",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/0f973fa34e51ef3e9477449afe9281b1ffe9a7aa",
+        "commit": {
+          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:27Z"
+          }
+        }
+      },
       {
         "sha": "4d16733911b7ea5a7716330137556672a77bfa78",
         "html_url": "https://github.com/freegamestore-online/blackjack/commit/4d16733911b7ea5a7716330137556672a77bfa78",
@@ -1392,25 +1402,25 @@
             "date": "2026-05-26T04:17:45Z"
           }
         }
-      },
-      {
-        "sha": "f4947480de7ba28feae7850a6ead44eb8c933ae9",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/f4947480de7ba28feae7850a6ead44eb8c933ae9",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:28:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bubbleshooter": {
     "meta": {
       "created_at": "2026-05-18T23:17:44Z",
-      "pushed_at": "2026-05-27T12:16:19Z"
+      "pushed_at": "2026-05-27T12:18:34Z"
     },
     "commits": [
+      {
+        "sha": "8f48157c147543124df2012f4eff52c2da89dc6b",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/8f48157c147543124df2012f4eff52c2da89dc6b",
+        "commit": {
+          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:31Z"
+          }
+        }
+      },
       {
         "sha": "173ce175fe6c07c26e5505c62d39b894d506963a",
         "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/173ce175fe6c07c26e5505c62d39b894d506963a",
@@ -1430,25 +1440,35 @@
             "date": "2026-05-26T04:17:54Z"
           }
         }
-      },
-      {
-        "sha": "dabe8861e74019e26416f72209bcbe62bed4196a",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/dabe8861e74019e26416f72209bcbe62bed4196a",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:28:44Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceinvaders": {
     "meta": {
       "created_at": "2026-05-18T23:17:56Z",
-      "pushed_at": "2026-05-26T04:19:20Z"
+      "pushed_at": "2026-05-27T12:18:55Z"
     },
     "commits": [
+      {
+        "sha": "48197f1399a27f834c5e3935a5fb1e10d907a638",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/48197f1399a27f834c5e3935a5fb1e10d907a638",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:52Z"
+          }
+        }
+      },
+      {
+        "sha": "4d5fa1a6a5c6e8f968a34c680ff52a8f778a0b2d",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/4d5fa1a6a5c6e8f968a34c680ff52a8f778a0b2d",
+        "commit": {
+          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:42Z"
+          }
+        }
+      },
       {
         "sha": "a3be5e661f6d3ab521c85c5e3234b88f20f6cc4a",
         "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/a3be5e661f6d3ab521c85c5e3234b88f20f6cc4a",
@@ -1458,35 +1478,35 @@
             "date": "2026-05-26T04:19:18Z"
           }
         }
-      },
-      {
-        "sha": "b4a5036960ef7978254f6fd3b01512180a283de7",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/b4a5036960ef7978254f6fd3b01512180a283de7",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:29:47Z"
-          }
-        }
-      },
-      {
-        "sha": "56c7eacc45f3c4c4fa7fb8d927fcc38015e15d92",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/56c7eacc45f3c4c4fa7fb8d927fcc38015e15d92",
-        "commit": {
-          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
-          "author": {
-            "date": "2026-05-20T04:47:32Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/war": {
     "meta": {
       "created_at": "2026-05-19T00:05:08Z",
-      "pushed_at": "2026-05-26T04:19:39Z"
+      "pushed_at": "2026-05-27T12:19:31Z"
     },
     "commits": [
+      {
+        "sha": "bb86eea564141d61ef32ab060307ebc32f0eeb04",
+        "html_url": "https://github.com/freegamestore-online/war/commit/bb86eea564141d61ef32ab060307ebc32f0eeb04",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:19:28Z"
+          }
+        }
+      },
+      {
+        "sha": "5d3f2a3e764dcc14470d3519ba3c9de2354cdff7",
+        "html_url": "https://github.com/freegamestore-online/war/commit/5d3f2a3e764dcc14470d3519ba3c9de2354cdff7",
+        "commit": {
+          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:50Z"
+          }
+        }
+      },
       {
         "sha": "34c6d529286e4082604057a3d8d8ded61a324002",
         "html_url": "https://github.com/freegamestore-online/war/commit/34c6d529286e4082604057a3d8d8ded61a324002",
@@ -1496,35 +1516,35 @@
             "date": "2026-05-26T04:19:36Z"
           }
         }
-      },
-      {
-        "sha": "a64aec458d62f565ed161a7cb2ac73680c2834bb",
-        "html_url": "https://github.com/freegamestore-online/war/commit/a64aec458d62f565ed161a7cb2ac73680c2834bb",
-        "commit": {
-          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
-          "author": {
-            "date": "2026-05-20T04:47:33Z"
-          }
-        }
-      },
-      {
-        "sha": "f536ef4f9ce1efa2f1f0c8acb14948f6966174ca",
-        "html_url": "https://github.com/freegamestore-online/war/commit/f536ef4f9ce1efa2f1f0c8acb14948f6966174ca",
-        "commit": {
-          "message": "chore: bump @freegamestore/games to 0.13.1 (grid catalog icon)\n\nThe catalog link's icon in GameTopbar moved from a house silhouette\nto a 2×2 grid. On Android Chrome the old icon visually collided\nwith the browser's own home button.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-19T22:01:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tanks": {
     "meta": {
       "created_at": "2026-05-19T00:51:54Z",
-      "pushed_at": "2026-05-26T04:19:29Z"
+      "pushed_at": "2026-05-27T12:19:07Z"
     },
     "commits": [
+      {
+        "sha": "27d3bdd524006f7b38adbb365f63fad1157974e9",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/27d3bdd524006f7b38adbb365f63fad1157974e9",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:19:03Z"
+          }
+        }
+      },
+      {
+        "sha": "70ce829f53b5437bc1727dcb81544b7f3a97d272",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/70ce829f53b5437bc1727dcb81544b7f3a97d272",
+        "commit": {
+          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:47Z"
+          }
+        }
+      },
       {
         "sha": "24b51e34d9ffe50d7100bf5c8bbd1c4e83fa726c",
         "html_url": "https://github.com/freegamestore-online/tanks/commit/24b51e34d9ffe50d7100bf5c8bbd1c4e83fa726c",
@@ -1534,35 +1554,35 @@
             "date": "2026-05-26T04:19:26Z"
           }
         }
-      },
-      {
-        "sha": "46d34f5121e6a5eeec8b72aef9f36ced38bf8192",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/46d34f5121e6a5eeec8b72aef9f36ced38bf8192",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:29:55Z"
-          }
-        }
-      },
-      {
-        "sha": "57dbbd3711970e4f92d936cbd0982a4a090e8202",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/57dbbd3711970e4f92d936cbd0982a4a090e8202",
-        "commit": {
-          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
-          "author": {
-            "date": "2026-05-20T04:47:32Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/riichi": {
     "meta": {
       "created_at": "2026-05-19T02:31:10Z",
-      "pushed_at": "2026-05-26T04:19:05Z"
+      "pushed_at": "2026-05-27T12:18:42Z"
     },
     "commits": [
+      {
+        "sha": "054d604961819c19f6097e1f46712b8cb2088919",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/054d604961819c19f6097e1f46712b8cb2088919",
+        "commit": {
+          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:39Z"
+          }
+        }
+      },
+      {
+        "sha": "40109bb605c22f1c456fe1c4f124851c54c2ad08",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/40109bb605c22f1c456fe1c4f124851c54c2ad08",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:34Z"
+          }
+        }
+      },
       {
         "sha": "3b858e6b21728c84eb3f7ec5f178f78243a3f9c0",
         "html_url": "https://github.com/freegamestore-online/riichi/commit/3b858e6b21728c84eb3f7ec5f178f78243a3f9c0",
@@ -1572,35 +1592,25 @@
             "date": "2026-05-26T04:19:03Z"
           }
         }
-      },
-      {
-        "sha": "e59c15e292572f5cca0245d8461b19e43d90a455",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/e59c15e292572f5cca0245d8461b19e43d90a455",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:29:35Z"
-          }
-        }
-      },
-      {
-        "sha": "cc00ad8167251345aaa8e0c47e3893c4190555fd",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/cc00ad8167251345aaa8e0c47e3893c4190555fd",
-        "commit": {
-          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
-          "author": {
-            "date": "2026-05-20T04:47:32Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pinball": {
     "meta": {
       "created_at": "2026-05-19T02:33:08Z",
-      "pushed_at": "2026-05-27T12:18:00Z"
+      "pushed_at": "2026-05-27T12:18:38Z"
     },
     "commits": [
+      {
+        "sha": "35de70556dd71a9fa0604530dd58fc8fe5cf7945",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/35de70556dd71a9fa0604530dd58fc8fe5cf7945",
+        "commit": {
+          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:35Z"
+          }
+        }
+      },
       {
         "sha": "d28336b42235a1554bfbb0bbc53a5f58581357fb",
         "html_url": "https://github.com/freegamestore-online/pinball/commit/d28336b42235a1554bfbb0bbc53a5f58581357fb",
@@ -1620,14 +1630,60 @@
             "date": "2026-05-26T04:18:45Z"
           }
         }
+      }
+    ]
+  },
+  "freegamestore-online/quickdice": {
+    "meta": {
+      "created_at": "2026-05-06T04:45:04Z",
+      "pushed_at": "2026-05-27T12:18:25Z"
+    },
+    "commits": [
+      {
+        "sha": "849fe09880042071d9a79fd3f335ce6a9e5919ea",
+        "html_url": "https://github.com/freegamestore-online/quickdice/commit/849fe09880042071d9a79fd3f335ce6a9e5919ea",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:21Z"
+          }
+        }
       },
       {
-        "sha": "b7a49ec0a0e9ff19c2c9afaf8fbc3c464108a56e",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/b7a49ec0a0e9ff19c2c9afaf8fbc3c464108a56e",
+        "sha": "fea2ba61a2f689f86144181ffa1a327b95cbd640",
+        "html_url": "https://github.com/freegamestore-online/quickdice/commit/fea2ba61a2f689f86144181ffa1a327b95cbd640",
         "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
+          "message": "feat: Quick Dice game — roll dice to hit targets, streak bonuses, 60s timer\n\nPWA-ready with offline support, GameShell/GameTopbar from @freegamestore/games SDK,\nleaderboard integration, animated dice, sound effects.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-21T02:29:24Z"
+            "date": "2026-05-26T04:11:55Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/dragontap": {
+    "meta": {
+      "created_at": "2026-05-06T04:15:50Z",
+      "pushed_at": "2026-05-27T12:16:43Z"
+    },
+    "commits": [
+      {
+        "sha": "97ab536b94f402eaf75aa1db2270246dcc55d5f4",
+        "html_url": "https://github.com/freegamestore-online/dragontap/commit/97ab536b94f402eaf75aa1db2270246dcc55d5f4",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:16:39Z"
+          }
+        }
+      },
+      {
+        "sha": "b653915e9ae8399bba904065cddc24d06126cc23",
+        "html_url": "https://github.com/freegamestore-online/dragontap/commit/b653915e9ae8399bba904065cddc24d06126cc23",
+        "commit": {
+          "message": "feat: Dragon Tap game — tap dragons to score, speed ramps, 3 lives\n\nPWA-ready with offline support, GameShell/GameTopbar from @freegamestore/games SDK,\nleaderboard integration, combo system, sound effects.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-26T04:11:53Z"
           }
         }
       }
