@@ -1688,5 +1688,43 @@
         }
       }
     ]
+  },
+  "freegamestore-online/toetap": {
+    "meta": {
+      "created_at": "2026-05-06T04:17:16Z",
+      "pushed_at": "2026-05-27T12:19:27Z"
+    },
+    "commits": [
+      {
+        "sha": "1d41b788f0f863480b85de9becadaa81350958aa",
+        "html_url": "https://github.com/freegamestore-online/toetap/commit/1d41b788f0f863480b85de9becadaa81350958aa",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:19:24Z"
+          }
+        }
+      },
+      {
+        "sha": "477e4e4f0daee89a263eb15a6a39a211992b3eb9",
+        "html_url": "https://github.com/freegamestore-online/toetap/commit/477e4e4f0daee89a263eb15a6a39a211992b3eb9",
+        "commit": {
+          "message": "fix: add missing --bg CSS token to design system variables\n\nDefines --bg: var(--paper) in both light and dark mode root,\nmatching the platform design system convention.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:55Z"
+          }
+        }
+      },
+      {
+        "sha": "331a20687fa3eec17d41c5a1df316c0e96b53a4f",
+        "html_url": "https://github.com/freegamestore-online/toetap/commit/331a20687fa3eec17d41c5a1df316c0e96b53a4f",
+        "commit": {
+          "message": "feat: Toe Tap game — Simon Says on a 4x4 grid, remember and replay sequences\n\nPWA-ready with offline support, GameShell/GameTopbar from @freegamestore/games SDK,\nsound effects, visual feedback, high score persistence.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-26T04:11:56Z"
+          }
+        }
+      }
+    ]
   }
 }
