@@ -223,6 +223,20 @@
       "hostedOn": "r2"
     },
     {
+      "id": "dragontap",
+      "name": "Dragon Tap",
+      "category": "arcade",
+      "icon": "🐉",
+      "iconBg": "#fef2f2",
+      "description": "Tap dragons as they appear. Speed ramps up, miss 3 and it's game over.",
+      "appUrl": "https://dragontap.freegamestore.online",
+      "repo": "freegamestore-online/dragontap",
+      "cfProject": "freedragontapapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
+    },
+    {
       "id": "flappy",
       "name": "Flappy Bird",
       "category": "arcade",
@@ -426,6 +440,20 @@
       "hostedOn": "r2"
     },
     {
+      "id": "musicbot",
+      "name": "MusicBot",
+      "category": "education",
+      "icon": "🎵",
+      "iconBg": "#fdf4ff",
+      "description": "Write code to compose melodies. A music programming game with a piano roll, levels, and a built-in synth.",
+      "appUrl": "https://musicbot.freegamestore.online",
+      "repo": "freegamestore-online/musicbot",
+      "cfProject": "freemusicbotapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
+    },
+    {
       "id": "pacman",
       "name": "Pac-Man",
       "category": "arcade",
@@ -448,6 +476,20 @@
           "notes": "Initial release with 4 ghosts, power pellets, and swipe controls."
         }
       ],
+      "hostedOn": "r2"
+    },
+    {
+      "id": "pixelcode",
+      "name": "PixelCode",
+      "category": "education",
+      "icon": "🎨",
+      "iconBg": "#fef3c7",
+      "description": "Write code to paint pixel art on a grid. Learn programming with colors, dots, lines, and loops.",
+      "appUrl": "https://pixelcode.freegamestore.online",
+      "repo": "freegamestore-online/pixelcode",
+      "cfProject": "freepixelcodeapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
       "hostedOn": "r2"
     },
     {
@@ -526,6 +568,20 @@
       "hostedOn": "r2"
     },
     {
+      "id": "quickdice",
+      "name": "Quick Dice",
+      "category": "puzzle",
+      "icon": "🎲",
+      "iconBg": "#f5f3ff",
+      "description": "Roll dice to hit target sums. Build streaks for bonus points under a 60-second timer.",
+      "appUrl": "https://quickdice.freegamestore.online",
+      "repo": "freegamestore-online/quickdice",
+      "cfProject": "freequickdiceapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
+    },
+    {
       "id": "racing",
       "name": "Racing",
       "category": "racing",
@@ -548,6 +604,20 @@
           "notes": "Initial release with Three.js 3D rendering and 3-lane gameplay."
         }
       ],
+      "hostedOn": "r2"
+    },
+    {
+      "id": "roboclean",
+      "name": "RoboClean",
+      "category": "education",
+      "icon": "🤖",
+      "iconBg": "#ecfdf5",
+      "description": "Program a robot vacuum to clean rooms. Learn loops, conditionals, and sensors through 12 levels.",
+      "appUrl": "https://roboclean.freegamestore.online",
+      "repo": "freegamestore-online/roboclean",
+      "cfProject": "freerobocleanapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
       "hostedOn": "r2"
     },
     {
@@ -803,7 +873,7 @@
     {
       "id": "tictactoe",
       "name": "tictactoe",
-      "category": "Strategy",
+      "category": "strategy",
       "icon": "🎮",
       "iconBg": "#f3f4f6",
       "description": "Classic 3x3 vs a perfect-play AI",
@@ -817,7 +887,7 @@
     {
       "id": "reversi",
       "name": "reversi",
-      "category": "Strategy",
+      "category": "strategy",
       "icon": "🎮",
       "iconBg": "#f3f4f6",
       "description": "Othello. 8x8 board, AI plays the corners.",
@@ -831,7 +901,7 @@
     {
       "id": "blackjack",
       "name": "blackjack",
-      "category": "Cards",
+      "category": "cards",
       "icon": "🎮",
       "iconBg": "#f3f4f6",
       "description": "Single-deck blackjack vs dealer. Hit, stand, double down. 3:2 naturals.",
@@ -845,7 +915,7 @@
     {
       "id": "bubbleshooter",
       "name": "bubbleshooter",
-      "category": "Casual",
+      "category": "casual",
       "icon": "🎮",
       "iconBg": "#f3f4f6",
       "description": "Aim, shoot, pop colored bubble clusters. Drop the floaters.",
@@ -859,7 +929,7 @@
     {
       "id": "spaceinvaders",
       "name": "spaceinvaders",
-      "category": "Arcade",
+      "category": "arcade",
       "icon": "🎮",
       "iconBg": "#f3f4f6",
       "description": "Defend the base from waves of descending invaders. They speed up as they thin.",
@@ -873,7 +943,7 @@
     {
       "id": "war",
       "name": "war",
-      "category": "Cards",
+      "category": "cards",
       "icon": "🎮",
       "iconBg": "#f3f4f6",
       "description": "Classic 2-player War: high card wins, ties trigger war. Beat the deck.",
@@ -887,7 +957,7 @@
     {
       "id": "tanks",
       "name": "tanks",
-      "category": "Arcade",
+      "category": "arcade",
       "icon": "🎮",
       "iconBg": "#f3f4f6",
       "description": "Battle City tanks: defend the eagle, destroy 8 enemy tanks. Bricks crumble, steel doesn't.",
@@ -901,7 +971,7 @@
     {
       "id": "riichi",
       "name": "riichi",
-      "category": "Strategy",
+      "category": "strategy",
       "icon": "🎮",
       "iconBg": "#f3f4f6",
       "description": "4-player Riichi Mahjong vs bots — Japanese rules, single hand, real yaku detection.",
@@ -915,7 +985,7 @@
     {
       "id": "pinball",
       "name": "pinball",
-      "category": "Arcade",
+      "category": "arcade",
       "icon": "🎮",
       "iconBg": "#f3f4f6",
       "description": "Classic vertical pinball: 2 flippers, 4 pop bumpers, slingshots. 3 balls per game.",
