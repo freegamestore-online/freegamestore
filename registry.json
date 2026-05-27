@@ -70,6 +70,20 @@
       "hostedOn": "r2"
     },
     {
+      "id": "blackjack",
+      "name": "blackjack",
+      "category": "cards",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Single-deck blackjack vs dealer. Hit, stand, double down. 3:2 naturals.",
+      "appUrl": "https://blackjack.freegamestore.online",
+      "repo": "freegamestore-online/blackjack",
+      "cfProject": "freeblackjackapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
+    },
+    {
       "id": "bowling",
       "name": "Bowling",
       "category": "sports",
@@ -117,6 +131,20 @@
           "notes": "Initial release with multi-level brick layouts."
         }
       ],
+      "hostedOn": "r2"
+    },
+    {
+      "id": "bubbleshooter",
+      "name": "bubbleshooter",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Aim, shoot, pop colored bubble clusters. Drop the floaters.",
+      "appUrl": "https://bubbleshooter.freegamestore.online",
+      "repo": "freegamestore-online/bubbleshooter",
+      "cfProject": "freebubbleshooterapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
       "hostedOn": "r2"
     },
     {
@@ -228,7 +256,7 @@
       "category": "arcade",
       "icon": "🐉",
       "iconBg": "#fef2f2",
-      "description": "Tap dragons as they appear. Speed ramps up, miss 3 and it's game over.",
+      "description": "Tap dragons as they appear. Speed ramps up, miss 3 and it is game over.",
       "appUrl": "https://dragontap.freegamestore.online",
       "repo": "freegamestore-online/dragontap",
       "cfProject": "freedragontapapp",
@@ -479,6 +507,20 @@
       "hostedOn": "r2"
     },
     {
+      "id": "pinball",
+      "name": "pinball",
+      "category": "arcade",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Classic vertical pinball: 2 flippers, 4 pop bumpers, slingshots. 3 balls per game.",
+      "appUrl": "https://pinball.freegamestore.online",
+      "repo": "freegamestore-online/pinball",
+      "cfProject": "freepinballapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
+    },
+    {
       "id": "pixelcode",
       "name": "PixelCode",
       "category": "education",
@@ -607,6 +649,34 @@
       "hostedOn": "r2"
     },
     {
+      "id": "reversi",
+      "name": "reversi",
+      "category": "strategy",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Othello. 8x8 board, AI plays the corners.",
+      "appUrl": "https://reversi.freegamestore.online",
+      "repo": "freegamestore-online/reversi",
+      "cfProject": "freereversiapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
+    },
+    {
+      "id": "riichi",
+      "name": "riichi",
+      "category": "strategy",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "4-player Riichi Mahjong vs bots — Japanese rules, single hand, real yaku detection.",
+      "appUrl": "https://riichi.freegamestore.online",
+      "repo": "freegamestore-online/riichi",
+      "cfProject": "freeriichiapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
+    },
+    {
       "id": "roboclean",
       "name": "RoboClean",
       "category": "education",
@@ -721,6 +791,20 @@
       "hostedOn": "r2"
     },
     {
+      "id": "spaceinvaders",
+      "name": "spaceinvaders",
+      "category": "arcade",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Defend the base from waves of descending invaders. They speed up as they thin.",
+      "appUrl": "https://spaceinvaders.freegamestore.online",
+      "repo": "freegamestore-online/spaceinvaders",
+      "cfProject": "freespaceinvadersapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
+    },
+    {
       "id": "spaceshooter",
       "name": "Space Shooter",
       "category": "arcade",
@@ -771,6 +855,20 @@
       "hostedOn": "r2"
     },
     {
+      "id": "tanks",
+      "name": "tanks",
+      "category": "arcade",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Battle City tanks: defend the eagle, destroy 8 enemy tanks. Bricks crumble, steel doesn't.",
+      "appUrl": "https://tanks.freegamestore.online",
+      "repo": "freegamestore-online/tanks",
+      "cfProject": "freetanksapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
+    },
+    {
       "id": "tetris",
       "name": "Tetris",
       "category": "brain-training",
@@ -796,6 +894,62 @@
       "hostedOn": "r2"
     },
     {
+      "id": "tictactoe",
+      "name": "tictactoe",
+      "category": "strategy",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Classic 3x3 vs a perfect-play AI",
+      "appUrl": "https://tictactoe.freegamestore.online",
+      "repo": "freegamestore-online/tictactoe",
+      "cfProject": "freetictactoeapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
+    },
+    {
+      "id": "toetap",
+      "name": "Toe Tap",
+      "category": "puzzle",
+      "icon": "🎯",
+      "iconBg": "#fffbeb",
+      "description": "Simon Says on a 4x4 grid. Remember and replay tile sequences as patterns grow longer.",
+      "appUrl": "https://toetap.freegamestore.online",
+      "repo": "freegamestore-online/toetap",
+      "cfProject": "freetoetapapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
+    },
+    {
+      "id": "turtlecode",
+      "name": "TurtleCode",
+      "category": "education",
+      "icon": "🐢",
+      "iconBg": "#f0fdf4",
+      "description": "Write Logo-style code to draw with a turtle. Learn angles, loops, and functions through 15 levels.",
+      "appUrl": "https://turtlecode.freegamestore.online",
+      "repo": "freegamestore-online/turtlecode",
+      "cfProject": "freeturtlecodeapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
+    },
+    {
+      "id": "war",
+      "name": "war",
+      "category": "cards",
+      "icon": "🎮",
+      "iconBg": "#f3f4f6",
+      "description": "Classic 2-player War: high card wins, ties trigger war. Beat the deck.",
+      "appUrl": "https://war.freegamestore.online",
+      "repo": "freegamestore-online/war",
+      "cfProject": "freewarapp",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "hostedOn": "r2"
+    },
+    {
       "id": "whackamole",
       "name": "Whack-a-Mole",
       "category": "arcade",
@@ -816,31 +970,6 @@
           "version": "1.0.0",
           "date": "2026-05-04",
           "notes": "Initial release with 3 mole types and 30s timer."
-        }
-      ],
-      "hostedOn": "r2"
-    },
-    {
-      "id": "wordsearch",
-      "name": "Word Search",
-      "category": "brain-training",
-      "icon": "&#128269;",
-      "iconBg": "#eff6ff",
-      "description": "Find hidden words in a letter grid. Five themes. Drag to select. Timer challenge.",
-      "appUrl": "https://wordsearch.freegamestore.online",
-      "repo": "freegamestore-online/wordsearch",
-      "cfProject": "freewordsearchapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "author": "FreeGameStore Team",
-      "version": "1.0.0",
-      "firstPublished": "2026-05-04",
-      "lastUpdated": "2026-05-04",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "date": "2026-05-04",
-          "notes": "Initial release with 5 word themes."
         }
       ],
       "hostedOn": "r2"
@@ -871,129 +1000,28 @@
       "hostedOn": "r2"
     },
     {
-      "id": "tictactoe",
-      "name": "tictactoe",
-      "category": "strategy",
-      "icon": "🎮",
-      "iconBg": "#f3f4f6",
-      "description": "Classic 3x3 vs a perfect-play AI",
-      "appUrl": "https://tictactoe.freegamestore.online",
-      "repo": "freegamestore-online/tictactoe",
-      "cfProject": "freetictactoeapp",
+      "id": "wordsearch",
+      "name": "Word Search",
+      "category": "brain-training",
+      "icon": "&#128269;",
+      "iconBg": "#eff6ff",
+      "description": "Find hidden words in a letter grid. Five themes. Drag to select. Timer challenge.",
+      "appUrl": "https://wordsearch.freegamestore.online",
+      "repo": "freegamestore-online/wordsearch",
+      "cfProject": "freewordsearchapp",
       "type": "standalone",
       "developer": "FreeGameStore",
-      "hostedOn": "r2"
-    },
-    {
-      "id": "reversi",
-      "name": "reversi",
-      "category": "strategy",
-      "icon": "🎮",
-      "iconBg": "#f3f4f6",
-      "description": "Othello. 8x8 board, AI plays the corners.",
-      "appUrl": "https://reversi.freegamestore.online",
-      "repo": "freegamestore-online/reversi",
-      "cfProject": "freereversiapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "hostedOn": "r2"
-    },
-    {
-      "id": "blackjack",
-      "name": "blackjack",
-      "category": "cards",
-      "icon": "🎮",
-      "iconBg": "#f3f4f6",
-      "description": "Single-deck blackjack vs dealer. Hit, stand, double down. 3:2 naturals.",
-      "appUrl": "https://blackjack.freegamestore.online",
-      "repo": "freegamestore-online/blackjack",
-      "cfProject": "freeblackjackapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "hostedOn": "r2"
-    },
-    {
-      "id": "bubbleshooter",
-      "name": "bubbleshooter",
-      "category": "casual",
-      "icon": "🎮",
-      "iconBg": "#f3f4f6",
-      "description": "Aim, shoot, pop colored bubble clusters. Drop the floaters.",
-      "appUrl": "https://bubbleshooter.freegamestore.online",
-      "repo": "freegamestore-online/bubbleshooter",
-      "cfProject": "freebubbleshooterapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "hostedOn": "r2"
-    },
-    {
-      "id": "spaceinvaders",
-      "name": "spaceinvaders",
-      "category": "arcade",
-      "icon": "🎮",
-      "iconBg": "#f3f4f6",
-      "description": "Defend the base from waves of descending invaders. They speed up as they thin.",
-      "appUrl": "https://spaceinvaders.freegamestore.online",
-      "repo": "freegamestore-online/spaceinvaders",
-      "cfProject": "freespaceinvadersapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "hostedOn": "r2"
-    },
-    {
-      "id": "war",
-      "name": "war",
-      "category": "cards",
-      "icon": "🎮",
-      "iconBg": "#f3f4f6",
-      "description": "Classic 2-player War: high card wins, ties trigger war. Beat the deck.",
-      "appUrl": "https://war.freegamestore.online",
-      "repo": "freegamestore-online/war",
-      "cfProject": "freewarapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "hostedOn": "r2"
-    },
-    {
-      "id": "tanks",
-      "name": "tanks",
-      "category": "arcade",
-      "icon": "🎮",
-      "iconBg": "#f3f4f6",
-      "description": "Battle City tanks: defend the eagle, destroy 8 enemy tanks. Bricks crumble, steel doesn't.",
-      "appUrl": "https://tanks.freegamestore.online",
-      "repo": "freegamestore-online/tanks",
-      "cfProject": "freetanksapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "hostedOn": "r2"
-    },
-    {
-      "id": "riichi",
-      "name": "riichi",
-      "category": "strategy",
-      "icon": "🎮",
-      "iconBg": "#f3f4f6",
-      "description": "4-player Riichi Mahjong vs bots — Japanese rules, single hand, real yaku detection.",
-      "appUrl": "https://riichi.freegamestore.online",
-      "repo": "freegamestore-online/riichi",
-      "cfProject": "freeriichiapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "hostedOn": "r2"
-    },
-    {
-      "id": "pinball",
-      "name": "pinball",
-      "category": "arcade",
-      "icon": "🎮",
-      "iconBg": "#f3f4f6",
-      "description": "Classic vertical pinball: 2 flippers, 4 pop bumpers, slingshots. 3 balls per game.",
-      "appUrl": "https://pinball.freegamestore.online",
-      "repo": "freegamestore-online/pinball",
-      "cfProject": "freepinballapp",
-      "type": "standalone",
-      "developer": "FreeGameStore",
+      "author": "FreeGameStore Team",
+      "version": "1.0.0",
+      "firstPublished": "2026-05-04",
+      "lastUpdated": "2026-05-04",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-05-04",
+          "notes": "Initial release with 5 word themes."
+        }
+      ],
       "hostedOn": "r2"
     }
   ]
