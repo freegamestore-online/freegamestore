@@ -1023,6 +1023,15 @@
         }
       ],
       "hostedOn": "r2"
+    },
+    {
+      "id": "test",
+      "name": "Test",
+      "appUrl": "https://test.freegamestore.online",
+      "repo": "freegamestore-online/test",
+      "cfProject": "freetestapp",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
