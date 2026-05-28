@@ -37,8 +37,8 @@ on:
   workflow_call:
     inputs:
       cf_project:
-        description: "Cloudflare Pages project name, e.g. freebowlingapp"
-        required: true
+        description: "DEPRECATED — legacy CF Pages project name. Ignored since the Path B migration (2026-05-28); games deploy to R2, not CF Pages. Kept so existing caller files don't error."
+        required: false
         type: string
       compliance_cli_version:
         description: "Pinned @freegamestore/cli version for the compliance gate. Bump deliberately."
@@ -56,8 +56,17 @@ on:
         type: string
         default: "c1089bfcc43c1c6c2aa89e584e86f0bc"
     secrets:
+      # Path B (R2) deploy creds — org-level secrets on freegamestore-online.
+      # CLOUDFLARE_API_TOKEN is no longer required (we don't `wrangler pages
+      # deploy` anymore) but stays optional so callers passing it don't break.
+      R2_ACCESS_KEY_ID:
+        required: false
+      R2_SECRET_ACCESS_KEY:
+        required: false
+      R2_ACCOUNT_ID:
+        required: false
       CLOUDFLARE_API_TOKEN:
-        required: true
+        required: false
 
 jobs:
   # Build + compliance check. NO secrets in this job's env — if the
@@ -99,18 +108,20 @@ jobs:
           retention-days: 1
           if-no-files-found: error
 
-  # Deploy job — runs only on push-to-main, holds the CF deploy token,
-  # never installs from npm again. It downloads the artifact produced
-  # by the compliance job and ships it via wrangler. Because the only
-  # action here is `wrangler pages deploy` against a known artifact
-  # path, the attack surface is whatever wrangler itself runs.
+  # Deploy job (Path B) — runs only on push-to-main. Downloads the artifact
+  # built by the compliance job and syncs it to the fgs-games R2 bucket at
+  # games/<repo>/. The freegamestore-host Worker (*.freegamestore.online/*)
+  # serves from that prefix using a D1 routes row written at provision time
+  # by freegamestore-admin. No per-game CF Pages project → no 100/account
+  # cap on the free games side. The R2 creds live in this second job only,
+  # never alongside the untrusted compliance CLI (same isolation rationale
+  # as before, just R2 creds instead of a Pages token).
   deploy:
     needs: compliance
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      deployments: write
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v4
@@ -118,12 +129,16 @@ jobs:
           name: web-dist
           path: web/dist
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ inputs.node_version }}
-
-      - name: Deploy to Cloudflare Pages
-        run: npx wrangler pages deploy web/dist --project-name=${{ inputs.cf_project }}
+      - name: Deploy to R2 (Path B)
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ inputs.cloudflare_account_id }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+        run: |
+          test -n "$AWS_ACCESS_KEY_ID" || { echo "::error::R2_ACCESS_KEY_ID not set on freegamestore-online org secrets"; exit 1; }
+          aws s3 sync web/dist "s3://fgs-games/games/${GITHUB_REPOSITORY##*/}/" \
+            --endpoint-url "https://$R2_ACCOUNT_ID.r2.cloudflarestorage.com" \
+            --delete \
+            --no-progress
+          echo "Deployed games/${GITHUB_REPOSITORY##*/} from ${GITHUB_SHA::7} to R2 (Path B)"
