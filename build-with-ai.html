@@ -113,12 +113,12 @@
     <h2>Or any other tool</h2>
     <p>Roo Code, Sweep, Open Hands, Smol Developer, the new Anthropic SDK agent — all of them work. The pattern is the same:</p>
     <ol class="steps">
-      <li><strong>Install the FreeGameStore CLI:</strong> <code>npm i -g @freegamestore/cli</code> then <code>fas login</code>.</li>
-      <li><strong>Scaffold:</strong> <code>fas init my-game --template game-canvas</code>.</li>
+      <li><strong>Install the FreeGameStore CLI:</strong> <code>npm i -g @freegamestore/cli</code> then <code>fgs login</code>.</li>
+      <li><strong>Scaffold:</strong> <code>fgs init my-game --template game-canvas</code>.</li>
       <li><strong>Tell your AI tool to read SKILLS.md.</strong> Drop the URL in the project's instruction file (CLAUDE.md, .cursorrules, .github/copilot-instructions.md, AGENTS.md, CONVENTIONS.md, system prompt, …).</li>
       <li><strong>Build.</strong> The agent edits <code>web/src/App.tsx</code> and supporting files using the Shell layout, brand tokens, and brand fonts.</li>
-      <li><strong>Run <code>fas check</code>.</strong> Compliance enforced.</li>
-      <li><strong>Run <code>fas publish --store games</code>.</strong> Provisions repo + hosting + DNS.</li>
+      <li><strong>Run <code>fgs check</code>.</strong> Compliance enforced.</li>
+      <li><strong>Run <code>fgs publish</code>.</strong> Provisions repo + hosting + DNS.</li>
       <li><strong>Push to main.</strong> Auto-deploys in ~30 seconds.</li>
     </ol>
 
@@ -131,8 +131,8 @@
     <h2>What "AI-first" actually means here</h2>
     <p>Three things, enforced by tooling:</p>
     <ul>
-      <li><strong>Brand and privacy are not negotiable.</strong> Your agent will try to add Google Analytics or a custom display font. <code>fas check</code> rejects the publish. The mandates exist precisely so that AI-generated apps stay consistent.</li>
-      <li><strong>Provisioning is one command.</strong> No copy-pasting Cloudflare tokens. No DNS dashboards. No CI YAML. <code>fas publish --store games</code> handles everything atomically.</li>
+      <li><strong>Brand and privacy are not negotiable.</strong> Your agent will try to add Google Analytics or a custom display font. <code>fgs check</code> rejects the publish. The mandates exist precisely so that AI-generated apps stay consistent.</li>
+      <li><strong>Provisioning is one command.</strong> No copy-pasting Cloudflare tokens. No DNS dashboards. No CI YAML. <code>fgs publish</code> handles everything atomically.</li>
       <li><strong>Deploy is a push.</strong> The agent doesn't need a deploy script. <code>git push</code> triggers Cloudflare Pages, the storefront refreshes within hours.</li>
     </ul>
     <p>The mandates aren't to slow agents down — they're to let agents go fast without breaking the platform.</p>

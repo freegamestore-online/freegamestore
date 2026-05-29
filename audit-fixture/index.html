@@ -86,8 +86,8 @@
      * scenario has KNOWN expected audit output so the fixture acts
      * as a regression test for the platform auditor.
      *
-     * The reporter is loaded from the published @freeappstore/quality
-     * package via esm.sh — same code an app would import. The
+     * The reporter is loaded from @freeappstore/quality via esm.sh.
+     * Switch to @freegamestore/quality once published to npm. The
      * `no-reporter` scenario deliberately SKIPS this import so the
      * dashboard sees a non-cooperative app.
      *
@@ -107,7 +107,7 @@
       'vh-bug':                { html: '<div class="full"><h2>100vh container</h2><p>iOS Safari URL-bar bug — at the URL-bar-visible viewport this scrolls.</p></div>', expect: 'scrollsY=true when iframe height < 100vh resolved value' },
       'gap-mid':               { html: '<div class="gap"><h2>Gap in the middle</h2><div class="force">Forces overflow at 600-768 widths only.</div></div>', expect: 'fails at 600/768 portrait; passes elsewhere → score reflects bucket gap' },
       'landscape-only-bad':    { html: '<div class="ok"><h2>Landscape-only bug</h2><p>Portrait perfect; landscape forces 1500px width.</p></div>', expect: 'portrait=99; landscape low; overall=min' },
-      'no-reporter':           { html: '<div style="padding:1rem"><h2>Non-cooperative</h2><p>This scenario does NOT import @freeappstore/quality. Dashboard should time out → "?" cell.</p></div>', expect: 'no postMessage ever; dashboard shows opt-out badge' },
+      'no-reporter':           { html: '<div style="padding:1rem"><h2>Non-cooperative</h2><p>This scenario does NOT import the quality reporter. Dashboard should time out → "?" cell.</p></div>', expect: 'no postMessage ever; dashboard shows opt-out badge' },
       'large-scrollwidth-fp':  { html: '<div class="grid">' + Array(20).fill('<div></div>').join('') + '</div>', expect: 'no clipping reported (within 1px tolerance)' },
     };
 

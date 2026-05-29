@@ -5,14 +5,14 @@
  *   /quality.html              — summary list of every app + last known score
  *   /quality.html?app=<id>     — detail: 12 iframes of <id>, one per
  *                                reference viewport, listening for
- *                                fas:quality postMessages from each.
+ *                                fgs:quality postMessages from each.
  *
  * Why iframes (not headless browser):
  * - Anyone can audit any app — public transparency.
  * - Real browser the visitor is using, no Playwright dependency.
- * - Cooperation contract: apps ship with @freeappstore/quality which
- *   posts viewport metrics back to a parent dashboard. Apps that opt
- *   out can still be listed but won't show a score.
+ * - Cooperation contract: games ship with @freeappstore/quality (shared
+ *   package) which posts viewport metrics back to a parent dashboard.
+ *   Games that opt out can still be listed but won't show a score.
  *
  * Caveats:
  * - Cross-origin (each app is its own subdomain) so we can't read
@@ -45,7 +45,7 @@ const REFERENCE = [
 
 // LocalStorage cache key. Last-seen score per appId, used by the
 // summary list so it shows something useful before any iframes load.
-const CACHE_KEY = 'fas:quality:scores:v1';
+const CACHE_KEY = 'fgs:quality:scores:v1';
 const REPORT_TIMEOUT_MS = 6000;
 
 // ---- helpers ----
@@ -213,7 +213,7 @@ function renderDetail(appEntry, mode) {
   // — match by that.
   const handler = (e) => {
     const data = e.data;
-    if (!data || data.type !== 'fas:quality') return;
+    if (!data || (data.type !== 'fgs:quality' && data.type !== 'fas:quality')) return;
     const vp = REFERENCE.find(r => r.width === data.viewport.width && r.height === data.viewport.height);
     if (!vp) return;
     reports.set(vp.id, data);

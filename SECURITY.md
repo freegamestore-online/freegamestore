@@ -66,7 +66,7 @@ A regression in any of these fails the build.
 3. **`'unsafe-hashes'` not used for `style="..."` attributes** because there
    aren't any — all styles are in classes. If that ever changes, the test
    catches it.
-4. **Detail-page rating fetches `api.freeappstore.online/ratings`**. The endpoint is allowlisted in CSP `connect-src`. Validation of the response shape happens in `detail-page.js`.
+4. **Detail-page ratings are localStorage-only.** Counts persist per-browser via `fgs_counts_<appId>` and vote dedup via `fgs_voted_<appId>`. No server-side aggregation.
 
 ## Reporting
 

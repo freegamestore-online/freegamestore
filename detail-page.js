@@ -13,9 +13,6 @@
   } catch (e) {}
   if (!APP_ID) return;
 
-  var STORE = "games";
-  var API = "https://api.freeappstore.online";
-
   // ── Reload-preview button ──
   document.querySelectorAll('[data-action="reload-preview"]').forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -27,8 +24,9 @@
     });
   });
 
-  // ── Thumbs up / down ratings, federated through api.freeappstore.online ──
+  // ── Thumbs up / down ratings (localStorage per-browser) ──
   var KEY = "fgs_voted_" + APP_ID;
+  var COUNTS_KEY = "fgs_counts_" + APP_ID;
   var upBtn = document.getElementById("rate-up");
   var downBtn = document.getElementById("rate-down");
   var countUp = document.getElementById("count-up");
@@ -36,14 +34,10 @@
   var statusEl = document.getElementById("rating-status");
   if (!upBtn || !downBtn || !countUp || !countDown || !statusEl) return;
 
-  fetch(API + "/ratings?ids=" + STORE + ":" + encodeURIComponent(APP_ID))
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      var rating = data[STORE + ":" + APP_ID] || { up: 0, down: 0 };
-      countUp.textContent = rating.up;
-      countDown.textContent = rating.down;
-    })
-    .catch(function () {});
+  var counts = { up: 0, down: 0 };
+  try { var stored = localStorage.getItem(COUNTS_KEY); if (stored) counts = JSON.parse(stored); } catch (e) {}
+  countUp.textContent = counts.up;
+  countDown.textContent = counts.down;
 
   var voted = null;
   try { voted = localStorage.getItem(KEY); } catch (e) {}
@@ -63,13 +57,10 @@
     downBtn.disabled = true;
     upBtn.style.opacity = dir === "up" ? "1" : "0.4";
     downBtn.style.opacity = dir === "down" ? "1" : "0.4";
+    counts[dir]++;
     var el = dir === "up" ? countUp : countDown;
-    el.textContent = parseInt(el.textContent, 10) + 1;
-    fetch(API + "/ratings", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id: APP_ID, store: STORE, vote: dir }),
-    }).catch(function () {});
+    el.textContent = counts[dir];
+    try { localStorage.setItem(COUNTS_KEY, JSON.stringify(counts)); } catch (e) {}
   }
 
   upBtn.addEventListener("click", function () { vote("up"); });

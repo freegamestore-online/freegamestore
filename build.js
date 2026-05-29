@@ -312,28 +312,19 @@ for (const [k, v] of Object.entries(sriHashes)) {
 // Wrapped in async IIFE because this file is CJS (no top-level await).
 
 async function fetchAuditSummary() {
-  // Fetch /v1/audit?store=games. Failures degrade gracefully — the
-  // audit badge just doesn't render.
+  // Read quality data from the local file produced by the FGS auditor.
+  // Degrades gracefully — if the file doesn't exist, badges don't render.
   try {
-    const res = await new Promise((resolve, reject) => {
-      const req = https.request(
-        { hostname: 'api.freeappstore.online', path: '/v1/audit?store=games', method: 'GET' },
-        (r) => {
-          let data = '';
-          r.on('data', (c) => (data += c));
-          r.on('end', () => resolve({ status: r.statusCode, body: data }));
-        },
-      );
-      req.on('error', reject);
-      req.end();
-    });
-    if (res.status !== 200) return new Map();
-    const parsed = JSON.parse(res.body);
+    const qualityPath = path.join(ROOT, 'data', 'quality-results.json');
+    const raw = fs.readFileSync(qualityPath, 'utf8');
+    const parsed = JSON.parse(raw);
     const map = new Map();
-    for (const s of parsed.summary ?? []) map.set(s.appId, s);
+    for (const g of parsed.games ?? []) {
+      map.set(g.id, { appId: g.id, score: g.score, loadTimeMs: g.loadTimeMs });
+    }
     return map;
   } catch (err) {
-    console.warn(`  ! could not fetch audit summary: ${err.message}`);
+    console.warn(`  ! could not read quality data: ${err.message}`);
     return new Map();
   }
 }
@@ -342,14 +333,13 @@ function renderAuditBadge(summary) {
   if (!summary) {
     return '<p class="audit-badge audit-pending"><span class="dot"></span> Not yet audited</p>';
   }
-  const total = summary.pass + summary.warn + summary.fail;
-  if (summary.fail > 0) {
-    return `<p class="audit-badge audit-fail"><span class="dot"></span> ${summary.fail} compliance failure${summary.fail === 1 ? '' : 's'} of ${total} checks &middot; <a href="https://api.freeappstore.online/v1/audit?app=${summary.appId}">details</a></p>`;
+  if (summary.score >= 95) {
+    return `<p class="audit-badge audit-pass"><span class="dot"></span> Quality ${summary.score}/99</p>`;
   }
-  if (summary.warn > 0) {
-    return `<p class="audit-badge audit-warn"><span class="dot"></span> ${summary.pass}/${total} compliance checks pass &middot; ${summary.warn} warning${summary.warn === 1 ? '' : 's'}</p>`;
+  if (summary.score >= 60) {
+    return `<p class="audit-badge audit-warn"><span class="dot"></span> Quality ${summary.score}/99</p>`;
   }
-  return `<p class="audit-badge audit-pass"><span class="dot"></span> ${total}/${total} compliance checks pass</p>`;
+  return `<p class="audit-badge audit-fail"><span class="dot"></span> Quality ${summary.score}/99</p>`;
 }
 
 function fetchManifest(appUrl) {
@@ -462,7 +452,7 @@ indexHtml = indexHtml.replace(
 fs.writeFileSync(path.join(DIST, 'index.html'), indexHtml);
 fs.writeFileSync(path.join(DIST, 'card-styles.css'), cardIconBackgrounds + '\n');
 
-// --- Quality Dashboard (mirrors /tmp/freeappstore/build.js) ---
+// --- Quality Dashboard ---
 const qualityTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'quality.html'), 'utf8');
 const qualityRegistry = {
   apps: (crossRegistry.items || []).map(a => ({ id: a.id, name: a.name, appUrl: a.appUrl })),
@@ -647,12 +637,12 @@ const filesToCopy = [
 // inline theme bootstrap.
 const csp = [
   "default-src 'self'",
-  "img-src 'self' https://*.freegamestore.online https://*.freeappstore.online data:",
+  "img-src 'self' https://*.freegamestore.online data:",
   `script-src 'self' '${inlineScriptHash}' https://static.cloudflareinsights.com`,
   "style-src 'self' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
-  "connect-src 'self' https://*.freegamestore.online https://api.freeappstore.online https://cloudflareinsights.com",
-  "frame-src https://*.freegamestore.online https://*.freeappstore.online https://*.progamestore.online",
+  "connect-src 'self' https://*.freegamestore.online https://cloudflareinsights.com",
+  "frame-src https://*.freegamestore.online https://*.progamestore.online",
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "object-src 'none'",
