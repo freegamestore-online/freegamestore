@@ -1032,6 +1032,19 @@
       "cfProject": "freetestapp",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "snake-game",
+      "name": "snake-game",
+      "category": "Casual",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "Snake game we have all played and loved!!!",
+      "appUrl": "https://snake-game.freegamestore.online",
+      "repo": "freegamestore-online/snake-game",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
