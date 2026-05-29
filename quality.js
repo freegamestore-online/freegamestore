@@ -10,7 +10,7 @@
  * Why iframes (not headless browser):
  * - Anyone can audit any app — public transparency.
  * - Real browser the visitor is using, no Playwright dependency.
- * - Cooperation contract: games ship with @freegamestore/quality which
+ * - Cooperation contract: games can ship with @freeappstore/quality which
  *   posts viewport metrics back to a parent dashboard. Games that opt
  *   out can still be listed but won't show a score.
  *
