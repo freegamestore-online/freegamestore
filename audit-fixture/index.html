@@ -86,8 +86,7 @@
      * scenario has KNOWN expected audit output so the fixture acts
      * as a regression test for the platform auditor.
      *
-     * The reporter is loaded from @freeappstore/quality via esm.sh.
-     * Switch to @freegamestore/quality once published to npm. The
+     * The reporter is loaded from @freegamestore/quality via esm.sh. The
      * `no-reporter` scenario deliberately SKIPS this import so the
      * dashboard sees a non-cooperative app.
      *
@@ -148,7 +147,7 @@
     // non-cooperative apps with a "?" cell.
     if (scenario !== 'no-reporter') {
       try {
-        const mod = await import('https://esm.sh/@freeappstore/quality@0.1.0');
+        const mod = await import('https://esm.sh/@freegamestore/quality@0.1.0');
         mod.initQualityReporter();
       } catch (e) {
         // CDN failure shouldn't break the fixture itself; it just
