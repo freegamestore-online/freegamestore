@@ -180,21 +180,22 @@
 
       <!-- Templates -->
       <h2 id="templates">Templates</h2>
-      <p>Four core templates cover most game types:</p>
+      <p>Eight templates cover every game type. Use <code>fgs init my-game --template &lt;name&gt;</code> or clone directly:</p>
 
       <table class="spec-table">
-        <tr><th>Template</th><th>Repo</th><th>Best for</th></tr>
-        <tr><td>Canvas</td><td><code>template-game-canvas</code></td><td>Platformers, shooters, Snake, Pac-Man, Frogger</td></tr>
-        <tr><td>Grid</td><td><code>template-game-grid</code></td><td>Minesweeper, Sudoku, 2048, Match-3, Word Search</td></tr>
-        <tr><td>Cards</td><td><code>template-game-cards</code></td><td>Solitaire, Memory, card-based games</td></tr>
-        <tr><td>3D</td><td><code>template-game-3d</code></td><td>Racing, Bowling, 3D puzzles</td></tr>
+        <tr><th>Template</th><th>Flag</th><th>Best for</th></tr>
+        <tr><td>Canvas</td><td><code>canvas</code></td><td>Platformers, shooters, Snake, Pac-Man, Frogger</td></tr>
+        <tr><td>Grid</td><td><code>grid</code></td><td>Minesweeper, Sudoku, 2048, Match-3, Word Search</td></tr>
+        <tr><td>Cards</td><td><code>cards</code></td><td>Solitaire, Memory, card-based games</td></tr>
+        <tr><td>3D (Three.js)</td><td><code>3d</code></td><td>Racing, Bowling, 3D puzzles</td></tr>
+        <tr><td>Phaser</td><td><code>phaser</code></td><td>2D arcade games with physics</td></tr>
+        <tr><td>Kaplay</td><td><code>kaplay</code></td><td>Simple, fun 2D games</td></tr>
+        <tr><td>PixiJS</td><td><code>pixi</code></td><td>Sprite-heavy 2D rendering</td></tr>
+        <tr><td>Babylon.js</td><td><code>babylon</code></td><td>Advanced 3D with physics</td></tr>
       </table>
 
-      <p>Clone the one that matches your game:</p>
-      <div class="code-block"><code>git clone https://github.com/freegamestore-online/template-game-canvas my-game
-git clone https://github.com/freegamestore-online/template-game-grid my-game
-git clone https://github.com/freegamestore-online/template-game-cards my-game
-git clone https://github.com/freegamestore-online/template-game-3d my-game</code></div>
+      <p>Or clone directly:</p>
+      <div class="code-block"><code>fgs init my-game --template canvas</code></div>
 
       <!-- Project Structure -->
       <h2 id="project-structure">Project Structure</h2>
