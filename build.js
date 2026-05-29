@@ -61,6 +61,7 @@ const CF_BEACON_SNIPPET = CF_BEACON_TOKEN && /^[a-f0-9]{32,}$/i.test(CF_BEACON_T
 
 // Helper: format category label (brain-training -> Brain Training)
 function categoryLabel(cat) {
+  if (!cat) return 'Uncategorized';
   return cat.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 }
 
