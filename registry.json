@@ -1045,6 +1045,19 @@
       "hostedOn": "r2",
       "type": "standalone",
       "developer": "FreeGameStore"
+    },
+    {
+      "id": "snake-2",
+      "name": "snake-2",
+      "category": "Casual",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "The one and only snake game we have all played and loved on our Nokias",
+      "appUrl": "https://snake-2.freegamestore.online",
+      "repo": "freegamestore-online/snake-2",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeGameStore"
     }
   ]
 }
