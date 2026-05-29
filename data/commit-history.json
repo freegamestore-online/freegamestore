@@ -1918,26 +1918,16 @@
   "freegamestore-online/snake-2": {
     "meta": {
       "created_at": "2026-05-29T03:59:04Z",
-      "pushed_at": "2026-05-29T06:39:56Z"
+      "pushed_at": "2026-05-29T11:38:30Z"
     },
     "commits": [
       {
-        "sha": "1550705b912c96a67ca0d1e7761ca2f4410c0f82",
-        "html_url": "https://github.com/freegamestore-online/snake-2/commit/1550705b912c96a67ca0d1e7761ca2f4410c0f82",
+        "sha": "887ea9166c96640da33acbcd5341d1c9e52d0cc3",
+        "html_url": "https://github.com/freegamestore-online/snake-2/commit/887ea9166c96640da33acbcd5341d1c9e52d0cc3",
         "commit": {
-          "message": "Add snake game by Advika123456",
+          "message": "Initial commit",
           "author": {
-            "date": "2026-05-29T04:03:45Z"
-          }
-        }
-      },
-      {
-        "sha": "28c939f71d6ea17171196c000313b8980037bdf9",
-        "html_url": "https://github.com/freegamestore-online/snake-2/commit/28c939f71d6ea17171196c000313b8980037bdf9",
-        "commit": {
-          "message": "Initial commit from canvas template",
-          "author": {
-            "date": "2026-05-29T03:53:29Z"
+            "date": "2026-05-29T03:59:07Z"
           }
         }
       }
