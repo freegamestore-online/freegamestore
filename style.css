@@ -848,6 +848,17 @@ footer .container {
   }
   .nav-overlay.open { display: block; }
 
+  .theme-toggle { display: none; }
+  .text-size-toggle { display: none; }
+
+  .header-right {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+
+  .brand-text .brand-name { font-size: 0.95rem; }
+  .brand-text .brand-tagline { display: none; }
+
   .hero { padding: 3.5rem 0 2.5rem; }
   .apps-grid { grid-template-columns: 1fr; }
 }

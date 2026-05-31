@@ -72,7 +72,8 @@
         </span>
       </a>
 
-      <nav>
+      <nav id="mainNav">
+        <button class="nav-close" onclick="document.getElementById('mainNav').classList.remove('open');document.getElementById('navOverlay').classList.remove('open')" aria-label="Close menu">&times;</button>
         <a href="/">Games</a>
         <a href="https://freeappstore.online">Apps</a>
         <a href="/about.html">About</a>
@@ -82,11 +83,15 @@
         <a href="/docs/">Docs</a>
         <a href="https://publish.freegamestore.online">Console</a>
       </nav>
+      <div id="navOverlay" class="nav-overlay" onclick="document.getElementById('mainNav').classList.remove('open');this.classList.remove('open')"></div>
 
       <div class="header-right">
         <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
           <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
           <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+        </button>
+        <button class="nav-toggle" onclick="document.getElementById('mainNav').classList.add('open');document.getElementById('navOverlay').classList.add('open')" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
         </button>
       </div>
     </div>
