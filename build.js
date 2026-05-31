@@ -260,11 +260,9 @@ const cardIconBackgrounds = games
   .join('\n');
 
 const gameCards = games.map(game => {
-  const letter = escapeHtml((game.name || '?').trim().charAt(0).toUpperCase());
+  const icon = game.icon || (game.name || '?').trim().charAt(0).toUpperCase();
   return `        <div class="app-card compact" data-id="${escapeHtml(game.id)}" data-category="${escapeHtml(game.category)}" data-about="/games/${escapeHtml(game.id)}.html">
-          <div class="app-icon" data-letter="${letter}">
-            <img src="${escapeHtml(game.appUrl)}/apple-touch-icon.png" alt="" loading="lazy" />
-          </div>
+          <div class="app-icon">${icon}</div>
           <div class="app-body">
             <span class="app-name">${escapeHtml(game.name)}</span>
             <span class="app-meta">${escapeHtml(categoryLabel(game.category))}</span>
