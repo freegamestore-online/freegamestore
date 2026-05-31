@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FreeGameStore — Free-Forever Web Games</title>
   <meta name="description" content="A platform of free-forever web games. No charges, no plans, no paywalls. Works on mobile, tablet, and desktop. Open source." />
   <meta property="og:type" content="website" />
@@ -43,6 +43,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+  <meta http-equiv="x-dns-prefetch-control" content="on" />
+  <link rel="dns-prefetch" href="https://api.freegamestore.online" />
   <!-- CSP lives in dist/_headers (HTTP-header source of truth). -->
   <!-- Apply theme + text-size before paint to avoid flash. -->
   <script>
@@ -57,6 +59,7 @@
   __CF_BEACON__
 </head>
 <body>
+  <a href="#games-grid" class="skip-link">Skip to games</a>
   <header>
     <div class="container">
       <a href="/" class="brand" aria-label="FreeGameStore — Games Marketplace">
@@ -226,6 +229,6 @@
   </footer>
 
   <script src="/storefront.js" integrity="{{SRI_STOREFRONT_JS}}" defer></script>
-  <script src="/theme.js" integrity="{{SRI_THEME_JS}}"></script>
+  <script src="/theme.js" integrity="{{SRI_THEME_JS}}" defer></script>
 </body>
 </html>

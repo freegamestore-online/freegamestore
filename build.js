@@ -663,6 +663,16 @@ fs.writeFileSync(path.join(DIST, '_headers'), [
   `  Content-Security-Policy: ${csp}`,
   `  Content-Security-Policy-Report-Only: ${csp}`,
   '',
+  '# Long cache for static assets',
+  '/*.css',
+  '  Cache-Control: public, max-age=86400, stale-while-revalidate=604800',
+  '/*.js',
+  '  Cache-Control: public, max-age=86400, stale-while-revalidate=604800',
+  '/*.png',
+  '  Cache-Control: public, max-age=604800, immutable',
+  '/*.svg',
+  '  Cache-Control: public, max-age=604800, immutable',
+  '',
 ].join('\n'));
 
 filesToCopy.forEach(file => {
