@@ -162,8 +162,8 @@ test("no inline onerror= attributes survive the build", () => {
       "index.html still emits inline onerror=",
     );
     assert.ok(
-      /<div class="app-icon" data-letter="/.test(indexHtml),
-      "expected at least one .app-icon with a data-letter attribute",
+      /<div class="app-icon">/.test(indexHtml),
+      "expected at least one .app-icon element",
     );
   } finally {
     rmSync(tmp, { recursive: true, force: true });
@@ -175,7 +175,7 @@ test("cards have no inline style attribute; iconBg lives in card-styles.css", ()
   try {
     const indexHtml = readFileSync(join(tmpDist, "index.html"), "utf8");
     assert.ok(
-      !/<div class="app-icon" data-letter="[^"]*" style=/.test(indexHtml),
+      !/<div class="app-icon"[^>]*style=/.test(indexHtml),
       "inline style= leaked onto .app-icon",
     );
     const css = readFileSync(join(tmpDist, "card-styles.css"), "utf8");
