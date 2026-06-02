@@ -1938,9 +1938,29 @@
   "freegamestore-online/snake-2": {
     "meta": {
       "created_at": "2026-05-29T03:59:04Z",
-      "pushed_at": "2026-05-29T12:21:35Z"
+      "pushed_at": "2026-06-02T08:44:18Z"
     },
     "commits": [
+      {
+        "sha": "06d034c0c9c749dc961195518c5ddb552af7e37e",
+        "html_url": "https://github.com/freegamestore-online/snake-2/commit/06d034c0c9c749dc961195518c5ddb552af7e37e",
+        "commit": {
+          "message": "Update snake visuals and canvas size",
+          "author": {
+            "date": "2026-06-02T08:43:59Z"
+          }
+        }
+      },
+      {
+        "sha": "40dae9c77c5198835b0d2276f0c946d808c579c8",
+        "html_url": "https://github.com/freegamestore-online/snake-2/commit/40dae9c77c5198835b0d2276f0c946d808c579c8",
+        "commit": {
+          "message": "fix: add AI instructions and update CLAUDE.md with proper SKILLS links",
+          "author": {
+            "date": "2026-06-02T07:49:27Z"
+          }
+        }
+      },
       {
         "sha": "2b2f0253137f2ef4eb67bb57f1c74a290ffbfc25",
         "html_url": "https://github.com/freegamestore-online/snake-2/commit/2b2f0253137f2ef4eb67bb57f1c74a290ffbfc25",
@@ -1948,16 +1968,6 @@
           "message": "Snake game by Advika123456",
           "author": {
             "date": "2026-05-29T12:19:22Z"
-          }
-        }
-      },
-      {
-        "sha": "b3102f39db84c1acbd926f47b56f3e6753acfbaa",
-        "html_url": "https://github.com/freegamestore-online/snake-2/commit/b3102f39db84c1acbd926f47b56f3e6753acfbaa",
-        "commit": {
-          "message": "Initial commit from canvas template",
-          "author": {
-            "date": "2026-05-29T11:50:52Z"
           }
         }
       }
