@@ -2,9 +2,19 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-05-27T12:16:39Z"
+      "pushed_at": "2026-06-01T23:19:14Z"
     },
     "commits": [
+      {
+        "sha": "11dfb214cfe99a0074c24b4c4643a45518ade146",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/11dfb214cfe99a0074c24b4c4643a45518ade146",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:11Z"
+          }
+        }
+      },
       {
         "sha": "d83d3334c85c103f7eac1351a199085d29f5eb78",
         "html_url": "https://github.com/freegamestore-online/dice/commit/d83d3334c85c103f7eac1351a199085d29f5eb78",
@@ -22,16 +32,6 @@
           "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-26T04:18:09Z"
-          }
-        }
-      },
-      {
-        "sha": "fac37736c67c1bdccc34f59b37313cb3762c76a8",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/fac37736c67c1bdccc34f59b37313cb3762c76a8",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:21Z"
           }
         }
       }
@@ -78,9 +78,19 @@
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-05-27T12:18:26Z"
+      "pushed_at": "2026-06-01T23:18:50Z"
     },
     "commits": [
+      {
+        "sha": "47b4e21f92ce331b5e319fb31d63b6d922212ce2",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/47b4e21f92ce331b5e319fb31d63b6d922212ce2",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:18:48Z"
+          }
+        }
+      },
       {
         "sha": "10346f88766263f82f4f069f6b6735bd3b48581b",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/10346f88766263f82f4f069f6b6735bd3b48581b",
@@ -100,25 +110,25 @@
             "date": "2026-05-27T12:16:00Z"
           }
         }
-      },
-      {
-        "sha": "e13f2d84e33ec01c8ad576136a3ee1dcd0a1e059",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/e13f2d84e33ec01c8ad576136a3ee1dcd0a1e059",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:17:41Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-05-27T12:16:30Z"
+      "pushed_at": "2026-06-01T23:19:08Z"
     },
     "commits": [
+      {
+        "sha": "b34f0f6b3ba0c40cae62efdd99c6a2691c01a8af",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/b34f0f6b3ba0c40cae62efdd99c6a2691c01a8af",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:05Z"
+          }
+        }
+      },
       {
         "sha": "0852c742d78e28bfe2ee7e2883bfb71527144b49",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/0852c742d78e28bfe2ee7e2883bfb71527144b49",
@@ -138,25 +148,25 @@
             "date": "2026-05-26T04:18:02Z"
           }
         }
-      },
-      {
-        "sha": "938268159f149d9f59df4703a9e94e6ac45feb63",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/938268159f149d9f59df4703a9e94e6ac45feb63",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:18Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-05-27T12:16:15Z"
+      "pushed_at": "2026-06-01T23:18:59Z"
     },
     "commits": [
+      {
+        "sha": "1b84ea6e54c0a2131eb14742d2feafa7e551734b",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/1b84ea6e54c0a2131eb14742d2feafa7e551734b",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:18:56Z"
+          }
+        }
+      },
       {
         "sha": "1072f6f45457f394d37dc78d5319ad7b755db13c",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/1072f6f45457f394d37dc78d5319ad7b755db13c",
@@ -176,25 +186,25 @@
             "date": "2026-05-26T04:17:51Z"
           }
         }
-      },
-      {
-        "sha": "002f2ed66e46f6b1d05c06b27bf9463e19d39a80",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/002f2ed66e46f6b1d05c06b27bf9463e19d39a80",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:16Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-05-27T12:17:08Z"
+      "pushed_at": "2026-06-01T23:19:34Z"
     },
     "commits": [
+      {
+        "sha": "5e7c0ade843595407c8b26686434f0cca5ffeb09",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/5e7c0ade843595407c8b26686434f0cca5ffeb09",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:32Z"
+          }
+        }
+      },
       {
         "sha": "90edfca8550665748eacaab55e8e76d10f3c289e",
         "html_url": "https://github.com/freegamestore-online/match3/commit/90edfca8550665748eacaab55e8e76d10f3c289e",
@@ -214,25 +224,25 @@
             "date": "2026-05-26T04:18:29Z"
           }
         }
-      },
-      {
-        "sha": "97f64836c34ec46cb306862d0f4d17e633e948b0",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/97f64836c34ec46cb306862d0f4d17e633e948b0",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:28Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-05-27T12:18:09Z"
+      "pushed_at": "2026-06-01T23:19:55Z"
     },
     "commits": [
+      {
+        "sha": "48833beb34d4e23141132aac02e2f83462ec049a",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/48833beb34d4e23141132aac02e2f83462ec049a",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:53Z"
+          }
+        }
+      },
       {
         "sha": "481480e9d2d24a62ba9b46ae449511fc443b5ace",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/481480e9d2d24a62ba9b46ae449511fc443b5ace",
@@ -252,25 +262,25 @@
             "date": "2026-05-26T04:18:48Z"
           }
         }
-      },
-      {
-        "sha": "2d8d929dab5fac759bfd08b84ec9e2441a7d2eb6",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/2d8d929dab5fac759bfd08b84ec9e2441a7d2eb6",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:33Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-05-27T12:16:58Z"
+      "pushed_at": "2026-06-01T23:19:29Z"
     },
     "commits": [
+      {
+        "sha": "2e351de94ae723b25eea1f7a231c7e572dee0170",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/2e351de94ae723b25eea1f7a231c7e572dee0170",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:26Z"
+          }
+        }
+      },
       {
         "sha": "6d81c2610797249821bccbb318173e2a7f78ffaf",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/6d81c2610797249821bccbb318173e2a7f78ffaf",
@@ -290,25 +300,25 @@
             "date": "2026-05-26T04:18:22Z"
           }
         }
-      },
-      {
-        "sha": "34ca6266aa23cf066e2e331bc09ea028d4125486",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/34ca6266aa23cf066e2e331bc09ea028d4125486",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:26Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-05-27T12:16:00Z"
+      "pushed_at": "2026-06-01T23:18:47Z"
     },
     "commits": [
+      {
+        "sha": "8751686ddcb78f4810cff77049e656979a4f3da9",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/8751686ddcb78f4810cff77049e656979a4f3da9",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:18:45Z"
+          }
+        }
+      },
       {
         "sha": "70c27b6bdb7b224dc67be662c2e0af25af53fa42",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/70c27b6bdb7b224dc67be662c2e0af25af53fa42",
@@ -328,25 +338,25 @@
             "date": "2026-05-26T04:17:38Z"
           }
         }
-      },
-      {
-        "sha": "0094976caa02e71e0cdf52c3a3d48cb965e4af73",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/0094976caa02e71e0cdf52c3a3d48cb965e4af73",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:12Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-05-27T12:17:14Z"
+      "pushed_at": "2026-06-01T23:19:37Z"
     },
     "commits": [
+      {
+        "sha": "a2c1cdf34dd7dc814f00b337bf64f4067c07cdfe",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/a2c1cdf34dd7dc814f00b337bf64f4067c07cdfe",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:35Z"
+          }
+        }
+      },
       {
         "sha": "7be07cbacd9edbe89e14ca88e47bb10804202048",
         "html_url": "https://github.com/freegamestore-online/memory/commit/7be07cbacd9edbe89e14ca88e47bb10804202048",
@@ -366,25 +376,25 @@
             "date": "2026-05-26T04:18:31Z"
           }
         }
-      },
-      {
-        "sha": "eef85b37007478f111a19d41da035aaf5156c530",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/eef85b37007478f111a19d41da035aaf5156c530",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:30Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-05-27T12:16:51Z"
+      "pushed_at": "2026-06-01T23:19:23Z"
     },
     "commits": [
+      {
+        "sha": "ca8fd10f018abb4336803a24e012dc23ec0c873b",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/ca8fd10f018abb4336803a24e012dc23ec0c873b",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:20Z"
+          }
+        }
+      },
       {
         "sha": "5d85a80eb17949cae54de1c3d3a98ba406e51493",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/5d85a80eb17949cae54de1c3d3a98ba406e51493",
@@ -404,25 +414,25 @@
             "date": "2026-05-26T04:18:16Z"
           }
         }
-      },
-      {
-        "sha": "ea6b331c8c6614190f644757f491f3420d6f65e3",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/ea6b331c8c6614190f644757f491f3420d6f65e3",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:23Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-05-27T12:16:11Z"
+      "pushed_at": "2026-06-01T23:18:56Z"
     },
     "commits": [
+      {
+        "sha": "bbecb310a09fb4df65e3a400fa1cbd286c7cfb0a",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/bbecb310a09fb4df65e3a400fa1cbd286c7cfb0a",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:18:53Z"
+          }
+        }
+      },
       {
         "sha": "0e5ae0b74c284010fb0ed96cdac1f3bda1fdd41e",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/0e5ae0b74c284010fb0ed96cdac1f3bda1fdd41e",
@@ -442,25 +452,25 @@
             "date": "2026-05-26T04:17:48Z"
           }
         }
-      },
-      {
-        "sha": "1a06cf1a86298a303faca330488334fe0c7d8b2b",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/1a06cf1a86298a303faca330488334fe0c7d8b2b",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:15Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-05-27T12:16:46Z"
+      "pushed_at": "2026-06-01T23:19:20Z"
     },
     "commits": [
+      {
+        "sha": "5b8c39684191edb9dc5ae388088314060f18828b",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/5b8c39684191edb9dc5ae388088314060f18828b",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:17Z"
+          }
+        }
+      },
       {
         "sha": "8239a0b2ef80491cd180a27f6223fc156b0687a2",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/8239a0b2ef80491cd180a27f6223fc156b0687a2",
@@ -480,25 +490,25 @@
             "date": "2026-05-26T04:18:12Z"
           }
         }
-      },
-      {
-        "sha": "a9279e697cf890b861b0a74251904123020b1ef4",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/a9279e697cf890b861b0a74251904123020b1ef4",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:22Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-05-27T12:17:02Z"
+      "pushed_at": "2026-06-01T23:19:32Z"
     },
     "commits": [
+      {
+        "sha": "2598fe5f74013b49fb7ce6384e7391879f9e42f3",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/2598fe5f74013b49fb7ce6384e7391879f9e42f3",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:29Z"
+          }
+        }
+      },
       {
         "sha": "b9208622fa3a8545176c94a85e15baa4c2661d0c",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/b9208622fa3a8545176c94a85e15baa4c2661d0c",
@@ -518,25 +528,25 @@
             "date": "2026-05-26T04:18:25Z"
           }
         }
-      },
-      {
-        "sha": "b55317e2f354cf5445e61fa28ccff9378462e64f",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/b55317e2f354cf5445e61fa28ccff9378462e64f",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:27Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-05-27T12:16:55Z"
+      "pushed_at": "2026-06-01T23:19:26Z"
     },
     "commits": [
+      {
+        "sha": "e03f8c0b4784acc6d78655c1a0582dbb339ccf7d",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/e03f8c0b4784acc6d78655c1a0582dbb339ccf7d",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:23Z"
+          }
+        }
+      },
       {
         "sha": "ae54df602acb5a254e62904151ed32db1956b126",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/ae54df602acb5a254e62904151ed32db1956b126",
@@ -556,25 +566,25 @@
             "date": "2026-05-26T04:18:19Z"
           }
         }
-      },
-      {
-        "sha": "5535243dd79d8b1a4102f27002865b1c14b35071",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/5535243dd79d8b1a4102f27002865b1c14b35071",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:24Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-05-27T12:19:49Z"
+      "pushed_at": "2026-06-01T23:19:40Z"
     },
     "commits": [
+      {
+        "sha": "be32c3fbcecf3a3e290558c552d97ddd67aba018",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/be32c3fbcecf3a3e290558c552d97ddd67aba018",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:38Z"
+          }
+        }
+      },
       {
         "sha": "f086d8553b791e79fe7812f2b0db4e9297b31e77",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/f086d8553b791e79fe7812f2b0db4e9297b31e77",
@@ -594,25 +604,25 @@
             "date": "2026-05-26T04:18:38Z"
           }
         }
-      },
-      {
-        "sha": "15661f505c8c9c267fb428fab7a3102fd8b427bf",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/15661f505c8c9c267fb428fab7a3102fd8b427bf",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:32Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-05-27T12:18:29Z"
+      "pushed_at": "2026-06-01T23:20:04Z"
     },
     "commits": [
+      {
+        "sha": "24471f289f15fc83ef1b8e60289b755a1b5cbffd",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/24471f289f15fc83ef1b8e60289b755a1b5cbffd",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:02Z"
+          }
+        }
+      },
       {
         "sha": "2a82f008bd7288d545330217c18ff7a7c5c166df",
         "html_url": "https://github.com/freegamestore-online/racing/commit/2a82f008bd7288d545330217c18ff7a7c5c166df",
@@ -630,16 +640,6 @@
           "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-26T04:18:57Z"
-          }
-        }
-      },
-      {
-        "sha": "d3dd2eda63292e7f345a48413cc8d43f1d059fd9",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/d3dd2eda63292e7f345a48413cc8d43f1d059fd9",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:35Z"
           }
         }
       }
@@ -724,9 +724,19 @@
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-05-27T12:15:56Z"
+      "pushed_at": "2026-06-01T23:18:44Z"
     },
     "commits": [
+      {
+        "sha": "6f1f9746251d50b9243429a301d9ea2e8b1d764a",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/6f1f9746251d50b9243429a301d9ea2e8b1d764a",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:18:42Z"
+          }
+        }
+      },
       {
         "sha": "8d701d4fa3ff9178f5b8957e76f197f3fa2d02bf",
         "html_url": "https://github.com/freegamestore-online/2048/commit/8d701d4fa3ff9178f5b8957e76f197f3fa2d02bf",
@@ -746,25 +756,25 @@
             "date": "2026-05-26T04:17:35Z"
           }
         }
-      },
-      {
-        "sha": "a5e0aad751219f45bcb781a2713809fed278b653",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/a5e0aad751219f45bcb781a2713809fed278b653",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:10Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-05-27T12:16:22Z"
+      "pushed_at": "2026-06-01T23:19:05Z"
     },
     "commits": [
+      {
+        "sha": "4bd6fa06abe8c0c6ae35ea1f89dba8cc0ca5958f",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/4bd6fa06abe8c0c6ae35ea1f89dba8cc0ca5958f",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:02Z"
+          }
+        }
+      },
       {
         "sha": "a041f1e3138852217b465e06d783b2858e6da015",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/a041f1e3138852217b465e06d783b2858e6da015",
@@ -784,25 +794,25 @@
             "date": "2026-05-26T04:17:56Z"
           }
         }
-      },
-      {
-        "sha": "2963e002382f280411071a05da19d9b8bc37c6b3",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/2963e002382f280411071a05da19d9b8bc37c6b3",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-05-27T12:18:40Z"
+      "pushed_at": "2026-06-01T23:20:11Z"
     },
     "commits": [
+      {
+        "sha": "34acdb8af02d91ff326b487ff1b5cab48fb3f72f",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/34acdb8af02d91ff326b487ff1b5cab48fb3f72f",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:08Z"
+          }
+        }
+      },
       {
         "sha": "dcf56868593608c4608dcbd848895a0149e83f34",
         "html_url": "https://github.com/freegamestore-online/simon/commit/dcf56868593608c4608dcbd848895a0149e83f34",
@@ -822,25 +832,25 @@
             "date": "2026-05-26T04:19:06Z"
           }
         }
-      },
-      {
-        "sha": "dcc3cb783255916165508f9d8d9ed9c11e232abd",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/dcc3cb783255916165508f9d8d9ed9c11e232abd",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:37Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-05-27T12:18:48Z"
+      "pushed_at": "2026-06-01T23:20:16Z"
     },
     "commits": [
+      {
+        "sha": "6d578f5e16db30cd7cdf53dc195d6fd390999d16",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/6d578f5e16db30cd7cdf53dc195d6fd390999d16",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:14Z"
+          }
+        }
+      },
       {
         "sha": "dedcb78fc5ab30081c3b7c4da70cb316c7c049b5",
         "html_url": "https://github.com/freegamestore-online/snake/commit/dedcb78fc5ab30081c3b7c4da70cb316c7c049b5",
@@ -860,25 +870,25 @@
             "date": "2026-05-26T04:19:11Z"
           }
         }
-      },
-      {
-        "sha": "8469cda56fd01f8618d014181defca01ba1ff70d",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/8469cda56fd01f8618d014181defca01ba1ff70d",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:39Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-05-27T12:19:34Z"
+      "pushed_at": "2026-06-01T23:20:40Z"
     },
     "commits": [
+      {
+        "sha": "400b98e6cf1c7dedbc8fc65a6c15ed3805ba1fae",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/400b98e6cf1c7dedbc8fc65a6c15ed3805ba1fae",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:38Z"
+          }
+        }
+      },
       {
         "sha": "4fb67dff34accef895b1ca961da1ba83627d507a",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/4fb67dff34accef895b1ca961da1ba83627d507a",
@@ -898,25 +908,25 @@
             "date": "2026-05-26T04:19:39Z"
           }
         }
-      },
-      {
-        "sha": "ae92b256cb024b2079fd5eb23050b2bf75fdbc99",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/ae92b256cb024b2079fd5eb23050b2bf75fdbc99",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:45Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-05-27T12:18:59Z"
+      "pushed_at": "2026-06-01T23:20:25Z"
     },
     "commits": [
+      {
+        "sha": "9ce97bdccf66b5f47e694f4507e0ea882eefb424",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/9ce97bdccf66b5f47e694f4507e0ea882eefb424",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:23Z"
+          }
+        }
+      },
       {
         "sha": "121f309e85a5e95093bd10cd85bec680c66320af",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/121f309e85a5e95093bd10cd85bec680c66320af",
@@ -936,25 +946,35 @@
             "date": "2026-05-26T04:19:21Z"
           }
         }
-      },
-      {
-        "sha": "76f442838e004f8a1c4fb5bd171826cc917c116b",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/76f442838e004f8a1c4fb5bd171826cc917c116b",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:41Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-05-27T12:19:18Z"
+      "pushed_at": "2026-06-01T23:20:34Z"
     },
     "commits": [
+      {
+        "sha": "a36b351a9901f1d3848db23cb3fe11d7309027fc",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/a36b351a9901f1d3848db23cb3fe11d7309027fc",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:32Z"
+          }
+        }
+      },
+      {
+        "sha": "8e05897b722414496dccc3009cecbde215aeb23e",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/8e05897b722414496dccc3009cecbde215aeb23e",
+        "commit": {
+          "message": "fix: move Left/Right to far edges of touch controls\n\nReorder mobile controls to [Left] [Rotate] [Down] [Drop] [Right] so Left\nsits on the far left and Right on the far right, with Rotate/Down/Drop\nclustered inside. Previously Right was in column 4 and Drop occupied the\nfar-right slot.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:11:30Z"
+          }
+        }
+      },
       {
         "sha": "7a2a9ef9614f29df016014420f5c1948d7e38a7b",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/7a2a9ef9614f29df016014420f5c1948d7e38a7b",
@@ -964,35 +984,25 @@
             "date": "2026-05-27T12:19:08Z"
           }
         }
-      },
-      {
-        "sha": "455b27744c8bd19d4acbdf86ec150be4dcad6f51",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/455b27744c8bd19d4acbdf86ec150be4dcad6f51",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:29Z"
-          }
-        }
-      },
-      {
-        "sha": "c39ba7ee6e85a6061dabef2182918ad3ee71ba3b",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/c39ba7ee6e85a6061dabef2182918ad3ee71ba3b",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:44Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-05-27T12:17:53Z"
+      "pushed_at": "2026-06-01T23:19:47Z"
     },
     "commits": [
+      {
+        "sha": "f991721d5f0e11e19d9054efc7a9a0fcebb76a11",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/f991721d5f0e11e19d9054efc7a9a0fcebb76a11",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:44Z"
+          }
+        }
+      },
       {
         "sha": "4b8ca21a2673a480c914ac2b684fbeb1ea9aa59d",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/4b8ca21a2673a480c914ac2b684fbeb1ea9aa59d",
@@ -1012,25 +1022,25 @@
             "date": "2026-05-26T04:18:40Z"
           }
         }
-      },
-      {
-        "sha": "5c4649754c7d1f65d35869df3261a3d361a6c069",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/5c4649754c7d1f65d35869df3261a3d361a6c069",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:29:21Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-05-27T12:18:15Z"
+      "pushed_at": "2026-06-01T23:19:58Z"
     },
     "commits": [
+      {
+        "sha": "9f9bd4e6fc10f392b6bf7679dfd6459baf8ad084",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/9f9bd4e6fc10f392b6bf7679dfd6459baf8ad084",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:56Z"
+          }
+        }
+      },
       {
         "sha": "db2152ec78877a2ed0d42d3d89c50ef29a105cea",
         "html_url": "https://github.com/freegamestore-online/pong/commit/db2152ec78877a2ed0d42d3d89c50ef29a105cea",
@@ -1050,25 +1060,25 @@
             "date": "2026-05-26T04:18:51Z"
           }
         }
-      },
-      {
-        "sha": "40dfded0745b7d22d5e8ba93acb3c5ebc6460aa5",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/40dfded0745b7d22d5e8ba93acb3c5ebc6460aa5",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:34Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-05-27T12:19:03Z"
+      "pushed_at": "2026-06-01T23:20:29Z"
     },
     "commits": [
+      {
+        "sha": "3b15877fb9047dfa1164f855c5083c327102387d",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/3b15877fb9047dfa1164f855c5083c327102387d",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:26Z"
+          }
+        }
+      },
       {
         "sha": "ab202df06ccc5c2f7d2357d46b9984b04167a73c",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/ab202df06ccc5c2f7d2357d46b9984b04167a73c",
@@ -1088,25 +1098,25 @@
             "date": "2026-05-26T04:19:23Z"
           }
         }
-      },
-      {
-        "sha": "363284e0fb7d70691c4f13c01f4f267ccb430f55",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/363284e0fb7d70691c4f13c01f4f267ccb430f55",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-05-27T12:19:41Z"
+      "pushed_at": "2026-06-01T23:20:46Z"
     },
     "commits": [
+      {
+        "sha": "63c0715e21811b1f846b6219a9acb7a3706f9a68",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/63c0715e21811b1f846b6219a9acb7a3706f9a68",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:44Z"
+          }
+        }
+      },
       {
         "sha": "281af40acb594fb0913c42178665b5bb6e757f55",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/281af40acb594fb0913c42178665b5bb6e757f55",
@@ -1126,25 +1136,35 @@
             "date": "2026-05-26T04:19:45Z"
           }
         }
-      },
-      {
-        "sha": "686e410b6f0a9d6f564b7e9bb27bcfc61ae7b8cf",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/686e410b6f0a9d6f564b7e9bb27bcfc61ae7b8cf",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:47Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-05-27T12:18:52Z"
+      "pushed_at": "2026-06-01T23:20:20Z"
     },
     "commits": [
+      {
+        "sha": "66cdc547ddbe483f06d2382fd626b2adda69d461",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/66cdc547ddbe483f06d2382fd626b2adda69d461",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:17Z"
+          }
+        }
+      },
+      {
+        "sha": "2a454b8fad9336070f3bebbea9c06ac78504d44e",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/2a454b8fad9336070f3bebbea9c06ac78504d44e",
+        "commit": {
+          "message": "fix: single topbar + reliable card selection\n\n- Remove the duplicate in-game stats bar; fold Moves/Time into the\n  platform GameTopbar stats and move Undo into its actions slot, matching\n  the single-topbar convention used by every other game.\n- Fix card selection: tapping a new card after selecting one now\n  re-targets the selection instead of clearing it (tryMove reports\n  success; illegal moves re-select the tapped card). Extracted a pure\n  computeMove() and moved side effects out of the setState updater.\n- Stronger selection highlight (accent ring + tint + bigger lift).\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:11:03Z"
+          }
+        }
+      },
       {
         "sha": "0854d4699905bbb7b9092f969ffe4ed4b376f331",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/0854d4699905bbb7b9092f969ffe4ed4b376f331",
@@ -1154,35 +1174,25 @@
             "date": "2026-05-27T12:18:48Z"
           }
         }
-      },
-      {
-        "sha": "4e5ee58ce4ba0bb5401c433dcd03797df3dec68d",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/4e5ee58ce4ba0bb5401c433dcd03797df3dec68d",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:15Z"
-          }
-        }
-      },
-      {
-        "sha": "0ed5aa3ce72c0eef40041134153900518bc0b1cd",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/0ed5aa3ce72c0eef40041134153900518bc0b1cd",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:40Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-05-27T12:19:37Z"
+      "pushed_at": "2026-06-01T23:20:43Z"
     },
     "commits": [
+      {
+        "sha": "e0e520cd844a57f470e881a3239926aaf9133711",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/e0e520cd844a57f470e881a3239926aaf9133711",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:41Z"
+          }
+        }
+      },
       {
         "sha": "7cc578f48b596ccc354efe3a3eeffda2ab116b79",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/7cc578f48b596ccc354efe3a3eeffda2ab116b79",
@@ -1202,25 +1212,25 @@
             "date": "2026-05-26T04:19:42Z"
           }
         }
-      },
-      {
-        "sha": "a8d23fea318c6c1aaed03ae0bb6765356b87335c",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/a8d23fea318c6c1aaed03ae0bb6765356b87335c",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-05-27T12:18:44Z"
+      "pushed_at": "2026-06-01T23:20:13Z"
     },
     "commits": [
+      {
+        "sha": "6261d093bec8e00aed2b0b8d213aeefd7cc241eb",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/6261d093bec8e00aed2b0b8d213aeefd7cc241eb",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:11Z"
+          }
+        }
+      },
       {
         "sha": "6014faf87550a67984f72c97c3d38534a76c6687",
         "html_url": "https://github.com/freegamestore-online/slither/commit/6014faf87550a67984f72c97c3d38534a76c6687",
@@ -1240,25 +1250,25 @@
             "date": "2026-05-26T04:19:08Z"
           }
         }
-      },
-      {
-        "sha": "f05c12be3f623b3dd13a1161afd188c03c93800d",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/f05c12be3f623b3dd13a1161afd188c03c93800d",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:38Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-05-27T12:16:35Z"
+      "pushed_at": "2026-06-01T23:19:11Z"
     },
     "commits": [
+      {
+        "sha": "00cd4ba8dce9dc5a691f9880bdd3f1980302f8e0",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/00cd4ba8dce9dc5a691f9880bdd3f1980302f8e0",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:08Z"
+          }
+        }
+      },
       {
         "sha": "5ae5e2d42ffbb4fb055f8abac78c1dbb56122a7e",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/5ae5e2d42ffbb4fb055f8abac78c1dbb56122a7e",
@@ -1276,16 +1286,6 @@
           "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-26T04:18:06Z"
-          }
-        }
-      },
-      {
-        "sha": "20405433bf86712c63d4dd6b7a1e163ed085c4bf",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/20405433bf86712c63d4dd6b7a1e163ed085c4bf",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:19Z"
           }
         }
       }
@@ -1370,9 +1370,19 @@
   "freegamestore-online/blackjack": {
     "meta": {
       "created_at": "2026-05-18T23:17:31Z",
-      "pushed_at": "2026-05-27T12:18:30Z"
+      "pushed_at": "2026-06-01T23:18:53Z"
     },
     "commits": [
+      {
+        "sha": "1a9d61312252a3ea2cca1210059022e7124ce769",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/1a9d61312252a3ea2cca1210059022e7124ce769",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:18:50Z"
+          }
+        }
+      },
       {
         "sha": "0f973fa34e51ef3e9477449afe9281b1ffe9a7aa",
         "html_url": "https://github.com/freegamestore-online/blackjack/commit/0f973fa34e51ef3e9477449afe9281b1ffe9a7aa",
@@ -1392,25 +1402,25 @@
             "date": "2026-05-27T12:16:04Z"
           }
         }
-      },
-      {
-        "sha": "6e65370f2e53c3da89f5fb701337c2c09e82417a",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/6e65370f2e53c3da89f5fb701337c2c09e82417a",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:17:45Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bubbleshooter": {
     "meta": {
       "created_at": "2026-05-18T23:17:44Z",
-      "pushed_at": "2026-05-27T12:18:34Z"
+      "pushed_at": "2026-06-01T23:19:02Z"
     },
     "commits": [
+      {
+        "sha": "82570eb94e49f01b61f97286223923aca5c8d240",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/82570eb94e49f01b61f97286223923aca5c8d240",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:18:59Z"
+          }
+        }
+      },
       {
         "sha": "8f48157c147543124df2012f4eff52c2da89dc6b",
         "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/8f48157c147543124df2012f4eff52c2da89dc6b",
@@ -1430,25 +1440,25 @@
             "date": "2026-05-27T12:16:15Z"
           }
         }
-      },
-      {
-        "sha": "ec9bc080f81d4863ec9e9477826908666ebe7401",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/ec9bc080f81d4863ec9e9477826908666ebe7401",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:17:54Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceinvaders": {
     "meta": {
       "created_at": "2026-05-18T23:17:56Z",
-      "pushed_at": "2026-05-27T12:18:55Z"
+      "pushed_at": "2026-06-01T23:20:23Z"
     },
     "commits": [
+      {
+        "sha": "8e78f86bb2540ad9405b25ef2c2dc080821bcc14",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/8e78f86bb2540ad9405b25ef2c2dc080821bcc14",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:20Z"
+          }
+        }
+      },
       {
         "sha": "48197f1399a27f834c5e3935a5fb1e10d907a638",
         "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/48197f1399a27f834c5e3935a5fb1e10d907a638",
@@ -1468,25 +1478,25 @@
             "date": "2026-05-27T12:18:42Z"
           }
         }
-      },
-      {
-        "sha": "a3be5e661f6d3ab521c85c5e3234b88f20f6cc4a",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/a3be5e661f6d3ab521c85c5e3234b88f20f6cc4a",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:18Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/war": {
     "meta": {
       "created_at": "2026-05-19T00:05:08Z",
-      "pushed_at": "2026-05-27T12:19:31Z"
+      "pushed_at": "2026-06-01T23:21:04Z"
     },
     "commits": [
+      {
+        "sha": "e917df110244c88ec0c2fd7d398ea84588f6d622",
+        "html_url": "https://github.com/freegamestore-online/war/commit/e917df110244c88ec0c2fd7d398ea84588f6d622",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:21:01Z"
+          }
+        }
+      },
       {
         "sha": "bb86eea564141d61ef32ab060307ebc32f0eeb04",
         "html_url": "https://github.com/freegamestore-online/war/commit/bb86eea564141d61ef32ab060307ebc32f0eeb04",
@@ -1506,25 +1516,35 @@
             "date": "2026-05-27T12:18:50Z"
           }
         }
-      },
-      {
-        "sha": "34c6d529286e4082604057a3d8d8ded61a324002",
-        "html_url": "https://github.com/freegamestore-online/war/commit/34c6d529286e4082604057a3d8d8ded61a324002",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:36Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tanks": {
     "meta": {
       "created_at": "2026-05-19T00:51:54Z",
-      "pushed_at": "2026-05-27T12:19:07Z"
+      "pushed_at": "2026-06-01T23:20:31Z"
     },
     "commits": [
+      {
+        "sha": "195d93867c6d4a2af42db4ce13b5dcf9431808c0",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/195d93867c6d4a2af42db4ce13b5dcf9431808c0",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:29Z"
+          }
+        }
+      },
+      {
+        "sha": "0269e543171b139b2cb4af00341b30e04de176bd",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/0269e543171b139b2cb4af00341b30e04de176bd",
+        "commit": {
+          "message": "fix: make Level 2 passable + larger, reliable touch controls\n\n- Level 2 row 7 steel line (.S.S.S.S.S.S.) had only 1-tile gaps; tanks\n  are 2 tiles wide, so it bisected the field and was unwinnable. Opened\n  two 3-wide passages (.S...S.S...S.).\n- D-pad and Fire buttons enlarged; switched touchAction to \"none\" and\n  added pointer capture so presses near edges/corners register reliably\n  and held directions don't drop on finger jitter.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:11:12Z"
+          }
+        }
+      },
       {
         "sha": "27d3bdd524006f7b38adbb365f63fad1157974e9",
         "html_url": "https://github.com/freegamestore-online/tanks/commit/27d3bdd524006f7b38adbb365f63fad1157974e9",
@@ -1532,26 +1552,6 @@
           "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-27T12:19:03Z"
-          }
-        }
-      },
-      {
-        "sha": "70ce829f53b5437bc1727dcb81544b7f3a97d272",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/70ce829f53b5437bc1727dcb81544b7f3a97d272",
-        "commit": {
-          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:47Z"
-          }
-        }
-      },
-      {
-        "sha": "24b51e34d9ffe50d7100bf5c8bbd1c4e83fa726c",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/24b51e34d9ffe50d7100bf5c8bbd1c4e83fa726c",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:26Z"
           }
         }
       }
@@ -1598,9 +1598,19 @@
   "freegamestore-online/pinball": {
     "meta": {
       "created_at": "2026-05-19T02:33:08Z",
-      "pushed_at": "2026-05-27T12:18:38Z"
+      "pushed_at": "2026-06-01T23:19:50Z"
     },
     "commits": [
+      {
+        "sha": "dee12fb8aabf5b82c4db534f1f21148ed400f577",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/dee12fb8aabf5b82c4db534f1f21148ed400f577",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:47Z"
+          }
+        }
+      },
       {
         "sha": "35de70556dd71a9fa0604530dd58fc8fe5cf7945",
         "html_url": "https://github.com/freegamestore-online/pinball/commit/35de70556dd71a9fa0604530dd58fc8fe5cf7945",
@@ -1620,25 +1630,25 @@
             "date": "2026-05-27T12:17:54Z"
           }
         }
-      },
-      {
-        "sha": "7797f557d93d1a341b15409d9a7ec517f581c537",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/7797f557d93d1a341b15409d9a7ec517f581c537",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:45Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/quickdice": {
     "meta": {
       "created_at": "2026-05-06T04:45:04Z",
-      "pushed_at": "2026-05-27T12:18:25Z"
+      "pushed_at": "2026-06-01T23:20:01Z"
     },
     "commits": [
+      {
+        "sha": "51a748ca46d8fc4c8a60128cc4e03e233e767eff",
+        "html_url": "https://github.com/freegamestore-online/quickdice/commit/51a748ca46d8fc4c8a60128cc4e03e233e767eff",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:59Z"
+          }
+        }
+      },
       {
         "sha": "849fe09880042071d9a79fd3f335ce6a9e5919ea",
         "html_url": "https://github.com/freegamestore-online/quickdice/commit/849fe09880042071d9a79fd3f335ce6a9e5919ea",
@@ -1664,9 +1674,19 @@
   "freegamestore-online/dragontap": {
     "meta": {
       "created_at": "2026-05-06T04:15:50Z",
-      "pushed_at": "2026-05-27T12:16:43Z"
+      "pushed_at": "2026-06-01T23:19:17Z"
     },
     "commits": [
+      {
+        "sha": "9c59980d5614f5eb7ff590d0b0584f320401dd37",
+        "html_url": "https://github.com/freegamestore-online/dragontap/commit/9c59980d5614f5eb7ff590d0b0584f320401dd37",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:14Z"
+          }
+        }
+      },
       {
         "sha": "97ab536b94f402eaf75aa1db2270246dcc55d5f4",
         "html_url": "https://github.com/freegamestore-online/dragontap/commit/97ab536b94f402eaf75aa1db2270246dcc55d5f4",
@@ -1730,9 +1750,19 @@
   "freegamestore-online/musicbot": {
     "meta": {
       "created_at": "2026-05-27T14:50:52Z",
-      "pushed_at": "2026-05-28T02:33:47Z"
+      "pushed_at": "2026-06-01T23:19:43Z"
     },
     "commits": [
+      {
+        "sha": "3043940d6887e20ec81f227ff481cb6957153809",
+        "html_url": "https://github.com/freegamestore-online/musicbot/commit/3043940d6887e20ec81f227ff481cb6957153809",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:41Z"
+          }
+        }
+      },
       {
         "sha": "6a2f0aabac44119d789641ec2430b669001f1e33",
         "html_url": "https://github.com/freegamestore-online/musicbot/commit/6a2f0aabac44119d789641ec2430b669001f1e33",
@@ -1752,25 +1782,25 @@
             "date": "2026-05-27T23:45:38Z"
           }
         }
-      },
-      {
-        "sha": "58601fb8b0c3693dd43d54fede4e1fd8c8db9bfc",
-        "html_url": "https://github.com/freegamestore-online/musicbot/commit/58601fb8b0c3693dd43d54fede4e1fd8c8db9bfc",
-        "commit": {
-          "message": "chore: align .gitignore with canonical game template\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T14:52:27Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pixelcode": {
     "meta": {
       "created_at": "2026-05-27T14:50:59Z",
-      "pushed_at": "2026-05-28T02:33:50Z"
+      "pushed_at": "2026-06-01T23:19:52Z"
     },
     "commits": [
+      {
+        "sha": "7568f6551141f64b44a97c8d0551bf3486cd6a03",
+        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/7568f6551141f64b44a97c8d0551bf3486cd6a03",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:50Z"
+          }
+        }
+      },
       {
         "sha": "dba75c3cbc5b223388ce8f4491f88be753544585",
         "html_url": "https://github.com/freegamestore-online/pixelcode/commit/dba75c3cbc5b223388ce8f4491f88be753544585",
@@ -1790,25 +1820,25 @@
             "date": "2026-05-27T23:45:50Z"
           }
         }
-      },
-      {
-        "sha": "19d33456c00ef8d1b56638179ba403d6ca1c9a69",
-        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/19d33456c00ef8d1b56638179ba403d6ca1c9a69",
-        "commit": {
-          "message": "feat: initial release of PixelCode — pixel art coding game\n\nWrite code to paint pixel art on a grid. Learn programming with colors,\ndots, lines, and loops through 12 progressive levels.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T14:52:09Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/roboclean": {
     "meta": {
       "created_at": "2026-05-27T14:51:03Z",
-      "pushed_at": "2026-05-28T02:33:53Z"
+      "pushed_at": "2026-06-01T23:20:07Z"
     },
     "commits": [
+      {
+        "sha": "639eda3ac0c91ce1538ddf344167e203de80a611",
+        "html_url": "https://github.com/freegamestore-online/roboclean/commit/639eda3ac0c91ce1538ddf344167e203de80a611",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:05Z"
+          }
+        }
+      },
       {
         "sha": "35745614aba42529393f11ab31c0d7128f36fcb3",
         "html_url": "https://github.com/freegamestore-online/roboclean/commit/35745614aba42529393f11ab31c0d7128f36fcb3",
@@ -1828,25 +1858,25 @@
             "date": "2026-05-27T23:45:52Z"
           }
         }
-      },
-      {
-        "sha": "ba59418666726f0dbb45652f4d2354afb6c16e91",
-        "html_url": "https://github.com/freegamestore-online/roboclean/commit/ba59418666726f0dbb45652f4d2354afb6c16e91",
-        "commit": {
-          "message": "feat: initial release of RoboClean — robot cleaning coding game\n\nProgram a robot vacuum to clean rooms. Learn loops, conditionals, and\nsensors through 12 progressive levels plus sandbox mode.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T14:52:13Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/turtlecode": {
     "meta": {
       "created_at": "2026-05-27T14:51:06Z",
-      "pushed_at": "2026-05-28T02:33:56Z"
+      "pushed_at": "2026-06-01T23:20:37Z"
     },
     "commits": [
+      {
+        "sha": "e949368f61aa547965ddc9b54e0882a2a7f2aacf",
+        "html_url": "https://github.com/freegamestore-online/turtlecode/commit/e949368f61aa547965ddc9b54e0882a2a7f2aacf",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:35Z"
+          }
+        }
+      },
       {
         "sha": "6dfb15610be2230a833780bb3d78478a76de0ca1",
         "html_url": "https://github.com/freegamestore-online/turtlecode/commit/6dfb15610be2230a833780bb3d78478a76de0ca1",
@@ -1864,16 +1894,6 @@
           "message": "fix: add PWA setup (vite-plugin-pwa, manifest, icons, meta tags)\n\nRequired for FGS compliance and deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-27T23:45:54Z"
-          }
-        }
-      },
-      {
-        "sha": "ef0495f30de2452973c5e0d279330b53bfe76947",
-        "html_url": "https://github.com/freegamestore-online/turtlecode/commit/ef0495f30de2452973c5e0d279330b53bfe76947",
-        "commit": {
-          "message": "feat: initial release of TurtleCode — turtle graphics coding game\n\nWrite Logo-style code to draw with a turtle. Learn angles, loops, and\nfunctions through 15 progressive levels.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T14:52:18Z"
           }
         }
       }
