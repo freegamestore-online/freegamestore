@@ -1972,5 +1972,23 @@
         }
       }
     ]
+  },
+  "freegamestore-online/uno": {
+    "meta": {
+      "created_at": "2026-06-03T03:32:48Z",
+      "pushed_at": "2026-06-03T03:32:52Z"
+    },
+    "commits": [
+      {
+        "sha": "6ab472dd953e6bba060debc49a44317284df3467",
+        "html_url": "https://github.com/freegamestore-online/uno/commit/6ab472dd953e6bba060debc49a44317284df3467",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-06-03T03:32:52Z"
+          }
+        }
+      }
+    ]
   }
 }
