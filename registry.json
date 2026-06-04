@@ -1050,48 +1050,6 @@
       "type": "standalone",
       "developer": "FreeGameStore",
       "creatorGithub": "dawsonhuang0"
-    },
-    {
-      "id": "mcp-smoke-test",
-      "name": "mcp-smoke-test",
-      "category": "puzzle",
-      "icon": "\ud83c\udfae",
-      "iconBg": "#ecfdf5",
-      "description": "MCP grid verification \u2014 safe to delete",
-      "appUrl": "https://mcp-smoke-test.freegamestore.online",
-      "repo": "freegamestore-online/mcp-smoke-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "creatorGithub": "serge-ivo"
-    },
-    {
-      "id": "mcp-grid-demo",
-      "name": "mcp-grid-demo",
-      "category": "puzzle",
-      "icon": "\ud83c\udfae",
-      "iconBg": "#ecfdf5",
-      "description": "MCP grid demo \u2014 safe to delete",
-      "appUrl": "https://mcp-grid-demo.freegamestore.online",
-      "repo": "freegamestore-online/mcp-grid-demo",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "creatorGithub": "serge-ivo"
-    },
-    {
-      "id": "mcp-grid-demo3",
-      "name": "mcp-grid-demo3",
-      "category": "puzzle",
-      "icon": "\ud83c\udfae",
-      "iconBg": "#ecfdf5",
-      "description": "MCP grid demo \u2014 safe to delete",
-      "appUrl": "https://mcp-grid-demo3.freegamestore.online",
-      "repo": "freegamestore-online/mcp-grid-demo3",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "FreeGameStore",
-      "creatorGithub": "serge-ivo"
     }
   ]
 }
