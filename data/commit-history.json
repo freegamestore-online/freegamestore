@@ -2,9 +2,19 @@
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-06-01T23:19:14Z"
+      "pushed_at": "2026-06-04T06:19:19Z"
     },
     "commits": [
+      {
+        "sha": "2dcc52e2bb0d815906bd75b1e40d4616b7d5cdf4",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/2dcc52e2bb0d815906bd75b1e40d4616b7d5cdf4",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:16Z"
+          }
+        }
+      },
       {
         "sha": "11dfb214cfe99a0074c24b4c4643a45518ade146",
         "html_url": "https://github.com/freegamestore-online/dice/commit/11dfb214cfe99a0074c24b4c4643a45518ade146",
@@ -24,25 +34,25 @@
             "date": "2026-05-27T12:16:35Z"
           }
         }
-      },
-      {
-        "sha": "d204e3013611df64efb503d89067520fa23c85f0",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/d204e3013611df64efb503d89067520fa23c85f0",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:09Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-05-27T12:19:01Z"
+      "pushed_at": "2026-06-04T06:18:51Z"
     },
     "commits": [
+      {
+        "sha": "14ad40e6ba7c7851ff17d3ecefcac36f5da8930b",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/14ad40e6ba7c7851ff17d3ecefcac36f5da8930b",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:18:48Z"
+          }
+        }
+      },
       {
         "sha": "e81361719c2812cb7025200abdd507a07d9cafc0",
         "html_url": "https://github.com/freegamestore-online/chess/commit/e81361719c2812cb7025200abdd507a07d9cafc0",
@@ -62,25 +72,25 @@
             "date": "2026-05-27T12:16:23Z"
           }
         }
-      },
-      {
-        "sha": "b746422fa8b52a282a0df139bb3e9e19b3e563a8",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/b746422fa8b52a282a0df139bb3e9e19b3e563a8",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:00Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-06-01T23:18:50Z"
+      "pushed_at": "2026-06-04T06:15:51Z"
     },
     "commits": [
+      {
+        "sha": "08f71823b9488003ab903bfb871ccea4b38c9d27",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/08f71823b9488003ab903bfb871ccea4b38c9d27",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:15:46Z"
+          }
+        }
+      },
       {
         "sha": "47b4e21f92ce331b5e319fb31d63b6d922212ce2",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/47b4e21f92ce331b5e319fb31d63b6d922212ce2",
@@ -100,25 +110,25 @@
             "date": "2026-05-27T12:18:04Z"
           }
         }
-      },
-      {
-        "sha": "aaba00a2854805a2d8bb39e5a85a1a2cc6a07e85",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/aaba00a2854805a2d8bb39e5a85a1a2cc6a07e85",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:00Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-06-01T23:19:08Z"
+      "pushed_at": "2026-06-04T06:19:02Z"
     },
     "commits": [
+      {
+        "sha": "0cb243e7a1a137b7542ad43b66faf955cbec2ca4",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/0cb243e7a1a137b7542ad43b66faf955cbec2ca4",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:18:59Z"
+          }
+        }
+      },
       {
         "sha": "b34f0f6b3ba0c40cae62efdd99c6a2691c01a8af",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/b34f0f6b3ba0c40cae62efdd99c6a2691c01a8af",
@@ -138,25 +148,25 @@
             "date": "2026-05-27T12:16:27Z"
           }
         }
-      },
-      {
-        "sha": "f37a94e2ce05fe8495d3a4824f98e673e43bb0de",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/f37a94e2ce05fe8495d3a4824f98e673e43bb0de",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:02Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-06-01T23:18:59Z"
+      "pushed_at": "2026-06-04T06:18:07Z"
     },
     "commits": [
+      {
+        "sha": "e9ea76ae8837ad4f7e8fdc699cd68777d982a513",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/e9ea76ae8837ad4f7e8fdc699cd68777d982a513",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:18:01Z"
+          }
+        }
+      },
       {
         "sha": "1b84ea6e54c0a2131eb14742d2feafa7e551734b",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/1b84ea6e54c0a2131eb14742d2feafa7e551734b",
@@ -176,25 +186,25 @@
             "date": "2026-05-27T12:16:12Z"
           }
         }
-      },
-      {
-        "sha": "fc84911691c22091707ad42e5568b21dcab6a1b3",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/fc84911691c22091707ad42e5568b21dcab6a1b3",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:17:51Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-06-01T23:19:34Z"
+      "pushed_at": "2026-06-04T06:19:48Z"
     },
     "commits": [
+      {
+        "sha": "16a6395f5f13ece475fb8a03fe4379ab30c7933a",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/16a6395f5f13ece475fb8a03fe4379ab30c7933a",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:45Z"
+          }
+        }
+      },
       {
         "sha": "5e7c0ade843595407c8b26686434f0cca5ffeb09",
         "html_url": "https://github.com/freegamestore-online/match3/commit/5e7c0ade843595407c8b26686434f0cca5ffeb09",
@@ -214,25 +224,25 @@
             "date": "2026-05-27T12:17:03Z"
           }
         }
-      },
-      {
-        "sha": "aeb1b28535f2f8eb0d887f3565239f406ede554f",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/aeb1b28535f2f8eb0d887f3565239f406ede554f",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:29Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/platformer": {
     "meta": {
       "created_at": "2026-05-04T09:48:50Z",
-      "pushed_at": "2026-06-01T23:19:55Z"
+      "pushed_at": "2026-06-04T06:20:18Z"
     },
     "commits": [
+      {
+        "sha": "194c61ca0885deb66ec276d4730325db13697f07",
+        "html_url": "https://github.com/freegamestore-online/platformer/commit/194c61ca0885deb66ec276d4730325db13697f07",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:15Z"
+          }
+        }
+      },
       {
         "sha": "48833beb34d4e23141132aac02e2f83462ec049a",
         "html_url": "https://github.com/freegamestore-online/platformer/commit/48833beb34d4e23141132aac02e2f83462ec049a",
@@ -252,25 +262,25 @@
             "date": "2026-05-27T12:18:01Z"
           }
         }
-      },
-      {
-        "sha": "6488612969b7a47b02da51d830228c8e02619579",
-        "html_url": "https://github.com/freegamestore-online/platformer/commit/6488612969b7a47b02da51d830228c8e02619579",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:48Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-06-01T23:19:29Z"
+      "pushed_at": "2026-06-04T06:19:38Z"
     },
     "commits": [
+      {
+        "sha": "d8cd5963ebe0193ca988d6192236a09504b4c131",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/d8cd5963ebe0193ca988d6192236a09504b4c131",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:36Z"
+          }
+        }
+      },
       {
         "sha": "2e351de94ae723b25eea1f7a231c7e572dee0170",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/2e351de94ae723b25eea1f7a231c7e572dee0170",
@@ -290,25 +300,25 @@
             "date": "2026-05-27T12:16:55Z"
           }
         }
-      },
-      {
-        "sha": "03e27e4cee10c25178ce1c202b57ede487df46a2",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/03e27e4cee10c25178ce1c202b57ede487df46a2",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:22Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-06-01T23:18:47Z"
+      "pushed_at": "2026-06-04T06:15:37Z"
     },
     "commits": [
+      {
+        "sha": "5202facecb28b41c975bcb58ef2281ef01d08751",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/5202facecb28b41c975bcb58ef2281ef01d08751",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:15:34Z"
+          }
+        }
+      },
       {
         "sha": "8751686ddcb78f4810cff77049e656979a4f3da9",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/8751686ddcb78f4810cff77049e656979a4f3da9",
@@ -328,25 +338,25 @@
             "date": "2026-05-27T12:15:56Z"
           }
         }
-      },
-      {
-        "sha": "24d6f597de299e91260d434f08c9edfd067232a8",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/24d6f597de299e91260d434f08c9edfd067232a8",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:17:38Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-06-01T23:19:37Z"
+      "pushed_at": "2026-06-04T06:19:53Z"
     },
     "commits": [
+      {
+        "sha": "e765dedd0efd12be45e95b7ae271fbc452121632",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/e765dedd0efd12be45e95b7ae271fbc452121632",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:50Z"
+          }
+        }
+      },
       {
         "sha": "a2c1cdf34dd7dc814f00b337bf64f4067c07cdfe",
         "html_url": "https://github.com/freegamestore-online/memory/commit/a2c1cdf34dd7dc814f00b337bf64f4067c07cdfe",
@@ -366,25 +376,25 @@
             "date": "2026-05-27T12:17:09Z"
           }
         }
-      },
-      {
-        "sha": "425cb47834ff85a026b60976b631f8cc07dff7b8",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/425cb47834ff85a026b60976b631f8cc07dff7b8",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:31Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-06-01T23:19:23Z"
+      "pushed_at": "2026-06-04T06:19:29Z"
     },
     "commits": [
+      {
+        "sha": "80af5c5a9f1f5958a7b3e7e0045f9db19ed60f60",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/80af5c5a9f1f5958a7b3e7e0045f9db19ed60f60",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:25Z"
+          }
+        }
+      },
       {
         "sha": "ca8fd10f018abb4336803a24e012dc23ec0c873b",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/ca8fd10f018abb4336803a24e012dc23ec0c873b",
@@ -404,25 +414,25 @@
             "date": "2026-05-27T12:16:47Z"
           }
         }
-      },
-      {
-        "sha": "b65c4e43d4675e680dbef586573c5ddd6c9a1df9",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/b65c4e43d4675e680dbef586573c5ddd6c9a1df9",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:16Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-06-01T23:18:56Z"
+      "pushed_at": "2026-06-04T06:17:39Z"
     },
     "commits": [
+      {
+        "sha": "41e2455b7217117298878f039bc56e469ee687c0",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/41e2455b7217117298878f039bc56e469ee687c0",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:17:36Z"
+          }
+        }
+      },
       {
         "sha": "bbecb310a09fb4df65e3a400fa1cbd286c7cfb0a",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/bbecb310a09fb4df65e3a400fa1cbd286c7cfb0a",
@@ -442,25 +452,25 @@
             "date": "2026-05-27T12:16:08Z"
           }
         }
-      },
-      {
-        "sha": "a6c163aa7a46c3d285fd2c524700c9d7bb153271",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/a6c163aa7a46c3d285fd2c524700c9d7bb153271",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:17:48Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-06-01T23:19:20Z"
+      "pushed_at": "2026-06-04T06:19:24Z"
     },
     "commits": [
+      {
+        "sha": "77502b4233c4ed2301cb79170dc40dd8a323b8d8",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/77502b4233c4ed2301cb79170dc40dd8a323b8d8",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:21Z"
+          }
+        }
+      },
       {
         "sha": "5b8c39684191edb9dc5ae388088314060f18828b",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/5b8c39684191edb9dc5ae388088314060f18828b",
@@ -480,25 +490,25 @@
             "date": "2026-05-27T12:16:43Z"
           }
         }
-      },
-      {
-        "sha": "ff5fd67f82463c93ee30d1b048aeb8af7f2a37af",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/ff5fd67f82463c93ee30d1b048aeb8af7f2a37af",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:12Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-06-01T23:19:32Z"
+      "pushed_at": "2026-06-04T06:19:43Z"
     },
     "commits": [
+      {
+        "sha": "4c209b965a617a5c919177a3b0d23ee09cae46e1",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/4c209b965a617a5c919177a3b0d23ee09cae46e1",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:40Z"
+          }
+        }
+      },
       {
         "sha": "2598fe5f74013b49fb7ce6384e7391879f9e42f3",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/2598fe5f74013b49fb7ce6384e7391879f9e42f3",
@@ -518,25 +528,25 @@
             "date": "2026-05-27T12:16:59Z"
           }
         }
-      },
-      {
-        "sha": "2d80884cc0b9231f12d123ad6afe47ec649d9df4",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/2d80884cc0b9231f12d123ad6afe47ec649d9df4",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-06-01T23:19:26Z"
+      "pushed_at": "2026-06-04T06:19:34Z"
     },
     "commits": [
+      {
+        "sha": "e510b05f7bd153860cbd3fc08888dc17b43c041b",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/e510b05f7bd153860cbd3fc08888dc17b43c041b",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:31Z"
+          }
+        }
+      },
       {
         "sha": "e03f8c0b4784acc6d78655c1a0582dbb339ccf7d",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/e03f8c0b4784acc6d78655c1a0582dbb339ccf7d",
@@ -556,25 +566,25 @@
             "date": "2026-05-27T12:16:51Z"
           }
         }
-      },
-      {
-        "sha": "d2caca7f4ca8740db7beb3d2886ae43e21b39794",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/d2caca7f4ca8740db7beb3d2886ae43e21b39794",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:19Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-06-01T23:19:40Z"
+      "pushed_at": "2026-06-04T06:20:03Z"
     },
     "commits": [
+      {
+        "sha": "06997c98b21aa19e17f1e2500846de5c5d46fbd0",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/06997c98b21aa19e17f1e2500846de5c5d46fbd0",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:00Z"
+          }
+        }
+      },
       {
         "sha": "be32c3fbcecf3a3e290558c552d97ddd67aba018",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/be32c3fbcecf3a3e290558c552d97ddd67aba018",
@@ -594,25 +604,25 @@
             "date": "2026-05-27T12:17:27Z"
           }
         }
-      },
-      {
-        "sha": "47288099699e2d6cdda8ceb9d81d6d92e785ae87",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/47288099699e2d6cdda8ceb9d81d6d92e785ae87",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:38Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-06-01T23:20:04Z"
+      "pushed_at": "2026-06-04T06:20:35Z"
     },
     "commits": [
+      {
+        "sha": "92feea562b4377e02f465711b7a8c32fe6af2035",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/92feea562b4377e02f465711b7a8c32fe6af2035",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:32Z"
+          }
+        }
+      },
       {
         "sha": "24471f289f15fc83ef1b8e60289b755a1b5cbffd",
         "html_url": "https://github.com/freegamestore-online/racing/commit/24471f289f15fc83ef1b8e60289b755a1b5cbffd",
@@ -632,25 +642,25 @@
             "date": "2026-05-27T12:18:25Z"
           }
         }
-      },
-      {
-        "sha": "9e841dbde87ef02992fb18933a201aeb141ace64",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/9e841dbde87ef02992fb18933a201aeb141ace64",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:57Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-05-27T12:18:20Z"
+      "pushed_at": "2026-06-04T06:20:29Z"
     },
     "commits": [
+      {
+        "sha": "adb62ab6da62394cfbf84d927b71349d260e3eb7",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/adb62ab6da62394cfbf84d927b71349d260e3eb7",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:26Z"
+          }
+        }
+      },
       {
         "sha": "ab9f7d0520d10969a7631f2cd51100ae1c3b3838",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/ab9f7d0520d10969a7631f2cd51100ae1c3b3838",
@@ -670,25 +680,25 @@
             "date": "2026-05-26T04:18:54Z"
           }
         }
-      },
-      {
-        "sha": "ee389ebc45a3f378d04baa4594368f12c1c8d84b",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/ee389ebc45a3f378d04baa4594368f12c1c8d84b",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:29:32Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-05-27T12:17:26Z"
+      "pushed_at": "2026-06-04T06:19:58Z"
     },
     "commits": [
+      {
+        "sha": "16c10a767b047b83a03e62b63723c43d910a718b",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/16c10a767b047b83a03e62b63723c43d910a718b",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:55Z"
+          }
+        }
+      },
       {
         "sha": "ec702b7f9c66aee9813d42546ce437a6c7964076",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/ec702b7f9c66aee9813d42546ce437a6c7964076",
@@ -708,25 +718,25 @@
             "date": "2026-05-26T04:18:34Z"
           }
         }
-      },
-      {
-        "sha": "72ea49f82bedfa5864660e5fd85a77e64b8d068b",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/72ea49f82bedfa5864660e5fd85a77e64b8d068b",
-        "commit": {
-          "message": "fix: add PWA home screen tags (apple-touch-icon, status-bar-style)\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-25T10:14:31Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-06-01T23:18:44Z"
+      "pushed_at": "2026-06-04T06:15:22Z"
     },
     "commits": [
+      {
+        "sha": "c6a7fd7972f1b49eebd8f8191bd0a5f815d9abf2",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/c6a7fd7972f1b49eebd8f8191bd0a5f815d9abf2",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:15:17Z"
+          }
+        }
+      },
       {
         "sha": "6f1f9746251d50b9243429a301d9ea2e8b1d764a",
         "html_url": "https://github.com/freegamestore-online/2048/commit/6f1f9746251d50b9243429a301d9ea2e8b1d764a",
@@ -746,25 +756,25 @@
             "date": "2026-05-27T12:15:53Z"
           }
         }
-      },
-      {
-        "sha": "65149ee686a1341911278e9835fc8d616047fba3",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/65149ee686a1341911278e9835fc8d616047fba3",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:17:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-06-01T23:19:05Z"
+      "pushed_at": "2026-06-04T06:18:37Z"
     },
     "commits": [
+      {
+        "sha": "c582b8ec356c7a9148c136916dcdda5bd495f5c2",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/c582b8ec356c7a9148c136916dcdda5bd495f5c2",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:18:34Z"
+          }
+        }
+      },
       {
         "sha": "4bd6fa06abe8c0c6ae35ea1f89dba8cc0ca5958f",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/4bd6fa06abe8c0c6ae35ea1f89dba8cc0ca5958f",
@@ -784,25 +794,25 @@
             "date": "2026-05-27T12:16:19Z"
           }
         }
-      },
-      {
-        "sha": "5d550588ecb632a7b4f779785b4a88883505742d",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/5d550588ecb632a7b4f779785b4a88883505742d",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:17:56Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-06-01T23:20:11Z"
+      "pushed_at": "2026-06-04T06:20:49Z"
     },
     "commits": [
+      {
+        "sha": "f5494379de09c28e2b50f58572970cf467a286f8",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/f5494379de09c28e2b50f58572970cf467a286f8",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:47Z"
+          }
+        }
+      },
       {
         "sha": "34acdb8af02d91ff326b487ff1b5cab48fb3f72f",
         "html_url": "https://github.com/freegamestore-online/simon/commit/34acdb8af02d91ff326b487ff1b5cab48fb3f72f",
@@ -822,25 +832,25 @@
             "date": "2026-05-27T12:18:37Z"
           }
         }
-      },
-      {
-        "sha": "2c02692376401ec04ef36736a1fc5520e8f4577f",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/2c02692376401ec04ef36736a1fc5520e8f4577f",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:06Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-06-01T23:20:16Z"
+      "pushed_at": "2026-06-04T06:20:59Z"
     },
     "commits": [
+      {
+        "sha": "6d70863305338379ab4112362b3f8b5051a57858",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/6d70863305338379ab4112362b3f8b5051a57858",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:56Z"
+          }
+        }
+      },
       {
         "sha": "6d578f5e16db30cd7cdf53dc195d6fd390999d16",
         "html_url": "https://github.com/freegamestore-online/snake/commit/6d578f5e16db30cd7cdf53dc195d6fd390999d16",
@@ -860,25 +870,25 @@
             "date": "2026-05-27T12:18:45Z"
           }
         }
-      },
-      {
-        "sha": "a63d41c00b58f83dc1479a6010db77c9cd6f1b32",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/a63d41c00b58f83dc1479a6010db77c9cd6f1b32",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:11Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-06-01T23:20:40Z"
+      "pushed_at": "2026-06-04T06:21:39Z"
     },
     "commits": [
+      {
+        "sha": "7f5477a8f921024b12b0a9174f314ad8c012fb7c",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/7f5477a8f921024b12b0a9174f314ad8c012fb7c",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:21:37Z"
+          }
+        }
+      },
       {
         "sha": "400b98e6cf1c7dedbc8fc65a6c15ed3805ba1fae",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/400b98e6cf1c7dedbc8fc65a6c15ed3805ba1fae",
@@ -898,25 +908,25 @@
             "date": "2026-05-27T12:19:31Z"
           }
         }
-      },
-      {
-        "sha": "0f1dc6d4fb2525fb505e1dfeeb7685ebb0db136e",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/0f1dc6d4fb2525fb505e1dfeeb7685ebb0db136e",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:39Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-06-01T23:20:25Z"
+      "pushed_at": "2026-06-04T06:21:10Z"
     },
     "commits": [
+      {
+        "sha": "fb619a59401859dd3b1a583ab1f8ca8322285956",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/fb619a59401859dd3b1a583ab1f8ca8322285956",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:21:07Z"
+          }
+        }
+      },
       {
         "sha": "9ce97bdccf66b5f47e694f4507e0ea882eefb424",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/9ce97bdccf66b5f47e694f4507e0ea882eefb424",
@@ -936,25 +946,25 @@
             "date": "2026-05-27T12:18:56Z"
           }
         }
-      },
-      {
-        "sha": "288d7121863577c9fed173de92be0d31b8f74b21",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/288d7121863577c9fed173de92be0d31b8f74b21",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:21Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-06-01T23:20:34Z"
+      "pushed_at": "2026-06-04T06:21:25Z"
     },
     "commits": [
+      {
+        "sha": "5c8ef345ce0939d5018bcb17c2ea3114c9acc5f8",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/5c8ef345ce0939d5018bcb17c2ea3114c9acc5f8",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:21:22Z"
+          }
+        }
+      },
       {
         "sha": "a36b351a9901f1d3848db23cb3fe11d7309027fc",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/a36b351a9901f1d3848db23cb3fe11d7309027fc",
@@ -974,25 +984,25 @@
             "date": "2026-06-01T23:11:30Z"
           }
         }
-      },
-      {
-        "sha": "7a2a9ef9614f29df016014420f5c1948d7e38a7b",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/7a2a9ef9614f29df016014420f5c1948d7e38a7b",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:19:08Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-06-01T23:19:47Z"
+      "pushed_at": "2026-06-04T06:20:08Z"
     },
     "commits": [
+      {
+        "sha": "26b08062423f1756e96d50d3dba6bf7dd8890e65",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/26b08062423f1756e96d50d3dba6bf7dd8890e65",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:06Z"
+          }
+        }
+      },
       {
         "sha": "f991721d5f0e11e19d9054efc7a9a0fcebb76a11",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/f991721d5f0e11e19d9054efc7a9a0fcebb76a11",
@@ -1012,25 +1022,25 @@
             "date": "2026-05-27T12:17:45Z"
           }
         }
-      },
-      {
-        "sha": "785b3f22498212c9e596787b6c70209cc178304b",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/785b3f22498212c9e596787b6c70209cc178304b",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:40Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pong": {
     "meta": {
       "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-06-01T23:19:58Z"
+      "pushed_at": "2026-06-04T06:20:24Z"
     },
     "commits": [
+      {
+        "sha": "673779416bd83e046f8e9756c61e984614967742",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/673779416bd83e046f8e9756c61e984614967742",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:21Z"
+          }
+        }
+      },
       {
         "sha": "9f9bd4e6fc10f392b6bf7679dfd6459baf8ad084",
         "html_url": "https://github.com/freegamestore-online/pong/commit/9f9bd4e6fc10f392b6bf7679dfd6459baf8ad084",
@@ -1050,25 +1060,25 @@
             "date": "2026-05-27T12:18:10Z"
           }
         }
-      },
-      {
-        "sha": "247ab0e5e4318707a9aa9e357a96d79b2c2478bd",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/247ab0e5e4318707a9aa9e357a96d79b2c2478bd",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:51Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-06-01T23:20:29Z"
+      "pushed_at": "2026-06-04T06:21:15Z"
     },
     "commits": [
+      {
+        "sha": "47ffe492383f05a71075f5ed090cc55a50c771ed",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/47ffe492383f05a71075f5ed090cc55a50c771ed",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:21:12Z"
+          }
+        }
+      },
       {
         "sha": "3b15877fb9047dfa1164f855c5083c327102387d",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/3b15877fb9047dfa1164f855c5083c327102387d",
@@ -1088,25 +1098,25 @@
             "date": "2026-05-27T12:18:59Z"
           }
         }
-      },
-      {
-        "sha": "712089aa835486dfa13a4e024f3d51b5551bbc84",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/712089aa835486dfa13a4e024f3d51b5551bbc84",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:23Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-06-01T23:20:46Z"
+      "pushed_at": "2026-06-04T06:21:50Z"
     },
     "commits": [
+      {
+        "sha": "72ded7fe0ef5c5d338a5c75c9372b68e5d474ad2",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/72ded7fe0ef5c5d338a5c75c9372b68e5d474ad2",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:21:47Z"
+          }
+        }
+      },
       {
         "sha": "63c0715e21811b1f846b6219a9acb7a3706f9a68",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/63c0715e21811b1f846b6219a9acb7a3706f9a68",
@@ -1126,25 +1136,25 @@
             "date": "2026-05-27T12:19:38Z"
           }
         }
-      },
-      {
-        "sha": "5addb6d97480066fbd79b7a7d10e60f2b6f5c084",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/5addb6d97480066fbd79b7a7d10e60f2b6f5c084",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:45Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-06-01T23:20:20Z"
+      "pushed_at": "2026-06-04T06:10:41Z"
     },
     "commits": [
+      {
+        "sha": "bfadb144abb6351b9a0ec460aeed8105d0e63902",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/bfadb144abb6351b9a0ec460aeed8105d0e63902",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI's `pnpm install --frozen-lockfile` has failed on every push since the\n0.14.0 SDK bump (commit 4e5ee58, 2026-05-26) updated web/package.json but\nnot the lockfile (ERR_PNPM_OUTDATED_LOCKFILE: lockfile ^0.13.3 vs manifest\n^0.14.0). Result: no build, no deploy for ~2 weeks — the live site still\nserves the 2026-05-21 build, so the topbar/selection/zoom fixes never\nshipped. Regenerating the lockfile unblocks the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:10:37Z"
+          }
+        }
+      },
       {
         "sha": "66cdc547ddbe483f06d2382fd626b2adda69d461",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/66cdc547ddbe483f06d2382fd626b2adda69d461",
@@ -1164,25 +1174,25 @@
             "date": "2026-06-01T23:11:03Z"
           }
         }
-      },
-      {
-        "sha": "0854d4699905bbb7b9092f969ffe4ed4b376f331",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/0854d4699905bbb7b9092f969ffe4ed4b376f331",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:48Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-06-01T23:20:43Z"
+      "pushed_at": "2026-06-04T06:21:44Z"
     },
     "commits": [
+      {
+        "sha": "3f15b66e625ecf03653e57e68b9aaa76fc17436a",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/3f15b66e625ecf03653e57e68b9aaa76fc17436a",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:21:41Z"
+          }
+        }
+      },
       {
         "sha": "e0e520cd844a57f470e881a3239926aaf9133711",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/e0e520cd844a57f470e881a3239926aaf9133711",
@@ -1202,25 +1212,25 @@
             "date": "2026-05-27T12:19:34Z"
           }
         }
-      },
-      {
-        "sha": "529df976ba48456b2effbc1cd23595a2ca1aff85",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/529df976ba48456b2effbc1cd23595a2ca1aff85",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slither": {
     "meta": {
       "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-06-01T23:20:13Z"
+      "pushed_at": "2026-06-04T06:20:54Z"
     },
     "commits": [
+      {
+        "sha": "6ff5e39610dbf808fbe9116e91cacf315640519f",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/6ff5e39610dbf808fbe9116e91cacf315640519f",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:51Z"
+          }
+        }
+      },
       {
         "sha": "6261d093bec8e00aed2b0b8d213aeefd7cc241eb",
         "html_url": "https://github.com/freegamestore-online/slither/commit/6261d093bec8e00aed2b0b8d213aeefd7cc241eb",
@@ -1240,25 +1250,25 @@
             "date": "2026-05-27T12:18:41Z"
           }
         }
-      },
-      {
-        "sha": "27a310153fdc5f4c70139d6470cab572590e44c4",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/27a310153fdc5f4c70139d6470cab572590e44c4",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:08Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-06-01T23:19:11Z"
+      "pushed_at": "2026-06-04T06:19:14Z"
     },
     "commits": [
+      {
+        "sha": "faebef36ebbf2ff452f6cc8b83a2d5d57f729784",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/faebef36ebbf2ff452f6cc8b83a2d5d57f729784",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:11Z"
+          }
+        }
+      },
       {
         "sha": "00cd4ba8dce9dc5a691f9880bdd3f1980302f8e0",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/00cd4ba8dce9dc5a691f9880bdd3f1980302f8e0",
@@ -1278,25 +1288,25 @@
             "date": "2026-05-27T12:16:31Z"
           }
         }
-      },
-      {
-        "sha": "0ad7dcc4a78b5dfad2272bcbca6cc7c841e8fc71",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/0ad7dcc4a78b5dfad2272bcbca6cc7c841e8fc71",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:06Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/reversi": {
     "meta": {
       "created_at": "2026-05-18T23:16:14Z",
-      "pushed_at": "2026-05-27T12:18:33Z"
+      "pushed_at": "2026-06-04T06:20:39Z"
     },
     "commits": [
+      {
+        "sha": "6f2dd165cf89ccb97acf5f8890a7c3639bbe598e",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/6f2dd165cf89ccb97acf5f8890a7c3639bbe598e",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:37Z"
+          }
+        }
+      },
       {
         "sha": "809ed1c3e4d9f18734569cb62225b025a8130b69",
         "html_url": "https://github.com/freegamestore-online/reversi/commit/809ed1c3e4d9f18734569cb62225b025a8130b69",
@@ -1316,25 +1326,25 @@
             "date": "2026-05-26T04:19:00Z"
           }
         }
-      },
-      {
-        "sha": "30595127fc06b62b29f88a492a29f6b1d4eeb954",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/30595127fc06b62b29f88a492a29f6b1d4eeb954",
-        "commit": {
-          "message": "fix: declare maskable icon purpose for Android PWA install\n\nAndroid Chrome installs PWAs as launcher shortcuts (not real apps with\ntheir own task slot) unless the manifest declares at least one icon\nwith purpose: 'maskable'. Add 'any maskable' to both 192/512 entries\nso installs land in the app drawer with an adaptive icon.",
-          "author": {
-            "date": "2026-05-20T04:47:32Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tictactoe": {
     "meta": {
       "created_at": "2026-05-18T22:50:34Z",
-      "pushed_at": "2026-05-27T12:19:24Z"
+      "pushed_at": "2026-06-04T06:21:30Z"
     },
     "commits": [
+      {
+        "sha": "491c79cd9e53f719245f0ded44059db3728e0a0b",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/491c79cd9e53f719245f0ded44059db3728e0a0b",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:21:27Z"
+          }
+        }
+      },
       {
         "sha": "f7e3a07c2406abb06ef013cf25baab5dcdad4c2d",
         "html_url": "https://github.com/freegamestore-online/tictactoe/commit/f7e3a07c2406abb06ef013cf25baab5dcdad4c2d",
@@ -1354,25 +1364,25 @@
             "date": "2026-05-26T04:19:34Z"
           }
         }
-      },
-      {
-        "sha": "3480a902c8376c3a5cbd870511e2a81175fc7253",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/3480a902c8376c3a5cbd870511e2a81175fc7253",
-        "commit": {
-          "message": "Add platform analytics loader\n\nEmbeds <script src=\".../v1/analytics.js?app=<id>\" defer></script> into\nweb/index.html so visits start showing up in the creator dashboard. The\nloader is served from the platform Worker; tags evolve without a redeploy.",
-          "author": {
-            "date": "2026-05-21T02:30:01Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/blackjack": {
     "meta": {
       "created_at": "2026-05-18T23:17:31Z",
-      "pushed_at": "2026-06-01T23:18:53Z"
+      "pushed_at": "2026-06-04T06:16:11Z"
     },
     "commits": [
+      {
+        "sha": "099f93f0469f4a3b2cb21902b2fe9e4aec075d74",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/099f93f0469f4a3b2cb21902b2fe9e4aec075d74",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:16:05Z"
+          }
+        }
+      },
       {
         "sha": "1a9d61312252a3ea2cca1210059022e7124ce769",
         "html_url": "https://github.com/freegamestore-online/blackjack/commit/1a9d61312252a3ea2cca1210059022e7124ce769",
@@ -1392,25 +1402,25 @@
             "date": "2026-05-27T12:18:27Z"
           }
         }
-      },
-      {
-        "sha": "4d16733911b7ea5a7716330137556672a77bfa78",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/4d16733911b7ea5a7716330137556672a77bfa78",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:04Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bubbleshooter": {
     "meta": {
       "created_at": "2026-05-18T23:17:44Z",
-      "pushed_at": "2026-06-01T23:19:02Z"
+      "pushed_at": "2026-06-04T06:18:23Z"
     },
     "commits": [
+      {
+        "sha": "7760a7fda171f31eace191cb9d88240e12e7e467",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/7760a7fda171f31eace191cb9d88240e12e7e467",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:18:21Z"
+          }
+        }
+      },
       {
         "sha": "82570eb94e49f01b61f97286223923aca5c8d240",
         "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/82570eb94e49f01b61f97286223923aca5c8d240",
@@ -1430,25 +1440,25 @@
             "date": "2026-05-27T12:18:31Z"
           }
         }
-      },
-      {
-        "sha": "173ce175fe6c07c26e5505c62d39b894d506963a",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/173ce175fe6c07c26e5505c62d39b894d506963a",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:15Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceinvaders": {
     "meta": {
       "created_at": "2026-05-18T23:17:56Z",
-      "pushed_at": "2026-06-01T23:20:23Z"
+      "pushed_at": "2026-06-04T06:21:05Z"
     },
     "commits": [
+      {
+        "sha": "8b41c322a07ad4600370533747febc53f649214a",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/8b41c322a07ad4600370533747febc53f649214a",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:21:02Z"
+          }
+        }
+      },
       {
         "sha": "8e78f86bb2540ad9405b25ef2c2dc080821bcc14",
         "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/8e78f86bb2540ad9405b25ef2c2dc080821bcc14",
@@ -1468,25 +1478,25 @@
             "date": "2026-05-27T12:18:52Z"
           }
         }
-      },
-      {
-        "sha": "4d5fa1a6a5c6e8f968a34c680ff52a8f778a0b2d",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/4d5fa1a6a5c6e8f968a34c680ff52a8f778a0b2d",
-        "commit": {
-          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/war": {
     "meta": {
       "created_at": "2026-05-19T00:05:08Z",
-      "pushed_at": "2026-06-01T23:21:04Z"
+      "pushed_at": "2026-06-04T06:21:34Z"
     },
     "commits": [
+      {
+        "sha": "f31c4172a0abcb5f1690e636c37749ea5196c85e",
+        "html_url": "https://github.com/freegamestore-online/war/commit/f31c4172a0abcb5f1690e636c37749ea5196c85e",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:21:32Z"
+          }
+        }
+      },
       {
         "sha": "e917df110244c88ec0c2fd7d398ea84588f6d622",
         "html_url": "https://github.com/freegamestore-online/war/commit/e917df110244c88ec0c2fd7d398ea84588f6d622",
@@ -1506,25 +1516,25 @@
             "date": "2026-05-27T12:19:28Z"
           }
         }
-      },
-      {
-        "sha": "5d3f2a3e764dcc14470d3519ba3c9de2354cdff7",
-        "html_url": "https://github.com/freegamestore-online/war/commit/5d3f2a3e764dcc14470d3519ba3c9de2354cdff7",
-        "commit": {
-          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:50Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tanks": {
     "meta": {
       "created_at": "2026-05-19T00:51:54Z",
-      "pushed_at": "2026-06-01T23:20:31Z"
+      "pushed_at": "2026-06-04T06:21:20Z"
     },
     "commits": [
+      {
+        "sha": "d3056db8ed89a3d0ea83dbd4f5523371d8c406bb",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/d3056db8ed89a3d0ea83dbd4f5523371d8c406bb",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:21:17Z"
+          }
+        }
+      },
       {
         "sha": "195d93867c6d4a2af42db4ce13b5dcf9431808c0",
         "html_url": "https://github.com/freegamestore-online/tanks/commit/195d93867c6d4a2af42db4ce13b5dcf9431808c0",
@@ -1544,25 +1554,25 @@
             "date": "2026-06-01T23:11:12Z"
           }
         }
-      },
-      {
-        "sha": "27d3bdd524006f7b38adbb365f63fad1157974e9",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/27d3bdd524006f7b38adbb365f63fad1157974e9",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:19:03Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/riichi": {
     "meta": {
       "created_at": "2026-05-19T02:31:10Z",
-      "pushed_at": "2026-05-27T12:18:42Z"
+      "pushed_at": "2026-06-04T06:20:44Z"
     },
     "commits": [
+      {
+        "sha": "b452fd18a999e42f0e17e91569cf34e102ddbafa",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/b452fd18a999e42f0e17e91569cf34e102ddbafa",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:41Z"
+          }
+        }
+      },
       {
         "sha": "054d604961819c19f6097e1f46712b8cb2088919",
         "html_url": "https://github.com/freegamestore-online/riichi/commit/054d604961819c19f6097e1f46712b8cb2088919",
@@ -1582,25 +1592,25 @@
             "date": "2026-05-27T12:18:34Z"
           }
         }
-      },
-      {
-        "sha": "3b858e6b21728c84eb3f7ec5f178f78243a3f9c0",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/3b858e6b21728c84eb3f7ec5f178f78243a3f9c0",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:03Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pinball": {
     "meta": {
       "created_at": "2026-05-19T02:33:08Z",
-      "pushed_at": "2026-06-01T23:19:50Z"
+      "pushed_at": "2026-06-04T06:20:13Z"
     },
     "commits": [
+      {
+        "sha": "af4595173b090b08ac26c14ca31ae57bcf8e2d64",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/af4595173b090b08ac26c14ca31ae57bcf8e2d64",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:10Z"
+          }
+        }
+      },
       {
         "sha": "dee12fb8aabf5b82c4db534f1f21148ed400f577",
         "html_url": "https://github.com/freegamestore-online/pinball/commit/dee12fb8aabf5b82c4db534f1f21148ed400f577",
@@ -1618,16 +1628,6 @@
           "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-27T12:18:35Z"
-          }
-        }
-      },
-      {
-        "sha": "d28336b42235a1554bfbb0bbc53a5f58581357fb",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/d28336b42235a1554bfbb0bbc53a5f58581357fb",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:17:54Z"
           }
         }
       }
@@ -1986,6 +1986,24 @@
           "message": "Initial commit",
           "author": {
             "date": "2026-06-03T03:32:52Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/mcp-smoke-test": {
+    "meta": {
+      "created_at": "2026-06-04T07:33:26Z",
+      "pushed_at": "2026-06-04T07:33:30Z"
+    },
+    "commits": [
+      {
+        "sha": "8642b307801b01aac35d8ebdc1f6c52baecd5622",
+        "html_url": "https://github.com/freegamestore-online/mcp-smoke-test/commit/8642b307801b01aac35d8ebdc1f6c52baecd5622",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-06-04T07:33:29Z"
           }
         }
       }
