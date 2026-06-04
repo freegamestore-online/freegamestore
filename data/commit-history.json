@@ -1994,9 +1994,29 @@
   "freegamestore-online/mcp-smoke-test": {
     "meta": {
       "created_at": "2026-06-04T07:33:26Z",
-      "pushed_at": "2026-06-04T07:33:30Z"
+      "pushed_at": "2026-06-04T07:40:22Z"
     },
     "commits": [
+      {
+        "sha": "abaf4677d19857c85037cc582c3b0242c3f92bd8",
+        "html_url": "https://github.com/freegamestore-online/mcp-smoke-test/commit/abaf4677d19857c85037cc582c3b0242c3f92bd8",
+        "commit": {
+          "message": "MCP update_files verification",
+          "author": {
+            "date": "2026-06-04T07:40:21Z"
+          }
+        }
+      },
+      {
+        "sha": "d8c15cfbfe38f5faccfc500e0caf6f1e807894be",
+        "html_url": "https://github.com/freegamestore-online/mcp-smoke-test/commit/d8c15cfbfe38f5faccfc500e0caf6f1e807894be",
+        "commit": {
+          "message": "Initial mcp-smoke-test — scaffolded via MCP (canvas)",
+          "author": {
+            "date": "2026-06-04T07:39:39Z"
+          }
+        }
+      },
       {
         "sha": "8642b307801b01aac35d8ebdc1f6c52baecd5622",
         "html_url": "https://github.com/freegamestore-online/mcp-smoke-test/commit/8642b307801b01aac35d8ebdc1f6c52baecd5622",
