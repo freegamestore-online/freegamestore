@@ -35,6 +35,71 @@ Templates: `template-game-canvas` (2D), `template-game-grid` (puzzle), `template
 
 ---
 
+## MCP Server
+
+The FreeGameStore MCP server lets an AI agent drive the **full game lifecycle from inside your editor** — not just read-only info. Endpoint: `https://mcp.freegamestore.online/mcp` (Streamable HTTP).
+
+### Connect
+
+**Claude Code:**
+```bash
+claude mcp add freegamestore -- npx mcp-remote https://mcp.freegamestore.online/mcp
+```
+
+**Cursor / any MCP client** (config form):
+```json
+{
+  "mcpServers": {
+    "freegamestore": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://mcp.freegamestore.online/mcp"]
+    }
+  }
+}
+```
+
+### Authentication
+
+Read-only tools (`platform_guide`, `sdk_reference`, `deploy_status`, `game_info`, `game_logs`, `read_file`, `list_files`) work unauthenticated. Tools that **build, mutate, or list your games** need an FGS session token — the same one `fgs login` caches. Pass it as a bearer header through `mcp-remote`:
+
+```bash
+claude mcp add freegamestore -- \
+  npx mcp-remote https://mcp.freegamestore.online/mcp \
+  --header "Authorization: Bearer <token>"
+```
+
+### Two ways to build a game over MCP
+
+The MCP supports both "I write the code" and "the platform writes the code":
+
+1. **Your AI writes the code, MCP ships it.** Use `create_game` to provision + scaffold (canvas/grid/cards/3d) + deploy, then `update_files` / `read_file` / `list_files` to iterate. You author every file; the MCP provisions and pushes (auto-redeploys in ~30-60s).
+2. **You prompt, the platform's VibeCode agent writes + deploys it.** Use `agent_build` with a natural-language prompt — the server-side agent writes the code and deploys it for you. FGS's agent is bring-your-own-key: pass an `api_key` for your provider (anthropic/openai/google/github). Poll with `agent_status`.
+
+| Tool | Signature | What it does |
+|---|---|---|
+| `create_game` | `(game_id, category, oneliner, template?, type?, description?)` | Provision + scaffold + deploy a new game. |
+| `update_files` | `(game_id, files[], message?)` | Overwrite files in a game you own → auto-redeploys. |
+| `read_file` / `list_files` | `(game_id, path?)` | Read / list a game's repo. |
+| `agent_build` | `(prompt, api_key, provider?, model?, session_id?)` | Hand the build to the VibeCode agent. |
+| `agent_status` | `(session_id)` | Poll an agent build. |
+| `list_games` | `()` | Your published games. |
+| `game_info` / `deploy_status` / `game_logs` | `(game_id)` | Inspect a game. |
+| `platform_guide` / `sdk_reference` | `(feature?)` | This guide / the games SDK. |
+
+```
+# Mode 1 — your AI writes it, MCP ships it
+create_game(game_id="memory-match", category="puzzle",
+            oneliner="Flip cards to find pairs", template="cards")
+update_files(game_id="memory-match",
+             files=[{path:"web/src/App.tsx", content:"…"}], message="Add timer")
+
+# Mode 2 — you prompt, the VibeCode agent writes + deploys it
+agent_build(prompt="A neon snake game, deploy as neon-snake", api_key="sk-…", provider="anthropic")
+agent_status(session_id="…")   # poll until deployed
+```
+
+---
+
 ## Per-repo CLAUDE.md convention
 
 Every game repo ships a minimal `CLAUDE.md`. Keep it slim — platform-wide rules live here in SKILLS.md, not in per-repo copies.

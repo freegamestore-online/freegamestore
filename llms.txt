@@ -5,7 +5,9 @@
 ## AI Agent Integration
 
 - [SKILLS.md](https://freegamestore.online/SKILLS.md): Complete platform guide for AI agents. Tech stack, SDK reference, game templates, deploy flow, compliance rules. Point your AI agent here.
-- [MCP Server](https://mcp.freeappstore.online/mcp): Remote MCP server (Streamable HTTP) covering the whole platform family. Tools: `deploy_status`, `app_info`, `sdk_reference`, `platform_guide`, `list_apps`. Connect with `npx mcp-remote https://mcp.freeappstore.online/mcp`.
+- [MCP Server](https://mcp.freegamestore.online/mcp): Remote MCP server (Streamable HTTP). Drives the full build loop in two modes: (a) your AI writes the code — `create_game`, `update_files`, `read_file`, `list_files` (write a file, it auto-redeploys); (b) the platform's VibeCode agent writes+deploys from a prompt — `agent_build`, `agent_status`. Plus inspect/reference: `list_games`, `game_info`, `deploy_status`, `game_logs`, `platform_guide`, `sdk_reference`. Connect with `npx mcp-remote https://mcp.freegamestore.online/mcp`.
+- [MCP Discovery](https://freegamestore.online/.well-known/mcp.json): Auto-discovery endpoint for MCP clients and registries.
+- [MCP Docs](https://freegamestore.online/docs/mcp): Setup guide for Claude Code, Cursor, and other MCP clients.
 - [Platform Skills (FAS)](https://freeappstore.online/skills.md): Shared platform guide covering SDK, CLI, and conventions used across FreeAppStore and FreeGameStore.
 
 ## For Developers

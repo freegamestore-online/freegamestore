@@ -74,6 +74,16 @@ EOF</div>
       </li>
     </ol>
 
+    <h2>Or skip the setup — connect the MCP server</h2>
+    <p>The FreeGameStore <a href="/docs/mcp">MCP server</a> lets Claude Code build, publish, and improve games without leaving the editor. Connect once:</p>
+    <div class="cmd">claude mcp add freegamestore -- npx mcp-remote https://mcp.freegamestore.online/mcp</div>
+    <p>Then there are <strong>two ways to build</strong>:</p>
+    <ul>
+      <li><strong>Claude writes the code, the MCP ships it</strong> — <code>create_game</code> provisions + scaffolds + deploys a live game, then <code>update_files</code> / <code>read_file</code> / <code>list_files</code> iterate (each push auto-redeploys).</li>
+      <li><strong>You just prompt — the platform's VibeCode agent writes + deploys it</strong> — <code>agent_build</code> hands the whole build to the server-side agent (bring your own AI key), <code>agent_status</code> polls progress.</li>
+    </ul>
+    <p>Authenticated tools take your <code>fgs login</code> session token via mcp-remote's <code>--header "Authorization: Bearer &lt;token&gt;"</code>. Full guide: <a href="/docs/mcp">freegamestore.online/docs/mcp</a>.</p>
+
     <h2>Prompt the build</h2>
     <p>Tell the agent what you want. Some examples:</p>
     <div class="ai-prompt">Build a tip-splitter game: input the bill, tip %, and party size. Show per-person total. Persist the last 5 splits in localStorage. Use the Shell layout and brand tokens.</div>
