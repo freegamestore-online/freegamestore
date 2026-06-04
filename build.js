@@ -682,6 +682,16 @@ filesToCopy.forEach(file => {
   }
 });
 
+// Also serve SKILLS.md at the lowercase /skills.md — the conventional path used
+// across llms.txt, the AI guides, and MCP clients (FAS serves both). Without
+// this, freegamestore.online/skills.md 404s while /SKILLS.md works.
+{
+  const skillsSrc = path.join(ROOT, 'SKILLS.md');
+  if (fs.existsSync(skillsSrc)) {
+    fs.copyFileSync(skillsSrc, path.join(DIST, 'skills.md'));
+  }
+}
+
 // AI tool guides under /ai/<slug>.html.
 const aiSrcDir = path.join(ROOT, 'ai');
 if (fs.existsSync(aiSrcDir)) {
