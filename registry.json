@@ -1063,6 +1063,20 @@
       "type": "standalone",
       "developer": "FreeGameStore",
       "creatorGithub": "serge-ivo"
+    },
+    {
+      "id": "mcp-grid-demo",
+      "name": "mcp-grid-demo",
+      "category": "puzzle",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "MCP grid demo — safe to delete",
+      "appUrl": "https://mcp-grid-demo.freegamestore.online",
+      "repo": "freegamestore-online/mcp-grid-demo",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "creatorGithub": "serge-ivo"
     }
   ]
 }
