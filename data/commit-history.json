@@ -2064,5 +2064,33 @@
         }
       }
     ]
+  },
+  "freegamestore-online/mcp-hybrid-test": {
+    "meta": {
+      "created_at": "2026-06-04T08:25:05Z",
+      "pushed_at": "2026-06-04T08:25:13Z"
+    },
+    "commits": [
+      {
+        "sha": "e38468536b8b692807e239b49c6eb73e761cacbf",
+        "html_url": "https://github.com/freegamestore-online/mcp-hybrid-test/commit/e38468536b8b692807e239b49c6eb73e761cacbf",
+        "commit": {
+          "message": "materialize",
+          "author": {
+            "date": "2026-06-04T08:25:12Z"
+          }
+        }
+      },
+      {
+        "sha": "16d857241650e6ef0e72f57cae4a4bbe239aef88",
+        "html_url": "https://github.com/freegamestore-online/mcp-hybrid-test/commit/16d857241650e6ef0e72f57cae4a4bbe239aef88",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-06-04T08:25:08Z"
+          }
+        }
+      }
+    ]
   }
 }
