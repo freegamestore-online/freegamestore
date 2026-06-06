@@ -1902,9 +1902,19 @@
   "freegamestore-online/snake-2": {
     "meta": {
       "created_at": "2026-05-29T03:59:04Z",
-      "pushed_at": "2026-06-02T08:44:18Z"
+      "pushed_at": "2026-06-06T14:25:22Z"
     },
     "commits": [
+      {
+        "sha": "61e4dd97b89f3953ab3c336f1c7c2906feeb5493",
+        "html_url": "https://github.com/freegamestore-online/snake-2/commit/61e4dd97b89f3953ab3c336f1c7c2906feeb5493",
+        "commit": {
+          "message": "Added arrow buttons\n\nAdded arrow buttons on phone/correct orientation.",
+          "author": {
+            "date": "2026-06-06T14:25:08Z"
+          }
+        }
+      },
       {
         "sha": "06d034c0c9c749dc961195518c5ddb552af7e37e",
         "html_url": "https://github.com/freegamestore-online/snake-2/commit/06d034c0c9c749dc961195518c5ddb552af7e37e",
@@ -1922,16 +1932,6 @@
           "message": "fix: add AI instructions and update CLAUDE.md with proper SKILLS links",
           "author": {
             "date": "2026-06-02T07:49:27Z"
-          }
-        }
-      },
-      {
-        "sha": "2b2f0253137f2ef4eb67bb57f1c74a290ffbfc25",
-        "html_url": "https://github.com/freegamestore-online/snake-2/commit/2b2f0253137f2ef4eb67bb57f1c74a290ffbfc25",
-        "commit": {
-          "message": "Snake game by Advika123456",
-          "author": {
-            "date": "2026-05-29T12:19:22Z"
           }
         }
       }
