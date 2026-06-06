@@ -178,7 +178,7 @@
       "category": "strategy",
       "icon": "&#9822;",
       "iconBg": "#f0fdf4",
-      "description": "Play against the engine, analyze positions, and sharpen your tactics with puzzles.",
+      "description": "Classic chess — play against yourself or a friend",
       "appUrl": "https://chess.freegamestore.online",
       "repo": "freegamestore-online/chess",
       "cfProject": "freechessapp",
