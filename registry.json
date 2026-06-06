@@ -1064,6 +1064,20 @@
       "type": "standalone",
       "developer": "FreeGameStore",
       "creatorGithub": "serge-ivo"
+    },
+    {
+      "id": "blockudoku",
+      "name": "Blockudoku",
+      "category": "puzzle",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "Block puzzle meets Sudoku — drag and place blocks on a 9x9 grid to complete rows, columns, and 3x3 squares",
+      "appUrl": "https://blockudoku.freegamestore.online",
+      "repo": "freegamestore-online/blockudoku",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "creatorGithub": "serge-ivo"
     }
   ]
 }
