@@ -1940,9 +1940,19 @@
   "freegamestore-online/blockudoku": {
     "meta": {
       "created_at": "2026-06-06T02:20:40Z",
-      "pushed_at": "2026-06-06T06:39:26Z"
+      "pushed_at": "2026-06-06T07:08:13Z"
     },
     "commits": [
+      {
+        "sha": "0c263a9255371be070c5d121cb8a095c07c36737",
+        "html_url": "https://github.com/freegamestore-online/blockudoku/commit/0c263a9255371be070c5d121cb8a095c07c36737",
+        "commit": {
+          "message": "fix: add gridTemplateRows so board cells have height (was collapsing to 0px)",
+          "author": {
+            "date": "2026-06-06T07:08:12Z"
+          }
+        }
+      },
       {
         "sha": "716491f0e68fe8bbd1f4dec02c51acb9aa1f1cba",
         "html_url": "https://github.com/freegamestore-online/blockudoku/commit/716491f0e68fe8bbd1f4dec02c51acb9aa1f1cba",
@@ -1960,16 +1970,6 @@
           "message": "test: minimal app to verify SDK rendering",
           "author": {
             "date": "2026-06-06T06:29:28Z"
-          }
-        }
-      },
-      {
-        "sha": "4523f206e03238fe921d0a23abe527ce072af2e8",
-        "html_url": "https://github.com/freegamestore-online/blockudoku/commit/4523f206e03238fe921d0a23abe527ce072af2e8",
-        "commit": {
-          "message": "fix: TS strict mode — remove noUncheckedIndexedAccess, fix non-null assertions",
-          "author": {
-            "date": "2026-06-06T02:28:19Z"
           }
         }
       }
@@ -2071,7 +2071,7 @@
         "sha": "f75387ca89d6d371ceefa12e3175c2fd9bee67b6",
         "html_url": "https://github.com/freegamestore-online/maze-racer/commit/f75387ca89d6d371ceefa12e3175c2fd9bee67b6",
         "commit": {
-          "message": "feat: AI always explores blind — smartness controls intelligence\n\nAll difficulties now use blind exploration (no pre-solving). The AI\ndoesn't know the maze layout ��� it discovers it step by step, just\nlike the player. Smartness controls how often it picks the best\nneighbor vs random:\n\n- Easy (20%): drunk random walk, gets very lost\n- Medium (50%): coin-flip between smart and random\n- Hard (80%): usually picks the right direction\n- Expert (95%): almost always optimal, but still backtracks at dead ends\n\nNo more cheating. The AI makes visible mistakes on every difficulty.",
+          "message": "feat: AI always explores blind — smartness controls intelligence\n\nAll difficulties now use blind exploration (no pre-solving). The AI\ndoesn't know the maze layout — it discovers it step by step, just\nlike the player. Smartness controls how often it picks the best\nneighbor vs random:\n\n- Easy (20%): drunk random walk, gets very lost\n- Medium (50%): coin-flip between smart and random\n- Hard (80%): usually picks the right direction\n- Expert (95%): almost always optimal, but still backtracks at dead ends\n\nNo more cheating. The AI makes visible mistakes on every difficulty.",
           "author": {
             "date": "2026-06-06T00:21:30Z"
           }
