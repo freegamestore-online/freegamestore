@@ -261,7 +261,7 @@ const cardIconBackgrounds = games
 
 const gameCards = games.map(game => {
   const icon = game.icon || (game.name || '?').trim().charAt(0).toUpperCase();
-  return `        <div class="app-card compact" data-id="${escapeHtml(game.id)}" data-category="${escapeHtml(game.category)}" data-about="/games/${escapeHtml(game.id)}.html">
+  return `        <div class="app-card compact" data-id="${escapeHtml(game.id)}" data-category="${escapeHtml(game.category)}" data-published="${escapeHtml(game.firstPublished || '')}" data-about="/games/${escapeHtml(game.id)}.html">
           <div class="app-icon">${icon}</div>
           <div class="app-body">
             <span class="app-name">${escapeHtml(game.name)}</span>

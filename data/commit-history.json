@@ -1972,6 +1972,7 @@
         }
       }
     ]
+<<<<<<< HEAD
   },
   "freegamestore-online/uno": {
     "meta": {
@@ -2160,5 +2161,7 @@
         }
       }
     ]
+=======
+>>>>>>> 814851d (feat: add sort dropdown (A-Z / Newest / Category))
   }
 }

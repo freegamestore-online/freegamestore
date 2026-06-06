@@ -1,5 +1,6 @@
 /**
  * FreeGameStore storefront interactions:
+ *   - sort dropdown (A-Z / Newest / Category)
  *   - split-pane preview (load game iframe on >=1024px, navigate to about on <1024px)
  *   - ?game=<id> deep link, plus a fullscreen toolbar button (games need it)
  *
@@ -7,6 +8,46 @@
  * Vendored — each store ships its own copy.
  */
 (function () {
+  // ---------- Sort ----------
+  (function () {
+    var select = document.getElementById('sort-select');
+    var grid = document.getElementById('apps-grid');
+    if (!select || !grid) return;
+
+    select.addEventListener('change', function () {
+      var cards = Array.from(grid.querySelectorAll('.app-card.compact'));
+      cards.sort(function (a, b) {
+        switch (select.value) {
+          case 'newest': {
+            var ap = a.dataset.published || '';
+            var bp = b.dataset.published || '';
+            // Games with dates first (newest first), undated at end (A-Z)
+            if (ap && bp) return bp.localeCompare(ap);
+            if (ap) return -1;
+            if (bp) return 1;
+            var an = a.querySelector('.app-name');
+            var bn = b.querySelector('.app-name');
+            return (an ? an.textContent : '').localeCompare(bn ? bn.textContent : '');
+          }
+          case 'category': {
+            var ac = a.dataset.category || '';
+            var bc = b.dataset.category || '';
+            if (ac !== bc) return ac.localeCompare(bc);
+            var an2 = a.querySelector('.app-name');
+            var bn2 = b.querySelector('.app-name');
+            return (an2 ? an2.textContent : '').localeCompare(bn2 ? bn2.textContent : '');
+          }
+          default: {
+            var an3 = a.querySelector('.app-name');
+            var bn3 = b.querySelector('.app-name');
+            return (an3 ? an3.textContent : '').localeCompare(bn3 ? bn3.textContent : '');
+          }
+        }
+      });
+      cards.forEach(function (c) { grid.appendChild(c); });
+    });
+  })();
+
   // ---------- Split-pane preview ----------
   (function () {
     var pane = document.getElementById('previewPane');
