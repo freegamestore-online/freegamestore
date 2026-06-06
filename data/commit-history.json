@@ -2050,5 +2050,43 @@
         }
       }
     ]
+  },
+  "freegamestore-online/maze-racer": {
+    "meta": {
+      "created_at": "2026-06-05T11:56:14Z",
+      "pushed_at": "2026-06-06T00:27:57Z"
+    },
+    "commits": [
+      {
+        "sha": "86ba56a209c58d0f22241c200e550f7daf5cd1f3",
+        "html_url": "https://github.com/freegamestore-online/maze-racer/commit/86ba56a209c58d0f22241c200e550f7daf5cd1f3",
+        "commit": {
+          "message": "fix: AI never pre-solves + input buffering + held-key support\n\n- AI NEVER calls solve() during gameplay. It explores blind every time.\n  Optimal path only computed on win/loss screen for comparison.\n- Input buffering: press next direction before reaching the turn, it\n  queues and applies when current direction hits a wall or the buffered\n  direction becomes passable (whichever comes first).\n- Held keys: tracks keydown/keyup. If you hold up+right simultaneously,\n  releasing up switches to right automatically. No lost inputs.\n- D-pad uses the same applyDir function as keyboard.",
+          "author": {
+            "date": "2026-06-06T00:27:56Z"
+          }
+        }
+      },
+      {
+        "sha": "f75387ca89d6d371ceefa12e3175c2fd9bee67b6",
+        "html_url": "https://github.com/freegamestore-online/maze-racer/commit/f75387ca89d6d371ceefa12e3175c2fd9bee67b6",
+        "commit": {
+          "message": "feat: AI always explores blind — smartness controls intelligence\n\nAll difficulties now use blind exploration (no pre-solving). The AI\ndoesn't know the maze layout ��� it discovers it step by step, just\nlike the player. Smartness controls how often it picks the best\nneighbor vs random:\n\n- Easy (20%): drunk random walk, gets very lost\n- Medium (50%): coin-flip between smart and random\n- Hard (80%): usually picks the right direction\n- Expert (95%): almost always optimal, but still backtracks at dead ends\n\nNo more cheating. The AI makes visible mistakes on every difficulty.",
+          "author": {
+            "date": "2026-06-06T00:21:30Z"
+          }
+        }
+      },
+      {
+        "sha": "401faa3f8ecbf1058a26de07512de1119630502a",
+        "html_url": "https://github.com/freegamestore-online/maze-racer/commit/401faa3f8ecbf1058a26de07512de1119630502a",
+        "commit": {
+          "message": "feat: timer, animated mouth, pulsing exit, d-pad, best time, polish\n\n- Live timer (elapsed seconds, formatted mm:ss for long runs)\n- Best time tracking across levels\n- Animated pac-man mouth (oscillating open/close)\n- Eye highlight dot for depth\n- Pulsing red exit marker with star\n- Rounded wall edges for polish\n- Mobile d-pad (6 directional buttons, pointer events)\n- Cleaner scoreboard with color-coded labels\n- Consistent timer display on win/loss screens",
+          "author": {
+            "date": "2026-06-05T14:01:54Z"
+          }
+        }
+      }
+    ]
   }
 }
