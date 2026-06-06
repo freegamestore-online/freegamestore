@@ -1,118 +1,4 @@
 {
-  "freegamestore-online/dice": {
-    "meta": {
-      "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-06-04T06:19:19Z"
-    },
-    "commits": [
-      {
-        "sha": "2dcc52e2bb0d815906bd75b1e40d4616b7d5cdf4",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/2dcc52e2bb0d815906bd75b1e40d4616b7d5cdf4",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:19:16Z"
-          }
-        }
-      },
-      {
-        "sha": "11dfb214cfe99a0074c24b4c4643a45518ade146",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/11dfb214cfe99a0074c24b4c4643a45518ade146",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:19:11Z"
-          }
-        }
-      },
-      {
-        "sha": "d83d3334c85c103f7eac1351a199085d29f5eb78",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/d83d3334c85c103f7eac1351a199085d29f5eb78",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:35Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/chess": {
-    "meta": {
-      "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-06-04T06:18:51Z"
-    },
-    "commits": [
-      {
-        "sha": "14ad40e6ba7c7851ff17d3ecefcac36f5da8930b",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/14ad40e6ba7c7851ff17d3ecefcac36f5da8930b",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:18:48Z"
-          }
-        }
-      },
-      {
-        "sha": "e81361719c2812cb7025200abdd507a07d9cafc0",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/e81361719c2812cb7025200abdd507a07d9cafc0",
-        "commit": {
-          "message": "fix: remove external Lichess API fetch from PuzzleTab\n\nRemoves the fetch to https://lichess.org/api/puzzle/daily and all\nrelated daily-puzzle state/UI. The component now uses only the\nbundled /puzzles.json data, satisfying the offline + privacy mandate.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:58Z"
-          }
-        }
-      },
-      {
-        "sha": "c969361db71bd6df17dbeb04870c9c1cc39d517a",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/c969361db71bd6df17dbeb04870c9c1cc39d517a",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:23Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/billiards": {
-    "meta": {
-      "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-06-04T06:15:51Z"
-    },
-    "commits": [
-      {
-        "sha": "08f71823b9488003ab903bfb871ccea4b38c9d27",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/08f71823b9488003ab903bfb871ccea4b38c9d27",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:15:46Z"
-          }
-        }
-      },
-      {
-        "sha": "47b4e21f92ce331b5e319fb31d63b6d922212ce2",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/47b4e21f92ce331b5e319fb31d63b6d922212ce2",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:18:48Z"
-          }
-        }
-      },
-      {
-        "sha": "10346f88766263f82f4f069f6b6735bd3b48581b",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/10346f88766263f82f4f069f6b6735bd3b48581b",
-        "commit": {
-          "message": "fix: add maskable icon purpose to PWA manifest\n\nAdds \"purpose\": \"any maskable\" to icon entries in manifest.json\nfor PWA compliance.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:04Z"
-          }
-        }
-      }
-    ]
-  },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
@@ -184,6 +70,310 @@
           "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-27T12:16:12Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/checkers": {
+    "meta": {
+      "created_at": "2026-05-04T10:38:28Z",
+      "pushed_at": "2026-06-04T06:18:37Z"
+    },
+    "commits": [
+      {
+        "sha": "c582b8ec356c7a9148c136916dcdda5bd495f5c2",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/c582b8ec356c7a9148c136916dcdda5bd495f5c2",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:18:34Z"
+          }
+        }
+      },
+      {
+        "sha": "4bd6fa06abe8c0c6ae35ea1f89dba8cc0ca5958f",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/4bd6fa06abe8c0c6ae35ea1f89dba8cc0ca5958f",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:02Z"
+          }
+        }
+      },
+      {
+        "sha": "a041f1e3138852217b465e06d783b2858e6da015",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/a041f1e3138852217b465e06d783b2858e6da015",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:16:19Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/chess": {
+    "meta": {
+      "created_at": "2026-05-03T02:32:48Z",
+      "pushed_at": "2026-06-04T06:18:51Z"
+    },
+    "commits": [
+      {
+        "sha": "14ad40e6ba7c7851ff17d3ecefcac36f5da8930b",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/14ad40e6ba7c7851ff17d3ecefcac36f5da8930b",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:18:48Z"
+          }
+        }
+      },
+      {
+        "sha": "e81361719c2812cb7025200abdd507a07d9cafc0",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/e81361719c2812cb7025200abdd507a07d9cafc0",
+        "commit": {
+          "message": "fix: remove external Lichess API fetch from PuzzleTab\n\nRemoves the fetch to https://lichess.org/api/puzzle/daily and all\nrelated daily-puzzle state/UI. The component now uses only the\nbundled /puzzles.json data, satisfying the offline + privacy mandate.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:58Z"
+          }
+        }
+      },
+      {
+        "sha": "c969361db71bd6df17dbeb04870c9c1cc39d517a",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/c969361db71bd6df17dbeb04870c9c1cc39d517a",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:16:23Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/dice": {
+    "meta": {
+      "created_at": "2026-05-06T07:50:44Z",
+      "pushed_at": "2026-06-04T06:19:19Z"
+    },
+    "commits": [
+      {
+        "sha": "2dcc52e2bb0d815906bd75b1e40d4616b7d5cdf4",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/2dcc52e2bb0d815906bd75b1e40d4616b7d5cdf4",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:16Z"
+          }
+        }
+      },
+      {
+        "sha": "11dfb214cfe99a0074c24b4c4643a45518ade146",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/11dfb214cfe99a0074c24b4c4643a45518ade146",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:11Z"
+          }
+        }
+      },
+      {
+        "sha": "d83d3334c85c103f7eac1351a199085d29f5eb78",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/d83d3334c85c103f7eac1351a199085d29f5eb78",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:16:35Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/2048": {
+    "meta": {
+      "created_at": "2026-05-04T06:07:36Z",
+      "pushed_at": "2026-06-04T06:15:22Z"
+    },
+    "commits": [
+      {
+        "sha": "c6a7fd7972f1b49eebd8f8191bd0a5f815d9abf2",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/c6a7fd7972f1b49eebd8f8191bd0a5f815d9abf2",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:15:17Z"
+          }
+        }
+      },
+      {
+        "sha": "6f1f9746251d50b9243429a301d9ea2e8b1d764a",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/6f1f9746251d50b9243429a301d9ea2e8b1d764a",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:18:42Z"
+          }
+        }
+      },
+      {
+        "sha": "8d701d4fa3ff9178f5b8957e76f197f3fa2d02bf",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/8d701d4fa3ff9178f5b8957e76f197f3fa2d02bf",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:15:53Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/asteroids": {
+    "meta": {
+      "created_at": "2026-05-04T10:38:55Z",
+      "pushed_at": "2026-06-04T06:15:37Z"
+    },
+    "commits": [
+      {
+        "sha": "5202facecb28b41c975bcb58ef2281ef01d08751",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/5202facecb28b41c975bcb58ef2281ef01d08751",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:15:34Z"
+          }
+        }
+      },
+      {
+        "sha": "8751686ddcb78f4810cff77049e656979a4f3da9",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/8751686ddcb78f4810cff77049e656979a4f3da9",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:18:45Z"
+          }
+        }
+      },
+      {
+        "sha": "70c27b6bdb7b224dc67be662c2e0af25af53fa42",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/70c27b6bdb7b224dc67be662c2e0af25af53fa42",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:15:56Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/bowling": {
+    "meta": {
+      "created_at": "2026-05-04T09:48:37Z",
+      "pushed_at": "2026-06-04T06:17:39Z"
+    },
+    "commits": [
+      {
+        "sha": "41e2455b7217117298878f039bc56e469ee687c0",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/41e2455b7217117298878f039bc56e469ee687c0",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:17:36Z"
+          }
+        }
+      },
+      {
+        "sha": "bbecb310a09fb4df65e3a400fa1cbd286c7cfb0a",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/bbecb310a09fb4df65e3a400fa1cbd286c7cfb0a",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:18:53Z"
+          }
+        }
+      },
+      {
+        "sha": "0e5ae0b74c284010fb0ed96cdac1f3bda1fdd41e",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/0e5ae0b74c284010fb0ed96cdac1f3bda1fdd41e",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:16:08Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/connect4": {
+    "meta": {
+      "created_at": "2026-05-04T10:14:16Z",
+      "pushed_at": "2026-06-04T06:19:14Z"
+    },
+    "commits": [
+      {
+        "sha": "faebef36ebbf2ff452f6cc8b83a2d5d57f729784",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/faebef36ebbf2ff452f6cc8b83a2d5d57f729784",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:11Z"
+          }
+        }
+      },
+      {
+        "sha": "00cd4ba8dce9dc5a691f9880bdd3f1980302f8e0",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/00cd4ba8dce9dc5a691f9880bdd3f1980302f8e0",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:08Z"
+          }
+        }
+      },
+      {
+        "sha": "5ae5e2d42ffbb4fb055f8abac78c1dbb56122a7e",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/5ae5e2d42ffbb4fb055f8abac78c1dbb56122a7e",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:16:31Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/billiards": {
+    "meta": {
+      "created_at": "2026-05-08T21:52:47Z",
+      "pushed_at": "2026-06-04T06:15:51Z"
+    },
+    "commits": [
+      {
+        "sha": "08f71823b9488003ab903bfb871ccea4b38c9d27",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/08f71823b9488003ab903bfb871ccea4b38c9d27",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:15:46Z"
+          }
+        }
+      },
+      {
+        "sha": "47b4e21f92ce331b5e319fb31d63b6d922212ce2",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/47b4e21f92ce331b5e319fb31d63b6d922212ce2",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:18:48Z"
+          }
+        }
+      },
+      {
+        "sha": "10346f88766263f82f4f069f6b6735bd3b48581b",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/10346f88766263f82f4f069f6b6735bd3b48581b",
+        "commit": {
+          "message": "fix: add maskable icon purpose to PWA manifest\n\nAdds \"purpose\": \"any maskable\" to icon entries in manifest.json\nfor PWA compliance.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:04Z"
           }
         }
       }
@@ -265,6 +455,196 @@
       }
     ]
   },
+  "freegamestore-online/bubbleshooter": {
+    "meta": {
+      "created_at": "2026-05-18T23:17:44Z",
+      "pushed_at": "2026-06-04T06:18:23Z"
+    },
+    "commits": [
+      {
+        "sha": "7760a7fda171f31eace191cb9d88240e12e7e467",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/7760a7fda171f31eace191cb9d88240e12e7e467",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:18:21Z"
+          }
+        }
+      },
+      {
+        "sha": "82570eb94e49f01b61f97286223923aca5c8d240",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/82570eb94e49f01b61f97286223923aca5c8d240",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:18:59Z"
+          }
+        }
+      },
+      {
+        "sha": "8f48157c147543124df2012f4eff52c2da89dc6b",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/8f48157c147543124df2012f4eff52c2da89dc6b",
+        "commit": {
+          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:31Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/musicbot": {
+    "meta": {
+      "created_at": "2026-05-27T14:50:52Z",
+      "pushed_at": "2026-06-01T23:19:43Z"
+    },
+    "commits": [
+      {
+        "sha": "3043940d6887e20ec81f227ff481cb6957153809",
+        "html_url": "https://github.com/freegamestore-online/musicbot/commit/3043940d6887e20ec81f227ff481cb6957153809",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:41Z"
+          }
+        }
+      },
+      {
+        "sha": "6a2f0aabac44119d789641ec2430b669001f1e33",
+        "html_url": "https://github.com/freegamestore-online/musicbot/commit/6a2f0aabac44119d789641ec2430b669001f1e33",
+        "commit": {
+          "message": "fix: add Fraunces brand display font (compliance brand-fonts check)\n\nThe game loaded Manrope but not Fraunces, failing the platform\nbrand-fonts compliance check. Added Fraunces to the Google Fonts link.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-28T02:33:40Z"
+          }
+        }
+      },
+      {
+        "sha": "1e9a2ffaf9d7d4ebeba8a48749e6051e63f3c6be",
+        "html_url": "https://github.com/freegamestore-online/musicbot/commit/1e9a2ffaf9d7d4ebeba8a48749e6051e63f3c6be",
+        "commit": {
+          "message": "fix: add PWA setup (vite-plugin-pwa, manifest, icons, meta tags)\n\nRequired for FGS compliance and deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T23:45:38Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/dragontap": {
+    "meta": {
+      "created_at": "2026-05-06T04:15:50Z",
+      "pushed_at": "2026-06-01T23:19:17Z"
+    },
+    "commits": [
+      {
+        "sha": "9c59980d5614f5eb7ff590d0b0584f320401dd37",
+        "html_url": "https://github.com/freegamestore-online/dragontap/commit/9c59980d5614f5eb7ff590d0b0584f320401dd37",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:14Z"
+          }
+        }
+      },
+      {
+        "sha": "97ab536b94f402eaf75aa1db2270246dcc55d5f4",
+        "html_url": "https://github.com/freegamestore-online/dragontap/commit/97ab536b94f402eaf75aa1db2270246dcc55d5f4",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:16:39Z"
+          }
+        }
+      },
+      {
+        "sha": "b653915e9ae8399bba904065cddc24d06126cc23",
+        "html_url": "https://github.com/freegamestore-online/dragontap/commit/b653915e9ae8399bba904065cddc24d06126cc23",
+        "commit": {
+          "message": "feat: Dragon Tap game — tap dragons to score, speed ramps, 3 lives\n\nPWA-ready with offline support, GameShell/GameTopbar from @freegamestore/games SDK,\nleaderboard integration, combo system, sound effects.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-26T04:11:53Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/blackjack": {
+    "meta": {
+      "created_at": "2026-05-18T23:17:31Z",
+      "pushed_at": "2026-06-04T06:16:11Z"
+    },
+    "commits": [
+      {
+        "sha": "099f93f0469f4a3b2cb21902b2fe9e4aec075d74",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/099f93f0469f4a3b2cb21902b2fe9e4aec075d74",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:16:05Z"
+          }
+        }
+      },
+      {
+        "sha": "1a9d61312252a3ea2cca1210059022e7124ce769",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/1a9d61312252a3ea2cca1210059022e7124ce769",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:18:50Z"
+          }
+        }
+      },
+      {
+        "sha": "0f973fa34e51ef3e9477449afe9281b1ffe9a7aa",
+        "html_url": "https://github.com/freegamestore-online/blackjack/commit/0f973fa34e51ef3e9477449afe9281b1ffe9a7aa",
+        "commit": {
+          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:27Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/memorymatch": {
+    "meta": {
+      "created_at": "2026-05-06T07:53:20Z",
+      "pushed_at": "2026-06-04T06:19:58Z"
+    },
+    "commits": [
+      {
+        "sha": "16c10a767b047b83a03e62b63723c43d910a718b",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/16c10a767b047b83a03e62b63723c43d910a718b",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:55Z"
+          }
+        }
+      },
+      {
+        "sha": "ec702b7f9c66aee9813d42546ce437a6c7964076",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/ec702b7f9c66aee9813d42546ce437a6c7964076",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:17:15Z"
+          }
+        }
+      },
+      {
+        "sha": "38f88a8b884cbdbbd2647bf98c2373415d8e1838",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/38f88a8b884cbdbbd2647bf98c2373415d8e1838",
+        "commit": {
+          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-26T04:18:34Z"
+          }
+        }
+      }
+    ]
+  },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
@@ -303,39 +683,77 @@
       }
     ]
   },
-  "freegamestore-online/asteroids": {
+  "freegamestore-online/flappy": {
     "meta": {
-      "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-06-04T06:15:37Z"
+      "created_at": "2026-05-04T10:14:08Z",
+      "pushed_at": "2026-06-04T06:19:24Z"
     },
     "commits": [
       {
-        "sha": "5202facecb28b41c975bcb58ef2281ef01d08751",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/5202facecb28b41c975bcb58ef2281ef01d08751",
+        "sha": "77502b4233c4ed2301cb79170dc40dd8a323b8d8",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/77502b4233c4ed2301cb79170dc40dd8a323b8d8",
         "commit": {
           "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T06:15:34Z"
+            "date": "2026-06-04T06:19:21Z"
           }
         }
       },
       {
-        "sha": "8751686ddcb78f4810cff77049e656979a4f3da9",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/8751686ddcb78f4810cff77049e656979a4f3da9",
+        "sha": "5b8c39684191edb9dc5ae388088314060f18828b",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/5b8c39684191edb9dc5ae388088314060f18828b",
         "commit": {
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-01T23:18:45Z"
+            "date": "2026-06-01T23:19:17Z"
           }
         }
       },
       {
-        "sha": "70c27b6bdb7b224dc67be662c2e0af25af53fa42",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/70c27b6bdb7b224dc67be662c2e0af25af53fa42",
+        "sha": "8239a0b2ef80491cd180a27f6223fc156b0687a2",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/8239a0b2ef80491cd180a27f6223fc156b0687a2",
         "commit": {
           "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-27T12:15:56Z"
+            "date": "2026-05-27T12:16:43Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/hangman": {
+    "meta": {
+      "created_at": "2026-05-04T10:38:32Z",
+      "pushed_at": "2026-06-04T06:19:34Z"
+    },
+    "commits": [
+      {
+        "sha": "e510b05f7bd153860cbd3fc08888dc17b43c041b",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/e510b05f7bd153860cbd3fc08888dc17b43c041b",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:19:31Z"
+          }
+        }
+      },
+      {
+        "sha": "e03f8c0b4784acc6d78655c1a0582dbb339ccf7d",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/e03f8c0b4784acc6d78655c1a0582dbb339ccf7d",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:23Z"
+          }
+        }
+      },
+      {
+        "sha": "ae54df602acb5a254e62904151ed32db1956b126",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/ae54df602acb5a254e62904151ed32db1956b126",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:16:51Z"
           }
         }
       }
@@ -417,158 +835,6 @@
       }
     ]
   },
-  "freegamestore-online/bowling": {
-    "meta": {
-      "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-06-04T06:17:39Z"
-    },
-    "commits": [
-      {
-        "sha": "41e2455b7217117298878f039bc56e469ee687c0",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/41e2455b7217117298878f039bc56e469ee687c0",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:17:36Z"
-          }
-        }
-      },
-      {
-        "sha": "bbecb310a09fb4df65e3a400fa1cbd286c7cfb0a",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/bbecb310a09fb4df65e3a400fa1cbd286c7cfb0a",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:18:53Z"
-          }
-        }
-      },
-      {
-        "sha": "0e5ae0b74c284010fb0ed96cdac1f3bda1fdd41e",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/0e5ae0b74c284010fb0ed96cdac1f3bda1fdd41e",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:08Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/flappy": {
-    "meta": {
-      "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-06-04T06:19:24Z"
-    },
-    "commits": [
-      {
-        "sha": "77502b4233c4ed2301cb79170dc40dd8a323b8d8",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/77502b4233c4ed2301cb79170dc40dd8a323b8d8",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:19:21Z"
-          }
-        }
-      },
-      {
-        "sha": "5b8c39684191edb9dc5ae388088314060f18828b",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/5b8c39684191edb9dc5ae388088314060f18828b",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:19:17Z"
-          }
-        }
-      },
-      {
-        "sha": "8239a0b2ef80491cd180a27f6223fc156b0687a2",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/8239a0b2ef80491cd180a27f6223fc156b0687a2",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:43Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/mahjong": {
-    "meta": {
-      "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-06-04T06:19:43Z"
-    },
-    "commits": [
-      {
-        "sha": "4c209b965a617a5c919177a3b0d23ee09cae46e1",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/4c209b965a617a5c919177a3b0d23ee09cae46e1",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:19:40Z"
-          }
-        }
-      },
-      {
-        "sha": "2598fe5f74013b49fb7ce6384e7391879f9e42f3",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/2598fe5f74013b49fb7ce6384e7391879f9e42f3",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:19:29Z"
-          }
-        }
-      },
-      {
-        "sha": "b9208622fa3a8545176c94a85e15baa4c2661d0c",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/b9208622fa3a8545176c94a85e15baa4c2661d0c",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:59Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/hangman": {
-    "meta": {
-      "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-06-04T06:19:34Z"
-    },
-    "commits": [
-      {
-        "sha": "e510b05f7bd153860cbd3fc08888dc17b43c041b",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/e510b05f7bd153860cbd3fc08888dc17b43c041b",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:19:31Z"
-          }
-        }
-      },
-      {
-        "sha": "e03f8c0b4784acc6d78655c1a0582dbb339ccf7d",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/e03f8c0b4784acc6d78655c1a0582dbb339ccf7d",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:19:23Z"
-          }
-        }
-      },
-      {
-        "sha": "ae54df602acb5a254e62904151ed32db1956b126",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/ae54df602acb5a254e62904151ed32db1956b126",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:51Z"
-          }
-        }
-      }
-    ]
-  },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
@@ -602,386 +868,6 @@
           "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-27T12:17:27Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/racing": {
-    "meta": {
-      "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-06-04T06:20:35Z"
-    },
-    "commits": [
-      {
-        "sha": "92feea562b4377e02f465711b7a8c32fe6af2035",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/92feea562b4377e02f465711b7a8c32fe6af2035",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:20:32Z"
-          }
-        }
-      },
-      {
-        "sha": "24471f289f15fc83ef1b8e60289b755a1b5cbffd",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/24471f289f15fc83ef1b8e60289b755a1b5cbffd",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:20:02Z"
-          }
-        }
-      },
-      {
-        "sha": "2a82f008bd7288d545330217c18ff7a7c5c166df",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/2a82f008bd7288d545330217c18ff7a7c5c166df",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:25Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/puzzle": {
-    "meta": {
-      "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-06-04T06:20:29Z"
-    },
-    "commits": [
-      {
-        "sha": "adb62ab6da62394cfbf84d927b71349d260e3eb7",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/adb62ab6da62394cfbf84d927b71349d260e3eb7",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:20:26Z"
-          }
-        }
-      },
-      {
-        "sha": "ab9f7d0520d10969a7631f2cd51100ae1c3b3838",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/ab9f7d0520d10969a7631f2cd51100ae1c3b3838",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:15Z"
-          }
-        }
-      },
-      {
-        "sha": "591847ccea9914fec874b895cfa634c5d8ea15f4",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/591847ccea9914fec874b895cfa634c5d8ea15f4",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:54Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/memorymatch": {
-    "meta": {
-      "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-06-04T06:19:58Z"
-    },
-    "commits": [
-      {
-        "sha": "16c10a767b047b83a03e62b63723c43d910a718b",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/16c10a767b047b83a03e62b63723c43d910a718b",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:19:55Z"
-          }
-        }
-      },
-      {
-        "sha": "ec702b7f9c66aee9813d42546ce437a6c7964076",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/ec702b7f9c66aee9813d42546ce437a6c7964076",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:17:15Z"
-          }
-        }
-      },
-      {
-        "sha": "38f88a8b884cbdbbd2647bf98c2373415d8e1838",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/38f88a8b884cbdbbd2647bf98c2373415d8e1838",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:34Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/2048": {
-    "meta": {
-      "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-06-04T06:15:22Z"
-    },
-    "commits": [
-      {
-        "sha": "c6a7fd7972f1b49eebd8f8191bd0a5f815d9abf2",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/c6a7fd7972f1b49eebd8f8191bd0a5f815d9abf2",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:15:17Z"
-          }
-        }
-      },
-      {
-        "sha": "6f1f9746251d50b9243429a301d9ea2e8b1d764a",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/6f1f9746251d50b9243429a301d9ea2e8b1d764a",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:18:42Z"
-          }
-        }
-      },
-      {
-        "sha": "8d701d4fa3ff9178f5b8957e76f197f3fa2d02bf",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/8d701d4fa3ff9178f5b8957e76f197f3fa2d02bf",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:15:53Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/checkers": {
-    "meta": {
-      "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-06-04T06:18:37Z"
-    },
-    "commits": [
-      {
-        "sha": "c582b8ec356c7a9148c136916dcdda5bd495f5c2",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/c582b8ec356c7a9148c136916dcdda5bd495f5c2",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:18:34Z"
-          }
-        }
-      },
-      {
-        "sha": "4bd6fa06abe8c0c6ae35ea1f89dba8cc0ca5958f",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/4bd6fa06abe8c0c6ae35ea1f89dba8cc0ca5958f",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:19:02Z"
-          }
-        }
-      },
-      {
-        "sha": "a041f1e3138852217b465e06d783b2858e6da015",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/a041f1e3138852217b465e06d783b2858e6da015",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:19Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/simon": {
-    "meta": {
-      "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-06-04T06:20:49Z"
-    },
-    "commits": [
-      {
-        "sha": "f5494379de09c28e2b50f58572970cf467a286f8",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/f5494379de09c28e2b50f58572970cf467a286f8",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:20:47Z"
-          }
-        }
-      },
-      {
-        "sha": "34acdb8af02d91ff326b487ff1b5cab48fb3f72f",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/34acdb8af02d91ff326b487ff1b5cab48fb3f72f",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:20:08Z"
-          }
-        }
-      },
-      {
-        "sha": "dcf56868593608c4608dcbd848895a0149e83f34",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/dcf56868593608c4608dcbd848895a0149e83f34",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:37Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/snake": {
-    "meta": {
-      "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-06-04T06:20:59Z"
-    },
-    "commits": [
-      {
-        "sha": "6d70863305338379ab4112362b3f8b5051a57858",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/6d70863305338379ab4112362b3f8b5051a57858",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:20:56Z"
-          }
-        }
-      },
-      {
-        "sha": "6d578f5e16db30cd7cdf53dc195d6fd390999d16",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/6d578f5e16db30cd7cdf53dc195d6fd390999d16",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:20:14Z"
-          }
-        }
-      },
-      {
-        "sha": "dedcb78fc5ab30081c3b7c4da70cb316c7c049b5",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/dedcb78fc5ab30081c3b7c4da70cb316c7c049b5",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:45Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/whackamole": {
-    "meta": {
-      "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-06-04T06:21:39Z"
-    },
-    "commits": [
-      {
-        "sha": "7f5477a8f921024b12b0a9174f314ad8c012fb7c",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/7f5477a8f921024b12b0a9174f314ad8c012fb7c",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:21:37Z"
-          }
-        }
-      },
-      {
-        "sha": "400b98e6cf1c7dedbc8fc65a6c15ed3805ba1fae",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/400b98e6cf1c7dedbc8fc65a6c15ed3805ba1fae",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:20:38Z"
-          }
-        }
-      },
-      {
-        "sha": "4fb67dff34accef895b1ca961da1ba83627d507a",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/4fb67dff34accef895b1ca961da1ba83627d507a",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:19:31Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/spaceshooter": {
-    "meta": {
-      "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-06-04T06:21:10Z"
-    },
-    "commits": [
-      {
-        "sha": "fb619a59401859dd3b1a583ab1f8ca8322285956",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/fb619a59401859dd3b1a583ab1f8ca8322285956",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:21:07Z"
-          }
-        }
-      },
-      {
-        "sha": "9ce97bdccf66b5f47e694f4507e0ea882eefb424",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/9ce97bdccf66b5f47e694f4507e0ea882eefb424",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:20:23Z"
-          }
-        }
-      },
-      {
-        "sha": "121f309e85a5e95093bd10cd85bec680c66320af",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/121f309e85a5e95093bd10cd85bec680c66320af",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:56Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/tetris": {
-    "meta": {
-      "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-06-04T06:21:25Z"
-    },
-    "commits": [
-      {
-        "sha": "5c8ef345ce0939d5018bcb17c2ea3114c9acc5f8",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/5c8ef345ce0939d5018bcb17c2ea3114c9acc5f8",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:21:22Z"
-          }
-        }
-      },
-      {
-        "sha": "a36b351a9901f1d3848db23cb3fe11d7309027fc",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/a36b351a9901f1d3848db23cb3fe11d7309027fc",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:20:32Z"
-          }
-        }
-      },
-      {
-        "sha": "8e05897b722414496dccc3009cecbde215aeb23e",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/8e05897b722414496dccc3009cecbde215aeb23e",
-        "commit": {
-          "message": "fix: move Left/Right to far edges of touch controls\n\nReorder mobile controls to [Left] [Rotate] [Down] [Drop] [Right] so Left\nsits on the far left and Right on the far right, with Rotate/Down/Drop\nclustered inside. Previously Right was in column 4 and Drop occupied the\nfar-right slot.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:11:30Z"
           }
         }
       }
@@ -1025,115 +911,39 @@
       }
     ]
   },
-  "freegamestore-online/pong": {
+  "freegamestore-online/pixelcode": {
     "meta": {
-      "created_at": "2026-05-04T10:14:03Z",
-      "pushed_at": "2026-06-04T06:20:24Z"
+      "created_at": "2026-05-27T14:50:59Z",
+      "pushed_at": "2026-06-01T23:19:52Z"
     },
     "commits": [
       {
-        "sha": "673779416bd83e046f8e9756c61e984614967742",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/673779416bd83e046f8e9756c61e984614967742",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:20:21Z"
-          }
-        }
-      },
-      {
-        "sha": "9f9bd4e6fc10f392b6bf7679dfd6459baf8ad084",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/9f9bd4e6fc10f392b6bf7679dfd6459baf8ad084",
+        "sha": "7568f6551141f64b44a97c8d0551bf3486cd6a03",
+        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/7568f6551141f64b44a97c8d0551bf3486cd6a03",
         "commit": {
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-01T23:19:56Z"
+            "date": "2026-06-01T23:19:50Z"
           }
         }
       },
       {
-        "sha": "db2152ec78877a2ed0d42d3d89c50ef29a105cea",
-        "html_url": "https://github.com/freegamestore-online/pong/commit/db2152ec78877a2ed0d42d3d89c50ef29a105cea",
+        "sha": "dba75c3cbc5b223388ce8f4491f88be753544585",
+        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/dba75c3cbc5b223388ce8f4491f88be753544585",
         "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix: add Fraunces brand display font (compliance brand-fonts check)\n\nThe game loaded Manrope but not Fraunces, failing the platform\nbrand-fonts compliance check. Added Fraunces to the Google Fonts link.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-27T12:18:10Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/sudoku": {
-    "meta": {
-      "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-06-04T06:21:15Z"
-    },
-    "commits": [
-      {
-        "sha": "47ffe492383f05a71075f5ed090cc55a50c771ed",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/47ffe492383f05a71075f5ed090cc55a50c771ed",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:21:12Z"
+            "date": "2026-05-28T02:33:40Z"
           }
         }
       },
       {
-        "sha": "3b15877fb9047dfa1164f855c5083c327102387d",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/3b15877fb9047dfa1164f855c5083c327102387d",
+        "sha": "4f7cb4b7669feb5c112f1e334a7ce627ef2378f5",
+        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/4f7cb4b7669feb5c112f1e334a7ce627ef2378f5",
         "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "message": "fix: add PWA setup (vite-plugin-pwa, manifest, icons, meta tags)\n\nRequired for FGS compliance and deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-01T23:20:26Z"
-          }
-        }
-      },
-      {
-        "sha": "ab202df06ccc5c2f7d2357d46b9984b04167a73c",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/ab202df06ccc5c2f7d2357d46b9984b04167a73c",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:59Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/wordsearch": {
-    "meta": {
-      "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-06-04T06:21:50Z"
-    },
-    "commits": [
-      {
-        "sha": "72ded7fe0ef5c5d338a5c75c9372b68e5d474ad2",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/72ded7fe0ef5c5d338a5c75c9372b68e5d474ad2",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:21:47Z"
-          }
-        }
-      },
-      {
-        "sha": "63c0715e21811b1f846b6219a9acb7a3706f9a68",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/63c0715e21811b1f846b6219a9acb7a3706f9a68",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:20:44Z"
-          }
-        }
-      },
-      {
-        "sha": "281af40acb594fb0913c42178665b5bb6e757f55",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/281af40acb594fb0913c42178665b5bb6e757f55",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:19:38Z"
+            "date": "2026-05-27T23:45:50Z"
           }
         }
       }
@@ -1177,267 +987,77 @@
       }
     ]
   },
-  "freegamestore-online/wordle": {
+  "freegamestore-online/pong": {
     "meta": {
-      "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-06-04T06:21:44Z"
+      "created_at": "2026-05-04T10:14:03Z",
+      "pushed_at": "2026-06-04T06:20:24Z"
     },
     "commits": [
       {
-        "sha": "3f15b66e625ecf03653e57e68b9aaa76fc17436a",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/3f15b66e625ecf03653e57e68b9aaa76fc17436a",
+        "sha": "673779416bd83e046f8e9756c61e984614967742",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/673779416bd83e046f8e9756c61e984614967742",
         "commit": {
           "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T06:21:41Z"
+            "date": "2026-06-04T06:20:21Z"
           }
         }
       },
       {
-        "sha": "e0e520cd844a57f470e881a3239926aaf9133711",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/e0e520cd844a57f470e881a3239926aaf9133711",
+        "sha": "9f9bd4e6fc10f392b6bf7679dfd6459baf8ad084",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/9f9bd4e6fc10f392b6bf7679dfd6459baf8ad084",
         "commit": {
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-01T23:20:41Z"
+            "date": "2026-06-01T23:19:56Z"
           }
         }
       },
       {
-        "sha": "7cc578f48b596ccc354efe3a3eeffda2ab116b79",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/7cc578f48b596ccc354efe3a3eeffda2ab116b79",
+        "sha": "db2152ec78877a2ed0d42d3d89c50ef29a105cea",
+        "html_url": "https://github.com/freegamestore-online/pong/commit/db2152ec78877a2ed0d42d3d89c50ef29a105cea",
         "commit": {
           "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-27T12:19:34Z"
+            "date": "2026-05-27T12:18:10Z"
           }
         }
       }
     ]
   },
-  "freegamestore-online/slither": {
+  "freegamestore-online/mahjong": {
     "meta": {
-      "created_at": "2026-05-04T06:33:48Z",
-      "pushed_at": "2026-06-04T06:20:54Z"
+      "created_at": "2026-05-04T10:14:26Z",
+      "pushed_at": "2026-06-04T06:19:43Z"
     },
     "commits": [
       {
-        "sha": "6ff5e39610dbf808fbe9116e91cacf315640519f",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/6ff5e39610dbf808fbe9116e91cacf315640519f",
+        "sha": "4c209b965a617a5c919177a3b0d23ee09cae46e1",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/4c209b965a617a5c919177a3b0d23ee09cae46e1",
         "commit": {
           "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T06:20:51Z"
+            "date": "2026-06-04T06:19:40Z"
           }
         }
       },
       {
-        "sha": "6261d093bec8e00aed2b0b8d213aeefd7cc241eb",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/6261d093bec8e00aed2b0b8d213aeefd7cc241eb",
+        "sha": "2598fe5f74013b49fb7ce6384e7391879f9e42f3",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/2598fe5f74013b49fb7ce6384e7391879f9e42f3",
         "commit": {
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-01T23:20:11Z"
+            "date": "2026-06-01T23:19:29Z"
           }
         }
       },
       {
-        "sha": "6014faf87550a67984f72c97c3d38534a76c6687",
-        "html_url": "https://github.com/freegamestore-online/slither/commit/6014faf87550a67984f72c97c3d38534a76c6687",
+        "sha": "b9208622fa3a8545176c94a85e15baa4c2661d0c",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/b9208622fa3a8545176c94a85e15baa4c2661d0c",
         "commit": {
           "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-27T12:18:41Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/connect4": {
-    "meta": {
-      "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-06-04T06:19:14Z"
-    },
-    "commits": [
-      {
-        "sha": "faebef36ebbf2ff452f6cc8b83a2d5d57f729784",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/faebef36ebbf2ff452f6cc8b83a2d5d57f729784",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:19:11Z"
-          }
-        }
-      },
-      {
-        "sha": "00cd4ba8dce9dc5a691f9880bdd3f1980302f8e0",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/00cd4ba8dce9dc5a691f9880bdd3f1980302f8e0",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:19:08Z"
-          }
-        }
-      },
-      {
-        "sha": "5ae5e2d42ffbb4fb055f8abac78c1dbb56122a7e",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/5ae5e2d42ffbb4fb055f8abac78c1dbb56122a7e",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:31Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/reversi": {
-    "meta": {
-      "created_at": "2026-05-18T23:16:14Z",
-      "pushed_at": "2026-06-04T06:20:39Z"
-    },
-    "commits": [
-      {
-        "sha": "6f2dd165cf89ccb97acf5f8890a7c3639bbe598e",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/6f2dd165cf89ccb97acf5f8890a7c3639bbe598e",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:20:37Z"
-          }
-        }
-      },
-      {
-        "sha": "809ed1c3e4d9f18734569cb62225b025a8130b69",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/809ed1c3e4d9f18734569cb62225b025a8130b69",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:29Z"
-          }
-        }
-      },
-      {
-        "sha": "a92c176cdc5d8816b8704713e3caacd70d4382e3",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/a92c176cdc5d8816b8704713e3caacd70d4382e3",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:00Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/tictactoe": {
-    "meta": {
-      "created_at": "2026-05-18T22:50:34Z",
-      "pushed_at": "2026-06-04T06:21:30Z"
-    },
-    "commits": [
-      {
-        "sha": "491c79cd9e53f719245f0ded44059db3728e0a0b",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/491c79cd9e53f719245f0ded44059db3728e0a0b",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:21:27Z"
-          }
-        }
-      },
-      {
-        "sha": "f7e3a07c2406abb06ef013cf25baab5dcdad4c2d",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/f7e3a07c2406abb06ef013cf25baab5dcdad4c2d",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:19:19Z"
-          }
-        }
-      },
-      {
-        "sha": "e105e5cc3630a422969543aa99f054a02475b9a7",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/e105e5cc3630a422969543aa99f054a02475b9a7",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:34Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/blackjack": {
-    "meta": {
-      "created_at": "2026-05-18T23:17:31Z",
-      "pushed_at": "2026-06-04T06:16:11Z"
-    },
-    "commits": [
-      {
-        "sha": "099f93f0469f4a3b2cb21902b2fe9e4aec075d74",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/099f93f0469f4a3b2cb21902b2fe9e4aec075d74",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:16:05Z"
-          }
-        }
-      },
-      {
-        "sha": "1a9d61312252a3ea2cca1210059022e7124ce769",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/1a9d61312252a3ea2cca1210059022e7124ce769",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:18:50Z"
-          }
-        }
-      },
-      {
-        "sha": "0f973fa34e51ef3e9477449afe9281b1ffe9a7aa",
-        "html_url": "https://github.com/freegamestore-online/blackjack/commit/0f973fa34e51ef3e9477449afe9281b1ffe9a7aa",
-        "commit": {
-          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:27Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/bubbleshooter": {
-    "meta": {
-      "created_at": "2026-05-18T23:17:44Z",
-      "pushed_at": "2026-06-04T06:18:23Z"
-    },
-    "commits": [
-      {
-        "sha": "7760a7fda171f31eace191cb9d88240e12e7e467",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/7760a7fda171f31eace191cb9d88240e12e7e467",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:18:21Z"
-          }
-        }
-      },
-      {
-        "sha": "82570eb94e49f01b61f97286223923aca5c8d240",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/82570eb94e49f01b61f97286223923aca5c8d240",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:18:59Z"
-          }
-        }
-      },
-      {
-        "sha": "8f48157c147543124df2012f4eff52c2da89dc6b",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/8f48157c147543124df2012f4eff52c2da89dc6b",
-        "commit": {
-          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:31Z"
+            "date": "2026-05-27T12:16:59Z"
           }
         }
       }
@@ -1481,39 +1101,39 @@
       }
     ]
   },
-  "freegamestore-online/war": {
+  "freegamestore-online/simon": {
     "meta": {
-      "created_at": "2026-05-19T00:05:08Z",
-      "pushed_at": "2026-06-04T06:21:34Z"
+      "created_at": "2026-05-04T10:14:22Z",
+      "pushed_at": "2026-06-04T06:20:49Z"
     },
     "commits": [
       {
-        "sha": "f31c4172a0abcb5f1690e636c37749ea5196c85e",
-        "html_url": "https://github.com/freegamestore-online/war/commit/f31c4172a0abcb5f1690e636c37749ea5196c85e",
+        "sha": "f5494379de09c28e2b50f58572970cf467a286f8",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/f5494379de09c28e2b50f58572970cf467a286f8",
         "commit": {
           "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T06:21:32Z"
+            "date": "2026-06-04T06:20:47Z"
           }
         }
       },
       {
-        "sha": "e917df110244c88ec0c2fd7d398ea84588f6d622",
-        "html_url": "https://github.com/freegamestore-online/war/commit/e917df110244c88ec0c2fd7d398ea84588f6d622",
+        "sha": "34acdb8af02d91ff326b487ff1b5cab48fb3f72f",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/34acdb8af02d91ff326b487ff1b5cab48fb3f72f",
         "commit": {
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-01T23:21:01Z"
+            "date": "2026-06-01T23:20:08Z"
           }
         }
       },
       {
-        "sha": "bb86eea564141d61ef32ab060307ebc32f0eeb04",
-        "html_url": "https://github.com/freegamestore-online/war/commit/bb86eea564141d61ef32ab060307ebc32f0eeb04",
+        "sha": "dcf56868593608c4608dcbd848895a0149e83f34",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/dcf56868593608c4608dcbd848895a0149e83f34",
         "commit": {
           "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-27T12:19:28Z"
+            "date": "2026-05-27T12:18:37Z"
           }
         }
       }
@@ -1557,267 +1177,77 @@
       }
     ]
   },
-  "freegamestore-online/riichi": {
+  "freegamestore-online/slither": {
     "meta": {
-      "created_at": "2026-05-19T02:31:10Z",
-      "pushed_at": "2026-06-04T06:20:44Z"
+      "created_at": "2026-05-04T06:33:48Z",
+      "pushed_at": "2026-06-04T06:20:54Z"
     },
     "commits": [
       {
-        "sha": "b452fd18a999e42f0e17e91569cf34e102ddbafa",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/b452fd18a999e42f0e17e91569cf34e102ddbafa",
+        "sha": "6ff5e39610dbf808fbe9116e91cacf315640519f",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/6ff5e39610dbf808fbe9116e91cacf315640519f",
         "commit": {
           "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T06:20:41Z"
+            "date": "2026-06-04T06:20:51Z"
           }
         }
       },
       {
-        "sha": "054d604961819c19f6097e1f46712b8cb2088919",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/054d604961819c19f6097e1f46712b8cb2088919",
+        "sha": "6261d093bec8e00aed2b0b8d213aeefd7cc241eb",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/6261d093bec8e00aed2b0b8d213aeefd7cc241eb",
         "commit": {
-          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-27T12:18:39Z"
+            "date": "2026-06-01T23:20:11Z"
           }
         }
       },
       {
-        "sha": "40109bb605c22f1c456fe1c4f124851c54c2ad08",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/40109bb605c22f1c456fe1c4f124851c54c2ad08",
+        "sha": "6014faf87550a67984f72c97c3d38534a76c6687",
+        "html_url": "https://github.com/freegamestore-online/slither/commit/6014faf87550a67984f72c97c3d38534a76c6687",
         "commit": {
           "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-27T12:18:34Z"
+            "date": "2026-05-27T12:18:41Z"
           }
         }
       }
     ]
   },
-  "freegamestore-online/pinball": {
+  "freegamestore-online/sudoku": {
     "meta": {
-      "created_at": "2026-05-19T02:33:08Z",
-      "pushed_at": "2026-06-04T06:20:13Z"
+      "created_at": "2026-05-04T09:58:03Z",
+      "pushed_at": "2026-06-04T06:21:15Z"
     },
     "commits": [
       {
-        "sha": "af4595173b090b08ac26c14ca31ae57bcf8e2d64",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/af4595173b090b08ac26c14ca31ae57bcf8e2d64",
+        "sha": "47ffe492383f05a71075f5ed090cc55a50c771ed",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/47ffe492383f05a71075f5ed090cc55a50c771ed",
         "commit": {
           "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T06:20:10Z"
+            "date": "2026-06-04T06:21:12Z"
           }
         }
       },
       {
-        "sha": "dee12fb8aabf5b82c4db534f1f21148ed400f577",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/dee12fb8aabf5b82c4db534f1f21148ed400f577",
+        "sha": "3b15877fb9047dfa1164f855c5083c327102387d",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/3b15877fb9047dfa1164f855c5083c327102387d",
         "commit": {
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-01T23:19:47Z"
+            "date": "2026-06-01T23:20:26Z"
           }
         }
       },
       {
-        "sha": "35de70556dd71a9fa0604530dd58fc8fe5cf7945",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/35de70556dd71a9fa0604530dd58fc8fe5cf7945",
-        "commit": {
-          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:35Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/quickdice": {
-    "meta": {
-      "created_at": "2026-05-06T04:45:04Z",
-      "pushed_at": "2026-06-01T23:20:01Z"
-    },
-    "commits": [
-      {
-        "sha": "51a748ca46d8fc4c8a60128cc4e03e233e767eff",
-        "html_url": "https://github.com/freegamestore-online/quickdice/commit/51a748ca46d8fc4c8a60128cc4e03e233e767eff",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:19:59Z"
-          }
-        }
-      },
-      {
-        "sha": "849fe09880042071d9a79fd3f335ce6a9e5919ea",
-        "html_url": "https://github.com/freegamestore-online/quickdice/commit/849fe09880042071d9a79fd3f335ce6a9e5919ea",
+        "sha": "ab202df06ccc5c2f7d2357d46b9984b04167a73c",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/ab202df06ccc5c2f7d2357d46b9984b04167a73c",
         "commit": {
           "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-27T12:18:21Z"
-          }
-        }
-      },
-      {
-        "sha": "fea2ba61a2f689f86144181ffa1a327b95cbd640",
-        "html_url": "https://github.com/freegamestore-online/quickdice/commit/fea2ba61a2f689f86144181ffa1a327b95cbd640",
-        "commit": {
-          "message": "feat: Quick Dice game — roll dice to hit targets, streak bonuses, 60s timer\n\nPWA-ready with offline support, GameShell/GameTopbar from @freegamestore/games SDK,\nleaderboard integration, animated dice, sound effects.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:11:55Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/dragontap": {
-    "meta": {
-      "created_at": "2026-05-06T04:15:50Z",
-      "pushed_at": "2026-06-01T23:19:17Z"
-    },
-    "commits": [
-      {
-        "sha": "9c59980d5614f5eb7ff590d0b0584f320401dd37",
-        "html_url": "https://github.com/freegamestore-online/dragontap/commit/9c59980d5614f5eb7ff590d0b0584f320401dd37",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:19:14Z"
-          }
-        }
-      },
-      {
-        "sha": "97ab536b94f402eaf75aa1db2270246dcc55d5f4",
-        "html_url": "https://github.com/freegamestore-online/dragontap/commit/97ab536b94f402eaf75aa1db2270246dcc55d5f4",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:39Z"
-          }
-        }
-      },
-      {
-        "sha": "b653915e9ae8399bba904065cddc24d06126cc23",
-        "html_url": "https://github.com/freegamestore-online/dragontap/commit/b653915e9ae8399bba904065cddc24d06126cc23",
-        "commit": {
-          "message": "feat: Dragon Tap game — tap dragons to score, speed ramps, 3 lives\n\nPWA-ready with offline support, GameShell/GameTopbar from @freegamestore/games SDK,\nleaderboard integration, combo system, sound effects.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:11:53Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/toetap": {
-    "meta": {
-      "created_at": "2026-05-06T04:17:16Z",
-      "pushed_at": "2026-05-27T12:19:27Z"
-    },
-    "commits": [
-      {
-        "sha": "1d41b788f0f863480b85de9becadaa81350958aa",
-        "html_url": "https://github.com/freegamestore-online/toetap/commit/1d41b788f0f863480b85de9becadaa81350958aa",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:19:24Z"
-          }
-        }
-      },
-      {
-        "sha": "477e4e4f0daee89a263eb15a6a39a211992b3eb9",
-        "html_url": "https://github.com/freegamestore-online/toetap/commit/477e4e4f0daee89a263eb15a6a39a211992b3eb9",
-        "commit": {
-          "message": "fix: add missing --bg CSS token to design system variables\n\nDefines --bg: var(--paper) in both light and dark mode root,\nmatching the platform design system convention.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:55Z"
-          }
-        }
-      },
-      {
-        "sha": "331a20687fa3eec17d41c5a1df316c0e96b53a4f",
-        "html_url": "https://github.com/freegamestore-online/toetap/commit/331a20687fa3eec17d41c5a1df316c0e96b53a4f",
-        "commit": {
-          "message": "feat: Toe Tap game — Simon Says on a 4x4 grid, remember and replay sequences\n\nPWA-ready with offline support, GameShell/GameTopbar from @freegamestore/games SDK,\nsound effects, visual feedback, high score persistence.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:11:56Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/musicbot": {
-    "meta": {
-      "created_at": "2026-05-27T14:50:52Z",
-      "pushed_at": "2026-06-01T23:19:43Z"
-    },
-    "commits": [
-      {
-        "sha": "3043940d6887e20ec81f227ff481cb6957153809",
-        "html_url": "https://github.com/freegamestore-online/musicbot/commit/3043940d6887e20ec81f227ff481cb6957153809",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:19:41Z"
-          }
-        }
-      },
-      {
-        "sha": "6a2f0aabac44119d789641ec2430b669001f1e33",
-        "html_url": "https://github.com/freegamestore-online/musicbot/commit/6a2f0aabac44119d789641ec2430b669001f1e33",
-        "commit": {
-          "message": "fix: add Fraunces brand display font (compliance brand-fonts check)\n\nThe game loaded Manrope but not Fraunces, failing the platform\nbrand-fonts compliance check. Added Fraunces to the Google Fonts link.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-28T02:33:40Z"
-          }
-        }
-      },
-      {
-        "sha": "1e9a2ffaf9d7d4ebeba8a48749e6051e63f3c6be",
-        "html_url": "https://github.com/freegamestore-online/musicbot/commit/1e9a2ffaf9d7d4ebeba8a48749e6051e63f3c6be",
-        "commit": {
-          "message": "fix: add PWA setup (vite-plugin-pwa, manifest, icons, meta tags)\n\nRequired for FGS compliance and deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T23:45:38Z"
-          }
-        }
-      }
-    ]
-  },
-  "freegamestore-online/pixelcode": {
-    "meta": {
-      "created_at": "2026-05-27T14:50:59Z",
-      "pushed_at": "2026-06-01T23:19:52Z"
-    },
-    "commits": [
-      {
-        "sha": "7568f6551141f64b44a97c8d0551bf3486cd6a03",
-        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/7568f6551141f64b44a97c8d0551bf3486cd6a03",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:19:50Z"
-          }
-        }
-      },
-      {
-        "sha": "dba75c3cbc5b223388ce8f4491f88be753544585",
-        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/dba75c3cbc5b223388ce8f4491f88be753544585",
-        "commit": {
-          "message": "fix: add Fraunces brand display font (compliance brand-fonts check)\n\nThe game loaded Manrope but not Fraunces, failing the platform\nbrand-fonts compliance check. Added Fraunces to the Google Fonts link.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-28T02:33:40Z"
-          }
-        }
-      },
-      {
-        "sha": "4f7cb4b7669feb5c112f1e334a7ce627ef2378f5",
-        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/4f7cb4b7669feb5c112f1e334a7ce627ef2378f5",
-        "commit": {
-          "message": "fix: add PWA setup (vite-plugin-pwa, manifest, icons, meta tags)\n\nRequired for FGS compliance and deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T23:45:50Z"
+            "date": "2026-05-27T12:18:59Z"
           }
         }
       }
@@ -1861,6 +1291,272 @@
       }
     ]
   },
+  "freegamestore-online/tictactoe": {
+    "meta": {
+      "created_at": "2026-05-18T22:50:34Z",
+      "pushed_at": "2026-06-04T06:21:30Z"
+    },
+    "commits": [
+      {
+        "sha": "491c79cd9e53f719245f0ded44059db3728e0a0b",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/491c79cd9e53f719245f0ded44059db3728e0a0b",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:21:27Z"
+          }
+        }
+      },
+      {
+        "sha": "f7e3a07c2406abb06ef013cf25baab5dcdad4c2d",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/f7e3a07c2406abb06ef013cf25baab5dcdad4c2d",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:19:19Z"
+          }
+        }
+      },
+      {
+        "sha": "e105e5cc3630a422969543aa99f054a02475b9a7",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/e105e5cc3630a422969543aa99f054a02475b9a7",
+        "commit": {
+          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-26T04:19:34Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/spaceshooter": {
+    "meta": {
+      "created_at": "2026-05-04T09:48:41Z",
+      "pushed_at": "2026-06-04T06:21:10Z"
+    },
+    "commits": [
+      {
+        "sha": "fb619a59401859dd3b1a583ab1f8ca8322285956",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/fb619a59401859dd3b1a583ab1f8ca8322285956",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:21:07Z"
+          }
+        }
+      },
+      {
+        "sha": "9ce97bdccf66b5f47e694f4507e0ea882eefb424",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/9ce97bdccf66b5f47e694f4507e0ea882eefb424",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:23Z"
+          }
+        }
+      },
+      {
+        "sha": "121f309e85a5e95093bd10cd85bec680c66320af",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/121f309e85a5e95093bd10cd85bec680c66320af",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:56Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/quickdice": {
+    "meta": {
+      "created_at": "2026-05-06T04:45:04Z",
+      "pushed_at": "2026-06-01T23:20:01Z"
+    },
+    "commits": [
+      {
+        "sha": "51a748ca46d8fc4c8a60128cc4e03e233e767eff",
+        "html_url": "https://github.com/freegamestore-online/quickdice/commit/51a748ca46d8fc4c8a60128cc4e03e233e767eff",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:59Z"
+          }
+        }
+      },
+      {
+        "sha": "849fe09880042071d9a79fd3f335ce6a9e5919ea",
+        "html_url": "https://github.com/freegamestore-online/quickdice/commit/849fe09880042071d9a79fd3f335ce6a9e5919ea",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:21Z"
+          }
+        }
+      },
+      {
+        "sha": "fea2ba61a2f689f86144181ffa1a327b95cbd640",
+        "html_url": "https://github.com/freegamestore-online/quickdice/commit/fea2ba61a2f689f86144181ffa1a327b95cbd640",
+        "commit": {
+          "message": "feat: Quick Dice game — roll dice to hit targets, streak bonuses, 60s timer\n\nPWA-ready with offline support, GameShell/GameTopbar from @freegamestore/games SDK,\nleaderboard integration, animated dice, sound effects.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-26T04:11:55Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/snake": {
+    "meta": {
+      "created_at": "2026-05-04T06:07:31Z",
+      "pushed_at": "2026-06-04T06:20:59Z"
+    },
+    "commits": [
+      {
+        "sha": "6d70863305338379ab4112362b3f8b5051a57858",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/6d70863305338379ab4112362b3f8b5051a57858",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:56Z"
+          }
+        }
+      },
+      {
+        "sha": "6d578f5e16db30cd7cdf53dc195d6fd390999d16",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/6d578f5e16db30cd7cdf53dc195d6fd390999d16",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:14Z"
+          }
+        }
+      },
+      {
+        "sha": "dedcb78fc5ab30081c3b7c4da70cb316c7c049b5",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/dedcb78fc5ab30081c3b7c4da70cb316c7c049b5",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:45Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/reversi": {
+    "meta": {
+      "created_at": "2026-05-18T23:16:14Z",
+      "pushed_at": "2026-06-04T06:20:39Z"
+    },
+    "commits": [
+      {
+        "sha": "6f2dd165cf89ccb97acf5f8890a7c3639bbe598e",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/6f2dd165cf89ccb97acf5f8890a7c3639bbe598e",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:37Z"
+          }
+        }
+      },
+      {
+        "sha": "809ed1c3e4d9f18734569cb62225b025a8130b69",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/809ed1c3e4d9f18734569cb62225b025a8130b69",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:29Z"
+          }
+        }
+      },
+      {
+        "sha": "a92c176cdc5d8816b8704713e3caacd70d4382e3",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/a92c176cdc5d8816b8704713e3caacd70d4382e3",
+        "commit": {
+          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-26T04:19:00Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/puzzle": {
+    "meta": {
+      "created_at": "2026-05-03T02:32:55Z",
+      "pushed_at": "2026-06-04T06:20:29Z"
+    },
+    "commits": [
+      {
+        "sha": "adb62ab6da62394cfbf84d927b71349d260e3eb7",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/adb62ab6da62394cfbf84d927b71349d260e3eb7",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:26Z"
+          }
+        }
+      },
+      {
+        "sha": "ab9f7d0520d10969a7631f2cd51100ae1c3b3838",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/ab9f7d0520d10969a7631f2cd51100ae1c3b3838",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:15Z"
+          }
+        }
+      },
+      {
+        "sha": "591847ccea9914fec874b895cfa634c5d8ea15f4",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/591847ccea9914fec874b895cfa634c5d8ea15f4",
+        "commit": {
+          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-26T04:18:54Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/riichi": {
+    "meta": {
+      "created_at": "2026-05-19T02:31:10Z",
+      "pushed_at": "2026-06-04T06:20:44Z"
+    },
+    "commits": [
+      {
+        "sha": "b452fd18a999e42f0e17e91569cf34e102ddbafa",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/b452fd18a999e42f0e17e91569cf34e102ddbafa",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:41Z"
+          }
+        }
+      },
+      {
+        "sha": "054d604961819c19f6097e1f46712b8cb2088919",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/054d604961819c19f6097e1f46712b8cb2088919",
+        "commit": {
+          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:39Z"
+          }
+        }
+      },
+      {
+        "sha": "40109bb605c22f1c456fe1c4f124851c54c2ad08",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/40109bb605c22f1c456fe1c4f124851c54c2ad08",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:34Z"
+          }
+        }
+      }
+    ]
+  },
   "freegamestore-online/turtlecode": {
     "meta": {
       "created_at": "2026-05-27T14:51:06Z",
@@ -1899,37 +1595,229 @@
       }
     ]
   },
-  "freegamestore-online/test": {
+  "freegamestore-online/tetris": {
     "meta": {
-      "created_at": "2026-05-28T00:31:38Z",
-      "pushed_at": "2026-05-28T00:31:41Z"
+      "created_at": "2026-05-04T05:54:37Z",
+      "pushed_at": "2026-06-04T06:21:25Z"
     },
     "commits": [
       {
-        "sha": "a1dba6f302e0862e2e8b0f99fa3ad6bd4c15fa7d",
-        "html_url": "https://github.com/freegamestore-online/test/commit/a1dba6f302e0862e2e8b0f99fa3ad6bd4c15fa7d",
+        "sha": "5c8ef345ce0939d5018bcb17c2ea3114c9acc5f8",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/5c8ef345ce0939d5018bcb17c2ea3114c9acc5f8",
         "commit": {
-          "message": "Initial commit",
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-28T00:31:41Z"
+            "date": "2026-06-04T06:21:22Z"
+          }
+        }
+      },
+      {
+        "sha": "a36b351a9901f1d3848db23cb3fe11d7309027fc",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/a36b351a9901f1d3848db23cb3fe11d7309027fc",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:32Z"
+          }
+        }
+      },
+      {
+        "sha": "8e05897b722414496dccc3009cecbde215aeb23e",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/8e05897b722414496dccc3009cecbde215aeb23e",
+        "commit": {
+          "message": "fix: move Left/Right to far edges of touch controls\n\nReorder mobile controls to [Left] [Rotate] [Down] [Drop] [Right] so Left\nsits on the far left and Right on the far right, with Rotate/Down/Drop\nclustered inside. Previously Right was in column 4 and Drop occupied the\nfar-right slot.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:11:30Z"
           }
         }
       }
     ]
   },
-  "freegamestore-online/snake-game": {
+  "freegamestore-online/racing": {
     "meta": {
-      "created_at": "2026-05-29T03:43:17Z",
-      "pushed_at": "2026-05-29T03:43:21Z"
+      "created_at": "2026-05-04T06:53:40Z",
+      "pushed_at": "2026-06-04T06:20:35Z"
     },
     "commits": [
       {
-        "sha": "c58636d6b3f7029f97f05749481ac9d967a5b98e",
-        "html_url": "https://github.com/freegamestore-online/snake-game/commit/c58636d6b3f7029f97f05749481ac9d967a5b98e",
+        "sha": "92feea562b4377e02f465711b7a8c32fe6af2035",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/92feea562b4377e02f465711b7a8c32fe6af2035",
         "commit": {
-          "message": "Initial commit",
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-05-29T03:43:20Z"
+            "date": "2026-06-04T06:20:32Z"
+          }
+        }
+      },
+      {
+        "sha": "24471f289f15fc83ef1b8e60289b755a1b5cbffd",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/24471f289f15fc83ef1b8e60289b755a1b5cbffd",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:20:02Z"
+          }
+        }
+      },
+      {
+        "sha": "2a82f008bd7288d545330217c18ff7a7c5c166df",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/2a82f008bd7288d545330217c18ff7a7c5c166df",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:25Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/toetap": {
+    "meta": {
+      "created_at": "2026-05-06T04:17:16Z",
+      "pushed_at": "2026-05-27T12:19:27Z"
+    },
+    "commits": [
+      {
+        "sha": "1d41b788f0f863480b85de9becadaa81350958aa",
+        "html_url": "https://github.com/freegamestore-online/toetap/commit/1d41b788f0f863480b85de9becadaa81350958aa",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:19:24Z"
+          }
+        }
+      },
+      {
+        "sha": "477e4e4f0daee89a263eb15a6a39a211992b3eb9",
+        "html_url": "https://github.com/freegamestore-online/toetap/commit/477e4e4f0daee89a263eb15a6a39a211992b3eb9",
+        "commit": {
+          "message": "fix: add missing --bg CSS token to design system variables\n\nDefines --bg: var(--paper) in both light and dark mode root,\nmatching the platform design system convention.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:55Z"
+          }
+        }
+      },
+      {
+        "sha": "331a20687fa3eec17d41c5a1df316c0e96b53a4f",
+        "html_url": "https://github.com/freegamestore-online/toetap/commit/331a20687fa3eec17d41c5a1df316c0e96b53a4f",
+        "commit": {
+          "message": "feat: Toe Tap game — Simon Says on a 4x4 grid, remember and replay sequences\n\nPWA-ready with offline support, GameShell/GameTopbar from @freegamestore/games SDK,\nsound effects, visual feedback, high score persistence.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-26T04:11:56Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/war": {
+    "meta": {
+      "created_at": "2026-05-19T00:05:08Z",
+      "pushed_at": "2026-06-04T06:21:34Z"
+    },
+    "commits": [
+      {
+        "sha": "f31c4172a0abcb5f1690e636c37749ea5196c85e",
+        "html_url": "https://github.com/freegamestore-online/war/commit/f31c4172a0abcb5f1690e636c37749ea5196c85e",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:21:32Z"
+          }
+        }
+      },
+      {
+        "sha": "e917df110244c88ec0c2fd7d398ea84588f6d622",
+        "html_url": "https://github.com/freegamestore-online/war/commit/e917df110244c88ec0c2fd7d398ea84588f6d622",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:21:01Z"
+          }
+        }
+      },
+      {
+        "sha": "bb86eea564141d61ef32ab060307ebc32f0eeb04",
+        "html_url": "https://github.com/freegamestore-online/war/commit/bb86eea564141d61ef32ab060307ebc32f0eeb04",
+        "commit": {
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:19:28Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/pinball": {
+    "meta": {
+      "created_at": "2026-05-19T02:33:08Z",
+      "pushed_at": "2026-06-04T06:20:13Z"
+    },
+    "commits": [
+      {
+        "sha": "af4595173b090b08ac26c14ca31ae57bcf8e2d64",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/af4595173b090b08ac26c14ca31ae57bcf8e2d64",
+        "commit": {
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T06:20:10Z"
+          }
+        }
+      },
+      {
+        "sha": "dee12fb8aabf5b82c4db534f1f21148ed400f577",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/dee12fb8aabf5b82c4db534f1f21148ed400f577",
+        "commit": {
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-01T23:19:47Z"
+          }
+        }
+      },
+      {
+        "sha": "35de70556dd71a9fa0604530dd58fc8fe5cf7945",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/35de70556dd71a9fa0604530dd58fc8fe5cf7945",
+        "commit": {
+          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-05-27T12:18:35Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/uno": {
+    "meta": {
+      "created_at": "2026-06-03T03:32:48Z",
+      "pushed_at": "2026-06-04T12:19:59Z"
+    },
+    "commits": [
+      {
+        "sha": "60db57caeb7553555a602ad9566efdcf9ffaffc6",
+        "html_url": "https://github.com/freegamestore-online/uno/commit/60db57caeb7553555a602ad9566efdcf9ffaffc6",
+        "commit": {
+          "message": "fix: suppress CPU UNO call when player is being skipped\n\nactiveSeat lands on the skip victim before pendingAction resolves,\ncausing the CPU UNO pre-call effect to fire. Guard against skip (and\n2-player reverse) pendingActions so the skipped tag displays cleanly.\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T12:19:57Z"
+          }
+        }
+      },
+      {
+        "sha": "a4dcb1b46ea0518ad8e83a6619128af70ae216e0",
+        "html_url": "https://github.com/freegamestore-online/uno/commit/a4dcb1b46ea0518ad8e83a6619128af70ae216e0",
+        "commit": {
+          "message": "fix: resolve TS build errors from @freegamestore/games 0.14.0 upgrade\n\n- Add cpuPassedSeat/cpuPassedDrawnId to setState callbacks that spread\n  playCard() (GameState), keeping ExtState complete\n- Remove unused effectiveColor import, playable destructure, dx variable\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-06-04T11:53:48Z"
+          }
+        }
+      },
+      {
+        "sha": "1c53eb581f598c8f51047b079a6062f38dbe49d9",
+        "html_url": "https://github.com/freegamestore-online/uno/commit/1c53eb581f598c8f51047b079a6062f38dbe49d9",
+        "commit": {
+          "message": "chore: update lockfile for @freegamestore/games 0.14.0",
+          "author": {
+            "date": "2026-06-04T11:50:01Z"
           }
         }
       }
@@ -1972,115 +1860,116 @@
         }
       }
     ]
-<<<<<<< HEAD
   },
-  "freegamestore-online/uno": {
+  "freegamestore-online/whackamole": {
     "meta": {
-      "created_at": "2026-06-03T03:32:48Z",
-      "pushed_at": "2026-06-04T12:19:59Z"
+      "created_at": "2026-05-04T10:38:47Z",
+      "pushed_at": "2026-06-04T06:21:39Z"
     },
     "commits": [
       {
-        "sha": "60db57caeb7553555a602ad9566efdcf9ffaffc6",
-        "html_url": "https://github.com/freegamestore-online/uno/commit/60db57caeb7553555a602ad9566efdcf9ffaffc6",
+        "sha": "7f5477a8f921024b12b0a9174f314ad8c012fb7c",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/7f5477a8f921024b12b0a9174f314ad8c012fb7c",
         "commit": {
-          "message": "fix: suppress CPU UNO call when player is being skipped\n\nactiveSeat lands on the skip victim before pendingAction resolves,\ncausing the CPU UNO pre-call effect to fire. Guard against skip (and\n2-player reverse) pendingActions so the skipped tag displays cleanly.\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>",
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T12:19:57Z"
+            "date": "2026-06-04T06:21:37Z"
           }
         }
       },
       {
-        "sha": "a4dcb1b46ea0518ad8e83a6619128af70ae216e0",
-        "html_url": "https://github.com/freegamestore-online/uno/commit/a4dcb1b46ea0518ad8e83a6619128af70ae216e0",
+        "sha": "400b98e6cf1c7dedbc8fc65a6c15ed3805ba1fae",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/400b98e6cf1c7dedbc8fc65a6c15ed3805ba1fae",
         "commit": {
-          "message": "fix: resolve TS build errors from @freegamestore/games 0.14.0 upgrade\n\n- Add cpuPassedSeat/cpuPassedDrawnId to setState callbacks that spread\n  playCard() (GameState), keeping ExtState complete\n- Remove unused effectiveColor import, playable destructure, dx variable\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>",
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T11:53:48Z"
+            "date": "2026-06-01T23:20:38Z"
           }
         }
       },
       {
-        "sha": "1c53eb581f598c8f51047b079a6062f38dbe49d9",
-        "html_url": "https://github.com/freegamestore-online/uno/commit/1c53eb581f598c8f51047b079a6062f38dbe49d9",
+        "sha": "4fb67dff34accef895b1ca961da1ba83627d507a",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/4fb67dff34accef895b1ca961da1ba83627d507a",
         "commit": {
-          "message": "chore: update lockfile for @freegamestore/games 0.14.0",
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T11:50:01Z"
+            "date": "2026-05-27T12:19:31Z"
           }
         }
       }
     ]
   },
-  "freegamestore-online/mcp-smoke-test": {
+  "freegamestore-online/wordsearch": {
     "meta": {
-      "created_at": "2026-06-04T07:33:26Z",
-      "pushed_at": "2026-06-04T07:40:22Z"
+      "created_at": "2026-05-04T10:38:51Z",
+      "pushed_at": "2026-06-04T06:21:50Z"
     },
     "commits": [
       {
-        "sha": "abaf4677d19857c85037cc582c3b0242c3f92bd8",
-        "html_url": "https://github.com/freegamestore-online/mcp-smoke-test/commit/abaf4677d19857c85037cc582c3b0242c3f92bd8",
+        "sha": "72ded7fe0ef5c5d338a5c75c9372b68e5d474ad2",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/72ded7fe0ef5c5d338a5c75c9372b68e5d474ad2",
         "commit": {
-          "message": "MCP update_files verification",
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T07:40:21Z"
+            "date": "2026-06-04T06:21:47Z"
           }
         }
       },
       {
-        "sha": "d8c15cfbfe38f5faccfc500e0caf6f1e807894be",
-        "html_url": "https://github.com/freegamestore-online/mcp-smoke-test/commit/d8c15cfbfe38f5faccfc500e0caf6f1e807894be",
+        "sha": "63c0715e21811b1f846b6219a9acb7a3706f9a68",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/63c0715e21811b1f846b6219a9acb7a3706f9a68",
         "commit": {
-          "message": "Initial mcp-smoke-test — scaffolded via MCP (canvas)",
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T07:39:39Z"
+            "date": "2026-06-01T23:20:44Z"
           }
         }
       },
       {
-        "sha": "8642b307801b01aac35d8ebdc1f6c52baecd5622",
-        "html_url": "https://github.com/freegamestore-online/mcp-smoke-test/commit/8642b307801b01aac35d8ebdc1f6c52baecd5622",
+        "sha": "281af40acb594fb0913c42178665b5bb6e757f55",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/281af40acb594fb0913c42178665b5bb6e757f55",
         "commit": {
-          "message": "Initial commit",
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T07:33:29Z"
+            "date": "2026-05-27T12:19:38Z"
           }
         }
       }
     ]
   },
-  "freegamestore-online/mcp-grid-demo": {
+  "freegamestore-online/blockudoku": {
     "meta": {
-      "created_at": "2026-06-04T08:07:45Z",
-      "pushed_at": "2026-06-04T08:07:50Z"
+      "created_at": "2026-06-06T02:20:40Z",
+      "pushed_at": "2026-06-06T06:39:26Z"
     },
     "commits": [
       {
-        "sha": "f02839bde53a5b4a0b2bb3986eb1d386ae25f84a",
-        "html_url": "https://github.com/freegamestore-online/mcp-grid-demo/commit/f02839bde53a5b4a0b2bb3986eb1d386ae25f84a",
+        "sha": "716491f0e68fe8bbd1f4dec02c51acb9aa1f1cba",
+        "html_url": "https://github.com/freegamestore-online/blockudoku/commit/716491f0e68fe8bbd1f4dec02c51acb9aa1f1cba",
         "commit": {
-          "message": "Initial commit",
+          "message": "feat: full Blockudoku game with error boundary",
           "author": {
-            "date": "2026-06-04T08:07:50Z"
+            "date": "2026-06-06T06:39:26Z"
           }
         }
-      }
-    ]
-  },
-  "freegamestore-online/mcp-grid-demo3": {
-    "meta": {
-      "created_at": "2026-06-04T08:14:00Z",
-      "pushed_at": "2026-06-04T08:14:04Z"
-    },
-    "commits": [
+      },
       {
-        "sha": "1f2390af2a9dade3a791c4f1187f7792907b3221",
-        "html_url": "https://github.com/freegamestore-online/mcp-grid-demo3/commit/1f2390af2a9dade3a791c4f1187f7792907b3221",
+        "sha": "b81afc7cf0d7f52907a8ebe3f884dbbc2acd1ba1",
+        "html_url": "https://github.com/freegamestore-online/blockudoku/commit/b81afc7cf0d7f52907a8ebe3f884dbbc2acd1ba1",
         "commit": {
-          "message": "Initial commit",
+          "message": "test: minimal app to verify SDK rendering",
           "author": {
-            "date": "2026-06-04T08:14:04Z"
+            "date": "2026-06-06T06:29:28Z"
+          }
+        }
+      },
+      {
+        "sha": "4523f206e03238fe921d0a23abe527ce072af2e8",
+        "html_url": "https://github.com/freegamestore-online/blockudoku/commit/4523f206e03238fe921d0a23abe527ce072af2e8",
+        "commit": {
+          "message": "fix: TS strict mode — remove noUncheckedIndexedAccess, fix non-null assertions",
+          "author": {
+            "date": "2026-06-06T02:28:19Z"
           }
         }
       }
@@ -2124,44 +2013,42 @@
       }
     ]
   },
-  "freegamestore-online/blockudoku": {
+  "freegamestore-online/wordle": {
     "meta": {
-      "created_at": "2026-06-06T02:20:40Z",
-      "pushed_at": "2026-06-06T02:28:19Z"
+      "created_at": "2026-05-04T10:14:20Z",
+      "pushed_at": "2026-06-04T06:21:44Z"
     },
     "commits": [
       {
-        "sha": "4523f206e03238fe921d0a23abe527ce072af2e8",
-        "html_url": "https://github.com/freegamestore-online/blockudoku/commit/4523f206e03238fe921d0a23abe527ce072af2e8",
+        "sha": "3f15b66e625ecf03653e57e68b9aaa76fc17436a",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/3f15b66e625ecf03653e57e68b9aaa76fc17436a",
         "commit": {
-          "message": "fix: TS strict mode — remove noUncheckedIndexedAccess, fix non-null assertions",
+          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-06T02:28:19Z"
+            "date": "2026-06-04T06:21:41Z"
           }
         }
       },
       {
-        "sha": "e9ebdd38475fde30fd3cf4e67cb865fc04d53505",
-        "html_url": "https://github.com/freegamestore-online/blockudoku/commit/e9ebdd38475fde30fd3cf4e67cb865fc04d53505",
+        "sha": "e0e520cd844a57f470e881a3239926aaf9133711",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/e0e520cd844a57f470e881a3239926aaf9133711",
         "commit": {
-          "message": "Blockudoku — block puzzle meets Sudoku (9x9 grid, drag-drop, row/col/box clearing)",
+          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-06T02:25:39Z"
+            "date": "2026-06-01T23:20:41Z"
           }
         }
       },
       {
-        "sha": "f55c10f4272d07c9e6a7b6aca93ab4bde7cd871b",
-        "html_url": "https://github.com/freegamestore-online/blockudoku/commit/f55c10f4272d07c9e6a7b6aca93ab4bde7cd871b",
+        "sha": "7cc578f48b596ccc354efe3a3eeffda2ab116b79",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/7cc578f48b596ccc354efe3a3eeffda2ab116b79",
         "commit": {
-          "message": "Initial commit",
+          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-06T02:20:43Z"
+            "date": "2026-05-27T12:19:34Z"
           }
         }
       }
     ]
-=======
->>>>>>> 814851d (feat: add sort dropdown (A-Z / Newest / Category))
   }
 }
