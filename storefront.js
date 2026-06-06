@@ -1,69 +1,12 @@
 /**
  * FreeGameStore storefront interactions:
- *   - mode tabs (AI Assistant / Simple Search)
- *   - sort tabs (visual only)
- *   - split-pane preview (load game iframe on ≥1024px, navigate to about on <1024px)
+ *   - split-pane preview (load game iframe on >=1024px, navigate to about on <1024px)
  *   - ?game=<id> deep link, plus a fullscreen toolbar button (games need it)
  *
  * Theme toggle + mobile nav are handled by theme.js so they apply on every page.
  * Vendored — each store ships its own copy.
  */
 (function () {
-  // ---------- Mode tabs ----------
-  (function () {
-    var aiWrap = document.getElementById('aiInputWrap');
-    var searchWrap = document.getElementById('searchInputWrap');
-    var aiInput = document.getElementById('ai-prompt');
-    if (!aiWrap || !searchWrap) return;
-
-    document.querySelectorAll('.mode-tab').forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        document.querySelectorAll('.mode-tab').forEach(function (t) {
-          t.classList.remove('active');
-          t.setAttribute('aria-selected', 'false');
-        });
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-        var mode = tab.dataset.mode;
-        if (mode === 'ai') {
-          aiWrap.hidden = false;
-          searchWrap.hidden = true;
-          if (aiInput) aiInput.focus();
-        } else {
-          aiWrap.hidden = true;
-          searchWrap.hidden = false;
-          var sb = document.getElementById('storefront-search');
-          if (sb) sb.focus();
-        }
-      });
-    });
-
-    if (aiInput) {
-      aiInput.addEventListener('keydown', function (e) {
-        if (e.key !== 'Enter' || !aiInput.value.trim()) return;
-        e.preventDefault();
-        var sb = document.getElementById('storefront-search');
-        if (!sb) return;
-        sb.value = aiInput.value;
-        sb.dispatchEvent(new Event('input', { bubbles: true }));
-        var searchTab = document.querySelector('.mode-tab[data-mode="search"]');
-        if (searchTab) searchTab.click();
-      });
-    }
-  })();
-
-  // ---------- Sort tabs (visual only) ----------
-  document.querySelectorAll('.apps-tab').forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      document.querySelectorAll('.apps-tab').forEach(function (t) {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-    });
-  });
-
   // ---------- Split-pane preview ----------
   (function () {
     var pane = document.getElementById('previewPane');

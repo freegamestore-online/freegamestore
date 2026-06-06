@@ -98,38 +98,15 @@
 
   <main class="container">
     <section class="apps-section" id="games">
-      <div class="mode-tabs" role="tablist" aria-label="Search mode">
-        <button class="mode-tab active" type="button" data-mode="ai" role="tab" aria-selected="true">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2zm6 10l1 3 3 1-3 1-1 3-1-3-3-1 3-1 1-3zm-13 4l.8 2.2L8 19l-2.2.8L5 22l-.8-2.2L2 19l2.2-.8L5 16z"/></svg>
-          AI Assistant
-        </button>
-        <button class="mode-tab" type="button" data-mode="search" role="tab" aria-selected="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-          Simple Search
-        </button>
-      </div>
-
-      <div class="input-wrap" id="aiInputWrap">
-        <svg class="input-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2zm6 10l1 3 3 1-3 1-1 3-1-3-3-1 3-1 1-3z"/></svg>
-        <input
-          class="prompt-input"
-          id="ai-prompt"
-          type="text"
-          placeholder="Tell me the kind of game you want and I'll suggest some..."
-          autocomplete="off"
-          aria-label="Describe what you want and we'll recommend games"
-        />
-      </div>
-
-      <div class="input-wrap" id="searchInputWrap" hidden>
+      <div class="input-wrap" id="searchInputWrap">
         <svg class="input-icon muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
         <input
           class="search-input"
           type="search"
           id="storefront-search"
-          placeholder="Search games + apps…"
+          placeholder="Search games…"
           autocomplete="off"
-          aria-label="Search games and apps"
+          aria-label="Search games"
         />
       </div>
 
@@ -137,24 +114,6 @@
         <div class="apps-header-title">
           <h2>All Games</h2>
           <div class="count" id="apps-count">{{GAMES_COUNT}} total</div>
-        </div>
-        <div class="apps-tabs" role="tablist" aria-label="Sort games">
-          <button class="apps-tab active" type="button" data-sort="featured" role="tab" aria-selected="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-            Featured
-          </button>
-          <button class="apps-tab" type="button" data-sort="top" role="tab" aria-selected="false">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM5 4h2v3a3 3 0 0 1-3-3M17 4h2a3 3 0 0 1-3 3V4z"/></svg>
-            Top Rated
-          </button>
-          <button class="apps-tab" type="button" data-sort="active" role="tab" aria-selected="false">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 12 7 12 10 5 14 19 17 12 21 12"/></svg>
-            Most Played
-          </button>
-          <button class="apps-tab" type="button" data-sort="popular" role="tab" aria-selected="false">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17c1.5 0 2.5-1 2.5-2.5 0-3-4-3-4-6 0-1.5 1-2.5 2.5-2.5 1.5 0 2.5 1 2.5 2.5"/><path d="M12 22c4.97 0 9-4.03 9-9 0-5-3-7-5-9 0 4-3 5-5 7s-3 4-3 6c0 3 2 5 4 5z"/></svg>
-            Popular
-          </button>
         </div>
       </div>
 
