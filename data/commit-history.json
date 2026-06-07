@@ -1750,36 +1750,36 @@
   "freegamestore-online/uno": {
     "meta": {
       "created_at": "2026-06-03T03:32:48Z",
-      "pushed_at": "2026-06-04T12:19:59Z"
+      "pushed_at": "2026-06-07T12:34:01Z"
     },
     "commits": [
       {
-        "sha": "60db57caeb7553555a602ad9566efdcf9ffaffc6",
-        "html_url": "https://github.com/freegamestore-online/uno/commit/60db57caeb7553555a602ad9566efdcf9ffaffc6",
+        "sha": "6632d01b6b4f2b35d335ae27182595e7d1911da0",
+        "html_url": "https://github.com/freegamestore-online/uno/commit/6632d01b6b4f2b35d335ae27182595e7d1911da0",
         "commit": {
-          "message": "fix: suppress CPU UNO call when player is being skipped\n\nactiveSeat lands on the skip victim before pendingAction resolves,\ncausing the CPU UNO pre-call effect to fire. Guard against skip (and\n2-player reverse) pendingActions so the skipped tag displays cleanly.\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>",
+          "message": "chore: remove debug buttons and debugAddCard\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T12:19:57Z"
+            "date": "2026-06-07T12:34:00Z"
           }
         }
       },
       {
-        "sha": "a4dcb1b46ea0518ad8e83a6619128af70ae216e0",
-        "html_url": "https://github.com/freegamestore-online/uno/commit/a4dcb1b46ea0518ad8e83a6619128af70ae216e0",
+        "sha": "cf4afd899c9d9c143df8a1bbd63d2b142433e884",
+        "html_url": "https://github.com/freegamestore-online/uno/commit/cf4afd899c9d9c143df8a1bbd63d2b142433e884",
         "commit": {
-          "message": "fix: resolve TS build errors from @freegamestore/games 0.14.0 upgrade\n\n- Add cpuPassedSeat/cpuPassedDrawnId to setState callbacks that spread\n  playCard() (GameState), keeping ExtState complete\n- Remove unused effectiveColor import, playable destructure, dx variable\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>",
+          "message": "fix: restore attacker null guard in wild4 effect after trigger refactor\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T11:53:48Z"
+            "date": "2026-06-07T12:30:21Z"
           }
         }
       },
       {
-        "sha": "1c53eb581f598c8f51047b079a6062f38dbe49d9",
-        "html_url": "https://github.com/freegamestore-online/uno/commit/1c53eb581f598c8f51047b079a6062f38dbe49d9",
+        "sha": "0d2d43e380b70c11cf8529a1720f61e951fdfbea",
+        "html_url": "https://github.com/freegamestore-online/uno/commit/0d2d43e380b70c11cf8529a1720f61e951fdfbea",
         "commit": {
-          "message": "chore: update lockfile for @freegamestore/games 0.14.0",
+          "message": "fix: correct wild4 turn-line flow, add Wild4LightningSVG, fix Safari card animations\n\nTurn-line sequencing:\n- uno.ts: set currentPlayer = victim when wild4 is played (same as skip/draw2),\n  so the rainbow turn line naturally travels attacker → victim before acceptDraw4 fires\n- useUnoGame: wild4 effect now triggers on activeSeat === target (victim) instead of\n  attacker; acceptDraw4 and challenge-fail paths revert to single setState\n- GameBoard: pendingWild4ForHuman checks activeSeat === 0 (victim arrived); wild4\n  added to UNO-call suppression so victim doesn't get a ghost tag while being hit\n\nWild4LightningSVG:\n- New component: rainbow segment travels along the inner loop path from attacker to\n  victim using CSS transitions (same architecture as DealLightningSVG / turn line),\n  replacing the broken straight-line SVG approach\n- DealLightningSVG: upgrade filter to scale=24 + feMerge blur/displaced layers,\n  remove chained CSS drop-shadow that killed the SVG filter in Safari\n\nSafari animation fixes:\n- Strip filter: drop-shadow() and z-index from all card animation keyframes\n  (card-draw-arc, card-play-arc, card-play-direct, card-play-bounce, init-card-arc,\n  card-keep-arc, card-draw-direct) — mixing filter + transform in the same keyframe\n  prevents Safari from GPU-compositing the transform, silently dropping the jump/arc\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-06-04T11:50:01Z"
+            "date": "2026-06-07T12:27:50Z"
           }
         }
       }
