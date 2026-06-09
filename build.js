@@ -19,6 +19,7 @@ const ID_RE = /^[a-z0-9][a-z0-9-]*$/;
 const COLOR_RE = /^#(?:[0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/;
 const URL_RE = /^https:\/\/[a-z0-9.-]+\.freegamestore\.online(?:\/.*)?$/;
 const GITHUB_USER_RE = /^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$/;
+const PLATFORM_CREATOR_GITHUB = 'serge-ivo';
 function safeText(s, max) {
   return typeof s === 'string' && s.length > 0 && s.length <= max && !/[\x00-\x1f\x7f]/.test(s);
 }
@@ -264,9 +265,20 @@ const cardIconBackgrounds = games
   })
   .join('\n');
 
+function creatorGithubForGame(game) {
+  if (game.creatorGithub) return game.creatorGithub;
+  if ((game.developer || '') === 'FreeGameStore') return PLATFORM_CREATOR_GITHUB;
+  return null;
+}
+
+function gamesForCreator(username) {
+  return games.filter((game) => creatorGithubForGame(game) === username);
+}
+
 function renderAuthorChip(game) {
-  if (game.creatorGithub) {
-    const user = escapeHtml(game.creatorGithub);
+  const creator = creatorGithubForGame(game);
+  if (creator) {
+    const user = escapeHtml(creator);
     return `<a href="/u/${user}.html" class="author-chip"><img src="https://avatars.githubusercontent.com/${user}?size=40" alt="" class="author-chip-avatar" loading="lazy" width="20" height="20" /><span class="author-chip-name">@${user}</span></a>`;
   }
   return escapeHtml(game.author || game.developer || 'FreeGameStore');
@@ -489,11 +501,11 @@ fs.writeFileSync(path.join(DIST, 'quality.html'), qualityHtml);
 console.log(`  /quality dashboard generated for ${qualityRegistry.games.length} games + ${qualityRegistry.apps.length} apps`);
 
 // --- Generate per-author profile pages at /u/<username>.html ---
-// This mirrors FAS: creatorGithub is the stable identity. Legacy entries
-// without creatorGithub do not get a profile page; detail pages fall back to
-// the plain developer/author string.
-const uniqueAuthors = [...new Set(games.map((g) => g.creatorGithub).filter(Boolean))].sort((a, b) => {
-  const countDiff = games.filter((g) => g.creatorGithub === b).length - games.filter((g) => g.creatorGithub === a).length;
+// This mirrors FAS: creatorGithub is the stable identity. Legacy first-party
+// entries predate creatorGithub, so they fall back to the platform creator
+// instead of disappearing from all creator profiles.
+const uniqueAuthors = [...new Set(games.map(creatorGithubForGame).filter(Boolean))].sort((a, b) => {
+  const countDiff = gamesForCreator(b).length - gamesForCreator(a).length;
   return countDiff || a.localeCompare(b);
 });
 fs.mkdirSync(path.join(DIST, 'u'), { recursive: true });
@@ -556,7 +568,7 @@ function renderCategoryChips(categories, className = 'category-chip-row') {
 }
 
 function renderDeveloperStats() {
-  const creatorGames = games.filter((game) => game.creatorGithub);
+  const creatorGames = games.filter((game) => creatorGithubForGame(game));
   const topGenre = mostCommonCategory(creatorGames);
   const stats = [
     { label: 'Creators', value: String(uniqueAuthors.length) },
@@ -603,7 +615,7 @@ function renderDevGameList(authorGames) {
 }
 
 for (const username of uniqueAuthors) {
-  const authorGames = games.filter((g) => g.creatorGithub === username);
+  const authorGames = gamesForCreator(username);
   const categories = authorCategories(authorGames);
   let html = authorTemplate
     .replaceAll('__CF_BEACON__', CF_BEACON_SNIPPET)
@@ -623,7 +635,7 @@ for (const username of uniqueAuthors) {
 
 // --- Generate developers.html ---
 const devCards = uniqueAuthors.map(username => {
-  const authorGames = games.filter(g => g.creatorGithub === username);
+  const authorGames = gamesForCreator(username);
   const badges = computeAuthorBadges(authorGames);
   const categories = authorCategories(authorGames);
   const badgesHtml = badges.length > 0

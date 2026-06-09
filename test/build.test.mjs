@@ -195,6 +195,29 @@ test("creatorGithub generates developer card, profile page, and author chip", ()
   }
 });
 
+test("legacy FreeGameStore games without creatorGithub appear on platform creator profile", () => {
+  const { ok, tmp, tmpDist, stderr } = runBuildWithRegistry([
+    { ...VALID_GAME, id: "legacy-one", name: "Legacy One", category: "arcade" },
+    { ...VALID_GAME, id: "legacy-two", name: "Legacy Two", category: "puzzle" },
+    { ...VALID_GAME, id: "guest-game", name: "Guest Game", creatorGithub: "octocat" },
+  ]);
+  try {
+    assert.equal(ok, true, stderr);
+
+    const developersHtml = readFileSync(join(tmpDist, "developers.html"), "utf8");
+    assert.ok(developersHtml.includes('href="/u/serge-ivo.html"'));
+    assert.ok(developersHtml.includes('<span class="dev-card-count">2</span>'));
+
+    const authorHtml = readFileSync(join(tmpDist, "u", "serge-ivo.html"), "utf8");
+    assert.ok(authorHtml.includes("2 games on FreeGameStore"));
+    assert.ok(authorHtml.includes('data-id="legacy-one"'));
+    assert.ok(authorHtml.includes('data-id="legacy-two"'));
+    assert.ok(!authorHtml.includes('data-id="guest-game"'));
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
 test("no inline onerror= attributes survive the build", () => {
   const { tmp, tmpDist } = runBuild();
   try {
