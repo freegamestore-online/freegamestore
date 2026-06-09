@@ -265,6 +265,21 @@ const cardIconBackgrounds = games
   })
   .join('\n');
 
+const styleVersion = crypto.createHash('sha256')
+  .update(fs.readFileSync(path.join(ROOT, 'style.css')))
+  .digest('hex')
+  .slice(0, 12);
+const cardStylesVersion = crypto.createHash('sha256')
+  .update(cardIconBackgrounds)
+  .digest('hex')
+  .slice(0, 12);
+
+function replaceAssetVersions(html) {
+  return html
+    .replaceAll('{{STYLE_VERSION}}', styleVersion)
+    .replaceAll('{{CARD_STYLES_VERSION}}', cardStylesVersion);
+}
+
 function creatorGithubForGame(game) {
   if (game.creatorGithub) return game.creatorGithub;
   if ((game.developer || '') === 'FreeGameStore') return PLATFORM_CREATOR_GITHUB;
@@ -330,6 +345,7 @@ let indexHtml = indexTemplate
   .replaceAll('{{INLINE_SCRIPT_HASH}}', inlineScriptHash)
   .replaceAll('{{GAMES_GRID}}', gameCards)
   .replaceAll('{{GAMES_COUNT}}', String(games.length));
+indexHtml = replaceAssetVersions(indexHtml);
 for (const [k, v] of Object.entries(sriHashes)) {
   indexHtml = indexHtml.replaceAll(`{{SRI_${k}}}`, v);
 }
@@ -497,7 +513,8 @@ const qualityHtml = qualityTemplate
     '{{REGISTRIES_JSON}}',
     JSON.stringify(qualityRegistry).replace(/</g, '\\u003c'),
   );
-fs.writeFileSync(path.join(DIST, 'quality.html'), qualityHtml);
+const qualityHtmlWithAssets = replaceAssetVersions(qualityHtml);
+fs.writeFileSync(path.join(DIST, 'quality.html'), qualityHtmlWithAssets);
 console.log(`  /quality dashboard generated for ${qualityRegistry.games.length} games + ${qualityRegistry.apps.length} apps`);
 
 // --- Generate per-author profile pages at /u/<username>.html ---
@@ -627,6 +644,7 @@ for (const username of uniqueAuthors) {
     .replace(/\{\{AUTHOR_SPOTLIGHT\}\}/g, renderAuthorSpotlight(authorGames))
     .replace(/\{\{CATEGORY_CHIPS\}\}/g, renderCategoryChips(categories))
     .replace(/\{\{GAME_CARDS\}\}/g, authorGames.map(renderGameCard).join('\n\n'));
+  html = replaceAssetVersions(html);
   for (const [k, v] of Object.entries(sriHashes)) {
     html = html.replaceAll(`{{SRI_${k}}}`, v);
   }
@@ -661,6 +679,7 @@ let developersHtml = developersTemplate
   .replaceAll('__CF_BEACON__', CF_BEACON_SNIPPET)
   .replaceAll('{{DEVELOPER_STATS}}', renderDeveloperStats())
   .replaceAll('{{DEVELOPERS_GRID}}', devCards);
+developersHtml = replaceAssetVersions(developersHtml);
 for (const [k, v] of Object.entries(sriHashes)) {
   developersHtml = developersHtml.replaceAll(`{{SRI_${k}}}`, v);
 }
@@ -701,6 +720,7 @@ games.forEach((game, i) => {
     .replace(/\{\{HISTORY_SECTION\}\}/g, renderHistorySection(game.repo, history))
     .replace(/\{\{AUDIT_BADGE\}\}/g, renderAuditBadge(auditMap.get(game.id)))
     .replace(/\{\{VIEWPORT_BADGE\}\}/g, renderViewportBadge(manifests[i]));
+  html = replaceAssetVersions(html);
 
   for (const [k, v] of Object.entries(sriHashes)) {
     html = html.replaceAll(`{{SRI_${k}}}`, v);

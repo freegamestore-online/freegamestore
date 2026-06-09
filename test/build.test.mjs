@@ -195,6 +195,28 @@ test("creatorGithub generates developer card, profile page, and author chip", ()
   }
 });
 
+test("generated pages use cache-busted stylesheets", () => {
+  const { tmp, tmpDist } = runBuild();
+  try {
+    const pages = [
+      readFileSync(join(tmpDist, "index.html"), "utf8"),
+      readFileSync(join(tmpDist, "developers.html"), "utf8"),
+      readFileSync(join(tmpDist, "u", "serge-ivo.html"), "utf8"),
+      readFileSync(join(tmpDist, "games", "2048.html"), "utf8"),
+      readFileSync(join(tmpDist, "quality.html"), "utf8"),
+    ];
+    for (const html of pages) {
+      assert.match(html, /\/style\.css\?v=[a-f0-9]{12}/);
+      assert.ok(!html.includes("{{STYLE_VERSION}}"));
+    }
+    assert.match(pages[0], /\/card-styles\.css\?v=[a-f0-9]{12}/);
+    assert.match(pages[2], /\/card-styles\.css\?v=[a-f0-9]{12}/);
+    assert.match(pages[3], /\/card-styles\.css\?v=[a-f0-9]{12}/);
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
 test("legacy FreeGameStore games without creatorGithub appear on platform creator profile", () => {
   const { ok, tmp, tmpDist, stderr } = runBuildWithRegistry([
     { ...VALID_GAME, id: "legacy-one", name: "Legacy One", category: "arcade" },
