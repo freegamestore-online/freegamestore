@@ -251,6 +251,12 @@ function renderPublishedLine(history) {
 // Ensure dist directories exist
 fs.mkdirSync(path.join(DIST, 'games'), { recursive: true });
 
+// Remove legacy pages that are no longer part of the public site. The build does
+// not wipe all of dist because docs are built into dist/docs in a second step.
+for (const file of ['docs.html', 'guidelines.html', 'pricing.html']) {
+  fs.rmSync(path.join(DIST, file), { force: true });
+}
+
 // --- Generate index.html ---
 
 // Build game cards — compact letter-badge layout, Figma 2026
@@ -737,10 +743,10 @@ const sitemapEntries = [
   '  <url><loc>https://freegamestore.online/about.html</loc><priority>0.8</priority></url>',
   '  <url><loc>https://freegamestore.online/capabilities.html</loc><priority>0.8</priority></url>',
   '  <url><loc>https://freegamestore.online/browser-apis.html</loc><priority>0.8</priority></url>',
-  '  <url><loc>https://freegamestore.online/docs.html</loc><priority>0.85</priority></url>',
+  '  <url><loc>https://freegamestore.online/docs/</loc><priority>0.85</priority></url>',
+  '  <url><loc>https://freegamestore.online/docs/guidelines/</loc><priority>0.75</priority></url>',
   '  <url><loc>https://freegamestore.online/contribute.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/get-started.html</loc><priority>0.9</priority></url>',
-  '  <url><loc>https://freegamestore.online/pricing.html</loc><priority>0.8</priority></url>',
   '  <url><loc>https://freegamestore.online/build-with-ai.html</loc><priority>0.85</priority></url>',
   '  <url><loc>https://freegamestore.online/ai/claude-code.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/ai/cursor.html</loc><priority>0.7</priority></url>',
@@ -752,7 +758,6 @@ const sitemapEntries = [
   '  <url><loc>https://freegamestore.online/ai/continue.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/ai/cline.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/ai/chatgpt-web.html</loc><priority>0.7</priority></url>',
-  '  <url><loc>https://freegamestore.online/guidelines.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/leaderboard.html</loc><priority>0.7</priority></url>',
   '  <url><loc>https://freegamestore.online/developers.html</loc><priority>0.8</priority></url>',
   '  <url><loc>https://freegamestore.online/privacy.html</loc><priority>0.5</priority></url>',
@@ -790,16 +795,13 @@ const filesToCopy = [
   '404.html',
   'about.html',
   'contribute.html',
-  'guidelines.html',
   'leaderboard.html',
   'privacy.html',
   'terms.html',
   'build-with-ai.html',
-  'pricing.html',
   'get-started.html',
   'SKILLS.md',
   'llms.txt',
-  'docs.html',
   'capabilities.html',
   'browser-apis.html',
   'prism.js',

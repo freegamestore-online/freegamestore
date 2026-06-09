@@ -14,7 +14,7 @@
 
 - [Build with AI](https://freegamestore.online/build-with-ai.html): Step-by-step guide to building a game with Claude Code, Cursor, Codex, or any AI tool.
 - [Get Started](https://freegamestore.online/get-started.html): Manual setup guide without AI.
-- [Guidelines](https://freegamestore.online/guidelines.html): Tech stack, project structure, brand rules, compliance checks, templates.
+- [Developer guidelines](https://freegamestore.online/docs/guidelines/): Tech stack, project structure, brand rules, compliance checks, templates.
 - [Contribute](https://freegamestore.online/contribute.html): How to become a creator and publish games.
 
 ## Platform
@@ -22,7 +22,6 @@
 - [Game Catalog](https://freegamestore.online/): Browse all published games.
 - [Leaderboard](https://freegamestore.online/leaderboard.html): Cross-game leaderboard rankings.
 - [Quality Reports](https://freegamestore.online/quality.html): Automated quality scores for every game.
-- [Pricing](https://freegamestore.online/pricing.html): Free vs Pro feature comparison and cost breakdown.
 - [Platform Source](https://github.com/freegamestore-online/platform): Games SDK, CLI, and compliance source code.
 
 ## Optional

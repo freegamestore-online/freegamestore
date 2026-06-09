@@ -8,7 +8,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { mkdtempSync, readFileSync, writeFileSync, rmSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, writeFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -212,6 +212,43 @@ test("generated pages use cache-busted stylesheets", () => {
     assert.match(pages[0], /\/card-styles\.css\?v=[a-f0-9]{12}/);
     assert.match(pages[2], /\/card-styles\.css\?v=[a-f0-9]{12}/);
     assert.match(pages[3], /\/card-styles\.css\?v=[a-f0-9]{12}/);
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
+function firstNav(html) {
+  return (html.match(/<nav[^>]*>[\s\S]*?<\/nav>/) || [""])[0];
+}
+
+test("deployed nav uses the single docs entry and no pricing link", () => {
+  const { tmp, tmpDist } = runBuild();
+  try {
+    const pagePaths = [
+      "index.html",
+      "about.html",
+      "developers.html",
+      "get-started.html",
+      "ai/codex.html",
+      "games/2048.html",
+      "u/serge-ivo.html",
+      "quality.html",
+    ];
+    for (const pagePath of pagePaths) {
+      const html = readFileSync(join(tmpDist, pagePath), "utf8");
+      const nav = firstNav(html);
+      assert.ok(nav, `${pagePath} is missing a top nav`);
+      assert.ok(nav.includes('href="/docs/"'), `${pagePath} nav is missing /docs/`);
+      assert.ok(!nav.includes("/docs.html"), `${pagePath} nav links to legacy docs.html`);
+      assert.ok(!nav.includes("/guidelines.html"), `${pagePath} nav links to legacy guidelines.html`);
+      assert.ok(!nav.includes("/pricing.html"), `${pagePath} nav still links to pricing.html`);
+      assert.ok(!nav.includes(">Guidelines<"), `${pagePath} nav still has a separate Guidelines entry`);
+      assert.ok(!nav.includes(">Pricing<"), `${pagePath} nav still has a Pricing entry`);
+    }
+
+    assert.equal(existsSync(join(tmpDist, "docs.html")), false);
+    assert.equal(existsSync(join(tmpDist, "guidelines.html")), false);
+    assert.equal(existsSync(join(tmpDist, "pricing.html")), false);
   } finally {
     rmSync(tmp, { recursive: true, force: true });
   }
