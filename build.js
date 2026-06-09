@@ -853,6 +853,13 @@ fs.writeFileSync(path.join(DIST, '_headers'), [
   '',
 ].join('\n'));
 
+fs.writeFileSync(path.join(DIST, '_redirects'), [
+  '/docs.html /docs/ 301',
+  '/guidelines.html /docs/guidelines/ 301',
+  '/pricing.html /about.html 301',
+  '',
+].join('\n'));
+
 filesToCopy.forEach(file => {
   const src = path.join(ROOT, file);
   if (fs.existsSync(src)) {

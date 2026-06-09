@@ -254,6 +254,22 @@ test("deployed nav uses the single docs entry and no pricing link", () => {
   }
 });
 
+test("legacy docs, guidelines, and pricing pages redirect instead of shipping stale HTML", () => {
+  const { tmp, tmpDist } = runBuild();
+  try {
+    const redirects = readFileSync(join(tmpDist, "_redirects"), "utf8");
+    assert.match(redirects, /^\/docs\.html \/docs\/ 301$/m);
+    assert.match(redirects, /^\/guidelines\.html \/docs\/guidelines\/ 301$/m);
+    assert.match(redirects, /^\/pricing\.html \/about\.html 301$/m);
+
+    assert.equal(existsSync(join(tmpDist, "docs.html")), false);
+    assert.equal(existsSync(join(tmpDist, "guidelines.html")), false);
+    assert.equal(existsSync(join(tmpDist, "pricing.html")), false);
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
 test("legacy FreeGameStore games without creatorGithub appear on platform creator profile", () => {
   const { ok, tmp, tmpDist, stderr } = runBuildWithRegistry([
     { ...VALID_GAME, id: "legacy-one", name: "Legacy One", category: "arcade" },
