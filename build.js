@@ -501,11 +501,12 @@ fs.mkdirSync(path.join(DIST, 'u'), { recursive: true });
 function computeAuthorBadges(authorGames) {
   const badges = [];
   const count = authorGames.length;
-  if (count >= 1) badges.push({ label: 'First game', title: 'Has at least one game published on FreeGameStore.' });
+  if (count >= 1) badges.push({ label: 'First release', title: 'Has at least one game published on FreeGameStore.' });
+  if (count >= 3) badges.push({ label: 'Game stack', title: 'Published 3 or more games.' });
   if (count >= 5) badges.push({ label: 'Prolific', title: 'Published 5 or more games.' });
   if (count >= 10) badges.push({ label: 'Established', title: 'Published 10 or more games.' });
   const categories = new Set(authorGames.map((g) => String(g.category || '').toLowerCase()).filter(Boolean));
-  if (categories.size >= 3) badges.push({ label: 'Multi-category', title: `Games span ${categories.size} distinct categories.` });
+  if (categories.size >= 2) badges.push({ label: 'Genre explorer', title: `Games span ${categories.size} distinct categories.` });
   const audited = authorGames.filter((g) => auditMap.get(g.id)).length;
   if (count >= 3 && audited / count >= 0.75) badges.push({ label: 'Audited', title: `${audited} of ${count} games have platform audit data.` });
   return badges;
@@ -516,14 +517,103 @@ function renderBadges(badges) {
   return `<div class="badges">\n${badges.map((b) => `          <span class="badge" title="${escapeHtml(b.title)}">${escapeHtml(b.label)}</span>`).join('\n')}\n        </div>`;
 }
 
+function authorCategories(authorGames) {
+  const categories = [];
+  const seen = new Set();
+  for (const game of authorGames) {
+    const label = categoryLabel(game.category);
+    const key = label.toLowerCase();
+    if (!seen.has(key)) {
+      seen.add(key);
+      categories.push(label);
+    }
+  }
+  return categories;
+}
+
+function mostCommonCategory(items) {
+  const counts = new Map();
+  for (const game of items) {
+    const label = categoryLabel(game.category);
+    counts.set(label, (counts.get(label) || 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0]?.[0] || 'New games';
+}
+
+function dateValue(game) {
+  const date = game.lastUpdated || game.firstPublished || game.versions?.[0]?.date || '';
+  const time = Date.parse(date);
+  return Number.isFinite(time) ? time : 0;
+}
+
+function sortByFreshness(items) {
+  return [...items].sort((a, b) => dateValue(b) - dateValue(a) || a.name.localeCompare(b.name));
+}
+
+function renderCategoryChips(categories, className = 'category-chip-row') {
+  if (categories.length === 0) return '';
+  return `<div class="${className}">${categories.slice(0, 4).map((category) => `<span class="category-chip">${escapeHtml(category)}</span>`).join('')}</div>`;
+}
+
+function renderDeveloperStats() {
+  const creatorGames = games.filter((game) => game.creatorGithub);
+  const topGenre = mostCommonCategory(creatorGames);
+  const stats = [
+    { label: 'Creators', value: String(uniqueAuthors.length) },
+    { label: 'Creator games', value: String(creatorGames.length) },
+    { label: 'Top genre', value: topGenre },
+  ];
+  return stats.map((stat) => `<div class="developer-stat"><span>${escapeHtml(stat.label)}</span><strong>${escapeHtml(stat.value)}</strong></div>`).join('\n        ');
+}
+
+function renderAuthorStats(authorGames) {
+  const categories = authorCategories(authorGames);
+  const stats = [
+    { label: 'Games', value: String(authorGames.length) },
+    { label: 'Genres', value: String(categories.length) },
+    { label: 'Latest', value: sortByFreshness(authorGames)[0]?.name || 'New game' },
+  ];
+  return `<div class="author-stat-grid">${stats.map((stat) => `<div class="author-stat"><span>${escapeHtml(stat.label)}</span><strong>${escapeHtml(stat.value)}</strong></div>`).join('')}</div>`;
+}
+
+function renderAuthorSpotlight(authorGames) {
+  const latest = sortByFreshness(authorGames)[0];
+  const categories = authorCategories(authorGames);
+  if (!latest) return '';
+  return `<section class="author-spotlight">
+      <div>
+        <span class="spotlight-label">Latest game</span>
+        <a href="/games/${escapeHtml(latest.id)}.html">${escapeHtml(latest.name)}</a>
+      </div>
+      <div>
+        <span class="spotlight-label">Genre lane</span>
+        <strong>${escapeHtml(mostCommonCategory(authorGames))}</strong>
+      </div>
+      <div>
+        <span class="spotlight-label">Catalog</span>
+        <strong>${authorGames.length} game${authorGames.length === 1 ? '' : 's'}${categories.length ? ` across ${categories.length} genre${categories.length === 1 ? '' : 's'}` : ''}</strong>
+      </div>
+    </section>`;
+}
+
+function renderDevGameList(authorGames) {
+  const items = sortByFreshness(authorGames).slice(0, 3);
+  if (items.length === 0) return '';
+  return `<ul class="dev-game-list">${items.map((game) => `<li><span>${game.icon || '&bull;'}</span>${escapeHtml(game.name)}</li>`).join('')}</ul>`;
+}
+
 for (const username of uniqueAuthors) {
   const authorGames = games.filter((g) => g.creatorGithub === username);
+  const categories = authorCategories(authorGames);
   let html = authorTemplate
     .replaceAll('__CF_BEACON__', CF_BEACON_SNIPPET)
     .replace(/\{\{USERNAME\}\}/g, escapeHtml(username))
     .replace(/\{\{GAME_COUNT\}\}/g, String(authorGames.length))
     .replace(/\{\{S\}\}/g, authorGames.length === 1 ? '' : 's')
     .replace(/\{\{BADGES\}\}/g, renderBadges(computeAuthorBadges(authorGames)))
+    .replace(/\{\{AUTHOR_STATS\}\}/g, renderAuthorStats(authorGames))
+    .replace(/\{\{AUTHOR_SPOTLIGHT\}\}/g, renderAuthorSpotlight(authorGames))
+    .replace(/\{\{CATEGORY_CHIPS\}\}/g, renderCategoryChips(categories))
     .replace(/\{\{GAME_CARDS\}\}/g, authorGames.map(renderGameCard).join('\n\n'));
   for (const [k, v] of Object.entries(sriHashes)) {
     html = html.replaceAll(`{{SRI_${k}}}`, v);
@@ -535,21 +625,29 @@ for (const username of uniqueAuthors) {
 const devCards = uniqueAuthors.map(username => {
   const authorGames = games.filter(g => g.creatorGithub === username);
   const badges = computeAuthorBadges(authorGames);
+  const categories = authorCategories(authorGames);
   const badgesHtml = badges.length > 0
     ? `<div class="dev-badges">${badges.map(b => `<span class="dev-badge" title="${escapeHtml(b.title)}">${escapeHtml(b.label)}</span>`).join('')}</div>`
     : '';
   return `        <a class="dev-card" href="/u/${escapeHtml(username)}.html">
-          <img class="dev-avatar" src="https://avatars.githubusercontent.com/${escapeHtml(username)}?size=200" alt="" loading="lazy" />
+          <div class="dev-card-top">
+            <img class="dev-avatar" src="https://avatars.githubusercontent.com/${escapeHtml(username)}?size=200" alt="" loading="lazy" />
+            <span class="dev-card-count">${authorGames.length}</span>
+          </div>
           <div class="dev-card-body">
             <span class="dev-card-name">@${escapeHtml(username)}</span>
+            <span class="dev-card-role">${authorGames.length === 1 ? 'Game maker' : 'Game maker with a shelf'}</span>
             ${badgesHtml}
-            <span class="dev-card-stats">${authorGames.length} game${authorGames.length === 1 ? '' : 's'}</span>
+            ${renderCategoryChips(categories, 'dev-category-row')}
+            ${renderDevGameList(authorGames)}
+            <span class="dev-profile-link">View profile &rarr;</span>
           </div>
         </a>`;
 }).join('\n');
 
 let developersHtml = developersTemplate
   .replaceAll('__CF_BEACON__', CF_BEACON_SNIPPET)
+  .replaceAll('{{DEVELOPER_STATS}}', renderDeveloperStats())
   .replaceAll('{{DEVELOPERS_GRID}}', devCards);
 for (const [k, v] of Object.entries(sriHashes)) {
   developersHtml = developersHtml.replaceAll(`{{SRI_${k}}}`, v);

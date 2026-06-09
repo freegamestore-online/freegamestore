@@ -173,11 +173,17 @@ test("creatorGithub generates developer card, profile page, and author chip", ()
     assert.equal(ok, true, stderr);
 
     const developersHtml = readFileSync(join(tmpDist, "developers.html"), "utf8");
+    assert.ok(developersHtml.includes("Creator arcade"));
+    assert.ok(developersHtml.includes("Creator games"));
     assert.ok(developersHtml.includes('href="/u/octocat.html"'));
     assert.ok(developersHtml.includes('src="https://avatars.githubusercontent.com/octocat?size=200"'));
     assert.ok(!developersHtml.includes("https://github.com/octocat.png"));
+    assert.ok(developersHtml.includes("View profile"));
+    assert.ok(developersHtml.includes("Valid"));
 
     const authorHtml = readFileSync(join(tmpDist, "u", "octocat.html"), "utf8");
+    assert.ok(authorHtml.includes("Creator profile"));
+    assert.ok(authorHtml.includes("Latest game"));
     assert.ok(authorHtml.includes("Games by @octocat"));
     assert.ok(authorHtml.includes('data-id="valid-game"'));
 
