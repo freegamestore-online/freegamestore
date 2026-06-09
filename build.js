@@ -18,6 +18,7 @@ const games = registry.games;
 const ID_RE = /^[a-z0-9][a-z0-9-]*$/;
 const COLOR_RE = /^#(?:[0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/;
 const URL_RE = /^https:\/\/[a-z0-9.-]+\.freegamestore\.online(?:\/.*)?$/;
+const GITHUB_USER_RE = /^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$/;
 function safeText(s, max) {
   return typeof s === 'string' && s.length > 0 && s.length <= max && !/[\x00-\x1f\x7f]/.test(s);
 }
@@ -35,6 +36,9 @@ function validateRegistry(items) {
     if (g.description != null && !safeText(g.description, 500)) errors.push(`${g.id}: description must be 1-500 chars without control chars`);
     if (g.developer != null && !safeText(g.developer, 60)) errors.push(`${g.id}: bad developer ${JSON.stringify(g.developer)}`);
     if (g.author != null && !safeText(g.author, 60)) errors.push(`${g.id}: bad author ${JSON.stringify(g.author)}`);
+    if (g.creatorGithub != null && (typeof g.creatorGithub !== 'string' || !GITHUB_USER_RE.test(g.creatorGithub))) {
+      errors.push(`${g.id}: creatorGithub must be a GitHub username, got ${JSON.stringify(g.creatorGithub)}`);
+    }
     if (g.repo != null && (typeof g.repo !== 'string' || g.repo.length > 100 || !/^[\w.-]+\/[\w.-]+$/.test(g.repo))) {
       errors.push(`${g.id}: repo must be "owner/name", got ${JSON.stringify(g.repo)}`);
     }
@@ -50,6 +54,7 @@ validateRegistry(games);
 const indexTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'index.html'), 'utf8');
 const detailTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'game-detail.html'), 'utf8');
 const developersTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'developers.html'), 'utf8');
+const authorTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'author.html'), 'utf8');
 
 // CF Web Analytics — token from FGS_CF_BEACON_TOKEN at build time. Snippet is
 // the standard CF Insights beacon; cookieless, no PII. If unset, an HTML
@@ -259,7 +264,15 @@ const cardIconBackgrounds = games
   })
   .join('\n');
 
-const gameCards = games.map(game => {
+function renderAuthorChip(game) {
+  if (game.creatorGithub) {
+    const user = escapeHtml(game.creatorGithub);
+    return `<a href="/u/${user}.html" class="author-chip"><img src="https://avatars.githubusercontent.com/${user}?size=40" alt="" class="author-chip-avatar" loading="lazy" width="20" height="20" /><span class="author-chip-name">@${user}</span></a>`;
+  }
+  return escapeHtml(game.author || game.developer || 'FreeGameStore');
+}
+
+function renderGameCard(game) {
   const icon = game.icon || (game.name || '?').trim().charAt(0).toUpperCase();
   return `        <div class="app-card compact" data-id="${escapeHtml(game.id)}" data-category="${escapeHtml(game.category)}" data-published="${escapeHtml(game.firstPublished || '')}" data-about="/games/${escapeHtml(game.id)}.html">
           <div class="app-icon">${icon}</div>
@@ -272,7 +285,9 @@ const gameCards = games.map(game => {
             <span class="cta-label">Play</span>
           </a>
         </div>`;
-}).join('\n\n');
+}
+
+const gameCards = games.map(renderGameCard).join('\n\n');
 
 // SHA-256 of the inline no-flash theme bootstrap so CSP can whitelist it
 // without 'unsafe-inline'. The bootstrap is the first <script> inside <head>.
@@ -473,35 +488,62 @@ const qualityHtml = qualityTemplate
 fs.writeFileSync(path.join(DIST, 'quality.html'), qualityHtml);
 console.log(`  /quality dashboard generated for ${qualityRegistry.games.length} games + ${qualityRegistry.apps.length} apps`);
 
-// --- Generate developers.html ---
-// Extract unique developers from registry. Each game has a `developer` field
-// (free-form string). We also check for an optional `creatorGithub` field for
-// the avatar URL; if absent, fall back to the org avatar.
-const devMap = new Map();
-for (const game of games) {
-  const name = game.developer || 'FreeGameStore';
-  if (!devMap.has(name)) {
-    devMap.set(name, { name, github: game.creatorGithub || null, games: [] });
-  }
-  devMap.get(name).games.push(game);
-}
-const uniqueDevs = Array.from(devMap.values());
+// --- Generate per-author profile pages at /u/<username>.html ---
+// This mirrors FAS: creatorGithub is the stable identity. Legacy entries
+// without creatorGithub do not get a profile page; detail pages fall back to
+// the plain developer/author string.
+const uniqueAuthors = [...new Set(games.map((g) => g.creatorGithub).filter(Boolean))].sort((a, b) => {
+  const countDiff = games.filter((g) => g.creatorGithub === b).length - games.filter((g) => g.creatorGithub === a).length;
+  return countDiff || a.localeCompare(b);
+});
+fs.mkdirSync(path.join(DIST, 'u'), { recursive: true });
 
-const devCards = uniqueDevs.map(dev => {
-  const gameCount = dev.games.length;
-  const avatarUrl = dev.github
-    ? `https://github.com/${escapeHtml(dev.github)}.png?size=200`
-    : 'https://github.com/freegamestore-online.png?size=200';
-  const linkUrl = dev.github
-    ? `https://github.com/${escapeHtml(dev.github)}`
-    : 'https://github.com/freegamestore-online';
-  const badgesHtml = '<span class="dev-badge platform">Platform</span>';
-  return `        <a class="dev-card" href="${linkUrl}" target="_blank" rel="noopener">
-          <img class="dev-avatar" src="${avatarUrl}" alt="${escapeHtml(dev.name)}" loading="lazy" />
+function computeAuthorBadges(authorGames) {
+  const badges = [];
+  const count = authorGames.length;
+  if (count >= 1) badges.push({ label: 'First game', title: 'Has at least one game published on FreeGameStore.' });
+  if (count >= 5) badges.push({ label: 'Prolific', title: 'Published 5 or more games.' });
+  if (count >= 10) badges.push({ label: 'Established', title: 'Published 10 or more games.' });
+  const categories = new Set(authorGames.map((g) => String(g.category || '').toLowerCase()).filter(Boolean));
+  if (categories.size >= 3) badges.push({ label: 'Multi-category', title: `Games span ${categories.size} distinct categories.` });
+  const audited = authorGames.filter((g) => auditMap.get(g.id)).length;
+  if (count >= 3 && audited / count >= 0.75) badges.push({ label: 'Audited', title: `${audited} of ${count} games have platform audit data.` });
+  return badges;
+}
+
+function renderBadges(badges) {
+  if (badges.length === 0) return '';
+  return `<div class="badges">\n${badges.map((b) => `          <span class="badge" title="${escapeHtml(b.title)}">${escapeHtml(b.label)}</span>`).join('\n')}\n        </div>`;
+}
+
+for (const username of uniqueAuthors) {
+  const authorGames = games.filter((g) => g.creatorGithub === username);
+  let html = authorTemplate
+    .replaceAll('__CF_BEACON__', CF_BEACON_SNIPPET)
+    .replace(/\{\{USERNAME\}\}/g, escapeHtml(username))
+    .replace(/\{\{GAME_COUNT\}\}/g, String(authorGames.length))
+    .replace(/\{\{S\}\}/g, authorGames.length === 1 ? '' : 's')
+    .replace(/\{\{BADGES\}\}/g, renderBadges(computeAuthorBadges(authorGames)))
+    .replace(/\{\{GAME_CARDS\}\}/g, authorGames.map(renderGameCard).join('\n\n'));
+  for (const [k, v] of Object.entries(sriHashes)) {
+    html = html.replaceAll(`{{SRI_${k}}}`, v);
+  }
+  fs.writeFileSync(path.join(DIST, 'u', `${username}.html`), html);
+}
+
+// --- Generate developers.html ---
+const devCards = uniqueAuthors.map(username => {
+  const authorGames = games.filter(g => g.creatorGithub === username);
+  const badges = computeAuthorBadges(authorGames);
+  const badgesHtml = badges.length > 0
+    ? `<div class="dev-badges">${badges.map(b => `<span class="dev-badge" title="${escapeHtml(b.title)}">${escapeHtml(b.label)}</span>`).join('')}</div>`
+    : '';
+  return `        <a class="dev-card" href="/u/${escapeHtml(username)}.html">
+          <img class="dev-avatar" src="https://avatars.githubusercontent.com/${escapeHtml(username)}?size=200" alt="" loading="lazy" />
           <div class="dev-card-body">
-            <span class="dev-card-name">${escapeHtml(dev.name)}</span>
-            <div class="dev-badges">${badgesHtml}</div>
-            <span class="dev-card-stats">${gameCount} game${gameCount === 1 ? '' : 's'}</span>
+            <span class="dev-card-name">@${escapeHtml(username)}</span>
+            ${badgesHtml}
+            <span class="dev-card-stats">${authorGames.length} game${authorGames.length === 1 ? '' : 's'}</span>
           </div>
         </a>`;
 }).join('\n');
@@ -513,7 +555,7 @@ for (const [k, v] of Object.entries(sriHashes)) {
   developersHtml = developersHtml.replaceAll(`{{SRI_${k}}}`, v);
 }
 fs.writeFileSync(path.join(DIST, 'developers.html'), developersHtml);
-console.log(`  developers page generated (${uniqueDevs.length} developer${uniqueDevs.length === 1 ? '' : 's'})`);
+console.log(`  developers page generated (${uniqueAuthors.length} developer${uniqueAuthors.length === 1 ? '' : 's'})`);
 
 const okCount = histories.filter((h) => Array.isArray(h?.commits) && h.commits.length > 0).length;
 console.log(`  ${okCount}/${games.length} games got commit history`);
@@ -542,6 +584,7 @@ games.forEach((game, i) => {
     .replace(/\{\{TYPE_LABEL\}\}/g, escapeHtml(typeLabel(game.type)))
     .replace(/\{\{DEVELOPER\}\}/g, escapeHtml(game.developer || 'FreeGameStore'))
     .replace(/\{\{AUTHOR\}\}/g, escapeHtml(game.author || game.developer || 'FreeGameStore'))
+    .replace(/\{\{AUTHOR_CHIP\}\}/g, renderAuthorChip(game))
     .replace(/\{\{OFFLINE\}\}/g, offline)
     .replace(/\{\{ACCOUNT\}\}/g, account)
     .replace(/\{\{PUBLISHED_LINE\}\}/g, renderPublishedLine(history))
@@ -584,6 +627,9 @@ const sitemapEntries = [
   '  <url><loc>https://freegamestore.online/developers.html</loc><priority>0.8</priority></url>',
   '  <url><loc>https://freegamestore.online/privacy.html</loc><priority>0.5</priority></url>',
   '  <url><loc>https://freegamestore.online/terms.html</loc><priority>0.5</priority></url>',
+  ...uniqueAuthors.map(username =>
+    `  <url><loc>https://freegamestore.online/u/${username}.html</loc><priority>0.6</priority></url>`
+  ),
   ...games.map(game =>
     `  <url><loc>https://freegamestore.online/games/${game.id}.html</loc><priority>0.9</priority></url>`
   )
@@ -636,7 +682,7 @@ const filesToCopy = [
 // inline theme bootstrap.
 const csp = [
   "default-src 'self'",
-  "img-src 'self' https://*.freegamestore.online data:",
+  "img-src 'self' https://*.freegamestore.online https://avatars.githubusercontent.com data:",
   `script-src 'self' '${inlineScriptHash}' https://static.cloudflareinsights.com`,
   "style-src 'self' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",

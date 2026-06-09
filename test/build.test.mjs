@@ -98,9 +98,9 @@ function runBuildWithRegistry(games) {
       stdio: ["ignore", "pipe", "pipe"],
       timeout: 60_000,
     });
-    return { ok: true, stderr: "", tmp };
+    return { ok: true, stderr: "", tmp, tmpDist };
   } catch (err) {
-    return { ok: false, stderr: (err.stderr && err.stderr.toString()) || err.message, tmp };
+    return { ok: false, stderr: (err.stderr && err.stderr.toString()) || err.message, tmp, tmpDist };
   }
 }
 
@@ -150,6 +150,42 @@ test("validator rejects bad id", () => {
     } finally {
       rmSync(tmp, { recursive: true, force: true });
     }
+  }
+});
+
+test("validator rejects bad creatorGithub", () => {
+  const { ok, stderr, tmp } = runBuildWithRegistry([
+    { ...VALID_GAME, creatorGithub: "bad/user" },
+  ]);
+  try {
+    assert.equal(ok, false);
+    assert.match(stderr, /creatorGithub must be a GitHub username/);
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
+test("creatorGithub generates developer card, profile page, and author chip", () => {
+  const { ok, tmp, tmpDist, stderr } = runBuildWithRegistry([
+    { ...VALID_GAME, creatorGithub: "octocat" },
+  ]);
+  try {
+    assert.equal(ok, true, stderr);
+
+    const developersHtml = readFileSync(join(tmpDist, "developers.html"), "utf8");
+    assert.ok(developersHtml.includes('href="/u/octocat.html"'));
+    assert.ok(developersHtml.includes('src="https://avatars.githubusercontent.com/octocat?size=200"'));
+    assert.ok(!developersHtml.includes("https://github.com/octocat.png"));
+
+    const authorHtml = readFileSync(join(tmpDist, "u", "octocat.html"), "utf8");
+    assert.ok(authorHtml.includes("Games by @octocat"));
+    assert.ok(authorHtml.includes('data-id="valid-game"'));
+
+    const detailHtml = readFileSync(join(tmpDist, "games", "valid-game.html"), "utf8");
+    assert.ok(detailHtml.includes('class="author-chip"'));
+    assert.ok(detailHtml.includes('href="/u/octocat.html"'));
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
   }
 });
 
@@ -230,6 +266,7 @@ test("img-src and connect-src allowlist specific hosts (no blanket https:)", () 
     const imgSrc = (csp.match(/img-src[^;]*/) || [''])[0];
     assert.ok(!/https:\s*[;\s]/.test(imgSrc), `img-src blanket https:: ${imgSrc}`);
     assert.ok(imgSrc.includes('freegamestore.online'), `img-src missing primary store: ${imgSrc}`);
+    assert.ok(imgSrc.includes('avatars.githubusercontent.com'), `img-src missing GitHub avatar CDN: ${imgSrc}`);
   } finally {
     rmSync(tmp, { recursive: true, force: true });
   }

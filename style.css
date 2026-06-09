@@ -2158,6 +2158,103 @@ footer .container {
 }
 
 /* =====================================================================
+ * Author attribution and profile pages
+ * ===================================================================== */
+.app-hero-author { margin-top: 0.5rem; }
+
+.author-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.15rem 0.55rem 0.15rem 0.2rem;
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 1;
+  vertical-align: middle;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.author-chip:hover {
+  background: var(--panel-alt);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.author-chip-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: block;
+}
+
+.author-chip-name { line-height: 1; }
+
+.author-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 2rem 0 1.5rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2rem;
+}
+
+.author-hero-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 3px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.author-hero-meta {
+  flex: 1;
+  min-width: 200px;
+}
+
+.author-hero-name {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  margin: 0 0 0.25rem;
+  color: var(--ink-strong);
+}
+
+.author-hero-tagline {
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1;
+  cursor: help;
+}
+
+/* =====================================================================
  * Developers page — grid + cards
  * ===================================================================== */
 .developers-grid {
@@ -2227,4 +2324,3 @@ footer .container {
 @media (max-width: 600px) {
   .developers-grid { grid-template-columns: 1fr; }
 }
-
