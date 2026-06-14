@@ -1106,6 +1106,20 @@
       "type": "standalone",
       "developer": "FreeGameStore",
       "creatorGithub": "kirantikoo"
+    },
+    {
+      "id": "color-match",
+      "name": "Color Match",
+      "category": "puzzle",
+      "icon": "🎨",
+      "iconBg": "#ecfdf5",
+      "description": "Match falling color blocks before they stack up",
+      "appUrl": "https://color-match.freegamestore.online",
+      "repo": "freegamestore-online/color-match",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeGameStore",
+      "creatorGithub": "serge-ivo"
     }
   ]
 }
