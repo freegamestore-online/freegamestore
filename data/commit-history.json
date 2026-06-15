@@ -2130,16 +2130,36 @@
   "freegamestore-online/color-match": {
     "meta": {
       "created_at": "2026-06-14T22:20:36Z",
-      "pushed_at": "2026-06-14T22:20:39Z"
+      "pushed_at": "2026-06-14T22:34:06Z"
     },
     "commits": [
       {
-        "sha": "0f432e90419c296ab46f53fa0d571f2d1b4312c7",
-        "html_url": "https://github.com/freegamestore-online/color-match/commit/0f432e90419c296ab46f53fa0d571f2d1b4312c7",
+        "sha": "4f71361b4d91cee97b2b33e7660fcff32312300f",
+        "html_url": "https://github.com/freegamestore-online/color-match/commit/4f71361b4d91cee97b2b33e7660fcff32312300f",
         "commit": {
-          "message": "Initial commit",
+          "message": "fix: replace APPNAME placeholders with color-match",
           "author": {
-            "date": "2026-06-14T22:20:39Z"
+            "date": "2026-06-14T22:34:06Z"
+          }
+        }
+      },
+      {
+        "sha": "03e93d1c9ad273705d59eeb8d0a277ce344a9d90",
+        "html_url": "https://github.com/freegamestore-online/color-match/commit/03e93d1c9ad273705d59eeb8d0a277ce344a9d90",
+        "commit": {
+          "message": "fix: non-null assertion on array cell access in applyGravity",
+          "author": {
+            "date": "2026-06-14T22:28:28Z"
+          }
+        }
+      },
+      {
+        "sha": "edff2c646e992ae6320aa4d776f4b7433b7f2f16",
+        "html_url": "https://github.com/freegamestore-online/color-match/commit/edff2c646e992ae6320aa4d776f4b7433b7f2f16",
+        "commit": {
+          "message": "fix: TypeScript strict mode errors - non-null assertions, correct sound API names",
+          "author": {
+            "date": "2026-06-14T22:25:45Z"
           }
         }
       }
