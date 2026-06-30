@@ -1653,7 +1653,7 @@
         "sha": "f75387ca89d6d371ceefa12e3175c2fd9bee67b6",
         "html_url": "https://github.com/freegamestore-online/maze-racer/commit/f75387ca89d6d371ceefa12e3175c2fd9bee67b6",
         "commit": {
-          "message": "feat: AI always explores blind — smartness controls intelligence\n\nAll difficulties now use blind exploration (no pre-solving). The AI\ndoesn't know the maze layout — it discovers it step by step, just\nlike the player. Smartness controls how often it picks the best\nneighbor vs random:\n\n- Easy (20%): drunk random walk, gets very lost\n- Medium (50%): coin-flip between smart and random\n- Hard (80%): usually picks the right direction\n- Expert (95%): almost always optimal, but still backtracks at dead ends\n\nNo more cheating. The AI makes visible mistakes on every difficulty.",
+          "message": "feat: AI always explores blind — smartness controls intelligence\n\nAll difficulties now use blind exploration (no pre-solving). The AI\ndoesn't know the maze layout ��� it discovers it step by step, just\nlike the player. Smartness controls how often it picks the best\nneighbor vs random:\n\n- Easy (20%): drunk random walk, gets very lost\n- Medium (50%): coin-flip between smart and random\n- Hard (80%): usually picks the right direction\n- Expert (95%): almost always optimal, but still backtracks at dead ends\n\nNo more cheating. The AI makes visible mistakes on every difficulty.",
           "author": {
             "date": "2026-06-06T00:21:30Z"
           }
@@ -2168,9 +2168,29 @@
   "freegamestore-online/fireboyandwatergirl": {
     "meta": {
       "created_at": "2026-06-16T11:25:55Z",
-      "pushed_at": "2026-06-17T04:23:58Z"
+      "pushed_at": "2026-06-30T13:59:16Z"
     },
     "commits": [
+      {
+        "sha": "2480b8dbb2f2ad454b7baa9b766cebb5460f86e0",
+        "html_url": "https://github.com/freegamestore-online/fireboyandwatergirl/commit/2480b8dbb2f2ad454b7baa9b766cebb5460f86e0",
+        "commit": {
+          "message": "Added working mobile controls.",
+          "author": {
+            "date": "2026-06-30T13:59:06Z"
+          }
+        }
+      },
+      {
+        "sha": "9af5937316ac1d07df3e1d8ba856a3dbb5822896",
+        "html_url": "https://github.com/freegamestore-online/fireboyandwatergirl/commit/9af5937316ac1d07df3e1d8ba856a3dbb5822896",
+        "commit": {
+          "message": "Added working mobile controls.",
+          "author": {
+            "date": "2026-06-30T13:50:12Z"
+          }
+        }
+      },
       {
         "sha": "abd1676445484cadc21f65efacd3c12112f2731b",
         "html_url": "https://github.com/freegamestore-online/fireboyandwatergirl/commit/abd1676445484cadc21f65efacd3c12112f2731b",
@@ -2178,26 +2198,6 @@
           "message": "Fixed issues?",
           "author": {
             "date": "2026-06-17T04:23:49Z"
-          }
-        }
-      },
-      {
-        "sha": "c226c77b957e70dd2b06f2e36080ce87d3e281c8",
-        "html_url": "https://github.com/freegamestore-online/fireboyandwatergirl/commit/c226c77b957e70dd2b06f2e36080ce87d3e281c8",
-        "commit": {
-          "message": "Better menu and pop up/ added pause button",
-          "author": {
-            "date": "2026-06-17T04:16:21Z"
-          }
-        }
-      },
-      {
-        "sha": "49f72bde6a663a3996bf4588f3fc5909b9e26b36",
-        "html_url": "https://github.com/freegamestore-online/fireboyandwatergirl/commit/49f72bde6a663a3996bf4588f3fc5909b9e26b36",
-        "commit": {
-          "message": "Better menu and pop up/ added pause button",
-          "author": {
-            "date": "2026-06-17T04:08:40Z"
           }
         }
       }
