@@ -19,6 +19,11 @@ const ID_RE = /^[a-z0-9][a-z0-9-]*$/;
 const COLOR_RE = /^#(?:[0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/;
 const URL_RE = /^https:\/\/[a-z0-9.-]+\.freegamestore\.online(?:\/.*)?$/;
 const GITHUB_USER_RE = /^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$/;
+// `icon` is the ONE registry field injected into HTML without escapeHtml() (it
+// may legitimately be an HTML entity like &#9817; or an emoji). Constrain it so
+// it can't carry markup: a single HTML entity, a short emoji sequence, or a few
+// alphanumerics — never angle brackets / quotes / raw markup.
+const ICON_RE = /^(?:&(?:#x[0-9a-fA-F]{1,6}|#[0-9]{1,7}|[a-zA-Z][a-zA-Z0-9]{1,31});|[\p{Extended_Pictographic}‍️⃣#*0-9]{1,8}|[A-Za-z0-9]{1,4})$/u;
 const PLATFORM_CREATOR_GITHUB = 'serge-ivo';
 function safeText(s, max) {
   return typeof s === 'string' && s.length > 0 && s.length <= max && !/[\x00-\x1f\x7f]/.test(s);
@@ -42,6 +47,9 @@ function validateRegistry(items) {
     }
     if (g.repo != null && (typeof g.repo !== 'string' || g.repo.length > 100 || !/^[\w.-]+\/[\w.-]+$/.test(g.repo))) {
       errors.push(`${g.id}: repo must be "owner/name", got ${JSON.stringify(g.repo)}`);
+    }
+    if (g.icon != null && (typeof g.icon !== 'string' || !ICON_RE.test(g.icon))) {
+      errors.push(`${g.id}: icon must be an HTML entity or emoji, got ${JSON.stringify(g.icon)}`);
     }
   }
   if (errors.length) {
