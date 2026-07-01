@@ -1185,6 +1185,20 @@
       "type": "standalone",
       "developer": "Advika123456",
       "creatorGithub": "Advika123456"
+    },
+    {
+      "id": "pathb-smoke",
+      "name": "Path B Smoke",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "Path B provisioning smoke test — safe to delete",
+      "appUrl": "https://pathb-smoke.freegamestore.online",
+      "repo": "freegamestore-online/pathb-smoke",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo"
     }
   ]
 }
