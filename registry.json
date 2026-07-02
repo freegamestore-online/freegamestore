@@ -1199,6 +1199,20 @@
       "type": "standalone",
       "developer": "serge-ivo",
       "creatorGithub": "serge-ivo"
+    },
+    {
+      "id": "test-game",
+      "name": "test game",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "",
+      "appUrl": "https://test-game.freegamestore.online",
+      "repo": "freegamestore-online/test-game",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-the-dev",
+      "creatorGithub": "serge-the-dev"
     }
   ]
 }
