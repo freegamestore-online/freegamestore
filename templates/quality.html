@@ -19,7 +19,7 @@
   <header>
     <div class="container">
       <a href="/" class="logo">Free <span>Games</span></a>
-      <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h14M3 10h14M3 15h14"/></svg></button>
+      <button class="nav-toggle" type="button" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h14M3 10h14M3 15h14"/></svg></button>
       <nav>
         <a href="/">Games</a>
         <a href="https://freeappstore.online">Apps</a>
@@ -94,5 +94,6 @@
 
   <script type="application/json" id="q-registry">{{REGISTRIES_JSON}}</script>
   <script src="/quality.js"></script>
+  <script src="/theme.js" integrity="{{SRI_THEME_JS}}" defer></script>
 </body>
 </html>

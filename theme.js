@@ -85,31 +85,52 @@
   })();
 
   // ── Mobile hamburger menu ──
+  // Wire the drawer here via addEventListener regardless of whether the page
+  // ships its own toggle/overlay/close in markup. The templates used to carry
+  // inline `onclick="…"` handlers, but the site CSP (script-src without
+  // 'unsafe-inline'/'unsafe-hashes') blocks inline event handlers, so those
+  // never fired. This is the single CSP-safe source of truth: reuse existing
+  // elements when present, inject them when not.
   var nav = document.querySelector("header nav");
   var headerContainer = document.querySelector("header .container");
-  if (nav && headerContainer && !headerContainer.querySelector(".nav-toggle")) {
-    var btn = document.createElement("button");
-    btn.className = "nav-toggle";
-    btn.setAttribute("aria-label", "Menu");
-    btn.innerHTML = "&#9776;";
-    headerContainer.appendChild(btn);
+  if (nav && headerContainer) {
+    var toggleBtn = headerContainer.querySelector(".nav-toggle");
+    if (!toggleBtn) {
+      toggleBtn = document.createElement("button");
+      toggleBtn.className = "nav-toggle";
+      toggleBtn.type = "button";
+      toggleBtn.setAttribute("aria-label", "Menu");
+      toggleBtn.innerHTML =
+        '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h14M3 10h14M3 15h14"/></svg>';
+      headerContainer.appendChild(toggleBtn);
+    }
 
-    var overlay = document.createElement("div");
-    overlay.className = "nav-overlay";
-    document.body.appendChild(overlay);
+    var overlay = document.getElementById("navOverlay") || document.querySelector(".nav-overlay");
+    if (!overlay) {
+      overlay = document.createElement("div");
+      overlay.className = "nav-overlay";
+      document.body.appendChild(overlay);
+    }
 
-    var closeBtn = document.createElement("button");
-    closeBtn.className = "nav-close";
-    closeBtn.setAttribute("aria-label", "Close menu");
-    closeBtn.innerHTML = "&#10005;";
-    nav.insertBefore(closeBtn, nav.firstChild);
+    var closeBtn = nav.querySelector(".nav-close");
+    if (!closeBtn) {
+      closeBtn = document.createElement("button");
+      closeBtn.className = "nav-close";
+      closeBtn.type = "button";
+      closeBtn.setAttribute("aria-label", "Close menu");
+      closeBtn.innerHTML = "✕";
+      nav.insertBefore(closeBtn, nav.firstChild);
+    }
 
     function openMenu() { nav.classList.add("open"); overlay.classList.add("open"); }
     function closeMenu() { nav.classList.remove("open"); overlay.classList.remove("open"); }
 
-    btn.addEventListener("click", openMenu);
-    closeBtn.addEventListener("click", closeMenu);
-    overlay.addEventListener("click", closeMenu);
-    nav.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeMenu); });
+    if (!toggleBtn.dataset.navBound) {
+      toggleBtn.dataset.navBound = "1";
+      toggleBtn.addEventListener("click", openMenu);
+      closeBtn.addEventListener("click", closeMenu);
+      overlay.addEventListener("click", closeMenu);
+      nav.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeMenu); });
+    }
   }
 })();

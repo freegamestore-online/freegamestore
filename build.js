@@ -521,12 +521,15 @@ const qualityRegistry = {
       description: 'Deliberately-broken control cases. Each scenario reproduces a known layout bug to verify the platform auditor flags it correctly.' },
   ],
 };
-const qualityHtml = qualityTemplate
+let qualityHtml = qualityTemplate
   .replaceAll('__CF_BEACON__', CF_BEACON_SNIPPET)
   .replace(
     '{{REGISTRIES_JSON}}',
     JSON.stringify(qualityRegistry).replace(/</g, '\\u003c'),
   );
+for (const [k, v] of Object.entries(sriHashes)) {
+  qualityHtml = qualityHtml.replaceAll(`{{SRI_${k}}}`, v);
+}
 const qualityHtmlWithAssets = replaceAssetVersions(qualityHtml);
 fs.writeFileSync(path.join(DIST, 'quality.html'), qualityHtmlWithAssets);
 console.log(`  /quality dashboard generated for ${qualityRegistry.games.length} games + ${qualityRegistry.apps.length} apps`);
