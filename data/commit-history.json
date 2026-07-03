@@ -2296,5 +2296,43 @@
         }
       }
     ]
+  },
+  "freegamestore-online/apple-picking": {
+    "meta": {
+      "created_at": "2026-07-03T13:38:29Z",
+      "pushed_at": "2026-07-03T13:38:46Z"
+    },
+    "commits": [
+      {
+        "sha": "32f373bd2be7215ad2a39fc7d828eca8e2e0c080",
+        "html_url": "https://github.com/freegamestore-online/apple-picking/commit/32f373bd2be7215ad2a39fc7d828eca8e2e0c080",
+        "commit": {
+          "message": "Build Apple Picking — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-07-03T13:38:46Z"
+          }
+        }
+      },
+      {
+        "sha": "1f20af48692e64b85b34a10be8ccf10c5d16727e",
+        "html_url": "https://github.com/freegamestore-online/apple-picking/commit/1f20af48692e64b85b34a10be8ccf10c5d16727e",
+        "commit": {
+          "message": "Set game name to \"Apple Picking\"",
+          "author": {
+            "date": "2026-07-03T13:38:40Z"
+          }
+        }
+      },
+      {
+        "sha": "40e355d36152403a17ccf132ff9a5c5f728c4e99",
+        "html_url": "https://github.com/freegamestore-online/apple-picking/commit/40e355d36152403a17ccf132ff9a5c5f728c4e99",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-03T13:38:33Z"
+          }
+        }
+      }
+    ]
   }
 }
