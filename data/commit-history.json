@@ -2262,9 +2262,19 @@
   "freegamestore-online/ts-probe": {
     "meta": {
       "created_at": "2026-07-03T06:24:23Z",
-      "pushed_at": "2026-07-03T06:24:35Z"
+      "pushed_at": "2026-07-03T06:25:04Z"
     },
     "commits": [
+      {
+        "sha": "c5832a78b998d6e7a2eab4aba1910eda3af58bf0",
+        "html_url": "https://github.com/freegamestore-online/ts-probe/commit/c5832a78b998d6e7a2eab4aba1910eda3af58bf0",
+        "commit": {
+          "message": "Initial ts-probe — scaffolded via MCP (template-game-canvas)",
+          "author": {
+            "date": "2026-07-03T06:25:04Z"
+          }
+        }
+      },
       {
         "sha": "0023bc759cf51972af3357124f209d6ca1f681f6",
         "html_url": "https://github.com/freegamestore-online/ts-probe/commit/0023bc759cf51972af3357124f209d6ca1f681f6",
