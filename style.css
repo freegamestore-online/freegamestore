@@ -64,6 +64,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.18s ease, color 0.18s ease;
+  /* App-like feel: no double-tap zoom / 300ms tap delay. Pinch-zoom is
+     blocked via the viewport meta (maximum-scale=1, user-scalable=no). */
+  touch-action: manipulation;
 }
 
 .display-font { font-family: var(--font-display); }

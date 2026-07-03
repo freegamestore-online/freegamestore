@@ -802,6 +802,8 @@ const filesToCopy = [
   'apple-touch-icon.png',
   'icon-192.png',
   'icon-512.png',
+  'manifest.webmanifest',
+  'sw.js',
   'robots.txt',
   '404.html',
   'about.html',
@@ -861,6 +863,14 @@ fs.writeFileSync(path.join(DIST, '_headers'), [
   '  Cache-Control: public, max-age=604800, immutable',
   '/*.svg',
   '  Cache-Control: public, max-age=604800, immutable',
+  '',
+  '# PWA: never long-cache the service worker (more specific than /*.js), and',
+  '# serve the manifest with the correct content-type.',
+  '/sw.js',
+  '  Cache-Control: no-cache',
+  '/manifest.webmanifest',
+  '  Content-Type: application/manifest+json',
+  '  Cache-Control: public, max-age=86400',
   '',
 ].join('\n'));
 

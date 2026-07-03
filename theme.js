@@ -133,4 +133,11 @@
       nav.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeMenu); });
     }
   }
+
+  // ── PWA: register the service worker (offline shell + installability) ──
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("/sw.js").catch(function () {});
+    });
+  }
 })();
