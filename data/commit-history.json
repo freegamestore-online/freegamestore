@@ -2376,9 +2376,29 @@
   "freegamestore-online/mcp-proof": {
     "meta": {
       "created_at": "2026-07-03T13:56:38Z",
-      "pushed_at": "2026-07-03T13:56:48Z"
+      "pushed_at": "2026-07-03T14:00:14Z"
     },
     "commits": [
+      {
+        "sha": "5720c47dedd8a8d0f2e6c7bec0b3343fd89bdfca",
+        "html_url": "https://github.com/freegamestore-online/mcp-proof/commit/5720c47dedd8a8d0f2e6c7bec0b3343fd89bdfca",
+        "commit": {
+          "message": "Prove edit→redeploy via MCP: visible marker + real content",
+          "author": {
+            "date": "2026-07-03T14:00:14Z"
+          }
+        }
+      },
+      {
+        "sha": "6bc97b45d18034a23265ba68285339882480808f",
+        "html_url": "https://github.com/freegamestore-online/mcp-proof/commit/6bc97b45d18034a23265ba68285339882480808f",
+        "commit": {
+          "message": "Initial mcp-proof — scaffolded via MCP (template-game-canvas)",
+          "author": {
+            "date": "2026-07-03T13:57:17Z"
+          }
+        }
+      },
       {
         "sha": "0c26d89722e7fe5e578b3c90e8399c1ea8e03e76",
         "html_url": "https://github.com/freegamestore-online/mcp-proof/commit/0c26d89722e7fe5e578b3c90e8399c1ea8e03e76",
@@ -2386,16 +2406,6 @@
           "message": "Set game name to \"MCP Proof\"",
           "author": {
             "date": "2026-07-03T13:56:48Z"
-          }
-        }
-      },
-      {
-        "sha": "0c6e8104df4ab309e9c7b82e3175a0b9c22d6e04",
-        "html_url": "https://github.com/freegamestore-online/mcp-proof/commit/0c6e8104df4ab309e9c7b82e3175a0b9c22d6e04",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-07-03T13:56:41Z"
           }
         }
       }
