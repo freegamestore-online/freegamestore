@@ -1200,6 +1200,21 @@
       "developer": "serge-the-dev",
       "creatorGithub": "serge-the-dev",
       "firstPublished": "2026-07-03T05:32:14.615Z"
+    },
+    {
+      "id": "ts-probe",
+      "name": "TS Probe",
+      "category": "arcade",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "Throwaway game to verify created/edited timestamps populate on the list and settings page.",
+      "appUrl": "https://ts-probe.freegamestore.online",
+      "repo": "freegamestore-online/ts-probe",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "firstPublished": "2026-07-03T06:24:22.295Z"
     }
   ]
 }
