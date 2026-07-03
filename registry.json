@@ -1245,6 +1245,21 @@
       "developer": "serge-the-dev",
       "creatorGithub": "serge-the-dev",
       "firstPublished": "2026-07-03T13:44:38.591Z"
+    },
+    {
+      "id": "mcp-proof",
+      "name": "MCP Proof",
+      "category": "arcade",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "End-to-end MCP pipeline proof: create → deploy → edit → redeploy.",
+      "appUrl": "https://mcp-proof.freegamestore.online",
+      "repo": "freegamestore-online/mcp-proof",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "firstPublished": "2026-07-03T13:56:38.100Z"
     }
   ]
 }
