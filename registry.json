@@ -1215,6 +1215,21 @@
       "developer": "serge-ivo",
       "creatorGithub": "serge-ivo",
       "firstPublished": "2026-07-03T06:24:22.295Z"
+    },
+    {
+      "id": "apple-picking",
+      "name": "Apple Picking",
+      "category": "arcade",
+      "icon": "&#127822;",
+      "iconBg": "#fff7ed",
+      "description": "Catch falling apples in your basket — grab golden ones for bonus points and dodge the rotten ones!",
+      "appUrl": "https://apple-picking.freegamestore.online",
+      "repo": "freegamestore-online/apple-picking",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-the-dev",
+      "creatorGithub": "serge-the-dev",
+      "firstPublished": "2026-07-03T13:38:29.205Z"
     }
   ]
 }
