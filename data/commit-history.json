@@ -2334,5 +2334,43 @@
         }
       }
     ]
+  },
+  "freegamestore-online/kart-racers": {
+    "meta": {
+      "created_at": "2026-07-03T13:44:39Z",
+      "pushed_at": "2026-07-03T13:44:59Z"
+    },
+    "commits": [
+      {
+        "sha": "06fb1f80ca75e5dd46f495b07669f04aeeffff96",
+        "html_url": "https://github.com/freegamestore-online/kart-racers/commit/06fb1f80ca75e5dd46f495b07669f04aeeffff96",
+        "commit": {
+          "message": "Build Kart Racers — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-07-03T13:44:59Z"
+          }
+        }
+      },
+      {
+        "sha": "3526454d01e78309c6cf69559198720d9ab77439",
+        "html_url": "https://github.com/freegamestore-online/kart-racers/commit/3526454d01e78309c6cf69559198720d9ab77439",
+        "commit": {
+          "message": "Set game name to \"Kart Racers\"",
+          "author": {
+            "date": "2026-07-03T13:44:51Z"
+          }
+        }
+      },
+      {
+        "sha": "a24236ffde63799b8d4f335e1ddfbd3b71a61d9a",
+        "html_url": "https://github.com/freegamestore-online/kart-racers/commit/a24236ffde63799b8d4f335e1ddfbd3b71a61d9a",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-03T13:44:42Z"
+          }
+        }
+      }
+    ]
   }
 }
