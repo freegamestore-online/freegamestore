@@ -2224,9 +2224,19 @@
   "freegamestore-online/nail-studio": {
     "meta": {
       "created_at": "2026-07-03T05:32:15Z",
-      "pushed_at": "2026-07-03T05:32:34Z"
+      "pushed_at": "2026-07-03T05:54:37Z"
     },
     "commits": [
+      {
+        "sha": "73438d1b0cc130ced3fd0df587e9c344238cf0f5",
+        "html_url": "https://github.com/freegamestore-online/nail-studio/commit/73438d1b0cc130ced3fd0df587e9c344238cf0f5",
+        "commit": {
+          "message": "build: ship with vite build; make tsc a separate (non-blocking) typecheck\n\nStrict tsc -b in the deploy build blocked AI-generated games on style/edge\nnits (unused vars, possibly-undefined). Transpile + ship; typecheck stays\navailable via `pnpm typecheck`.",
+          "author": {
+            "date": "2026-07-03T05:54:37Z"
+          }
+        }
+      },
       {
         "sha": "730779824b72a1a45519444d8dee3a726551b902",
         "html_url": "https://github.com/freegamestore-online/nail-studio/commit/730779824b72a1a45519444d8dee3a726551b902",
@@ -2246,14 +2256,32 @@
             "date": "2026-07-03T05:32:26Z"
           }
         }
+      }
+    ]
+  },
+  "freegamestore-online/ts-probe": {
+    "meta": {
+      "created_at": "2026-07-03T06:24:23Z",
+      "pushed_at": "2026-07-03T06:24:35Z"
+    },
+    "commits": [
+      {
+        "sha": "0023bc759cf51972af3357124f209d6ca1f681f6",
+        "html_url": "https://github.com/freegamestore-online/ts-probe/commit/0023bc759cf51972af3357124f209d6ca1f681f6",
+        "commit": {
+          "message": "Set game name to \"TS Probe\"",
+          "author": {
+            "date": "2026-07-03T06:24:35Z"
+          }
+        }
       },
       {
-        "sha": "7e6a13b6be25ccb6fc1eea90226cd7dce95d53eb",
-        "html_url": "https://github.com/freegamestore-online/nail-studio/commit/7e6a13b6be25ccb6fc1eea90226cd7dce95d53eb",
+        "sha": "ae5667273c598ed8e0b10322d1df097a7ec160dd",
+        "html_url": "https://github.com/freegamestore-online/ts-probe/commit/ae5667273c598ed8e0b10322d1df097a7ec160dd",
         "commit": {
           "message": "Initial commit",
           "author": {
-            "date": "2026-07-03T05:32:18Z"
+            "date": "2026-07-03T06:24:26Z"
           }
         }
       }
