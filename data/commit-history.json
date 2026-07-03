@@ -2372,5 +2372,33 @@
         }
       }
     ]
+  },
+  "freegamestore-online/mcp-proof": {
+    "meta": {
+      "created_at": "2026-07-03T13:56:38Z",
+      "pushed_at": "2026-07-03T13:56:48Z"
+    },
+    "commits": [
+      {
+        "sha": "0c26d89722e7fe5e578b3c90e8399c1ea8e03e76",
+        "html_url": "https://github.com/freegamestore-online/mcp-proof/commit/0c26d89722e7fe5e578b3c90e8399c1ea8e03e76",
+        "commit": {
+          "message": "Set game name to \"MCP Proof\"",
+          "author": {
+            "date": "2026-07-03T13:56:48Z"
+          }
+        }
+      },
+      {
+        "sha": "0c6e8104df4ab309e9c7b82e3175a0b9c22d6e04",
+        "html_url": "https://github.com/freegamestore-online/mcp-proof/commit/0c6e8104df4ab309e9c7b82e3175a0b9c22d6e04",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-03T13:56:41Z"
+          }
+        }
+      }
+    ]
   }
 }
