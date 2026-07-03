@@ -1213,6 +1213,21 @@
       "type": "standalone",
       "developer": "serge-the-dev",
       "creatorGithub": "serge-the-dev"
+    },
+    {
+      "id": "naming-check",
+      "name": "Naming Check Game",
+      "category": "puzzle",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "A3/A2 verify — safe to delete",
+      "appUrl": "https://naming-check.freegamestore.online",
+      "repo": "freegamestore-online/naming-check",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-the-dev",
+      "creatorGithub": "serge-the-dev",
+      "firstPublished": "2026-07-03T04:04:14.558Z"
     }
   ]
 }
