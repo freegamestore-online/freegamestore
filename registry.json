@@ -1260,6 +1260,21 @@
       "developer": "serge-ivo",
       "creatorGithub": "serge-ivo",
       "firstPublished": "2026-07-03T13:56:38.100Z"
+    },
+    {
+      "id": "cubiworld",
+      "name": "CUBIworld",
+      "category": "casual",
+      "icon": "",
+      "iconBg": "#1a2e26",
+      "description": "A fun and unique game made for everyone!!!",
+      "appUrl": "https://cubiworld.freegamestore.online",
+      "repo": "freegamestore-online/cubiworld",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "BUDDY-KIWI-BERRY",
+      "creatorGithub": "BUDDY-KIWI-BERRY",
+      "firstPublished": "2026-07-03T22:40:44.833Z"
     }
   ]
 }
