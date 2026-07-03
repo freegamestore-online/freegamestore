@@ -1230,6 +1230,21 @@
       "developer": "serge-the-dev",
       "creatorGithub": "serge-the-dev",
       "firstPublished": "2026-07-03T13:38:29.205Z"
+    },
+    {
+      "id": "kart-racers",
+      "name": "Kart Racers",
+      "category": "racing",
+      "icon": "&#127950;",
+      "iconBg": "#fef3c7",
+      "description": "A fast-paced top-down kart racing game — race 3 laps, grab items, and beat the AI to the finish line!",
+      "appUrl": "https://kart-racers.freegamestore.online",
+      "repo": "freegamestore-online/kart-racers",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-the-dev",
+      "creatorGithub": "serge-the-dev",
+      "firstPublished": "2026-07-03T13:44:38.591Z"
     }
   ]
 }
