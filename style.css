@@ -247,6 +247,41 @@ header .container {
 .btn-primary:hover { background: var(--accent-hover); text-decoration: none; color: #fff; }
 .btn-primary:active { transform: translateY(1px); }
 
+/* Larger primary button for the store-page create CTA. */
+.btn-lg { font-size: 1.05rem; padding: 0.85rem 1.75rem; border-radius: 14px; gap: 0.5rem; white-space: nowrap; }
+
+/* Store-page "Create a Game" call-to-action — the primary path to VibeCode, so
+   people don't have to dig through the nav to start building. Links straight to
+   the console, which gates on GitHub sign-in. */
+.create-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0 2rem;
+}
+.create-cta-text h2 {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.3rem;
+}
+.create-cta-text p { color: var(--muted); margin: 0; font-size: 0.98rem; }
+/* Persistent header CTA (always visible, next to the theme toggle). */
+.header-right .nav-create { margin-right: 0.15rem; }
+@media (max-width: 600px) {
+  .create-cta { flex-direction: column; align-items: stretch; text-align: center; }
+  .create-cta .btn-lg { justify-content: center; }
+  /* On mobile the header stays uncluttered — the banner carries the CTA. */
+  .header-right .nav-create { display: none; }
+}
+
 /* Promote auth.js's Sign-in link to the same blue pill in the storefront header. */
 .header-right .nav-signin {
   display: inline-flex;
