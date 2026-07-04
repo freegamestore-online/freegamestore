@@ -35,12 +35,16 @@ jobs:
         with:
           version: 10
 
-      # GITHUB_TOKEN lifts the GitHub API rate limit from 60 → 5000 req/hr,
-      # which build.js needs to fetch each game's commit history at build
-      # time without the deploy ever rate-limiting.
+      # A normal (push) build is OFFLINE: it reads commit history from the
+      # committed data/commit-history.json cache and makes ZERO GitHub API
+      # calls, so pushes never rate-limit. Only the scheduled / manually
+      # dispatched runs set FGS_REFRESH_HISTORY=1 to fetch fresh history from
+      # the API (GITHUB_TOKEN lifts the limit 60 → 5000 req/hr) and rewrite the
+      # cache, which the "Commit refreshed commit-history cache" step commits.
       - run: node build.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FGS_REFRESH_HISTORY: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && '1' || '' }}
 
       # SDK docs site — Astro Starlight builds into ../dist/docs so the
       # storefront and docs ship in a single wrangler deploy. Lives at

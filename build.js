@@ -193,9 +193,14 @@ async function fetchGameHistory(repo) {
 
 // --- History cache (data/commit-history.json) ---
 //
-// CF Pages runs its own GitHub-integration build that doesn't have
-// GITHUB_TOKEN. Caching lets that no-token build still produce correct
-// output. The scheduled GH-Actions deploy refreshes the cache every 6h.
+// A normal build is OFFLINE: it sources every game's commit history purely
+// from the committed data/commit-history.json cache and makes ZERO GitHub API
+// calls. Only the scheduled/manual deploy that maintains the cache opts in to
+// live fetching via FGS_REFRESH_HISTORY=1 — it hits the API (with a token to
+// lift the rate limit), rewrites the cache file, and commits it back. Every
+// other build (push deploys, CF Pages' no-token build, local dev) just reads
+// the baked file, so pushes never rate-limit and local builds need no token.
+const REFRESH_HISTORY = process.env.FGS_REFRESH_HISTORY === '1';
 const CACHE_PATH = path.join(ROOT, 'data', 'commit-history.json');
 
 function readCache() {
@@ -213,6 +218,13 @@ function writeCache(cache) {
 
 async function fetchAllHistories(games) {
   const cache = readCache();
+  if (!REFRESH_HISTORY) {
+    // Offline path (default): no network. Read straight from the cache; a game
+    // not yet cached (e.g. just added to the registry) renders an empty history
+    // and gets filled in on the next FGS_REFRESH_HISTORY run.
+    return games.map((game) => cache[game.repo] || { meta: null, commits: null });
+  }
+  // Refresh path (opt-in): fetch fresh from the GitHub API and rewrite the cache.
   const histories = await Promise.all(
     games.map(async (game) => {
       const fresh = await fetchGameHistory(game.repo);
@@ -515,7 +527,11 @@ async function fetchCrossStoreRegistry() {
 }
 
 (async () => {
-console.log(`Fetching commit history for ${games.length} games (with disk cache fallback)...`);
+console.log(
+  REFRESH_HISTORY
+    ? `Refreshing commit history for ${games.length} games from the GitHub API...`
+    : `Loading commit history for ${games.length} games from cache (offline, no GitHub API)...`,
+);
 const [histories, auditMap, crossRegistry, manifests] = await Promise.all([
   fetchAllHistories(games),
   fetchAuditSummary(),
