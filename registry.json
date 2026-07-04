@@ -1321,6 +1321,21 @@
       "developer": "abid8195",
       "creatorGithub": "abid8195",
       "firstPublished": "2026-07-04T03:40:57.632Z"
+    },
+    {
+      "id": "beat-star",
+      "name": "Beat Star",
+      "category": "arcade",
+      "icon": "&#11088;",
+      "iconBg": "#1a0a2e",
+      "description": "A rhythm game where you tap falling stars in time with the beat across 4 lanes — chain combos and survive!",
+      "appUrl": "https://beat-star.freegamestore.online",
+      "repo": "freegamestore-online/beat-star",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "buildlessonline-spec",
+      "creatorGithub": "buildlessonline-spec",
+      "firstPublished": "2026-07-04T03:50:01.615Z"
     }
   ]
 }
