@@ -1336,6 +1336,21 @@
       "developer": "buildlessonline-spec",
       "creatorGithub": "buildlessonline-spec",
       "firstPublished": "2026-07-04T03:50:01.615Z"
+    },
+    {
+      "id": "frofrogjumping",
+      "name": "Frog jumping on islands in the marsh",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "",
+      "appUrl": "https://frofrogjumping.freegamestore.online",
+      "repo": "freegamestore-online/frofrogjumping",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "buildlessonline-spec",
+      "creatorGithub": "buildlessonline-spec",
+      "firstPublished": "2026-07-04T04:39:21.570Z"
     }
   ]
 }
