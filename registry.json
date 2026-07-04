@@ -1306,6 +1306,21 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "firstPublished": "2026-07-04T03:09:09.928Z",
       "updatedAt": "2026-07-04T03:28:30.618Z"
+    },
+    {
+      "id": "decaying-tic-tac-toe",
+      "name": "Decaying Tic Tac Toe",
+      "category": "strategy",
+      "icon": "?",
+      "iconBg": "#ecfdf5",
+      "description": "Decaying Tic Tac Toe with simple AI, fading pieces, and offline play.",
+      "appUrl": "https://decaying-tic-tac-toe.freegamestore.online",
+      "repo": "freegamestore-online/decaying-tic-tac-toe",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "abid8195",
+      "creatorGithub": "abid8195",
+      "firstPublished": "2026-07-04T03:40:57.632Z"
     }
   ]
 }
