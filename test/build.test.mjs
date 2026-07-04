@@ -418,10 +418,15 @@ test("every local <script src> has a valid SRI integrity attribute", () => {
   const { tmp, tmpDist } = runBuild();
   try {
     const indexHtml = readFileSync(join(tmpDist, "index.html"), "utf8");
-    const localScripts = indexHtml.match(/<script\s+src="\/[^"]+\.js"[^>]*>/g) || [];
+    // Local scripts are SRI'd AND cache-busted (src="/theme.js?v=<hash>") — the
+    // ?v query is required so a changed script gets a fresh CDN cache key and its
+    // served bytes stay in lockstep with the integrity hash (a stale edge copy
+    // otherwise fails SRI and blocks the script; that bricked theme.js/nav).
+    const localScripts = indexHtml.match(/<script\s+src="\/[^"]+\.js(?:\?v=[a-f0-9]+)?"[^>]*>/g) || [];
     assert.ok(localScripts.length >= 2, `expected ≥2 local script tags, found ${localScripts.length}`);
     for (const tag of localScripts) {
       assert.match(tag, /integrity="sha256-[A-Za-z0-9+/=]+"/, `<script> missing integrity: ${tag}`);
+      assert.match(tag, /src="\/[^"]+\.js\?v=[a-f0-9]+"/, `<script> not cache-busted: ${tag}`);
     }
     assert.ok(!/{{SRI_[A-Z_]+}}/.test(indexHtml), "unsubstituted SRI placeholder");
   } finally {

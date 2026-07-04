@@ -322,10 +322,24 @@ const cardStylesVersion = crypto.createHash('sha256')
   .digest('hex')
   .slice(0, 12);
 
+// Content-hash version tag per local JS file. These scripts carry an SRI
+// `integrity=` in the HTML, so the served bytes MUST match the hash the HTML
+// was built with. But they live at stable URLs (/theme.js) with a 24h edge
+// cache, so a deploy that changes a script leaves the edge serving stale bytes
+// against the new SRI hash → the browser blocks it (this bricked theme.js →
+// dead nav site-wide). Appending ?v=<hash> makes each version a fresh cache
+// key, so the served bytes always match the integrity hash. No purge needed.
+const JS_ASSETS = ['theme.js', 'search.js', 'storefront.js', 'detail-page.js'];
+const jsVersions = Object.fromEntries(
+  JS_ASSETS.map((f) => [f, crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, f))).digest('hex').slice(0, 12)]),
+);
+
 function replaceAssetVersions(html) {
   return html
     .replaceAll('{{STYLE_VERSION}}', styleVersion)
-    .replaceAll('{{CARD_STYLES_VERSION}}', cardStylesVersion);
+    .replaceAll('{{CARD_STYLES_VERSION}}', cardStylesVersion)
+    // Cache-bust SRI'd local scripts: src="/theme.js" → src="/theme.js?v=<hash>".
+    .replace(/src="\/(theme|search|storefront|detail-page)\.js"/g, (_m, name) => `src="/${name}.js?v=${jsVersions[`${name}.js`]}"`);
 }
 
 function creatorGithubForGame(game) {
@@ -890,7 +904,10 @@ fs.writeFileSync(path.join(DIST, '_headers'), [
   '  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), midi=()',
   '  Reporting-Endpoints: csp-endpoint="/v1/csp-report"',
   `  Content-Security-Policy: ${csp}`,
-  `  Content-Security-Policy-Report-Only: ${csp}`,
+  // No Content-Security-Policy-Report-Only: it was byte-identical to the
+  // enforced policy, so it added zero coverage — just duplicate violation logs
+  // and the "'upgrade-insecure-requests' is ignored in report-only" warning on
+  // every page. (Reintroduce ONLY as a strictly-tighter next-gen policy to test.)
   '',
   '# PWA: never long-cache the service worker, and serve the manifest with the',
   '# right content-type. These MUST come before the /*.js wildcard below — CF',

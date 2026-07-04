@@ -17,6 +17,16 @@
   }
   document.querySelectorAll(".app-icon img").forEach(bindIconFallback);
 
+  // ── CSP-safe deferred-font swap ──
+  // The font stylesheet loads with media="print" (non-blocking) then must flip
+  // to media="all" to actually apply. That used to be an inline
+  // onload="this.media='all'" — blocked by our CSP (no inline handlers) — so do
+  // it here instead. This script is deferred, so the sheet has had time to load.
+  document.querySelectorAll('link[data-font-swap]').forEach(function (l) {
+    if (l.media !== "all") l.media = "all";
+    l.addEventListener("load", function () { l.media = "all"; }, { once: true });
+  });
+
   // ── Theme: apply stored / preferred mode ──
   try {
     var stored = localStorage.getItem("stores-theme");
