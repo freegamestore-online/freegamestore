@@ -1293,18 +1293,19 @@
     },
     {
       "id": "bladeblast",
-      "name": "BLADE BLAST",
+      "name": "AVOIDit",
       "category": "casual",
       "icon": "",
       "iconBg": "#1a2e26",
-      "description": "A satisfying and fun game that soothes your body!",
+      "description": "A collecting and dodging game that is fun!!!",
       "appUrl": "https://bladeblast.freegamestore.online",
       "repo": "freegamestore-online/bladeblast",
       "hostedOn": "r2",
       "type": "standalone",
       "developer": "BUDDY-KIWI-BERRY",
       "creatorGithub": "BUDDY-KIWI-BERRY",
-      "firstPublished": "2026-07-04T03:09:09.928Z"
+      "firstPublished": "2026-07-04T03:09:09.928Z",
+      "updatedAt": "2026-07-04T03:28:30.618Z"
     }
   ]
 }
