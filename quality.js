@@ -24,6 +24,17 @@
  *   is correct.
  */
 
+// Escape registry-sourced strings before injecting into innerHTML. Game names
+// come from the registry (creator-supplied) and must not be trusted as HTML.
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 // Reference viewport matrix. Mirrors packages/cli/src/commands/screencheck.ts
 // computeCoverage exactly so dashboard scores match CLI scores. Each entry
 // has a `share`: cumulative device share at that width — if the app fails
@@ -136,7 +147,7 @@ function renderSummary(store) {
     return `
       <a class="q-card" href="/quality.html?app=${encodeURIComponent(a.id)}&store=${a.store}">
         <div class="q-card-head">
-          <span class="name">${a.name || a.id}</span>
+          <span class="name">${escapeHtml(a.name || a.id)}</span>
           <span class="index ${cls}">${score == null ? '—' : score}</span>
         </div>
         <div class="meta">${a.store === 'apps' ? 'App' : 'Game'} · ${meta}</div>
