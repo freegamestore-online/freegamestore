@@ -344,9 +344,19 @@
   "freegamestore-online/dragontap": {
     "meta": {
       "created_at": "2026-05-06T04:15:50Z",
-      "pushed_at": "2026-06-01T23:19:17Z"
+      "pushed_at": "2026-07-04T03:27:36Z"
     },
     "commits": [
+      {
+        "sha": "7adee728977c421438befe44fd0a022eeb202812",
+        "html_url": "https://github.com/freegamestore-online/dragontap/commit/7adee728977c421438befe44fd0a022eeb202812",
+        "commit": {
+          "message": "fix(deploy): upload to fgs-games bucket, not fas-apps\n\ndeploy.yml synced ./web/dist to s3://fas-apps/... but the host Worker\nserves from the fgs-games bucket, so this game never appeared live\n(uploaded bytes went to the FAS bucket the host doesn't read). Swap to\ns3://fgs-games/games/<repo>/ to match host/wrangler.toml. Matches the\ncanonical template + fixed fgs-cli generator.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-04T03:27:33Z"
+          }
+        }
+      },
       {
         "sha": "9c59980d5614f5eb7ff590d0b0584f320401dd37",
         "html_url": "https://github.com/freegamestore-online/dragontap/commit/9c59980d5614f5eb7ff590d0b0584f320401dd37",
@@ -364,16 +374,6 @@
           "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-27T12:16:39Z"
-          }
-        }
-      },
-      {
-        "sha": "b653915e9ae8399bba904065cddc24d06126cc23",
-        "html_url": "https://github.com/freegamestore-online/dragontap/commit/b653915e9ae8399bba904065cddc24d06126cc23",
-        "commit": {
-          "message": "feat: Dragon Tap game — tap dragons to score, speed ramps, 3 lives\n\nPWA-ready with offline support, GameShell/GameTopbar from @freegamestore/games SDK,\nleaderboard integration, combo system, sound effects.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:11:53Z"
           }
         }
       }
@@ -1332,9 +1332,19 @@
   "freegamestore-online/toetap": {
     "meta": {
       "created_at": "2026-05-06T04:17:16Z",
-      "pushed_at": "2026-05-27T12:19:27Z"
+      "pushed_at": "2026-07-04T03:27:42Z"
     },
     "commits": [
+      {
+        "sha": "c672e95c7f761d6da8d95b9334defe709965fcd3",
+        "html_url": "https://github.com/freegamestore-online/toetap/commit/c672e95c7f761d6da8d95b9334defe709965fcd3",
+        "commit": {
+          "message": "fix(deploy): upload to fgs-games bucket, not fas-apps\n\ndeploy.yml synced ./web/dist to s3://fas-apps/... but the host Worker\nserves from the fgs-games bucket, so this game never appeared live\n(uploaded bytes went to the FAS bucket the host doesn't read). Swap to\ns3://fgs-games/games/<repo>/ to match host/wrangler.toml. Matches the\ncanonical template + fixed fgs-cli generator.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-04T03:27:39Z"
+          }
+        }
+      },
       {
         "sha": "1d41b788f0f863480b85de9becadaa81350958aa",
         "html_url": "https://github.com/freegamestore-online/toetap/commit/1d41b788f0f863480b85de9becadaa81350958aa",
@@ -1352,16 +1362,6 @@
           "message": "fix: add missing --bg CSS token to design system variables\n\nDefines --bg: var(--paper) in both light and dark mode root,\nmatching the platform design system convention.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-27T12:18:55Z"
-          }
-        }
-      },
-      {
-        "sha": "331a20687fa3eec17d41c5a1df316c0e96b53a4f",
-        "html_url": "https://github.com/freegamestore-online/toetap/commit/331a20687fa3eec17d41c5a1df316c0e96b53a4f",
-        "commit": {
-          "message": "feat: Toe Tap game — Simon Says on a 4x4 grid, remember and replay sequences\n\nPWA-ready with offline support, GameShell/GameTopbar from @freegamestore/games SDK,\nsound effects, visual feedback, high score persistence.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:11:56Z"
           }
         }
       }
@@ -1408,9 +1408,19 @@
   "freegamestore-online/quickdice": {
     "meta": {
       "created_at": "2026-05-06T04:45:04Z",
-      "pushed_at": "2026-06-01T23:20:01Z"
+      "pushed_at": "2026-07-04T03:27:39Z"
     },
     "commits": [
+      {
+        "sha": "83e943b582dbda0947d72bff201fda7c3cf1674a",
+        "html_url": "https://github.com/freegamestore-online/quickdice/commit/83e943b582dbda0947d72bff201fda7c3cf1674a",
+        "commit": {
+          "message": "fix(deploy): upload to fgs-games bucket, not fas-apps\n\ndeploy.yml synced ./web/dist to s3://fas-apps/... but the host Worker\nserves from the fgs-games bucket, so this game never appeared live\n(uploaded bytes went to the FAS bucket the host doesn't read). Swap to\ns3://fgs-games/games/<repo>/ to match host/wrangler.toml. Matches the\ncanonical template + fixed fgs-cli generator.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-04T03:27:36Z"
+          }
+        }
+      },
       {
         "sha": "51a748ca46d8fc4c8a60128cc4e03e233e767eff",
         "html_url": "https://github.com/freegamestore-online/quickdice/commit/51a748ca46d8fc4c8a60128cc4e03e233e767eff",
@@ -1428,16 +1438,6 @@
           "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-27T12:18:21Z"
-          }
-        }
-      },
-      {
-        "sha": "fea2ba61a2f689f86144181ffa1a327b95cbd640",
-        "html_url": "https://github.com/freegamestore-online/quickdice/commit/fea2ba61a2f689f86144181ffa1a327b95cbd640",
-        "commit": {
-          "message": "feat: Quick Dice game — roll dice to hit targets, streak bonuses, 60s timer\n\nPWA-ready with offline support, GameShell/GameTopbar from @freegamestore/games SDK,\nleaderboard integration, animated dice, sound effects.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:11:55Z"
           }
         }
       }
@@ -1826,9 +1826,19 @@
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-06-04T06:21:25Z"
+      "pushed_at": "2026-07-04T03:32:04Z"
     },
     "commits": [
+      {
+        "sha": "1276991b4f295ccacfe900b0770266bfd0203ccd",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/1276991b4f295ccacfe900b0770266bfd0203ccd",
+        "commit": {
+          "message": "Remove cross-store @freeappstore/quality dependency\n\ntetris was the only FGS game depending on the FAS package\n@freeappstore/quality (a copy-paste leftover). initQualityReporter()\nposts to the FAS Quality Dashboard, which FGS games aren't part of, and\nit violates the workspace vendor-don't-depend rule (no cross-store npm\ndeps). No FGS SDK equivalent exists and no FGS game should report there,\nso drop the import + dependency outright. Lockfile regenerated;\ntypecheck + build + frozen-lockfile install all green.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-04T03:32:01Z"
+          }
+        }
+      },
       {
         "sha": "5c8ef345ce0939d5018bcb17c2ea3114c9acc5f8",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/5c8ef345ce0939d5018bcb17c2ea3114c9acc5f8",
@@ -1846,16 +1856,6 @@
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-06-01T23:20:32Z"
-          }
-        }
-      },
-      {
-        "sha": "8e05897b722414496dccc3009cecbde215aeb23e",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/8e05897b722414496dccc3009cecbde215aeb23e",
-        "commit": {
-          "message": "fix: move Left/Right to far edges of touch controls\n\nReorder mobile controls to [Left] [Rotate] [Down] [Drop] [Right] so Left\nsits on the far left and Right on the far right, with Rotate/Down/Drop\nclustered inside. Previously Right was in column 4 and Drop occupied the\nfar-right slot.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:11:30Z"
           }
         }
       }
@@ -2414,36 +2414,36 @@
   "freegamestore-online/cubiworld": {
     "meta": {
       "created_at": "2026-07-03T22:40:45Z",
-      "pushed_at": "2026-07-03T22:52:51Z"
+      "pushed_at": "2026-07-04T03:26:45Z"
     },
     "commits": [
       {
-        "sha": "9e16dd4546b90edf70903c23ae7efedfed9e532f",
-        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/9e16dd4546b90edf70903c23ae7efedfed9e532f",
+        "sha": "9fce25dfdaa741ff82bbf5b56731fda1f2a0ea30",
+        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/9fce25dfdaa741ff82bbf5b56731fda1f2a0ea30",
         "commit": {
-          "message": "Build cute Geometry Dash game with block editor, faces, hats, patterns, and canvas game engine",
+          "message": "Speed scaling per level, cozy warm procedural music (Web Audio), floor spikes under staircase sit on ground not attached to steps, music toggle button + M key",
           "author": {
-            "date": "2026-07-03T22:52:50Z"
+            "date": "2026-07-04T03:26:44Z"
           }
         }
       },
       {
-        "sha": "183d8b475b3cc0df49aa307b7ff01933ccfc416d",
-        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/183d8b475b3cc0df49aa307b7ff01933ccfc416d",
+        "sha": "39ce33a6aa4d5e190e2f1cbc8c0e5fec276c310a",
+        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/39ce33a6aa4d5e190e2f1cbc8c0e5fec276c310a",
         "commit": {
-          "message": "Set game name to \"CUBIworld\"",
+          "message": "New obstacles: raised platform (jump onto, spikes below), staircase (separated steps with gaps + down-spikes below each); only player cube has face",
           "author": {
-            "date": "2026-07-03T22:40:58Z"
+            "date": "2026-07-04T03:09:26Z"
           }
         }
       },
       {
-        "sha": "59e2a16601839b39b71907905068c5fcd4f5211b",
-        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/59e2a16601839b39b71907905068c5fcd4f5211b",
+        "sha": "44ebfaefa4dc4ddd42332ef7c15d861c4511f38a",
+        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/44ebfaefa4dc4ddd42332ef7c15d861c4511f38a",
         "commit": {
-          "message": "Initial commit",
+          "message": "Only player cube has face; spikes-only obstacles with spike groups; add staircase step obstacles with landing physics",
           "author": {
-            "date": "2026-07-03T22:40:48Z"
+            "date": "2026-07-04T01:49:44Z"
           }
         }
       }
