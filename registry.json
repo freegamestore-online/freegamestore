@@ -1290,6 +1290,21 @@
       "developer": "buildlessonline-spec",
       "creatorGithub": "buildlessonline-spec",
       "firstPublished": "2026-07-03T23:12:05.206Z"
+    },
+    {
+      "id": "bladeblast",
+      "name": "BLADE BLAST",
+      "category": "casual",
+      "icon": "",
+      "iconBg": "#1a2e26",
+      "description": "A satisfying and fun game that soothes your body!",
+      "appUrl": "https://bladeblast.freegamestore.online",
+      "repo": "freegamestore-online/bladeblast",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "BUDDY-KIWI-BERRY",
+      "creatorGithub": "BUDDY-KIWI-BERRY",
+      "firstPublished": "2026-07-04T03:09:09.928Z"
     }
   ]
 }
