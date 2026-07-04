@@ -7,7 +7,7 @@
 
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
 import { existsSync, mkdtempSync, readFileSync, writeFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, dirname, resolve } from "node:path";
@@ -91,17 +91,16 @@ function runBuildWithRegistry(games) {
   const tmpRegistry = join(tmp, "registry.json");
   const tmpDist = join(tmp, "dist");
   writeFileSync(tmpRegistry, JSON.stringify({ games }, null, 2));
-  try {
-    execFileSync(process.execPath, [BUILD_JS], {
-      env: { ...process.env, FGS_REGISTRY_PATH: tmpRegistry, FGS_DIST: tmpDist },
-      cwd: REPO_ROOT,
-      stdio: ["ignore", "pipe", "pipe"],
-      timeout: 60_000,
-    });
-    return { ok: true, stderr: "", tmp, tmpDist };
-  } catch (err) {
-    return { ok: false, stderr: (err.stderr && err.stderr.toString()) || err.message, tmp, tmpDist };
-  }
+  // spawnSync captures stderr on success too — the resilient validator warns
+  // about dropped entries via stderr while still exiting 0, and tests assert it.
+  const res = spawnSync(process.execPath, [BUILD_JS], {
+    env: { ...process.env, FGS_REGISTRY_PATH: tmpRegistry, FGS_DIST: tmpDist },
+    cwd: REPO_ROOT,
+    encoding: "utf8",
+    timeout: 60_000,
+  });
+  const stderr = (res.stderr || "") + (res.error ? String(res.error) : "");
+  return { ok: res.status === 0, stderr, tmp, tmpDist };
 }
 
 const VALID_GAME = {
@@ -118,48 +117,71 @@ const VALID_GAME = {
   developer: "FreeGameStore",
 };
 
-test("validator rejects wrong-host appUrl", () => {
+// The validator is resilient: an invalid entry is DROPPED (excluded from the
+// build) with a warning, but never fails the whole build. These tests assert
+// the build still succeeds, the reason is reported, and the entry was skipped.
+test("validator drops wrong-host appUrl, build still succeeds", () => {
   const { ok, stderr, tmp } = runBuildWithRegistry([
     { ...VALID_GAME, appUrl: "https://evil.example.com" },
   ]);
   try {
-    assert.equal(ok, false);
+    assert.equal(ok, true, stderr);
     assert.match(stderr, /appUrl must be https:\/\/\*\.freegamestore\.online/);
+    assert.match(stderr, /skipped 1 invalid game/);
   } finally {
     rmSync(tmp, { recursive: true, force: true });
   }
 });
 
-test("validator rejects bad iconBg", () => {
+test("validator drops bad iconBg, build still succeeds", () => {
   const { ok, stderr, tmp } = runBuildWithRegistry([
     { ...VALID_GAME, iconBg: "url(javascript:alert(1))" },
   ]);
   try {
-    assert.equal(ok, false);
+    assert.equal(ok, true, stderr);
     assert.match(stderr, /iconBg must be a #hex color/);
+    assert.match(stderr, /skipped 1 invalid game/);
   } finally {
     rmSync(tmp, { recursive: true, force: true });
   }
 });
 
-test("validator rejects bad id", () => {
+test("validator drops bad id, build still succeeds", () => {
   for (const badId of ["UPPER", "two words", "dot.sep", ""]) {
-    const { ok, tmp } = runBuildWithRegistry([{ ...VALID_GAME, id: badId }]);
+    const { ok, stderr, tmp } = runBuildWithRegistry([{ ...VALID_GAME, id: badId }]);
     try {
-      assert.equal(ok, false, `id="${badId}" should have been rejected`);
+      assert.equal(ok, true, `id="${badId}" should have been dropped, not fail the build`);
+      assert.match(stderr, /skipped 1 invalid game/);
     } finally {
       rmSync(tmp, { recursive: true, force: true });
     }
   }
 });
 
-test("validator rejects bad creatorGithub", () => {
+test("validator drops bad creatorGithub, build still succeeds", () => {
   const { ok, stderr, tmp } = runBuildWithRegistry([
     { ...VALID_GAME, creatorGithub: "bad/user" },
   ]);
   try {
-    assert.equal(ok, false);
+    assert.equal(ok, true, stderr);
     assert.match(stderr, /creatorGithub must be a GitHub username/);
+    assert.match(stderr, /skipped 1 invalid game/);
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
+test("one bad entry does not take down the valid games", () => {
+  const { ok, stderr, tmp, tmpDist } = runBuildWithRegistry([
+    { ...VALID_GAME, id: "good-game", name: "GoodGame" },
+    { ...VALID_GAME, id: "bad-game", name: "BadGame", appUrl: "https://evil.example.com" },
+  ]);
+  try {
+    assert.equal(ok, true, stderr);
+    assert.match(stderr, /skipped 1 invalid game/);
+    const indexHtml = readFileSync(join(tmpDist, "index.html"), "utf8");
+    assert.ok(indexHtml.includes("GoodGame"), "valid game should be in the build");
+    assert.ok(!indexHtml.includes("BadGame"), "invalid game should be excluded from the build");
   } finally {
     rmSync(tmp, { recursive: true, force: true });
   }
@@ -420,20 +442,20 @@ test("no <meta http-equiv=Content-Security-Policy> in index.html (headers only)"
   }
 });
 
-test("validator rejects duplicate ids and unbounded/ctrl-char names", () => {
+test("validator drops duplicate ids and unbounded/ctrl-char names, build still succeeds", () => {
   let r = runBuildWithRegistry([{ ...VALID_GAME }, { ...VALID_GAME }]);
   try {
-    assert.equal(r.ok, false);
+    assert.equal(r.ok, true, r.stderr);
     assert.match(r.stderr, /duplicate id/);
   } finally { rmSync(r.tmp, { recursive: true, force: true }); }
   r = runBuildWithRegistry([{ ...VALID_GAME, name: "x".repeat(200) }]);
   try {
-    assert.equal(r.ok, false);
+    assert.equal(r.ok, true, r.stderr);
     assert.match(r.stderr, /name must be 1-80 chars/);
   } finally { rmSync(r.tmp, { recursive: true, force: true }); }
   r = runBuildWithRegistry([{ ...VALID_GAME, name: "tab" + String.fromCharCode(9) + "name" }]);
   try {
-    assert.equal(r.ok, false);
+    assert.equal(r.ok, true, r.stderr);
     assert.match(r.stderr, /name must be/);
   } finally { rmSync(r.tmp, { recursive: true, force: true }); }
 });

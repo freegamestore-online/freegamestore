@@ -12,7 +12,7 @@ const REGISTRY_PATH = process.env.FGS_REGISTRY_PATH ? path.resolve(process.env.F
 
 // Read registry
 const registry = JSON.parse(fs.readFileSync(REGISTRY_PATH, 'utf8'));
-const games = registry.games;
+let games = registry.games;
 
 // Registry shape validator — stop malformed/malicious entries at build time.
 const ID_RE = /^[a-z0-9][a-z0-9-]*$/;
@@ -28,36 +28,58 @@ const PLATFORM_CREATOR_GITHUB = 'serge-ivo';
 function safeText(s, max) {
   return typeof s === 'string' && s.length > 0 && s.length <= max && !/[\x00-\x1f\x7f]/.test(s);
 }
+// Resilient by design: a single malformed/malicious game entry must never take
+// the whole store down. We validate each entry independently, DROP the invalid
+// ones (they're excluded from the build, never deployed) with a loud warning,
+// and continue building with the valid remainder. Returns the surviving games.
 function validateRegistry(items) {
-  const errors = [];
+  const valid = [];
+  const skipped = [];
   const seenIds = new Set();
   for (const g of items) {
+    const errors = [];
+    if (!g || typeof g !== 'object') {
+      skipped.push({ id: '(not an object)', errors: [`entry is not an object: ${JSON.stringify(g)}`] });
+      continue;
+    }
     if (!g.id || !ID_RE.test(g.id)) errors.push(`bad id: ${JSON.stringify(g.id)}`);
     else if (seenIds.has(g.id)) errors.push(`duplicate id: ${JSON.stringify(g.id)}`);
-    else seenIds.add(g.id);
-    if (!safeText(g.name, 80)) errors.push(`${g.id}: name must be 1-80 chars without control chars`);
-    if (!g.appUrl || !URL_RE.test(g.appUrl)) errors.push(`${g.id}: appUrl must be https://*.freegamestore.online, got ${JSON.stringify(g.appUrl)}`);
-    if (g.iconBg && !COLOR_RE.test(g.iconBg)) errors.push(`${g.id}: iconBg must be a #hex color, got ${JSON.stringify(g.iconBg)}`);
-    if (g.category != null && !safeText(g.category, 80)) errors.push(`${g.id}: bad category ${JSON.stringify(g.category)}`);
-    if (g.description != null && !safeText(g.description, 500)) errors.push(`${g.id}: description must be 1-500 chars without control chars`);
-    if (g.developer != null && !safeText(g.developer, 60)) errors.push(`${g.id}: bad developer ${JSON.stringify(g.developer)}`);
-    if (g.author != null && !safeText(g.author, 60)) errors.push(`${g.id}: bad author ${JSON.stringify(g.author)}`);
+    if (!safeText(g.name, 80)) errors.push(`name must be 1-80 chars without control chars`);
+    if (!g.appUrl || !URL_RE.test(g.appUrl)) errors.push(`appUrl must be https://*.freegamestore.online, got ${JSON.stringify(g.appUrl)}`);
+    if (g.iconBg && !COLOR_RE.test(g.iconBg)) errors.push(`iconBg must be a #hex color, got ${JSON.stringify(g.iconBg)}`);
+    if (g.category != null && !safeText(g.category, 80)) errors.push(`bad category ${JSON.stringify(g.category)}`);
+    if (g.description != null && !safeText(g.description, 500)) errors.push(`description must be 1-500 chars without control chars`);
+    if (g.developer != null && !safeText(g.developer, 60)) errors.push(`bad developer ${JSON.stringify(g.developer)}`);
+    if (g.author != null && !safeText(g.author, 60)) errors.push(`bad author ${JSON.stringify(g.author)}`);
     if (g.creatorGithub != null && (typeof g.creatorGithub !== 'string' || !GITHUB_USER_RE.test(g.creatorGithub))) {
-      errors.push(`${g.id}: creatorGithub must be a GitHub username, got ${JSON.stringify(g.creatorGithub)}`);
+      errors.push(`creatorGithub must be a GitHub username, got ${JSON.stringify(g.creatorGithub)}`);
     }
     if (g.repo != null && (typeof g.repo !== 'string' || g.repo.length > 100 || !/^[\w.-]+\/[\w.-]+$/.test(g.repo))) {
-      errors.push(`${g.id}: repo must be "owner/name", got ${JSON.stringify(g.repo)}`);
+      errors.push(`repo must be "owner/name", got ${JSON.stringify(g.repo)}`);
     }
     if (g.icon != null && (typeof g.icon !== 'string' || !ICON_RE.test(g.icon))) {
-      errors.push(`${g.id}: icon must be an HTML entity or emoji, got ${JSON.stringify(g.icon)}`);
+      errors.push(`icon must be an HTML entity or emoji, got ${JSON.stringify(g.icon)}`);
     }
+
+    if (errors.length) {
+      skipped.push({ id: g.id || '(no id)', errors });
+      continue;
+    }
+    seenIds.add(g.id);
+    valid.push(g);
   }
-  if (errors.length) {
-    console.error('Registry validation failed:\n  - ' + errors.join('\n  - '));
-    process.exit(1);
+
+  if (skipped.length) {
+    console.warn(
+      `⚠ Registry: skipped ${skipped.length} invalid game entr${skipped.length === 1 ? 'y' : 'ies'} ` +
+      `(excluded from build, NOT deployed):\n` +
+      skipped.map((s) => `  - ${s.id}: ${s.errors.join('; ')}`).join('\n'),
+    );
   }
+  console.log(`Registry: ${valid.length}/${items.length} games valid and included in the build.`);
+  return valid;
 }
-validateRegistry(games);
+games = validateRegistry(games);
 
 // Read templates
 const indexTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'index.html'), 'utf8');
