@@ -2376,9 +2376,19 @@
   "freegamestore-online/mcp-proof": {
     "meta": {
       "created_at": "2026-07-03T13:56:38Z",
-      "pushed_at": "2026-07-03T14:00:14Z"
+      "pushed_at": "2026-07-03T23:00:21Z"
     },
     "commits": [
+      {
+        "sha": "79c6a2ddf22c5e609703a7cb97425c795f6182d6",
+        "html_url": "https://github.com/freegamestore-online/mcp-proof/commit/79c6a2ddf22c5e609703a7cb97425c795f6182d6",
+        "commit": {
+          "message": "Direct edit (via update_files) to prove edit_game re-syncs it into VibeCode",
+          "author": {
+            "date": "2026-07-03T23:00:21Z"
+          }
+        }
+      },
       {
         "sha": "5720c47dedd8a8d0f2e6c7bec0b3343fd89bdfca",
         "html_url": "https://github.com/freegamestore-online/mcp-proof/commit/5720c47dedd8a8d0f2e6c7bec0b3343fd89bdfca",
@@ -2398,14 +2408,80 @@
             "date": "2026-07-03T13:57:17Z"
           }
         }
+      }
+    ]
+  },
+  "freegamestore-online/cubiworld": {
+    "meta": {
+      "created_at": "2026-07-03T22:40:45Z",
+      "pushed_at": "2026-07-03T22:52:51Z"
+    },
+    "commits": [
+      {
+        "sha": "9e16dd4546b90edf70903c23ae7efedfed9e532f",
+        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/9e16dd4546b90edf70903c23ae7efedfed9e532f",
+        "commit": {
+          "message": "Build cute Geometry Dash game with block editor, faces, hats, patterns, and canvas game engine",
+          "author": {
+            "date": "2026-07-03T22:52:50Z"
+          }
+        }
       },
       {
-        "sha": "0c26d89722e7fe5e578b3c90e8399c1ea8e03e76",
-        "html_url": "https://github.com/freegamestore-online/mcp-proof/commit/0c26d89722e7fe5e578b3c90e8399c1ea8e03e76",
+        "sha": "183d8b475b3cc0df49aa307b7ff01933ccfc416d",
+        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/183d8b475b3cc0df49aa307b7ff01933ccfc416d",
         "commit": {
-          "message": "Set game name to \"MCP Proof\"",
+          "message": "Set game name to \"CUBIworld\"",
           "author": {
-            "date": "2026-07-03T13:56:48Z"
+            "date": "2026-07-03T22:40:58Z"
+          }
+        }
+      },
+      {
+        "sha": "59e2a16601839b39b71907905068c5fcd4f5211b",
+        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/59e2a16601839b39b71907905068c5fcd4f5211b",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-03T22:40:48Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/slicing-game": {
+    "meta": {
+      "created_at": "2026-07-03T23:12:06Z",
+      "pushed_at": "2026-07-03T23:16:48Z"
+    },
+    "commits": [
+      {
+        "sha": "c236863ef1e955f49461e45a299f3f41fe600ef3",
+        "html_url": "https://github.com/freegamestore-online/slicing-game/commit/c236863ef1e955f49461e45a299f3f41fe600ef3",
+        "commit": {
+          "message": "Complete rebuild: 3D knife slicing game with Three.js - jumping knife that slices fruits, avoids bombs, combo system, 3 lanes, particle effects, score popups",
+          "author": {
+            "date": "2026-07-03T23:16:47Z"
+          }
+        }
+      },
+      {
+        "sha": "9b1f7c5793b42642120461fb5416240281161fe5",
+        "html_url": "https://github.com/freegamestore-online/slicing-game/commit/9b1f7c5793b42642120461fb5416240281161fe5",
+        "commit": {
+          "message": "Set game name to \"Slicing\"",
+          "author": {
+            "date": "2026-07-03T23:12:18Z"
+          }
+        }
+      },
+      {
+        "sha": "64cdc4f691561aaf615708bdb35f4a41c8addf6c",
+        "html_url": "https://github.com/freegamestore-online/slicing-game/commit/64cdc4f691561aaf615708bdb35f4a41c8addf6c",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-03T23:12:09Z"
           }
         }
       }
