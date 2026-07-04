@@ -1351,6 +1351,21 @@
       "developer": "buildlessonline-spec",
       "creatorGithub": "buildlessonline-spec",
       "firstPublished": "2026-07-04T04:39:21.570Z"
+    },
+    {
+      "id": "angry-birds2",
+      "name": "AB",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "",
+      "appUrl": "https://angry-birds2.freegamestore.online",
+      "repo": "freegamestore-online/angry-birds2",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "buildlessonline-spec",
+      "creatorGithub": "buildlessonline-spec",
+      "firstPublished": "2026-07-04T22:30:34.952Z"
     }
   ]
 }
