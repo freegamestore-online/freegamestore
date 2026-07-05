@@ -47,18 +47,27 @@ function validateRegistry(items) {
     if (!safeText(g.name, 80)) errors.push(`name must be 1-80 chars without control chars`);
     if (!g.appUrl || !URL_RE.test(g.appUrl)) errors.push(`appUrl must be https://*.freegamestore.online, got ${JSON.stringify(g.appUrl)}`);
     if (g.iconBg && !COLOR_RE.test(g.iconBg)) errors.push(`iconBg must be a #hex color, got ${JSON.stringify(g.iconBg)}`);
-    if (g.category != null && !safeText(g.category, 80)) errors.push(`bad category ${JSON.stringify(g.category)}`);
-    if (g.description != null && !safeText(g.description, 500)) errors.push(`description must be 1-500 chars without control chars`);
-    if (g.developer != null && !safeText(g.developer, 60)) errors.push(`bad developer ${JSON.stringify(g.developer)}`);
-    if (g.author != null && !safeText(g.author, 60)) errors.push(`bad author ${JSON.stringify(g.author)}`);
+    // Display-only optional fields: an EMPTY value means "not provided" (the
+    // publish flow writes description:"" by default), and a present-but-malformed
+    // value is a cosmetic problem — never a reason to hide a live, hosted game
+    // from the store + search. So SANITIZE-and-KEEP: empty passes untouched;
+    // anything invalid is coerced to a safe default and the game still ships.
+    // (Previously `!= null` let "" reach safeText, which rejects empty strings,
+    // dropping every game published without a hand-written description — 10 live
+    // games were silently missing from the storefront. See
+    // REGISTRY-VALIDATION-RECOMMENDATIONS.md.)
+    if (g.category && !safeText(g.category, 80)) g.category = '';
+    if (g.description && !safeText(g.description, 500)) g.description = '';
+    if (g.developer && !safeText(g.developer, 60)) g.developer = '';
+    if (g.author && !safeText(g.author, 60)) g.author = '';
+    if (g.icon != null && (typeof g.icon !== 'string' || !ICON_RE.test(g.icon))) g.icon = ''; // fall back to a name monogram at render
+    // Security / routing fields stay HARD-FAIL (a bad value here can't be
+    // rendered/linked safely, so excluding the entry is correct):
     if (g.creatorGithub != null && (typeof g.creatorGithub !== 'string' || !GITHUB_USER_RE.test(g.creatorGithub))) {
       errors.push(`creatorGithub must be a GitHub username, got ${JSON.stringify(g.creatorGithub)}`);
     }
     if (g.repo != null && (typeof g.repo !== 'string' || g.repo.length > 100 || !/^[\w.-]+\/[\w.-]+$/.test(g.repo))) {
       errors.push(`repo must be "owner/name", got ${JSON.stringify(g.repo)}`);
-    }
-    if (g.icon != null && (typeof g.icon !== 'string' || !ICON_RE.test(g.icon))) {
-      errors.push(`icon must be an HTML entity or emoji, got ${JSON.stringify(g.icon)}`);
     }
 
     if (errors.length) {
@@ -70,11 +79,29 @@ function validateRegistry(items) {
   }
 
   if (skipped.length) {
+    const detail = skipped.map((s) => `  - ${s.id}: ${s.errors.join('; ')}`).join('\n');
     console.warn(
       `⚠ Registry: skipped ${skipped.length} invalid game entr${skipped.length === 1 ? 'y' : 'ies'} ` +
-      `(excluded from build, NOT deployed):\n` +
-      skipped.map((s) => `  - ${s.id}: ${s.errors.join('; ')}`).join('\n'),
+      `(excluded from build, NOT deployed):\n${detail}`,
     );
+    // Surface the drop where a human will actually see it: a GitHub Actions
+    // warning annotation + the run's build summary. A silently-dropped published
+    // game was invisible for weeks with only a buried console.warn as a signal
+    // (REGISTRY-VALIDATION-RECOMMENDATIONS.md #4). Now every deploy that hides a
+    // game flags it on the run.
+    if (process.env.GITHUB_ACTIONS) {
+      const ids = skipped.map((s) => s.id).join(', ');
+      console.log(`::warning title=Registry dropped ${skipped.length} game(s)::${ids} excluded from the store — check registry.json`);
+      if (process.env.GITHUB_STEP_SUMMARY) {
+        try {
+          fs.appendFileSync(
+            process.env.GITHUB_STEP_SUMMARY,
+            `### ⚠ ${skipped.length} game(s) dropped from the store build\n\n` +
+            skipped.map((s) => `- \`${s.id}\` — ${s.errors.join('; ')}`).join('\n') + '\n',
+          );
+        } catch { /* summary is best-effort */ }
+      }
+    }
   }
   console.log(`Registry: ${valid.length}/${items.length} games valid and included in the build.`);
   return valid;
@@ -361,8 +388,18 @@ function renderAuthorChip(game) {
   return escapeHtml(game.author || game.developer || 'FreeGameStore');
 }
 
+// Safe HTML for a game's icon. A registry icon is ICON_RE-validated (an HTML
+// entity or emoji), so it's safe to inject raw; otherwise (empty / sanitized
+// away) fall back to an escaped one-letter monogram from the name. Used
+// everywhere the icon renders so a game with no icon still shows something and is
+// never a blank box.
+function iconHtml(game) {
+  if (game.icon && ICON_RE.test(game.icon)) return game.icon;
+  return escapeHtml((game.name || '?').trim().charAt(0).toUpperCase() || '?');
+}
+
 function renderGameCard(game) {
-  const icon = game.icon || (game.name || '?').trim().charAt(0).toUpperCase();
+  const icon = iconHtml(game);
   return `        <div class="app-card compact" data-id="${escapeHtml(game.id)}" data-category="${escapeHtml(game.category)}" data-published="${escapeHtml(game.firstPublished || '')}" data-about="/games/${escapeHtml(game.id)}.html">
           <div class="app-icon">${icon}</div>
           <div class="app-body">
@@ -697,7 +734,7 @@ function renderAuthorSpotlight(authorGames) {
 function renderDevGameList(authorGames) {
   const items = sortByFreshness(authorGames).slice(0, 3);
   if (items.length === 0) return '';
-  return `<ul class="dev-game-list">${items.map((game) => `<li><span>${game.icon || '&bull;'}</span>${escapeHtml(game.name)}</li>`).join('')}</ul>`;
+  return `<ul class="dev-game-list">${items.map((game) => `<li><span>${iconHtml(game)}</span>${escapeHtml(game.name)}</li>`).join('')}</ul>`;
 }
 
 for (const username of uniqueAuthors) {
@@ -773,7 +810,7 @@ games.forEach((game, i) => {
     .replace(/\{\{NAME\}\}/g, escapeHtml(game.name))
     .replace(/\{\{NAME_LOWER\}\}/g, escapeHtml(game.name.toLowerCase()))
     .replace(/\{\{ID\}\}/g, escapeHtml(game.id))
-    .replace(/\{\{ICON\}\}/g, game.icon) // pre-validated HTML entity from registry
+    .replace(/\{\{ICON\}\}/g, iconHtml(game)) // validated entity/emoji, else escaped monogram
     .replace(/\{\{ICON_BG\}\}/g, escapeHtml(game.iconBg))
     .replace(/\{\{CATEGORY_LABEL\}\}/g, escapeHtml(categoryLabel(game.category)))
     .replace(/\{\{DESCRIPTION\}\}/g, escapeHtml(game.description))
