@@ -1503,6 +1503,21 @@
       "developer": "buildlessonline-spec",
       "creatorGithub": "buildlessonline-spec",
       "firstPublished": "2026-07-05T02:27:01.840Z"
+    },
+    {
+      "id": "pixeljump",
+      "name": "PixelJump",
+      "category": "sports",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "",
+      "appUrl": "https://pixeljump.freegamestore.online",
+      "repo": "freegamestore-online/pixeljump",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Crystal12341",
+      "creatorGithub": "Crystal12341",
+      "firstPublished": "2026-07-05T02:41:18.176Z"
     }
   ]
 }
