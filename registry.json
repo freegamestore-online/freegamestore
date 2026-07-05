@@ -1429,21 +1429,6 @@
       "updatedAt": "2026-07-05T01:56:46.414Z"
     },
     {
-      "id": "escape",
-      "name": "Fight",
-      "category": "arcade",
-      "icon": "💣  🎮  👾",
-      "iconBg": "#1a2e26",
-      "description": "A game where you have to atack the zombies and while trying to the arrows ",
-      "appUrl": "https://escape.freegamestore.online",
-      "repo": "freegamestore-online/escape",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "Crystal12341",
-      "creatorGithub": "Crystal12341",
-      "firstPublished": "2026-07-05T02:11:21.816Z"
-    },
-    {
       "id": "ocean-save",
       "name": "Ocean Save",
       "category": "casual",
