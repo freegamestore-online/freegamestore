@@ -1366,6 +1366,21 @@
       "developer": "buildlessonline-spec",
       "creatorGithub": "buildlessonline-spec",
       "firstPublished": "2026-07-04T22:30:34.952Z"
+    },
+    {
+      "id": "angrry",
+      "name": "Angry ",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "",
+      "appUrl": "https://angrry.freegamestore.online",
+      "repo": "freegamestore-online/angrry",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "buildlessonline-spec",
+      "creatorGithub": "buildlessonline-spec",
+      "firstPublished": "2026-07-05T00:31:56.182Z"
     }
   ]
 }
