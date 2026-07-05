@@ -1518,6 +1518,22 @@
       "developer": "Crystal12341",
       "creatorGithub": "Crystal12341",
       "firstPublished": "2026-07-05T04:14:05.357Z"
+    },
+    {
+      "id": "phaser-smoke",
+      "name": "Phaser Smoke",
+      "category": "arcade",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "throwaway smoke test for the phaser engine template",
+      "appUrl": "https://phaser-smoke.freegamestore.online",
+      "repo": "freegamestore-online/phaser-smoke",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "buildlessonline-spec",
+      "creatorGithub": "buildlessonline-spec",
+      "engine": "phaser",
+      "firstPublished": "2026-07-05T22:18:50.569Z"
     }
   ]
 }
