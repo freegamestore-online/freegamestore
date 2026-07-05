@@ -1381,6 +1381,21 @@
       "developer": "buildlessonline-spec",
       "creatorGithub": "buildlessonline-spec",
       "firstPublished": "2026-07-05T00:31:56.182Z"
+    },
+    {
+      "id": "sliceit",
+      "name": "SLICEit",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "",
+      "appUrl": "https://sliceit.freegamestore.online",
+      "repo": "freegamestore-online/sliceit",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "BUDDY-KIWI-BERRY",
+      "creatorGithub": "BUDDY-KIWI-BERRY",
+      "firstPublished": "2026-07-05T01:30:21.956Z"
     }
   ]
 }
