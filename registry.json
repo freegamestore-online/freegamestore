@@ -1442,6 +1442,21 @@
       "developer": "Crystal12341",
       "creatorGithub": "Crystal12341",
       "firstPublished": "2026-07-05T02:11:21.816Z"
+    },
+    {
+      "id": "ocean-save",
+      "name": "Ocean Save",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "",
+      "appUrl": "https://ocean-save.freegamestore.online",
+      "repo": "freegamestore-online/ocean-save",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "buildlessonline-spec",
+      "creatorGithub": "buildlessonline-spec",
+      "firstPublished": "2026-07-05T02:12:33.855Z"
     }
   ]
 }
