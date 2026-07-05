@@ -1457,6 +1457,21 @@
       "developer": "buildlessonline-spec",
       "creatorGithub": "buildlessonline-spec",
       "firstPublished": "2026-07-05T02:12:33.855Z"
+    },
+    {
+      "id": "ocean-save2",
+      "name": "Ocean Save2",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "",
+      "appUrl": "https://ocean-save2.freegamestore.online",
+      "repo": "freegamestore-online/ocean-save2",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "buildlessonline-spec",
+      "creatorGithub": "buildlessonline-spec",
+      "firstPublished": "2026-07-05T02:23:25.477Z"
     }
   ]
 }
