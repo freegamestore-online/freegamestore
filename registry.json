@@ -1411,6 +1411,21 @@
       "developer": "PATRICIA-AU",
       "creatorGithub": "PATRICIA-AU",
       "firstPublished": "2026-07-05T01:52:48.184Z"
+    },
+    {
+      "id": "flappyslaybird",
+      "name": "Flappy Slay Bird 🎀",
+      "category": "arcade",
+      "icon": "🎀",
+      "iconBg": "#1a2e26",
+      "description": "",
+      "appUrl": "https://flappyslaybird.freegamestore.online",
+      "repo": "freegamestore-online/flappyslaybird",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Pumpkin12345678910",
+      "creatorGithub": "Pumpkin12345678910",
+      "firstPublished": "2026-07-05T01:56:01.014Z"
     }
   ]
 }
