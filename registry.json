@@ -1396,6 +1396,21 @@
       "developer": "BUDDY-KIWI-BERRY",
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "firstPublished": "2026-07-05T01:30:21.956Z"
+    },
+    {
+      "id": "climberadventure",
+      "name": "climberadventure",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "a super fun and chalenging climbing game",
+      "appUrl": "https://climberadventure.freegamestore.online",
+      "repo": "freegamestore-online/climberadventure",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "PATRICIA-AU",
+      "creatorGithub": "PATRICIA-AU",
+      "firstPublished": "2026-07-05T01:52:48.184Z"
     }
   ]
 }
