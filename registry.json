@@ -1479,14 +1479,15 @@
       "category": "casual",
       "icon": "🎮",
       "iconBg": "#1a2e26",
-      "description": "",
+      "description": "fun game to play",
       "appUrl": "https://bouncingball.freegamestore.online",
       "repo": "freegamestore-online/bouncingball",
       "hostedOn": "r2",
       "type": "standalone",
       "developer": "SBDing",
       "creatorGithub": "SBDing",
-      "firstPublished": "2026-07-05T02:26:24.829Z"
+      "firstPublished": "2026-07-05T02:26:24.829Z",
+      "updatedAt": "2026-07-05T02:27:44.808Z"
     },
     {
       "id": "mcp-snake-test",
