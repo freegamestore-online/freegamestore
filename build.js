@@ -108,6 +108,19 @@ function validateRegistry(items) {
 }
 games = validateRegistry(games);
 
+// Guard: keep test fixtures out of the PUBLIC store (PLATFORM-ISSUES B). A publish
+// whose id ends in `-test`/`-fixture` (or carries `test: true`) is a fixture, not a
+// real game — e.g. `mcp-hybrid-test` leaked into the prod registry and rendered as a
+// real card. Exclude them from index.html + search; log so it's visible, never
+// silent. (`speedtest` etc. are safe — the pattern requires a `-` or string start
+// before `test`.)
+const TEST_ID = /(?:^|-)(?:test|fixture)$/i;
+const fixtures = games.filter((g) => g.test === true || TEST_ID.test(g.id || ''));
+if (fixtures.length) {
+  games = games.filter((g) => !(g.test === true || TEST_ID.test(g.id || '')));
+  console.log(`Registry: excluded ${fixtures.length} test fixture(s) from the store: ${fixtures.map((g) => g.id).join(', ')}`);
+}
+
 // Read templates
 const indexTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'index.html'), 'utf8');
 const detailTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'game-detail.html'), 'utf8');
