@@ -2414,9 +2414,29 @@
   "freegamestore-online/cubiworld": {
     "meta": {
       "created_at": "2026-07-03T22:40:45Z",
-      "pushed_at": "2026-07-04T03:26:45Z"
+      "pushed_at": "2026-07-05T03:19:52Z"
     },
     "commits": [
+      {
+        "sha": "98917bb203a0d57d1cddad2fb83fb63ab2fabbf5",
+        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/98917bb203a0d57d1cddad2fb83fb63ab2fabbf5",
+        "commit": {
+          "message": "Fix play button: initGame sets levelRef before setScreen, game loop paused off-screen, level select menu with scores/history, finish line, no mid-game level text, wider steps",
+          "author": {
+            "date": "2026-07-05T03:19:51Z"
+          }
+        }
+      },
+      {
+        "sha": "0619891163ef28c82cb28ec6430d0c3c16c27d8f",
+        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/0619891163ef28c82cb28ec6430d0c3c16c27d8f",
+        "commit": {
+          "message": "Full rewrite: level select menu with scores/history, no mid-game level text, fixed speed per round, finish line with flag, wider steps (88px), 6 distinct music tracks per level",
+          "author": {
+            "date": "2026-07-05T02:52:01Z"
+          }
+        }
+      },
       {
         "sha": "9fce25dfdaa741ff82bbf5b56731fda1f2a0ea30",
         "html_url": "https://github.com/freegamestore-online/cubiworld/commit/9fce25dfdaa741ff82bbf5b56731fda1f2a0ea30",
@@ -2424,26 +2444,6 @@
           "message": "Speed scaling per level, cozy warm procedural music (Web Audio), floor spikes under staircase sit on ground not attached to steps, music toggle button + M key",
           "author": {
             "date": "2026-07-04T03:26:44Z"
-          }
-        }
-      },
-      {
-        "sha": "39ce33a6aa4d5e190e2f1cbc8c0e5fec276c310a",
-        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/39ce33a6aa4d5e190e2f1cbc8c0e5fec276c310a",
-        "commit": {
-          "message": "New obstacles: raised platform (jump onto, spikes below), staircase (separated steps with gaps + down-spikes below each); only player cube has face",
-          "author": {
-            "date": "2026-07-04T03:09:26Z"
-          }
-        }
-      },
-      {
-        "sha": "44ebfaefa4dc4ddd42332ef7c15d861c4511f38a",
-        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/44ebfaefa4dc4ddd42332ef7c15d861c4511f38a",
-        "commit": {
-          "message": "Only player cube has face; spikes-only obstacles with spike groups; add staircase step obstacles with landing physics",
-          "author": {
-            "date": "2026-07-04T01:49:44Z"
           }
         }
       }
@@ -2520,6 +2520,432 @@
           "message": "Build Beat Star — FreeGameStore AI agent",
           "author": {
             "date": "2026-07-04T03:50:19Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/sliceit": {
+    "meta": {
+      "created_at": "2026-07-05T01:30:22Z",
+      "pushed_at": "2026-07-05T01:44:25Z"
+    },
+    "commits": [
+      {
+        "sha": "8f6bf5dad676cfe998375ea20e2761949cd471d1",
+        "html_url": "https://github.com/freegamestore-online/sliceit/commit/8f6bf5dad676cfe998375ea20e2761949cd471d1",
+        "commit": {
+          "message": "Complete rebuild: knife slicing game with conveyor path, food items, particles, knife customization, pastel sweets theme",
+          "author": {
+            "date": "2026-07-05T01:44:25Z"
+          }
+        }
+      },
+      {
+        "sha": "417ab84ece24c53eb9cdcfe6d80a8112c70505e4",
+        "html_url": "https://github.com/freegamestore-online/sliceit/commit/417ab84ece24c53eb9cdcfe6d80a8112c70505e4",
+        "commit": {
+          "message": "Set game name to \"SLICEit\"",
+          "author": {
+            "date": "2026-07-05T01:30:33Z"
+          }
+        }
+      },
+      {
+        "sha": "2c8ee93dc156b38858de0ffe275349f30196d7f2",
+        "html_url": "https://github.com/freegamestore-online/sliceit/commit/2c8ee93dc156b38858de0ffe275349f30196d7f2",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-05T01:30:25Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/flappyslaybird": {
+    "meta": {
+      "created_at": "2026-07-05T01:56:02Z",
+      "pushed_at": "2026-07-05T02:56:20Z"
+    },
+    "commits": [
+      {
+        "sha": "af34ff477829502d9ae543958e3327e47a2d448a",
+        "html_url": "https://github.com/freegamestore-online/flappyslaybird/commit/af34ff477829502d9ae543958e3327e47a2d448a",
+        "commit": {
+          "message": "fix: size the canvas when it mounts (game rendered broken)\n\nThe resize effect had an empty dependency array, so it ran once on mount\nduring the 'avatar' phase — when the canvas doesn't exist yet — and never\nagain. The canvas kept its default 300x150 backing buffer (CSS-stretched)\nwhile game logic used a stale 400x600, so the ground was off-screen and\nthe bird was mispositioned. Re-run resize on phase change so the canvas is\nsized once it actually mounts into 'playing'.\n\nAlso fix the Best score: GameTopbar has no 'highScore' prop (it was\nsilently ignored); use the stats API so Score + Best both show.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-05T02:56:18Z"
+          }
+        }
+      },
+      {
+        "sha": "dfec1b32eda0ce916b1a5e065979d5dfb59e38df",
+        "html_url": "https://github.com/freegamestore-online/flappyslaybird/commit/dfec1b32eda0ce916b1a5e065979d5dfb59e38df",
+        "commit": {
+          "message": "Full game rewrite: avatar picker, trees, clouds (hurt), bugs/dragonfly (collect), kids with nets, hearts system, boost mechanic",
+          "author": {
+            "date": "2026-07-05T02:28:27Z"
+          }
+        }
+      },
+      {
+        "sha": "7a283d0585ce0df402199a7a10a9a2298c5bdd62",
+        "html_url": "https://github.com/freegamestore-online/flappyslaybird/commit/7a283d0585ce0df402199a7a10a9a2298c5bdd62",
+        "commit": {
+          "message": "Set game name to \"Flappy Slay Bird 🎀\"",
+          "author": {
+            "date": "2026-07-05T01:56:15Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/angry-birds2": {
+    "meta": {
+      "created_at": "2026-07-04T22:30:36Z",
+      "pushed_at": "2026-07-04T22:30:48Z"
+    },
+    "commits": [
+      {
+        "sha": "d894e29e39c443f604e0e05957c240c9c9400cd5",
+        "html_url": "https://github.com/freegamestore-online/angry-birds2/commit/d894e29e39c443f604e0e05957c240c9c9400cd5",
+        "commit": {
+          "message": "Set game name to \"AB\"",
+          "author": {
+            "date": "2026-07-04T22:30:48Z"
+          }
+        }
+      },
+      {
+        "sha": "c68ad2cb97ca28284287338e0d1a785b268b99d4",
+        "html_url": "https://github.com/freegamestore-online/angry-birds2/commit/c68ad2cb97ca28284287338e0d1a785b268b99d4",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-04T22:30:38Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/climberadventure": {
+    "meta": {
+      "created_at": "2026-07-05T01:52:48Z",
+      "pushed_at": "2026-07-05T03:05:34Z"
+    },
+    "commits": [
+      {
+        "sha": "bf4130d5a86f747a9170af2f48d3f2c56fd42981",
+        "html_url": "https://github.com/freegamestore-online/climberadventure/commit/bf4130d5a86f747a9170af2f48d3f2c56fd42981",
+        "commit": {
+          "message": "Full rebuild: fix black screen, home screen, gender select, levels, coins, fizzy/medicine pickups, lives, pixelated characters, space/arrow controls",
+          "author": {
+            "date": "2026-07-05T03:05:34Z"
+          }
+        }
+      },
+      {
+        "sha": "bc44b0b7b01a95b734b0957bba6da9384d315ca9",
+        "html_url": "https://github.com/freegamestore-online/climberadventure/commit/bc44b0b7b01a95b734b0957bba6da9384d315ca9",
+        "commit": {
+          "message": "Complete rebuild: home screen, gender selection, level select, coins, fizzy/medicine pickups, lives, pixelated characters, fixed controls",
+          "author": {
+            "date": "2026-07-05T02:49:35Z"
+          }
+        }
+      },
+      {
+        "sha": "cf3f38de6bce613db94846ca773492a70976b62f",
+        "html_url": "https://github.com/freegamestore-online/climberadventure/commit/cf3f38de6bce613db94846ca773492a70976b62f",
+        "commit": {
+          "message": "fix: remove duplicate drawing-helper declarations breaking the build\n\nThe mountain-drawing helpers (getPlatformColor, drawMountainBg,\ndrawMountainSilhouette, lerp) were declared twice, causing\n\"symbol has already been declared\" rollup errors and a failed deploy.\nRemoved the duplicate block; drawLegend retained.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-05T02:21:20Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/angrry": {
+    "meta": {
+      "created_at": "2026-07-05T00:31:57Z",
+      "pushed_at": "2026-07-05T03:31:26Z"
+    },
+    "commits": [
+      {
+        "sha": "9d2da82cf60d9f75bdc406d63d26b32e9dff1ffb",
+        "html_url": "https://github.com/freegamestore-online/angrry/commit/9d2da82cf60d9f75bdc406d63d26b32e9dff1ffb",
+        "commit": {
+          "message": "Build full Angry Birds game with physics, slingshot, 4 bird types, 5 levels, special abilities",
+          "author": {
+            "date": "2026-07-05T03:31:26Z"
+          }
+        }
+      },
+      {
+        "sha": "1173639fe59ea74e0745a0d5d45eb4d167bde441",
+        "html_url": "https://github.com/freegamestore-online/angrry/commit/1173639fe59ea74e0745a0d5d45eb4d167bde441",
+        "commit": {
+          "message": "Set game name to \"Angry \"",
+          "author": {
+            "date": "2026-07-05T00:32:10Z"
+          }
+        }
+      },
+      {
+        "sha": "21ec7f198ac15477d843a5d61c20217715960e5d",
+        "html_url": "https://github.com/freegamestore-online/angrry/commit/21ec7f198ac15477d843a5d61c20217715960e5d",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-05T00:32:00Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/frofrogjumping": {
+    "meta": {
+      "created_at": "2026-07-04T04:39:22Z",
+      "pushed_at": "2026-07-04T09:06:04Z"
+    },
+    "commits": [
+      {
+        "sha": "a859e586fb0706024e2f2136ea317d5981b2dd07",
+        "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/a859e586fb0706024e2f2136ea317d5981b2dd07",
+        "commit": {
+          "message": "Rival frogs now hop randomly to nearby empty islands; collision with rival triggers fish gulp",
+          "author": {
+            "date": "2026-07-04T09:06:04Z"
+          }
+        }
+      },
+      {
+        "sha": "b15e070383174bdf533e83fa89c1c91a8419a62b",
+        "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/b15e070383174bdf533e83fa89c1c91a8419a62b",
+        "commit": {
+          "message": "Rework: tap-to-jump, rival frogs on pads, bird predators, fish gulp mechanic",
+          "author": {
+            "date": "2026-07-04T05:04:38Z"
+          }
+        }
+      },
+      {
+        "sha": "63c7fc57178d10348d96538696b2fcd15faa893e",
+        "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/63c7fc57178d10348d96538696b2fcd15faa893e",
+        "commit": {
+          "message": "Build frog marsh jumping game with canvas, islands, aim system, particles, and win/lose screens",
+          "author": {
+            "date": "2026-07-04T04:54:11Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/bladeblast": {
+    "meta": {
+      "created_at": "2026-07-04T03:09:10Z",
+      "pushed_at": "2026-07-04T03:42:49Z"
+    },
+    "commits": [
+      {
+        "sha": "eec83864c98fcb670d8ff8e8f3d6e4fe82d65e4b",
+        "html_url": "https://github.com/freegamestore-online/bladeblast/commit/eec83864c98fcb670d8ff8e8f3d6e4fe82d65e4b",
+        "commit": {
+          "message": "Full redesign: animals on land, bombs fall from sky, stars collectible, star bank + rarity upgrade system",
+          "author": {
+            "date": "2026-07-04T03:42:49Z"
+          }
+        }
+      },
+      {
+        "sha": "8aaa9beb0bae8bf6414efa0edfd1aa068392f26d",
+        "html_url": "https://github.com/freegamestore-online/bladeblast/commit/8aaa9beb0bae8bf6414efa0edfd1aa068392f26d",
+        "commit": {
+          "message": "Rebuild as AVOIDit — dodge bombs, collect stars, wave-based survival game",
+          "author": {
+            "date": "2026-07-04T03:33:19Z"
+          }
+        }
+      },
+      {
+        "sha": "892ebb8e89313e116089ab8c6488a58c44e15c50",
+        "html_url": "https://github.com/freegamestore-online/bladeblast/commit/892ebb8e89313e116089ab8c6488a58c44e15c50",
+        "commit": {
+          "message": "Build BLADE BLAST — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-07-04T03:14:45Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/decaying-tic-tac-toe": {
+    "meta": {
+      "created_at": "2026-07-04T03:40:59Z",
+      "pushed_at": "2026-07-04T03:42:21Z"
+    },
+    "commits": [
+      {
+        "sha": "a1d710b787be2e03a2becda843e31d2689e21e41",
+        "html_url": "https://github.com/freegamestore-online/decaying-tic-tac-toe/commit/a1d710b787be2e03a2becda843e31d2689e21e41",
+        "commit": {
+          "message": "finish app",
+          "author": {
+            "date": "2026-07-04T03:25:10Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/ocean-save2": {
+    "meta": {
+      "created_at": "2026-07-05T02:23:26Z",
+      "pushed_at": "2026-07-05T02:26:36Z"
+    },
+    "commits": [
+      {
+        "sha": "2fc0c72a1fd8da0bd2e8d7462f85cf45e9b89285",
+        "html_url": "https://github.com/freegamestore-online/ocean-save2/commit/2fc0c72a1fd8da0bd2e8d7462f85cf45e9b89285",
+        "commit": {
+          "message": "Build Ocean Save 2 game - rescue survivors from sharks on a raft",
+          "author": {
+            "date": "2026-07-05T02:26:36Z"
+          }
+        }
+      },
+      {
+        "sha": "0a0fba909b840abb505caf375446593b3129bac8",
+        "html_url": "https://github.com/freegamestore-online/ocean-save2/commit/0a0fba909b840abb505caf375446593b3129bac8",
+        "commit": {
+          "message": "Set game name to \"Ocean Save2\"",
+          "author": {
+            "date": "2026-07-05T02:23:37Z"
+          }
+        }
+      },
+      {
+        "sha": "5ac131e1ec777e89e33480189a67402f6ca45c01",
+        "html_url": "https://github.com/freegamestore-online/ocean-save2/commit/5ac131e1ec777e89e33480189a67402f6ca45c01",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-05T02:23:29Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/pixeljump": {
+    "meta": {
+      "created_at": "2026-07-05T02:41:18Z",
+      "pushed_at": "2026-07-05T03:19:34Z"
+    },
+    "commits": [
+      {
+        "sha": "bc467dd652ffde1355251795b2faae3b61815f62",
+        "html_url": "https://github.com/freegamestore-online/pixeljump/commit/bc467dd652ffde1355251795b2faae3b61815f62",
+        "commit": {
+          "message": "Slow down blue dot: base speed 155->90, max speed 340->210, ramp 18->12 per 10 carrots",
+          "author": {
+            "date": "2026-07-05T03:19:33Z"
+          }
+        }
+      },
+      {
+        "sha": "a0b9dfa9a1cc8ce604dc281718a4c6d18a5ec803",
+        "html_url": "https://github.com/freegamestore-online/pixeljump/commit/a0b9dfa9a1cc8ce604dc281718a4c6d18a5ec803",
+        "commit": {
+          "message": "RED ESCAPE — full 2D dodge game: red player vs blue chaser, carrots, power-ups, particles, combo, achievements, audio, touch joystick",
+          "author": {
+            "date": "2026-07-05T03:15:52Z"
+          }
+        }
+      },
+      {
+        "sha": "809c0083e533ca82a2e3bbcebd7238f3a0737214",
+        "html_url": "https://github.com/freegamestore-online/pixeljump/commit/809c0083e533ca82a2e3bbcebd7238f3a0737214",
+        "commit": {
+          "message": "Rebuild as Lazer Ball — red-headed ball enemy chases player and shoots lasers, 2D canvas dodge game",
+          "author": {
+            "date": "2026-07-05T02:52:19Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/bouncingball": {
+    "meta": {
+      "created_at": "2026-07-05T02:26:25Z",
+      "pushed_at": "2026-07-05T03:13:22Z"
+    },
+    "commits": [
+      {
+        "sha": "9cf18baf47c9bfb1a233b572889fb1c622da949f",
+        "html_url": "https://github.com/freegamestore-online/bouncingball/commit/9cf18baf47c9bfb1a233b572889fb1c622da949f",
+        "commit": {
+          "message": "Rebuild as full brick breaker: 5 stone types (1–5 hits), paddle, ball, particles, arrow key + mouse control",
+          "author": {
+            "date": "2026-07-05T03:13:22Z"
+          }
+        }
+      },
+      {
+        "sha": "83dc7f20977306dd4d21abbb6ca719ca88edc594",
+        "html_url": "https://github.com/freegamestore-online/bouncingball/commit/83dc7f20977306dd4d21abbb6ca719ca88edc594",
+        "commit": {
+          "message": "feat: build the actual bouncing ball game\n\nReplaces the empty template placeholder (which was what shipped) with a\nreal paddle-bounce arcade game: gravity-driven ball, mouse/touch/arrow\npaddle control, collectible orbs, ball speed-up on each hit, score + best\npersistence, synthesized SFX, and menu/playing/dead phases.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-05T02:45:05Z"
+          }
+        }
+      },
+      {
+        "sha": "e812ad0290092d00e8cc79440c6e8010e6716619",
+        "html_url": "https://github.com/freegamestore-online/bouncingball/commit/e812ad0290092d00e8cc79440c6e8010e6716619",
+        "commit": {
+          "message": "Set game name to \"bouncing ball\"",
+          "author": {
+            "date": "2026-07-05T02:26:35Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/ocean-save": {
+    "meta": {
+      "created_at": "2026-07-05T02:12:34Z",
+      "pushed_at": "2026-07-05T02:16:42Z"
+    },
+    "commits": [
+      {
+        "sha": "e95079ce78c924cfc42ecfc7e5db35b8e39307fb",
+        "html_url": "https://github.com/freegamestore-online/ocean-save/commit/e95079ce78c924cfc42ecfc7e5db35b8e39307fb",
+        "commit": {
+          "message": "Build Ocean Rescue game - canvas action game with boat, survivors, sharks, debris, waves and rescue dock",
+          "author": {
+            "date": "2026-07-05T02:16:42Z"
+          }
+        }
+      },
+      {
+        "sha": "409b0a9c54d228fee58201c9b6123100f85d0533",
+        "html_url": "https://github.com/freegamestore-online/ocean-save/commit/409b0a9c54d228fee58201c9b6123100f85d0533",
+        "commit": {
+          "message": "Set game name to \"Ocean Save\"",
+          "author": {
+            "date": "2026-07-05T02:12:44Z"
+          }
+        }
+      },
+      {
+        "sha": "60584833e108ffbd2c2c1f912e550e1daed5c030",
+        "html_url": "https://github.com/freegamestore-online/ocean-save/commit/60584833e108ffbd2c2c1f912e550e1daed5c030",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-05T02:12:37Z"
           }
         }
       }
