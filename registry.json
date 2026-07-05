@@ -1487,6 +1487,21 @@
       "developer": "SBDing",
       "creatorGithub": "SBDing",
       "firstPublished": "2026-07-05T02:26:24.829Z"
+    },
+    {
+      "id": "mcp-snake-test",
+      "name": "Snake",
+      "category": "arcade",
+      "icon": "&#128013;",
+      "iconBg": "#f0fdf4",
+      "description": "Classic Snake — eat food, grow longer, don't hit the walls or yourself!",
+      "appUrl": "https://mcp-snake-test.freegamestore.online",
+      "repo": "freegamestore-online/mcp-snake-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "buildlessonline-spec",
+      "creatorGithub": "buildlessonline-spec",
+      "firstPublished": "2026-07-05T02:27:01.840Z"
     }
   ]
 }
