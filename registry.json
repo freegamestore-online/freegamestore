@@ -1503,6 +1503,21 @@
       "developer": "Crystal12341",
       "creatorGithub": "Crystal12341",
       "firstPublished": "2026-07-05T02:41:18.176Z"
+    },
+    {
+      "id": "flappybird",
+      "name": "FlappyBird",
+      "category": "arcade",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "FlappyBird",
+      "appUrl": "https://flappybird.freegamestore.online",
+      "repo": "freegamestore-online/flappybird",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Crystal12341",
+      "creatorGithub": "Crystal12341",
+      "firstPublished": "2026-07-05T04:14:05.357Z"
     }
   ]
 }
