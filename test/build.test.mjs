@@ -19,7 +19,15 @@ const BUILD_JS = join(REPO_ROOT, "build.js");
 const REAL_REGISTRY = join(REPO_ROOT, "registry.json");
 
 const XSS_PAYLOAD = "<script>alert(1)</script>";
-const FIXTURE_ID = "xss-fixture";
+// Must NOT end in -test/-fixture: build.js excludes fixtures from the public
+// store BEFORE emitting a detail page, which would silently disable this XSS
+// regression check. Keep it a "real" game id so escaping is actually exercised.
+const FIXTURE_ID = "xss-probe";
+
+// Mirror build.js's public-store fixture exclusion (TEST_ID pattern + test:true)
+// so "every game is present" assertions don't trip over deliberately-excluded
+// fixtures like mcp-hybrid-test / mcp-snake-test.
+const isFixture = (g) => g.test === true || /(?:^|-)(?:test|fixture)$/i.test(g.id || "");
 
 function runBuild() {
   const tmp = mkdtempSync(join(tmpdir(), "fgs-build-test-"));
@@ -34,9 +42,9 @@ function runBuild() {
     icon: "&#9888;",
     iconBg: "#fee2e2",
     description: XSS_PAYLOAD,
-    appUrl: "https://xss-fixture.freegamestore.online",
-    repo: "freegamestore-online/xss-fixture",
-    cfProject: "xss-fixture",
+    appUrl: `https://${FIXTURE_ID}.freegamestore.online`,
+    repo: `freegamestore-online/${FIXTURE_ID}`,
+    cfProject: FIXTURE_ID,
     type: "standalone",
     developer: "FreeGameStore",
   });
@@ -56,6 +64,7 @@ test("build.js writes index.html containing every game id", () => {
   try {
     const indexHtml = readFileSync(join(tmpDist, "index.html"), "utf8");
     for (const g of registry.games) {
+      if (isFixture(g)) continue; // fixtures are intentionally excluded from the store
       assert.ok(
         indexHtml.includes(`data-id="${g.id}"`),
         `index.html is missing game id "${g.id}"`,
@@ -342,6 +351,7 @@ test("cards have no inline style attribute; iconBg lives in card-styles.css", ()
     );
     const css = readFileSync(join(tmpDist, "card-styles.css"), "utf8");
     for (const g of registry.games) {
+      if (isFixture(g)) continue; // fixtures are intentionally excluded from the store
       assert.ok(
         css.includes(`.app-card[data-id="${g.id}"] .app-icon`),
         `card-styles.css missing rule for "${g.id}"`,
