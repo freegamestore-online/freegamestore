@@ -1518,22 +1518,6 @@
       "developer": "Crystal12341",
       "creatorGithub": "Crystal12341",
       "firstPublished": "2026-07-05T04:14:05.357Z"
-    },
-    {
-      "id": "three-test",
-      "name": "Three Test",
-      "category": "arcade",
-      "icon": "🎮",
-      "iconBg": "#ecfdf5",
-      "description": "engine test — three.js",
-      "appUrl": "https://three-test.freegamestore.online",
-      "repo": "freegamestore-online/three-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "buildlessonline-spec",
-      "creatorGithub": "buildlessonline-spec",
-      "engine": "3d",
-      "firstPublished": "2026-07-05T23:38:52.482Z"
     }
   ]
 }
