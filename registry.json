@@ -1520,22 +1520,6 @@
       "firstPublished": "2026-07-05T04:14:05.357Z"
     },
     {
-      "id": "kaplay-test",
-      "name": "Kaplay Test",
-      "category": "arcade",
-      "icon": "🎮",
-      "iconBg": "#ecfdf5",
-      "description": "engine test — kaplay",
-      "appUrl": "https://kaplay-test.freegamestore.online",
-      "repo": "freegamestore-online/kaplay-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "buildlessonline-spec",
-      "creatorGithub": "buildlessonline-spec",
-      "engine": "kaplay",
-      "firstPublished": "2026-07-05T23:38:12.673Z"
-    },
-    {
       "id": "phaser-test",
       "name": "Phaser Test",
       "category": "arcade",
