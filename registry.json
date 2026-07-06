@@ -1520,22 +1520,6 @@
       "firstPublished": "2026-07-05T04:14:05.357Z"
     },
     {
-      "id": "phaser-test",
-      "name": "Phaser Test",
-      "category": "arcade",
-      "icon": "🎮",
-      "iconBg": "#ecfdf5",
-      "description": "engine test — phaser",
-      "appUrl": "https://phaser-test.freegamestore.online",
-      "repo": "freegamestore-online/phaser-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "buildlessonline-spec",
-      "creatorGithub": "buildlessonline-spec",
-      "engine": "phaser",
-      "firstPublished": "2026-07-05T23:38:39.214Z"
-    },
-    {
       "id": "three-test",
       "name": "Three Test",
       "category": "arcade",
