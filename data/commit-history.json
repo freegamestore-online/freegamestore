@@ -914,9 +914,19 @@
   "freegamestore-online/war": {
     "meta": {
       "created_at": "2026-05-19T00:05:08Z",
-      "pushed_at": "2026-06-04T06:21:34Z"
+      "pushed_at": "2026-07-06T23:43:26Z"
     },
     "commits": [
+      {
+        "sha": "0e8411d0c6b07a8f6401d8b7a12a14e61effabf1",
+        "html_url": "https://github.com/freegamestore-online/war/commit/0e8411d0c6b07a8f6401d8b7a12a14e61effabf1",
+        "commit": {
+          "message": "Add game sounds via useGameSounds AudioBridge\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-06T20:40:17Z"
+          }
+        }
+      },
       {
         "sha": "f31c4172a0abcb5f1690e636c37749ea5196c85e",
         "html_url": "https://github.com/freegamestore-online/war/commit/f31c4172a0abcb5f1690e636c37749ea5196c85e",
@@ -934,16 +944,6 @@
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-06-01T23:21:01Z"
-          }
-        }
-      },
-      {
-        "sha": "bb86eea564141d61ef32ab060307ebc32f0eeb04",
-        "html_url": "https://github.com/freegamestore-online/war/commit/bb86eea564141d61ef32ab060307ebc32f0eeb04",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:19:28Z"
           }
         }
       }
@@ -990,9 +990,19 @@
   "freegamestore-online/pixelcode": {
     "meta": {
       "created_at": "2026-05-27T14:50:59Z",
-      "pushed_at": "2026-06-01T23:19:52Z"
+      "pushed_at": "2026-07-06T22:54:38Z"
     },
     "commits": [
+      {
+        "sha": "e76e583c1257181a499dd6603c396e995b2b2d09",
+        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/e76e583c1257181a499dd6603c396e995b2b2d09",
+        "commit": {
+          "message": "Add interpreter unit tests\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-06T20:40:17Z"
+          }
+        }
+      },
       {
         "sha": "7568f6551141f64b44a97c8d0551bf3486cd6a03",
         "html_url": "https://github.com/freegamestore-online/pixelcode/commit/7568f6551141f64b44a97c8d0551bf3486cd6a03",
@@ -1012,25 +1022,25 @@
             "date": "2026-05-28T02:33:40Z"
           }
         }
-      },
-      {
-        "sha": "4f7cb4b7669feb5c112f1e334a7ce627ef2378f5",
-        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/4f7cb4b7669feb5c112f1e334a7ce627ef2378f5",
-        "commit": {
-          "message": "fix: add PWA setup (vite-plugin-pwa, manifest, icons, meta tags)\n\nRequired for FGS compliance and deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T23:45:50Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-06-04T06:10:41Z"
+      "pushed_at": "2026-07-06T23:21:42Z"
     },
     "commits": [
+      {
+        "sha": "2a46ea4ff306cacc7fc13d9d49c7fb4a61b30ade",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/2a46ea4ff306cacc7fc13d9d49c7fb4a61b30ade",
+        "commit": {
+          "message": "Ignore .gstack/ working directory\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-06T20:40:17Z"
+          }
+        }
+      },
       {
         "sha": "bfadb144abb6351b9a0ec460aeed8105d0e63902",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/bfadb144abb6351b9a0ec460aeed8105d0e63902",
@@ -1048,16 +1058,6 @@
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-06-01T23:20:17Z"
-          }
-        }
-      },
-      {
-        "sha": "2a454b8fad9336070f3bebbea9c06ac78504d44e",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/2a454b8fad9336070f3bebbea9c06ac78504d44e",
-        "commit": {
-          "message": "fix: single topbar + reliable card selection\n\n- Remove the duplicate in-game stats bar; fold Moves/Time into the\n  platform GameTopbar stats and move Undo into its actions slot, matching\n  the single-topbar convention used by every other game.\n- Fix card selection: tapping a new card after selecting one now\n  re-targets the selection instead of clearing it (tryMove reports\n  success; illegal moves re-select the tapped card). Extracted a pure\n  computeMove() and moved side effects out of the setState updater.\n- Stronger selection highlight (accent ring + tint + bigger lift).\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:11:03Z"
           }
         }
       }
@@ -1218,9 +1218,19 @@
   "freegamestore-online/reversi": {
     "meta": {
       "created_at": "2026-05-18T23:16:14Z",
-      "pushed_at": "2026-06-04T06:20:39Z"
+      "pushed_at": "2026-07-06T22:54:51Z"
     },
     "commits": [
+      {
+        "sha": "b8965eae0124c28405c67a224d4b5374ddaacd2c",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/b8965eae0124c28405c67a224d4b5374ddaacd2c",
+        "commit": {
+          "message": "Add game sounds via useGameSounds AudioBridge\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-06T20:40:17Z"
+          }
+        }
+      },
       {
         "sha": "6f2dd165cf89ccb97acf5f8890a7c3639bbe598e",
         "html_url": "https://github.com/freegamestore-online/reversi/commit/6f2dd165cf89ccb97acf5f8890a7c3639bbe598e",
@@ -1238,16 +1248,6 @@
           "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-27T12:18:29Z"
-          }
-        }
-      },
-      {
-        "sha": "a92c176cdc5d8816b8704713e3caacd70d4382e3",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/a92c176cdc5d8816b8704713e3caacd70d4382e3",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:00Z"
           }
         }
       }
