@@ -1534,6 +1534,22 @@
       "creatorGithub": "imhappyamber-design",
       "engine": "kaplay",
       "firstPublished": "2026-07-11T04:25:17.948Z"
+    },
+    {
+      "id": "snake-io",
+      "name": "snake.io",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "snake.io",
+      "appUrl": "https://snake-io.freegamestore.online",
+      "repo": "freegamestore-online/snake-io",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "PATRICIA-AU",
+      "creatorGithub": "PATRICIA-AU",
+      "engine": "kaplay",
+      "firstPublished": "2026-07-11T04:47:42.967Z"
     }
   ]
 }
