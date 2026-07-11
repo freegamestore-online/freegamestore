@@ -1677,6 +1677,21 @@
       "developer": "serge-ivo",
       "creatorGithub": "serge-ivo",
       "firstPublished": "2026-07-11T16:45:19.712Z"
+    },
+    {
+      "id": "royalheist",
+      "name": "Royal Heist",
+      "category": "cards",
+      "icon": "&#128176;",
+      "iconBg": "#1e3a8a",
+      "description": "Push-your-luck card game — draw cards to build a heist score, but two guards bust your round. First to 100 wins!",
+      "appUrl": "https://royalheist.freegamestore.online",
+      "repo": "freegamestore-online/royalheist",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "firstPublished": "2026-07-11T16:46:29.554Z"
     }
   ]
 }
