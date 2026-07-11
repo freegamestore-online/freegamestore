@@ -91,7 +91,7 @@ The MCP supports both "I write the code" and "the platform writes the code":
 | `create_game` | `(game_id, name, category, description?, template?)` | Provision + scaffold + deploy a new game on any engine. |
 | `update_files` | `(game_id, files[], message?)` | Overwrite files in a game you own → auto-redeploys. |
 | `read_file` / `list_files` | `(game_id, path?)` | Read / list a game's repo. |
-| `agent_build` | `(prompt, game_id?, api_key?, provider?, model?, session_id?)` | Hand the build to the VibeCode agent (`game_id` = work on an existing game). |
+| `agent_build` | `(prompt, game_id?, template?, api_key?, provider?, model?, session_id?)` | Hand the build to the VibeCode agent (`game_id` = work on an existing game; `template` = engine a new game seeds from). |
 | `agent_status` | `(session_id)` | Poll an agent build. |
 | `list_games` | `()` | Your published games. |
 | `game_info` / `deploy_status` | `(game_id)` | Inspect a game. |
@@ -107,6 +107,7 @@ update_files(game_id="memory-match",
 
 # Mode 2 — you prompt, the VibeCode agent writes + deploys it
 agent_build(prompt="A neon snake game, deploy as neon-snake")   # uses your vault key
+agent_build(prompt="A 3D marble maze, deploy as marble-maze", template="babylon")  # pick the engine
 agent_status(session_id="…")            # poll until deployed
 agent_build(prompt="Add a best-time display", game_id="neon-snake")  # iterate on an existing game
 ```
