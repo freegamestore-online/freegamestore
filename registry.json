@@ -1692,22 +1692,6 @@
       "developer": "serge-ivo",
       "creatorGithub": "serge-ivo",
       "firstPublished": "2026-07-11T16:46:29.554Z"
-    },
-    {
-      "id": "hop-dash",
-      "name": "Hop Dash",
-      "category": "arcade",
-      "icon": "&#128062;",
-      "iconBg": "#eef2ff",
-      "description": "Tap to jump over scrolling obstacles — speed ramps up, how far can you go?",
-      "appUrl": "https://hop-dash.freegamestore.online",
-      "repo": "freegamestore-online/hop-dash",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "kaplay",
-      "firstPublished": "2026-07-11T17:36:29.517Z"
     }
   ]
 }
