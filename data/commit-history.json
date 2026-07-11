@@ -1636,9 +1636,19 @@
   "freegamestore-online/maze-racer": {
     "meta": {
       "created_at": "2026-06-05T11:56:14Z",
-      "pushed_at": "2026-06-06T00:27:57Z"
+      "pushed_at": "2026-07-11T13:32:37Z"
     },
     "commits": [
+      {
+        "sha": "c235178c4cc3685fab43ae7e1f2124bcd8d0e28e",
+        "html_url": "https://github.com/freegamestore-online/maze-racer/commit/c235178c4cc3685fab43ae7e1f2124bcd8d0e28e",
+        "commit": {
+          "message": "feat: wire useBestTimes into App — per-size best in localStorage, mm:ss.t live timer, new-record celebration on win screen; fix viewport user-scalable=no",
+          "author": {
+            "date": "2026-07-11T13:32:37Z"
+          }
+        }
+      },
       {
         "sha": "86ba56a209c58d0f22241c200e550f7daf5cd1f3",
         "html_url": "https://github.com/freegamestore-online/maze-racer/commit/86ba56a209c58d0f22241c200e550f7daf5cd1f3",
@@ -1656,16 +1666,6 @@
           "message": "feat: AI always explores blind — smartness controls intelligence\n\nAll difficulties now use blind exploration (no pre-solving). The AI\ndoesn't know the maze layout — it discovers it step by step, just\nlike the player. Smartness controls how often it picks the best\nneighbor vs random:\n\n- Easy (20%): drunk random walk, gets very lost\n- Medium (50%): coin-flip between smart and random\n- Hard (80%): usually picks the right direction\n- Expert (95%): almost always optimal, but still backtracks at dead ends\n\nNo more cheating. The AI makes visible mistakes on every difficulty.",
           "author": {
             "date": "2026-06-06T00:21:30Z"
-          }
-        }
-      },
-      {
-        "sha": "401faa3f8ecbf1058a26de07512de1119630502a",
-        "html_url": "https://github.com/freegamestore-online/maze-racer/commit/401faa3f8ecbf1058a26de07512de1119630502a",
-        "commit": {
-          "message": "feat: timer, animated mouth, pulsing exit, d-pad, best time, polish\n\n- Live timer (elapsed seconds, formatted mm:ss for long runs)\n- Best time tracking across levels\n- Animated pac-man mouth (oscillating open/close)\n- Eye highlight dot for depth\n- Pulsing red exit marker with star\n- Rounded wall edges for polish\n- Mobile d-pad (6 directional buttons, pointer events)\n- Cleaner scoreboard with color-coded labels\n- Consistent timer display on win/loss screens",
-          "author": {
-            "date": "2026-06-05T14:01:54Z"
           }
         }
       }
@@ -3030,16 +3030,16 @@
   "freegamestore-online/cat-clicker": {
     "meta": {
       "created_at": "2026-07-11T04:25:18Z",
-      "pushed_at": "2026-07-11T06:38:43Z"
+      "pushed_at": "2026-07-11T10:13:19Z"
     },
     "commits": [
       {
-        "sha": "59cc9a064240027178ad862def4c8f3860c034d2",
-        "html_url": "https://github.com/freegamestore-online/cat-clicker/commit/59cc9a064240027178ad862def4c8f3860c034d2",
+        "sha": "b2155127933593cf2462cef86ca789a09962a69b",
+        "html_url": "https://github.com/freegamestore-online/cat-clicker/commit/b2155127933593cf2462cef86ca789a09962a69b",
         "commit": {
-          "message": "Cat Clicker: cream cat + orange king cat, click to earn coins, upgrade button (+1/click, cost doubles each time)",
+          "message": "Restore the full Cat Clicker + the creator's doubling upgrade curve\n\nAn agent turn built from a stale session file map (it couldn't see the\nrepo's current version) and push_update overwrote the full game with a\nblank-rendering rebuild — the session-vs-repo drift gap. Restored, and\nmerged in the creator's request: upgrades start at 1 coin and double\neach time (1/2/4/8/16), first Archery level = +2 per click.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-07-11T06:38:43Z"
+            "date": "2026-07-11T10:13:17Z"
           }
         }
       },
