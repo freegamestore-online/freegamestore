@@ -1632,22 +1632,6 @@
       "firstPublished": "2026-07-11T16:27:38.174Z"
     },
     {
-      "id": "tile-flip-duel",
-      "name": "Tile Flip Duel",
-      "category": "puzzle",
-      "icon": "🎮",
-      "iconBg": "#ecfdf5",
-      "description": "Memory tile matching duel on a grid",
-      "appUrl": "https://tile-flip-duel.freegamestore.online",
-      "repo": "freegamestore-online/tile-flip-duel",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "grid",
-      "firstPublished": "2026-07-11T16:27:51.926Z"
-    },
-    {
       "id": "high-card-heist",
       "name": "High Card Heist",
       "category": "card",
