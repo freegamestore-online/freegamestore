@@ -1646,6 +1646,22 @@
       "creatorGithub": "serge-ivo",
       "engine": "grid",
       "firstPublished": "2026-07-11T16:27:51.926Z"
+    },
+    {
+      "id": "high-card-heist",
+      "name": "High Card Heist",
+      "category": "card",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "Push-your-luck card battler",
+      "appUrl": "https://high-card-heist.freegamestore.online",
+      "repo": "freegamestore-online/high-card-heist",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "cards",
+      "firstPublished": "2026-07-11T16:28:10.924Z"
     }
   ]
 }
