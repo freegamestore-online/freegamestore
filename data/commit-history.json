@@ -2224,9 +2224,19 @@
   "freegamestore-online/nail-studio": {
     "meta": {
       "created_at": "2026-07-03T05:32:15Z",
-      "pushed_at": "2026-07-03T05:54:37Z"
+      "pushed_at": "2026-07-11T16:41:18Z"
     },
     "commits": [
+      {
+        "sha": "e09bda5710e34581d6b47fc77ff571ebf2cbc863",
+        "html_url": "https://github.com/freegamestore-online/nail-studio/commit/e09bda5710e34581d6b47fc77ff571ebf2cbc863",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:18Z"
+          }
+        }
+      },
       {
         "sha": "73438d1b0cc130ced3fd0df587e9c344238cf0f5",
         "html_url": "https://github.com/freegamestore-online/nail-studio/commit/73438d1b0cc130ced3fd0df587e9c344238cf0f5",
@@ -2244,16 +2254,6 @@
           "message": "Build Nail Studio — FreeGameStore AI agent",
           "author": {
             "date": "2026-07-03T05:32:34Z"
-          }
-        }
-      },
-      {
-        "sha": "d5fd52e3257da8b63be36ee240b827507e6cd379",
-        "html_url": "https://github.com/freegamestore-online/nail-studio/commit/d5fd52e3257da8b63be36ee240b827507e6cd379",
-        "commit": {
-          "message": "Set game name to \"Nail Studio\"",
-          "author": {
-            "date": "2026-07-03T05:32:26Z"
           }
         }
       }
@@ -2300,9 +2300,19 @@
   "freegamestore-online/apple-picking": {
     "meta": {
       "created_at": "2026-07-03T13:38:29Z",
-      "pushed_at": "2026-07-03T13:38:46Z"
+      "pushed_at": "2026-07-11T16:41:23Z"
     },
     "commits": [
+      {
+        "sha": "a8a7f4773013cfb569c7771adb7fbc9fc230b615",
+        "html_url": "https://github.com/freegamestore-online/apple-picking/commit/a8a7f4773013cfb569c7771adb7fbc9fc230b615",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:23Z"
+          }
+        }
+      },
       {
         "sha": "32f373bd2be7215ad2a39fc7d828eca8e2e0c080",
         "html_url": "https://github.com/freegamestore-online/apple-picking/commit/32f373bd2be7215ad2a39fc7d828eca8e2e0c080",
@@ -2320,16 +2330,6 @@
           "message": "Set game name to \"Apple Picking\"",
           "author": {
             "date": "2026-07-03T13:38:40Z"
-          }
-        }
-      },
-      {
-        "sha": "40e355d36152403a17ccf132ff9a5c5f728c4e99",
-        "html_url": "https://github.com/freegamestore-online/apple-picking/commit/40e355d36152403a17ccf132ff9a5c5f728c4e99",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-07-03T13:38:33Z"
           }
         }
       }
@@ -2632,9 +2632,19 @@
   "freegamestore-online/climberadventure": {
     "meta": {
       "created_at": "2026-07-05T01:52:48Z",
-      "pushed_at": "2026-07-11T07:51:51Z"
+      "pushed_at": "2026-07-11T16:41:52Z"
     },
     "commits": [
+      {
+        "sha": "2ac152f043b579dfd9fb8039c24615b5cc56c94a",
+        "html_url": "https://github.com/freegamestore-online/climberadventure/commit/2ac152f043b579dfd9fb8039c24615b5cc56c94a",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:52Z"
+          }
+        }
+      },
       {
         "sha": "a18d65d2dafa04477a1f06de8bdf9b95ca716801",
         "html_url": "https://github.com/freegamestore-online/climberadventure/commit/a18d65d2dafa04477a1f06de8bdf9b95ca716801",
@@ -2654,25 +2664,25 @@
             "date": "2026-07-11T07:49:46Z"
           }
         }
-      },
-      {
-        "sha": "596aefea57ba517ebdeb5c92a3b12741768c8868",
-        "html_url": "https://github.com/freegamestore-online/climberadventure/commit/596aefea57ba517ebdeb5c92a3b12741768c8868",
-        "commit": {
-          "message": "Fix missing useLocalStorage hook in CustomizeScreen.tsx by directly using localStorage for accessory data.",
-          "author": {
-            "date": "2026-07-11T07:48:13Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/angrry": {
     "meta": {
       "created_at": "2026-07-05T00:31:57Z",
-      "pushed_at": "2026-07-05T12:29:28Z"
+      "pushed_at": "2026-07-11T16:41:47Z"
     },
     "commits": [
+      {
+        "sha": "ba8bedf976133c1c5fd9c4c239ce3b9f0f61ef04",
+        "html_url": "https://github.com/freegamestore-online/angrry/commit/ba8bedf976133c1c5fd9c4c239ce3b9f0f61ef04",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:47Z"
+          }
+        }
+      },
       {
         "sha": "a7d1b7684d9841672876bfb7d95cd05c817e2fed",
         "html_url": "https://github.com/freegamestore-online/angrry/commit/a7d1b7684d9841672876bfb7d95cd05c817e2fed",
@@ -2692,25 +2702,25 @@
             "date": "2026-07-05T03:31:26Z"
           }
         }
-      },
-      {
-        "sha": "1173639fe59ea74e0745a0d5d45eb4d167bde441",
-        "html_url": "https://github.com/freegamestore-online/angrry/commit/1173639fe59ea74e0745a0d5d45eb4d167bde441",
-        "commit": {
-          "message": "Set game name to \"Angry \"",
-          "author": {
-            "date": "2026-07-05T00:32:10Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frofrogjumping": {
     "meta": {
       "created_at": "2026-07-04T04:39:22Z",
-      "pushed_at": "2026-07-04T09:06:04Z"
+      "pushed_at": "2026-07-11T16:41:42Z"
     },
     "commits": [
+      {
+        "sha": "d31e4b85e7b969310759984bd3cf93a5457c9b6d",
+        "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/d31e4b85e7b969310759984bd3cf93a5457c9b6d",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:41Z"
+          }
+        }
+      },
       {
         "sha": "a859e586fb0706024e2f2136ea317d5981b2dd07",
         "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/a859e586fb0706024e2f2136ea317d5981b2dd07",
@@ -2730,25 +2740,25 @@
             "date": "2026-07-04T05:04:38Z"
           }
         }
-      },
-      {
-        "sha": "63c7fc57178d10348d96538696b2fcd15faa893e",
-        "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/63c7fc57178d10348d96538696b2fcd15faa893e",
-        "commit": {
-          "message": "Build frog marsh jumping game with canvas, islands, aim system, particles, and win/lose screens",
-          "author": {
-            "date": "2026-07-04T04:54:11Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bladeblast": {
     "meta": {
       "created_at": "2026-07-04T03:09:10Z",
-      "pushed_at": "2026-07-11T06:40:14Z"
+      "pushed_at": "2026-07-11T16:41:36Z"
     },
     "commits": [
+      {
+        "sha": "63d2f88c54377e6a3f68ca279fcf4af6dd92488d",
+        "html_url": "https://github.com/freegamestore-online/bladeblast/commit/63d2f88c54377e6a3f68ca279fcf4af6dd92488d",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:36Z"
+          }
+        }
+      },
       {
         "sha": "900df6e4857790f5dd46adb58be0ce32e3264f22",
         "html_url": "https://github.com/freegamestore-online/bladeblast/commit/900df6e4857790f5dd46adb58be0ce32e3264f22",
@@ -2766,16 +2776,6 @@
           "message": "Full redesign: animals on land, bombs fall from sky, stars collectible, star bank + rarity upgrade system",
           "author": {
             "date": "2026-07-04T03:42:49Z"
-          }
-        }
-      },
-      {
-        "sha": "8aaa9beb0bae8bf6414efa0edfd1aa068392f26d",
-        "html_url": "https://github.com/freegamestore-online/bladeblast/commit/8aaa9beb0bae8bf6414efa0edfd1aa068392f26d",
-        "commit": {
-          "message": "Rebuild as AVOIDit — dodge bombs, collect stars, wave-based survival game",
-          "author": {
-            "date": "2026-07-04T03:33:19Z"
           }
         }
       }
@@ -2802,9 +2802,19 @@
   "freegamestore-online/ocean-save2": {
     "meta": {
       "created_at": "2026-07-05T02:23:26Z",
-      "pushed_at": "2026-07-05T02:26:36Z"
+      "pushed_at": "2026-07-11T16:42:00Z"
     },
     "commits": [
+      {
+        "sha": "67d8a0be4ed5987fd8a4ec0193685f0965f8c3c5",
+        "html_url": "https://github.com/freegamestore-online/ocean-save2/commit/67d8a0be4ed5987fd8a4ec0193685f0965f8c3c5",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:42:00Z"
+          }
+        }
+      },
       {
         "sha": "2fc0c72a1fd8da0bd2e8d7462f85cf45e9b89285",
         "html_url": "https://github.com/freegamestore-online/ocean-save2/commit/2fc0c72a1fd8da0bd2e8d7462f85cf45e9b89285",
@@ -2824,25 +2834,25 @@
             "date": "2026-07-05T02:23:37Z"
           }
         }
-      },
-      {
-        "sha": "5ac131e1ec777e89e33480189a67402f6ca45c01",
-        "html_url": "https://github.com/freegamestore-online/ocean-save2/commit/5ac131e1ec777e89e33480189a67402f6ca45c01",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-07-05T02:23:29Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pixeljump": {
     "meta": {
       "created_at": "2026-07-05T02:41:18Z",
-      "pushed_at": "2026-07-05T03:19:34Z"
+      "pushed_at": "2026-07-11T16:42:08Z"
     },
     "commits": [
+      {
+        "sha": "5b1a2ff200f31976cbd9bbc60caa12a9b5432000",
+        "html_url": "https://github.com/freegamestore-online/pixeljump/commit/5b1a2ff200f31976cbd9bbc60caa12a9b5432000",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:42:08Z"
+          }
+        }
+      },
       {
         "sha": "bc467dd652ffde1355251795b2faae3b61815f62",
         "html_url": "https://github.com/freegamestore-online/pixeljump/commit/bc467dd652ffde1355251795b2faae3b61815f62",
@@ -2862,25 +2872,25 @@
             "date": "2026-07-05T03:15:52Z"
           }
         }
-      },
-      {
-        "sha": "809c0083e533ca82a2e3bbcebd7238f3a0737214",
-        "html_url": "https://github.com/freegamestore-online/pixeljump/commit/809c0083e533ca82a2e3bbcebd7238f3a0737214",
-        "commit": {
-          "message": "Rebuild as Lazer Ball — red-headed ball enemy chases player and shoots lasers, 2D canvas dodge game",
-          "author": {
-            "date": "2026-07-05T02:52:19Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bouncingball": {
     "meta": {
       "created_at": "2026-07-05T02:26:25Z",
-      "pushed_at": "2026-07-05T03:13:22Z"
+      "pushed_at": "2026-07-11T16:42:03Z"
     },
     "commits": [
+      {
+        "sha": "8b895dc19efd8e918517c6471206b96d2f3c5bb7",
+        "html_url": "https://github.com/freegamestore-online/bouncingball/commit/8b895dc19efd8e918517c6471206b96d2f3c5bb7",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:42:03Z"
+          }
+        }
+      },
       {
         "sha": "9cf18baf47c9bfb1a233b572889fb1c622da949f",
         "html_url": "https://github.com/freegamestore-online/bouncingball/commit/9cf18baf47c9bfb1a233b572889fb1c622da949f",
@@ -2900,25 +2910,25 @@
             "date": "2026-07-05T02:45:05Z"
           }
         }
-      },
-      {
-        "sha": "e812ad0290092d00e8cc79440c6e8010e6716619",
-        "html_url": "https://github.com/freegamestore-online/bouncingball/commit/e812ad0290092d00e8cc79440c6e8010e6716619",
-        "commit": {
-          "message": "Set game name to \"bouncing ball\"",
-          "author": {
-            "date": "2026-07-05T02:26:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/ocean-save": {
     "meta": {
       "created_at": "2026-07-05T02:12:34Z",
-      "pushed_at": "2026-07-05T02:16:42Z"
+      "pushed_at": "2026-07-11T16:41:58Z"
     },
     "commits": [
+      {
+        "sha": "a9f561b38fe6e7f54fe7df2c59e868bdacd8f9b5",
+        "html_url": "https://github.com/freegamestore-online/ocean-save/commit/a9f561b38fe6e7f54fe7df2c59e868bdacd8f9b5",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:57Z"
+          }
+        }
+      },
       {
         "sha": "e95079ce78c924cfc42ecfc7e5db35b8e39307fb",
         "html_url": "https://github.com/freegamestore-online/ocean-save/commit/e95079ce78c924cfc42ecfc7e5db35b8e39307fb",
@@ -2938,25 +2948,35 @@
             "date": "2026-07-05T02:12:44Z"
           }
         }
-      },
-      {
-        "sha": "60584833e108ffbd2c2c1f912e550e1daed5c030",
-        "html_url": "https://github.com/freegamestore-online/ocean-save/commit/60584833e108ffbd2c2c1f912e550e1daed5c030",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-07-05T02:12:37Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappybird": {
     "meta": {
       "created_at": "2026-07-05T04:14:06Z",
-      "pushed_at": "2026-07-11T07:35:56Z"
+      "pushed_at": "2026-07-11T16:42:11Z"
     },
     "commits": [
+      {
+        "sha": "bb4300d5a412adb9ded5fe8ee0f786a581a2e0fa",
+        "html_url": "https://github.com/freegamestore-online/flappybird/commit/bb4300d5a412adb9ded5fe8ee0f786a581a2e0fa",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:42:11Z"
+          }
+        }
+      },
+      {
+        "sha": "023c8dace0beac91eecc3ac4e2f5d2227d16bb4d",
+        "html_url": "https://github.com/freegamestore-online/flappybird/commit/023c8dace0beac91eecc3ac4e2f5d2227d16bb4d",
+        "commit": {
+          "message": "Full visual upgrade: baby bird with eyes/wings, pastel sky, clouds, hills, flowers, tree-trunk pipes, particles, sparkles, screen shake, title screen, pause button, speed ramp",
+          "author": {
+            "date": "2026-07-11T11:05:22Z"
+          }
+        }
+      },
       {
         "sha": "4c9cade7184f5554ec50166679180fd3d431bdee",
         "html_url": "https://github.com/freegamestore-online/flappybird/commit/4c9cade7184f5554ec50166679180fd3d431bdee",
@@ -2964,26 +2984,6 @@
           "message": "Re-add useHighScore import in FlappyBirdGame.tsx to fix runtime error.",
           "author": {
             "date": "2026-07-11T07:35:56Z"
-          }
-        }
-      },
-      {
-        "sha": "e48e6fcd023fdaddec3ee7427777005919020512",
-        "html_url": "https://github.com/freegamestore-online/flappybird/commit/e48e6fcd023fdaddec3ee7427777005919020512",
-        "commit": {
-          "message": "Fix import paths in FlappyBirdGame.tsx to address build error.",
-          "author": {
-            "date": "2026-07-11T07:33:59Z"
-          }
-        }
-      },
-      {
-        "sha": "ddc0fa0f8b9f4201f70061b4dd498506cfd1e1ee",
-        "html_url": "https://github.com/freegamestore-online/flappybird/commit/ddc0fa0f8b9f4201f70061b4dd498506cfd1e1ee",
-        "commit": {
-          "message": "Fixed import path for useHighScore hook in FlappyBirdGame.tsx to resolve build issue.",
-          "author": {
-            "date": "2026-07-11T07:32:19Z"
           }
         }
       }
@@ -3030,9 +3030,19 @@
   "freegamestore-online/cat-clicker": {
     "meta": {
       "created_at": "2026-07-11T04:25:18Z",
-      "pushed_at": "2026-07-11T10:13:19Z"
+      "pushed_at": "2026-07-11T16:42:13Z"
     },
     "commits": [
+      {
+        "sha": "daacb0aebc662a8c1fc591654e7a56dbb5879dd0",
+        "html_url": "https://github.com/freegamestore-online/cat-clicker/commit/daacb0aebc662a8c1fc591654e7a56dbb5879dd0",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:42:13Z"
+          }
+        }
+      },
       {
         "sha": "b2155127933593cf2462cef86ca789a09962a69b",
         "html_url": "https://github.com/freegamestore-online/cat-clicker/commit/b2155127933593cf2462cef86ca789a09962a69b",
@@ -3050,16 +3060,6 @@
           "message": "Cat Clicker: the actual game (was still the template demo)\n\nKiwi Clicker's supply-chain loop, fully cat-themed per the creator's spec:\nclick the CREAM cat to harvest Purrs; purrs auto-pack into sacks; sacks\npass the security scanner and sell to the orange KING CAT for coins.\nThree 'Skiwitrees': Archery (+click power), Alchemy (+sack value),\nCarpentry (worker cats that purr on their own). Real narrative ending at\n100 delivered sacks (the King's Feast) instead of an endless grind.\nProgress saved in localStorage.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
           "author": {
             "date": "2026-07-11T06:33:57Z"
-          }
-        }
-      },
-      {
-        "sha": "86e31dfb2290dc40cb0f5c2f0e8a6a58f581266d",
-        "html_url": "https://github.com/freegamestore-online/cat-clicker/commit/86e31dfb2290dc40cb0f5c2f0e8a6a58f581266d",
-        "commit": {
-          "message": "Set game name to \"Cat Clicker\"",
-          "author": {
-            "date": "2026-07-11T04:25:32Z"
           }
         }
       }
@@ -3106,9 +3106,19 @@
   "freegamestore-online/the-cycle-of-life": {
     "meta": {
       "created_at": "2026-07-11T05:25:16Z",
-      "pushed_at": "2026-07-11T06:29:55Z"
+      "pushed_at": "2026-07-11T16:42:17Z"
     },
     "commits": [
+      {
+        "sha": "a8f319337fbd3a32463eed7e3969d559a2c6fcbb",
+        "html_url": "https://github.com/freegamestore-online/the-cycle-of-life/commit/a8f319337fbd3a32463eed7e3969d559a2c6fcbb",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:42:17Z"
+          }
+        }
+      },
       {
         "sha": "be80429ac12793dea509de2c90c64b4d02505541",
         "html_url": "https://github.com/freegamestore-online/the-cycle-of-life/commit/be80429ac12793dea509de2c90c64b4d02505541",
@@ -3128,25 +3138,25 @@
             "date": "2026-07-11T06:23:29Z"
           }
         }
-      },
-      {
-        "sha": "e206966d4666ba55aa308ebe025dd3ec4c3a1f81",
-        "html_url": "https://github.com/freegamestore-online/the-cycle-of-life/commit/e206966d4666ba55aa308ebe025dd3ec4c3a1f81",
-        "commit": {
-          "message": "Set game name to \"The Cycle Of Life\"",
-          "author": {
-            "date": "2026-07-11T05:25:29Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/monster-attack": {
     "meta": {
       "created_at": "2026-07-11T05:37:26Z",
-      "pushed_at": "2026-07-11T06:38:46Z"
+      "pushed_at": "2026-07-11T16:42:21Z"
     },
     "commits": [
+      {
+        "sha": "4e7dc49bfc6c1d2875ec756d4a85dfafb4a377d8",
+        "html_url": "https://github.com/freegamestore-online/monster-attack/commit/4e7dc49bfc6c1d2875ec756d4a85dfafb4a377d8",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:42:20Z"
+          }
+        }
+      },
       {
         "sha": "dc4fdb5868c758fba3590c26e6ddbe9647bd6844",
         "html_url": "https://github.com/freegamestore-online/monster-attack/commit/dc4fdb5868c758fba3590c26e6ddbe9647bd6844",
@@ -3166,14 +3176,232 @@
             "date": "2026-07-11T06:31:50Z"
           }
         }
+      }
+    ]
+  },
+  "freegamestore-online/orb-cascade": {
+    "meta": {
+      "created_at": "2026-07-11T16:22:46Z",
+      "pushed_at": "2026-07-11T17:05:59Z"
+    },
+    "commits": [
+      {
+        "sha": "61fdcbcace431178426283a26753e2d2358163c6",
+        "html_url": "https://github.com/freegamestore-online/orb-cascade/commit/61fdcbcace431178426283a26753e2d2358163c6",
+        "commit": {
+          "message": "brand: substitute APPNAME + FGS branding",
+          "author": {
+            "date": "2026-07-11T17:05:59Z"
+          }
+        }
       },
       {
-        "sha": "1923049366c6649a0c9f695e67b0b0f4d69e100e",
-        "html_url": "https://github.com/freegamestore-online/monster-attack/commit/1923049366c6649a0c9f695e67b0b0f4d69e100e",
+        "sha": "f95d9adda225c256270ad9e464320288a4374b5c",
+        "html_url": "https://github.com/freegamestore-online/orb-cascade/commit/f95d9adda225c256270ad9e464320288a4374b5c",
         "commit": {
-          "message": "Fix build: remove unused nextId import (TS6133 blocked the deploy)\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+          "message": "brand: substitute APPNAME + FGS branding",
           "author": {
-            "date": "2026-07-11T06:20:35Z"
+            "date": "2026-07-11T17:05:56Z"
+          }
+        }
+      },
+      {
+        "sha": "55d1de8a27296e692b6bfe919c9911e91ebdb757",
+        "html_url": "https://github.com/freegamestore-online/orb-cascade/commit/55d1de8a27296e692b6bfe919c9911e91ebdb757",
+        "commit": {
+          "message": "fix: rename unused 'color' param to '_color' in spawnBurst to resolve TS noUnusedParameters error",
+          "author": {
+            "date": "2026-07-11T17:01:44Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/glow-match": {
+    "meta": {
+      "created_at": "2026-07-11T16:28:56Z",
+      "pushed_at": "2026-07-11T17:00:30Z"
+    },
+    "commits": [
+      {
+        "sha": "7085dce0b042b215c232b963b763da1956c9d190",
+        "html_url": "https://github.com/freegamestore-online/glow-match/commit/7085dce0b042b215c232b963b763da1956c9d190",
+        "commit": {
+          "message": "feat: complete neon memory-match game — 4x4/6x6 board, flip animation, glow on match, moves/timer/best score, win screen with hard mode toggle",
+          "author": {
+            "date": "2026-07-11T17:00:30Z"
+          }
+        }
+      },
+      {
+        "sha": "49c2d13df87b7b1f865b34e260dc36bb59d3400c",
+        "html_url": "https://github.com/freegamestore-online/glow-match/commit/49c2d13df87b7b1f865b34e260dc36bb59d3400c",
+        "commit": {
+          "message": "Set game name to \"Glow Match\"",
+          "author": {
+            "date": "2026-07-11T16:29:42Z"
+          }
+        }
+      },
+      {
+        "sha": "77b18b91b8e99068d8b1869168d14d6ff89b7888",
+        "html_url": "https://github.com/freegamestore-online/glow-match/commit/77b18b91b8e99068d8b1869168d14d6ff89b7888",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-11T16:28:59Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/royal-heist": {
+    "meta": {
+      "created_at": "2026-07-11T16:29:11Z",
+      "pushed_at": "2026-07-11T17:02:12Z"
+    },
+    "commits": [
+      {
+        "sha": "c54a13b97e5d8e1a7f969ae17f6ef2b936894a47",
+        "html_url": "https://github.com/freegamestore-online/royal-heist/commit/c54a13b97e5d8e1a7f969ae17f6ef2b936894a47",
+        "commit": {
+          "message": "Build Royal Heist push-your-luck card game: draw/bust/bank mechanics, AI opponent, card flip animations, score panel, win screen, high score",
+          "author": {
+            "date": "2026-07-11T17:02:12Z"
+          }
+        }
+      },
+      {
+        "sha": "a7e02e7b5a6fa1fef965164ddc0d914085377f7a",
+        "html_url": "https://github.com/freegamestore-online/royal-heist/commit/a7e02e7b5a6fa1fef965164ddc0d914085377f7a",
+        "commit": {
+          "message": "Set game name to \"Royal Heist\"",
+          "author": {
+            "date": "2026-07-11T16:29:57Z"
+          }
+        }
+      },
+      {
+        "sha": "333d55924374f045b4d1ec0d746364e435035159",
+        "html_url": "https://github.com/freegamestore-online/royal-heist/commit/333d55924374f045b4d1ec0d746364e435035159",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-11T16:29:14Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/crystal-orbit": {
+    "meta": {
+      "created_at": "2026-07-11T16:23:09Z",
+      "pushed_at": "2026-07-11T17:06:03Z"
+    },
+    "commits": [
+      {
+        "sha": "955e44404079b3014fc9384a9b7cbba41397ed47",
+        "html_url": "https://github.com/freegamestore-online/crystal-orbit/commit/955e44404079b3014fc9384a9b7cbba41397ed47",
+        "commit": {
+          "message": "brand: substitute APPNAME + FGS branding",
+          "author": {
+            "date": "2026-07-11T17:06:03Z"
+          }
+        }
+      },
+      {
+        "sha": "5115c4f660b41823225e4740299e205d9f02fcd5",
+        "html_url": "https://github.com/freegamestore-online/crystal-orbit/commit/5115c4f660b41823225e4740299e205d9f02fcd5",
+        "commit": {
+          "message": "brand: substitute APPNAME + FGS branding",
+          "author": {
+            "date": "2026-07-11T17:06:01Z"
+          }
+        }
+      },
+      {
+        "sha": "29301f97f1e80bc7205711d933ebf44363187a9d",
+        "html_url": "https://github.com/freegamestore-online/crystal-orbit/commit/29301f97f1e80bc7205711d933ebf44363187a9d",
+        "commit": {
+          "message": "feat: complete 3D dodge-and-collect arena game with full gameplay, HUD, start/game-over screens",
+          "author": {
+            "date": "2026-07-11T16:57:49Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/orb-cascade-neon": {
+    "meta": {
+      "created_at": "2026-07-11T16:45:20Z",
+      "pushed_at": "2026-07-11T16:49:17Z"
+    },
+    "commits": [
+      {
+        "sha": "6e771c20ebcac2f55f9bab2be373e44a94365966",
+        "html_url": "https://github.com/freegamestore-online/orb-cascade-neon/commit/6e771c20ebcac2f55f9bab2be373e44a94365966",
+        "commit": {
+          "message": "Build complete Orb Cascade arcade game: neon basket, falling orbs, combo multiplier, particle bursts, start/game-over screens",
+          "author": {
+            "date": "2026-07-11T16:49:16Z"
+          }
+        }
+      },
+      {
+        "sha": "6ec694d3a3b1ad26d3675bd35af1a9e2ad05dc57",
+        "html_url": "https://github.com/freegamestore-online/orb-cascade-neon/commit/6ec694d3a3b1ad26d3675bd35af1a9e2ad05dc57",
+        "commit": {
+          "message": "Build Orb Cascade — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-07-11T16:45:36Z"
+          }
+        }
+      },
+      {
+        "sha": "28c3bfe621fd46b245b833153c9e3a2669a4c41c",
+        "html_url": "https://github.com/freegamestore-online/orb-cascade-neon/commit/28c3bfe621fd46b245b833153c9e3a2669a4c41c",
+        "commit": {
+          "message": "Set game name to \"Orb Cascade\"",
+          "author": {
+            "date": "2026-07-11T16:45:30Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/royalheist": {
+    "meta": {
+      "created_at": "2026-07-11T16:46:30Z",
+      "pushed_at": "2026-07-11T16:46:49Z"
+    },
+    "commits": [
+      {
+        "sha": "3514fcba2cb07d753c494b7b0229f32bc5068420",
+        "html_url": "https://github.com/freegamestore-online/royalheist/commit/3514fcba2cb07d753c494b7b0229f32bc5068420",
+        "commit": {
+          "message": "Build Royal Heist — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-07-11T16:46:48Z"
+          }
+        }
+      },
+      {
+        "sha": "499ed72cb342fc5f161a1f6003cd4d4197783a97",
+        "html_url": "https://github.com/freegamestore-online/royalheist/commit/499ed72cb342fc5f161a1f6003cd4d4197783a97",
+        "commit": {
+          "message": "Set game name to \"Royal Heist\"",
+          "author": {
+            "date": "2026-07-11T16:46:41Z"
+          }
+        }
+      },
+      {
+        "sha": "de69788d40c803f9a36a2f49474c824a09a23b90",
+        "html_url": "https://github.com/freegamestore-online/royalheist/commit/de69788d40c803f9a36a2f49474c824a09a23b90",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-11T16:46:33Z"
           }
         }
       }
