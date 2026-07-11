@@ -1614,6 +1614,22 @@
       "creatorGithub": "serge-ivo",
       "engine": "pixi",
       "firstPublished": "2026-07-11T16:26:29.716Z"
+    },
+    {
+      "id": "crystal-orbit",
+      "name": "Crystal Orbit",
+      "category": "action",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "Dodge and collect crystals in a 3D arena",
+      "appUrl": "https://crystal-orbit.freegamestore.online",
+      "repo": "freegamestore-online/crystal-orbit",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "babylon",
+      "firstPublished": "2026-07-11T16:27:38.174Z"
     }
   ]
 }
