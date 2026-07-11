@@ -1567,6 +1567,22 @@
       "engine": "kaplay",
       "firstPublished": "2026-07-11T05:25:15.846Z",
       "updatedAt": "2026-07-11T05:25:58.014Z"
+    },
+    {
+      "id": "monster-attack",
+      "name": "monster attack",
+      "category": "strategy",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "protect your pet",
+      "appUrl": "https://monster-attack.freegamestore.online",
+      "repo": "freegamestore-online/monster-attack",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "SBDing",
+      "creatorGithub": "SBDing",
+      "engine": "grid",
+      "firstPublished": "2026-07-11T05:37:25.739Z"
     }
   ]
 }
