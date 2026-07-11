@@ -31,7 +31,18 @@ git push origin main
 # → auto-deploys to my-game.freegamestore.online
 ```
 
-Templates: `template-game-canvas` (2D), `template-game-grid` (puzzle), `template-game-cards` (card/tile), `template-game-3d` (Babylon.js).
+Templates (8 engines, one repo each):
+
+| Template | Engine | Best for |
+|---|---|---|
+| `template-game-canvas` | Raw HTML5 Canvas 2D | Classic 2D, pixel art |
+| `template-game-grid` | React + CSS Grid | Turn-based puzzles (2048, chess, sudoku) |
+| `template-game-cards` | React DOM | Card / tile games |
+| `template-game-3d` | Three.js + react-three-fiber | 3D scenes |
+| `template-game-babylon` | Babylon.js v7 | Advanced 3D, physics-ready |
+| `template-game-phaser` | Phaser | Full-featured 2D (scenes, arcade physics) |
+| `template-game-kaplay` | KAPLAY | Quick, beginner-friendly 2D |
+| `template-game-pixi` | Pixi.js v8 | High-performance WebGL 2D, sprite-heavy |
 
 ---
 
@@ -72,30 +83,32 @@ claude mcp add freegamestore -- \
 
 The MCP supports both "I write the code" and "the platform writes the code":
 
-1. **Your AI writes the code, MCP ships it.** Use `create_game` to provision + scaffold (canvas/grid/cards/3d) + deploy, then `update_files` / `read_file` / `list_files` to iterate. You author every file; the MCP provisions and pushes (auto-redeploys in ~30-60s).
-2. **You prompt, the platform's VibeCode agent writes + deploys it.** Use `agent_build` with a natural-language prompt — the server-side agent writes the code and deploys it for you. FGS's agent is bring-your-own-key: pass an `api_key` for your provider (anthropic/openai/google/github). Poll with `agent_status`.
+1. **Your AI writes the code, MCP ships it.** Use `create_game` to provision + scaffold + deploy on any of the 8 engines (`kaplay`, `phaser`, `3d`, `pixi`, `babylon`, `canvas`, `grid`, `cards`), then `update_files` / `read_file` / `list_files` to iterate. You author every file; the MCP provisions and pushes (auto-redeploys in ~30-60s).
+2. **You prompt, the platform's VibeCode agent writes + deploys it.** Use `agent_build` with a natural-language prompt — the server-side agent writes the code and deploys it for you, with engine-correct guidance for whichever template the game uses. By default it runs on the AI key saved for your account (the platform's encrypted key vault); pass `api_key` only to override. To work on an **existing** game, pass `game_id` — it imports the repo into the session first. Poll with `agent_status`.
 
 | Tool | Signature | What it does |
 |---|---|---|
-| `create_game` | `(game_id, category, oneliner, template?, type?, description?)` | Provision + scaffold + deploy a new game. |
+| `create_game` | `(game_id, name, category, description?, template?)` | Provision + scaffold + deploy a new game on any engine. |
 | `update_files` | `(game_id, files[], message?)` | Overwrite files in a game you own → auto-redeploys. |
 | `read_file` / `list_files` | `(game_id, path?)` | Read / list a game's repo. |
-| `agent_build` | `(prompt, api_key, provider?, model?, session_id?)` | Hand the build to the VibeCode agent. |
+| `agent_build` | `(prompt, game_id?, api_key?, provider?, model?, session_id?)` | Hand the build to the VibeCode agent (`game_id` = work on an existing game). |
 | `agent_status` | `(session_id)` | Poll an agent build. |
 | `list_games` | `()` | Your published games. |
-| `game_info` / `deploy_status` / `game_logs` | `(game_id)` | Inspect a game. |
+| `game_info` / `deploy_status` | `(game_id)` | Inspect a game. |
+| `delete_game` / `discard_session` | `(game_id)` / `(session_id)` | Delete a live game / discard a draft. |
 | `platform_guide` / `sdk_reference` | `(feature?)` | This guide / the games SDK. |
 
 ```
 # Mode 1 — your AI writes it, MCP ships it
-create_game(game_id="memory-match", category="puzzle",
-            oneliner="Flip cards to find pairs", template="cards")
+create_game(game_id="memory-match", name="Memory Match", category="puzzle",
+            description="Flip cards to find pairs", template="cards")
 update_files(game_id="memory-match",
              files=[{path:"web/src/App.tsx", content:"…"}], message="Add timer")
 
 # Mode 2 — you prompt, the VibeCode agent writes + deploys it
-agent_build(prompt="A neon snake game, deploy as neon-snake", api_key="sk-…", provider="anthropic")
-agent_status(session_id="…")   # poll until deployed
+agent_build(prompt="A neon snake game, deploy as neon-snake")   # uses your vault key
+agent_status(session_id="…")            # poll until deployed
+agent_build(prompt="Add a best-time display", game_id="neon-snake")  # iterate on an existing game
 ```
 
 ---
@@ -112,7 +125,7 @@ Every game repo ships a minimal `CLAUDE.md`. Keep it slim — platform-wide rule
 - Subdomain: `<name>.freegamestore.online`
 - Dev: `pnpm install && pnpm dev`
 - Build: `pnpm build`
-- Deploy: `git push origin main` (auto-deploys via Cloudflare Pages)
+- Deploy: `git push origin main` (auto-deploys to R2 via GitHub Actions)
 
 Free, MIT-licensed, no tracking. For platform conventions, read
 https://freegamestore.online/skills.md
@@ -136,7 +149,7 @@ before writing or changing anything.
 ## How deployment works
 
 ```
-Push to main → Cloudflare Pages auto-build → live at <game>.freegamestore.online
+Push to main → GitHub Actions build → R2 → live at <game>.freegamestore.online
 ```
 
 No manual deploy commands. Ever.
@@ -148,7 +161,8 @@ No manual deploy commands. Ever.
 - TypeScript ^5.7, React ^19, Vite ^6, Tailwind CSS ^4.1, pnpm
 - Node >=22
 - Games SDK: `@freegamestore/games` (required for all games)
-- 3D games: Babylon.js 7
+- 2D engines: raw Canvas, Pixi.js 8, Phaser, KAPLAY
+- 3D engines: Three.js + react-three-fiber, or Babylon.js 7
 - Linting: Biome
 
 ---
