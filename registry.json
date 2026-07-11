@@ -1630,6 +1630,22 @@
       "creatorGithub": "serge-ivo",
       "engine": "babylon",
       "firstPublished": "2026-07-11T16:27:38.174Z"
+    },
+    {
+      "id": "glow-match",
+      "name": "Glow Match",
+      "category": "puzzle",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "Neon memory-match duel on a grid",
+      "appUrl": "https://glow-match.freegamestore.online",
+      "repo": "freegamestore-online/glow-match",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "grid",
+      "firstPublished": "2026-07-11T16:29:34.679Z"
     }
   ]
 }
