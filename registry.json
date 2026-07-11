@@ -1646,6 +1646,22 @@
       "creatorGithub": "serge-ivo",
       "engine": "grid",
       "firstPublished": "2026-07-11T16:29:34.679Z"
+    },
+    {
+      "id": "royal-heist",
+      "name": "Royal Heist",
+      "category": "card",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "Push-your-luck card battler",
+      "appUrl": "https://royal-heist.freegamestore.online",
+      "repo": "freegamestore-online/royal-heist",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "cards",
+      "firstPublished": "2026-07-11T16:29:51.243Z"
     }
   ]
 }
