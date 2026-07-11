@@ -1598,6 +1598,22 @@
       "developer": "Crystal12341",
       "creatorGithub": "Crystal12341",
       "firstPublished": "2026-07-11T07:06:41.941Z"
+    },
+    {
+      "id": "orb-cascade",
+      "name": "Orb Cascade",
+      "category": "arcade",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "Catch falling orbs in a glowing WebGL playfield",
+      "appUrl": "https://orb-cascade.freegamestore.online",
+      "repo": "freegamestore-online/orb-cascade",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "pixi",
+      "firstPublished": "2026-07-11T16:26:29.716Z"
     }
   ]
 }
