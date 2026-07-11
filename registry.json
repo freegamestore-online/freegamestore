@@ -1556,7 +1556,7 @@
       "name": "The Cycle Of Life",
       "category": "casual",
       "icon": "👗 👖",
-      "iconBg": "#1a2e26",
+      "iconBg": "#fec2ff",
       "description": "A dressing game",
       "appUrl": "https://the-cycle-of-life.freegamestore.online",
       "repo": "freegamestore-online/the-cycle-of-life",
@@ -1565,7 +1565,8 @@
       "developer": "Pumpkin12345678910",
       "creatorGithub": "Pumpkin12345678910",
       "engine": "kaplay",
-      "firstPublished": "2026-07-11T05:25:15.846Z"
+      "firstPublished": "2026-07-11T05:25:15.846Z",
+      "updatedAt": "2026-07-11T05:25:58.014Z"
     }
   ]
 }
