@@ -1518,6 +1518,22 @@
       "developer": "Crystal12341",
       "creatorGithub": "Crystal12341",
       "firstPublished": "2026-07-05T04:14:05.357Z"
+    },
+    {
+      "id": "cat-clicker",
+      "name": "Cat Clicker",
+      "category": "casual",
+      "icon": "😼",
+      "iconBg": "#a3d2a1",
+      "description": "A game full of cats!",
+      "appUrl": "https://cat-clicker.freegamestore.online",
+      "repo": "freegamestore-online/cat-clicker",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "imhappyamber-design",
+      "creatorGithub": "imhappyamber-design",
+      "engine": "kaplay",
+      "firstPublished": "2026-07-11T04:25:17.948Z"
     }
   ]
 }
