@@ -2414,9 +2414,19 @@
   "freegamestore-online/cubiworld": {
     "meta": {
       "created_at": "2026-07-03T22:40:45Z",
-      "pushed_at": "2026-07-05T03:19:52Z"
+      "pushed_at": "2026-07-11T04:16:36Z"
     },
     "commits": [
+      {
+        "sha": "efd653c0df1701559eb2c2208ae6bcad3aa56e49",
+        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/efd653c0df1701559eb2c2208ae6bcad3aa56e49",
+        "commit": {
+          "message": "Fix blank game screen: keep canvas layout while hidden\n\nThe game container toggled display:none, so at mount the canvas measured\n0×0 and the resize handler set a 0×0 bitmap. After Play the game loop ran\n(score ticked) but drew onto an empty canvas — white screen. visibility:\nhidden keeps the layout, so the bitmap is sized correctly from the start.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-11T04:16:34Z"
+          }
+        }
+      },
       {
         "sha": "98917bb203a0d57d1cddad2fb83fb63ab2fabbf5",
         "html_url": "https://github.com/freegamestore-online/cubiworld/commit/98917bb203a0d57d1cddad2fb83fb63ab2fabbf5",
@@ -2434,16 +2444,6 @@
           "message": "Full rewrite: level select menu with scores/history, no mid-game level text, fixed speed per round, finish line with flag, wider steps (88px), 6 distinct music tracks per level",
           "author": {
             "date": "2026-07-05T02:52:01Z"
-          }
-        }
-      },
-      {
-        "sha": "9fce25dfdaa741ff82bbf5b56731fda1f2a0ea30",
-        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/9fce25dfdaa741ff82bbf5b56731fda1f2a0ea30",
-        "commit": {
-          "message": "Speed scaling per level, cozy warm procedural music (Web Audio), floor spikes under staircase sit on ground not attached to steps, music toggle button + M key",
-          "author": {
-            "date": "2026-07-04T03:26:44Z"
           }
         }
       }
@@ -2528,36 +2528,36 @@
   "freegamestore-online/sliceit": {
     "meta": {
       "created_at": "2026-07-05T01:30:22Z",
-      "pushed_at": "2026-07-05T01:44:25Z"
+      "pushed_at": "2026-07-11T07:44:23Z"
     },
     "commits": [
       {
-        "sha": "8f6bf5dad676cfe998375ea20e2761949cd471d1",
-        "html_url": "https://github.com/freegamestore-online/sliceit/commit/8f6bf5dad676cfe998375ea20e2761949cd471d1",
+        "sha": "47f3eff35d93dfd857452b55688c4ba8fef810bf",
+        "html_url": "https://github.com/freegamestore-online/sliceit/commit/47f3eff35d93dfd857452b55688c4ba8fef810bf",
         "commit": {
-          "message": "Complete rebuild: knife slicing game with conveyor path, food items, particles, knife customization, pastel sweets theme",
+          "message": "Fix imports in App.tsx to use named exports for Menu, HUD, KnifeShop, LevelSelect.",
           "author": {
-            "date": "2026-07-05T01:44:25Z"
+            "date": "2026-07-11T07:44:22Z"
           }
         }
       },
       {
-        "sha": "417ab84ece24c53eb9cdcfe6d80a8112c70505e4",
-        "html_url": "https://github.com/freegamestore-online/sliceit/commit/417ab84ece24c53eb9cdcfe6d80a8112c70505e4",
+        "sha": "330bf71779e6155a9b4dfd7e5e302dc122b07ead",
+        "html_url": "https://github.com/freegamestore-online/sliceit/commit/330bf71779e6155a9b4dfd7e5e302dc122b07ead",
         "commit": {
-          "message": "Set game name to \"SLICEit\"",
+          "message": "Rewired App.tsx to integrate Menu → LevelSelect → Game → KnifeShop → HUD flow for the Slice Master experience.",
           "author": {
-            "date": "2026-07-05T01:30:33Z"
+            "date": "2026-07-11T07:42:39Z"
           }
         }
       },
       {
-        "sha": "2c8ee93dc156b38858de0ffe275349f30196d7f2",
-        "html_url": "https://github.com/freegamestore-online/sliceit/commit/2c8ee93dc156b38858de0ffe275349f30196d7f2",
+        "sha": "7dec0658e1b957810024df4d85da1ab1fead5570",
+        "html_url": "https://github.com/freegamestore-online/sliceit/commit/7dec0658e1b957810024df4d85da1ab1fead5570",
         "commit": {
-          "message": "Initial commit",
+          "message": "Rebuild: Add HUD, Menu, KnifeShop, LevelSelect components and integrate them.",
           "author": {
-            "date": "2026-07-05T01:30:25Z"
+            "date": "2026-07-11T07:38:47Z"
           }
         }
       }
@@ -2566,9 +2566,19 @@
   "freegamestore-online/flappyslaybird": {
     "meta": {
       "created_at": "2026-07-05T01:56:02Z",
-      "pushed_at": "2026-07-05T02:56:20Z"
+      "pushed_at": "2026-07-11T06:08:57Z"
     },
     "commits": [
+      {
+        "sha": "6bd44f2ca65ca3667acd7cffed0986f7586b22d9",
+        "html_url": "https://github.com/freegamestore-online/flappyslaybird/commit/6bd44f2ca65ca3667acd7cffed0986f7586b22d9",
+        "commit": {
+          "message": "All 5 requested changes: levels, airplanes, hearts, birds, easier\n\n- 5 progressive levels (1-3 gentle: slower, wider gaps, softer gravity;\n  4-5 ramp up) with level badge + level-up banner (new lib/levels.ts)\n- Top obstacles are now AIRPLANES towing striped banners (trees stay on\n  the bottom) — same hitboxes, new look\n- Start with 5 hearts (bugs can heal up to 7)\n- 6 birds on the picker: Robin, Parrot, Owl + Flamingo, Penguin, Eagle\n  (new lib/draw-birds.ts)\n- Easier overall: gentler gravity, slower start, more generous hitboxes\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-11T06:08:55Z"
+          }
+        }
+      },
       {
         "sha": "af34ff477829502d9ae543958e3327e47a2d448a",
         "html_url": "https://github.com/freegamestore-online/flappyslaybird/commit/af34ff477829502d9ae543958e3327e47a2d448a",
@@ -2586,16 +2596,6 @@
           "message": "Full game rewrite: avatar picker, trees, clouds (hurt), bugs/dragonfly (collect), kids with nets, hearts system, boost mechanic",
           "author": {
             "date": "2026-07-05T02:28:27Z"
-          }
-        }
-      },
-      {
-        "sha": "7a283d0585ce0df402199a7a10a9a2298c5bdd62",
-        "html_url": "https://github.com/freegamestore-online/flappyslaybird/commit/7a283d0585ce0df402199a7a10a9a2298c5bdd62",
-        "commit": {
-          "message": "Set game name to \"Flappy Slay Bird 🎀\"",
-          "author": {
-            "date": "2026-07-05T01:56:15Z"
           }
         }
       }
@@ -2632,36 +2632,36 @@
   "freegamestore-online/climberadventure": {
     "meta": {
       "created_at": "2026-07-05T01:52:48Z",
-      "pushed_at": "2026-07-05T03:05:34Z"
+      "pushed_at": "2026-07-11T07:51:51Z"
     },
     "commits": [
       {
-        "sha": "bf4130d5a86f747a9170af2f48d3f2c56fd42981",
-        "html_url": "https://github.com/freegamestore-online/climberadventure/commit/bf4130d5a86f747a9170af2f48d3f2c56fd42981",
+        "sha": "a18d65d2dafa04477a1f06de8bdf9b95ca716801",
+        "html_url": "https://github.com/freegamestore-online/climberadventure/commit/a18d65d2dafa04477a1f06de8bdf9b95ca716801",
         "commit": {
-          "message": "Full rebuild: fix black screen, home screen, gender select, levels, coins, fizzy/medicine pickups, lives, pixelated characters, space/arrow controls",
+          "message": "Fix missing exports in mountainGen.ts to resolve build issues for App.tsx dependencies",
           "author": {
-            "date": "2026-07-05T03:05:34Z"
+            "date": "2026-07-11T07:51:50Z"
           }
         }
       },
       {
-        "sha": "bc44b0b7b01a95b734b0957bba6da9384d315ca9",
-        "html_url": "https://github.com/freegamestore-online/climberadventure/commit/bc44b0b7b01a95b734b0957bba6da9384d315ca9",
+        "sha": "80fb1b3245d4a3d5846064f306ef41582d546190",
+        "html_url": "https://github.com/freegamestore-online/climberadventure/commit/80fb1b3245d4a3d5846064f306ef41582d546190",
         "commit": {
-          "message": "Complete rebuild: home screen, gender selection, level select, coins, fizzy/medicine pickups, lives, pixelated characters, fixed controls",
+          "message": "Fix missing 'generateInitialPlatforms' export in mountainGen.ts and update CustomizeScreen to use localStorage directly for accessory choices.",
           "author": {
-            "date": "2026-07-05T02:49:35Z"
+            "date": "2026-07-11T07:49:46Z"
           }
         }
       },
       {
-        "sha": "cf3f38de6bce613db94846ca773492a70976b62f",
-        "html_url": "https://github.com/freegamestore-online/climberadventure/commit/cf3f38de6bce613db94846ca773492a70976b62f",
+        "sha": "596aefea57ba517ebdeb5c92a3b12741768c8868",
+        "html_url": "https://github.com/freegamestore-online/climberadventure/commit/596aefea57ba517ebdeb5c92a3b12741768c8868",
         "commit": {
-          "message": "fix: remove duplicate drawing-helper declarations breaking the build\n\nThe mountain-drawing helpers (getPlatformColor, drawMountainBg,\ndrawMountainSilhouette, lerp) were declared twice, causing\n\"symbol has already been declared\" rollup errors and a failed deploy.\nRemoved the duplicate block; drawLegend retained.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "message": "Fix missing useLocalStorage hook in CustomizeScreen.tsx by directly using localStorage for accessory data.",
           "author": {
-            "date": "2026-07-05T02:21:20Z"
+            "date": "2026-07-11T07:48:13Z"
           }
         }
       }
@@ -2746,9 +2746,19 @@
   "freegamestore-online/bladeblast": {
     "meta": {
       "created_at": "2026-07-04T03:09:10Z",
-      "pushed_at": "2026-07-04T03:42:49Z"
+      "pushed_at": "2026-07-11T06:40:14Z"
     },
     "commits": [
+      {
+        "sha": "900df6e4857790f5dd46adb58be0ce32e3264f22",
+        "html_url": "https://github.com/freegamestore-online/bladeblast/commit/900df6e4857790f5dd46adb58be0ce32e3264f22",
+        "commit": {
+          "message": "Fix unplayable movement: the animal could barely move (~106 px/s cap)\n\nMOVE_FRICTION 0.78/frame halved velocity every ~3 frames, settling at\n~106 px/s while bombs fall at 120-200+ px/s — dodging was impossible and\nthe character felt glued to the ground. Retuned (accel 5200, friction\n0.85, max 460) → snappy ~400 px/s movement with quick stop.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-11T06:40:11Z"
+          }
+        }
+      },
       {
         "sha": "eec83864c98fcb670d8ff8e8f3d6e4fe82d65e4b",
         "html_url": "https://github.com/freegamestore-online/bladeblast/commit/eec83864c98fcb670d8ff8e8f3d6e4fe82d65e4b",
@@ -2766,16 +2776,6 @@
           "message": "Rebuild as AVOIDit — dodge bombs, collect stars, wave-based survival game",
           "author": {
             "date": "2026-07-04T03:33:19Z"
-          }
-        }
-      },
-      {
-        "sha": "892ebb8e89313e116089ab8c6488a58c44e15c50",
-        "html_url": "https://github.com/freegamestore-online/bladeblast/commit/892ebb8e89313e116089ab8c6488a58c44e15c50",
-        "commit": {
-          "message": "Build BLADE BLAST — FreeGameStore AI agent",
-          "author": {
-            "date": "2026-07-04T03:14:45Z"
           }
         }
       }
@@ -2954,26 +2954,226 @@
   "freegamestore-online/flappybird": {
     "meta": {
       "created_at": "2026-07-05T04:14:06Z",
-      "pushed_at": "2026-07-05T04:14:18Z"
+      "pushed_at": "2026-07-11T07:35:56Z"
     },
     "commits": [
       {
-        "sha": "6cd937de3110734513ee5b91823bf5481d69aafb",
-        "html_url": "https://github.com/freegamestore-online/flappybird/commit/6cd937de3110734513ee5b91823bf5481d69aafb",
+        "sha": "4c9cade7184f5554ec50166679180fd3d431bdee",
+        "html_url": "https://github.com/freegamestore-online/flappybird/commit/4c9cade7184f5554ec50166679180fd3d431bdee",
         "commit": {
-          "message": "Set game name to \"FlappyBird\"",
+          "message": "Re-add useHighScore import in FlappyBirdGame.tsx to fix runtime error.",
           "author": {
-            "date": "2026-07-05T04:14:17Z"
+            "date": "2026-07-11T07:35:56Z"
           }
         }
       },
       {
-        "sha": "874579ab21770acb9a2738c5d14633c526189f75",
-        "html_url": "https://github.com/freegamestore-online/flappybird/commit/874579ab21770acb9a2738c5d14633c526189f75",
+        "sha": "e48e6fcd023fdaddec3ee7427777005919020512",
+        "html_url": "https://github.com/freegamestore-online/flappybird/commit/e48e6fcd023fdaddec3ee7427777005919020512",
+        "commit": {
+          "message": "Fix import paths in FlappyBirdGame.tsx to address build error.",
+          "author": {
+            "date": "2026-07-11T07:33:59Z"
+          }
+        }
+      },
+      {
+        "sha": "ddc0fa0f8b9f4201f70061b4dd498506cfd1e1ee",
+        "html_url": "https://github.com/freegamestore-online/flappybird/commit/ddc0fa0f8b9f4201f70061b4dd498506cfd1e1ee",
+        "commit": {
+          "message": "Fixed import path for useHighScore hook in FlappyBirdGame.tsx to resolve build issue.",
+          "author": {
+            "date": "2026-07-11T07:32:19Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/snake-io": {
+    "meta": {
+      "created_at": "2026-07-11T04:47:44Z",
+      "pushed_at": "2026-07-11T06:15:25Z"
+    },
+    "commits": [
+      {
+        "sha": "2d4fa64bbc333759b4ac09e6477f884ccbc7accb",
+        "html_url": "https://github.com/freegamestore-online/snake-io/commit/2d4fa64bbc333759b4ac09e6477f884ccbc7accb",
+        "commit": {
+          "message": "compliance: align deploy.yml tracking-SDK pattern with compliance.yml\n\ndeploy.yml still had the naive bare-word pattern ('segment', 'amplitude',\n'plausible') that compliance.yml was already fixed to avoid — a snake\ngame's 'segments' comments blocked the deploy. Duplicated-check drift.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-11T06:15:23Z"
+          }
+        }
+      },
+      {
+        "sha": "1f473a53576dfafedd83798c8242fe45f78c1d9d",
+        "html_url": "https://github.com/freegamestore-online/snake-io/commit/1f473a53576dfafedd83798c8242fe45f78c1d9d",
+        "commit": {
+          "message": "Real snake.io: 360° movement, eat to grow, self-collision game over\n\nThe deployed game was still the template's fruit-catch demo. Now: smooth\nsegment-chain snake steering toward mouse/touch (always moving), glowing\nfood that grows the snake and scores, hold-to-boost that burns length,\nscreen wrap (move anywhere), self-collision game over with play-again,\nneon .io look on dark. Modular: snake.ts / food.ts / input.ts / game.ts.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-11T06:12:44Z"
+          }
+        }
+      },
+      {
+        "sha": "43ed8ebcbce45a8546d6bd775137654a9d15d04e",
+        "html_url": "https://github.com/freegamestore-online/snake-io/commit/43ed8ebcbce45a8546d6bd775137654a9d15d04e",
+        "commit": {
+          "message": "Set game name to \"snake.io\"",
+          "author": {
+            "date": "2026-07-11T04:47:56Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/cat-clicker": {
+    "meta": {
+      "created_at": "2026-07-11T04:25:18Z",
+      "pushed_at": "2026-07-11T06:38:43Z"
+    },
+    "commits": [
+      {
+        "sha": "59cc9a064240027178ad862def4c8f3860c034d2",
+        "html_url": "https://github.com/freegamestore-online/cat-clicker/commit/59cc9a064240027178ad862def4c8f3860c034d2",
+        "commit": {
+          "message": "Cat Clicker: cream cat + orange king cat, click to earn coins, upgrade button (+1/click, cost doubles each time)",
+          "author": {
+            "date": "2026-07-11T06:38:43Z"
+          }
+        }
+      },
+      {
+        "sha": "f30e65ed662cc2d11fdab32f86eb4acafc315c9a",
+        "html_url": "https://github.com/freegamestore-online/cat-clicker/commit/f30e65ed662cc2d11fdab32f86eb4acafc315c9a",
+        "commit": {
+          "message": "Cat Clicker: the actual game (was still the template demo)\n\nKiwi Clicker's supply-chain loop, fully cat-themed per the creator's spec:\nclick the CREAM cat to harvest Purrs; purrs auto-pack into sacks; sacks\npass the security scanner and sell to the orange KING CAT for coins.\nThree 'Skiwitrees': Archery (+click power), Alchemy (+sack value),\nCarpentry (worker cats that purr on their own). Real narrative ending at\n100 delivered sacks (the King's Feast) instead of an endless grind.\nProgress saved in localStorage.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-11T06:33:57Z"
+          }
+        }
+      },
+      {
+        "sha": "86e31dfb2290dc40cb0f5c2f0e8a6a58f581266d",
+        "html_url": "https://github.com/freegamestore-online/cat-clicker/commit/86e31dfb2290dc40cb0f5c2f0e8a6a58f581266d",
+        "commit": {
+          "message": "Set game name to \"Cat Clicker\"",
+          "author": {
+            "date": "2026-07-11T04:25:32Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/escape": {
+    "meta": {
+      "created_at": "2026-07-05T02:11:22Z",
+      "pushed_at": "2026-07-05T02:20:43Z"
+    },
+    "commits": [
+      {
+        "sha": "b2aca45cde4b142d9bf0d47c03a30554ae49b16f",
+        "html_url": "https://github.com/freegamestore-online/escape/commit/b2aca45cde4b142d9bf0d47c03a30554ae49b16f",
+        "commit": {
+          "message": "Build zombie maze game: maze generation, player shooting, zombie AI, win/death screens with confetti",
+          "author": {
+            "date": "2026-07-05T02:20:42Z"
+          }
+        }
+      },
+      {
+        "sha": "2ce514b57af446f8230c77f6dbf72425e889fa22",
+        "html_url": "https://github.com/freegamestore-online/escape/commit/2ce514b57af446f8230c77f6dbf72425e889fa22",
+        "commit": {
+          "message": "Set game name to \"Fight\"",
+          "author": {
+            "date": "2026-07-05T02:11:34Z"
+          }
+        }
+      },
+      {
+        "sha": "a8a2becc5728c3be0bb842d7b78dc56721a9d11e",
+        "html_url": "https://github.com/freegamestore-online/escape/commit/a8a2becc5728c3be0bb842d7b78dc56721a9d11e",
         "commit": {
           "message": "Initial commit",
           "author": {
-            "date": "2026-07-05T04:14:08Z"
+            "date": "2026-07-05T02:11:25Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/the-cycle-of-life": {
+    "meta": {
+      "created_at": "2026-07-11T05:25:16Z",
+      "pushed_at": "2026-07-11T06:29:55Z"
+    },
+    "commits": [
+      {
+        "sha": "be80429ac12793dea509de2c90c64b4d02505541",
+        "html_url": "https://github.com/freegamestore-online/the-cycle-of-life/commit/be80429ac12793dea509de2c90c64b4d02505541",
+        "commit": {
+          "message": "Add walking animation between rooms - character walks in from left door, walks out right door to next room",
+          "author": {
+            "date": "2026-07-11T06:29:55Z"
+          }
+        }
+      },
+      {
+        "sha": "dde77fe6826818b6f8145f01eabe9051ab16e152",
+        "html_url": "https://github.com/freegamestore-online/the-cycle-of-life/commit/dde77fe6826818b6f8145f01eabe9051ab16e152",
+        "commit": {
+          "message": "The Cycle Of Life: the actual dress-up game (was still the template demo)\n\nPer the creator's design: choose girl/boy on the front page, spawn as a\nbaby, endless rooms each with a random season (Summer/Winter/Autumn/\nSpring), dress for the weather from 5 outfit sets per season in 2 colour\nvariants; wrong outfit → sick, 3 sicknesses → your life ends. Bonus true\nto the title: you AGE as rooms pass (baby → kid → teen → grown-up →\ngrandparent). Longest-life best score saved.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-11T06:23:29Z"
+          }
+        }
+      },
+      {
+        "sha": "e206966d4666ba55aa308ebe025dd3ec4c3a1f81",
+        "html_url": "https://github.com/freegamestore-online/the-cycle-of-life/commit/e206966d4666ba55aa308ebe025dd3ec4c3a1f81",
+        "commit": {
+          "message": "Set game name to \"The Cycle Of Life\"",
+          "author": {
+            "date": "2026-07-11T05:25:29Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/monster-attack": {
+    "meta": {
+      "created_at": "2026-07-11T05:37:26Z",
+      "pushed_at": "2026-07-11T06:38:46Z"
+    },
+    "commits": [
+      {
+        "sha": "dc4fdb5868c758fba3590c26e6ddbe9647bd6844",
+        "html_url": "https://github.com/freegamestore-online/monster-attack/commit/dc4fdb5868c758fba3590c26e6ddbe9647bd6844",
+        "commit": {
+          "message": "Add auto-save/load: game saves to localStorage on every state change, loads on return, Continue button on pet-select screen, clears save on death",
+          "author": {
+            "date": "2026-07-11T06:38:46Z"
+          }
+        }
+      },
+      {
+        "sha": "3e732437d2a37cf5777f32f1bda12f120164b703",
+        "html_url": "https://github.com/freegamestore-online/monster-attack/commit/3e732437d2a37cf5777f32f1bda12f120164b703",
+        "commit": {
+          "message": "Add sword click-to-kill: click monsters to slash them with sword, slash visual effect, cooldown bar, cursor feedback",
+          "author": {
+            "date": "2026-07-11T06:31:50Z"
+          }
+        }
+      },
+      {
+        "sha": "1923049366c6649a0c9f695e67b0b0f4d69e100e",
+        "html_url": "https://github.com/freegamestore-online/monster-attack/commit/1923049366c6649a0c9f695e67b0b0f4d69e100e",
+        "commit": {
+          "message": "Fix build: remove unused nextId import (TS6133 blocked the deploy)\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-11T06:20:35Z"
           }
         }
       }
