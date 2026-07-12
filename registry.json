@@ -1708,22 +1708,6 @@
       "creatorGithub": "serge-ivo",
       "engine": "phaser",
       "firstPublished": "2026-07-12T00:48:04.616Z"
-    },
-    {
-      "id": "astro-drift",
-      "name": "Astro Drift",
-      "category": "arcade",
-      "icon": "&#128640;",
-      "iconBg": "#000000",
-      "description": "Navigate through an asteroid field and test your reflexes in this challenging arcade game.",
-      "appUrl": "https://astro-drift.freegamestore.online",
-      "repo": "freegamestore-online/astro-drift",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "excalibur",
-      "firstPublished": "2026-07-12T04:54:48.209Z"
     }
   ]
 }
