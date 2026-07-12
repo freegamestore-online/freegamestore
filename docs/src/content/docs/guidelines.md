@@ -76,14 +76,18 @@ small variation.
 
 Pick the smallest proven engine that fits the game:
 
-| Engine | Use case |
-| --- | --- |
-| HTML5 Canvas | Classic 2D games and custom loops |
-| Phaser | 2D arcade games with physics |
-| PixiJS | Sprite-heavy 2D rendering |
-| Kaplay | Lightweight 2D games |
-| Three.js / React Three Fiber | 3D games and 3D puzzles |
-| Babylon.js | Advanced 3D scenes with physics |
+All engines track their latest major (a monthly build-gated refresh keeps them there).
+
+| Engine | Version | Pick it when | Example games |
+| --- | --- | --- | --- |
+| HTML5 Canvas | — | Full control: no engine, you own loop/rendering/physics | Snake, Flappy, custom physics |
+| KAPLAY | 3001 | Fastest playable game — beginner verb API | Jam arcade, endless runners |
+| Phaser | 4.2 | Production 2D: scenes, physics, tilemaps, tweens | Platformers, shooters, tile RPGs |
+| PixiJS | 8.19 | Max WebGL rendering perf; you write the logic | Bullet-hell, sprite-heavy scenes |
+| Excalibur.js | 0.32 | TypeScript-native typed Actor classes, physics built in | Top-down action, structured mid-size games |
+| LittleJS | 1.18 | Built-in particles + procedural ZzFX sound — juice, zero assets | Brick breakers, explosive arcade |
+| Three.js / R3F | 0.185 / 9 | 3D as React components (JSX scene graph) | Racing, bowling, 3D puzzles |
+| Babylon.js | 9.16 | Full 3D engine — WebGPU, physics-ready meshes | 3D arenas, ambitious worlds |
 
 ## Templates
 
@@ -99,6 +103,8 @@ Use `fgs init my-game --template <name>` to start from a platform template.
 | Kaplay | `kaplay` | Simple 2D games |
 | PixiJS | `pixi` | Sprite-heavy games |
 | Babylon.js | `babylon` | Advanced 3D games |
+| Excalibur | `excalibur` | Typed actor-based 2D |
+| LittleJS | `littlejs` | Juicy arcade, zero assets |
 
 ## Project structure
 

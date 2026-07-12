@@ -168,26 +168,28 @@
       <p>Games use specialized engines depending on the game type. All integrate with the React + Vite stack.</p>
 
       <table class="spec-table">
-        <tr><th>Engine</th><th>Use case</th><th>Template</th></tr>
-        <tr><td><strong>Three.js / R3F</strong></td><td>3D games — racing, bowling, 3D puzzles</td><td><code>template-game-3d</code></td></tr>
-        <tr><td><strong>Babylon.js</strong></td><td>Advanced 3D with physics</td><td><code>template-game-babylon</code></td></tr>
-        <tr><td><strong>Phaser</strong></td><td>2D arcade games with physics</td><td><code>template-game-phaser</code></td></tr>
-        <tr><td><strong>PixiJS</strong></td><td>Sprite-heavy 2D rendering</td><td><code>template-game-pixi</code></td></tr>
-        <tr><td><strong>Kaplay</strong></td><td>Simple, fun 2D games</td><td><code>template-game-kaplay</code></td></tr>
-        <tr><td><strong>HTML5 Canvas</strong></td><td>Direct canvas drawing for classic 2D games</td><td><code>template-game-canvas</code></td></tr>
-        <tr><td><strong>Excalibur.js</strong></td><td>TypeScript-native actor-based 2D</td><td><code>template-game-excalibur</code></td></tr>
-        <tr><td><strong>LittleJS</strong></td><td>Tiny all-in-one arcade — particles + sound built in</td><td><code>template-game-littlejs</code></td></tr>
+        <tr><th>Engine</th><th>Version</th><th>Pick it when</th><th>Example games</th><th>Template</th></tr>
+        <tr><td><strong>HTML5 Canvas</strong></td><td>—</td><td>You want full control — no engine, you own the loop, rendering and physics</td><td>Snake, Flappy, Pac-Man, custom physics</td><td><code>template-game-canvas</code></td></tr>
+        <tr><td><strong>KAPLAY</strong></td><td>3001</td><td>Fastest path to a playable game — beginner-friendly verb API (add, onCollide)</td><td>Jam-style arcade, endless runners</td><td><code>template-game-kaplay</code></td></tr>
+        <tr><td><strong>Phaser</strong></td><td>4.2</td><td>Production 2D — scenes, arcade physics, tilemaps, tweens, responsive scaler</td><td>Platformers, shooters, tower defense, tile RPGs</td><td><code>template-game-phaser</code></td></tr>
+        <tr><td><strong>PixiJS</strong></td><td>8.19</td><td>Maximum WebGL rendering performance — raw scene graph, you write the game logic</td><td>Bullet-hell, particle-heavy scenes, thousands of sprites</td><td><code>template-game-pixi</code></td></tr>
+        <tr><td><strong>Excalibur.js</strong></td><td>0.32</td><td>TypeScript-native architecture — game objects are typed Actor classes with physics built in</td><td>Asteroid dodgers, top-down action, cleanly structured mid-size games</td><td><code>template-game-excalibur</code></td></tr>
+        <tr><td><strong>LittleJS</strong></td><td>1.18</td><td>Juice with zero asset files — particle system and procedural ZzFX sound built in</td><td>Brick breakers, explosive arcade games</td><td><code>template-game-littlejs</code></td></tr>
+        <tr><td><strong>Three.js / R3F</strong></td><td>0.185 / 9</td><td>3D as React components — declarative JSX scenes, useFrame updates</td><td>Racing, bowling, low-poly 3D puzzles</td><td><code>template-game-3d</code></td></tr>
+        <tr><td><strong>Babylon.js</strong></td><td>9.16</td><td>The full 3D engine — cameras, lights, materials, physics-ready meshes, WebGPU</td><td>3D arenas, ambitious 3D worlds</td><td><code>template-game-babylon</code></td></tr>
+        <tr><td><strong>React + CSS Grid</strong></td><td>—</td><td>DOM, no canvas — turn-based boards with CSS transitions and native accessibility</td><td>2048, chess, sudoku, wordle, minesweeper</td><td><code>template-game-grid</code></td></tr>
+        <tr><td><strong>React card kit</strong></td><td>—</td><td>DOM card games — flippable cards, deck helpers, CSS 3D flip animations</td><td>Solitaire, memory, push-your-luck battlers</td><td><code>template-game-cards</code></td></tr>
       </table>
 
       <h3>2D games</h3>
-      <p>For 2D games, use HTML5 Canvas directly or a framework like Phaser, PixiJS, or Kaplay. The canvas template gives you a bare <code>&lt;canvas&gt;</code> element with a game loop. Phaser and PixiJS templates include their respective engines pre-configured.</p>
+      <p>Six ways to build 2D, from most control to most help: raw <strong>Canvas</strong> (you own everything), <strong>PixiJS</strong> (fastest WebGL rendering, your logic), <strong>Excalibur</strong> (typed Actor classes, physics built in), <strong>Phaser</strong> (the full engine — scenes, physics, tilemaps), <strong>KAPLAY</strong> (simplest API, quickest playable), <strong>LittleJS</strong> (tiny, with particles and procedural sound included — juicy games with no asset files). All ship pre-configured with the engine pinned to its latest major.</p>
 
       <h3>3D games</h3>
-      <p>For 3D games, use Three.js (via React Three Fiber) or Babylon.js. The 3D template includes Three.js with R3F, a basic scene, camera controls, and lighting. Babylon.js template includes the engine with a physics-ready scene.</p>
+      <p>Two 3D philosophies: <strong>Three.js + React Three Fiber</strong> composes the scene as React components (JSX scene graph, hooks-driven updates) — natural if you think in React. <strong>Babylon.js 9</strong> is a classic full 3D engine (imperative Engine/Scene/Mesh API, WebGPU-ready, physics-ready) — pick it for bigger 3D ambitions.</p>
 
       <!-- Templates -->
       <h2 id="templates">Templates</h2>
-      <p>Eight templates cover every game type. Use <code>fgs init my-game --template &lt;name&gt;</code> or clone directly:</p>
+      <p>Ten templates cover every game type. Use <code>fgs init my-game --template &lt;name&gt;</code> or clone directly:</p>
 
       <table class="spec-table">
         <tr><th>Template</th><th>Flag</th><th>Best for</th></tr>
