@@ -2262,9 +2262,19 @@
   "freegamestore-online/ts-probe": {
     "meta": {
       "created_at": "2026-07-03T06:24:23Z",
-      "pushed_at": "2026-07-03T06:25:04Z"
+      "pushed_at": "2026-07-11T16:41:21Z"
     },
     "commits": [
+      {
+        "sha": "bf7ce960391b0f6bc29242e3801bfd5b90397c98",
+        "html_url": "https://github.com/freegamestore-online/ts-probe/commit/bf7ce960391b0f6bc29242e3801bfd5b90397c98",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:20Z"
+          }
+        }
+      },
       {
         "sha": "c5832a78b998d6e7a2eab4aba1910eda3af58bf0",
         "html_url": "https://github.com/freegamestore-online/ts-probe/commit/c5832a78b998d6e7a2eab4aba1910eda3af58bf0",
@@ -2282,16 +2292,6 @@
           "message": "Set game name to \"TS Probe\"",
           "author": {
             "date": "2026-07-03T06:24:35Z"
-          }
-        }
-      },
-      {
-        "sha": "ae5667273c598ed8e0b10322d1df097a7ec160dd",
-        "html_url": "https://github.com/freegamestore-online/ts-probe/commit/ae5667273c598ed8e0b10322d1df097a7ec160dd",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-07-03T06:24:26Z"
           }
         }
       }
@@ -2338,9 +2338,19 @@
   "freegamestore-online/kart-racers": {
     "meta": {
       "created_at": "2026-07-03T13:44:39Z",
-      "pushed_at": "2026-07-03T13:44:59Z"
+      "pushed_at": "2026-07-11T16:41:26Z"
     },
     "commits": [
+      {
+        "sha": "3365c4a44ce7ecd091c34a64857c6549efe7eccc",
+        "html_url": "https://github.com/freegamestore-online/kart-racers/commit/3365c4a44ce7ecd091c34a64857c6549efe7eccc",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:26Z"
+          }
+        }
+      },
       {
         "sha": "06fb1f80ca75e5dd46f495b07669f04aeeffff96",
         "html_url": "https://github.com/freegamestore-online/kart-racers/commit/06fb1f80ca75e5dd46f495b07669f04aeeffff96",
@@ -2360,25 +2370,25 @@
             "date": "2026-07-03T13:44:51Z"
           }
         }
-      },
-      {
-        "sha": "a24236ffde63799b8d4f335e1ddfbd3b71a61d9a",
-        "html_url": "https://github.com/freegamestore-online/kart-racers/commit/a24236ffde63799b8d4f335e1ddfbd3b71a61d9a",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-07-03T13:44:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mcp-proof": {
     "meta": {
       "created_at": "2026-07-03T13:56:38Z",
-      "pushed_at": "2026-07-03T23:00:21Z"
+      "pushed_at": "2026-07-11T16:41:29Z"
     },
     "commits": [
+      {
+        "sha": "a80a5c80dc5944cab3cdd524917ee13773fe54bb",
+        "html_url": "https://github.com/freegamestore-online/mcp-proof/commit/a80a5c80dc5944cab3cdd524917ee13773fe54bb",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:28Z"
+          }
+        }
+      },
       {
         "sha": "79c6a2ddf22c5e609703a7cb97425c795f6182d6",
         "html_url": "https://github.com/freegamestore-online/mcp-proof/commit/79c6a2ddf22c5e609703a7cb97425c795f6182d6",
@@ -2398,25 +2408,25 @@
             "date": "2026-07-03T14:00:14Z"
           }
         }
-      },
-      {
-        "sha": "6bc97b45d18034a23265ba68285339882480808f",
-        "html_url": "https://github.com/freegamestore-online/mcp-proof/commit/6bc97b45d18034a23265ba68285339882480808f",
-        "commit": {
-          "message": "Initial mcp-proof — scaffolded via MCP (template-game-canvas)",
-          "author": {
-            "date": "2026-07-03T13:57:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/cubiworld": {
     "meta": {
       "created_at": "2026-07-03T22:40:45Z",
-      "pushed_at": "2026-07-11T04:16:36Z"
+      "pushed_at": "2026-07-11T16:41:31Z"
     },
     "commits": [
+      {
+        "sha": "c020a404b694cc28afba721332b6d5dd313cdc5c",
+        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/c020a404b694cc28afba721332b6d5dd313cdc5c",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:31Z"
+          }
+        }
+      },
       {
         "sha": "efd653c0df1701559eb2c2208ae6bcad3aa56e49",
         "html_url": "https://github.com/freegamestore-online/cubiworld/commit/efd653c0df1701559eb2c2208ae6bcad3aa56e49",
@@ -2436,25 +2446,25 @@
             "date": "2026-07-05T03:19:51Z"
           }
         }
-      },
-      {
-        "sha": "0619891163ef28c82cb28ec6430d0c3c16c27d8f",
-        "html_url": "https://github.com/freegamestore-online/cubiworld/commit/0619891163ef28c82cb28ec6430d0c3c16c27d8f",
-        "commit": {
-          "message": "Full rewrite: level select menu with scores/history, no mid-game level text, fixed speed per round, finish line with flag, wider steps (88px), 6 distinct music tracks per level",
-          "author": {
-            "date": "2026-07-05T02:52:01Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/slicing-game": {
     "meta": {
       "created_at": "2026-07-03T23:12:06Z",
-      "pushed_at": "2026-07-03T23:16:48Z"
+      "pushed_at": "2026-07-11T16:41:33Z"
     },
     "commits": [
+      {
+        "sha": "45e43f7ae2be9e7e89c9f00b964661dcb01e7dff",
+        "html_url": "https://github.com/freegamestore-online/slicing-game/commit/45e43f7ae2be9e7e89c9f00b964661dcb01e7dff",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:33Z"
+          }
+        }
+      },
       {
         "sha": "c236863ef1e955f49461e45a299f3f41fe600ef3",
         "html_url": "https://github.com/freegamestore-online/slicing-game/commit/c236863ef1e955f49461e45a299f3f41fe600ef3",
@@ -2474,25 +2484,25 @@
             "date": "2026-07-03T23:12:18Z"
           }
         }
-      },
-      {
-        "sha": "64cdc4f691561aaf615708bdb35f4a41c8addf6c",
-        "html_url": "https://github.com/freegamestore-online/slicing-game/commit/64cdc4f691561aaf615708bdb35f4a41c8addf6c",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-07-03T23:12:09Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/beat-star": {
     "meta": {
       "created_at": "2026-07-04T03:50:02Z",
-      "pushed_at": "2026-07-04T10:00:07Z"
+      "pushed_at": "2026-07-11T16:41:39Z"
     },
     "commits": [
+      {
+        "sha": "b5e021de780ef1a515bb33d5be7b19bf103be293",
+        "html_url": "https://github.com/freegamestore-online/beat-star/commit/b5e021de780ef1a515bb33d5be7b19bf103be293",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:39Z"
+          }
+        }
+      },
       {
         "sha": "726cbeaf13eaa296ed9aa86f49e575d35f8e9c93",
         "html_url": "https://github.com/freegamestore-online/beat-star/commit/726cbeaf13eaa296ed9aa86f49e575d35f8e9c93",
@@ -2512,25 +2522,25 @@
             "date": "2026-07-04T03:56:31Z"
           }
         }
-      },
-      {
-        "sha": "e2fac5832b23ee37c7735bb9c97c4a71293912c2",
-        "html_url": "https://github.com/freegamestore-online/beat-star/commit/e2fac5832b23ee37c7735bb9c97c4a71293912c2",
-        "commit": {
-          "message": "Build Beat Star — FreeGameStore AI agent",
-          "author": {
-            "date": "2026-07-04T03:50:19Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sliceit": {
     "meta": {
       "created_at": "2026-07-05T01:30:22Z",
-      "pushed_at": "2026-07-11T07:44:23Z"
+      "pushed_at": "2026-07-11T16:41:50Z"
     },
     "commits": [
+      {
+        "sha": "d803b3470506de949d74f9ca278e8c726322bdce",
+        "html_url": "https://github.com/freegamestore-online/sliceit/commit/d803b3470506de949d74f9ca278e8c726322bdce",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:49Z"
+          }
+        }
+      },
       {
         "sha": "47f3eff35d93dfd857452b55688c4ba8fef810bf",
         "html_url": "https://github.com/freegamestore-online/sliceit/commit/47f3eff35d93dfd857452b55688c4ba8fef810bf",
@@ -2550,25 +2560,25 @@
             "date": "2026-07-11T07:42:39Z"
           }
         }
-      },
-      {
-        "sha": "7dec0658e1b957810024df4d85da1ab1fead5570",
-        "html_url": "https://github.com/freegamestore-online/sliceit/commit/7dec0658e1b957810024df4d85da1ab1fead5570",
-        "commit": {
-          "message": "Rebuild: Add HUD, Menu, KnifeShop, LevelSelect components and integrate them.",
-          "author": {
-            "date": "2026-07-11T07:38:47Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappyslaybird": {
     "meta": {
       "created_at": "2026-07-05T01:56:02Z",
-      "pushed_at": "2026-07-11T06:08:57Z"
+      "pushed_at": "2026-07-11T16:41:55Z"
     },
     "commits": [
+      {
+        "sha": "e70f93f04b546e9ca9bb9013aa4f3fff22f5b2d3",
+        "html_url": "https://github.com/freegamestore-online/flappyslaybird/commit/e70f93f04b546e9ca9bb9013aa4f3fff22f5b2d3",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:55Z"
+          }
+        }
+      },
       {
         "sha": "6bd44f2ca65ca3667acd7cffed0986f7586b22d9",
         "html_url": "https://github.com/freegamestore-online/flappyslaybird/commit/6bd44f2ca65ca3667acd7cffed0986f7586b22d9",
@@ -2588,25 +2598,25 @@
             "date": "2026-07-05T02:56:18Z"
           }
         }
-      },
-      {
-        "sha": "dfec1b32eda0ce916b1a5e065979d5dfb59e38df",
-        "html_url": "https://github.com/freegamestore-online/flappyslaybird/commit/dfec1b32eda0ce916b1a5e065979d5dfb59e38df",
-        "commit": {
-          "message": "Full game rewrite: avatar picker, trees, clouds (hurt), bugs/dragonfly (collect), kids with nets, hearts system, boost mechanic",
-          "author": {
-            "date": "2026-07-05T02:28:27Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/angry-birds2": {
     "meta": {
       "created_at": "2026-07-04T22:30:36Z",
-      "pushed_at": "2026-07-04T22:30:48Z"
+      "pushed_at": "2026-07-11T16:41:44Z"
     },
     "commits": [
+      {
+        "sha": "40553738747e1aba2731f0e469996a33b37c9b95",
+        "html_url": "https://github.com/freegamestore-online/angry-birds2/commit/40553738747e1aba2731f0e469996a33b37c9b95",
+        "commit": {
+          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "author": {
+            "date": "2026-07-11T16:41:44Z"
+          }
+        }
+      },
       {
         "sha": "d894e29e39c443f604e0e05957c240c9c9400cd5",
         "html_url": "https://github.com/freegamestore-online/angry-birds2/commit/d894e29e39c443f604e0e05957c240c9c9400cd5",
@@ -3402,6 +3412,44 @@
           "message": "Initial commit",
           "author": {
             "date": "2026-07-11T16:46:33Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/neon-runner": {
+    "meta": {
+      "created_at": "2026-07-12T00:48:05Z",
+      "pushed_at": "2026-07-12T00:48:23Z"
+    },
+    "commits": [
+      {
+        "sha": "57f4450ec8cde125bc2ff0f848951c1c16b86189",
+        "html_url": "https://github.com/freegamestore-online/neon-runner/commit/57f4450ec8cde125bc2ff0f848951c1c16b86189",
+        "commit": {
+          "message": "Build Neon Runner — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-07-12T00:48:22Z"
+          }
+        }
+      },
+      {
+        "sha": "0dee5de1a6c333b05bdccb70a041c4f5ebc3fd7e",
+        "html_url": "https://github.com/freegamestore-online/neon-runner/commit/0dee5de1a6c333b05bdccb70a041c4f5ebc3fd7e",
+        "commit": {
+          "message": "Set game name to \"Neon Runner\"",
+          "author": {
+            "date": "2026-07-12T00:48:16Z"
+          }
+        }
+      },
+      {
+        "sha": "d3e49f6fb427f4f7180b843d8b5b60151eb7b0d1",
+        "html_url": "https://github.com/freegamestore-online/neon-runner/commit/d3e49f6fb427f4f7180b843d8b5b60151eb7b0d1",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-12T00:48:08Z"
           }
         }
       }
