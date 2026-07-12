@@ -32,10 +32,10 @@ In `devDependencies` from the scaffold:
 ```json
 {
   "devDependencies": {
-    "vite": "^6",
+    "vite": "^8",
     "@vitejs/plugin-react": "^4.3",
     "vite-plugin-pwa": "^1.3",
-    "typescript": "^5.7",
+    "typescript": "^7",
     "@types/react": "^19",
     "@types/react-dom": "^19"
   }

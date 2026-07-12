@@ -68,7 +68,7 @@ small variation.
 | Framework | React |
 | Bundler | Vite |
 | Styling | Tailwind CSS and platform CSS variables |
-| Hosting | Cloudflare Pages |
+| Hosting | Cloudflare R2 (GitHub Actions) |
 | Package manager | pnpm |
 | Runtime | Node 20.19 or newer |
 
@@ -137,7 +137,7 @@ The normal flow is:
 2. Build from a template and run the game locally.
 3. Run `fgs check`.
 4. Push to `main`.
-5. Cloudflare Pages builds and deploys the game to its subdomain.
+5. GitHub Actions builds and deploys the game to Cloudflare R2 at its subdomain.
 6. The storefront lists the game after metadata and compliance checks pass.
 
 For the full walkthrough, see [Publish to the storefront](/docs/start/publishing/).
