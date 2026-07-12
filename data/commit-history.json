@@ -3154,9 +3154,19 @@
   "freegamestore-online/monster-attack": {
     "meta": {
       "created_at": "2026-07-11T05:37:26Z",
-      "pushed_at": "2026-07-11T16:42:21Z"
+      "pushed_at": "2026-07-12T10:15:48Z"
     },
     "commits": [
+      {
+        "sha": "3571f0463a5deca3a6ac81bd1cba85d08b87a86b",
+        "html_url": "https://github.com/freegamestore-online/monster-attack/commit/3571f0463a5deca3a6ac81bd1cba85d08b87a86b",
+        "commit": {
+          "message": "Set game name to \"monster attack\"",
+          "author": {
+            "date": "2026-07-12T10:15:47Z"
+          }
+        }
+      },
       {
         "sha": "4e7dc49bfc6c1d2875ec756d4a85dfafb4a377d8",
         "html_url": "https://github.com/freegamestore-online/monster-attack/commit/4e7dc49bfc6c1d2875ec756d4a85dfafb4a377d8",
@@ -3174,16 +3184,6 @@
           "message": "Add auto-save/load: game saves to localStorage on every state change, loads on return, Continue button on pet-select screen, clears save on death",
           "author": {
             "date": "2026-07-11T06:38:46Z"
-          }
-        }
-      },
-      {
-        "sha": "3e732437d2a37cf5777f32f1bda12f120164b703",
-        "html_url": "https://github.com/freegamestore-online/monster-attack/commit/3e732437d2a37cf5777f32f1bda12f120164b703",
-        "commit": {
-          "message": "Add sword click-to-kill: click monsters to slash them with sword, slash visual effect, cooldown bar, cursor feedback",
-          "author": {
-            "date": "2026-07-11T06:31:50Z"
           }
         }
       }
