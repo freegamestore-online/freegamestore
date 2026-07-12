@@ -1708,6 +1708,22 @@
       "creatorGithub": "serge-ivo",
       "engine": "phaser",
       "firstPublished": "2026-07-12T00:48:04.616Z"
+    },
+    {
+      "id": "astro-drift-2",
+      "name": "Astro Drift",
+      "category": "arcade",
+      "icon": "&#128640;",
+      "iconBg": "#060918",
+      "description": "Steer your neon ship through an ever-thickening asteroid field and survive as long as you can.",
+      "appUrl": "https://astro-drift-2.freegamestore.online",
+      "repo": "freegamestore-online/astro-drift-2",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "excalibur",
+      "firstPublished": "2026-07-12T05:26:44.837Z"
     }
   ]
 }
