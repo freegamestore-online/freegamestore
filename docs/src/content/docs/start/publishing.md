@@ -15,7 +15,7 @@ npx -y @freegamestore/cli@latest publish
 `publish` runs compliance for you, then either:
 
 - **Auto-provisions** your repo on `freegamestore-online/<id>`, sets up
-  Cloudflare Pages bound to `<id>.freegamestore.online`, and adds your
+  Cloudflare R2 hosting bound to `<id>.freegamestore.online`, and adds your
   registry entry — all in one command. Or…
 - **Opens a prefilled GitHub Issue** for the platform team to review when
   auto-provision isn't available (first time on a new account, edge cases).
@@ -61,7 +61,7 @@ In [`freegamestore-online/freegamestore`](https://github.com/freegamestore-onlin
 The storefront's build picks up the new entry on the next deploy and
 generates a detail page for your game.
 
-## 3. We provision Cloudflare Pages
+## 3. We provision R2 hosting
 
 Once the registry PR merges, the platform team creates the CF Pages
 project bound to `my-game.freegamestore.online`. From that point every

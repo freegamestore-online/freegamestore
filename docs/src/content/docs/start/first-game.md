@@ -94,7 +94,7 @@ npx -y @freegamestore/cli@latest publish
 ```
 
 `publish` runs compliance, then either auto-provisions your repo +
-Cloudflare Pages + `my-game.freegamestore.online` DNS, or — if
+R2 hosting + `my-game.freegamestore.online` DNS, or — if
 auto-provision isn't available — opens a prefilled GitHub Issue for the
 platform team to review.
 

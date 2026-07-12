@@ -27,7 +27,7 @@ it.
 
 ## Three things to know
 
-- **Build once, deploy free.** Static PWA on Cloudflare Pages. We don't host
+- **Build once, deploy free.** Static PWA on Cloudflare R2. We don't host
   your code; you push to your own GitHub repo and CF Pages picks it up.
 - **The shell is required, the rest is opt-in.** Wrap your game in
   [`<GameShell>`](/docs/sdk/game-shell/) and you've satisfied the layout and

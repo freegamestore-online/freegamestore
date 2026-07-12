@@ -42,7 +42,7 @@ We picked (2).
 
 - **Locally** when you run `npx fgs check` — same checks CI runs.
 - **In CI** on every push to your repo — fails the build, blocks the
-  Cloudflare Pages deploy.
+  GitHub Actions → R2 deploy.
 - **On a 6-hour schedule** — the storefront re-audits every listed game.
   If yours drifts after merge (a dependency added tracking, a fork added a
   new font), the storefront flags your detail page until you fix it.

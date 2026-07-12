@@ -234,11 +234,11 @@
       <h3>How games get deployed</h3>
       <ol>
         <li><strong>Push to <code>main</code></strong> — creator pushes code to the GitHub repo</li>
-        <li><strong>Cloudflare Pages builds</strong> — automatic build triggered on push (runs <code>pnpm install && pnpm build</code>)</li>
+        <li><strong>GitHub Actions builds</strong> — automatic build triggered on push (runs <code>pnpm install && pnpm build</code>), deployed to Cloudflare R2</li>
         <li><strong>Deploy to edge</strong> — built assets deployed to Cloudflare's global CDN</li>
         <li><strong>Live on subdomain</strong> — available at <code>gamename.freegamestore.online</code></li>
       </ol>
-      <p>No CI/CD configuration needed. No tokens to manage. Cloudflare Pages is connected directly to GitHub — push and it deploys.</p>
+      <p>No CI/CD configuration needed. No tokens to manage. A GitHub Actions workflow ships with every game — push and it builds and deploys to Cloudflare R2.</p>
 
       <h3>How a new game gets listed</h3>
       <ol>

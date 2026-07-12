@@ -12,7 +12,7 @@ and provides the shared backend (auth, leaderboards, brand assets).
 ## What you ship
 
 A static PWA. No server. No subscription. No vendor lock-in. Your repo +
-Cloudflare Pages.
+Cloudflare R2 (GitHub Actions deploy).
 
 The standard surface is:
 
@@ -30,7 +30,7 @@ my-game/
 
 ## What FreeGameStore provides
 
-- **Hosting at `<your-game>.freegamestore.online`** via a Cloudflare Pages
+- **Hosting at `<your-game>.freegamestore.online`** via a Cloudflare R2
   project we provision when we add you to the registry.
 - **Brand-matched UI shell** ([`<GameShell>`](/docs/sdk/game-shell/),
   [`<GameTopbar>`](/docs/sdk/game-topbar/)). The storefront's look-and-feel

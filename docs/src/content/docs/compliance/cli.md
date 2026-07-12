@@ -86,11 +86,11 @@ npx -y @freegamestore/cli@latest --help
 |---|---|
 | `init <game-id>` | Scaffold a new game from a template. |
 | `check` | Run compliance against the current game directory. |
-| `publish` | Auto-provision repo + Cloudflare Pages + DNS for this game, or open a submission Issue. |
+| `publish` | Auto-provision repo + R2 hosting + DNS for this game, or open a submission Issue. |
 | `login` / `logout` / `whoami` | Manage the CLI's session with the platform. |
 | `doctor` | Local health check (signed in, API reachable, tools installed). |
 | `list` | List games you've published. |
-| `logs` | Tail the Cloudflare Pages logs for one of your games. |
+| `logs` | Tail the GitHub Actions deploy logs for one of your games. |
 | `screencheck` | Visual / layout regression check (screenshot diff). |
 
 ## When to update
