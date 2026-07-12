@@ -140,7 +140,7 @@
     <ul>
       <li><strong>Brand and privacy are not negotiable.</strong> Your agent will try to add Google Analytics or a custom display font. <code>fgs check</code> rejects the publish. The mandates exist precisely so that AI-generated apps stay consistent.</li>
       <li><strong>Provisioning is one command.</strong> No copy-pasting Cloudflare tokens. No DNS dashboards. No CI YAML. <code>fgs publish</code> handles everything atomically.</li>
-      <li><strong>Deploy is a push.</strong> The agent doesn't need a deploy script. <code>git push</code> triggers Cloudflare Pages, the storefront refreshes within hours.</li>
+      <li><strong>Deploy is a push.</strong> The agent doesn't need a deploy script. <code>git push</code> triggers a GitHub Actions build to Cloudflare R2, and the storefront refreshes within hours.</li>
     </ul>
     <p>The mandates aren't to slow agents down — they're to let agents go fast without breaking the platform.</p>
 

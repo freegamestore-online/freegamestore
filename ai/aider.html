@@ -107,12 +107,12 @@ Refactor: extract the timer logic into a useTimer hook with proper cleanup on un
       <li>
         <strong>Publish</strong>
         <div class="cmd">fgs publish --store games</div>
-        <p>Provisions <code>github.com/freegamestore-online/my-game</code>, the Cloudflare Pages project, the DNS record, custom subdomain at <code>my-game.freegamestore.online</code>, and the storefront entry — atomically.</p>
+        <p>Provisions <code>github.com/freegamestore-online/my-game</code>, R2 hosting, the subdomain at <code>my-game.freegamestore.online</code>, and the storefront entry — atomically.</p>
       </li>
       <li>
         <strong>Push your code</strong>
         <div class="cmd">git push upstream main</div>
-        <p>Auto-deploys via Cloudflare Pages in ~30 seconds. Future commits to <code>main</code> deploy automatically.</p>
+        <p>Auto-deploys via GitHub Actions to Cloudflare R2 in ~30 seconds. Future commits to <code>main</code> deploy automatically.</p>
       </li>
     </ol>
 

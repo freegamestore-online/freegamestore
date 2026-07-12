@@ -74,7 +74,7 @@
       <h3>What creators get</h3>
       <ul>
         <li>Your own game hosted at <code>yourgame.freegamestore.online</code></li>
-        <li>Auto-deploy on every push to main via Cloudflare Pages</li>
+        <li>Auto-deploy on every push to main via GitHub Actions → Cloudflare R2</li>
         <li>Listed in the FreeGameStore with its own game card</li>
         <li>Access to all game templates and the shared design system</li>
       </ul>
@@ -100,7 +100,7 @@
         <li><strong>Free forever</strong> — no monetization, no ads, no paywalls</li>
         <li><strong>No tracking</strong> — zero analytics, cookies, or data collection</li>
         <li><strong>Open source</strong> — MIT license, public repo</li>
-        <li><strong>Uses the tech stack</strong> — TypeScript, React, Vite, Tailwind CSS, Cloudflare Pages</li>
+        <li><strong>Uses the tech stack</strong> — TypeScript, React, Vite, Tailwind CSS, Cloudflare R2</li>
       </ul>
 
       <!-- Section 3: Workspace Setup -->
@@ -181,7 +181,7 @@
         <li>
           <strong>Publish as a game</strong>
           <div class="cmd">fgs publish</div>
-          <p>Provisions <code>github.com/freegamestore-online/my-game</code>, the Cloudflare Pages project, the DNS record, the custom subdomain at <code>my-game.freegamestore.online</code>, and the storefront entry.</p>
+          <p>Provisions <code>github.com/freegamestore-online/my-game</code>, R2 hosting, the subdomain at <code>my-game.freegamestore.online</code>, and the storefront entry.</p>
           <p class="text-sm">Scriptable: pass <code>--name</code>, <code>--category</code>, <code>--type</code>, <code>--oneliner</code>, and <code>--yes</code>.</p>
         </li>
         <li>
@@ -194,7 +194,7 @@
       <h3>Other commands</h3>
       <ul>
         <li><code>fgs list</code> — see all apps and games you've published</li>
-        <li><code>fgs logs my-game</code> — tail Cloudflare Pages deployment logs</li>
+        <li><code>fgs logs my-game</code> — tail GitHub Actions deploy logs</li>
         <li><code>fgs doctor</code> — health check (Node, git, pnpm, auth, API reachability)</li>
       </ul>
 
