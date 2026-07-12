@@ -1708,6 +1708,22 @@
       "creatorGithub": "serge-ivo",
       "engine": "phaser",
       "firstPublished": "2026-07-12T00:48:04.616Z"
+    },
+    {
+      "id": "star-dodger",
+      "name": "Star Dodger",
+      "category": "arcade",
+      "icon": "&#11088;",
+      "iconBg": "#050a14",
+      "description": "Pilot a neon ship through an asteroid field — dodge spinning rocks and survive as long as you can!",
+      "appUrl": "https://star-dodger.freegamestore.online",
+      "repo": "freegamestore-online/star-dodger",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "excalibur",
+      "firstPublished": "2026-07-12T05:40:46.151Z"
     }
   ]
 }
