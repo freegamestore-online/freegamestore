@@ -31,18 +31,20 @@ git push origin main
 # → auto-deploys to my-game.freegamestore.online
 ```
 
-Templates (8 engines, one repo each):
+Templates (10 engines, one repo each — always tracking the latest major):
 
-| Template | Engine | Best for |
+| Template | Engine | What makes it different |
 |---|---|---|
-| `template-game-canvas` | Raw HTML5 Canvas 2D | Classic 2D, pixel art |
-| `template-game-grid` | React + CSS Grid | Turn-based puzzles (2048, chess, sudoku) |
-| `template-game-cards` | React DOM | Card / tile games |
-| `template-game-3d` | Three.js + react-three-fiber | 3D scenes |
-| `template-game-babylon` | Babylon.js v7 | Advanced 3D, physics-ready |
-| `template-game-phaser` | Phaser | Full-featured 2D (scenes, arcade physics) |
-| `template-game-kaplay` | KAPLAY | Quick, beginner-friendly 2D |
-| `template-game-pixi` | Pixi.js v8 | High-performance WebGL 2D, sprite-heavy |
+| `template-game-canvas` | Raw HTML5 Canvas 2D | No engine at all — you own the loop, rendering and physics. Most control. |
+| `template-game-kaplay` | KAPLAY | Beginner-friendly verbs (`add`, `onCollide`) — fastest path to a playable 2D game. |
+| `template-game-phaser` | Phaser 4 | The full-featured 2D engine: scenes, arcade physics, tilemaps, tweens, scaler. |
+| `template-game-pixi` | Pixi.js v8 | Raw WebGL 2D scene graph — maximum rendering performance, bring your own game logic. |
+| `template-game-excalibur` | Excalibur.js | TypeScript-native and actor-based — game objects are typed OOP classes with physics built in. |
+| `template-game-littlejs` | LittleJS | Tiny all-in-one: particle system + procedural ZzFX sound built in — juicy games with zero asset files. |
+| `template-game-3d` | Three.js + react-three-fiber | 3D as React components — scene graph in JSX, `useFrame` per-frame updates. |
+| `template-game-babylon` | Babylon.js v9 | The full 3D engine: cameras, lights, materials, physics-ready meshes, WebGPU. |
+| `template-game-grid` | React + CSS Grid | DOM, no canvas — turn-based boards (2048, chess, sudoku) with CSS transitions. |
+| `template-game-cards` | React DOM card kit | Flippable cards, deck helpers, CSS 3D flip animations — card games without an engine. |
 
 ---
 
@@ -83,7 +85,7 @@ claude mcp add freegamestore -- \
 
 The MCP supports both "I write the code" and "the platform writes the code":
 
-1. **Your AI writes the code, MCP ships it.** Use `create_game` to provision + scaffold + deploy on any of the 8 engines (`kaplay`, `phaser`, `3d`, `pixi`, `babylon`, `canvas`, `grid`, `cards`), then `update_files` / `read_file` / `list_files` to iterate. You author every file; the MCP provisions and pushes (auto-redeploys in ~30-60s).
+1. **Your AI writes the code, MCP ships it.** Use `create_game` to provision + scaffold + deploy on any of the 10 engines (`kaplay`, `phaser`, `3d`, `pixi`, `babylon`, `excalibur`, `littlejs`, `canvas`, `grid`, `cards`), then `update_files` / `read_file` / `list_files` to iterate. You author every file; the MCP provisions and pushes (auto-redeploys in ~30-60s).
 2. **You prompt, the platform's VibeCode agent writes + deploys it.** Use `agent_build` with a natural-language prompt — the server-side agent writes the code and deploys it for you, with engine-correct guidance for whichever template the game uses. By default it runs on the AI key saved for your account (the platform's encrypted key vault); pass `api_key` only to override. To work on an **existing** game, pass `game_id` — it imports the repo into the session first. Poll with `agent_status`.
 
 | Tool | Signature | What it does |
@@ -159,7 +161,7 @@ No manual deploy commands. Ever.
 
 ## Tech stack (required)
 
-- TypeScript ^5.7, React ^19, Vite ^6, Tailwind CSS ^4.1, pnpm
+- TypeScript ^7, React ^19, Vite ^8, Tailwind CSS ^4, pnpm
 - Node >=22
 - Games SDK: `@freegamestore/games` (required for all games)
 - 2D engines: raw Canvas, Pixi.js 8, Phaser, KAPLAY
