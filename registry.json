@@ -1692,6 +1692,22 @@
       "developer": "serge-ivo",
       "creatorGithub": "serge-ivo",
       "firstPublished": "2026-07-11T16:46:29.554Z"
+    },
+    {
+      "id": "neon-runner",
+      "name": "Neon Runner",
+      "category": "arcade",
+      "icon": "&#9889;",
+      "iconBg": "#0a0a1a",
+      "description": "A neon side-scrolling dodge game — weave through glowing obstacle bars as they scroll faster and faster. How long can you survive?",
+      "appUrl": "https://neon-runner.freegamestore.online",
+      "repo": "freegamestore-online/neon-runner",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "phaser",
+      "firstPublished": "2026-07-12T00:48:04.616Z"
     }
   ]
 }
