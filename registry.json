@@ -1724,6 +1724,22 @@
       "creatorGithub": "serge-ivo",
       "engine": "excalibur",
       "firstPublished": "2026-07-12T05:40:46.151Z"
+    },
+    {
+      "id": "brick-blast",
+      "name": "Brick Blast",
+      "category": "arcade",
+      "icon": "🧱",
+      "iconBg": "#0ea5e9",
+      "description": "A juicy brick-breaker with colorful rows, particle explosions, procedural sound, lives, and high scores — pure arcade fun.",
+      "appUrl": "https://brick-blast.freegamestore.online",
+      "repo": "freegamestore-online/brick-blast",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "littlejs",
+      "firstPublished": "2026-07-12T05:49:50.890Z"
     }
   ]
 }
