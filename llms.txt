@@ -1,6 +1,6 @@
 # FreeGameStore
 
-> FreeGameStore is a free, open-source game platform where developers publish PWA games at `<name>.freegamestore.online`. Games are built with TypeScript and any rendering approach (Canvas, WebGL, DOM, Phaser, Kaplay, Pixi, Babylon.js), deployed via GitHub Actions to Cloudflare R2. The platform provides an SDK with auth, per-user storage, real-time rooms, leaderboards, and UI components. Every game is free forever, MIT-licensed, and privacy-first (zero tracking). For the full AI agent guide, see [SKILLS.md](https://freegamestore.online/SKILLS.md).
+> FreeGameStore is a free, open-source game platform where developers publish PWA games at `<name>.freegamestore.online`. Games are built with TypeScript and any rendering approach (Canvas, WebGL, DOM, Phaser 4, Kaplay, Pixi 8, Babylon.js 9, Excalibur, LittleJS), deployed via GitHub Actions to Cloudflare R2. The platform provides an SDK with auth, per-user storage, real-time rooms, leaderboards, and UI components. Every game is free forever, MIT-licensed, and privacy-first (zero tracking). For the full AI agent guide, see [SKILLS.md](https://freegamestore.online/SKILLS.md).
 
 ## AI Agent Integration
 

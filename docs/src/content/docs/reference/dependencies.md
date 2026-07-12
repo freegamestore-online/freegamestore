@@ -74,6 +74,8 @@ via Google Fonts. The compliance check `brand-fonts` greps for these URLs.
 | `@react-three/fiber` | React bindings for three. 600 KB. |
 | `phaser` | 2D engine. |
 | `pixi.js` | 2D WebGL renderer. |
+| `excalibur` | TypeScript-native actor-based 2D engine. |
+| `littlejsengine` | Tiny all-in-one arcade engine — particles + ZzFX sound built in. |
 
 The bundle size check (`bundle-size`) is the only thing that cares — if
 you ship a 3D engine, you get 600 KB; otherwise you get 300 KB.
