@@ -1708,22 +1708,6 @@
       "creatorGithub": "serge-ivo",
       "engine": "phaser",
       "firstPublished": "2026-07-12T00:48:04.616Z"
-    },
-    {
-      "id": "boom-bricks",
-      "name": "Boom Bricks",
-      "category": "arcade",
-      "icon": "&#127881;",
-      "iconBg": "#1a0a2e",
-      "description": "Smash colorful bricks with a bouncing ball — juicy particle explosions, procedural sound effects, and escalating levels!",
-      "appUrl": "https://boom-bricks.freegamestore.online",
-      "repo": "freegamestore-online/boom-bricks",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "littlejs",
-      "firstPublished": "2026-07-12T05:30:09.022Z"
     }
   ]
 }
