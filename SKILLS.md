@@ -86,7 +86,7 @@ claude mcp add freegamestore -- \
 The MCP supports both "I write the code" and "the platform writes the code":
 
 1. **Your AI writes the code, MCP ships it.** Use `create_game` to provision + scaffold + deploy on any of the 10 engines (`kaplay`, `phaser`, `3d`, `pixi`, `babylon`, `excalibur`, `littlejs`, `canvas`, `grid`, `cards`), then `update_files` / `read_file` / `list_files` to iterate. You author every file; the MCP provisions and pushes (auto-redeploys in ~30-60s).
-2. **You prompt, the platform's VibeCode agent writes + deploys it.** Use `agent_build` with a natural-language prompt — the server-side agent writes the code and deploys it for you, with engine-correct guidance for whichever template the game uses. By default it runs on the AI key saved for your account (the platform's encrypted key vault); pass `api_key` only to override. To work on an **existing** game, pass `game_id` — it imports the repo into the session first. Poll with `agent_status`.
+2. **You prompt, the platform's VibeCode agent writes + deploys it.** Use `agent_build` with a natural-language prompt — the server-side agent writes the code and deploys it for you, with engine-correct guidance for whichever template the game uses. By default it runs on the AI key saved for your account (the platform's encrypted key vault); if you have no saved key it falls back to the **free GitHub Models tier** (rate-limited) — so it works with zero setup. Pass `api_key` only to override. To work on an **existing** game, pass `game_id` — it imports the repo into the session first. Poll with `agent_status`.
 
 | Tool | Signature | What it does |
 |---|---|---|
