@@ -2794,9 +2794,19 @@
   "freegamestore-online/decaying-tic-tac-toe": {
     "meta": {
       "created_at": "2026-07-04T03:40:59Z",
-      "pushed_at": "2026-07-04T03:42:21Z"
+      "pushed_at": "2026-07-13T15:05:54Z"
     },
     "commits": [
+      {
+        "sha": "073f457f9e9a131e769669f09c0a7de220062b71",
+        "html_url": "https://github.com/freegamestore-online/decaying-tic-tac-toe/commit/073f457f9e9a131e769669f09c0a7de220062b71",
+        "commit": {
+          "message": "Fix decay trigger to match spec: decay only when board would draw\n\nDecay was firing on a fixed every-4-turns schedule regardless of how\nmuch open board remained, which doesn't match the game's premise\n(oldest move disappears only when the board would otherwise draw).\nNow decay triggers exactly when a move fills the board with no\nwinner, removing the single globally-oldest piece and freeing a cell.\nAlso fixes a broken pnpm-workspace.yaml placeholder (allowBuilds ->\nonlyBuiltDependencies) and updates the decay countdown/expiring-cell\nUI to reflect open-cell count instead of the old fixed schedule.",
+          "author": {
+            "date": "2026-07-13T15:00:15Z"
+          }
+        }
+      },
       {
         "sha": "a1d710b787be2e03a2becda843e31d2689e21e41",
         "html_url": "https://github.com/freegamestore-online/decaying-tic-tac-toe/commit/a1d710b787be2e03a2becda843e31d2689e21e41",
