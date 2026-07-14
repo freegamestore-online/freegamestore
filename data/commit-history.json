@@ -2794,9 +2794,19 @@
   "freegamestore-online/decaying-tic-tac-toe": {
     "meta": {
       "created_at": "2026-07-04T03:40:59Z",
-      "pushed_at": "2026-07-13T15:05:54Z"
+      "pushed_at": "2026-07-14T08:54:04Z"
     },
     "commits": [
+      {
+        "sha": "52ff85791c2667bc20e98562b1b60d6df26a5648",
+        "html_url": "https://github.com/freegamestore-online/decaying-tic-tac-toe/commit/52ff85791c2667bc20e98562b1b60d6df26a5648",
+        "commit": {
+          "message": "Restructure as a proper FreeGameStore game (was FreeAppStore-templated)\n\nThis repo was built to FreeAppStore conventions (fas), but the live\nsubdomain is served by FreeGameStore's R2-based Path B hosting, which\nrequires its own deploy pipeline and SDK. Nothing here ever matched\nthat, so the live site was stuck showing an unrelated placeholder.\n\n- Add .github/workflows/deploy.yml (+ci.yml, compliance.yml) so pushes\n  to main actually build and upload web/dist to the fgs-games R2\n  bucket, matching freegamestore-online/template-game-grid.\n- Integrate @freegamestore/games: wrap the app in GameShell/GameTopbar\n  (turn/open-cell stats, rules overlay, about panel, restart, mute).\n- Move theme tokens from JS-injected main.tsx into static :root /\n  prefers-color-scheme CSS (games require static --bg/--ink/--accent).\n- Fix HTML viewport (user-scalable=no), PWA workbox caching (font\n  runtime caching, raised precache size cap, .json in globPatterns),\n  and .gitignore (.env).\n\nVerified via fgs check (all hard checks pass) and manual layout/\ninteraction testing (mobile + desktop viewports, dark mode, restart).",
+          "author": {
+            "date": "2026-07-14T08:50:46Z"
+          }
+        }
+      },
       {
         "sha": "073f457f9e9a131e769669f09c0a7de220062b71",
         "html_url": "https://github.com/freegamestore-online/decaying-tic-tac-toe/commit/073f457f9e9a131e769669f09c0a7de220062b71",
