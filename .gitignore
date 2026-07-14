@@ -3,3 +3,4 @@ node_modules/
 .wrangler/
 wrangler.toml
 .vibe-check/
+.gstack/
