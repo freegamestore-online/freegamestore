@@ -1725,6 +1725,21 @@
       "creatorGithub": "serge-ivo",
       "engine": "littlejs",
       "firstPublished": "2026-07-12T05:49:50.890Z"
+    },
+    {
+      "id": "minigolf",
+      "name": "Minigolf",
+      "category": "sports",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "A fast, free mini golf game with daily challenges and moving obstacles.",
+      "appUrl": "https://minigolf.freegamestore.online",
+      "repo": "freegamestore-online/minigolf",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Sanjiv19",
+      "creatorGithub": "Sanjiv19",
+      "firstPublished": "2026-07-15T17:26:54.618Z"
     }
   ]
 }
