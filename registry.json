@@ -1740,6 +1740,22 @@
       "developer": "Sanjiv19",
       "creatorGithub": "Sanjiv19",
       "firstPublished": "2026-07-15T17:26:54.618Z"
+    },
+    {
+      "id": "angry-birds3",
+      "name": "Angry Birds",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Angry Birds",
+      "appUrl": "https://angry-birds3.freegamestore.online",
+      "repo": "freegamestore-online/angry-birds3",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "buildlessonline-spec",
+      "creatorGithub": "buildlessonline-spec",
+      "engine": "pixi",
+      "firstPublished": "2026-07-17T07:07:25.694Z"
     }
   ]
 }
