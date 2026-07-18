@@ -273,13 +273,9 @@ header .container {
   margin: 0 0 0.3rem;
 }
 .create-cta-text p { color: var(--muted); margin: 0; font-size: 0.98rem; }
-/* Persistent header CTA (always visible, next to the theme toggle). */
-.header-right .nav-create { margin-right: 0.15rem; }
 @media (max-width: 600px) {
   .create-cta { flex-direction: column; align-items: stretch; text-align: center; }
   .create-cta .btn-lg { justify-content: center; }
-  /* On mobile the header stays uncluttered — the banner carries the CTA. */
-  .header-right .nav-create { display: none; }
 }
 
 /* Promote auth.js's Sign-in link to the same blue pill in the storefront header. */

@@ -543,12 +543,6 @@ cd my-game && pnpm install && pnpm dev</code></pre>
       </div>
     </div>
   </footer>
-  <script>
-    const t = localStorage.getItem('fgs:theme');
-    if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.dataset.theme = 'dark';
-    }
-  </script>
   <script src="/theme.js" defer></script>
 </body>
 </html>

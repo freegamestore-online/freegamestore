@@ -330,6 +330,12 @@ function renderPublishedLine(history) {
   return `<p class="published-line">${parts.join(' &middot; ')}</p>`;
 }
 
+// Clean generated directories without touching dist/docs, which is built by the
+// docs package in a separate step.
+for (const dir of ['games', 'u', 'ai', 'audit-fixture']) {
+  fs.rmSync(path.join(DIST, dir), { recursive: true, force: true });
+}
+
 // Ensure dist directories exist
 fs.mkdirSync(path.join(DIST, 'games'), { recursive: true });
 
@@ -369,7 +375,7 @@ const cardStylesVersion = crypto.createHash('sha256')
 // against the new SRI hash → the browser blocks it (this bricked theme.js →
 // dead nav site-wide). Appending ?v=<hash> makes each version a fresh cache
 // key, so the served bytes always match the integrity hash. No purge needed.
-const JS_ASSETS = ['theme.js', 'search.js', 'storefront.js', 'detail-page.js'];
+const JS_ASSETS = ['theme.js', 'search.js', 'storefront.js', 'detail-page.js', 'quality.js', 'get-started.js', 'leaderboard.js'];
 const jsVersions = Object.fromEntries(
   JS_ASSETS.map((f) => [f, crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, f))).digest('hex').slice(0, 12)]),
 );
@@ -378,8 +384,14 @@ function replaceAssetVersions(html) {
   return html
     .replaceAll('{{STYLE_VERSION}}', styleVersion)
     .replaceAll('{{CARD_STYLES_VERSION}}', cardStylesVersion)
-    // Cache-bust SRI'd local scripts: src="/theme.js" → src="/theme.js?v=<hash>".
-    .replace(/src="\/(theme|search|storefront|detail-page)\.js"/g, (_m, name) => `src="/${name}.js?v=${jsVersions[`${name}.js`]}"`);
+    // Cache-bust local stylesheet links, including copied static pages that
+    // still use href="style.css" rather than the template placeholder.
+    .replace(/href="\/?style\.css"/g, `href="/style.css?v=${styleVersion}"`)
+    // Cache-bust local scripts: src="/theme.js" → src="/theme.js?v=<hash>".
+    .replace(/src="\/([a-z0-9-]+)\.js"/g, (m, name) => {
+      const version = jsVersions[`${name}.js`];
+      return version ? `src="/${name}.js?v=${version}"` : m;
+    });
 }
 
 function creatorGithubForGame(game) {
@@ -994,7 +1006,12 @@ fs.writeFileSync(path.join(DIST, '_redirects'), [
 filesToCopy.forEach(file => {
   const src = path.join(ROOT, file);
   if (fs.existsSync(src)) {
-    fs.copyFileSync(src, path.join(DIST, file));
+    const dest = path.join(DIST, file);
+    if (file.endsWith('.html')) {
+      fs.writeFileSync(dest, replaceAssetVersions(fs.readFileSync(src, 'utf8')));
+    } else {
+      fs.copyFileSync(src, dest);
+    }
   }
 });
 
@@ -1015,7 +1032,8 @@ if (fs.existsSync(aiSrcDir)) {
   fs.mkdirSync(aiDestDir, { recursive: true });
   for (const f of fs.readdirSync(aiSrcDir)) {
     if (!f.endsWith('.html')) continue;
-    fs.copyFileSync(path.join(aiSrcDir, f), path.join(aiDestDir, f));
+    const src = path.join(aiSrcDir, f);
+    fs.writeFileSync(path.join(aiDestDir, f), replaceAssetVersions(fs.readFileSync(src, 'utf8')));
   }
 }
 

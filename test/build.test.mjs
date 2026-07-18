@@ -8,7 +8,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { execFileSync, spawnSync } from "node:child_process";
-import { existsSync, mkdtempSync, readFileSync, writeFileSync, rmSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, writeFileSync, rmSync, statSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -33,6 +33,8 @@ function runBuild() {
   const tmp = mkdtempSync(join(tmpdir(), "fgs-build-test-"));
   const tmpRegistry = join(tmp, "registry.json");
   const tmpDist = join(tmp, "dist");
+  mkdirSync(join(tmpDist, "games"), { recursive: true });
+  writeFileSync(join(tmpDist, "games", "stale-game.html"), "stale");
 
   const realRegistry = JSON.parse(readFileSync(REAL_REGISTRY, "utf8"));
   realRegistry.games.push({
@@ -59,6 +61,16 @@ function runBuild() {
   return { tmp, tmpDist, registry: realRegistry };
 }
 
+function listFiles(dir, suffix) {
+  const out = [];
+  for (const entry of readdirSync(dir)) {
+    const full = join(dir, entry);
+    if (statSync(full).isDirectory()) out.push(...listFiles(full, suffix));
+    else if (full.endsWith(suffix)) out.push(full);
+  }
+  return out;
+}
+
 test("build.js writes index.html containing every game id", () => {
   const { tmp, tmpDist, registry } = runBuild();
   try {
@@ -70,6 +82,15 @@ test("build.js writes index.html containing every game id", () => {
         `index.html is missing game id "${g.id}"`,
       );
     }
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
+test("build.js removes stale generated game detail pages", () => {
+  const { tmp, tmpDist } = runBuild();
+  try {
+    assert.equal(existsSync(join(tmpDist, "games", "stale-game.html")), false);
   } finally {
     rmSync(tmp, { recursive: true, force: true });
   }
@@ -439,6 +460,27 @@ test("every local <script src> has a valid SRI integrity attribute", () => {
       assert.match(tag, /src="\/[^"]+\.js\?v=[a-f0-9]+"/, `<script> not cache-busted: ${tag}`);
     }
     assert.ok(!/{{SRI_[A-Z_]+}}/.test(indexHtml), "unsubstituted SRI placeholder");
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
+test("all built HTML cache-busts local scripts and stylesheet links", () => {
+  const { tmp, tmpDist } = runBuild();
+  try {
+    const htmlFiles = listFiles(tmpDist, ".html");
+    assert.ok(htmlFiles.length > 10, `expected many built HTML files, found ${htmlFiles.length}`);
+    for (const file of htmlFiles) {
+      const html = readFileSync(file, "utf8");
+      const localScripts = html.match(/<script\s+src="\/[^"]+\.js(?:\?v=[a-f0-9]+)?"[^>]*>/g) || [];
+      for (const tag of localScripts) {
+        assert.match(tag, /src="\/[^"]+\.js\?v=[a-f0-9]+"/, `${file}: <script> not cache-busted: ${tag}`);
+      }
+      const styleLinks = html.match(/<link\s+[^>]*href="\/?style\.css(?:\?v=[a-f0-9]+)?"[^>]*>/g) || [];
+      for (const tag of styleLinks) {
+        assert.match(tag, /href="\/style\.css\?v=[a-f0-9]+"/, `${file}: style.css not cache-busted: ${tag}`);
+      }
+    }
   } finally {
     rmSync(tmp, { recursive: true, force: true });
   }
