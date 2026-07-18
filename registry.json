@@ -1756,6 +1756,22 @@
       "creatorGithub": "buildlessonline-spec",
       "engine": "pixi",
       "firstPublished": "2026-07-17T07:07:25.694Z"
+    },
+    {
+      "id": "beat-star2",
+      "name": "Beat star",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Beat star",
+      "appUrl": "https://beat-star2.freegamestore.online",
+      "repo": "freegamestore-online/beat-star2",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "buildlessonline-spec",
+      "creatorGithub": "buildlessonline-spec",
+      "engine": "kaplay",
+      "firstPublished": "2026-07-18T03:59:25.507Z"
     }
   ]
 }
