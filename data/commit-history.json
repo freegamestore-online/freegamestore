@@ -2680,36 +2680,36 @@
   "freegamestore-online/angrry": {
     "meta": {
       "created_at": "2026-07-05T00:31:57Z",
-      "pushed_at": "2026-07-11T16:41:47Z"
+      "pushed_at": "2026-07-18T07:32:43Z"
     },
     "commits": [
       {
-        "sha": "ba8bedf976133c1c5fd9c4c239ce3b9f0f61ef04",
-        "html_url": "https://github.com/freegamestore-online/angrry/commit/ba8bedf976133c1c5fd9c4c239ce3b9f0f61ef04",
+        "sha": "f7bf73149292b6fb67250642cc579ee2b5d4ad9c",
+        "html_url": "https://github.com/freegamestore-online/angrry/commit/f7bf73149292b6fb67250642cc579ee2b5d4ad9c",
         "commit": {
-          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "message": "Fix bird freeze: loop never pauses, instant level transitions, clean phase management, fixed physics signature",
           "author": {
-            "date": "2026-07-11T16:41:47Z"
+            "date": "2026-07-18T07:32:42Z"
           }
         }
       },
       {
-        "sha": "a7d1b7684d9841672876bfb7d95cd05c817e2fed",
-        "html_url": "https://github.com/freegamestore-online/angrry/commit/a7d1b7684d9841672876bfb7d95cd05c817e2fed",
+        "sha": "c6747fa9ff2349df8c3e6bca46dc416c968a2225",
+        "html_url": "https://github.com/freegamestore-online/angrry/commit/c6747fa9ff2349df8c3e6bca46dc416c968a2225",
         "commit": {
-          "message": "Fix aiming range + flight distance: responsive drag cap, more launch power, floatier/bouncier physics",
+          "message": "Auto-advance levels instantly — no tap required, next level loads immediately after all pigs are cleared",
           "author": {
-            "date": "2026-07-05T12:29:28Z"
+            "date": "2026-07-18T03:59:12Z"
           }
         }
       },
       {
-        "sha": "9d2da82cf60d9f75bdc406d63d26b32e9dff1ffb",
-        "html_url": "https://github.com/freegamestore-online/angrry/commit/9d2da82cf60d9f75bdc406d63d26b32e9dff1ffb",
+        "sha": "cbd688ca2016ad5b55b9ab51473eb8e76ad728a1",
+        "html_url": "https://github.com/freegamestore-online/angrry/commit/cbd688ca2016ad5b55b9ab51473eb8e76ad728a1",
         "commit": {
-          "message": "Build full Angry Birds game with physics, slingshot, 4 bird types, 5 levels, special abilities",
+          "message": "Remove level clear pop-up — next level loads instantly with no interruption",
           "author": {
-            "date": "2026-07-05T03:31:26Z"
+            "date": "2026-07-18T03:57:06Z"
           }
         }
       }
@@ -3592,9 +3592,29 @@
   "freegamestore-online/angry-birds3": {
     "meta": {
       "created_at": "2026-07-17T07:07:26Z",
-      "pushed_at": "2026-07-18T00:15:03Z"
+      "pushed_at": "2026-07-18T06:57:25Z"
     },
     "commits": [
+      {
+        "sha": "1d55e96acd5d080a78f994800d16501d90b4a54b",
+        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/1d55e96acd5d080a78f994800d16501d90b4a54b",
+        "commit": {
+          "message": "Fix layout: everything fits on screen, no camera pan, smaller bodies, correct proportions",
+          "author": {
+            "date": "2026-07-18T06:57:24Z"
+          }
+        }
+      },
+      {
+        "sha": "0e6ec16308cac804ca1a2c3f78880c677ffdc517",
+        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/0e6ec16308cac804ca1a2c3f78880c677ffdc517",
+        "commit": {
+          "message": "Fix coordinate system: pure screen-space physics, ground always visible, correct bird launch direction",
+          "author": {
+            "date": "2026-07-18T04:13:26Z"
+          }
+        }
+      },
       {
         "sha": "6b134fc6046421cdc563b6292a3895f7b1d96954",
         "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/6b134fc6046421cdc563b6292a3895f7b1d96954",
@@ -3604,24 +3624,42 @@
             "date": "2026-07-18T00:15:03Z"
           }
         }
-      },
+      }
+    ]
+  },
+  "freegamestore-online/beat-star2": {
+    "meta": {
+      "created_at": "2026-07-18T03:59:26Z",
+      "pushed_at": "2026-07-18T04:08:58Z"
+    },
+    "commits": [
       {
-        "sha": "536e44ea0cf19181efedfdd0454832f5f9ebf3b5",
-        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/536e44ea0cf19181efedfdd0454832f5f9ebf3b5",
+        "sha": "079f1bd5d1ce77d754c2cbad62a159044af0d317",
+        "html_url": "https://github.com/freegamestore-online/beat-star2/commit/079f1bd5d1ce77d754c2cbad62a159044af0d317",
         "commit": {
-          "message": "Full Angry Birds game: slingshot physics, 5 levels, pigs, structures, scoring",
+          "message": "feat: full Beat Star v1 — 4-lane rhythm game, BPM ramp, combos, particles, menu + game-over, high score, keyboard + touch input",
           "author": {
-            "date": "2026-07-17T07:11:25Z"
+            "date": "2026-07-18T04:08:57Z"
           }
         }
       },
       {
-        "sha": "60d6ae61a0be5d789202252753bc1a8b40fba67a",
-        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/60d6ae61a0be5d789202252753bc1a8b40fba67a",
+        "sha": "d6f9c383fe5ddacba5ddc53186d070d1df034d64",
+        "html_url": "https://github.com/freegamestore-online/beat-star2/commit/d6f9c383fe5ddacba5ddc53186d070d1df034d64",
         "commit": {
-          "message": "Set game name to \"Angry Birds\"",
+          "message": "feat: first playable Beat Star — rhythm tap game with lanes, combos, BPM ramp, particles, menu + game over scenes",
           "author": {
-            "date": "2026-07-17T07:07:42Z"
+            "date": "2026-07-18T04:02:33Z"
+          }
+        }
+      },
+      {
+        "sha": "c82b7f8ffb51ee3a4b00b8477dcccfe5c2f04f1a",
+        "html_url": "https://github.com/freegamestore-online/beat-star2/commit/c82b7f8ffb51ee3a4b00b8477dcccfe5c2f04f1a",
+        "commit": {
+          "message": "Set game name to \"Beat star\"",
+          "author": {
+            "date": "2026-07-18T03:59:36Z"
           }
         }
       }
