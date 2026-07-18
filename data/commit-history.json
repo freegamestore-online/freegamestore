@@ -2452,9 +2452,19 @@
   "freegamestore-online/slicing-game": {
     "meta": {
       "created_at": "2026-07-03T23:12:06Z",
-      "pushed_at": "2026-07-11T16:41:33Z"
+      "pushed_at": "2026-07-18T04:15:07Z"
     },
     "commits": [
+      {
+        "sha": "c1f4fb361671f0dbff54f339eca9848e7a1e2572",
+        "html_url": "https://github.com/freegamestore-online/slicing-game/commit/c1f4fb361671f0dbff54f339eca9848e7a1e2572",
+        "commit": {
+          "message": "Beat Star v1 — 4-lane rhythm game with 3 songs, combo multipliers, star ratings, and polished 3D visuals",
+          "author": {
+            "date": "2026-07-18T04:15:07Z"
+          }
+        }
+      },
       {
         "sha": "45e43f7ae2be9e7e89c9f00b964661dcb01e7dff",
         "html_url": "https://github.com/freegamestore-online/slicing-game/commit/45e43f7ae2be9e7e89c9f00b964661dcb01e7dff",
@@ -2472,16 +2482,6 @@
           "message": "Complete rebuild: 3D knife slicing game with Three.js - jumping knife that slices fruits, avoids bombs, combo system, 3 lanes, particle effects, score popups",
           "author": {
             "date": "2026-07-03T23:16:47Z"
-          }
-        }
-      },
-      {
-        "sha": "9b1f7c5793b42642120461fb5416240281161fe5",
-        "html_url": "https://github.com/freegamestore-online/slicing-game/commit/9b1f7c5793b42642120461fb5416240281161fe5",
-        "commit": {
-          "message": "Set game name to \"Slicing\"",
-          "author": {
-            "date": "2026-07-03T23:12:18Z"
           }
         }
       }
@@ -2718,36 +2718,36 @@
   "freegamestore-online/frofrogjumping": {
     "meta": {
       "created_at": "2026-07-04T04:39:22Z",
-      "pushed_at": "2026-07-11T16:41:42Z"
+      "pushed_at": "2026-07-18T09:18:39Z"
     },
     "commits": [
       {
-        "sha": "d31e4b85e7b969310759984bd3cf93a5457c9b6d",
-        "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/d31e4b85e7b969310759984bd3cf93a5457c9b6d",
+        "sha": "6e943b1f10f5040e6f221b9333ec22ae06c68a1e",
+        "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/6e943b1f10f5040e6f221b9333ec22ae06c68a1e",
         "commit": {
-          "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
+          "message": "Full rewrite: all game state in refs (no useState in loop), proper frog rendering with legs/eyes, tap-to-jump, seamless level advance, no dialogs, no instructions",
           "author": {
-            "date": "2026-07-11T16:41:41Z"
+            "date": "2026-07-18T09:18:39Z"
           }
         }
       },
       {
-        "sha": "a859e586fb0706024e2f2136ea317d5981b2dd07",
-        "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/a859e586fb0706024e2f2136ea317d5981b2dd07",
+        "sha": "7e3bd278988222cb2b6b8238c834cd06ac78238a",
+        "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/7e3bd278988222cb2b6b8238c834cd06ac78238a",
         "commit": {
-          "message": "Rival frogs now hop randomly to nearby empty islands; collision with rival triggers fish gulp",
+          "message": "Remove instructions and dialogs. Levels auto-advance with no dialog. Import hooks as named imports (fix build error).",
           "author": {
-            "date": "2026-07-04T09:06:04Z"
+            "date": "2026-07-18T08:53:34Z"
           }
         }
       },
       {
-        "sha": "b15e070383174bdf533e83fa89c1c91a8419a62b",
-        "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/b15e070383174bdf533e83fa89c1c91a8419a62b",
+        "sha": "fdc5aed9c9e95c608b28a62d56b166f8bec94ed0",
+        "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/fdc5aed9c9e95c608b28a62d56b166f8bec94ed0",
         "commit": {
-          "message": "Rework: tap-to-jump, rival frogs on pads, bird predators, fish gulp mechanic",
+          "message": "Removed instruction overlay and levels dialog; game now advances to next level automatically with no dialogs.",
           "author": {
-            "date": "2026-07-04T05:04:38Z"
+            "date": "2026-07-18T08:52:14Z"
           }
         }
       }
@@ -3592,9 +3592,29 @@
   "freegamestore-online/angry-birds3": {
     "meta": {
       "created_at": "2026-07-17T07:07:26Z",
-      "pushed_at": "2026-07-18T06:57:25Z"
+      "pushed_at": "2026-07-18T09:22:50Z"
     },
     "commits": [
+      {
+        "sha": "dfc54244cc2c4a54d70198461e20c780ee9d8424",
+        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/dfc54244cc2c4a54d70198461e20c780ee9d8424",
+        "commit": {
+          "message": "Fix blank screen: proper container sizing, canvas fills div, all game elements visible on screen",
+          "author": {
+            "date": "2026-07-18T09:22:50Z"
+          }
+        }
+      },
+      {
+        "sha": "79dad457ab7404f6cf2ad531bc782d16b1495540",
+        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/79dad457ab7404f6cf2ad531bc782d16b1495540",
+        "commit": {
+          "message": "Fix: fit everything in a small centered scene, no camera pan, visible birds, pigs, blocks. Blue background, compact layout.",
+          "author": {
+            "date": "2026-07-18T08:39:29Z"
+          }
+        }
+      },
       {
         "sha": "1d55e96acd5d080a78f994800d16501d90b4a54b",
         "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/1d55e96acd5d080a78f994800d16501d90b4a54b",
@@ -3602,26 +3622,6 @@
           "message": "Fix layout: everything fits on screen, no camera pan, smaller bodies, correct proportions",
           "author": {
             "date": "2026-07-18T06:57:24Z"
-          }
-        }
-      },
-      {
-        "sha": "0e6ec16308cac804ca1a2c3f78880c677ffdc517",
-        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/0e6ec16308cac804ca1a2c3f78880c677ffdc517",
-        "commit": {
-          "message": "Fix coordinate system: pure screen-space physics, ground always visible, correct bird launch direction",
-          "author": {
-            "date": "2026-07-18T04:13:26Z"
-          }
-        }
-      },
-      {
-        "sha": "6b134fc6046421cdc563b6292a3895f7b1d96954",
-        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/6b134fc6046421cdc563b6292a3895f7b1d96954",
-        "commit": {
-          "message": "Fix bird launch: separate screen-space sling layer from scrolling world layer",
-          "author": {
-            "date": "2026-07-18T00:15:03Z"
           }
         }
       }
