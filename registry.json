@@ -1869,6 +1869,22 @@
       "creatorGithub": "thatonenerdykidinclass",
       "engine": "kaplay",
       "firstPublished": "2026-07-19T04:51:07.698Z"
+    },
+    {
+      "id": "good-pizza-great-pizza",
+      "name": "Good pizza great pizza",
+      "category": "casual",
+      "icon": "🍕",
+      "iconBg": "#ffae52",
+      "description": "Good pizza great pizza",
+      "appUrl": "https://good-pizza-great-pizza.freegamestore.online",
+      "repo": "freegamestore-online/good-pizza-great-pizza",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "kaitlyn531",
+      "creatorGithub": "kaitlyn531",
+      "engine": "kaplay",
+      "firstPublished": "2026-07-19T04:54:50.920Z"
     }
   ]
 }
