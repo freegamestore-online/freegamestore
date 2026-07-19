@@ -1773,6 +1773,22 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "kaplay",
       "firstPublished": "2026-07-19T03:58:08.645Z"
+    },
+    {
+      "id": "cart",
+      "name": "Cart",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Cart",
+      "appUrl": "https://cart.freegamestore.online",
+      "repo": "freegamestore-online/cart",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "buildlessonline-spec",
+      "creatorGithub": "buildlessonline-spec",
+      "engine": "babylon",
+      "firstPublished": "2026-07-19T03:59:15.065Z"
     }
   ]
 }
