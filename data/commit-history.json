@@ -3592,36 +3592,36 @@
   "freegamestore-online/angry-birds3": {
     "meta": {
       "created_at": "2026-07-17T07:07:26Z",
-      "pushed_at": "2026-07-18T09:22:50Z"
+      "pushed_at": "2026-07-19T00:05:34Z"
     },
     "commits": [
       {
-        "sha": "dfc54244cc2c4a54d70198461e20c780ee9d8424",
-        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/dfc54244cc2c4a54d70198461e20c780ee9d8424",
+        "sha": "3aa29c7ab4857a31e9288d51c9ba0c7db561ea41",
+        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/3aa29c7ab4857a31e9288d51c9ba0c7db561ea41",
         "commit": {
-          "message": "Fix blank screen: proper container sizing, canvas fills div, all game elements visible on screen",
+          "message": "Fix: pigs and blocks start static, only wake on bird impact",
           "author": {
-            "date": "2026-07-18T09:22:50Z"
+            "date": "2026-07-19T00:29:29Z"
           }
         }
       },
       {
-        "sha": "79dad457ab7404f6cf2ad531bc782d16b1495540",
-        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/79dad457ab7404f6cf2ad531bc782d16b1495540",
+        "sha": "7508c61fafaf294b0f57f67889471cb2a12fb7c2",
+        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/7508c61fafaf294b0f57f67889471cb2a12fb7c2",
         "commit": {
-          "message": "Fix: fit everything in a small centered scene, no camera pan, visible birds, pigs, blocks. Blue background, compact layout.",
+          "message": "Fix vertical scroll: html/body/root locked to 100% height, Shell uses 100% not h-screen, canvas container overflow:hidden, no page expansion",
           "author": {
-            "date": "2026-07-18T08:39:29Z"
+            "date": "2026-07-19T00:05:34Z"
           }
         }
       },
       {
-        "sha": "1d55e96acd5d080a78f994800d16501d90b4a54b",
-        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/1d55e96acd5d080a78f994800d16501d90b4a54b",
+        "sha": "12bbb3eed10fe15fbcfc9272245094afdc6639c5",
+        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/12bbb3eed10fe15fbcfc9272245094afdc6639c5",
         "commit": {
-          "message": "Fix layout: everything fits on screen, no camera pan, smaller bodies, correct proportions",
+          "message": "Fix sling height (bird at 65% not 80%), clamp drag left-only and above ground so aiming up always fires correctly",
           "author": {
-            "date": "2026-07-18T06:57:24Z"
+            "date": "2026-07-18T23:40:58Z"
           }
         }
       }
