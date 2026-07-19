@@ -1853,6 +1853,22 @@
       "creatorGithub": "EnaKat-hairballs",
       "engine": "phaser",
       "firstPublished": "2026-07-19T04:50:21.285Z"
+    },
+    {
+      "id": "crossy-school",
+      "name": "Crossy School",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Crossy School",
+      "appUrl": "https://crossy-school.freegamestore.online",
+      "repo": "freegamestore-online/crossy-school",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "thatonenerdykidinclass",
+      "creatorGithub": "thatonenerdykidinclass",
+      "engine": "kaplay",
+      "firstPublished": "2026-07-19T04:51:07.698Z"
     }
   ]
 }
