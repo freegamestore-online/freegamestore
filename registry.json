@@ -1869,6 +1869,22 @@
       "creatorGithub": "kaitlyn531",
       "engine": "kaplay",
       "firstPublished": "2026-07-19T04:54:50.920Z"
+    },
+    {
+      "id": "dont-look-up",
+      "name": "Don't Look Up",
+      "category": "arcade",
+      "icon": "👁️‍🗨️",
+      "iconBg": "#131a1f",
+      "description": "Keep your eyes on the floor. Something is watching you from above.",
+      "appUrl": "https://dont-look-up.freegamestore.online",
+      "repo": "freegamestore-online/dont-look-up",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "imhappyamber-design",
+      "creatorGithub": "imhappyamber-design",
+      "engine": "kaplay",
+      "firstPublished": "2026-07-19T04:56:55.460Z"
     }
   ]
 }
