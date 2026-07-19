@@ -1901,6 +1901,22 @@
       "creatorGithub": "Pumpkin12345678910",
       "engine": "phaser",
       "firstPublished": "2026-07-19T05:17:07.618Z"
+    },
+    {
+      "id": "obby",
+      "name": "Obby",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "A fun and addictive climbing game",
+      "appUrl": "https://obby.freegamestore.online",
+      "repo": "freegamestore-online/obby",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "ElliT-coder",
+      "creatorGithub": "ElliT-coder",
+      "engine": "kaplay",
+      "firstPublished": "2026-07-19T05:32:36.692Z"
     }
   ]
 }
