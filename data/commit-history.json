@@ -2718,9 +2718,19 @@
   "freegamestore-online/frofrogjumping": {
     "meta": {
       "created_at": "2026-07-04T04:39:22Z",
-      "pushed_at": "2026-07-18T09:18:39Z"
+      "pushed_at": "2026-07-19T10:09:21Z"
     },
     "commits": [
+      {
+        "sha": "e04288bca123189613c1e181cf770e65db856e4e",
+        "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/e04288bca123189613c1e181cf770e65db856e4e",
+        "commit": {
+          "message": "Fix: all state in refs, delayed resize so canvas has real dimensions, frog always visible, tap-to-jump with proper hit detection, no instructions, no dialogs",
+          "author": {
+            "date": "2026-07-19T10:09:21Z"
+          }
+        }
+      },
       {
         "sha": "6e943b1f10f5040e6f221b9333ec22ae06c68a1e",
         "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/6e943b1f10f5040e6f221b9333ec22ae06c68a1e",
@@ -2738,16 +2748,6 @@
           "message": "Remove instructions and dialogs. Levels auto-advance with no dialog. Import hooks as named imports (fix build error).",
           "author": {
             "date": "2026-07-18T08:53:34Z"
-          }
-        }
-      },
-      {
-        "sha": "fdc5aed9c9e95c608b28a62d56b166f8bec94ed0",
-        "html_url": "https://github.com/freegamestore-online/frofrogjumping/commit/fdc5aed9c9e95c608b28a62d56b166f8bec94ed0",
-        "commit": {
-          "message": "Removed instruction overlay and levels dialog; game now advances to next level automatically with no dialogs.",
-          "author": {
-            "date": "2026-07-18T08:52:14Z"
           }
         }
       }
@@ -3554,9 +3554,19 @@
   "freegamestore-online/minigolf": {
     "meta": {
       "created_at": "2026-07-15T17:26:55Z",
-      "pushed_at": "2026-07-15T17:43:14Z"
+      "pushed_at": "2026-07-19T11:53:31Z"
     },
     "commits": [
+      {
+        "sha": "5d5d1c66e121b429ee9d27ddd000ef3c4dc920ee",
+        "html_url": "https://github.com/freegamestore-online/minigolf/commit/5d5d1c66e121b429ee9d27ddd000ef3c4dc920ee",
+        "commit": {
+          "message": "fix mobile canvas aspect ratio",
+          "author": {
+            "date": "2026-07-19T11:53:16Z"
+          }
+        }
+      },
       {
         "sha": "028bdaedeb8874e27251dc7a35c4410f61174985",
         "html_url": "https://github.com/freegamestore-online/minigolf/commit/028bdaedeb8874e27251dc7a35c4410f61174985",
@@ -3574,16 +3584,6 @@
           "message": "add freegamestore deploy workflow",
           "author": {
             "date": "2026-07-15T17:27:54Z"
-          }
-        }
-      },
-      {
-        "sha": "13bf34d934c169adb205d355715b5e552d2a9a63",
-        "html_url": "https://github.com/freegamestore-online/minigolf/commit/13bf34d934c169adb205d355715b5e552d2a9a63",
-        "commit": {
-          "message": "Set game name to \"Minigolf\"",
-          "author": {
-            "date": "2026-07-15T17:27:09Z"
           }
         }
       }
@@ -3668,9 +3668,19 @@
   "freegamestore-online/cart": {
     "meta": {
       "created_at": "2026-07-19T03:59:15Z",
-      "pushed_at": "2026-07-19T04:02:06Z"
+      "pushed_at": "2026-07-19T10:08:18Z"
     },
     "commits": [
+      {
+        "sha": "782daf8fe08debdb4e144e572e62df91d446fc49",
+        "html_url": "https://github.com/freegamestore-online/cart/commit/782daf8fe08debdb4e144e572e62df91d446fc49",
+        "commit": {
+          "message": "feat: full Cart endless runner — 3-lane track, coins, obstacles, HUD, mobile buttons, game over screen",
+          "author": {
+            "date": "2026-07-19T10:08:17Z"
+          }
+        }
+      },
       {
         "sha": "7b4bac07b3e8fffdefe92c6e946b5eddc47e0057",
         "html_url": "https://github.com/freegamestore-online/cart/commit/7b4bac07b3e8fffdefe92c6e946b5eddc47e0057",
@@ -3688,16 +3698,6 @@
           "message": "Build Cart — FreeGameStore AI agent",
           "author": {
             "date": "2026-07-19T04:01:03Z"
-          }
-        }
-      },
-      {
-        "sha": "11a8641c675f818a3830f611d929f381dae136eb",
-        "html_url": "https://github.com/freegamestore-online/cart/commit/11a8641c675f818a3830f611d929f381dae136eb",
-        "commit": {
-          "message": "Set game name to \"Cart\"",
-          "author": {
-            "date": "2026-07-19T03:59:34Z"
           }
         }
       }
@@ -4076,9 +4076,19 @@
   "freegamestore-online/dont-look-up": {
     "meta": {
       "created_at": "2026-07-19T04:56:56Z",
-      "pushed_at": "2026-07-19T07:03:44Z"
+      "pushed_at": "2026-07-19T09:03:43Z"
     },
     "commits": [
+      {
+        "sha": "c16ed59ee13c4498de065d3f8be31c534aeea78a",
+        "html_url": "https://github.com/freegamestore-online/dont-look-up/commit/c16ed59ee13c4498de065d3f8be31c534aeea78a",
+        "commit": {
+          "message": "Full horror overhaul: BFS monster AI stalking, flashlight blackouts, chromatic aberration glitch jumpscare, DON'T LOOK DOWN rule inversion, panting audio, ghost decoys, near-miss screech blasts",
+          "author": {
+            "date": "2026-07-19T09:03:43Z"
+          }
+        }
+      },
       {
         "sha": "aea7f0782cebf98beae02a30f8e1ea4ebd5079ec",
         "html_url": "https://github.com/freegamestore-online/dont-look-up/commit/aea7f0782cebf98beae02a30f8e1ea4ebd5079ec",
@@ -4096,16 +4106,6 @@
           "message": "Clearer maze: walls rgb(72,68,78) with bevel highlights, floors rgb(28-34) with grout lines, flashlight radius+brightness boosted, darkness opacity reduced to 0.88",
           "author": {
             "date": "2026-07-19T06:57:24Z"
-          }
-        }
-      },
-      {
-        "sha": "5e4e76a58283e11cd093f0adc2ace16714b0f407",
-        "html_url": "https://github.com/freegamestore-online/dont-look-up/commit/5e4e76a58283e11cd093f0adc2ace16714b0f407",
-        "commit": {
-          "message": "Enhanced: faster movement, dynamic ambient audio threat modulation, breathing flashlight rings, pixelating static jitter, dust mote particles, glowing terminal HUD, strict 50/50 touch split",
-          "author": {
-            "date": "2026-07-19T06:52:45Z"
           }
         }
       }
