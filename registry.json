@@ -1837,6 +1837,22 @@
       "creatorGithub": "ElliT-coder",
       "engine": "kaplay",
       "firstPublished": "2026-07-19T04:37:32.349Z"
+    },
+    {
+      "id": "digicritter",
+      "name": "DigiCritter",
+      "category": "casual",
+      "icon": "🐈",
+      "iconBg": "#65c3ec",
+      "description": "Fun game where you take care of a pet of your choice.",
+      "appUrl": "https://digicritter.freegamestore.online",
+      "repo": "freegamestore-online/digicritter",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "EnaKat-hairballs",
+      "creatorGithub": "EnaKat-hairballs",
+      "engine": "phaser",
+      "firstPublished": "2026-07-19T04:50:21.285Z"
     }
   ]
 }
