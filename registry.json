@@ -1757,6 +1757,22 @@
       "creatorGithub": "buildlessonline-spec",
       "engine": "kaplay",
       "firstPublished": "2026-07-18T03:59:25.507Z"
+    },
+    {
+      "id": "fruitydrop",
+      "name": "FruityDrop",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "A simple but addictive game!",
+      "appUrl": "https://fruitydrop.freegamestore.online",
+      "repo": "freegamestore-online/fruitydrop",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "BUDDY-KIWI-BERRY",
+      "creatorGithub": "BUDDY-KIWI-BERRY",
+      "engine": "kaplay",
+      "firstPublished": "2026-07-19T03:58:08.645Z"
     }
   ]
 }
