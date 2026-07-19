@@ -1791,22 +1791,6 @@
       "firstPublished": "2026-07-19T03:59:15.065Z"
     },
     {
-      "id": "don-t-look-up",
-      "name": "Don't Look Up",
-      "category": "arcade",
-      "icon": "👁️‍🗨️",
-      "iconBg": "#17171d",
-      "description": "Keep your eyes on the floor. Something is watching you from above...",
-      "appUrl": "https://don-t-look-up.freegamestore.online",
-      "repo": "freegamestore-online/don-t-look-up",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "imhappyamber-design",
-      "creatorGithub": "imhappyamber-design",
-      "engine": "kaplay",
-      "firstPublished": "2026-07-19T04:33:45.793Z"
-    },
-    {
       "id": "fish-life",
       "name": "fish life",
       "category": "casual",
