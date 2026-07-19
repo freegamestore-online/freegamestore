@@ -217,6 +217,22 @@ test("one bad entry does not take down the valid games", () => {
   }
 });
 
+test("public registry excludes test fixtures", () => {
+  const { ok, stderr, tmp, tmpDist } = runBuildWithRegistry([
+    { ...VALID_GAME, id: "public-game", name: "Public Game" },
+    { ...VALID_GAME, id: "e2e-create-smoke-test", name: "Hidden Canary" },
+    { ...VALID_GAME, id: "flagged-fixture", name: "Hidden Fixture", test: true },
+  ]);
+  try {
+    assert.equal(ok, true, stderr);
+    const publicRegistry = JSON.parse(readFileSync(join(tmpDist, "registry.json"), "utf8"));
+    const ids = publicRegistry.games.map((g) => g.id);
+    assert.deepEqual(ids, ["public-game"]);
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
 test("creatorGithub generates developer card, profile page, and author chip", () => {
   const { ok, tmp, tmpDist, stderr } = runBuildWithRegistry([
     { ...VALID_GAME, creatorGithub: "octocat" },

@@ -902,6 +902,10 @@ ${sitemapEntries.join('\n')}
 `;
 
 fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap);
+fs.writeFileSync(
+  path.join(DIST, 'registry.json'),
+  JSON.stringify({ ...registry, games }, null, 2) + '\n',
+);
 
 // --- Copy static assets ---
 
@@ -914,7 +918,6 @@ const filesToCopy = [
   'quality.js',
   'get-started.js',
   'leaderboard.js',
-  'registry.json',
   'favicon.svg',
   'apple-touch-icon.png',
   'icon-192.png',
