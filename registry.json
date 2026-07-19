@@ -1885,6 +1885,22 @@
       "creatorGithub": "imhappyamber-design",
       "engine": "kaplay",
       "firstPublished": "2026-07-19T04:56:55.460Z"
+    },
+    {
+      "id": "phone-case-diy",
+      "name": "Phone Case DIY",
+      "category": "casual",
+      "icon": "📱",
+      "iconBg": "#1a2e26",
+      "description": "Phone Case DIY",
+      "appUrl": "https://phone-case-diy.freegamestore.online",
+      "repo": "freegamestore-online/phone-case-diy",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Pumpkin12345678910",
+      "creatorGithub": "Pumpkin12345678910",
+      "engine": "phaser",
+      "firstPublished": "2026-07-19T05:17:07.618Z"
     }
   ]
 }
