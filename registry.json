@@ -1933,6 +1933,22 @@
       "creatorGithub": "ElliT-coder",
       "engine": "kaplay",
       "firstPublished": "2026-07-19T06:07:47.307Z"
+    },
+    {
+      "id": "seasons-matter",
+      "name": "Seasons Matter",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Seasons Matter",
+      "appUrl": "https://seasons-matter.freegamestore.online",
+      "repo": "freegamestore-online/seasons-matter",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "kaitlyn531",
+      "creatorGithub": "kaitlyn531",
+      "engine": "3d",
+      "firstPublished": "2026-07-19T06:14:06.812Z"
     }
   ]
 }
