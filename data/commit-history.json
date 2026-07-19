@@ -2756,9 +2756,19 @@
   "freegamestore-online/bladeblast": {
     "meta": {
       "created_at": "2026-07-04T03:09:10Z",
-      "pushed_at": "2026-07-11T16:41:36Z"
+      "pushed_at": "2026-07-19T07:33:43Z"
     },
     "commits": [
+      {
+        "sha": "79ef873c36d8c8850b6ad0bb071eaad51b5c5553",
+        "html_url": "https://github.com/freegamestore-online/bladeblast/commit/79ef873c36d8c8850b6ad0bb071eaad51b5c5553",
+        "commit": {
+          "message": "Add medicine system: 💊 drops from sky, collect up to 3, press E or tap button to heal +1 life",
+          "author": {
+            "date": "2026-07-19T07:33:42Z"
+          }
+        }
+      },
       {
         "sha": "63d2f88c54377e6a3f68ca279fcf4af6dd92488d",
         "html_url": "https://github.com/freegamestore-online/bladeblast/commit/63d2f88c54377e6a3f68ca279fcf4af6dd92488d",
@@ -2776,16 +2786,6 @@
           "message": "Fix unplayable movement: the animal could barely move (~106 px/s cap)\n\nMOVE_FRICTION 0.78/frame halved velocity every ~3 frames, settling at\n~106 px/s while bombs fall at 120-200+ px/s — dodging was impossible and\nthe character felt glued to the ground. Retuned (accel 5200, friction\n0.85, max 460) → snappy ~400 px/s movement with quick stop.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
           "author": {
             "date": "2026-07-11T06:40:11Z"
-          }
-        }
-      },
-      {
-        "sha": "eec83864c98fcb670d8ff8e8f3d6e4fe82d65e4b",
-        "html_url": "https://github.com/freegamestore-online/bladeblast/commit/eec83864c98fcb670d8ff8e8f3d6e4fe82d65e4b",
-        "commit": {
-          "message": "Full redesign: animals on land, bombs fall from sky, stars collectible, star bank + rarity upgrade system",
-          "author": {
-            "date": "2026-07-04T03:42:49Z"
           }
         }
       }
@@ -3660,6 +3660,452 @@
           "message": "Set game name to \"Beat star\"",
           "author": {
             "date": "2026-07-18T03:59:36Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/cart": {
+    "meta": {
+      "created_at": "2026-07-19T03:59:15Z",
+      "pushed_at": "2026-07-19T04:02:06Z"
+    },
+    "commits": [
+      {
+        "sha": "7b4bac07b3e8fffdefe92c6e946b5eddc47e0057",
+        "html_url": "https://github.com/freegamestore-online/cart/commit/7b4bac07b3e8fffdefe92c6e946b5eddc47e0057",
+        "commit": {
+          "message": "Playable first version: Cart game with Babylon.js, responsive controls, coins, obstacles, kid-friendly UI, and local high scores.",
+          "author": {
+            "date": "2026-07-19T04:02:05Z"
+          }
+        }
+      },
+      {
+        "sha": "b9af6b241c86d33a739487de7921af1f319bbec4",
+        "html_url": "https://github.com/freegamestore-online/cart/commit/b9af6b241c86d33a739487de7921af1f319bbec4",
+        "commit": {
+          "message": "Build Cart — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-07-19T04:01:03Z"
+          }
+        }
+      },
+      {
+        "sha": "11a8641c675f818a3830f611d929f381dae136eb",
+        "html_url": "https://github.com/freegamestore-online/cart/commit/11a8641c675f818a3830f611d929f381dae136eb",
+        "commit": {
+          "message": "Set game name to \"Cart\"",
+          "author": {
+            "date": "2026-07-19T03:59:34Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/fruitydrop": {
+    "meta": {
+      "created_at": "2026-07-19T03:58:09Z",
+      "pushed_at": "2026-07-19T04:03:46Z"
+    },
+    "commits": [
+      {
+        "sha": "163656ee2de57e05be958f32323292e5136d48d8",
+        "html_url": "https://github.com/freegamestore-online/fruitydrop/commit/163656ee2de57e05be958f32323292e5136d48d8",
+        "commit": {
+          "message": "New mechanic: move and drop fruit into a jar, merge same fruits into bigger fruit.",
+          "author": {
+            "date": "2026-07-19T04:03:46Z"
+          }
+        }
+      },
+      {
+        "sha": "30e8fcf77244a31d53f3599a7cdc77da5a7ebc23",
+        "html_url": "https://github.com/freegamestore-online/fruitydrop/commit/30e8fcf77244a31d53f3599a7cdc77da5a7ebc23",
+        "commit": {
+          "message": "Build FruityDrop — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-07-19T03:59:02Z"
+          }
+        }
+      },
+      {
+        "sha": "6fc14ec8b3fb15dad4661ffb1e2e7950aef4a966",
+        "html_url": "https://github.com/freegamestore-online/fruitydrop/commit/6fc14ec8b3fb15dad4661ffb1e2e7950aef4a966",
+        "commit": {
+          "message": "Set game name to \"FruityDrop\"",
+          "author": {
+            "date": "2026-07-19T03:58:22Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/crossy-school": {
+    "meta": {
+      "created_at": "2026-07-19T04:51:08Z",
+      "pushed_at": "2026-07-19T06:51:52Z"
+    },
+    "commits": [
+      {
+        "sha": "4857512f92647cb058e2f686b531bbb516f3286b",
+        "html_url": "https://github.com/freegamestore-online/crossy-school/commit/4857512f92647cb058e2f686b531bbb516f3286b",
+        "commit": {
+          "message": "Fix mobile steering controls",
+          "author": {
+            "date": "2026-07-19T06:51:50Z"
+          }
+        }
+      },
+      {
+        "sha": "dba566c6482117d96082ef9715656a3905a66645",
+        "html_url": "https://github.com/freegamestore-online/crossy-school/commit/dba566c6482117d96082ef9715656a3905a66645",
+        "commit": {
+          "message": "Fix Crossy School deploy build",
+          "author": {
+            "date": "2026-07-19T05:17:26Z"
+          }
+        }
+      },
+      {
+        "sha": "b1dbe83bee4afffb3da78dd5c5d721650642305d",
+        "html_url": "https://github.com/freegamestore-online/crossy-school/commit/b1dbe83bee4afffb3da78dd5c5d721650642305d",
+        "commit": {
+          "message": "Fix import and types in game.ts, ensure playable level and avatar logic for deploy.",
+          "author": {
+            "date": "2026-07-19T04:59:15Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/stack-pack": {
+    "meta": {
+      "created_at": "2026-07-19T04:37:33Z",
+      "pushed_at": "2026-07-19T05:07:23Z"
+    },
+    "commits": [
+      {
+        "sha": "7099f4d8019acf16299898720c59d81bbe6e034d",
+        "html_url": "https://github.com/freegamestore-online/stack-pack/commit/7099f4d8019acf16299898720c59d81bbe6e034d",
+        "commit": {
+          "message": "Full rework: shape slides itself L/R at top, wall with matching gap rises from below, tap to drop into gap, miss=game over, trophy progress per level",
+          "author": {
+            "date": "2026-07-19T05:07:22Z"
+          }
+        }
+      },
+      {
+        "sha": "8f827dd9a4e5b067c6516369b61bc0354978a91c",
+        "html_url": "https://github.com/freegamestore-online/stack-pack/commit/8f827dd9a4e5b067c6516369b61bc0354978a91c",
+        "commit": {
+          "message": "Full rework: shape slides at top, wall with matching gap rises from bottom, drop to fit, miss = game over, trophy progress, all modes/levels",
+          "author": {
+            "date": "2026-07-19T05:00:06Z"
+          }
+        }
+      },
+      {
+        "sha": "ccb054451ed73a1d12a5cc91250747bc25e752e6",
+        "html_url": "https://github.com/freegamestore-online/stack-pack/commit/ccb054451ed73a1d12a5cc91250747bc25e752e6",
+        "commit": {
+          "message": "Rewrite: piece slides at top, wall rows scroll UP from bottom, drop into gap mechanic, ghost preview, all modes/levels",
+          "author": {
+            "date": "2026-07-19T04:56:20Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/focus": {
+    "meta": {
+      "created_at": "2026-07-19T06:07:48Z",
+      "pushed_at": "2026-07-19T06:32:19Z"
+    },
+    "commits": [
+      {
+        "sha": "849eaaee1d35c495a21d9a9e15f81af9423f9856",
+        "html_url": "https://github.com/freegamestore-online/focus/commit/849eaaee1d35c495a21d9a9e15f81af9423f9856",
+        "commit": {
+          "message": "Focus timer app: mode picker, timer selector, ambient Web Audio music with toggle",
+          "author": {
+            "date": "2026-07-19T06:32:18Z"
+          }
+        }
+      },
+      {
+        "sha": "cc4baf738b0fea4305c9ac5eb03d25b40502383d",
+        "html_url": "https://github.com/freegamestore-online/focus/commit/cc4baf738b0fea4305c9ac5eb03d25b40502383d",
+        "commit": {
+          "message": "Rebuild as focus timer app: mode picker, timer, ambient music via Web Audio API",
+          "author": {
+            "date": "2026-07-19T06:17:31Z"
+          }
+        }
+      },
+      {
+        "sha": "030f10588a745a06e53711e21005601467901768",
+        "html_url": "https://github.com/freegamestore-online/focus/commit/030f10588a745a06e53711e21005601467901768",
+        "commit": {
+          "message": "Set game name to \"Focus\"",
+          "author": {
+            "date": "2026-07-19T06:08:00Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/phone-case-diy": {
+    "meta": {
+      "created_at": "2026-07-19T05:17:08Z",
+      "pushed_at": "2026-07-19T06:13:31Z"
+    },
+    "commits": [
+      {
+        "sha": "38b7deb5fabcbd2ba8118b8a12d79f1eda3340c8",
+        "html_url": "https://github.com/freegamestore-online/phone-case-diy/commit/38b7deb5fabcbd2ba8118b8a12d79f1eda3340c8",
+        "commit": {
+          "message": "Stickers: enforce placement inside case only, block camera lens, show friendly feedback messages",
+          "author": {
+            "date": "2026-07-19T06:13:30Z"
+          }
+        }
+      },
+      {
+        "sha": "5b9309ea459b5f40ed3db98f50d8adc09bec6042",
+        "html_url": "https://github.com/freegamestore-online/phone-case-diy/commit/5b9309ea459b5f40ed3db98f50d8adc09bec6042",
+        "commit": {
+          "message": "Add sticker scene: 20 emoji stickers, tap to place on case, undo button, stickers carry through to finish screen",
+          "author": {
+            "date": "2026-07-19T05:31:31Z"
+          }
+        }
+      },
+      {
+        "sha": "4465bd067ab88e761abd2f61e13ae028dd1798c6",
+        "html_url": "https://github.com/freegamestore-online/phone-case-diy/commit/4465bd067ab88e761abd2f61e13ae028dd1798c6",
+        "commit": {
+          "message": "Build full Phone Case DIY game: menu, shape picker, sponge cleaning (5s timer), 10-color painting, finish screen with confetti",
+          "author": {
+            "date": "2026-07-19T05:26:12Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/good-pizza-great-pizza": {
+    "meta": {
+      "created_at": "2026-07-19T04:54:52Z",
+      "pushed_at": "2026-07-19T06:20:17Z"
+    },
+    "commits": [
+      {
+        "sha": "85fae400aeb1ceacad984781a5b8814803fe8c07",
+        "html_url": "https://github.com/freegamestore-online/good-pizza-great-pizza/commit/85fae400aeb1ceacad984781a5b8814803fe8c07",
+        "commit": {
+          "message": "Fix smoke test: remove emoji/unicode from KAPLAY text labels",
+          "author": {
+            "date": "2026-07-19T06:20:16Z"
+          }
+        }
+      },
+      {
+        "sha": "a17e054c4e1df4d207cdfe8e116c969fddce96f0",
+        "html_url": "https://github.com/freegamestore-online/good-pizza-great-pizza/commit/a17e054c4e1df4d207cdfe8e116c969fddce96f0",
+        "commit": {
+          "message": "Fix smoke test: remove emoji from text nodes, clean up labels, guard palette array access",
+          "author": {
+            "date": "2026-07-19T06:16:56Z"
+          }
+        }
+      },
+      {
+        "sha": "40bd6fd26d7a2d44e46a0829d12ab6cf30de3c89",
+        "html_url": "https://github.com/freegamestore-online/good-pizza-great-pizza/commit/40bd6fd26d7a2d44e46a0829d12ab6cf30de3c89",
+        "commit": {
+          "message": "Add freegamestore.online link to pass smoke test; full 4-quadrant pizza game",
+          "author": {
+            "date": "2026-07-19T05:32:19Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/fish-life": {
+    "meta": {
+      "created_at": "2026-07-19T04:35:46Z",
+      "pushed_at": "2026-07-19T06:36:06Z"
+    },
+    "commits": [
+      {
+        "sha": "35fb06f19fe2e177d28acbb2d07f4edb957ee94b",
+        "html_url": "https://github.com/freegamestore-online/fish-life/commit/35fb06f19fe2e177d28acbb2d07f4edb957ee94b",
+        "commit": {
+          "message": "Full pet sim: tank maintenance (dirt/O2/hunger meters), mood system, coins, shop with decorations/skins/backgrounds, fish chases food, bubbles, death scenes",
+          "author": {
+            "date": "2026-07-19T06:36:05Z"
+          }
+        }
+      },
+      {
+        "sha": "9e7f22f9c2dd7e29f46875dbbb45d4d42dedc338",
+        "html_url": "https://github.com/freegamestore-online/fish-life/commit/9e7f22f9c2dd7e29f46875dbbb45d4d42dedc338",
+        "commit": {
+          "message": "Food drifts down into bowl, fish chases it; vertical ellipse idle swimming; fixed all build errors",
+          "author": {
+            "date": "2026-07-19T06:27:03Z"
+          }
+        }
+      },
+      {
+        "sha": "964bf842ea1807919413bd99fd4cf7f77034b77d",
+        "html_url": "https://github.com/freegamestore-online/fish-life/commit/964bf842ea1807919413bd99fd4cf7f77034b77d",
+        "commit": {
+          "message": "Fish swims in circles, 5-stage feeding expressions, cooldown timer, detailed bowl + fish anatomy, explode scene with flesh splatter",
+          "author": {
+            "date": "2026-07-19T06:16:31Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/digicritter": {
+    "meta": {
+      "created_at": "2026-07-19T04:50:22Z",
+      "pushed_at": "2026-07-19T05:07:55Z"
+    },
+    "commits": [
+      {
+        "sha": "033cb27c90e833ff7b497243523c1e774652e2a6",
+        "html_url": "https://github.com/freegamestore-online/digicritter/commit/033cb27c90e833ff7b497243523c1e774652e2a6",
+        "commit": {
+          "message": "Add animal select screen (dog/cat/rabbit/bird/hamster) + draw each as real animal with Phaser graphics, Feed/Play/Walk/Sleep actions, mood expressions, particle bursts",
+          "author": {
+            "date": "2026-07-19T05:07:54Z"
+          }
+        }
+      },
+      {
+        "sha": "27cbf2149450c9e867700a56fecb1b8bf75384ac",
+        "html_url": "https://github.com/freegamestore-online/digicritter/commit/27cbf2149450c9e867700a56fecb1b8bf75384ac",
+        "commit": {
+          "message": "Build full DigiCritter virtual pet game — feed, play, sleep, heal your critter with animated face expressions, stat bars, particle bursts, and localStorage persistence",
+          "author": {
+            "date": "2026-07-19T04:52:41Z"
+          }
+        }
+      },
+      {
+        "sha": "e97e6a6e71e6b9b7868f79119b4b58e6bc6974e7",
+        "html_url": "https://github.com/freegamestore-online/digicritter/commit/e97e6a6e71e6b9b7868f79119b4b58e6bc6974e7",
+        "commit": {
+          "message": "Set game name to \"DigiCritter\"",
+          "author": {
+            "date": "2026-07-19T04:50:33Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/obby": {
+    "meta": {
+      "created_at": "2026-07-19T05:32:37Z",
+      "pushed_at": "2026-07-19T05:32:48Z"
+    },
+    "commits": [
+      {
+        "sha": "2fa00a779e7e3bd0c3adcfdac2fa629ab58a50a7",
+        "html_url": "https://github.com/freegamestore-online/obby/commit/2fa00a779e7e3bd0c3adcfdac2fa629ab58a50a7",
+        "commit": {
+          "message": "Set game name to \"Obby\"",
+          "author": {
+            "date": "2026-07-19T05:32:48Z"
+          }
+        }
+      },
+      {
+        "sha": "fffda8ef1e63808c531db389d56f48087ea7f3a1",
+        "html_url": "https://github.com/freegamestore-online/obby/commit/fffda8ef1e63808c531db389d56f48087ea7f3a1",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-19T05:32:40Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/seasons-matter": {
+    "meta": {
+      "created_at": "2026-07-19T06:14:07Z",
+      "pushed_at": "2026-07-19T06:24:32Z"
+    },
+    "commits": [
+      {
+        "sha": "8bac45185adc907f81ed08f1433cc8a39a38f084",
+        "html_url": "https://github.com/freegamestore-online/seasons-matter/commit/8bac45185adc907f81ed08f1433cc8a39a38f084",
+        "commit": {
+          "message": "Build Seasons Matter — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-07-19T06:24:31Z"
+          }
+        }
+      },
+      {
+        "sha": "5906437078eb6a8949fdf2551dec05b4040bfb14",
+        "html_url": "https://github.com/freegamestore-online/seasons-matter/commit/5906437078eb6a8949fdf2551dec05b4040bfb14",
+        "commit": {
+          "message": "Set game name to \"Seasons Matter\"",
+          "author": {
+            "date": "2026-07-19T06:14:20Z"
+          }
+        }
+      },
+      {
+        "sha": "a2a9ce3dc66ee62ebe6a7502af48745472f5f19a",
+        "html_url": "https://github.com/freegamestore-online/seasons-matter/commit/a2a9ce3dc66ee62ebe6a7502af48745472f5f19a",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-19T06:14:10Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/dont-look-up": {
+    "meta": {
+      "created_at": "2026-07-19T04:56:56Z",
+      "pushed_at": "2026-07-19T07:03:44Z"
+    },
+    "commits": [
+      {
+        "sha": "aea7f0782cebf98beae02a30f8e1ea4ebd5079ec",
+        "html_url": "https://github.com/freegamestore-online/dont-look-up/commit/aea7f0782cebf98beae02a30f8e1ea4ebd5079ec",
+        "commit": {
+          "message": "Escalating difficulty: drifting shadow zones, shrinking panic flashlight with tap-to-refill, ghost KEY/EXIT decoys, canvas shake + tile flicker near threats, exponential audio tempo panic over time",
+          "author": {
+            "date": "2026-07-19T07:03:43Z"
+          }
+        }
+      },
+      {
+        "sha": "ed709cc6453004d1447794c134aab58e2746418b",
+        "html_url": "https://github.com/freegamestore-online/dont-look-up/commit/ed709cc6453004d1447794c134aab58e2746418b",
+        "commit": {
+          "message": "Clearer maze: walls rgb(72,68,78) with bevel highlights, floors rgb(28-34) with grout lines, flashlight radius+brightness boosted, darkness opacity reduced to 0.88",
+          "author": {
+            "date": "2026-07-19T06:57:24Z"
+          }
+        }
+      },
+      {
+        "sha": "5e4e76a58283e11cd093f0adc2ace16714b0f407",
+        "html_url": "https://github.com/freegamestore-online/dont-look-up/commit/5e4e76a58283e11cd093f0adc2ace16714b0f407",
+        "commit": {
+          "message": "Enhanced: faster movement, dynamic ambient audio threat modulation, breathing flashlight rings, pixelating static jitter, dust mote particles, glowing terminal HUD, strict 50/50 touch split",
+          "author": {
+            "date": "2026-07-19T06:52:45Z"
           }
         }
       }
