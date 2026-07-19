@@ -1821,6 +1821,22 @@
       "creatorGithub": "PATRICIA-AU",
       "engine": "kaplay",
       "firstPublished": "2026-07-19T04:35:45.195Z"
+    },
+    {
+      "id": "stack-pack",
+      "name": "Stack pack",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#e48686",
+      "description": "A fun and addictive on-time game",
+      "appUrl": "https://stack-pack.freegamestore.online",
+      "repo": "freegamestore-online/stack-pack",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "ElliT-coder",
+      "creatorGithub": "ElliT-coder",
+      "engine": "kaplay",
+      "firstPublished": "2026-07-19T04:37:32.349Z"
     }
   ]
 }
