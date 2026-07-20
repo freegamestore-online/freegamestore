@@ -1949,23 +1949,6 @@
       "creatorGithub": "kaitlyn531",
       "engine": "3d",
       "firstPublished": "2026-07-19T06:14:06.812Z"
-    },
-    {
-      "id": "e2e-create-mrsv7ddj-gjdhl1-test",
-      "name": "Updated Canary e2e-create-mrsv7ddj-gjdhl1-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-07-20T06:50:42.454Z",
-      "appUrl": "https://e2e-create-mrsv7ddj-gjdhl1-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mrsv7ddj-gjdhl1-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-07-20T06:50:17.672Z",
-      "updatedAt": "2026-07-20T06:50:43.320Z"
     }
   ]
 }
