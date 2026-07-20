@@ -1949,6 +1949,22 @@
       "creatorGithub": "ElliT-coder",
       "engine": "kaplay",
       "firstPublished": "2026-07-20T08:08:26.659Z"
+    },
+    {
+      "id": "e2e-create-mrtu3oid-dskq9d-test",
+      "name": "Create Canary e2e-create-mrtu3oid-dskq9d-test",
+      "category": "platform",
+      "icon": "T",
+      "iconBg": "#ecfdf5",
+      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
+      "appUrl": "https://e2e-create-mrtu3oid-dskq9d-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-mrtu3oid-dskq9d-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-07-20T23:07:06.347Z"
     }
   ]
 }
