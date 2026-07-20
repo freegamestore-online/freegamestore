@@ -1949,23 +1949,6 @@
       "creatorGithub": "ElliT-coder",
       "engine": "kaplay",
       "firstPublished": "2026-07-20T08:08:26.659Z"
-    },
-    {
-      "id": "e2e-create-mrtghmrv-59wz8y-test",
-      "name": "Updated Canary e2e-create-mrtghmrv-59wz8y-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-07-20T16:46:23.709Z",
-      "appUrl": "https://e2e-create-mrtghmrv-59wz8y-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mrtghmrv-59wz8y-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-07-20T16:46:07.348Z",
-      "updatedAt": "2026-07-20T16:46:23.988Z"
     }
   ]
 }
