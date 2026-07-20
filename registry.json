@@ -1919,22 +1919,6 @@
       "firstPublished": "2026-07-19T05:32:36.692Z"
     },
     {
-      "id": "focus",
-      "name": "Focus",
-      "category": "casual",
-      "icon": "🎧",
-      "iconBg": "#fdf991",
-      "description": "A app that helps people focus by setting a timer and playing calm music",
-      "appUrl": "https://focus.freegamestore.online",
-      "repo": "freegamestore-online/focus",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "ElliT-coder",
-      "creatorGithub": "ElliT-coder",
-      "engine": "kaplay",
-      "firstPublished": "2026-07-19T06:07:47.307Z"
-    },
-    {
       "id": "seasons-matter",
       "name": "Seasons Matter",
       "category": "casual",
