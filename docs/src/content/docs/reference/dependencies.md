@@ -99,7 +99,7 @@ telemetry isn't allowed on the free side.
 
 - **The SDK** bumps with the platform. Bump `@freegamestore/games` in
   `web/package.json` manually, then `pnpm install` to refresh the lockfile.
-  Watch the [changelog](https://github.com/freegamestore-online/platform/releases)
+  Watch the [changelog](https://github.com/freegamestore-online/public/releases)
   for what changed. Each minor bump can be breaking until 1.0.
 - **React** stays on 19 until the platform itself moves. Don't unilaterally
   upgrade to React 20 — the SDK is built against 19.

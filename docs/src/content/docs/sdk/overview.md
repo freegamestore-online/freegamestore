@@ -59,4 +59,4 @@ The full pattern is documented in
 
 The SDK is a single semver-pinned package. Breaking changes bump the minor
 (we're still pre-1.0). Each scaffolded game pins `^0.13.0` so a minor bump
-upgrades cleanly. Major bumps surface in [the changelog](https://github.com/freegamestore-online/platform/releases).
+upgrades cleanly. Major bumps surface in [the changelog](https://github.com/freegamestore-online/public/releases).

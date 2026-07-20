@@ -22,7 +22,7 @@
 - [Game Catalog](https://freegamestore.online/): Browse all published games.
 - [Leaderboard](https://freegamestore.online/leaderboard.html): Cross-game leaderboard rankings.
 - [Quality Reports](https://freegamestore.online/quality.html): Automated quality scores for every game.
-- [Platform Source](https://github.com/freegamestore-online/platform): Games SDK, CLI, and compliance source code.
+- [Platform Source](https://github.com/freegamestore-online/public): Games SDK, CLI, and compliance source code.
 
 ## Optional
 
