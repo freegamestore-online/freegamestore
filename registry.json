@@ -1949,6 +1949,22 @@
       "creatorGithub": "kaitlyn531",
       "engine": "3d",
       "firstPublished": "2026-07-19T06:14:06.812Z"
+    },
+    {
+      "id": "stacky-birdy",
+      "name": "stacky birdy",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#f8ff94",
+      "description": "a fun and addictive on time game ",
+      "appUrl": "https://stacky-birdy.freegamestore.online",
+      "repo": "freegamestore-online/stacky-birdy",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "ElliT-coder",
+      "creatorGithub": "ElliT-coder",
+      "engine": "kaplay",
+      "firstPublished": "2026-07-20T08:08:26.659Z"
     }
   ]
 }
