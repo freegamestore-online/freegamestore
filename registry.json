@@ -1949,6 +1949,22 @@
       "creatorGithub": "kaitlyn531",
       "engine": "3d",
       "firstPublished": "2026-07-19T06:14:06.812Z"
+    },
+    {
+      "id": "e2e-create-mrsrsrfz-d3u03u-test",
+      "name": "Create Canary e2e-create-mrsrsrfz-d3u03u-test",
+      "category": "platform",
+      "icon": "T",
+      "iconBg": "#ecfdf5",
+      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
+      "appUrl": "https://e2e-create-mrsrsrfz-d3u03u-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-mrsrsrfz-d3u03u-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-07-20T05:14:50.078Z"
     }
   ]
 }
