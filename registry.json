@@ -1949,6 +1949,22 @@
       "creatorGithub": "kaitlyn531",
       "engine": "3d",
       "firstPublished": "2026-07-19T06:14:06.812Z"
+    },
+    {
+      "id": "e2e-create-mrstx5ey-zw3vht-test",
+      "name": "Headed E2E e2e-create-mrstx5ey-zw3vht-test",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Visible headed production e2e canary game.",
+      "appUrl": "https://e2e-create-mrstx5ey-zw3vht-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-mrstx5ey-zw3vht-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-07-20T06:14:30.612Z"
     }
   ]
 }
