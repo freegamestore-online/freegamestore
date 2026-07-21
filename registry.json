@@ -1949,6 +1949,22 @@
       "creatorGithub": "ElliT-coder",
       "engine": "kaplay",
       "firstPublished": "2026-07-20T08:08:26.659Z"
+    },
+    {
+      "id": "e2e-create-mruwuumh-90i6yt-test",
+      "name": "Browser Canary e2e-create-mruwuumh-90i6yt-test",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Production browser e2e canary game.",
+      "appUrl": "https://e2e-create-mruwuumh-90i6yt-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-mruwuumh-90i6yt-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-07-21T17:11:54.101Z"
     }
   ]
 }
