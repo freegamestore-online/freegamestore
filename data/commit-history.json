@@ -2794,9 +2794,19 @@
   "freegamestore-online/decaying-tic-tac-toe": {
     "meta": {
       "created_at": "2026-07-04T03:40:59Z",
-      "pushed_at": "2026-07-14T08:54:04Z"
+      "pushed_at": "2026-07-22T15:17:15Z"
     },
     "commits": [
+      {
+        "sha": "2c511a981cf3f6eab89f46c38a86fc947cbc2966",
+        "html_url": "https://github.com/freegamestore-online/decaying-tic-tac-toe/commit/2c511a981cf3f6eab89f46c38a86fc947cbc2966",
+        "commit": {
+          "message": "Fix mobile layout: board could get pushed off-screen by dock content\n\nOn real phones the bottom status dock (full status text + New Game\nbutton, ~360px tall) left too little vertical room for the aspect-\nsquare board, which doesn't shrink on its own — rows 2-3 ended up\nclipped past the viewport (reported via screenshot from the team).\n\n- Board width is now capped by min(100%, 24rem, 58vh) via inline\n  style (Tailwind's arbitrary min() with mixed units wasn't applying\n  reliably), so the board always shrinks to fit available height\n  instead of overflowing it.\n- Added a compact mode to GameControls/ControlPanel for the mobile\n  dock: single-line status + inline New Game button instead of the\n  full paragraph explanation (still available via the topbar's rules\n  info icon), cutting dock height from ~360px to ~80px.\n\nVerified by measuring actual layout (getBoundingClientRect) at 390x844,\n390x600, and a stress case of 375x500 — board and dock both fit with\nzero overflow at every size, board sizes back up normally once height\nisn't the binding constraint.",
+          "author": {
+            "date": "2026-07-22T15:16:33Z"
+          }
+        }
+      },
       {
         "sha": "52ff85791c2667bc20e98562b1b60d6df26a5648",
         "html_url": "https://github.com/freegamestore-online/decaying-tic-tac-toe/commit/52ff85791c2667bc20e98562b1b60d6df26a5648",
@@ -2814,16 +2824,6 @@
           "message": "Fix decay trigger to match spec: decay only when board would draw\n\nDecay was firing on a fixed every-4-turns schedule regardless of how\nmuch open board remained, which doesn't match the game's premise\n(oldest move disappears only when the board would otherwise draw).\nNow decay triggers exactly when a move fills the board with no\nwinner, removing the single globally-oldest piece and freeing a cell.\nAlso fixes a broken pnpm-workspace.yaml placeholder (allowBuilds ->\nonlyBuiltDependencies) and updates the decay countdown/expiring-cell\nUI to reflect open-cell count instead of the old fixed schedule.",
           "author": {
             "date": "2026-07-13T15:00:15Z"
-          }
-        }
-      },
-      {
-        "sha": "a1d710b787be2e03a2becda843e31d2689e21e41",
-        "html_url": "https://github.com/freegamestore-online/decaying-tic-tac-toe/commit/a1d710b787be2e03a2becda843e31d2689e21e41",
-        "commit": {
-          "message": "finish app",
-          "author": {
-            "date": "2026-07-04T03:25:10Z"
           }
         }
       }
