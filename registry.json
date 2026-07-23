@@ -1949,23 +1949,6 @@
       "creatorGithub": "ElliT-coder",
       "engine": "kaplay",
       "firstPublished": "2026-07-20T08:08:26.659Z"
-    },
-    {
-      "id": "e2e-create-mrxqxol7-rvhrs0-test",
-      "name": "Updated Canary e2e-create-mrxqxol7-rvhrs0-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-07-23T16:49:48.748Z",
-      "appUrl": "https://e2e-create-mrxqxol7-rvhrs0-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mrxqxol7-rvhrs0-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-07-23T16:49:33.685Z",
-      "updatedAt": "2026-07-23T16:49:48.873Z"
     }
   ]
 }
