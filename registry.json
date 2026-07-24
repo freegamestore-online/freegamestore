@@ -1949,22 +1949,6 @@
       "creatorGithub": "ElliT-coder",
       "engine": "kaplay",
       "firstPublished": "2026-07-20T08:08:26.659Z"
-    },
-    {
-      "id": "e2e-create-mrz75v7a-vfuahm-test",
-      "name": "Browser Canary e2e-create-mrz75v7a-vfuahm-test",
-      "category": "casual",
-      "icon": "🎮",
-      "iconBg": "#1a2e26",
-      "description": "Production browser e2e canary game.",
-      "appUrl": "https://e2e-create-mrz75v7a-vfuahm-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mrz75v7a-vfuahm-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-07-24T17:11:27.854Z"
     }
   ]
 }
