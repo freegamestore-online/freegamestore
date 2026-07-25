@@ -1949,23 +1949,6 @@
       "creatorGithub": "ElliT-coder",
       "engine": "kaplay",
       "firstPublished": "2026-07-20T08:08:26.659Z"
-    },
-    {
-      "id": "e2e-create-ms0kj9m8-1rz0sh-test",
-      "name": "Updated Canary e2e-create-ms0kj9m8-1rz0sh-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-07-25T16:13:56.049Z",
-      "appUrl": "https://e2e-create-ms0kj9m8-1rz0sh-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-ms0kj9m8-1rz0sh-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-07-25T16:13:40.549Z",
-      "updatedAt": "2026-07-25T16:13:56.224Z"
     }
   ]
 }
