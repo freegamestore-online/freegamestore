@@ -1949,22 +1949,6 @@
       "creatorGithub": "ElliT-coder",
       "engine": "kaplay",
       "firstPublished": "2026-07-20T08:08:26.659Z"
-    },
-    {
-      "id": "e2e-create-ms0l8pq1-63q839-test",
-      "name": "Browser Canary e2e-create-ms0l8pq1-63q839-test",
-      "category": "casual",
-      "icon": "🎮",
-      "iconBg": "#1a2e26",
-      "description": "Production browser e2e canary game.",
-      "appUrl": "https://e2e-create-ms0l8pq1-63q839-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-ms0l8pq1-63q839-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-07-25T16:33:21.348Z"
     }
   ]
 }
