@@ -1949,6 +1949,21 @@
       "creatorGithub": "ElliT-coder",
       "engine": "kaplay",
       "firstPublished": "2026-07-20T08:08:26.659Z"
+    },
+    {
+      "id": "lavaman-and-icegirl",
+      "name": "Lavaman And Icegirl",
+      "category": "brain-training",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "A puzzle platformer about balancing lava and ice in cooperative levels.",
+      "appUrl": "https://lavaman-and-icegirl.freegamestore.online",
+      "repo": "freegamestore-online/lavaman-and-icegirl",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Advika123456",
+      "creatorGithub": "Advika123456",
+      "firstPublished": "2026-07-26T11:54:01.129Z"
     }
   ]
 }
