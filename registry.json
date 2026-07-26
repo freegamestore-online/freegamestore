@@ -1967,11 +1967,11 @@
     },
     {
       "id": "e2e-create-ms202bqw-valoxv-test",
-      "name": "Create Canary e2e-create-ms202bqw-valoxv-test",
-      "category": "platform",
-      "icon": "T",
-      "iconBg": "#ecfdf5",
-      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
+      "name": "Updated Canary e2e-create-ms202bqw-valoxv-test",
+      "category": "arcade",
+      "icon": "U",
+      "iconBg": "#dbeafe",
+      "description": "Updated by production e2e at 2026-07-26T16:16:23.682Z",
       "appUrl": "https://e2e-create-ms202bqw-valoxv-test.freegamestore.online",
       "repo": "freegamestore-online/e2e-create-ms202bqw-valoxv-test",
       "hostedOn": "r2",
@@ -1979,7 +1979,8 @@
       "developer": "serge-ivo",
       "creatorGithub": "serge-ivo",
       "engine": "canvas",
-      "firstPublished": "2026-07-26T16:16:10.562Z"
+      "firstPublished": "2026-07-26T16:16:10.562Z",
+      "updatedAt": "2026-07-26T16:16:23.829Z"
     }
   ]
 }
