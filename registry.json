@@ -1964,23 +1964,6 @@
       "developer": "Advika123456",
       "creatorGithub": "Advika123456",
       "firstPublished": "2026-07-26T11:54:01.129Z"
-    },
-    {
-      "id": "e2e-create-ms4w9edk-u6f5kg-test",
-      "name": "Updated Canary e2e-create-ms4w9edk-u6f5kg-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-07-28T16:53:18.537Z",
-      "appUrl": "https://e2e-create-ms4w9edk-u6f5kg-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-ms4w9edk-u6f5kg-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-07-28T16:53:02.475Z",
-      "updatedAt": "2026-07-28T16:53:18.729Z"
     }
   ]
 }
