@@ -1964,6 +1964,22 @@
       "developer": "Advika123456",
       "creatorGithub": "Advika123456",
       "firstPublished": "2026-07-26T11:54:01.129Z"
+    },
+    {
+      "id": "e2e-create-ms4wtg1d-vd76kz-test",
+      "name": "Browser Canary e2e-create-ms4wtg1d-vd76kz-test",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Production browser e2e canary game.",
+      "appUrl": "https://e2e-create-ms4wtg1d-vd76kz-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-ms4wtg1d-vd76kz-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-07-28T17:08:28.214Z"
     }
   ]
 }
