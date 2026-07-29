@@ -1964,6 +1964,22 @@
       "developer": "Advika123456",
       "creatorGithub": "Advika123456",
       "firstPublished": "2026-07-26T11:54:01.129Z"
+    },
+    {
+      "id": "e2e-create-ms6b8quu-vqn5hl-test",
+      "name": "Create Canary e2e-create-ms6b8quu-vqn5hl-test",
+      "category": "platform",
+      "icon": "T",
+      "iconBg": "#ecfdf5",
+      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
+      "appUrl": "https://e2e-create-ms6b8quu-vqn5hl-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-ms6b8quu-vqn5hl-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-07-29T16:40:10.777Z"
     }
   ]
 }
