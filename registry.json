@@ -1967,11 +1967,11 @@
     },
     {
       "id": "e2e-create-ms7r411r-mid6uc-test",
-      "name": "Create Canary e2e-create-ms7r411r-mid6uc-test",
-      "category": "platform",
-      "icon": "T",
-      "iconBg": "#ecfdf5",
-      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
+      "name": "Updated Canary e2e-create-ms7r411r-mid6uc-test",
+      "category": "arcade",
+      "icon": "U",
+      "iconBg": "#dbeafe",
+      "description": "Updated by production e2e at 2026-07-30T16:52:32.419Z",
       "appUrl": "https://e2e-create-ms7r411r-mid6uc-test.freegamestore.online",
       "repo": "freegamestore-online/e2e-create-ms7r411r-mid6uc-test",
       "hostedOn": "r2",
@@ -1979,7 +1979,8 @@
       "developer": "serge-ivo",
       "creatorGithub": "serge-ivo",
       "engine": "canvas",
-      "firstPublished": "2026-07-30T16:52:12.705Z"
+      "firstPublished": "2026-07-30T16:52:12.705Z",
+      "updatedAt": "2026-07-30T16:52:32.942Z"
     }
   ]
 }
