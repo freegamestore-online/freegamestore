@@ -1964,23 +1964,6 @@
       "developer": "Advika123456",
       "creatorGithub": "Advika123456",
       "firstPublished": "2026-07-26T11:54:01.129Z"
-    },
-    {
-      "id": "e2e-create-ms96svak-tojmg8-test",
-      "name": "Updated Canary e2e-create-ms96svak-tojmg8-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-07-31T16:59:29.549Z",
-      "appUrl": "https://e2e-create-ms96svak-tojmg8-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-ms96svak-tojmg8-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-07-31T16:59:12.249Z",
-      "updatedAt": "2026-07-31T16:59:29.853Z"
     }
   ]
 }
