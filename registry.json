@@ -1964,22 +1964,6 @@
       "developer": "Advika123456",
       "creatorGithub": "Advika123456",
       "firstPublished": "2026-07-26T11:54:01.129Z"
-    },
-    {
-      "id": "e2e-create-ms979iup-0bayro-test",
-      "name": "Browser Canary e2e-create-ms979iup-0bayro-test",
-      "category": "casual",
-      "icon": "🎮",
-      "iconBg": "#1a2e26",
-      "description": "Production browser e2e canary game.",
-      "appUrl": "https://e2e-create-ms979iup-0bayro-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-ms979iup-0bayro-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-07-31T17:12:02.737Z"
     }
   ]
 }
