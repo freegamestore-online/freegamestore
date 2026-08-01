@@ -1964,6 +1964,22 @@
       "developer": "Advika123456",
       "creatorGithub": "Advika123456",
       "firstPublished": "2026-07-26T11:54:01.129Z"
+    },
+    {
+      "id": "fruitydropz",
+      "name": "FruityDrop",
+      "category": "casual",
+      "icon": "🍉",
+      "iconBg": "#1a2e26",
+      "description": "FruityDrop",
+      "appUrl": "https://fruitydropz.freegamestore.online",
+      "repo": "freegamestore-online/fruitydropz",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "BUDDY-KIWI-BERRY",
+      "creatorGithub": "BUDDY-KIWI-BERRY",
+      "engine": "phaser",
+      "firstPublished": "2026-08-01T08:11:13.336Z"
     }
   ]
 }
