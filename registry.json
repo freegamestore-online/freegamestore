@@ -1980,6 +1980,22 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "phaser",
       "firstPublished": "2026-08-01T08:11:13.336Z"
+    },
+    {
+      "id": "e2e-create-msc0vv48-eo2mte-test",
+      "name": "Browser Canary e2e-create-msc0vv48-eo2mte-test",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Production browser e2e canary game.",
+      "appUrl": "https://e2e-create-msc0vv48-eo2mte-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-msc0vv48-eo2mte-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-08-02T16:36:43.880Z"
     }
   ]
 }
