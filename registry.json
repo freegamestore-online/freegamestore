@@ -1983,11 +1983,11 @@
     },
     {
       "id": "e2e-create-msc04gnx-giooyd-test",
-      "name": "Create Canary e2e-create-msc04gnx-giooyd-test",
-      "category": "platform",
-      "icon": "T",
-      "iconBg": "#ecfdf5",
-      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
+      "name": "Updated Canary e2e-create-msc04gnx-giooyd-test",
+      "category": "arcade",
+      "icon": "U",
+      "iconBg": "#dbeafe",
+      "description": "Updated by production e2e at 2026-08-02T16:15:44.947Z",
       "appUrl": "https://e2e-create-msc04gnx-giooyd-test.freegamestore.online",
       "repo": "freegamestore-online/e2e-create-msc04gnx-giooyd-test",
       "hostedOn": "r2",
@@ -1995,7 +1995,8 @@
       "developer": "serge-ivo",
       "creatorGithub": "serge-ivo",
       "engine": "canvas",
-      "firstPublished": "2026-08-02T16:15:31.592Z"
+      "firstPublished": "2026-08-02T16:15:31.592Z",
+      "updatedAt": "2026-08-02T16:15:45.108Z"
     }
   ]
 }
