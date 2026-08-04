@@ -1980,22 +1980,6 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "phaser",
       "firstPublished": "2026-08-01T08:11:13.336Z"
-    },
-    {
-      "id": "e2e-create-msexan6n-unfau2-test",
-      "name": "Browser Canary e2e-create-msexan6n-unfau2-test",
-      "category": "casual",
-      "icon": "🎮",
-      "iconBg": "#1a2e26",
-      "description": "Production browser e2e canary game.",
-      "appUrl": "https://e2e-create-msexan6n-unfau2-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-msexan6n-unfau2-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-04T17:19:33.810Z"
     }
   ]
 }
