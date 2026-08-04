@@ -1983,11 +1983,11 @@
     },
     {
       "id": "e2e-create-msewsqbp-i5c3ec-test",
-      "name": "Create Canary e2e-create-msewsqbp-i5c3ec-test",
-      "category": "platform",
-      "icon": "T",
-      "iconBg": "#ecfdf5",
-      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
+      "name": "Updated Canary e2e-create-msewsqbp-i5c3ec-test",
+      "category": "arcade",
+      "icon": "U",
+      "iconBg": "#dbeafe",
+      "description": "Updated by production e2e at 2026-08-04T17:06:01.563Z",
       "appUrl": "https://e2e-create-msewsqbp-i5c3ec-test.freegamestore.online",
       "repo": "freegamestore-online/e2e-create-msewsqbp-i5c3ec-test",
       "hostedOn": "r2",
@@ -1995,7 +1995,8 @@
       "developer": "serge-ivo",
       "creatorGithub": "serge-ivo",
       "engine": "canvas",
-      "firstPublished": "2026-08-04T17:05:44.998Z"
+      "firstPublished": "2026-08-04T17:05:44.998Z",
+      "updatedAt": "2026-08-04T17:06:01.756Z"
     }
   ]
 }
