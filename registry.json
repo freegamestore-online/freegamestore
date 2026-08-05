@@ -1980,23 +1980,6 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "phaser",
       "firstPublished": "2026-08-01T08:11:13.336Z"
-    },
-    {
-      "id": "e2e-create-msgbulqu-21wn71-test",
-      "name": "Updated Canary e2e-create-msgbulqu-21wn71-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-08-05T16:55:08.927Z",
-      "appUrl": "https://e2e-create-msgbulqu-21wn71-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-msgbulqu-21wn71-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-05T16:54:53.799Z",
-      "updatedAt": "2026-08-05T16:55:09.104Z"
     }
   ]
 }
