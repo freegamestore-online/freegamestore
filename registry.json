@@ -1980,22 +1980,6 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "phaser",
       "firstPublished": "2026-08-01T08:11:13.336Z"
-    },
-    {
-      "id": "e2e-create-msgcebwu-yf6d7y-test",
-      "name": "Browser Canary e2e-create-msgcebwu-yf6d7y-test",
-      "category": "casual",
-      "icon": "🎮",
-      "iconBg": "#1a2e26",
-      "description": "Production browser e2e canary game.",
-      "appUrl": "https://e2e-create-msgcebwu-yf6d7y-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-msgcebwu-yf6d7y-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-05T17:10:06.360Z"
     }
   ]
 }
