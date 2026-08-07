@@ -1980,23 +1980,6 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "phaser",
       "firstPublished": "2026-08-01T08:11:13.336Z"
-    },
-    {
-      "id": "e2e-create-msj55ylb-8hxv75-test",
-      "name": "Updated Canary e2e-create-msj55ylb-8hxv75-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-08-07T16:11:21.941Z",
-      "appUrl": "https://e2e-create-msj55ylb-8hxv75-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-msj55ylb-8hxv75-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-07T16:11:05.820Z",
-      "updatedAt": "2026-08-07T16:11:22.142Z"
     }
   ]
 }
