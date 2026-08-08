@@ -1663,7 +1663,7 @@
         "sha": "f75387ca89d6d371ceefa12e3175c2fd9bee67b6",
         "html_url": "https://github.com/freegamestore-online/maze-racer/commit/f75387ca89d6d371ceefa12e3175c2fd9bee67b6",
         "commit": {
-          "message": "feat: AI always explores blind — smartness controls intelligence\n\nAll difficulties now use blind exploration (no pre-solving). The AI\ndoesn't know the maze layout — it discovers it step by step, just\nlike the player. Smartness controls how often it picks the best\nneighbor vs random:\n\n- Easy (20%): drunk random walk, gets very lost\n- Medium (50%): coin-flip between smart and random\n- Hard (80%): usually picks the right direction\n- Expert (95%): almost always optimal, but still backtracks at dead ends\n\nNo more cheating. The AI makes visible mistakes on every difficulty.",
+          "message": "feat: AI always explores blind — smartness controls intelligence\n\nAll difficulties now use blind exploration (no pre-solving). The AI\ndoesn't know the maze layout ��� it discovers it step by step, just\nlike the player. Smartness controls how often it picks the best\nneighbor vs random:\n\n- Easy (20%): drunk random walk, gets very lost\n- Medium (50%): coin-flip between smart and random\n- Hard (80%): usually picks the right direction\n- Expert (95%): almost always optimal, but still backtracks at dead ends\n\nNo more cheating. The AI makes visible mistakes on every difficulty.",
           "author": {
             "date": "2026-06-06T00:21:30Z"
           }
@@ -4230,6 +4230,34 @@
           "message": "Initial commit",
           "author": {
             "date": "2026-08-01T08:11:16Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/crossy-rivers": {
+    "meta": {
+      "created_at": "2026-08-08T03:11:51Z",
+      "pushed_at": "2026-08-08T03:12:02Z"
+    },
+    "commits": [
+      {
+        "sha": "460644b7df8ec7dd0e088bcd02f9eaf672274251",
+        "html_url": "https://github.com/freegamestore-online/crossy-rivers/commit/460644b7df8ec7dd0e088bcd02f9eaf672274251",
+        "commit": {
+          "message": "Set game name to \"Crossy Rivers\"",
+          "author": {
+            "date": "2026-08-08T03:12:01Z"
+          }
+        }
+      },
+      {
+        "sha": "be5a0c464cde3394f3b89fa6a1d2b273cc428431",
+        "html_url": "https://github.com/freegamestore-online/crossy-rivers/commit/be5a0c464cde3394f3b89fa6a1d2b273cc428431",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-08T03:11:54Z"
           }
         }
       }
