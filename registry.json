@@ -1980,6 +1980,21 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "phaser",
       "firstPublished": "2026-08-01T08:11:13.336Z"
+    },
+    {
+      "id": "crossy-rivers",
+      "name": "Crossy Rivers",
+      "category": "brain-training",
+      "icon": "🎮",
+      "iconBg": "#ecfdf5",
+      "description": "Hop upstream, dodge crocs and snakes in a fast arcade river run.",
+      "appUrl": "https://crossy-rivers.freegamestore.online",
+      "repo": "freegamestore-online/crossy-rivers",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Advika123456",
+      "creatorGithub": "Advika123456",
+      "firstPublished": "2026-08-08T03:11:50.821Z"
     }
   ]
 }
