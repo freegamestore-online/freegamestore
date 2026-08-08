@@ -1995,22 +1995,6 @@
       "developer": "Advika123456",
       "creatorGithub": "Advika123456",
       "firstPublished": "2026-08-08T03:11:50.821Z"
-    },
-    {
-      "id": "e2e-create-mskka0zm-2wn57q-test",
-      "name": "Browser Canary e2e-create-mskka0zm-2wn57q-test",
-      "category": "casual",
-      "icon": "🎮",
-      "iconBg": "#1a2e26",
-      "description": "Production browser e2e canary game.",
-      "appUrl": "https://e2e-create-mskka0zm-2wn57q-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mskka0zm-2wn57q-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-08T16:01:45.334Z"
     }
   ]
 }
