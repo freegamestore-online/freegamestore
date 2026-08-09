@@ -2075,6 +2075,22 @@
       "creatorGithub": "SASASKIA",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T04:34:08.410Z"
+    },
+    {
+      "id": "squishy-swap",
+      "name": "Squishy Swap!",
+      "category": "strategy",
+      "icon": "🩷(˶ᵔ ᵕ ᵔ˶)🩷",
+      "iconBg": "#5fa9ce",
+      "description": "Squishy Swap!",
+      "appUrl": "https://squishy-swap.freegamestore.online",
+      "repo": "freegamestore-online/squishy-swap",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "OperationBannana",
+      "creatorGithub": "OperationBannana",
+      "engine": "phaser",
+      "firstPublished": "2026-08-09T04:53:48.433Z"
     }
   ]
 }
