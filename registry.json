@@ -1995,6 +1995,22 @@
       "developer": "Advika123456",
       "creatorGithub": "Advika123456",
       "firstPublished": "2026-08-08T03:11:50.821Z"
+    },
+    {
+      "id": "cubisworld",
+      "name": "CUBIworld",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "A fun and unique game made for everyone!!!",
+      "appUrl": "https://cubisworld.freegamestore.online",
+      "repo": "freegamestore-online/cubisworld",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "BUDDY-KIWI-BERRY",
+      "creatorGithub": "BUDDY-KIWI-BERRY",
+      "engine": "kaplay",
+      "firstPublished": "2026-08-09T03:29:25.778Z"
     }
   ]
 }
