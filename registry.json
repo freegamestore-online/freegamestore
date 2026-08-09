@@ -2059,6 +2059,22 @@
       "creatorGithub": "imhappyamber-design",
       "engine": "3d",
       "firstPublished": "2026-08-09T04:32:41.800Z"
+    },
+    {
+      "id": "my-dream-room",
+      "name": "My Dream Room",
+      "category": "casual",
+      "icon": "🛋️",
+      "iconBg": "#ff9edb",
+      "description": "fun room-decorating game where you complete mini-challenges, earn coins, and create your dream bedroom.",
+      "appUrl": "https://my-dream-room.freegamestore.online",
+      "repo": "freegamestore-online/my-dream-room",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "SASASKIA",
+      "creatorGithub": "SASASKIA",
+      "engine": "kaplay",
+      "firstPublished": "2026-08-09T04:34:08.410Z"
     }
   ]
 }
