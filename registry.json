@@ -2187,6 +2187,22 @@
       "creatorGithub": "Crystal12341",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T06:37:15.101Z"
+    },
+    {
+      "id": "candy-store-2",
+      "name": "Candy Store 2",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "candy-store-2",
+      "appUrl": "https://candy-store-2.freegamestore.online",
+      "repo": "freegamestore-online/candy-store-2",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Boris-The-Pug",
+      "creatorGithub": "Boris-The-Pug",
+      "engine": "phaser",
+      "firstPublished": "2026-08-09T06:43:36.422Z"
     }
   ]
 }
