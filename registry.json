@@ -2235,6 +2235,22 @@
       "creatorGithub": "SASASKIA",
       "engine": "3d",
       "firstPublished": "2026-08-09T07:19:11.106Z"
+    },
+    {
+      "id": "starship",
+      "name": "Starship",
+      "category": "casual",
+      "icon": "🚀",
+      "iconBg": "##000000",
+      "description": "Build starships and battle against space pirates",
+      "appUrl": "https://starship.freegamestore.online",
+      "repo": "freegamestore-online/starship",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "iamapug-blip",
+      "creatorGithub": "iamapug-blip",
+      "engine": "kaplay",
+      "firstPublished": "2026-08-09T08:20:03.363Z"
     }
   ]
 }
