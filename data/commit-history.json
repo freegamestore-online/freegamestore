@@ -2756,9 +2756,19 @@
   "freegamestore-online/bladeblast": {
     "meta": {
       "created_at": "2026-07-04T03:09:10Z",
-      "pushed_at": "2026-07-19T07:33:43Z"
+      "pushed_at": "2026-08-09T06:47:18Z"
     },
     "commits": [
+      {
+        "sha": "c0cf9d12c19ddef4ca3ccca45afc20b995c24795",
+        "html_url": "https://github.com/freegamestore-online/bladeblast/commit/c0cf9d12c19ddef4ca3ccca45afc20b995c24795",
+        "commit": {
+          "message": "Make bombs drop 2x faster — base speed 240px/s (was 120), wave scaling +45 (was +28), tighter spawn interval",
+          "author": {
+            "date": "2026-08-09T06:47:18Z"
+          }
+        }
+      },
       {
         "sha": "79ef873c36d8c8850b6ad0bb071eaad51b5c5553",
         "html_url": "https://github.com/freegamestore-online/bladeblast/commit/79ef873c36d8c8850b6ad0bb071eaad51b5c5553",
@@ -2776,16 +2786,6 @@
           "message": "compliance: SDK-shaped tracking patterns (fix bare-word false positives)",
           "author": {
             "date": "2026-07-11T16:41:36Z"
-          }
-        }
-      },
-      {
-        "sha": "900df6e4857790f5dd46adb58be0ce32e3264f22",
-        "html_url": "https://github.com/freegamestore-online/bladeblast/commit/900df6e4857790f5dd46adb58be0ce32e3264f22",
-        "commit": {
-          "message": "Fix unplayable movement: the animal could barely move (~106 px/s cap)\n\nMOVE_FRICTION 0.78/frame halved velocity every ~3 frames, settling at\n~106 px/s while bombs fall at 120-200+ px/s — dodging was impossible and\nthe character felt glued to the ground. Retuned (accel 5200, friction\n0.85, max 460) → snappy ~400 px/s movement with quick stop.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-07-11T06:40:11Z"
           }
         }
       }
@@ -3592,9 +3592,19 @@
   "freegamestore-online/angry-birds3": {
     "meta": {
       "created_at": "2026-07-17T07:07:26Z",
-      "pushed_at": "2026-08-01T06:20:39Z"
+      "pushed_at": "2026-08-09T03:27:43Z"
     },
     "commits": [
+      {
+        "sha": "f077db1e269df7047e5a5d08523e22f5c39a98af",
+        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/f077db1e269df7047e5a5d08523e22f5c39a98af",
+        "commit": {
+          "message": "Fix standalone full-screen render: drop sidebar, use dvh viewport height (closes #1)\n\n- Shell.tsx: replace sidebar/dock layout with a single full-viewport div\n  using height:100dvh (dynamic viewport height — works on mobile browsers\n  where 100vh ignores the browser chrome). No more percentage-chain that\n  collapses Pixi's canvas to 0×0 at init.\n- App.tsx: remove sidebar/dock props from <Shell>; remove uiScore,\n  uiLevel, uiPhase, uiBirds React state that fed the now-deleted sidebar\n  panel. Score/level HUD continues to render via Pixi Text nodes on the\n  canvas stage (drawHud/scoreTxt/levelTxt/hsTxt — untouched).\n- index.css: drop height:100% from html/body/#root — no longer needed\n  since Shell anchors height absolutely via 100dvh.\n\nBuild: pnpm build passes clean (tsc + vite).\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-08-09T03:27:36Z"
+          }
+        }
+      },
       {
         "sha": "6d2e79984efe0f3bea8ef72f6bf33669c8e5a027",
         "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/6d2e79984efe0f3bea8ef72f6bf33669c8e5a027",
@@ -3612,16 +3622,6 @@
           "message": "Fix: pigs and blocks start static, only wake on bird impact",
           "author": {
             "date": "2026-07-19T00:29:29Z"
-          }
-        }
-      },
-      {
-        "sha": "7508c61fafaf294b0f57f67889471cb2a12fb7c2",
-        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/7508c61fafaf294b0f57f67889471cb2a12fb7c2",
-        "commit": {
-          "message": "Fix vertical scroll: html/body/root locked to 100% height, Shell uses 100% not h-screen, canvas container overflow:hidden, no page expansion",
-          "author": {
-            "date": "2026-07-19T00:05:34Z"
           }
         }
       }
@@ -4200,9 +4200,29 @@
   "freegamestore-online/fruitydropz": {
     "meta": {
       "created_at": "2026-08-01T08:11:14Z",
-      "pushed_at": "2026-08-01T08:36:53Z"
+      "pushed_at": "2026-08-09T06:39:29Z"
     },
     "commits": [
+      {
+        "sha": "14a1b943eb2c8889691c3bfbf0f80ce0009ad6cf",
+        "html_url": "https://github.com/freegamestore-online/fruitydropz/commit/14a1b943eb2c8889691c3bfbf0f80ce0009ad6cf",
+        "commit": {
+          "message": "Build FruityDrop — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-08-09T06:39:28Z"
+          }
+        }
+      },
+      {
+        "sha": "d81eaed6782c1dcf34a5b433873711d36695b0ec",
+        "html_url": "https://github.com/freegamestore-online/fruitydropz/commit/d81eaed6782c1dcf34a5b433873711d36695b0ec",
+        "commit": {
+          "message": "First polished playable version: menu scene, play scene, combo system, star fruit, bombs, particles, Web Audio tones, animated clouds/trees, difficulty ramp, game over card",
+          "author": {
+            "date": "2026-08-09T03:33:53Z"
+          }
+        }
+      },
       {
         "sha": "f551f68296698063d0d793cf611735a9bea3bd2a",
         "html_url": "https://github.com/freegamestore-online/fruitydropz/commit/f551f68296698063d0d793cf611735a9bea3bd2a",
@@ -4210,26 +4230,6 @@
           "message": "Build FruityDrop — FreeGameStore AI agent",
           "author": {
             "date": "2026-08-01T08:36:52Z"
-          }
-        }
-      },
-      {
-        "sha": "95499d4ca42c9c16daa49f534d69ff1dce55b988",
-        "html_url": "https://github.com/freegamestore-online/fruitydropz/commit/95499d4ca42c9c16daa49f534d69ff1dce55b988",
-        "commit": {
-          "message": "Set game name to \"FruityDrop\"",
-          "author": {
-            "date": "2026-08-01T08:11:25Z"
-          }
-        }
-      },
-      {
-        "sha": "53beed18417c64e0895f52f1f2ce554fda79ac8d",
-        "html_url": "https://github.com/freegamestore-online/fruitydropz/commit/53beed18417c64e0895f52f1f2ce554fda79ac8d",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-08-01T08:11:16Z"
           }
         }
       }
@@ -4268,6 +4268,498 @@
           "message": "first game: cross the roads",
           "author": {
             "date": "2026-07-23T07:59:46Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/cubisworld": {
+    "meta": {
+      "created_at": "2026-08-09T03:29:26Z",
+      "pushed_at": "2026-08-09T05:55:08Z"
+    },
+    "commits": [
+      {
+        "sha": "fb2270b26f67211538a37c06c3c7f747401d5d6e",
+        "html_url": "https://github.com/freegamestore-online/cubisworld/commit/fb2270b26f67211538a37c06c3c7f747401d5d6e",
+        "commit": {
+          "message": "Complete cozy rhythm platformer: full gameplay loop, 10 levels, cube customiser, star shop, profile, all scenes working",
+          "author": {
+            "date": "2026-08-09T05:55:08Z"
+          }
+        }
+      },
+      {
+        "sha": "a4019fde9b20e94e12259b299002bae3e4540c16",
+        "html_url": "https://github.com/freegamestore-online/cubisworld/commit/a4019fde9b20e94e12259b299002bae3e4540c16",
+        "commit": {
+          "message": "Full cozy rhythm platformer: 10 levels, cube customiser, star shop, profile, moving/disappearing platforms, collectible stars",
+          "author": {
+            "date": "2026-08-09T03:44:46Z"
+          }
+        }
+      },
+      {
+        "sha": "ba4bf19f05be5caecf22afd76b813f9786eefc5c",
+        "html_url": "https://github.com/freegamestore-online/cubisworld/commit/ba4bf19f05be5caecf22afd76b813f9786eefc5c",
+        "commit": {
+          "message": "Set game name to \"CUBIworld\"",
+          "author": {
+            "date": "2026-08-09T03:29:39Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/zombie": {
+    "meta": {
+      "created_at": "2026-08-09T04:21:37Z",
+      "pushed_at": "2026-08-09T04:47:52Z"
+    },
+    "commits": [
+      {
+        "sha": "1e273ecec0702ee2a2e4d0a57ce84a20f5574ace",
+        "html_url": "https://github.com/freegamestore-online/zombie/commit/1e273ecec0702ee2a2e4d0a57ce84a20f5574ace",
+        "commit": {
+          "message": "Full 3D zombie survival game: city map, 4 weapon types, 4 zombie types, day/night cycle, wave system, missions, inventory, upgrades, health/stamina, procedural audio",
+          "author": {
+            "date": "2026-08-09T04:47:51Z"
+          }
+        }
+      },
+      {
+        "sha": "e8949ede0bb11feba7b0d0a154156ec75c631ac8",
+        "html_url": "https://github.com/freegamestore-online/zombie/commit/e8949ede0bb11feba7b0d0a154156ec75c631ac8",
+        "commit": {
+          "message": "Full 3D zombie survival game: city map, day/night cycle, 4 zombie types, weapons, upgrades, missions, HUD, procedural audio",
+          "author": {
+            "date": "2026-08-09T04:38:40Z"
+          }
+        }
+      },
+      {
+        "sha": "644f938b1f62518a2c1d6a233ccd6da4ee2be02a",
+        "html_url": "https://github.com/freegamestore-online/zombie/commit/644f938b1f62518a2c1d6a233ccd6da4ee2be02a",
+        "commit": {
+          "message": "Set game name to \"Zombie\"",
+          "author": {
+            "date": "2026-08-09T04:21:52Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/trade": {
+    "meta": {
+      "created_at": "2026-08-09T05:47:48Z",
+      "pushed_at": "2026-08-09T05:54:29Z"
+    },
+    "commits": [
+      {
+        "sha": "24e6e2739f6796b2384591dfa5cae05e1229f255",
+        "html_url": "https://github.com/freegamestore-online/trade/commit/24e6e2739f6796b2384591dfa5cae05e1229f255",
+        "commit": {
+          "message": "Rebuild as Trade Check app — compare item values, get WIN/FAIR/LOSS verdict with visual bar",
+          "author": {
+            "date": "2026-08-09T05:54:28Z"
+          }
+        }
+      },
+      {
+        "sha": "33b6517a05ce623e037d7438543c9bf598e6d307",
+        "html_url": "https://github.com/freegamestore-online/trade/commit/33b6517a05ce623e037d7438543c9bf598e6d307",
+        "commit": {
+          "message": "Set game name to \"TRADE\"",
+          "author": {
+            "date": "2026-08-09T05:47:59Z"
+          }
+        }
+      },
+      {
+        "sha": "5c2aafd3f518073460795d230c47913fde33f641",
+        "html_url": "https://github.com/freegamestore-online/trade/commit/5c2aafd3f518073460795d230c47913fde33f641",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T05:47:51Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/race": {
+    "meta": {
+      "created_at": "2026-08-09T04:30:26Z",
+      "pushed_at": "2026-08-09T04:51:48Z"
+    },
+    "commits": [
+      {
+        "sha": "fa4c0dff43af2f60b1d93123d764edc32b8a6fb3",
+        "html_url": "https://github.com/freegamestore-online/race/commit/fa4c0dff43af2f60b1d93123d764edc32b8a6fb3",
+        "commit": {
+          "message": "Full zombie survival game: Dead City — menu, play, game-over, city generation, day/night, waves, weapons, upgrades, missions, HUD, particles, audio",
+          "author": {
+            "date": "2026-08-09T04:51:48Z"
+          }
+        }
+      },
+      {
+        "sha": "4dc74203fcce12ea526885550944e5cb470d79d4",
+        "html_url": "https://github.com/freegamestore-online/race/commit/4dc74203fcce12ea526885550944e5cb470d79d4",
+        "commit": {
+          "message": "Set game name to \"Race\"",
+          "author": {
+            "date": "2026-08-09T04:30:40Z"
+          }
+        }
+      },
+      {
+        "sha": "8763efb5f984e2cfe4fcce3c5c08cfa66481f396",
+        "html_url": "https://github.com/freegamestore-online/race/commit/8763efb5f984e2cfe4fcce3c5c08cfa66481f396",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T04:30:29Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/mydream-room": {
+    "meta": {
+      "created_at": "2026-08-09T06:22:52Z",
+      "pushed_at": "2026-08-09T06:23:03Z"
+    },
+    "commits": [
+      {
+        "sha": "9801d4461323c14c7ff5bfc60457be256655d5ae",
+        "html_url": "https://github.com/freegamestore-online/mydream-room/commit/9801d4461323c14c7ff5bfc60457be256655d5ae",
+        "commit": {
+          "message": "Set game name to \"My Dream Room\"",
+          "author": {
+            "date": "2026-08-09T06:23:03Z"
+          }
+        }
+      },
+      {
+        "sha": "678aa6193183f062a1e1b21ebe5ac6535469b2f1",
+        "html_url": "https://github.com/freegamestore-online/mydream-room/commit/678aa6193183f062a1e1b21ebe5ac6535469b2f1",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T06:22:55Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/candy-shop": {
+    "meta": {
+      "created_at": "2026-08-09T04:59:39Z",
+      "pushed_at": "2026-08-09T06:18:45Z"
+    },
+    "commits": [
+      {
+        "sha": "f48a74b5368a88ec16859a3495a13796347a34f0",
+        "html_url": "https://github.com/freegamestore-online/candy-shop/commit/f48a74b5368a88ec16859a3495a13796347a34f0",
+        "commit": {
+          "message": "Fix shift-scene crash: KaPlay parses [G]/[C]/[H]/[Type it!] as unclosed style tags\n\nThe category button labels (\"GUM\\n[G]\") and the STOP button (\"STOP\\n[Type it!]\")\nin the shift scene passed literal square brackets to k.text(). KaPlay treats\n[name]…[/name] as styled-text markup, so these unclosed tags threw\n\"Styled text error: unclosed tags G\" the instant a shift started — the game\nbooted to the morning screen (all the CI smoke test loads) but crashed on play.\nReplace the brackets with parens; key hints read the same.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-08-09T06:18:43Z"
+          }
+        }
+      },
+      {
+        "sha": "2d73dfc0409ca5e9d1ea0bcadb4fa6031da1d5ca",
+        "html_url": "https://github.com/freegamestore-online/candy-shop/commit/2d73dfc0409ca5e9d1ea0bcadb4fa6031da1d5ca",
+        "commit": {
+          "message": "Fix runtime crash: clean rewrite of all 4 scenes — no k.Rect, safe timer bar, strict types",
+          "author": {
+            "date": "2026-08-09T05:58:42Z"
+          }
+        }
+      },
+      {
+        "sha": "bdeef62104b519d1b5309a8913e70c1a12e205ff",
+        "html_url": "https://github.com/freegamestore-online/candy-shop/commit/bdeef62104b519d1b5309a8913e70c1a12e205ff",
+        "commit": {
+          "message": "Restore full Candy Shop Tycoon: morning prep, shift serving/thief-catching, night review, game over",
+          "author": {
+            "date": "2026-08-09T05:53:50Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/squishy-swap": {
+    "meta": {
+      "created_at": "2026-08-09T04:53:49Z",
+      "pushed_at": "2026-08-09T06:38:34Z"
+    },
+    "commits": [
+      {
+        "sha": "ffff8f0a72670321f09cd5e622d26e4ebdf3426e",
+        "html_url": "https://github.com/freegamestore-online/squishy-swap/commit/ffff8f0a72670321f09cd5e622d26e4ebdf3426e",
+        "commit": {
+          "message": "Teen aesthetic: dark navy theme, neon accents, thermometer deal meter, rounded cards, edgy copy, grid bg, glowing orbs",
+          "author": {
+            "date": "2026-08-09T06:38:34Z"
+          }
+        }
+      },
+      {
+        "sha": "5b991409a984e74d41d1d183eed186c161165ebf",
+        "html_url": "https://github.com/freegamestore-online/squishy-swap/commit/5b991409a984e74d41d1d183eed186c161165ebf",
+        "commit": {
+          "message": "Fix glitchiness: isolated card layer, kill tweens before rebuild, disable input during transitions, clean scene teardown",
+          "author": {
+            "date": "2026-08-09T05:39:27Z"
+          }
+        }
+      },
+      {
+        "sha": "595b5bce7c8b2cdf34137c5253dce5d9c571ce74",
+        "html_url": "https://github.com/freegamestore-online/squishy-swap/commit/595b5bce7c8b2cdf34137c5253dce5d9c571ce74",
+        "commit": {
+          "message": "Build full Squishy Trading game: trade scenes, collection, rarities, CP personalities, confetti, animations",
+          "author": {
+            "date": "2026-08-09T05:19:45Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/endlesshighway": {
+    "meta": {
+      "created_at": "2026-08-09T04:32:42Z",
+      "pushed_at": "2026-08-09T06:23:05Z"
+    },
+    "commits": [
+      {
+        "sha": "e9000d1ba856fae21c5dc82653eb50028f4ed005",
+        "html_url": "https://github.com/freegamestore-online/endlesshighway/commit/e9000d1ba856fae21c5dc82653eb50028f4ed005",
+        "commit": {
+          "message": "Very slow start (speed 8→60), speed HUD with colour bar, gaps with void + glow + warning arrow, gap collision (jump to survive)",
+          "author": {
+            "date": "2026-08-09T06:23:05Z"
+          }
+        }
+      },
+      {
+        "sha": "2d6736702f29807d88e2599a47b346e04af81d17",
+        "html_url": "https://github.com/freegamestore-online/endlesshighway/commit/2d6736702f29807d88e2599a47b346e04af81d17",
+        "commit": {
+          "message": "Slow game down: BASE_SPEED 16, SPEED_RAMP 0.35, MAX_SPEED 55, spawn interval 1.4s, double-spawns delayed to 20s",
+          "author": {
+            "date": "2026-08-09T05:55:38Z"
+          }
+        }
+      },
+      {
+        "sha": "1f4cd2f38659c6367e43ff633679a90a9bdb00eb",
+        "html_url": "https://github.com/freegamestore-online/endlesshighway/commit/1f4cd2f38659c6367e43ff633679a90a9bdb00eb",
+        "commit": {
+          "message": "Add collectible coins: spinning gold discs, clusters of 1-3, ground + floating heights, +50pts each, coin collection detection with jump support",
+          "author": {
+            "date": "2026-08-09T05:50:45Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/the-make-up-game": {
+    "meta": {
+      "created_at": "2026-08-09T06:10:33Z",
+      "pushed_at": "2026-08-09T06:57:42Z"
+    },
+    "commits": [
+      {
+        "sha": "d976c5b1e3762f87d535df6c122770dfb1506e12",
+        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/d976c5b1e3762f87d535df6c122770dfb1506e12",
+        "commit": {
+          "message": "Fix Next Step button - draw and hit-test it manually so face taps can't interfere with it",
+          "author": {
+            "date": "2026-08-09T06:57:42Z"
+          }
+        }
+      },
+      {
+        "sha": "799c98b175b876044c8b73e1d8c3ce6ecfc40f62",
+        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/799c98b175b876044c8b73e1d8c3ce6ecfc40f62",
+        "commit": {
+          "message": "One tap anywhere on face completes each step - both eyes/cheeks apply at once, no repeated tapping",
+          "author": {
+            "date": "2026-08-09T06:53:23Z"
+          }
+        }
+      },
+      {
+        "sha": "8a52881ce22835635030b73f7e5b256eb6ead722",
+        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/8a52881ce22835635030b73f7e5b256eb6ead722",
+        "commit": {
+          "message": "Every step now completes with a single tap - one tap on the face/eye/cheek/lips and it's done, both sides apply at once",
+          "author": {
+            "date": "2026-08-09T06:49:47Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/my-dream-room": {
+    "meta": {
+      "created_at": "2026-08-09T04:34:09Z",
+      "pushed_at": "2026-08-09T07:00:42Z"
+    },
+    "commits": [
+      {
+        "sha": "126c01818bfb4bb517b718c921732288057c3d8e",
+        "html_url": "https://github.com/freegamestore-online/my-dream-room/commit/126c01818bfb4bb517b718c921732288057c3d8e",
+        "commit": {
+          "message": "Push current game state",
+          "author": {
+            "date": "2026-08-09T07:00:42Z"
+          }
+        }
+      },
+      {
+        "sha": "bc235c417aa21caa0909427efdec9cf44ef126ec",
+        "html_url": "https://github.com/freegamestore-online/my-dream-room/commit/bc235c417aa21caa0909427efdec9cf44ef126ec",
+        "commit": {
+          "message": "Build Room Bloom: cozy room decorator with KAPLAY, furniture shop, challenges, coin system",
+          "author": {
+            "date": "2026-08-09T04:40:27Z"
+          }
+        }
+      },
+      {
+        "sha": "3455d21b8575ded2e70b22f2693efa703b37e0fb",
+        "html_url": "https://github.com/freegamestore-online/my-dream-room/commit/3455d21b8575ded2e70b22f2693efa703b37e0fb",
+        "commit": {
+          "message": "Set game name to \"My Dream Room\"",
+          "author": {
+            "date": "2026-08-09T04:34:21Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/survive": {
+    "meta": {
+      "created_at": "2026-08-09T05:24:27Z",
+      "pushed_at": "2026-08-09T05:24:39Z"
+    },
+    "commits": [
+      {
+        "sha": "0ee4e470a8cb30e22d5e1c32d99b8064f556271a",
+        "html_url": "https://github.com/freegamestore-online/survive/commit/0ee4e470a8cb30e22d5e1c32d99b8064f556271a",
+        "commit": {
+          "message": "Set game name to \"Survive\"",
+          "author": {
+            "date": "2026-08-09T05:24:39Z"
+          }
+        }
+      },
+      {
+        "sha": "abb06dbe2cdcbbcc11a3cd090a32fbf4fa262a3a",
+        "html_url": "https://github.com/freegamestore-online/survive/commit/abb06dbe2cdcbbcc11a3cd090a32fbf4fa262a3a",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T05:24:30Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/zombie-attack": {
+    "meta": {
+      "created_at": "2026-08-09T07:01:23Z",
+      "pushed_at": "2026-08-09T07:01:44Z"
+    },
+    "commits": [
+      {
+        "sha": "28de0ed2ae850e534a8445f6278c65ee459aacd9",
+        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/28de0ed2ae850e534a8445f6278c65ee459aacd9",
+        "commit": {
+          "message": "Set game name to \"Zombie Attack\"",
+          "author": {
+            "date": "2026-08-09T07:01:44Z"
+          }
+        }
+      },
+      {
+        "sha": "6cba72622de5ac2bab51a97702973b93fda22eb0",
+        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/6cba72622de5ac2bab51a97702973b93fda22eb0",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T07:01:30Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/candy-store-2": {
+    "meta": {
+      "created_at": "2026-08-09T06:43:37Z",
+      "pushed_at": "2026-08-09T06:57:12Z"
+    },
+    "commits": [
+      {
+        "sha": "cb9bc3555a5adb316c3cf56dd09c0052185c140a",
+        "html_url": "https://github.com/freegamestore-online/candy-store-2/commit/cb9bc3555a5adb316c3cf56dd09c0052185c140a",
+        "commit": {
+          "message": "Complete redesign: candy shop with 3 jars (gummy/sweet/sour), speech bubble orders, money system, daily rent",
+          "author": {
+            "date": "2026-08-09T06:57:11Z"
+          }
+        }
+      },
+      {
+        "sha": "a2bc887c996d15179a99e779dadff0b4491f9b25",
+        "html_url": "https://github.com/freegamestore-online/candy-store-2/commit/a2bc887c996d15179a99e779dadff0b4491f9b25",
+        "commit": {
+          "message": "Build Candy Store 2 — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-08-09T06:46:25Z"
+          }
+        }
+      },
+      {
+        "sha": "e41f43745b7686de581cf684dc836ea1cd57d681",
+        "html_url": "https://github.com/freegamestore-online/candy-store-2/commit/e41f43745b7686de581cf684dc836ea1cd57d681",
+        "commit": {
+          "message": "Set game name to \"Candy Store 2\"",
+          "author": {
+            "date": "2026-08-09T06:43:49Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/zombie123mmymymynmynamynammynamemynamemyname": {
+    "meta": {
+      "created_at": "2026-08-09T06:37:15Z",
+      "pushed_at": "2026-08-09T06:37:26Z"
+    },
+    "commits": [
+      {
+        "sha": "0e897a6df07c1e4b89e3143d4ab39fdd4d6513e0",
+        "html_url": "https://github.com/freegamestore-online/zombie123mmymymynmynamynammynamemynamemyname/commit/0e897a6df07c1e4b89e3143d4ab39fdd4d6513e0",
+        "commit": {
+          "message": "Set game name to \"Zombie\"",
+          "author": {
+            "date": "2026-08-09T06:37:26Z"
+          }
+        }
+      },
+      {
+        "sha": "2ae1cfc29788f11f4c2173e71b72eb833ccc0806",
+        "html_url": "https://github.com/freegamestore-online/zombie123mmymymynmynamynammynamemynamemyname/commit/2ae1cfc29788f11f4c2173e71b72eb833ccc0806",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T06:37:18Z"
           }
         }
       }
