@@ -2107,6 +2107,22 @@
       "creatorGithub": "Boris-The-Pug",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T04:59:39.294Z"
+    },
+    {
+      "id": "survive",
+      "name": "Survive",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Survive",
+      "appUrl": "https://survive.freegamestore.online",
+      "repo": "freegamestore-online/survive",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Crystal12341",
+      "creatorGithub": "Crystal12341",
+      "engine": "kaplay",
+      "firstPublished": "2026-08-09T05:24:26.918Z"
     }
   ]
 }
