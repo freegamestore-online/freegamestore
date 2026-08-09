@@ -2091,6 +2091,22 @@
       "creatorGithub": "OperationBannana",
       "engine": "phaser",
       "firstPublished": "2026-08-09T04:53:48.433Z"
+    },
+    {
+      "id": "candy-shop",
+      "name": "Candy Shop",
+      "category": "casual",
+      "icon": "🍬🍭",
+      "iconBg": "#d1fff0",
+      "description": "Own an amazing candy shop and update it everyday",
+      "appUrl": "https://candy-shop.freegamestore.online",
+      "repo": "freegamestore-online/candy-shop",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Boris-The-Pug",
+      "creatorGithub": "Boris-The-Pug",
+      "engine": "kaplay",
+      "firstPublished": "2026-08-09T04:59:39.294Z"
     }
   ]
 }
