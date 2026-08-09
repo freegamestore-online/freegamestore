@@ -2219,6 +2219,22 @@
       "creatorGithub": "imhappyamber-design",
       "engine": "babylon",
       "firstPublished": "2026-08-09T07:01:22.345Z"
+    },
+    {
+      "id": "my-shopping-spree",
+      "name": "my shopping spree",
+      "category": "racing",
+      "icon": "🛍️",
+      "iconBg": "#ffccec",
+      "description": "my shopping spree",
+      "appUrl": "https://my-shopping-spree.freegamestore.online",
+      "repo": "freegamestore-online/my-shopping-spree",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "SASASKIA",
+      "creatorGithub": "SASASKIA",
+      "engine": "3d",
+      "firstPublished": "2026-08-09T07:19:11.106Z"
     }
   ]
 }
