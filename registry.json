@@ -2043,6 +2043,22 @@
       "creatorGithub": "Crystal12341",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T04:30:26.170Z"
+    },
+    {
+      "id": "endlesshighway",
+      "name": "Endless Highway",
+      "category": "racing",
+      "icon": "🛻",
+      "iconBg": "#004d65",
+      "description": "Look left, look right, don't get smooshed~",
+      "appUrl": "https://endlesshighway.freegamestore.online",
+      "repo": "freegamestore-online/endlesshighway",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "imhappyamber-design",
+      "creatorGithub": "imhappyamber-design",
+      "engine": "3d",
+      "firstPublished": "2026-08-09T04:32:41.800Z"
     }
   ]
 }
