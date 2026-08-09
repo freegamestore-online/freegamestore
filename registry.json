@@ -2203,6 +2203,22 @@
       "creatorGithub": "Boris-The-Pug",
       "engine": "phaser",
       "firstPublished": "2026-08-09T06:43:36.422Z"
+    },
+    {
+      "id": "zombie-attack",
+      "name": "Zombie Attack",
+      "category": "strategy",
+      "icon": "🧟‍♂️",
+      "iconBg": "#1a2e26",
+      "description": "Zombie attacking you",
+      "appUrl": "https://zombie-attack.freegamestore.online",
+      "repo": "freegamestore-online/zombie-attack",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "imhappyamber-design",
+      "creatorGithub": "imhappyamber-design",
+      "engine": "babylon",
+      "firstPublished": "2026-08-09T07:01:22.345Z"
     }
   ]
 }
