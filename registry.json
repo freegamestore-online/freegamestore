@@ -2011,6 +2011,22 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T03:29:25.778Z"
+    },
+    {
+      "id": "zombie",
+      "name": "Zombie",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Zombie",
+      "appUrl": "https://zombie.freegamestore.online",
+      "repo": "freegamestore-online/zombie",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Crystal12341",
+      "creatorGithub": "Crystal12341",
+      "engine": "babylon",
+      "firstPublished": "2026-08-09T04:21:36.954Z"
     }
   ]
 }
