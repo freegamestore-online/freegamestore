@@ -4494,9 +4494,19 @@
   "freegamestore-online/squishy-swap": {
     "meta": {
       "created_at": "2026-08-09T04:53:49Z",
-      "pushed_at": "2026-08-09T06:38:34Z"
+      "pushed_at": "2026-08-09T08:05:54Z"
     },
     "commits": [
+      {
+        "sha": "8f542057c4fd70fd7a2428aa7f6819d76e041676",
+        "html_url": "https://github.com/freegamestore-online/squishy-swap/commit/8f542057c4fd70fd7a2428aa7f6819d76e041676",
+        "commit": {
+          "message": "Add difficulty badge (EASY/OK/HARD) on trader card + light/mid/dark colour system for trader difficulty",
+          "author": {
+            "date": "2026-08-09T08:05:54Z"
+          }
+        }
+      },
       {
         "sha": "ffff8f0a72670321f09cd5e622d26e4ebdf3426e",
         "html_url": "https://github.com/freegamestore-online/squishy-swap/commit/ffff8f0a72670321f09cd5e622d26e4ebdf3426e",
@@ -4516,25 +4526,25 @@
             "date": "2026-08-09T05:39:27Z"
           }
         }
-      },
-      {
-        "sha": "595b5bce7c8b2cdf34137c5253dce5d9c571ce74",
-        "html_url": "https://github.com/freegamestore-online/squishy-swap/commit/595b5bce7c8b2cdf34137c5253dce5d9c571ce74",
-        "commit": {
-          "message": "Build full Squishy Trading game: trade scenes, collection, rarities, CP personalities, confetti, animations",
-          "author": {
-            "date": "2026-08-09T05:19:45Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/endlesshighway": {
     "meta": {
       "created_at": "2026-08-09T04:32:42Z",
-      "pushed_at": "2026-08-09T06:23:05Z"
+      "pushed_at": "2026-08-09T07:05:29Z"
     },
     "commits": [
+      {
+        "sha": "552617b9795cac3de7950d7e96216bc26c4ff82e",
+        "html_url": "https://github.com/freegamestore-online/endlesshighway/commit/552617b9795cac3de7950d7e96216bc26c4ff82e",
+        "commit": {
+          "message": "Add coin counter HUD — live coin count displayed in-game next to speed gauge",
+          "author": {
+            "date": "2026-08-09T07:05:29Z"
+          }
+        }
+      },
       {
         "sha": "e9000d1ba856fae21c5dc82653eb50028f4ed005",
         "html_url": "https://github.com/freegamestore-online/endlesshighway/commit/e9000d1ba856fae21c5dc82653eb50028f4ed005",
@@ -4554,52 +4564,42 @@
             "date": "2026-08-09T05:55:38Z"
           }
         }
-      },
-      {
-        "sha": "1f4cd2f38659c6367e43ff633679a90a9bdb00eb",
-        "html_url": "https://github.com/freegamestore-online/endlesshighway/commit/1f4cd2f38659c6367e43ff633679a90a9bdb00eb",
-        "commit": {
-          "message": "Add collectible coins: spinning gold discs, clusters of 1-3, ground + floating heights, +50pts each, coin collection detection with jump support",
-          "author": {
-            "date": "2026-08-09T05:50:45Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/the-make-up-game": {
     "meta": {
       "created_at": "2026-08-09T06:10:33Z",
-      "pushed_at": "2026-08-09T06:57:42Z"
+      "pushed_at": "2026-08-09T08:46:24Z"
     },
     "commits": [
       {
-        "sha": "d976c5b1e3762f87d535df6c122770dfb1506e12",
-        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/d976c5b1e3762f87d535df6c122770dfb1506e12",
+        "sha": "7dad29ca618779c8f46c4dc46227ea1604633ff9",
+        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/7dad29ca618779c8f46c4dc46227ea1604633ff9",
         "commit": {
-          "message": "Fix Next Step button - draw and hit-test it manually so face taps can't interfere with it",
+          "message": "Realistic pink hair: layered strands, dark roots, wavy side curtains, crown parting, face-framing wisps, specular shine",
           "author": {
-            "date": "2026-08-09T06:57:42Z"
+            "date": "2026-08-09T08:46:24Z"
           }
         }
       },
       {
-        "sha": "799c98b175b876044c8b73e1d8c3ce6ecfc40f62",
-        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/799c98b175b876044c8b73e1d8c3ce6ecfc40f62",
+        "sha": "b2e3ad3f62c0df464b803881c47f78d82f0f9efc",
+        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/b2e3ad3f62c0df464b803881c47f78d82f0f9efc",
         "commit": {
-          "message": "One tap anywhere on face completes each step - both eyes/cheeks apply at once, no repeated tapping",
+          "message": "Give her bubblegum pink hair with shine highlights",
           "author": {
-            "date": "2026-08-09T06:53:23Z"
+            "date": "2026-08-09T08:10:18Z"
           }
         }
       },
       {
-        "sha": "8a52881ce22835635030b73f7e5b256eb6ead722",
-        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/8a52881ce22835635030b73f7e5b256eb6ead722",
+        "sha": "9e0c5674572177c7a76a14f3b33025112a4ee17e",
+        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/9e0c5674572177c7a76a14f3b33025112a4ee17e",
         "commit": {
-          "message": "Every step now completes with a single tap - one tap on the face/eye/cheek/lips and it's done, both sides apply at once",
+          "message": "Major face glow-up: bigger pretty eyes with green irises & catchlights, arched brows, winged eyeliner, long fluttery lashes, fuller cupid's bow lips, cute button nose, gold dangling earrings, layered wavy hair, cheekbone highlights, dress/shoulders, and sparkly background",
           "author": {
-            "date": "2026-08-09T06:49:47Z"
+            "date": "2026-08-09T07:13:17Z"
           }
         }
       }
@@ -4674,9 +4674,29 @@
   "freegamestore-online/zombie-attack": {
     "meta": {
       "created_at": "2026-08-09T07:01:23Z",
-      "pushed_at": "2026-08-09T07:01:44Z"
+      "pushed_at": "2026-08-09T07:10:14Z"
     },
     "commits": [
+      {
+        "sha": "35d29b1811b3548cc0cc88e8cedc5216e12fc0f8",
+        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/35d29b1811b3548cc0cc88e8cedc5216e12fc0f8",
+        "commit": {
+          "message": "Full 3D first-person zombie survival: WASD movement, mouse aim/shoot, wave spawning, animated zombies, FP gun model, health/ammo HUD, damage flash, gun bob, fog atmosphere",
+          "author": {
+            "date": "2026-08-09T07:10:13Z"
+          }
+        }
+      },
+      {
+        "sha": "4a598590cb58fe630aaa040756d3403c8017ad58",
+        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/4a598590cb58fe630aaa040756d3403c8017ad58",
+        "commit": {
+          "message": "Build full 3D first-person zombie survival game with wave spawning, FP gun model, health/ammo HUD",
+          "author": {
+            "date": "2026-08-09T07:05:09Z"
+          }
+        }
+      },
       {
         "sha": "28de0ed2ae850e534a8445f6278c65ee459aacd9",
         "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/28de0ed2ae850e534a8445f6278c65ee459aacd9",
@@ -4686,25 +4706,25 @@
             "date": "2026-08-09T07:01:44Z"
           }
         }
-      },
-      {
-        "sha": "6cba72622de5ac2bab51a97702973b93fda22eb0",
-        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/6cba72622de5ac2bab51a97702973b93fda22eb0",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-08-09T07:01:30Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/candy-store-2": {
     "meta": {
       "created_at": "2026-08-09T06:43:37Z",
-      "pushed_at": "2026-08-09T06:57:12Z"
+      "pushed_at": "2026-08-09T07:57:23Z"
     },
     "commits": [
+      {
+        "sha": "b033b5742d5c10c642f1a3ecd6c728831a5a9210",
+        "html_url": "https://github.com/freegamestore-online/candy-store-2/commit/b033b5742d5c10c642f1a3ecd6c728831a5a9210",
+        "commit": {
+          "message": "Change backdrop to sky blue (#5ba4cf) - background, stripes, and HUD panels",
+          "author": {
+            "date": "2026-08-09T07:57:22Z"
+          }
+        }
+      },
       {
         "sha": "cb9bc3555a5adb316c3cf56dd09c0052185c140a",
         "html_url": "https://github.com/freegamestore-online/candy-store-2/commit/cb9bc3555a5adb316c3cf56dd09c0052185c140a",
@@ -4722,16 +4742,6 @@
           "message": "Build Candy Store 2 — FreeGameStore AI agent",
           "author": {
             "date": "2026-08-09T06:46:25Z"
-          }
-        }
-      },
-      {
-        "sha": "e41f43745b7686de581cf684dc836ea1cd57d681",
-        "html_url": "https://github.com/freegamestore-online/candy-store-2/commit/e41f43745b7686de581cf684dc836ea1cd57d681",
-        "commit": {
-          "message": "Set game name to \"Candy Store 2\"",
-          "author": {
-            "date": "2026-08-09T06:43:49Z"
           }
         }
       }
@@ -4760,6 +4770,72 @@
           "message": "Initial commit",
           "author": {
             "date": "2026-08-09T06:37:18Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/command": {
+    "meta": {
+      "created_at": "2026-08-09T08:55:25Z",
+      "pushed_at": "2026-08-09T08:55:38Z"
+    },
+    "commits": [
+      {
+        "sha": "632eef39cc5c2ca080ef80348219539f1d1f151a",
+        "html_url": "https://github.com/freegamestore-online/command/commit/632eef39cc5c2ca080ef80348219539f1d1f151a",
+        "commit": {
+          "message": "Set game name to \"Command\"",
+          "author": {
+            "date": "2026-08-09T08:55:37Z"
+          }
+        }
+      },
+      {
+        "sha": "94c5ce39ddb6260c46441219bbe04e15b5ba5eee",
+        "html_url": "https://github.com/freegamestore-online/command/commit/94c5ce39ddb6260c46441219bbe04e15b5ba5eee",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T08:55:29Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/my-shopping-spree": {
+    "meta": {
+      "created_at": "2026-08-09T07:19:12Z",
+      "pushed_at": "2026-08-09T07:31:05Z"
+    },
+    "commits": [
+      {
+        "sha": "3df9fe07e08f348f4a36f65e63bc05da9f24dbdf",
+        "html_url": "https://github.com/freegamestore-online/my-shopping-spree/commit/3df9fe07e08f348f4a36f65e63bc05da9f24dbdf",
+        "commit": {
+          "message": "Build My Shopping Spree — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-08-09T07:31:04Z"
+          }
+        }
+      },
+      {
+        "sha": "862f7f2180c09e32f2a3fc8ed160d01d657e194c",
+        "html_url": "https://github.com/freegamestore-online/my-shopping-spree/commit/862f7f2180c09e32f2a3fc8ed160d01d657e194c",
+        "commit": {
+          "message": "Set game name to \"my shopping spree\"",
+          "author": {
+            "date": "2026-08-09T07:19:23Z"
+          }
+        }
+      },
+      {
+        "sha": "e5f672b731ef101bba2a62961d076190b7a35693",
+        "html_url": "https://github.com/freegamestore-online/my-shopping-spree/commit/e5f672b731ef101bba2a62961d076190b7a35693",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T07:19:14Z"
           }
         }
       }
