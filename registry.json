@@ -2027,6 +2027,22 @@
       "creatorGithub": "Crystal12341",
       "engine": "babylon",
       "firstPublished": "2026-08-09T04:21:36.954Z"
+    },
+    {
+      "id": "race",
+      "name": "Race",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Race ",
+      "appUrl": "https://race.freegamestore.online",
+      "repo": "freegamestore-online/race",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Crystal12341",
+      "creatorGithub": "Crystal12341",
+      "engine": "kaplay",
+      "firstPublished": "2026-08-09T04:30:26.170Z"
     }
   ]
 }
