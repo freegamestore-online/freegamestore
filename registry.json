@@ -2139,6 +2139,22 @@
       "creatorGithub": "Crystal12341",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T05:47:47.517Z"
+    },
+    {
+      "id": "the-make-up-game",
+      "name": "The Make-up Game",
+      "category": "casual",
+      "icon": "💅🏻",
+      "iconBg": "#efd6ff",
+      "description": "The Make-up Game",
+      "appUrl": "https://the-make-up-game.freegamestore.online",
+      "repo": "freegamestore-online/the-make-up-game",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Pumpkin12345678910",
+      "creatorGithub": "Pumpkin12345678910",
+      "engine": "kaplay",
+      "firstPublished": "2026-08-09T06:10:33.164Z"
     }
   ]
 }
