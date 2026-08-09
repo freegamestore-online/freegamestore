@@ -2171,6 +2171,22 @@
       "creatorGithub": "SASASKIA",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T06:22:51.534Z"
+    },
+    {
+      "id": "zombie123mmymymynmynamynammynamemynamemyname",
+      "name": "Zombie",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Zombie",
+      "appUrl": "https://zombie123mmymymynmynamynammynamemynamemyname.freegamestore.online",
+      "repo": "freegamestore-online/zombie123mmymymynmynamynammynamemynamemyname",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Crystal12341",
+      "creatorGithub": "Crystal12341",
+      "engine": "kaplay",
+      "firstPublished": "2026-08-09T06:37:15.101Z"
     }
   ]
 }
