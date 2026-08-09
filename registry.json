@@ -2251,6 +2251,22 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:20:03.363Z"
+    },
+    {
+      "id": "command",
+      "name": "Command",
+      "category": "strategy",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Command your troops to victory!!!",
+      "appUrl": "https://command.freegamestore.online",
+      "repo": "freegamestore-online/command",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "iamapug-blip",
+      "creatorGithub": "iamapug-blip",
+      "engine": "kaplay",
+      "firstPublished": "2026-08-09T08:55:25.042Z"
     }
   ]
 }
