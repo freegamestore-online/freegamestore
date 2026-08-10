@@ -2267,23 +2267,6 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:55:25.042Z"
-    },
-    {
-      "id": "e2e-create-msnfhmtw-wbdmsm-test",
-      "name": "Updated Canary e2e-create-msnfhmtw-wbdmsm-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-08-10T16:11:24.704Z",
-      "appUrl": "https://e2e-create-msnfhmtw-wbdmsm-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-msnfhmtw-wbdmsm-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-10T16:11:09.820Z",
-      "updatedAt": "2026-08-10T16:11:24.875Z"
     }
   ]
 }
