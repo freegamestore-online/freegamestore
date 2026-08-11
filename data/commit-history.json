@@ -4494,9 +4494,19 @@
   "freegamestore-online/squishy-swap": {
     "meta": {
       "created_at": "2026-08-09T04:53:49Z",
-      "pushed_at": "2026-08-10T22:53:59Z"
+      "pushed_at": "2026-08-11T06:43:35Z"
     },
     "commits": [
+      {
+        "sha": "e479fd2b3707cb292ca52190853e54bfd16f2ae6",
+        "html_url": "https://github.com/freegamestore-online/squishy-swap/commit/e479fd2b3707cb292ca52190853e54bfd16f2ae6",
+        "commit": {
+          "message": "Full light theme: soft lavender-white backgrounds, white cards, dark text, colourful pastel accents throughout all scenes",
+          "author": {
+            "date": "2026-08-11T06:43:34Z"
+          }
+        }
+      },
       {
         "sha": "59af108faf092dec1f1ffe175b58e15cf97948ab",
         "html_url": "https://github.com/freegamestore-online/squishy-swap/commit/59af108faf092dec1f1ffe175b58e15cf97948ab",
@@ -4514,16 +4524,6 @@
           "message": "Add difficulty badge (EASY/OK/HARD) on trader card + light/mid/dark colour system for trader difficulty",
           "author": {
             "date": "2026-08-09T08:05:54Z"
-          }
-        }
-      },
-      {
-        "sha": "ffff8f0a72670321f09cd5e622d26e4ebdf3426e",
-        "html_url": "https://github.com/freegamestore-online/squishy-swap/commit/ffff8f0a72670321f09cd5e622d26e4ebdf3426e",
-        "commit": {
-          "message": "Teen aesthetic: dark navy theme, neon accents, thermometer deal meter, rounded cards, edgy copy, grid bg, glowing orbs",
-          "author": {
-            "date": "2026-08-09T06:38:34Z"
           }
         }
       }
