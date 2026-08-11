@@ -2267,23 +2267,6 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:55:25.042Z"
-    },
-    {
-      "id": "e2e-create-msouz7pn-w57bs1-test",
-      "name": "Updated Canary e2e-create-msouz7pn-w57bs1-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-08-11T16:12:56.958Z",
-      "appUrl": "https://e2e-create-msouz7pn-w57bs1-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-msouz7pn-w57bs1-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-11T16:12:39.935Z",
-      "updatedAt": "2026-08-11T16:12:57.177Z"
     }
   ]
 }
