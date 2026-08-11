@@ -532,3 +532,56 @@ test("validator drops duplicate ids and unbounded/ctrl-char names, build still s
     assert.match(r.stderr, /name must be/);
   } finally { rmSync(r.tmp, { recursive: true, force: true }); }
 });
+
+// Build-status gate (freegamestore-online/platform#22). A game is provisioned —
+// repo, host route, registry entry — BEFORE its first build runs, so the store
+// must not list one whose code has never compiled. The host answers 200 for the
+// template scaffold, so liveness cannot be inferred from the URL responding.
+test("public registry excludes pending and failed games", () => {
+  const { ok, stderr, tmp, tmpDist } = runBuildWithRegistry([
+    { ...VALID_GAME, id: "live-game", name: "Live", status: "live" },
+    { ...VALID_GAME, id: "pending-game", name: "Pending", status: "pending" },
+    { ...VALID_GAME, id: "failed-game", name: "Failed", status: "failed" },
+  ]);
+  try {
+    assert.equal(ok, true, stderr);
+    const publicRegistry = JSON.parse(readFileSync(join(tmpDist, "registry.json"), "utf8"));
+    assert.deepEqual(publicRegistry.games.map((g) => g.id), ["live-game"]);
+    // The hidden games must not have detail pages generated either.
+    const pages = listFiles(join(tmpDist, "games"), ".html").map((f) => f.split("/").pop());
+    assert.ok(!pages.includes("pending-game.html"), "pending game got a detail page");
+    assert.ok(!pages.includes("failed-game.html"), "failed game got a detail page");
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
+test("a registry entry with NO status is treated as live", () => {
+  // The entire pre-2026-08-11 catalogue has no status field. Hiding those would
+  // empty the store.
+  const { ok, stderr, tmp, tmpDist } = runBuildWithRegistry([
+    { ...VALID_GAME, id: "legacy-game", name: "Legacy" },
+  ]);
+  try {
+    assert.equal(ok, true, stderr);
+    const publicRegistry = JSON.parse(readFileSync(join(tmpDist, "registry.json"), "utf8"));
+    assert.deepEqual(publicRegistry.games.map((g) => g.id), ["legacy-game"]);
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
+test("an unrecognised status does not hide a game", () => {
+  // Matches readGameStatus in the platform's admin worker: only the two known
+  // non-live states hide a game, so a typo can never delist a live one.
+  const { ok, stderr, tmp, tmpDist } = runBuildWithRegistry([
+    { ...VALID_GAME, id: "typo-game", name: "Typo", status: "livee" },
+  ]);
+  try {
+    assert.equal(ok, true, stderr);
+    const publicRegistry = JSON.parse(readFileSync(join(tmpDist, "registry.json"), "utf8"));
+    assert.deepEqual(publicRegistry.games.map((g) => g.id), ["typo-game"]);
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});

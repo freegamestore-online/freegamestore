@@ -121,6 +121,43 @@ if (fixtures.length) {
   console.log(`Registry: excluded ${fixtures.length} test fixture(s) from the store: ${fixtures.map((g) => g.id).join(', ')}`);
 }
 
+// Build-status gate (freegamestore-online/platform#22). Provisioning writes the
+// repo, host route and registry entry BEFORE the first build runs, so a game can
+// be legitimately listed here while its code has never compiled — and the host
+// answers a real 200 for the template scaffold either way, so "the URL responds"
+// proves nothing. `status` records the build lifecycle:
+//   live    — a deploy.yml run concluded success at least once
+//   pending — provisioned, no successful build yet
+//   failed  — every build so far failed
+//
+// Only pending/failed are hidden. A MISSING status means the entry predates the
+// field (the whole pre-2026-08-11 catalogue) and is genuinely live; an
+// UNRECOGNISED value is also treated as live, matching readGameStatus in the
+// platform's admin worker — a typo in one field must never delist a live game.
+const NON_LIVE = new Set(['pending', 'failed']);
+const notLive = games.filter((g) => NON_LIVE.has(g.status));
+if (notLive.length) {
+  games = games.filter((g) => !NON_LIVE.has(g.status));
+  const detail = notLive.map((g) => `${g.id} (${g.status})`).join(', ');
+  console.log(`Registry: excluded ${notLive.length} non-live game(s) from the store: ${detail}`);
+  // Same annotation treatment as a validation drop: hiding a published game must
+  // be visible on the run itself, not buried in build output. A silently-hidden
+  // game was invisible for weeks the last time this was only a console log
+  // (REGISTRY-VALIDATION-RECOMMENDATIONS.md #4).
+  if (process.env.GITHUB_ACTIONS) {
+    console.log(`::warning title=Registry hid ${notLive.length} non-live game(s)::${detail} — no successful build yet, excluded from the store`);
+    if (process.env.GITHUB_STEP_SUMMARY) {
+      try {
+        fs.appendFileSync(
+          process.env.GITHUB_STEP_SUMMARY,
+          `### ${notLive.length} game(s) hidden — no successful build yet\n\n` +
+          notLive.map((g) => `- \`${g.id}\` — status \`${g.status}\``).join('\n') + '\n',
+        );
+      } catch { /* summary is best-effort */ }
+    }
+  }
+}
+
 // Read templates
 const indexTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'index.html'), 'utf8');
 const detailTemplate = fs.readFileSync(path.join(ROOT, 'templates', 'game-detail.html'), 'utf8');
