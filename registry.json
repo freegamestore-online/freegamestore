@@ -2270,11 +2270,11 @@
     },
     {
       "id": "e2e-create-msrpu62o-4mphkl-test",
-      "name": "Create Canary e2e-create-msrpu62o-4mphkl-test",
-      "category": "platform",
-      "icon": "T",
-      "iconBg": "#ecfdf5",
-      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
+      "name": "Updated Canary e2e-create-msrpu62o-4mphkl-test",
+      "category": "arcade",
+      "icon": "U",
+      "iconBg": "#dbeafe",
+      "description": "Updated by production e2e at 2026-08-13T16:12:16.108Z",
       "appUrl": "https://e2e-create-msrpu62o-4mphkl-test.freegamestore.online",
       "repo": "freegamestore-online/e2e-create-msrpu62o-4mphkl-test",
       "hostedOn": "r2",
@@ -2282,7 +2282,8 @@
       "developer": "serge-ivo",
       "creatorGithub": "serge-ivo",
       "engine": "canvas",
-      "firstPublished": "2026-08-13T16:11:57.604Z"
+      "firstPublished": "2026-08-13T16:11:57.604Z",
+      "updatedAt": "2026-08-13T16:12:16.648Z"
     }
   ]
 }
