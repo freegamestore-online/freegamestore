@@ -2270,11 +2270,11 @@
     },
     {
       "id": "e2e-create-msujiplz-m24l7e-test",
-      "name": "Create Canary e2e-create-msujiplz-m24l7e-test",
-      "category": "platform",
-      "icon": "T",
-      "iconBg": "#ecfdf5",
-      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
+      "name": "Updated Canary e2e-create-msujiplz-m24l7e-test",
+      "category": "arcade",
+      "icon": "U",
+      "iconBg": "#dbeafe",
+      "description": "Updated by production e2e at 2026-08-15T15:38:35.843Z",
       "appUrl": "https://e2e-create-msujiplz-m24l7e-test.freegamestore.online",
       "repo": "freegamestore-online/e2e-create-msujiplz-m24l7e-test",
       "hostedOn": "r2",
@@ -2282,7 +2282,8 @@
       "developer": "serge-ivo",
       "creatorGithub": "serge-ivo",
       "engine": "canvas",
-      "firstPublished": "2026-08-15T15:38:20.943Z"
+      "firstPublished": "2026-08-15T15:38:20.943Z",
+      "updatedAt": "2026-08-15T15:38:36.042Z"
     }
   ]
 }
