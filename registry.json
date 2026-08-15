@@ -2267,23 +2267,6 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:55:25.042Z"
-    },
-    {
-      "id": "e2e-create-msujiplz-m24l7e-test",
-      "name": "Updated Canary e2e-create-msujiplz-m24l7e-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-08-15T15:38:35.843Z",
-      "appUrl": "https://e2e-create-msujiplz-m24l7e-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-msujiplz-m24l7e-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-15T15:38:20.943Z",
-      "updatedAt": "2026-08-15T15:38:36.042Z"
     }
   ]
 }
