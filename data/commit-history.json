@@ -4674,9 +4674,19 @@
   "freegamestore-online/zombie-attack": {
     "meta": {
       "created_at": "2026-08-09T07:01:23Z",
-      "pushed_at": "2026-08-09T07:10:14Z"
+      "pushed_at": "2026-08-15T02:34:15Z"
     },
     "commits": [
+      {
+        "sha": "6472a98e6c7d25da68593903179d649bd49ac1fb",
+        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/6472a98e6c7d25da68593903179d649bd49ac1fb",
+        "commit": {
+          "message": "Add prominent shoot instructions on start screen and contextual HUD tip when mouse isn't locked",
+          "author": {
+            "date": "2026-08-15T02:34:15Z"
+          }
+        }
+      },
       {
         "sha": "35d29b1811b3548cc0cc88e8cedc5216e12fc0f8",
         "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/35d29b1811b3548cc0cc88e8cedc5216e12fc0f8",
@@ -4694,16 +4704,6 @@
           "message": "Build full 3D first-person zombie survival game with wave spawning, FP gun model, health/ammo HUD",
           "author": {
             "date": "2026-08-09T07:05:09Z"
-          }
-        }
-      },
-      {
-        "sha": "28de0ed2ae850e534a8445f6278c65ee459aacd9",
-        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/28de0ed2ae850e534a8445f6278c65ee459aacd9",
-        "commit": {
-          "message": "Set game name to \"Zombie Attack\"",
-          "author": {
-            "date": "2026-08-09T07:01:44Z"
           }
         }
       }
