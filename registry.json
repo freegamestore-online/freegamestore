@@ -2267,22 +2267,6 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:55:25.042Z"
-    },
-    {
-      "id": "e2e-create-msyuri8i-ndt5tv-test",
-      "name": "Browser Canary e2e-create-msyuri8i-ndt5tv-test",
-      "category": "casual",
-      "icon": "🎮",
-      "iconBg": "#1a2e26",
-      "description": "Production browser e2e canary game.",
-      "appUrl": "https://e2e-create-msyuri8i-ndt5tv-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-msyuri8i-ndt5tv-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-18T16:04:04.400Z"
     }
   ]
 }
