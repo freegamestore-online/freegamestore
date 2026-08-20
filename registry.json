@@ -2267,6 +2267,22 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:55:25.042Z"
+    },
+    {
+      "id": "e2e-create-mt1p68ft-qm9d7o-test",
+      "name": "Create Canary e2e-create-mt1p68ft-qm9d7o-test",
+      "category": "platform",
+      "icon": "T",
+      "iconBg": "#ecfdf5",
+      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
+      "appUrl": "https://e2e-create-mt1p68ft-qm9d7o-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-mt1p68ft-qm9d7o-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-08-20T15:51:02.332Z"
     }
   ]
 }
