@@ -2267,23 +2267,6 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:55:25.042Z"
-    },
-    {
-      "id": "e2e-create-mt34lk1e-zmagzt-test",
-      "name": "Updated Canary e2e-create-mt34lk1e-zmagzt-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-08-21T15:50:55.734Z",
-      "appUrl": "https://e2e-create-mt34lk1e-zmagzt-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mt34lk1e-zmagzt-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-21T15:50:37.966Z",
-      "updatedAt": "2026-08-21T15:50:56.127Z"
     }
   ]
 }
