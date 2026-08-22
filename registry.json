@@ -2267,23 +2267,6 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:55:25.042Z"
-    },
-    {
-      "id": "e2e-create-mt4jmeab-g23dp9-test",
-      "name": "Updated Canary e2e-create-mt4jmeab-g23dp9-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-08-22T15:39:14.994Z",
-      "appUrl": "https://e2e-create-mt4jmeab-g23dp9-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mt4jmeab-g23dp9-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-22T15:38:57.459Z",
-      "updatedAt": "2026-08-22T15:39:15.301Z"
     }
   ]
 }
