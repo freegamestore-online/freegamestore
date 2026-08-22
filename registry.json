@@ -2267,6 +2267,22 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:55:25.042Z"
+    },
+    {
+      "id": "e2e-create-mt4jmeab-g23dp9-test",
+      "name": "Create Canary e2e-create-mt4jmeab-g23dp9-test",
+      "category": "platform",
+      "icon": "T",
+      "iconBg": "#ecfdf5",
+      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
+      "appUrl": "https://e2e-create-mt4jmeab-g23dp9-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-mt4jmeab-g23dp9-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-08-22T15:38:57.459Z"
     }
   ]
 }
