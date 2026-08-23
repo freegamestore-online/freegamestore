@@ -2267,23 +2267,6 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:55:25.042Z"
-    },
-    {
-      "id": "e2e-create-mt5z498p-5nko8g-test",
-      "name": "Updated Canary e2e-create-mt5z498p-5nko8g-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-08-23T15:40:40.429Z",
-      "appUrl": "https://e2e-create-mt5z498p-5nko8g-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mt5z498p-5nko8g-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-23T15:40:27.220Z",
-      "updatedAt": "2026-08-23T15:40:40.589Z"
     }
   ]
 }
