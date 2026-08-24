@@ -2267,23 +2267,6 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:55:25.042Z"
-    },
-    {
-      "id": "e2e-create-mt7f6z64-bwhmmt-test",
-      "name": "Updated Canary e2e-create-mt7f6z64-bwhmmt-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-08-24T15:58:41.839Z",
-      "appUrl": "https://e2e-create-mt7f6z64-bwhmmt-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mt7f6z64-bwhmmt-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-24T15:58:22.281Z",
-      "updatedAt": "2026-08-24T15:58:42.452Z"
     }
   ]
 }
