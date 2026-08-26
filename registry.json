@@ -2284,6 +2284,22 @@
       "engine": "canvas",
       "firstPublished": "2026-08-26T16:35:07.454Z",
       "updatedAt": "2026-08-26T16:35:24.262Z"
+    },
+    {
+      "id": "e2e-create-mtabiwf5-xo602a-test",
+      "name": "Browser Canary e2e-create-mtabiwf5-xo602a-test",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Production browser e2e canary game.",
+      "appUrl": "https://e2e-create-mtabiwf5-xo602a-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-mtabiwf5-xo602a-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-08-26T16:38:46.394Z"
     }
   ]
 }
