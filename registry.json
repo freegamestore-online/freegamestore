@@ -2267,23 +2267,6 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:55:25.042Z"
-    },
-    {
-      "id": "e2e-create-mteq0l71-pf9o4a-test",
-      "name": "Updated Canary e2e-create-mteq0l71-pf9o4a-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-08-29T18:35:51.053Z",
-      "appUrl": "https://e2e-create-mteq0l71-pf9o4a-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mteq0l71-pf9o4a-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-29T18:35:36.059Z",
-      "updatedAt": "2026-08-29T18:35:51.216Z"
     }
   ]
 }
