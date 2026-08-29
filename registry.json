@@ -2267,6 +2267,22 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:55:25.042Z"
+    },
+    {
+      "id": "e2e-create-mteqlsiv-uqd8gb-test",
+      "name": "Browser Canary e2e-create-mteqlsiv-uqd8gb-test",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Production browser e2e canary game.",
+      "appUrl": "https://e2e-create-mteqlsiv-uqd8gb-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-mteqlsiv-uqd8gb-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-08-29T18:51:58.561Z"
     }
   ]
 }
