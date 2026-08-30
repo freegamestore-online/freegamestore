@@ -2267,6 +2267,22 @@
       "creatorGithub": "iamapug-blip",
       "engine": "kaplay",
       "firstPublished": "2026-08-09T08:55:25.042Z"
+    },
+    {
+      "id": "dress-to-impress",
+      "name": "Dress to Impress",
+      "category": "casual",
+      "icon": "👗",
+      "iconBg": "#fdf2f8",
+      "description": "Style outfits across themed prompts — mix tops, bottoms, shoes and accessories to score points for how well your look fits the vibe!",
+      "appUrl": "https://dress-to-impress.freegamestore.online",
+      "repo": "freegamestore-online/dress-to-impress",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-08-30T01:13:44.441Z"
     }
   ]
 }
