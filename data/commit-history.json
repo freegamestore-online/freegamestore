@@ -4570,36 +4570,36 @@
   "freegamestore-online/the-make-up-game": {
     "meta": {
       "created_at": "2026-08-09T06:10:33Z",
-      "pushed_at": "2026-08-30T04:44:11Z"
+      "pushed_at": "2026-08-30T06:52:09Z"
     },
     "commits": [
       {
-        "sha": "d47a68d784fae9497b7e41a046aa86bd21f302ff",
-        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/d47a68d784fae9497b7e41a046aa86bd21f302ff",
+        "sha": "474ea6f25d595dc01c5221f3f0bfd1dd948b0e36",
+        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/474ea6f25d595dc01c5221f3f0bfd1dd948b0e36",
         "commit": {
-          "message": "Add blinking: smooth sine-curve blink every 3 seconds, eyes squish shut via curEH, skin-coloured lid covers eye at peak, iris/pupil hidden during blink, lashes and liner follow the animation",
+          "message": "Name Chinese model \"Lily\", add names to all models (Priya for Indian, Anya for Russian). Names shown on picker cards, start button, in-game name tag, and done screen.",
           "author": {
-            "date": "2026-08-30T04:44:10Z"
+            "date": "2026-08-30T06:52:08Z"
           }
         }
       },
       {
-        "sha": "fbea8273f1f1200ccea8d9d608a7652193c383d6",
-        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/fbea8273f1f1200ccea8d9d608a7652193c383d6",
+        "sha": "13b9144c7a947739735aed1cd416ce3bbb06415c",
+        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/13b9144c7a947739735aed1cd416ce3bbb06415c",
         "commit": {
-          "message": "Fix mascara: uniform lash length (20px), symmetric ellipse-normal fan spread, 11 evenly-spaced upper lashes, 7 even lower lashes — no random variation so both eyes match perfectly",
+          "message": "Add culture picker front page: Chinese (light yellow skin, black hair/eyes), Indian (brown skin, black hair/eyes), Russian (light skin, light brown hair/eyes). Each culture drives all face colours. Mini face previews on cards. Back button returns to picker.",
           "author": {
-            "date": "2026-08-30T04:37:01Z"
+            "date": "2026-08-30T06:00:33Z"
           }
         }
       },
       {
-        "sha": "6364eb549dcd7f94056063106713cc618be4c130",
-        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/6364eb549dcd7f94056063106713cc618be4c130",
+        "sha": "d9c729705fa47018001eb9bbc1f925a1e214c4f5",
+        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/d9c729705fa47018001eb9bbc1f925a1e214c4f5",
         "commit": {
-          "message": "Fix eyeliner: trace lid edges using ellipse arc segments instead of straight lines across the eye; liner and lashes now sit on the lid boundary, never cutting through the eyeball",
+          "message": "Eyes moved lower (closer to nose), chin softened with wider tip + ellipse cap + smooth-step jaw taper — less pointy, more rounded anime face",
           "author": {
-            "date": "2026-08-30T04:30:09Z"
+            "date": "2026-08-30T05:27:31Z"
           }
         }
       }
@@ -4674,9 +4674,29 @@
   "freegamestore-online/zombie-attack": {
     "meta": {
       "created_at": "2026-08-09T07:01:23Z",
-      "pushed_at": "2026-08-30T04:52:15Z"
+      "pushed_at": "2026-08-30T05:49:32Z"
     },
     "commits": [
+      {
+        "sha": "24731c66a5fbc2be9d9a8bfae2523d9fa806979b",
+        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/24731c66a5fbc2be9d9a8bfae2523d9fa806979b",
+        "commit": {
+          "message": "Fix TypeScript strict mode errors: unused vars, noUncheckedIndexedAccess, restructure into stable callbacks",
+          "author": {
+            "date": "2026-08-30T05:49:31Z"
+          }
+        }
+      },
+      {
+        "sha": "e6b6dbf8942558144305d052154932796e8c6232",
+        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/e6b6dbf8942558144305d052154932796e8c6232",
+        "commit": {
+          "message": "Fix build: remove unused engineRef (noUnusedLocals TS error)",
+          "author": {
+            "date": "2026-08-30T05:26:55Z"
+          }
+        }
+      },
       {
         "sha": "3d3887f65c679cb8b8dc9f94072cdbd0edf67bb9",
         "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/3d3887f65c679cb8b8dc9f94072cdbd0edf67bb9",
@@ -4684,26 +4704,6 @@
           "message": "Fix shooting (document-level mousedown for pointer-lock) and obstacle collisions (isPickable + ellipsoidOffset)",
           "author": {
             "date": "2026-08-30T04:52:15Z"
-          }
-        }
-      },
-      {
-        "sha": "14035ca1ab4654168b397049de000950d84d0966",
-        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/14035ca1ab4654168b397049de000950d84d0966",
-        "commit": {
-          "message": "Fix shooting (mousedown pointer-lock flow) and obstacle collisions (scene.collisionsEnabled, checkCollisions on all meshes, moveWithCollisions for player, raycast stops at solid obstacles)",
-          "author": {
-            "date": "2026-08-30T04:45:26Z"
-          }
-        }
-      },
-      {
-        "sha": "6eed822058b7a110de31add0558ff720de7cdb41",
-        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/6eed822058b7a110de31add0558ff720de7cdb41",
-        "commit": {
-          "message": "Fix shooting (single mousedown handler, lock-then-shoot) and enable full collisions (scene, camera ellipsoid, obstacles/walls block movement and bullets)",
-          "author": {
-            "date": "2026-08-30T04:31:28Z"
           }
         }
       }
@@ -4882,36 +4882,36 @@
   "freegamestore-online/ajungle-race": {
     "meta": {
       "created_at": "2026-08-30T04:34:51Z",
-      "pushed_at": "2026-08-30T04:52:24Z"
+      "pushed_at": "2026-08-30T06:40:49Z"
     },
     "commits": [
       {
-        "sha": "557218a40bf033d470a87d6820256957897f1da0",
-        "html_url": "https://github.com/freegamestore-online/ajungle-race/commit/557218a40bf033d470a87d6820256957897f1da0",
+        "sha": "e6d8649702739bcc3de4cfa8946b0ec9a3e8e3f7",
+        "html_url": "https://github.com/freegamestore-online/ajungle-race/commit/e6d8649702739bcc3de4cfa8946b0ec9a3e8e3f7",
         "commit": {
-          "message": "Full 3D jungle racing game: player car, enemies, guns, power-ups, golden statue, waterfalls, ruins, mist, birds, cinematic follow cam, HUD",
+          "message": "Faster speed + better graphics: richer lighting, fog, boost trail particles, dynamic FOV camera, juicier HUD, more detailed meshes",
           "author": {
-            "date": "2026-08-30T04:52:24Z"
+            "date": "2026-08-30T06:40:48Z"
           }
         }
       },
       {
-        "sha": "208192a847c3ea7b2a7d4c8bb6744095045e3dd2",
-        "html_url": "https://github.com/freegamestore-online/ajungle-race/commit/208192a847c3ea7b2a7d4c8bb6744095045e3dd2",
+        "sha": "6427085e5ca802f8167b78a1c4cf05641ba569c0",
+        "html_url": "https://github.com/freegamestore-online/ajungle-race/commit/6427085e5ca802f8167b78a1c4cf05641ba569c0",
         "commit": {
-          "message": "Full 3D jungle racing game: cars, guns, power-ups, golden statue, waterfalls, ruins, mist, birds, enemies",
+          "message": "Complete game: 3D on-foot runner, animated player character, enemy guardians, power-ups, instructions screen, character select with unlocks, mobile d-pad HUD",
           "author": {
-            "date": "2026-08-30T04:42:52Z"
+            "date": "2026-08-30T06:10:40Z"
           }
         }
       },
       {
-        "sha": "e97cde4beaad78f77fe69881df350a90b3abf74c",
-        "html_url": "https://github.com/freegamestore-online/ajungle-race/commit/e97cde4beaad78f77fe69881df350a90b3abf74c",
+        "sha": "1304d6ffc5b6fe34780f80542b49f943ff043b24",
+        "html_url": "https://github.com/freegamestore-online/ajungle-race/commit/1304d6ffc5b6fe34780f80542b49f943ff043b24",
         "commit": {
-          "message": "Set game name to \"A jungle race\"",
+          "message": "Complete rewrite: character select with 10 diverse racers (boys/girls, all skin tones), unlockable characters per level, working WASD+arrow controls, 5 challenge zones, golden statue goal, proper car visuals, touch controls",
           "author": {
-            "date": "2026-08-30T04:35:04Z"
+            "date": "2026-08-30T05:49:53Z"
           }
         }
       }
