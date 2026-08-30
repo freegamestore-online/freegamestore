@@ -2347,23 +2347,6 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "3d",
       "firstPublished": "2026-08-30T04:51:38.356Z"
-    },
-    {
-      "id": "e2e-create-mtg5kv9s-y2gj95-test",
-      "name": "Updated Canary e2e-create-mtg5kv9s-y2gj95-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-08-30T18:39:16.433Z",
-      "appUrl": "https://e2e-create-mtg5kv9s-y2gj95-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mtg5kv9s-y2gj95-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-08-30T18:39:02.141Z",
-      "updatedAt": "2026-08-30T18:39:16.710Z"
     }
   ]
 }
