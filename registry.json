@@ -2299,6 +2299,22 @@
       "creatorGithub": "SASASKIA",
       "engine": "kaplay",
       "firstPublished": "2026-08-30T04:14:35.351Z"
+    },
+    {
+      "id": "zombie123",
+      "name": "Zombie",
+      "category": "arcade",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Zombie",
+      "appUrl": "https://zombie123.freegamestore.online",
+      "repo": "freegamestore-online/zombie123",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Crystal12341",
+      "creatorGithub": "Crystal12341",
+      "engine": "3d",
+      "firstPublished": "2026-08-30T04:18:26.844Z"
     }
   ]
 }
