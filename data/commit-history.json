@@ -4570,36 +4570,36 @@
   "freegamestore-online/the-make-up-game": {
     "meta": {
       "created_at": "2026-08-09T06:10:33Z",
-      "pushed_at": "2026-08-09T08:46:24Z"
+      "pushed_at": "2026-08-30T04:44:11Z"
     },
     "commits": [
       {
-        "sha": "7dad29ca618779c8f46c4dc46227ea1604633ff9",
-        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/7dad29ca618779c8f46c4dc46227ea1604633ff9",
+        "sha": "d47a68d784fae9497b7e41a046aa86bd21f302ff",
+        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/d47a68d784fae9497b7e41a046aa86bd21f302ff",
         "commit": {
-          "message": "Realistic pink hair: layered strands, dark roots, wavy side curtains, crown parting, face-framing wisps, specular shine",
+          "message": "Add blinking: smooth sine-curve blink every 3 seconds, eyes squish shut via curEH, skin-coloured lid covers eye at peak, iris/pupil hidden during blink, lashes and liner follow the animation",
           "author": {
-            "date": "2026-08-09T08:46:24Z"
+            "date": "2026-08-30T04:44:10Z"
           }
         }
       },
       {
-        "sha": "b2e3ad3f62c0df464b803881c47f78d82f0f9efc",
-        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/b2e3ad3f62c0df464b803881c47f78d82f0f9efc",
+        "sha": "fbea8273f1f1200ccea8d9d608a7652193c383d6",
+        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/fbea8273f1f1200ccea8d9d608a7652193c383d6",
         "commit": {
-          "message": "Give her bubblegum pink hair with shine highlights",
+          "message": "Fix mascara: uniform lash length (20px), symmetric ellipse-normal fan spread, 11 evenly-spaced upper lashes, 7 even lower lashes — no random variation so both eyes match perfectly",
           "author": {
-            "date": "2026-08-09T08:10:18Z"
+            "date": "2026-08-30T04:37:01Z"
           }
         }
       },
       {
-        "sha": "9e0c5674572177c7a76a14f3b33025112a4ee17e",
-        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/9e0c5674572177c7a76a14f3b33025112a4ee17e",
+        "sha": "6364eb549dcd7f94056063106713cc618be4c130",
+        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/6364eb549dcd7f94056063106713cc618be4c130",
         "commit": {
-          "message": "Major face glow-up: bigger pretty eyes with green irises & catchlights, arched brows, winged eyeliner, long fluttery lashes, fuller cupid's bow lips, cute button nose, gold dangling earrings, layered wavy hair, cheekbone highlights, dress/shoulders, and sparkly background",
+          "message": "Fix eyeliner: trace lid edges using ellipse arc segments instead of straight lines across the eye; liner and lashes now sit on the lid boundary, never cutting through the eyeball",
           "author": {
-            "date": "2026-08-09T07:13:17Z"
+            "date": "2026-08-30T04:30:09Z"
           }
         }
       }
@@ -4608,9 +4608,19 @@
   "freegamestore-online/my-dream-room": {
     "meta": {
       "created_at": "2026-08-09T04:34:09Z",
-      "pushed_at": "2026-08-09T07:00:42Z"
+      "pushed_at": "2026-08-30T04:32:06Z"
     },
     "commits": [
+      {
+        "sha": "f10751bdcbd19fc4d7caeffd7a3cf8277232f8d3",
+        "html_url": "https://github.com/freegamestore-online/my-dream-room/commit/f10751bdcbd19fc4d7caeffd7a3cf8277232f8d3",
+        "commit": {
+          "message": "Redesign: gender-neutral customizer with 8 room styles, 4 coin tiers, drag-to-place furniture, challenges panel, style picker scene",
+          "author": {
+            "date": "2026-08-30T04:32:06Z"
+          }
+        }
+      },
       {
         "sha": "126c01818bfb4bb517b718c921732288057c3d8e",
         "html_url": "https://github.com/freegamestore-online/my-dream-room/commit/126c01818bfb4bb517b718c921732288057c3d8e",
@@ -4628,16 +4638,6 @@
           "message": "Build Room Bloom: cozy room decorator with KAPLAY, furniture shop, challenges, coin system",
           "author": {
             "date": "2026-08-09T04:40:27Z"
-          }
-        }
-      },
-      {
-        "sha": "3455d21b8575ded2e70b22f2693efa703b37e0fb",
-        "html_url": "https://github.com/freegamestore-online/my-dream-room/commit/3455d21b8575ded2e70b22f2693efa703b37e0fb",
-        "commit": {
-          "message": "Set game name to \"My Dream Room\"",
-          "author": {
-            "date": "2026-08-09T04:34:21Z"
           }
         }
       }
@@ -4674,36 +4674,36 @@
   "freegamestore-online/zombie-attack": {
     "meta": {
       "created_at": "2026-08-09T07:01:23Z",
-      "pushed_at": "2026-08-15T02:34:15Z"
+      "pushed_at": "2026-08-30T04:52:15Z"
     },
     "commits": [
       {
-        "sha": "6472a98e6c7d25da68593903179d649bd49ac1fb",
-        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/6472a98e6c7d25da68593903179d649bd49ac1fb",
+        "sha": "3d3887f65c679cb8b8dc9f94072cdbd0edf67bb9",
+        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/3d3887f65c679cb8b8dc9f94072cdbd0edf67bb9",
         "commit": {
-          "message": "Add prominent shoot instructions on start screen and contextual HUD tip when mouse isn't locked",
+          "message": "Fix shooting (document-level mousedown for pointer-lock) and obstacle collisions (isPickable + ellipsoidOffset)",
           "author": {
-            "date": "2026-08-15T02:34:15Z"
+            "date": "2026-08-30T04:52:15Z"
           }
         }
       },
       {
-        "sha": "35d29b1811b3548cc0cc88e8cedc5216e12fc0f8",
-        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/35d29b1811b3548cc0cc88e8cedc5216e12fc0f8",
+        "sha": "14035ca1ab4654168b397049de000950d84d0966",
+        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/14035ca1ab4654168b397049de000950d84d0966",
         "commit": {
-          "message": "Full 3D first-person zombie survival: WASD movement, mouse aim/shoot, wave spawning, animated zombies, FP gun model, health/ammo HUD, damage flash, gun bob, fog atmosphere",
+          "message": "Fix shooting (mousedown pointer-lock flow) and obstacle collisions (scene.collisionsEnabled, checkCollisions on all meshes, moveWithCollisions for player, raycast stops at solid obstacles)",
           "author": {
-            "date": "2026-08-09T07:10:13Z"
+            "date": "2026-08-30T04:45:26Z"
           }
         }
       },
       {
-        "sha": "4a598590cb58fe630aaa040756d3403c8017ad58",
-        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/4a598590cb58fe630aaa040756d3403c8017ad58",
+        "sha": "6eed822058b7a110de31add0558ff720de7cdb41",
+        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/6eed822058b7a110de31add0558ff720de7cdb41",
         "commit": {
-          "message": "Build full 3D first-person zombie survival game with wave spawning, FP gun model, health/ammo HUD",
+          "message": "Fix shooting (single mousedown handler, lock-then-shoot) and enable full collisions (scene, camera ellipsoid, obstacles/walls block movement and bullets)",
           "author": {
-            "date": "2026-08-09T07:05:09Z"
+            "date": "2026-08-30T04:31:28Z"
           }
         }
       }
@@ -4836,6 +4836,176 @@
           "message": "Initial commit",
           "author": {
             "date": "2026-08-09T07:19:14Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/a-jungle-race": {
+    "meta": {
+      "created_at": "2026-08-30T04:14:36Z",
+      "pushed_at": "2026-08-30T04:15:08Z"
+    },
+    "commits": [
+      {
+        "sha": "4ac0f81e9efb7e2b06466f1e43086771c5de3032",
+        "html_url": "https://github.com/freegamestore-online/a-jungle-race/commit/4ac0f81e9efb7e2b06466f1e43086771c5de3032",
+        "commit": {
+          "message": "Remix source from race",
+          "author": {
+            "date": "2026-08-30T04:15:08Z"
+          }
+        }
+      },
+      {
+        "sha": "3e1a0f5cc71bc52f6c4840288a962bae385304c0",
+        "html_url": "https://github.com/freegamestore-online/a-jungle-race/commit/3e1a0f5cc71bc52f6c4840288a962bae385304c0",
+        "commit": {
+          "message": "Set game name to \"A jungle race\"",
+          "author": {
+            "date": "2026-08-30T04:14:49Z"
+          }
+        }
+      },
+      {
+        "sha": "c6a0cf374986cb94379adffdae095fca3ee57b83",
+        "html_url": "https://github.com/freegamestore-online/a-jungle-race/commit/c6a0cf374986cb94379adffdae095fca3ee57b83",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-30T04:14:40Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/ajungle-race": {
+    "meta": {
+      "created_at": "2026-08-30T04:34:51Z",
+      "pushed_at": "2026-08-30T04:52:24Z"
+    },
+    "commits": [
+      {
+        "sha": "557218a40bf033d470a87d6820256957897f1da0",
+        "html_url": "https://github.com/freegamestore-online/ajungle-race/commit/557218a40bf033d470a87d6820256957897f1da0",
+        "commit": {
+          "message": "Full 3D jungle racing game: player car, enemies, guns, power-ups, golden statue, waterfalls, ruins, mist, birds, cinematic follow cam, HUD",
+          "author": {
+            "date": "2026-08-30T04:52:24Z"
+          }
+        }
+      },
+      {
+        "sha": "208192a847c3ea7b2a7d4c8bb6744095045e3dd2",
+        "html_url": "https://github.com/freegamestore-online/ajungle-race/commit/208192a847c3ea7b2a7d4c8bb6744095045e3dd2",
+        "commit": {
+          "message": "Full 3D jungle racing game: cars, guns, power-ups, golden statue, waterfalls, ruins, mist, birds, enemies",
+          "author": {
+            "date": "2026-08-30T04:42:52Z"
+          }
+        }
+      },
+      {
+        "sha": "e97cde4beaad78f77fe69881df350a90b3abf74c",
+        "html_url": "https://github.com/freegamestore-online/ajungle-race/commit/e97cde4beaad78f77fe69881df350a90b3abf74c",
+        "commit": {
+          "message": "Set game name to \"A jungle race\"",
+          "author": {
+            "date": "2026-08-30T04:35:04Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/zombie123": {
+    "meta": {
+      "created_at": "2026-08-30T04:18:27Z",
+      "pushed_at": "2026-08-30T04:18:39Z"
+    },
+    "commits": [
+      {
+        "sha": "7df174ff156da93a64adc681b32b7e74dee76f8f",
+        "html_url": "https://github.com/freegamestore-online/zombie123/commit/7df174ff156da93a64adc681b32b7e74dee76f8f",
+        "commit": {
+          "message": "Set game name to \"Zombie\"",
+          "author": {
+            "date": "2026-08-30T04:18:38Z"
+          }
+        }
+      },
+      {
+        "sha": "49514771ecc178d8371bb3c5a155ddaa1341772b",
+        "html_url": "https://github.com/freegamestore-online/zombie123/commit/49514771ecc178d8371bb3c5a155ddaa1341772b",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-30T04:18:31Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/dress-to-impress": {
+    "meta": {
+      "created_at": "2026-08-30T01:13:44Z",
+      "pushed_at": "2026-08-30T01:13:59Z"
+    },
+    "commits": [
+      {
+        "sha": "0ff99e31c2a91956447e7ea77a6110712679a912",
+        "html_url": "https://github.com/freegamestore-online/dress-to-impress/commit/0ff99e31c2a91956447e7ea77a6110712679a912",
+        "commit": {
+          "message": "Build Dress to Impress — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-08-30T01:13:58Z"
+          }
+        }
+      },
+      {
+        "sha": "84aed5275ba55da849172ce55e742da10a458384",
+        "html_url": "https://github.com/freegamestore-online/dress-to-impress/commit/84aed5275ba55da849172ce55e742da10a458384",
+        "commit": {
+          "message": "Set game name to \"Dress to Impress\"",
+          "author": {
+            "date": "2026-08-30T01:13:53Z"
+          }
+        }
+      },
+      {
+        "sha": "f7b7322d2720984f0df0f29e210e638b1c1cbdbb",
+        "html_url": "https://github.com/freegamestore-online/dress-to-impress/commit/f7b7322d2720984f0df0f29e210e638b1c1cbdbb",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-30T01:13:47Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/diy-scrapbook": {
+    "meta": {
+      "created_at": "2026-08-30T04:51:39Z",
+      "pushed_at": "2026-08-30T04:51:52Z"
+    },
+    "commits": [
+      {
+        "sha": "2aaf6ac2d1c770324180e36c523a1b0cbee48c46",
+        "html_url": "https://github.com/freegamestore-online/diy-scrapbook/commit/2aaf6ac2d1c770324180e36c523a1b0cbee48c46",
+        "commit": {
+          "message": "Set game name to \"DIY SCRAPBOOK\"",
+          "author": {
+            "date": "2026-08-30T04:51:51Z"
+          }
+        }
+      },
+      {
+        "sha": "c52b7136152484e807c14c8a2cc33cc9f9faa114",
+        "html_url": "https://github.com/freegamestore-online/diy-scrapbook/commit/c52b7136152484e807c14c8a2cc33cc9f9faa114",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-30T04:51:43Z"
           }
         }
       }
