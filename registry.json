@@ -2331,6 +2331,22 @@
       "creatorGithub": "SASASKIA",
       "engine": "3d",
       "firstPublished": "2026-08-30T04:34:50.180Z"
+    },
+    {
+      "id": "diy-scrapbook",
+      "name": "DIY SCRAPBOOK",
+      "category": "casual",
+      "icon": "❤️",
+      "iconBg": "#1a2e26",
+      "description": "DIY SCRAPBOOK",
+      "appUrl": "https://diy-scrapbook.freegamestore.online",
+      "repo": "freegamestore-online/diy-scrapbook",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "BUDDY-KIWI-BERRY",
+      "creatorGithub": "BUDDY-KIWI-BERRY",
+      "engine": "3d",
+      "firstPublished": "2026-08-30T04:51:38.356Z"
     }
   ]
 }
