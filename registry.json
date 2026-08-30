@@ -2315,6 +2315,22 @@
       "creatorGithub": "Crystal12341",
       "engine": "3d",
       "firstPublished": "2026-08-30T04:18:26.844Z"
+    },
+    {
+      "id": "ajungle-race",
+      "name": "A jungle race",
+      "category": "racing",
+      "icon": "🌳",
+      "iconBg": "#1a2e26",
+      "description": "a race against your own time with high scores in the jungle guns and with obsatcles jungle related it will be 3D and there will be a jungle staue made out of gold ",
+      "appUrl": "https://ajungle-race.freegamestore.online",
+      "repo": "freegamestore-online/ajungle-race",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "SASASKIA",
+      "creatorGithub": "SASASKIA",
+      "engine": "3d",
+      "firstPublished": "2026-08-30T04:34:50.180Z"
     }
   ]
 }
