@@ -2347,6 +2347,22 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "3d",
       "firstPublished": "2026-08-30T04:51:38.356Z"
+    },
+    {
+      "id": "e2e-create-mtkg5j9g-1hcy5c-test",
+      "name": "Create Canary e2e-create-mtkg5j9g-1hcy5c-test",
+      "category": "platform",
+      "icon": "T",
+      "iconBg": "#ecfdf5",
+      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
+      "appUrl": "https://e2e-create-mtkg5j9g-1hcy5c-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-mtkg5j9g-1hcy5c-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-09-02T18:46:12.104Z"
     }
   ]
 }
