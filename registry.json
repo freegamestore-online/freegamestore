@@ -2347,23 +2347,6 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "3d",
       "firstPublished": "2026-08-30T04:51:38.356Z"
-    },
-    {
-      "id": "e2e-create-mtlvhmcg-994fye-test",
-      "name": "Updated Canary e2e-create-mtlvhmcg-994fye-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-09-03T18:43:51.076Z",
-      "appUrl": "https://e2e-create-mtlvhmcg-994fye-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mtlvhmcg-994fye-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-09-03T18:43:26.969Z",
-      "updatedAt": "2026-09-03T18:43:51.470Z"
     }
   ]
 }
