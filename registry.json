@@ -2347,23 +2347,6 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "3d",
       "firstPublished": "2026-08-30T04:51:38.356Z"
-    },
-    {
-      "id": "e2e-create-mtt0r70w-8diyb9-test",
-      "name": "Updated Canary e2e-create-mtt0r70w-8diyb9-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-09-08T18:45:19.693Z",
-      "appUrl": "https://e2e-create-mtt0r70w-8diyb9-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mtt0r70w-8diyb9-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-09-08T18:45:02.868Z",
-      "updatedAt": "2026-09-08T18:45:19.985Z"
     }
   ]
 }
