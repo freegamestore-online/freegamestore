@@ -2347,6 +2347,22 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "3d",
       "firstPublished": "2026-08-30T04:51:38.356Z"
+    },
+    {
+      "id": "e2e-create-mtxb2oop-0hhhcl-test",
+      "name": "Browser Canary e2e-create-mtxb2oop-0hhhcl-test",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Production browser e2e canary game.",
+      "appUrl": "https://e2e-create-mtxb2oop-0hhhcl-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-mtxb2oop-0hhhcl-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-09-11T18:44:51.386Z"
     }
   ]
 }
