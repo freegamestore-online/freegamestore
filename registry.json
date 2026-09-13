@@ -2317,6 +2317,23 @@
       "engine": "kaplay",
       "firstPublished": "2026-09-13T04:36:39.935Z",
       "status": "pending"
+    },
+    {
+      "id": "whispers-of-the-wild",
+      "name": "Whispers of the Wild",
+      "category": "casual",
+      "icon": "👻",
+      "iconBg": "#1a2e26",
+      "description": "Whispers of the Wild",
+      "appUrl": "https://whispers-of-the-wild.freegamestore.online",
+      "repo": "freegamestore-online/whispers-of-the-wild",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "BUDDY-KIWI-BERRY",
+      "creatorGithub": "BUDDY-KIWI-BERRY",
+      "engine": "babylon",
+      "firstPublished": "2026-09-13T04:46:15.507Z",
+      "status": "pending"
     }
   ]
 }
