@@ -4200,9 +4200,19 @@
   "freegamestore-online/fruitydropz": {
     "meta": {
       "created_at": "2026-08-01T08:11:14Z",
-      "pushed_at": "2026-09-01T08:59:45Z"
+      "pushed_at": "2026-09-13T05:51:31Z"
     },
     "commits": [
+      {
+        "sha": "64652c24e80266945be51c5f05572c379f332c5a",
+        "html_url": "https://github.com/freegamestore-online/fruitydropz/commit/64652c24e80266945be51c5f05572c379f332c5a",
+        "commit": {
+          "message": "Build FruityDrop — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-09-13T05:51:30Z"
+          }
+        }
+      },
       {
         "sha": "17e4062bad17560e412a54d90faa20c42f15e0e0",
         "html_url": "https://github.com/freegamestore-online/fruitydropz/commit/17e4062bad17560e412a54d90faa20c42f15e0e0",
@@ -4220,16 +4230,6 @@
           "message": "Build FruityDrop — FreeGameStore AI agent",
           "author": {
             "date": "2026-08-09T06:39:28Z"
-          }
-        }
-      },
-      {
-        "sha": "d81eaed6782c1dcf34a5b433873711d36695b0ec",
-        "html_url": "https://github.com/freegamestore-online/fruitydropz/commit/d81eaed6782c1dcf34a5b433873711d36695b0ec",
-        "commit": {
-          "message": "First polished playable version: menu scene, play scene, combo system, star fruit, bombs, particles, Web Audio tones, animated clouds/trees, difficulty ramp, game over card",
-          "author": {
-            "date": "2026-08-09T03:33:53Z"
           }
         }
       }
@@ -5066,6 +5066,82 @@
           "message": "Initial commit",
           "author": {
             "date": "2026-08-30T04:51:43Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/puppy-fashion": {
+    "meta": {
+      "created_at": "2026-09-13T04:36:40Z",
+      "pushed_at": "2026-09-13T06:05:09Z"
+    },
+    "commits": [
+      {
+        "sha": "c90b5066e13dcca4cc520020e739524ea8bfb6d1",
+        "html_url": "https://github.com/freegamestore-online/puppy-fashion/commit/c90b5066e13dcca4cc520020e739524ea8bfb6d1",
+        "commit": {
+          "message": "Fully realistic detailed SVG animals: pug with bulging eyes/dark mask/wrinkles, tabby cat with slit pupils/whiskers/ear tufts, budgie with barred feathers/cheek patches/hooked beak/throat spots. Split into CatSVG.tsx and BudgieSVG.tsx. Gorgeous accessories panel.",
+          "author": {
+            "date": "2026-09-13T06:05:08Z"
+          }
+        }
+      },
+      {
+        "sha": "e44303644bfb786981cd49dc67751e2dbe1cf375",
+        "html_url": "https://github.com/freegamestore-online/puppy-fashion/commit/e44303644bfb786981cd49dc67751e2dbe1cf375",
+        "commit": {
+          "message": "Realistic cute pug, cat & budgie SVGs with detailed features + gorgeous new accessories (tiara, flowerband, beret, pearls, bowtie, bandana, dress, raincoat, boots, sneakers, socks)",
+          "author": {
+            "date": "2026-09-13T05:56:46Z"
+          }
+        }
+      },
+      {
+        "sha": "ae8a0ca724132051fe026d1696452e034e18e2ee",
+        "html_url": "https://github.com/freegamestore-online/puppy-fashion/commit/ae8a0ca724132051fe026d1696452e034e18e2ee",
+        "commit": {
+          "message": "Realistic pug SVG: dark face mask, bulging eyes with highlights, wrinkled forehead, floppy velvet ears, wide muzzle with nostrils, barrel body, curly tail, stubby legs with 3-toe paws",
+          "author": {
+            "date": "2026-09-13T05:14:57Z"
+          }
+        }
+      }
+    ]
+  },
+  "freegamestore-online/whispers-of-the-wild": {
+    "meta": {
+      "created_at": "2026-09-13T04:46:16Z",
+      "pushed_at": "2026-09-13T05:39:15Z"
+    },
+    "commits": [
+      {
+        "sha": "6d2a9e9256ce61259e8b89627ecc045638079bf7",
+        "html_url": "https://github.com/freegamestore-online/whispers-of-the-wild/commit/6d2a9e9256ce61259e8b89627ecc045638079bf7",
+        "commit": {
+          "message": "Fix TS errors: add goblin to monster colors Record, add missing ResourceType icons (mushroom/coal/axe/pickaxe), add village mesh builder",
+          "author": {
+            "date": "2026-09-13T05:39:14Z"
+          }
+        }
+      },
+      {
+        "sha": "30b7c4535fa1abfb1e6ef3a670c710b4c284788e",
+        "html_url": "https://github.com/freegamestore-online/whispers-of-the-wild/commit/30b7c4535fa1abfb1e6ef3a670c710b4c284788e",
+        "commit": {
+          "message": "Build Whispers of the Wild — FreeGameStore AI agent",
+          "author": {
+            "date": "2026-09-13T05:25:27Z"
+          }
+        }
+      },
+      {
+        "sha": "44f9f12987b93fc411784d76fd18d1c150a5bf7e",
+        "html_url": "https://github.com/freegamestore-online/whispers-of-the-wild/commit/44f9f12987b93fc411784d76fd18d1c150a5bf7e",
+        "commit": {
+          "message": "Build full game: 3D survival adventure with day/night cycle, resource gathering, crafting, quests, trading, spirits, and monsters",
+          "author": {
+            "date": "2026-09-13T05:09:56Z"
           }
         }
       }
