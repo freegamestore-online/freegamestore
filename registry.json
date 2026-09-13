@@ -2347,6 +2347,23 @@
       "creatorGithub": "BUDDY-KIWI-BERRY",
       "engine": "3d",
       "firstPublished": "2026-08-30T04:51:38.356Z"
+    },
+    {
+      "id": "puppy-fashion",
+      "name": "Puppy Fashion",
+      "category": "casual",
+      "icon": "🧣🎀👑",
+      "iconBg": "#bef9f2",
+      "description": "How cute can you make your pets? Compete for a crown!",
+      "appUrl": "https://puppy-fashion.freegamestore.online",
+      "repo": "freegamestore-online/puppy-fashion",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "Boris-The-Pug",
+      "creatorGithub": "Boris-The-Pug",
+      "engine": "kaplay",
+      "firstPublished": "2026-09-13T04:36:39.935Z",
+      "status": "pending"
     }
   ]
 }
