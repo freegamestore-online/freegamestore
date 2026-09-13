@@ -2334,23 +2334,6 @@
       "engine": "babylon",
       "firstPublished": "2026-09-13T04:46:15.507Z",
       "status": "live"
-    },
-    {
-      "id": "e2e-create-mu04v615-unp8pz-test",
-      "name": "Create Canary e2e-create-mu04v615-unp8pz-test",
-      "category": "platform",
-      "icon": "T",
-      "iconBg": "#ecfdf5",
-      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
-      "appUrl": "https://e2e-create-mu04v615-unp8pz-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mu04v615-unp8pz-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-09-13T18:14:26.632Z",
-      "status": "pending"
     }
   ]
 }
