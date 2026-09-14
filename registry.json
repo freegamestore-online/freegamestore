@@ -2334,24 +2334,6 @@
       "engine": "babylon",
       "firstPublished": "2026-09-13T04:46:15.507Z",
       "status": "live"
-    },
-    {
-      "id": "e2e-create-mu1ns0u7-402ldn-test",
-      "name": "Updated Canary e2e-create-mu1ns0u7-402ldn-test",
-      "category": "arcade",
-      "icon": "U",
-      "iconBg": "#dbeafe",
-      "description": "Updated by production e2e at 2026-09-14T19:51:59.143Z",
-      "appUrl": "https://e2e-create-mu1ns0u7-402ldn-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mu1ns0u7-402ldn-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-09-14T19:51:41.086Z",
-      "status": "pending",
-      "updatedAt": "2026-09-14T19:51:59.376Z"
     }
   ]
 }
