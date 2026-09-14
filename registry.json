@@ -2334,6 +2334,23 @@
       "engine": "babylon",
       "firstPublished": "2026-09-13T04:46:15.507Z",
       "status": "live"
+    },
+    {
+      "id": "e2e-create-mu1ns0u7-402ldn-test",
+      "name": "Create Canary e2e-create-mu1ns0u7-402ldn-test",
+      "category": "platform",
+      "icon": "T",
+      "iconBg": "#ecfdf5",
+      "description": "Automated production creation canary. Hidden from the public store by the -test suffix.",
+      "appUrl": "https://e2e-create-mu1ns0u7-402ldn-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-mu1ns0u7-402ldn-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-09-14T19:51:41.086Z",
+      "status": "pending"
     }
   ]
 }
