@@ -2334,23 +2334,6 @@
       "engine": "babylon",
       "firstPublished": "2026-09-13T04:46:15.507Z",
       "status": "live"
-    },
-    {
-      "id": "e2e-create-mu4h0h4y-juk8ll-test",
-      "name": "Browser Canary e2e-create-mu4h0h4y-juk8ll-test",
-      "category": "casual",
-      "icon": "🎮",
-      "iconBg": "#1a2e26",
-      "description": "Production browser e2e canary game.",
-      "appUrl": "https://e2e-create-mu4h0h4y-juk8ll-test.freegamestore.online",
-      "repo": "freegamestore-online/e2e-create-mu4h0h4y-juk8ll-test",
-      "hostedOn": "r2",
-      "type": "standalone",
-      "developer": "serge-ivo",
-      "creatorGithub": "serge-ivo",
-      "engine": "canvas",
-      "firstPublished": "2026-09-16T19:05:27.994Z",
-      "status": "pending"
     }
   ]
 }
