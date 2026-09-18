@@ -2334,6 +2334,23 @@
       "engine": "babylon",
       "firstPublished": "2026-09-13T04:46:15.507Z",
       "status": "live"
+    },
+    {
+      "id": "e2e-create-mu7axgku-ip15ld-test",
+      "name": "Browser Canary e2e-create-mu7axgku-ip15ld-test",
+      "category": "casual",
+      "icon": "🎮",
+      "iconBg": "#1a2e26",
+      "description": "Production browser e2e canary game.",
+      "appUrl": "https://e2e-create-mu7axgku-ip15ld-test.freegamestore.online",
+      "repo": "freegamestore-online/e2e-create-mu7axgku-ip15ld-test",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "serge-ivo",
+      "creatorGithub": "serge-ivo",
+      "engine": "canvas",
+      "firstPublished": "2026-09-18T18:38:27.562Z",
+      "status": "pending"
     }
   ]
 }
