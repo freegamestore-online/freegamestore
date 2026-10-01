@@ -3440,9 +3440,19 @@
   "freegamestore-online/neon-runner": {
     "meta": {
       "created_at": "2026-07-12T00:48:05Z",
-      "pushed_at": "2026-09-01T09:14:09Z"
+      "pushed_at": "2026-10-01T10:45:48Z"
     },
     "commits": [
+      {
+        "sha": "d333c6fd1a227a061602fdb93904cd97f63b1b22",
+        "html_url": "https://github.com/freegamestore-online/neon-runner/commit/d333c6fd1a227a061602fdb93904cd97f63b1b22",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:45:47Z"
+          }
+        }
+      },
       {
         "sha": "81bc0c982dc5dec398ac30bc4f3a9ade7f8a440d",
         "html_url": "https://github.com/freegamestore-online/neon-runner/commit/81bc0c982dc5dec398ac30bc4f3a9ade7f8a440d",
@@ -3462,25 +3472,25 @@
             "date": "2026-08-01T06:30:10Z"
           }
         }
-      },
-      {
-        "sha": "57f4450ec8cde125bc2ff0f848951c1c16b86189",
-        "html_url": "https://github.com/freegamestore-online/neon-runner/commit/57f4450ec8cde125bc2ff0f848951c1c16b86189",
-        "commit": {
-          "message": "Build Neon Runner — FreeGameStore AI agent",
-          "author": {
-            "date": "2026-07-12T00:48:22Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/brick-blast": {
     "meta": {
       "created_at": "2026-07-12T05:49:51Z",
-      "pushed_at": "2026-09-01T09:20:16Z"
+      "pushed_at": "2026-10-01T10:51:57Z"
     },
     "commits": [
+      {
+        "sha": "c59a94d5185875218ef38b0c8bf980bf4ab679de",
+        "html_url": "https://github.com/freegamestore-online/brick-blast/commit/c59a94d5185875218ef38b0c8bf980bf4ab679de",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:51:56Z"
+          }
+        }
+      },
       {
         "sha": "81a30a335a21f1d1799bb54e778e26fe9f5168d4",
         "html_url": "https://github.com/freegamestore-online/brick-blast/commit/81a30a335a21f1d1799bb54e778e26fe9f5168d4",
@@ -3500,25 +3510,25 @@
             "date": "2026-08-01T06:36:42Z"
           }
         }
-      },
-      {
-        "sha": "ed8020c3a81a5652734d21aeeccdb3b9ea519a7c",
-        "html_url": "https://github.com/freegamestore-online/brick-blast/commit/ed8020c3a81a5652734d21aeeccdb3b9ea519a7c",
-        "commit": {
-          "message": "Build Brick Blast — FreeGameStore AI agent",
-          "author": {
-            "date": "2026-07-12T05:52:08Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/star-dodger": {
     "meta": {
       "created_at": "2026-07-12T05:40:46Z",
-      "pushed_at": "2026-09-01T09:19:09Z"
+      "pushed_at": "2026-10-01T10:50:53Z"
     },
     "commits": [
+      {
+        "sha": "7c22e3de4ff2a0f90998b9309cd631cd7434e869",
+        "html_url": "https://github.com/freegamestore-online/star-dodger/commit/7c22e3de4ff2a0f90998b9309cd631cd7434e869",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:50:52Z"
+          }
+        }
+      },
       {
         "sha": "1607e9c1715165562376e8c9a5768355e580dd54",
         "html_url": "https://github.com/freegamestore-online/star-dodger/commit/1607e9c1715165562376e8c9a5768355e580dd54",
@@ -3538,25 +3548,25 @@
             "date": "2026-08-01T06:36:00Z"
           }
         }
-      },
-      {
-        "sha": "6043b2e3a19c614f2df15da3cd7328ce4ea1b871",
-        "html_url": "https://github.com/freegamestore-online/star-dodger/commit/6043b2e3a19c614f2df15da3cd7328ce4ea1b871",
-        "commit": {
-          "message": "Build Star Dodger — FreeGameStore AI agent",
-          "author": {
-            "date": "2026-07-12T05:41:10Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minigolf": {
     "meta": {
       "created_at": "2026-07-15T17:26:55Z",
-      "pushed_at": "2026-09-01T08:59:09Z"
+      "pushed_at": "2026-10-01T10:33:05Z"
     },
     "commits": [
+      {
+        "sha": "ed590cdbc5a483c5c7798972621e376c6571adc3",
+        "html_url": "https://github.com/freegamestore-online/minigolf/commit/ed590cdbc5a483c5c7798972621e376c6571adc3",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:33:04Z"
+          }
+        }
+      },
       {
         "sha": "ec60502e6d7b4bf2bc7520f71a6876d95b71daca",
         "html_url": "https://github.com/freegamestore-online/minigolf/commit/ec60502e6d7b4bf2bc7520f71a6876d95b71daca",
@@ -3576,25 +3586,25 @@
             "date": "2026-08-01T06:20:08Z"
           }
         }
-      },
-      {
-        "sha": "5d5d1c66e121b429ee9d27ddd000ef3c4dc920ee",
-        "html_url": "https://github.com/freegamestore-online/minigolf/commit/5d5d1c66e121b429ee9d27ddd000ef3c4dc920ee",
-        "commit": {
-          "message": "fix mobile canvas aspect ratio",
-          "author": {
-            "date": "2026-07-19T11:53:16Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/angry-birds3": {
     "meta": {
       "created_at": "2026-07-17T07:07:26Z",
-      "pushed_at": "2026-09-01T08:59:43Z"
+      "pushed_at": "2026-10-01T10:33:23Z"
     },
     "commits": [
+      {
+        "sha": "43d054fb119dbe526866b5773d7a541e5140004a",
+        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/43d054fb119dbe526866b5773d7a541e5140004a",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:33:21Z"
+          }
+        }
+      },
       {
         "sha": "cab08477e7cf4a3368d47dd3a697ead5b17da563",
         "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/cab08477e7cf4a3368d47dd3a697ead5b17da563",
@@ -3614,25 +3624,25 @@
             "date": "2026-08-09T03:27:36Z"
           }
         }
-      },
-      {
-        "sha": "6d2e79984efe0f3bea8ef72f6bf33669c8e5a027",
-        "html_url": "https://github.com/freegamestore-online/angry-birds3/commit/6d2e79984efe0f3bea8ef72f6bf33669c8e5a027",
-        "commit": {
-          "message": "chore: monthly dependency refresh (latest)",
-          "author": {
-            "date": "2026-08-01T06:20:37Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/beat-star2": {
     "meta": {
       "created_at": "2026-07-18T03:59:26Z",
-      "pushed_at": "2026-09-01T08:58:10Z"
+      "pushed_at": "2026-10-01T10:31:28Z"
     },
     "commits": [
+      {
+        "sha": "278ea5dd9eb0dc7f6694eb24288f5cca0e2fdbff",
+        "html_url": "https://github.com/freegamestore-online/beat-star2/commit/278ea5dd9eb0dc7f6694eb24288f5cca0e2fdbff",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:31:27Z"
+          }
+        }
+      },
       {
         "sha": "6f3e38bf0110d48d89f6ed136c1665670f4c1010",
         "html_url": "https://github.com/freegamestore-online/beat-star2/commit/6f3e38bf0110d48d89f6ed136c1665670f4c1010",
@@ -3652,25 +3662,25 @@
             "date": "2026-08-01T06:19:18Z"
           }
         }
-      },
-      {
-        "sha": "079f1bd5d1ce77d754c2cbad62a159044af0d317",
-        "html_url": "https://github.com/freegamestore-online/beat-star2/commit/079f1bd5d1ce77d754c2cbad62a159044af0d317",
-        "commit": {
-          "message": "feat: full Beat Star v1 — 4-lane rhythm game, BPM ramp, combos, particles, menu + game-over, high score, keyboard + touch input",
-          "author": {
-            "date": "2026-07-18T04:08:57Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/cart": {
     "meta": {
       "created_at": "2026-07-19T03:59:15Z",
-      "pushed_at": "2026-09-01T09:16:39Z"
+      "pushed_at": "2026-10-01T10:48:15Z"
     },
     "commits": [
+      {
+        "sha": "432dc4195b38335bd498ee54415adff38cf3e7db",
+        "html_url": "https://github.com/freegamestore-online/cart/commit/432dc4195b38335bd498ee54415adff38cf3e7db",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:48:14Z"
+          }
+        }
+      },
       {
         "sha": "87e6704a7631d0326d8edd723177a19a2fca0912",
         "html_url": "https://github.com/freegamestore-online/cart/commit/87e6704a7631d0326d8edd723177a19a2fca0912",
@@ -3688,16 +3698,6 @@
           "message": "chore: monthly dependency refresh (latest)",
           "author": {
             "date": "2026-08-01T06:32:35Z"
-          }
-        }
-      },
-      {
-        "sha": "782daf8fe08debdb4e144e572e62df91d446fc49",
-        "html_url": "https://github.com/freegamestore-online/cart/commit/782daf8fe08debdb4e144e572e62df91d446fc49",
-        "commit": {
-          "message": "feat: full Cart endless runner — 3-lane track, coins, obstacles, HUD, mobile buttons, game over screen",
-          "author": {
-            "date": "2026-07-19T10:08:17Z"
           }
         }
       }
@@ -3744,9 +3744,19 @@
   "freegamestore-online/crossy-school": {
     "meta": {
       "created_at": "2026-07-19T04:51:08Z",
-      "pushed_at": "2026-09-01T09:16:26Z"
+      "pushed_at": "2026-10-01T10:48:01Z"
     },
     "commits": [
+      {
+        "sha": "462ba3f0aa3b177673b82d4d138a73ff65475e46",
+        "html_url": "https://github.com/freegamestore-online/crossy-school/commit/462ba3f0aa3b177673b82d4d138a73ff65475e46",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:48:00Z"
+          }
+        }
+      },
       {
         "sha": "c553e32adcb17aff5cb1f6156a5a4839a5e33db0",
         "html_url": "https://github.com/freegamestore-online/crossy-school/commit/c553e32adcb17aff5cb1f6156a5a4839a5e33db0",
@@ -3766,25 +3776,25 @@
             "date": "2026-08-01T06:32:22Z"
           }
         }
-      },
-      {
-        "sha": "4857512f92647cb058e2f686b531bbb516f3286b",
-        "html_url": "https://github.com/freegamestore-online/crossy-school/commit/4857512f92647cb058e2f686b531bbb516f3286b",
-        "commit": {
-          "message": "Fix mobile steering controls",
-          "author": {
-            "date": "2026-07-19T06:51:50Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/stack-pack": {
     "meta": {
       "created_at": "2026-07-19T04:37:33Z",
-      "pushed_at": "2026-09-01T09:02:59Z"
+      "pushed_at": "2026-10-01T10:37:19Z"
     },
     "commits": [
+      {
+        "sha": "0ea83db05ea1ebd1c4e5a4461b3ffa4adc6b4319",
+        "html_url": "https://github.com/freegamestore-online/stack-pack/commit/0ea83db05ea1ebd1c4e5a4461b3ffa4adc6b4319",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:37:18Z"
+          }
+        }
+      },
       {
         "sha": "df90a0e92b89cc16c701c1442746ec024bf1fc12",
         "html_url": "https://github.com/freegamestore-online/stack-pack/commit/df90a0e92b89cc16c701c1442746ec024bf1fc12",
@@ -3802,16 +3812,6 @@
           "message": "chore: monthly dependency refresh (latest)",
           "author": {
             "date": "2026-08-01T06:22:14Z"
-          }
-        }
-      },
-      {
-        "sha": "7099f4d8019acf16299898720c59d81bbe6e034d",
-        "html_url": "https://github.com/freegamestore-online/stack-pack/commit/7099f4d8019acf16299898720c59d81bbe6e034d",
-        "commit": {
-          "message": "Full rework: shape slides itself L/R at top, wall with matching gap rises from below, tap to drop into gap, miss=game over, trophy progress per level",
-          "author": {
-            "date": "2026-07-19T05:07:22Z"
           }
         }
       }
@@ -3858,9 +3858,19 @@
   "freegamestore-online/phone-case-diy": {
     "meta": {
       "created_at": "2026-07-19T05:17:08Z",
-      "pushed_at": "2026-09-01T09:12:39Z"
+      "pushed_at": "2026-10-01T10:44:56Z"
     },
     "commits": [
+      {
+        "sha": "8fc86eed427a3c9403fb1fde955afc725394a86a",
+        "html_url": "https://github.com/freegamestore-online/phone-case-diy/commit/8fc86eed427a3c9403fb1fde955afc725394a86a",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:44:55Z"
+          }
+        }
+      },
       {
         "sha": "4d27c4ce8cb54e01dd6023d2cded17810e059e61",
         "html_url": "https://github.com/freegamestore-online/phone-case-diy/commit/4d27c4ce8cb54e01dd6023d2cded17810e059e61",
@@ -3880,25 +3890,25 @@
             "date": "2026-08-01T06:29:18Z"
           }
         }
-      },
-      {
-        "sha": "38b7deb5fabcbd2ba8118b8a12d79f1eda3340c8",
-        "html_url": "https://github.com/freegamestore-online/phone-case-diy/commit/38b7deb5fabcbd2ba8118b8a12d79f1eda3340c8",
-        "commit": {
-          "message": "Stickers: enforce placement inside case only, block camera lens, show friendly feedback messages",
-          "author": {
-            "date": "2026-07-19T06:13:30Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/good-pizza-great-pizza": {
     "meta": {
       "created_at": "2026-07-19T04:54:52Z",
-      "pushed_at": "2026-09-01T09:19:21Z"
+      "pushed_at": "2026-10-01T10:50:57Z"
     },
     "commits": [
+      {
+        "sha": "6f0311398182140fde8f03b5992a1e200f6335b4",
+        "html_url": "https://github.com/freegamestore-online/good-pizza-great-pizza/commit/6f0311398182140fde8f03b5992a1e200f6335b4",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:50:56Z"
+          }
+        }
+      },
       {
         "sha": "1435e55d2a626256eba41cb38620d7a7dca3b8aa",
         "html_url": "https://github.com/freegamestore-online/good-pizza-great-pizza/commit/1435e55d2a626256eba41cb38620d7a7dca3b8aa",
@@ -3918,25 +3928,25 @@
             "date": "2026-08-01T06:36:20Z"
           }
         }
-      },
-      {
-        "sha": "85fae400aeb1ceacad984781a5b8814803fe8c07",
-        "html_url": "https://github.com/freegamestore-online/good-pizza-great-pizza/commit/85fae400aeb1ceacad984781a5b8814803fe8c07",
-        "commit": {
-          "message": "Fix smoke test: remove emoji/unicode from KAPLAY text labels",
-          "author": {
-            "date": "2026-07-19T06:20:16Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/fish-life": {
     "meta": {
       "created_at": "2026-07-19T04:35:46Z",
-      "pushed_at": "2026-09-01T08:59:39Z"
+      "pushed_at": "2026-10-01T10:33:20Z"
     },
     "commits": [
+      {
+        "sha": "9bf886e29e24a24f435661d73f06ca8afcbb6740",
+        "html_url": "https://github.com/freegamestore-online/fish-life/commit/9bf886e29e24a24f435661d73f06ca8afcbb6740",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:33:19Z"
+          }
+        }
+      },
       {
         "sha": "38c822a08ee5ef0a5bff459d9595457d255a19a0",
         "html_url": "https://github.com/freegamestore-online/fish-life/commit/38c822a08ee5ef0a5bff459d9595457d255a19a0",
@@ -3956,25 +3966,25 @@
             "date": "2026-08-01T06:20:27Z"
           }
         }
-      },
-      {
-        "sha": "35fb06f19fe2e177d28acbb2d07f4edb957ee94b",
-        "html_url": "https://github.com/freegamestore-online/fish-life/commit/35fb06f19fe2e177d28acbb2d07f4edb957ee94b",
-        "commit": {
-          "message": "Full pet sim: tank maintenance (dirt/O2/hunger meters), mood system, coins, shop with decorations/skins/backgrounds, fish chases food, bubbles, death scenes",
-          "author": {
-            "date": "2026-07-19T06:36:05Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/digicritter": {
     "meta": {
       "created_at": "2026-07-19T04:50:22Z",
-      "pushed_at": "2026-09-01T09:05:18Z"
+      "pushed_at": "2026-10-01T10:39:11Z"
     },
     "commits": [
+      {
+        "sha": "83f4b3ef42215a8b93c6a31fc2457661f11f8e00",
+        "html_url": "https://github.com/freegamestore-online/digicritter/commit/83f4b3ef42215a8b93c6a31fc2457661f11f8e00",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:39:10Z"
+          }
+        }
+      },
       {
         "sha": "1c182ece22528200de0f1e75c79a8bf139b2b36d",
         "html_url": "https://github.com/freegamestore-online/digicritter/commit/1c182ece22528200de0f1e75c79a8bf139b2b36d",
@@ -3994,25 +4004,25 @@
             "date": "2026-08-01T06:23:47Z"
           }
         }
-      },
-      {
-        "sha": "033cb27c90e833ff7b497243523c1e774652e2a6",
-        "html_url": "https://github.com/freegamestore-online/digicritter/commit/033cb27c90e833ff7b497243523c1e774652e2a6",
-        "commit": {
-          "message": "Add animal select screen (dog/cat/rabbit/bird/hamster) + draw each as real animal with Phaser graphics, Feed/Play/Walk/Sleep actions, mood expressions, particle bursts",
-          "author": {
-            "date": "2026-07-19T05:07:54Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/obby": {
     "meta": {
       "created_at": "2026-07-19T05:32:37Z",
-      "pushed_at": "2026-09-01T09:10:18Z"
+      "pushed_at": "2026-10-01T10:43:23Z"
     },
     "commits": [
+      {
+        "sha": "17922dc5c76fcec4ab5623ade017f44d99eb398a",
+        "html_url": "https://github.com/freegamestore-online/obby/commit/17922dc5c76fcec4ab5623ade017f44d99eb398a",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:43:22Z"
+          }
+        }
+      },
       {
         "sha": "267a18e5daa33e2df801debfdfcb7f273a0e8703",
         "html_url": "https://github.com/freegamestore-online/obby/commit/267a18e5daa33e2df801debfdfcb7f273a0e8703",
@@ -4032,25 +4042,25 @@
             "date": "2026-08-01T06:27:29Z"
           }
         }
-      },
-      {
-        "sha": "2fa00a779e7e3bd0c3adcfdac2fa629ab58a50a7",
-        "html_url": "https://github.com/freegamestore-online/obby/commit/2fa00a779e7e3bd0c3adcfdac2fa629ab58a50a7",
-        "commit": {
-          "message": "Set game name to \"Obby\"",
-          "author": {
-            "date": "2026-07-19T05:32:48Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/seasons-matter": {
     "meta": {
       "created_at": "2026-07-19T06:14:07Z",
-      "pushed_at": "2026-09-01T08:58:32Z"
+      "pushed_at": "2026-10-01T10:32:28Z"
     },
     "commits": [
+      {
+        "sha": "b59fceeac46822ea50397d5eeaa055adf23af7b9",
+        "html_url": "https://github.com/freegamestore-online/seasons-matter/commit/b59fceeac46822ea50397d5eeaa055adf23af7b9",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:32:27Z"
+          }
+        }
+      },
       {
         "sha": "78a709fe462eb66e06571406e0ea1292d0538aa3",
         "html_url": "https://github.com/freegamestore-online/seasons-matter/commit/78a709fe462eb66e06571406e0ea1292d0538aa3",
@@ -4070,25 +4080,25 @@
             "date": "2026-08-01T06:19:39Z"
           }
         }
-      },
-      {
-        "sha": "8bac45185adc907f81ed08f1433cc8a39a38f084",
-        "html_url": "https://github.com/freegamestore-online/seasons-matter/commit/8bac45185adc907f81ed08f1433cc8a39a38f084",
-        "commit": {
-          "message": "Build Seasons Matter — FreeGameStore AI agent",
-          "author": {
-            "date": "2026-07-19T06:24:31Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/dont-look-up": {
     "meta": {
       "created_at": "2026-07-19T04:56:56Z",
-      "pushed_at": "2026-09-01T09:08:51Z"
+      "pushed_at": "2026-10-01T10:42:18Z"
     },
     "commits": [
+      {
+        "sha": "0f9f9566c8a90496b2aaa8454789b6f2665b4968",
+        "html_url": "https://github.com/freegamestore-online/dont-look-up/commit/0f9f9566c8a90496b2aaa8454789b6f2665b4968",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:42:17Z"
+          }
+        }
+      },
       {
         "sha": "95c58060a9b5e3ff014ec51110746d9eed292fb3",
         "html_url": "https://github.com/freegamestore-online/dont-look-up/commit/95c58060a9b5e3ff014ec51110746d9eed292fb3",
@@ -4108,25 +4118,25 @@
             "date": "2026-08-01T06:26:16Z"
           }
         }
-      },
-      {
-        "sha": "c16ed59ee13c4498de065d3f8be31c534aeea78a",
-        "html_url": "https://github.com/freegamestore-online/dont-look-up/commit/c16ed59ee13c4498de065d3f8be31c534aeea78a",
-        "commit": {
-          "message": "Full horror overhaul: BFS monster AI stalking, flashlight blackouts, chromatic aberration glitch jumpscare, DON'T LOOK DOWN rule inversion, panting audio, ghost decoys, near-miss screech blasts",
-          "author": {
-            "date": "2026-07-19T09:03:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/stacky-birdy": {
     "meta": {
       "created_at": "2026-07-20T08:08:27Z",
-      "pushed_at": "2026-09-01T09:18:00Z"
+      "pushed_at": "2026-10-01T10:49:27Z"
     },
     "commits": [
+      {
+        "sha": "362e56fb1ca60dc4c00bc8fd59cd032e61fda98c",
+        "html_url": "https://github.com/freegamestore-online/stacky-birdy/commit/362e56fb1ca60dc4c00bc8fd59cd032e61fda98c",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:49:26Z"
+          }
+        }
+      },
       {
         "sha": "4002f13940812c77243bddb739bed5d0d7104b60",
         "html_url": "https://github.com/freegamestore-online/stacky-birdy/commit/4002f13940812c77243bddb739bed5d0d7104b60",
@@ -4144,16 +4154,6 @@
           "message": "chore: monthly dependency refresh (latest)",
           "author": {
             "date": "2026-08-01T06:34:27Z"
-          }
-        }
-      },
-      {
-        "sha": "9633c815542526a7707cd6be23f30e8d6370bcdf",
-        "html_url": "https://github.com/freegamestore-online/stacky-birdy/commit/9633c815542526a7707cd6be23f30e8d6370bcdf",
-        "commit": {
-          "message": "Set game name to \"stacky birdy\"",
-          "author": {
-            "date": "2026-07-20T08:08:38Z"
           }
         }
       }
@@ -4200,9 +4200,19 @@
   "freegamestore-online/fruitydropz": {
     "meta": {
       "created_at": "2026-08-01T08:11:14Z",
-      "pushed_at": "2026-09-13T05:51:31Z"
+      "pushed_at": "2026-10-01T10:33:30Z"
     },
     "commits": [
+      {
+        "sha": "c4d7e461d40cfd7bb83671e2ef00bbcd4ecdc1e1",
+        "html_url": "https://github.com/freegamestore-online/fruitydropz/commit/c4d7e461d40cfd7bb83671e2ef00bbcd4ecdc1e1",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:33:29Z"
+          }
+        }
+      },
       {
         "sha": "64652c24e80266945be51c5f05572c379f332c5a",
         "html_url": "https://github.com/freegamestore-online/fruitydropz/commit/64652c24e80266945be51c5f05572c379f332c5a",
@@ -4222,25 +4232,25 @@
             "date": "2026-09-01T08:59:44Z"
           }
         }
-      },
-      {
-        "sha": "14a1b943eb2c8889691c3bfbf0f80ce0009ad6cf",
-        "html_url": "https://github.com/freegamestore-online/fruitydropz/commit/14a1b943eb2c8889691c3bfbf0f80ce0009ad6cf",
-        "commit": {
-          "message": "Build FruityDrop — FreeGameStore AI agent",
-          "author": {
-            "date": "2026-08-09T06:39:28Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/crossy-rivers": {
     "meta": {
       "created_at": "2026-08-08T03:11:51Z",
-      "pushed_at": "2026-09-01T09:01:04Z"
+      "pushed_at": "2026-10-01T10:34:39Z"
     },
     "commits": [
+      {
+        "sha": "4d9be20cf0face59e5dc9e224a988d187374bf20",
+        "html_url": "https://github.com/freegamestore-online/crossy-rivers/commit/4d9be20cf0face59e5dc9e224a988d187374bf20",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:34:37Z"
+          }
+        }
+      },
       {
         "sha": "5d2bfe7a6f49effc131f8c385eaf4f88c3435150",
         "html_url": "https://github.com/freegamestore-online/crossy-rivers/commit/5d2bfe7a6f49effc131f8c385eaf4f88c3435150",
@@ -4260,25 +4270,25 @@
             "date": "2026-08-08T11:12:13Z"
           }
         }
-      },
-      {
-        "sha": "c7c04fce51929ee0edb33c93e2f1047088dd9881",
-        "html_url": "https://github.com/freegamestore-online/crossy-rivers/commit/c7c04fce51929ee0edb33c93e2f1047088dd9881",
-        "commit": {
-          "message": "chore: finalize sounds leaderboard and compliance",
-          "author": {
-            "date": "2026-08-08T03:06:29Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/cubisworld": {
     "meta": {
       "created_at": "2026-08-09T03:29:26Z",
-      "pushed_at": "2026-09-01T09:00:38Z"
+      "pushed_at": "2026-10-01T10:34:14Z"
     },
     "commits": [
+      {
+        "sha": "666a4c26d01c6bbb1553795799757f1ae29283e5",
+        "html_url": "https://github.com/freegamestore-online/cubisworld/commit/666a4c26d01c6bbb1553795799757f1ae29283e5",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:34:13Z"
+          }
+        }
+      },
       {
         "sha": "e27d7390efb51fba16e80f2bf287a68b1b664665",
         "html_url": "https://github.com/freegamestore-online/cubisworld/commit/e27d7390efb51fba16e80f2bf287a68b1b664665",
@@ -4298,25 +4308,25 @@
             "date": "2026-08-09T05:55:08Z"
           }
         }
-      },
-      {
-        "sha": "a4019fde9b20e94e12259b299002bae3e4540c16",
-        "html_url": "https://github.com/freegamestore-online/cubisworld/commit/a4019fde9b20e94e12259b299002bae3e4540c16",
-        "commit": {
-          "message": "Full cozy rhythm platformer: 10 levels, cube customiser, star shop, profile, moving/disappearing platforms, collectible stars",
-          "author": {
-            "date": "2026-08-09T03:44:46Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/zombie": {
     "meta": {
       "created_at": "2026-08-09T04:21:37Z",
-      "pushed_at": "2026-09-01T08:59:02Z"
+      "pushed_at": "2026-10-01T10:32:56Z"
     },
     "commits": [
+      {
+        "sha": "4fd58d7b23013c6594c2822059581c2babc287f6",
+        "html_url": "https://github.com/freegamestore-online/zombie/commit/4fd58d7b23013c6594c2822059581c2babc287f6",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:32:55Z"
+          }
+        }
+      },
       {
         "sha": "e74492cb5d2fe2366d07105a4e90c43c1c7f87c6",
         "html_url": "https://github.com/freegamestore-online/zombie/commit/e74492cb5d2fe2366d07105a4e90c43c1c7f87c6",
@@ -4336,25 +4346,25 @@
             "date": "2026-08-09T04:47:51Z"
           }
         }
-      },
-      {
-        "sha": "e8949ede0bb11feba7b0d0a154156ec75c631ac8",
-        "html_url": "https://github.com/freegamestore-online/zombie/commit/e8949ede0bb11feba7b0d0a154156ec75c631ac8",
-        "commit": {
-          "message": "Full 3D zombie survival game: city map, day/night cycle, 4 zombie types, weapons, upgrades, missions, HUD, procedural audio",
-          "author": {
-            "date": "2026-08-09T04:38:40Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/trade": {
     "meta": {
       "created_at": "2026-08-09T05:47:48Z",
-      "pushed_at": "2026-09-01T09:16:49Z"
+      "pushed_at": "2026-10-01T10:48:09Z"
     },
     "commits": [
+      {
+        "sha": "a553687e38f663aea1978d2c4b9221786c1be7b1",
+        "html_url": "https://github.com/freegamestore-online/trade/commit/a553687e38f663aea1978d2c4b9221786c1be7b1",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:48:08Z"
+          }
+        }
+      },
       {
         "sha": "4061d55aad83f03ca4a190639e5246e5af48d728",
         "html_url": "https://github.com/freegamestore-online/trade/commit/4061d55aad83f03ca4a190639e5246e5af48d728",
@@ -4374,25 +4384,25 @@
             "date": "2026-08-09T05:54:28Z"
           }
         }
-      },
-      {
-        "sha": "33b6517a05ce623e037d7438543c9bf598e6d307",
-        "html_url": "https://github.com/freegamestore-online/trade/commit/33b6517a05ce623e037d7438543c9bf598e6d307",
-        "commit": {
-          "message": "Set game name to \"TRADE\"",
-          "author": {
-            "date": "2026-08-09T05:47:59Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/race": {
     "meta": {
       "created_at": "2026-08-09T04:30:26Z",
-      "pushed_at": "2026-09-01T09:16:50Z"
+      "pushed_at": "2026-10-01T10:48:25Z"
     },
     "commits": [
+      {
+        "sha": "4e8856f2e9746bca11337c8443042b45771b89e7",
+        "html_url": "https://github.com/freegamestore-online/race/commit/4e8856f2e9746bca11337c8443042b45771b89e7",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:48:23Z"
+          }
+        }
+      },
       {
         "sha": "e3827f499910d1d7f8a39bdb406ef13c0225d402",
         "html_url": "https://github.com/freegamestore-online/race/commit/e3827f499910d1d7f8a39bdb406ef13c0225d402",
@@ -4412,25 +4422,25 @@
             "date": "2026-08-09T04:51:48Z"
           }
         }
-      },
-      {
-        "sha": "4dc74203fcce12ea526885550944e5cb470d79d4",
-        "html_url": "https://github.com/freegamestore-online/race/commit/4dc74203fcce12ea526885550944e5cb470d79d4",
-        "commit": {
-          "message": "Set game name to \"Race\"",
-          "author": {
-            "date": "2026-08-09T04:30:40Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mydream-room": {
     "meta": {
       "created_at": "2026-08-09T06:22:52Z",
-      "pushed_at": "2026-09-01T09:09:49Z"
+      "pushed_at": "2026-10-01T10:43:11Z"
     },
     "commits": [
+      {
+        "sha": "8434bdd3fd8e9495a07cfe18c9a28fcf03bb4352",
+        "html_url": "https://github.com/freegamestore-online/mydream-room/commit/8434bdd3fd8e9495a07cfe18c9a28fcf03bb4352",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:43:10Z"
+          }
+        }
+      },
       {
         "sha": "2a2ba004904b9b6a971c8deb081f170d20d0d94d",
         "html_url": "https://github.com/freegamestore-online/mydream-room/commit/2a2ba004904b9b6a971c8deb081f170d20d0d94d",
@@ -4450,25 +4460,25 @@
             "date": "2026-08-09T06:23:03Z"
           }
         }
-      },
-      {
-        "sha": "678aa6193183f062a1e1b21ebe5ac6535469b2f1",
-        "html_url": "https://github.com/freegamestore-online/mydream-room/commit/678aa6193183f062a1e1b21ebe5ac6535469b2f1",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-08-09T06:22:55Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/candy-shop": {
     "meta": {
       "created_at": "2026-08-09T04:59:39Z",
-      "pushed_at": "2026-09-01T09:03:49Z"
+      "pushed_at": "2026-10-01T10:37:56Z"
     },
     "commits": [
+      {
+        "sha": "92a8e0639fb9e56ca7a20393b0eccd7c8de6abb4",
+        "html_url": "https://github.com/freegamestore-online/candy-shop/commit/92a8e0639fb9e56ca7a20393b0eccd7c8de6abb4",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:37:55Z"
+          }
+        }
+      },
       {
         "sha": "5170b2a5f353972b05fe92756b4a57a7d5088a65",
         "html_url": "https://github.com/freegamestore-online/candy-shop/commit/5170b2a5f353972b05fe92756b4a57a7d5088a65",
@@ -4488,25 +4498,25 @@
             "date": "2026-08-09T06:18:43Z"
           }
         }
-      },
-      {
-        "sha": "2d73dfc0409ca5e9d1ea0bcadb4fa6031da1d5ca",
-        "html_url": "https://github.com/freegamestore-online/candy-shop/commit/2d73dfc0409ca5e9d1ea0bcadb4fa6031da1d5ca",
-        "commit": {
-          "message": "Fix runtime crash: clean rewrite of all 4 scenes — no k.Rect, safe timer bar, strict types",
-          "author": {
-            "date": "2026-08-09T05:58:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/squishy-swap": {
     "meta": {
       "created_at": "2026-08-09T04:53:49Z",
-      "pushed_at": "2026-09-01T08:59:42Z"
+      "pushed_at": "2026-10-01T10:33:28Z"
     },
     "commits": [
+      {
+        "sha": "d1012513dab41bffa94165716cb6fe3c026b2bfd",
+        "html_url": "https://github.com/freegamestore-online/squishy-swap/commit/d1012513dab41bffa94165716cb6fe3c026b2bfd",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:33:28Z"
+          }
+        }
+      },
       {
         "sha": "46d4392031684e20d5db358f8877c61356cc16b2",
         "html_url": "https://github.com/freegamestore-online/squishy-swap/commit/46d4392031684e20d5db358f8877c61356cc16b2",
@@ -4526,25 +4536,25 @@
             "date": "2026-08-11T06:43:34Z"
           }
         }
-      },
-      {
-        "sha": "59af108faf092dec1f1ffe175b58e15cf97948ab",
-        "html_url": "https://github.com/freegamestore-online/squishy-swap/commit/59af108faf092dec1f1ffe175b58e15cf97948ab",
-        "commit": {
-          "message": "Lighten all trader colours — bright pastels for header borders/glow, light mint/periwinkle/peach for difficulty badges",
-          "author": {
-            "date": "2026-08-10T22:53:58Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/endlesshighway": {
     "meta": {
       "created_at": "2026-08-09T04:32:42Z",
-      "pushed_at": "2026-09-01T09:15:27Z"
+      "pushed_at": "2026-10-01T10:47:02Z"
     },
     "commits": [
+      {
+        "sha": "8c284a7a1e6b18d5f71c19dfb5fdddaf3a3ac7da",
+        "html_url": "https://github.com/freegamestore-online/endlesshighway/commit/8c284a7a1e6b18d5f71c19dfb5fdddaf3a3ac7da",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:47:01Z"
+          }
+        }
+      },
       {
         "sha": "0bc2d3e033fe2ea0daf95d61388be4fe222e05c6",
         "html_url": "https://github.com/freegamestore-online/endlesshighway/commit/0bc2d3e033fe2ea0daf95d61388be4fe222e05c6",
@@ -4564,25 +4574,25 @@
             "date": "2026-08-09T07:05:29Z"
           }
         }
-      },
-      {
-        "sha": "e9000d1ba856fae21c5dc82653eb50028f4ed005",
-        "html_url": "https://github.com/freegamestore-online/endlesshighway/commit/e9000d1ba856fae21c5dc82653eb50028f4ed005",
-        "commit": {
-          "message": "Very slow start (speed 8→60), speed HUD with colour bar, gaps with void + glow + warning arrow, gap collision (jump to survive)",
-          "author": {
-            "date": "2026-08-09T06:23:05Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/the-make-up-game": {
     "meta": {
       "created_at": "2026-08-09T06:10:33Z",
-      "pushed_at": "2026-09-01T09:05:56Z"
+      "pushed_at": "2026-10-01T10:39:42Z"
     },
     "commits": [
+      {
+        "sha": "9afaeea19494b0fdeddabb96a98eee600d139037",
+        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/9afaeea19494b0fdeddabb96a98eee600d139037",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:39:41Z"
+          }
+        }
+      },
       {
         "sha": "736cedf3d89a0f214d03c1131f0bd1199eb75d34",
         "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/736cedf3d89a0f214d03c1131f0bd1199eb75d34",
@@ -4602,25 +4612,25 @@
             "date": "2026-08-30T06:52:08Z"
           }
         }
-      },
-      {
-        "sha": "13b9144c7a947739735aed1cd416ce3bbb06415c",
-        "html_url": "https://github.com/freegamestore-online/the-make-up-game/commit/13b9144c7a947739735aed1cd416ce3bbb06415c",
-        "commit": {
-          "message": "Add culture picker front page: Chinese (light yellow skin, black hair/eyes), Indian (brown skin, black hair/eyes), Russian (light skin, light brown hair/eyes). Each culture drives all face colours. Mini face previews on cards. Back button returns to picker.",
-          "author": {
-            "date": "2026-08-30T06:00:33Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/my-dream-room": {
     "meta": {
       "created_at": "2026-08-09T04:34:09Z",
-      "pushed_at": "2026-09-01T09:06:37Z"
+      "pushed_at": "2026-10-01T10:40:23Z"
     },
     "commits": [
+      {
+        "sha": "4f762d090c0f69389b05bf3ab368d7d85865fd84",
+        "html_url": "https://github.com/freegamestore-online/my-dream-room/commit/4f762d090c0f69389b05bf3ab368d7d85865fd84",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:40:22Z"
+          }
+        }
+      },
       {
         "sha": "77b3521ab15f124dd1cd30246493be1ba9dc4759",
         "html_url": "https://github.com/freegamestore-online/my-dream-room/commit/77b3521ab15f124dd1cd30246493be1ba9dc4759",
@@ -4640,25 +4650,25 @@
             "date": "2026-08-30T04:32:06Z"
           }
         }
-      },
-      {
-        "sha": "126c01818bfb4bb517b718c921732288057c3d8e",
-        "html_url": "https://github.com/freegamestore-online/my-dream-room/commit/126c01818bfb4bb517b718c921732288057c3d8e",
-        "commit": {
-          "message": "Push current game state",
-          "author": {
-            "date": "2026-08-09T07:00:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/survive": {
     "meta": {
       "created_at": "2026-08-09T05:24:27Z",
-      "pushed_at": "2026-09-01T09:00:25Z"
+      "pushed_at": "2026-10-01T10:33:59Z"
     },
     "commits": [
+      {
+        "sha": "ae33ef484e21421b15d446e4a351ad9c33e43656",
+        "html_url": "https://github.com/freegamestore-online/survive/commit/ae33ef484e21421b15d446e4a351ad9c33e43656",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:33:58Z"
+          }
+        }
+      },
       {
         "sha": "7d5c8791fda3f65c6c5c644d33a09b7d412c375f",
         "html_url": "https://github.com/freegamestore-online/survive/commit/7d5c8791fda3f65c6c5c644d33a09b7d412c375f",
@@ -4678,25 +4688,25 @@
             "date": "2026-08-09T05:24:39Z"
           }
         }
-      },
-      {
-        "sha": "abb06dbe2cdcbbcc11a3cd090a32fbf4fa262a3a",
-        "html_url": "https://github.com/freegamestore-online/survive/commit/abb06dbe2cdcbbcc11a3cd090a32fbf4fa262a3a",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-08-09T05:24:30Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/zombie-attack": {
     "meta": {
       "created_at": "2026-08-09T07:01:23Z",
-      "pushed_at": "2026-09-01T09:14:58Z"
+      "pushed_at": "2026-10-01T10:46:16Z"
     },
     "commits": [
+      {
+        "sha": "ebaf36457695d0efff543b83b41a40d962a55d0d",
+        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/ebaf36457695d0efff543b83b41a40d962a55d0d",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:46:15Z"
+          }
+        }
+      },
       {
         "sha": "c7f8e5a5cf2d7e8f76eea5e78dc0246038fd0798",
         "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/c7f8e5a5cf2d7e8f76eea5e78dc0246038fd0798",
@@ -4716,25 +4726,25 @@
             "date": "2026-08-30T05:49:31Z"
           }
         }
-      },
-      {
-        "sha": "e6b6dbf8942558144305d052154932796e8c6232",
-        "html_url": "https://github.com/freegamestore-online/zombie-attack/commit/e6b6dbf8942558144305d052154932796e8c6232",
-        "commit": {
-          "message": "Fix build: remove unused engineRef (noUnusedLocals TS error)",
-          "author": {
-            "date": "2026-08-30T05:26:55Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/candy-store-2": {
     "meta": {
       "created_at": "2026-08-09T06:43:37Z",
-      "pushed_at": "2026-09-01T08:58:04Z"
+      "pushed_at": "2026-10-01T10:31:56Z"
     },
     "commits": [
+      {
+        "sha": "4607589d58a5559a3589b72b377529cd95d990fe",
+        "html_url": "https://github.com/freegamestore-online/candy-store-2/commit/4607589d58a5559a3589b72b377529cd95d990fe",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:31:55Z"
+          }
+        }
+      },
       {
         "sha": "753b6689730afa8091927f2dc8c4828285d38083",
         "html_url": "https://github.com/freegamestore-online/candy-store-2/commit/753b6689730afa8091927f2dc8c4828285d38083",
@@ -4754,25 +4764,25 @@
             "date": "2026-08-09T07:57:22Z"
           }
         }
-      },
-      {
-        "sha": "cb9bc3555a5adb316c3cf56dd09c0052185c140a",
-        "html_url": "https://github.com/freegamestore-online/candy-store-2/commit/cb9bc3555a5adb316c3cf56dd09c0052185c140a",
-        "commit": {
-          "message": "Complete redesign: candy shop with 3 jars (gummy/sweet/sour), speech bubble orders, money system, daily rent",
-          "author": {
-            "date": "2026-08-09T06:57:11Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/zombie123mmymymynmynamynammynamemynamemyname": {
     "meta": {
       "created_at": "2026-08-09T06:37:15Z",
-      "pushed_at": "2026-09-01T09:17:26Z"
+      "pushed_at": "2026-10-01T10:48:44Z"
     },
     "commits": [
+      {
+        "sha": "f23722d25400bea5ff39d8f20e9bc38185afea83",
+        "html_url": "https://github.com/freegamestore-online/zombie123mmymymynmynamynammynamemynamemyname/commit/f23722d25400bea5ff39d8f20e9bc38185afea83",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:48:43Z"
+          }
+        }
+      },
       {
         "sha": "656d6acf26f8cf65989977eccd5788f6130c7073",
         "html_url": "https://github.com/freegamestore-online/zombie123mmymymynmynamynammynamemynamemyname/commit/656d6acf26f8cf65989977eccd5788f6130c7073",
@@ -4792,25 +4802,25 @@
             "date": "2026-08-09T06:37:26Z"
           }
         }
-      },
-      {
-        "sha": "2ae1cfc29788f11f4c2173e71b72eb833ccc0806",
-        "html_url": "https://github.com/freegamestore-online/zombie123mmymymynmynamynammynamemynamemyname/commit/2ae1cfc29788f11f4c2173e71b72eb833ccc0806",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-08-09T06:37:18Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/command": {
     "meta": {
       "created_at": "2026-08-09T08:55:25Z",
-      "pushed_at": "2026-09-01T09:07:10Z"
+      "pushed_at": "2026-10-01T10:41:11Z"
     },
     "commits": [
+      {
+        "sha": "8913aedaa7ab4b477f268c0da54275f7df7a7d0e",
+        "html_url": "https://github.com/freegamestore-online/command/commit/8913aedaa7ab4b477f268c0da54275f7df7a7d0e",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:41:11Z"
+          }
+        }
+      },
       {
         "sha": "1322e99a439c4e0f153b600478cafef19befb285",
         "html_url": "https://github.com/freegamestore-online/command/commit/1322e99a439c4e0f153b600478cafef19befb285",
@@ -4830,25 +4840,25 @@
             "date": "2026-08-09T08:55:37Z"
           }
         }
-      },
-      {
-        "sha": "94c5ce39ddb6260c46441219bbe04e15b5ba5eee",
-        "html_url": "https://github.com/freegamestore-online/command/commit/94c5ce39ddb6260c46441219bbe04e15b5ba5eee",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-08-09T08:55:29Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/my-shopping-spree": {
     "meta": {
       "created_at": "2026-08-09T07:19:12Z",
-      "pushed_at": "2026-09-01T09:17:14Z"
+      "pushed_at": "2026-10-01T10:48:41Z"
     },
     "commits": [
+      {
+        "sha": "9296760b0128d45b3adbd2e3641cbd40f068bb65",
+        "html_url": "https://github.com/freegamestore-online/my-shopping-spree/commit/9296760b0128d45b3adbd2e3641cbd40f068bb65",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:48:40Z"
+          }
+        }
+      },
       {
         "sha": "b87a703027522e57523bc470a29e533ed3a1f119",
         "html_url": "https://github.com/freegamestore-online/my-shopping-spree/commit/b87a703027522e57523bc470a29e533ed3a1f119",
@@ -4868,25 +4878,25 @@
             "date": "2026-08-09T07:31:04Z"
           }
         }
-      },
-      {
-        "sha": "862f7f2180c09e32f2a3fc8ed160d01d657e194c",
-        "html_url": "https://github.com/freegamestore-online/my-shopping-spree/commit/862f7f2180c09e32f2a3fc8ed160d01d657e194c",
-        "commit": {
-          "message": "Set game name to \"my shopping spree\"",
-          "author": {
-            "date": "2026-08-09T07:19:23Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/a-jungle-race": {
     "meta": {
       "created_at": "2026-08-30T04:14:36Z",
-      "pushed_at": "2026-09-01T08:57:31Z"
+      "pushed_at": "2026-10-01T10:31:13Z"
     },
     "commits": [
+      {
+        "sha": "90a3a83e993f57e8acdf499cf40e1fd2b1362946",
+        "html_url": "https://github.com/freegamestore-online/a-jungle-race/commit/90a3a83e993f57e8acdf499cf40e1fd2b1362946",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:31:12Z"
+          }
+        }
+      },
       {
         "sha": "0f9e7f3a175269c02d4b9f97317d32f92440c5d4",
         "html_url": "https://github.com/freegamestore-online/a-jungle-race/commit/0f9e7f3a175269c02d4b9f97317d32f92440c5d4",
@@ -4906,25 +4916,25 @@
             "date": "2026-08-30T04:15:08Z"
           }
         }
-      },
-      {
-        "sha": "3e1a0f5cc71bc52f6c4840288a962bae385304c0",
-        "html_url": "https://github.com/freegamestore-online/a-jungle-race/commit/3e1a0f5cc71bc52f6c4840288a962bae385304c0",
-        "commit": {
-          "message": "Set game name to \"A jungle race\"",
-          "author": {
-            "date": "2026-08-30T04:14:49Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/ajungle-race": {
     "meta": {
       "created_at": "2026-08-30T04:34:51Z",
-      "pushed_at": "2026-09-01T09:08:40Z"
+      "pushed_at": "2026-10-01T10:42:46Z"
     },
     "commits": [
+      {
+        "sha": "ad2b6ac27ee0ab18456064b5c2d33cce6a5b1ecb",
+        "html_url": "https://github.com/freegamestore-online/ajungle-race/commit/ad2b6ac27ee0ab18456064b5c2d33cce6a5b1ecb",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:42:45Z"
+          }
+        }
+      },
       {
         "sha": "d0f95fd17c838a409572f05b5e3c60eb6e00b41c",
         "html_url": "https://github.com/freegamestore-online/ajungle-race/commit/d0f95fd17c838a409572f05b5e3c60eb6e00b41c",
@@ -4944,25 +4954,25 @@
             "date": "2026-08-30T06:40:48Z"
           }
         }
-      },
-      {
-        "sha": "6427085e5ca802f8167b78a1c4cf05641ba569c0",
-        "html_url": "https://github.com/freegamestore-online/ajungle-race/commit/6427085e5ca802f8167b78a1c4cf05641ba569c0",
-        "commit": {
-          "message": "Complete game: 3D on-foot runner, animated player character, enemy guardians, power-ups, instructions screen, character select with unlocks, mobile d-pad HUD",
-          "author": {
-            "date": "2026-08-30T06:10:40Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/zombie123": {
     "meta": {
       "created_at": "2026-08-30T04:18:27Z",
-      "pushed_at": "2026-09-01T09:15:13Z"
+      "pushed_at": "2026-10-01T10:46:29Z"
     },
     "commits": [
+      {
+        "sha": "6959b091b115e6d29285f0ee43821b2538c770db",
+        "html_url": "https://github.com/freegamestore-online/zombie123/commit/6959b091b115e6d29285f0ee43821b2538c770db",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:46:28Z"
+          }
+        }
+      },
       {
         "sha": "77a2bda96ff53be4324d77642db8f81b0a4fa1da",
         "html_url": "https://github.com/freegamestore-online/zombie123/commit/77a2bda96ff53be4324d77642db8f81b0a4fa1da",
@@ -4982,25 +4992,25 @@
             "date": "2026-08-30T04:18:38Z"
           }
         }
-      },
-      {
-        "sha": "49514771ecc178d8371bb3c5a155ddaa1341772b",
-        "html_url": "https://github.com/freegamestore-online/zombie123/commit/49514771ecc178d8371bb3c5a155ddaa1341772b",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-08-30T04:18:31Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/dress-to-impress": {
     "meta": {
       "created_at": "2026-08-30T01:13:44Z",
-      "pushed_at": "2026-09-01T09:16:55Z"
+      "pushed_at": "2026-10-01T10:48:15Z"
     },
     "commits": [
+      {
+        "sha": "c05bb76866d2fca798983a554ed7ca23169f23aa",
+        "html_url": "https://github.com/freegamestore-online/dress-to-impress/commit/c05bb76866d2fca798983a554ed7ca23169f23aa",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:48:15Z"
+          }
+        }
+      },
       {
         "sha": "6399aafec19a2ce5f6e2f6ad62146768bbd9c4fb",
         "html_url": "https://github.com/freegamestore-online/dress-to-impress/commit/6399aafec19a2ce5f6e2f6ad62146768bbd9c4fb",
@@ -5018,16 +5028,6 @@
           "message": "Build Dress to Impress — FreeGameStore AI agent",
           "author": {
             "date": "2026-08-30T01:13:58Z"
-          }
-        }
-      },
-      {
-        "sha": "84aed5275ba55da849172ce55e742da10a458384",
-        "html_url": "https://github.com/freegamestore-online/dress-to-impress/commit/84aed5275ba55da849172ce55e742da10a458384",
-        "commit": {
-          "message": "Set game name to \"Dress to Impress\"",
-          "author": {
-            "date": "2026-08-30T01:13:53Z"
           }
         }
       }
@@ -5074,9 +5074,19 @@
   "freegamestore-online/puppy-fashion": {
     "meta": {
       "created_at": "2026-09-13T04:36:40Z",
-      "pushed_at": "2026-09-13T06:05:09Z"
+      "pushed_at": "2026-10-01T10:50:43Z"
     },
     "commits": [
+      {
+        "sha": "139ef358cdbc5542f73b8c03400eabf2cc0b680b",
+        "html_url": "https://github.com/freegamestore-online/puppy-fashion/commit/139ef358cdbc5542f73b8c03400eabf2cc0b680b",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:50:42Z"
+          }
+        }
+      },
       {
         "sha": "c90b5066e13dcca4cc520020e739524ea8bfb6d1",
         "html_url": "https://github.com/freegamestore-online/puppy-fashion/commit/c90b5066e13dcca4cc520020e739524ea8bfb6d1",
@@ -5096,25 +5106,25 @@
             "date": "2026-09-13T05:56:46Z"
           }
         }
-      },
-      {
-        "sha": "ae8a0ca724132051fe026d1696452e034e18e2ee",
-        "html_url": "https://github.com/freegamestore-online/puppy-fashion/commit/ae8a0ca724132051fe026d1696452e034e18e2ee",
-        "commit": {
-          "message": "Realistic pug SVG: dark face mask, bulging eyes with highlights, wrinkled forehead, floppy velvet ears, wide muzzle with nostrils, barrel body, curly tail, stubby legs with 3-toe paws",
-          "author": {
-            "date": "2026-09-13T05:14:57Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/whispers-of-the-wild": {
     "meta": {
       "created_at": "2026-09-13T04:46:16Z",
-      "pushed_at": "2026-09-13T05:39:15Z"
+      "pushed_at": "2026-10-01T10:47:53Z"
     },
     "commits": [
+      {
+        "sha": "a55957578a3a443a062f9c6cf97801cb6639c31d",
+        "html_url": "https://github.com/freegamestore-online/whispers-of-the-wild/commit/a55957578a3a443a062f9c6cf97801cb6639c31d",
+        "commit": {
+          "message": "chore: monthly dependency refresh (latest)",
+          "author": {
+            "date": "2026-10-01T10:47:52Z"
+          }
+        }
+      },
       {
         "sha": "6d2a9e9256ce61259e8b89627ecc045638079bf7",
         "html_url": "https://github.com/freegamestore-online/whispers-of-the-wild/commit/6d2a9e9256ce61259e8b89627ecc045638079bf7",
@@ -5132,16 +5142,6 @@
           "message": "Build Whispers of the Wild — FreeGameStore AI agent",
           "author": {
             "date": "2026-09-13T05:25:27Z"
-          }
-        }
-      },
-      {
-        "sha": "44f9f12987b93fc411784d76fd18d1c150a5bf7e",
-        "html_url": "https://github.com/freegamestore-online/whispers-of-the-wild/commit/44f9f12987b93fc411784d76fd18d1c150a5bf7e",
-        "commit": {
-          "message": "Build full game: 3D survival adventure with day/night cycle, resource gathering, crafting, quests, trading, spirits, and monsters",
-          "author": {
-            "date": "2026-09-13T05:09:56Z"
           }
         }
       }
