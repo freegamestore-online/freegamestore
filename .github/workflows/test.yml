@@ -1,27 +1,19 @@
-name: Test
+name: Test (DEPRECATED - use platform repo)
 
-# Runs the build + security regression suite on every PR and every push to
-# main. Cheap — Node-only, no install of third-party deps. Cancels the
-# previous run on rapid pushes so the PR badge tracks the latest commit.
+# This workflow is deprecated. The storefront was consolidated into
+# freegamestore-online/platform as sites/freegamestore/ (issue #124).
+# This repo is archived; new development happens at:
+# https://github.com/freegamestore-online/platform/tree/main/sites/freegamestore
 
 on:
-  pull_request:
   push:
     branches: [main]
 
-permissions:
-  contents: read
-
-concurrency:
-  group: test-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
-  test:
+  notice:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - run: npm test
+      - run: |
+          echo "⚠️ This repository is superseded by freegamestore-online/platform"
+          echo "The storefront code has moved to: sites/freegamestore/"
+          exit 0

@@ -1,27 +1,40 @@
-# FreeGameStore
+# FreeGameStore Storefront (ARCHIVED)
 
-The storefront at [freegamestore.online](https://freegamestore.online) — a static HTML site built with `build.js`.
+⚠️ **This repository is deprecated and no longer maintained.**
 
-## Build
+The storefront code has been consolidated into the **[freegamestore-online/platform](https://github.com/freegamestore-online/platform)** monorepo (issue #124).
+
+## New Location
+
+Storefront source code is now at: [`freegamestore-online/platform/sites/freegamestore/`](https://github.com/freegamestore-online/platform/tree/main/sites/freegamestore)
+
+## Why
+
+Consolidating all platform tools (apps, workers, packages, sites) into a single monorepo eliminates:
+- Cross-repo drift (SDK/worker version mismatches)
+- CI/deployment fragmentation
+- Duplicate secret/dependency management
+
+## What Happened
+
+- Storefront source migrated to `sites/freegamestore/` via `git subtree add`
+- CI now runs from the monorepo via `.github/workflows/deploy-storefront.yml`
+- This standalone repo is read-only (archived)
+
+## Old Build Instructions (Historical)
 
 ```bash
-node build.js     # Generates dist/ from templates + registry.json
-npm test          # Runs build + security regression tests
+# These no longer apply — use platform monorepo instead
+# node build.js     # Generates dist/ from templates + registry.json
+# npm test          # Runs build + security regression tests
 ```
 
-## Structure
+## References
 
-- `build.js` — Static site generator (reads `registry.json`, outputs `dist/`)
-- `registry.json` — Game catalog (id, name, URL, icon, category)
-- `templates/` — HTML templates for index, game detail, quality, developers pages
-- `test/` — Build and security tests
-- `*.html` — Static pages (about, docs, capabilities, etc.)
-- `style.css` — Design system (Manrope + Fraunces, dark mode, responsive)
+- Platform consolidation plan: [PLAN-CONSOLIDATE-PLATFORM.md](https://github.com/freegamestore-online/platform/blob/main/PLAN-CONSOLIDATE-PLATFORM.md)
+- Issue #124: [Fold storefront into platform monorepo](https://github.com/freegamestore-online/platform/issues/124)
+- Issue #123: [Fleet CI migration](https://github.com/freegamestore-online/platform/issues/123)
 
-## Deploy
+---
 
-Push to `main` — GitHub Actions deploys to R2 automatically.
-
-## License
-
-MIT
+This repository is archived and read-only. All future development happens in [freegamestore-online/platform](https://github.com/freegamestore-online/platform).
