@@ -1180,9 +1180,29 @@
   "freegamestore-online/whackamole": {
     "meta": {
       "created_at": "2026-05-04T10:38:47Z",
-      "pushed_at": "2026-06-04T06:21:39Z"
+      "pushed_at": "2026-10-05T03:13:10Z"
     },
     "commits": [
+      {
+        "sha": "8eafceb75c209afc46337d96a98663c60dcbcde4",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/8eafceb75c209afc46337d96a98663c60dcbcde4",
+        "commit": {
+          "message": "Revert \"ci: repoint to ci-workflows repo\"\n\nThis reverts commit 321a01042db9c15776f08b95209ee78e069ada6a.",
+          "author": {
+            "date": "2026-10-05T03:13:08Z"
+          }
+        }
+      },
+      {
+        "sha": "321a01042db9c15776f08b95209ee78e069ada6a",
+        "html_url": "https://github.com/freegamestore-online/whackamole/commit/321a01042db9c15776f08b95209ee78e069ada6a",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo\n\nRepoint workflow reference from freegamestore-online/freegamestore to\nthe dedicated freegamestore-online/ci-workflows repository, decoupling\nCI logic from the storefront.\n\nCo-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T03:11:41Z"
+          }
+        }
+      },
       {
         "sha": "7f5477a8f921024b12b0a9174f314ad8c012fb7c",
         "html_url": "https://github.com/freegamestore-online/whackamole/commit/7f5477a8f921024b12b0a9174f314ad8c012fb7c",
@@ -1190,26 +1210,6 @@
           "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-06-04T06:21:37Z"
-          }
-        }
-      },
-      {
-        "sha": "400b98e6cf1c7dedbc8fc65a6c15ed3805ba1fae",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/400b98e6cf1c7dedbc8fc65a6c15ed3805ba1fae",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:20:38Z"
-          }
-        }
-      },
-      {
-        "sha": "4fb67dff34accef895b1ca961da1ba83627d507a",
-        "html_url": "https://github.com/freegamestore-online/whackamole/commit/4fb67dff34accef895b1ca961da1ba83627d507a",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:19:31Z"
           }
         }
       }
@@ -1864,9 +1864,29 @@
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-06-04T06:20:03Z"
+      "pushed_at": "2026-10-05T03:10:32Z"
     },
     "commits": [
+      {
+        "sha": "7a5b66f44d058b101d88a003178b2f3c5d622e2b",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/7a5b66f44d058b101d88a003178b2f3c5d622e2b",
+        "commit": {
+          "message": "Revert \"ci: repoint to ci-workflows repo\"\n\nThis reverts commit de3b19c7db0bacf8484d8825389e5c95d0fdb1f4.",
+          "author": {
+            "date": "2026-10-05T03:10:30Z"
+          }
+        }
+      },
+      {
+        "sha": "de3b19c7db0bacf8484d8825389e5c95d0fdb1f4",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/de3b19c7db0bacf8484d8825389e5c95d0fdb1f4",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo\n\nRepoint workflow reference from freegamestore-online/freegamestore to\nthe dedicated freegamestore-online/ci-workflows repository, decoupling\nCI logic from the storefront.\n\nCo-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T03:09:29Z"
+          }
+        }
+      },
       {
         "sha": "06997c98b21aa19e17f1e2500846de5c5d46fbd0",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/06997c98b21aa19e17f1e2500846de5c5d46fbd0",
@@ -1874,26 +1894,6 @@
           "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-06-04T06:20:00Z"
-          }
-        }
-      },
-      {
-        "sha": "be32c3fbcecf3a3e290558c552d97ddd67aba018",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/be32c3fbcecf3a3e290558c552d97ddd67aba018",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:19:38Z"
-          }
-        }
-      },
-      {
-        "sha": "f086d8553b791e79fe7812f2b0db4e9297b31e77",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/f086d8553b791e79fe7812f2b0db4e9297b31e77",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:17:27Z"
           }
         }
       }
@@ -3440,9 +3440,29 @@
   "freegamestore-online/neon-runner": {
     "meta": {
       "created_at": "2026-07-12T00:48:05Z",
-      "pushed_at": "2026-10-01T10:45:48Z"
+      "pushed_at": "2026-10-05T03:46:10Z"
     },
     "commits": [
+      {
+        "sha": "ada8095e89f587b4455207432c4e6077da4aae7d",
+        "html_url": "https://github.com/freegamestore-online/neon-runner/commit/ada8095e89f587b4455207432c4e6077da4aae7d",
+        "commit": {
+          "message": "Bump for CI re-run with fixed smoke test",
+          "author": {
+            "date": "2026-10-05T03:46:08Z"
+          }
+        }
+      },
+      {
+        "sha": "3ad468d9884c942f726864ce3825206b1094dc4a",
+        "html_url": "https://github.com/freegamestore-online/neon-runner/commit/3ad468d9884c942f726864ce3825206b1094dc4a",
+        "commit": {
+          "message": "Migrate to ci-workflows reusable workflow\n\n- Replaces inline build/compliance/deploy steps with call to freegamestore-online/ci-workflows\n- Maintains same cf_project identifier and permissions\n- Enables platform-wide workflow consistency\n\nCo-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T03:44:16Z"
+          }
+        }
+      },
       {
         "sha": "d333c6fd1a227a061602fdb93904cd97f63b1b22",
         "html_url": "https://github.com/freegamestore-online/neon-runner/commit/d333c6fd1a227a061602fdb93904cd97f63b1b22",
@@ -3452,35 +3472,25 @@
             "date": "2026-10-01T10:45:47Z"
           }
         }
-      },
-      {
-        "sha": "81bc0c982dc5dec398ac30bc4f3a9ade7f8a440d",
-        "html_url": "https://github.com/freegamestore-online/neon-runner/commit/81bc0c982dc5dec398ac30bc4f3a9ade7f8a440d",
-        "commit": {
-          "message": "chore: monthly dependency refresh (latest)",
-          "author": {
-            "date": "2026-09-01T09:14:08Z"
-          }
-        }
-      },
-      {
-        "sha": "b86f66de794725bc29108523d04e88bfe397ef6b",
-        "html_url": "https://github.com/freegamestore-online/neon-runner/commit/b86f66de794725bc29108523d04e88bfe397ef6b",
-        "commit": {
-          "message": "chore: monthly dependency refresh (latest)",
-          "author": {
-            "date": "2026-08-01T06:30:10Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/brick-blast": {
     "meta": {
       "created_at": "2026-07-12T05:49:51Z",
-      "pushed_at": "2026-10-01T10:51:57Z"
+      "pushed_at": "2026-10-05T02:24:36Z"
     },
     "commits": [
+      {
+        "sha": "f88bbeade589521b7a6cba16abf7a3d72432db43",
+        "html_url": "https://github.com/freegamestore-online/brick-blast/commit/f88bbeade589521b7a6cba16abf7a3d72432db43",
+        "commit": {
+          "message": "ci: add workflow calling game-ci.yml from ci-workflows repo\n\nDemonstrates reusable workflow pattern: game-specific CI now calls the\ncentralized game-ci.yml workflow from freegamestore-online/ci-workflows\ninstead of duplicating the logic inline.\n\nKeeps existing deploy.yml for backward compatibility.\n\nCo-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T02:24:35Z"
+          }
+        }
+      },
       {
         "sha": "c59a94d5185875218ef38b0c8bf980bf4ab679de",
         "html_url": "https://github.com/freegamestore-online/brick-blast/commit/c59a94d5185875218ef38b0c8bf980bf4ab679de",
@@ -3500,52 +3510,42 @@
             "date": "2026-09-01T09:20:15Z"
           }
         }
-      },
-      {
-        "sha": "d7d15c66881a52d0dd2ed460c1ac3b43aa5d8351",
-        "html_url": "https://github.com/freegamestore-online/brick-blast/commit/d7d15c66881a52d0dd2ed460c1ac3b43aa5d8351",
-        "commit": {
-          "message": "chore: monthly dependency refresh (latest)",
-          "author": {
-            "date": "2026-08-01T06:36:42Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/star-dodger": {
     "meta": {
       "created_at": "2026-07-12T05:40:46Z",
-      "pushed_at": "2026-10-01T10:50:53Z"
+      "pushed_at": "2026-10-05T03:18:40Z"
     },
     "commits": [
       {
-        "sha": "7c22e3de4ff2a0f90998b9309cd631cd7434e869",
-        "html_url": "https://github.com/freegamestore-online/star-dodger/commit/7c22e3de4ff2a0f90998b9309cd631cd7434e869",
+        "sha": "c04e50a0af5393ab3c664906f4d0c9147b3c3dad",
+        "html_url": "https://github.com/freegamestore-online/star-dodger/commit/c04e50a0af5393ab3c664906f4d0c9147b3c3dad",
         "commit": {
-          "message": "chore: monthly dependency refresh (latest)",
+          "message": "Revert \"ci: migrate to ci-workflows reusable workflow\"\n\nThis reverts commit 6526cde69994c26577cb85eacac5b9a9c9166167.",
           "author": {
-            "date": "2026-10-01T10:50:52Z"
+            "date": "2026-10-05T03:18:38Z"
           }
         }
       },
       {
-        "sha": "1607e9c1715165562376e8c9a5768355e580dd54",
-        "html_url": "https://github.com/freegamestore-online/star-dodger/commit/1607e9c1715165562376e8c9a5768355e580dd54",
+        "sha": "6526cde69994c26577cb85eacac5b9a9c9166167",
+        "html_url": "https://github.com/freegamestore-online/star-dodger/commit/6526cde69994c26577cb85eacac5b9a9c9166167",
         "commit": {
-          "message": "chore: monthly dependency refresh (latest)",
+          "message": "ci: migrate to ci-workflows reusable workflow\n\nReplace inline deployment workflow with reusable game-ci.yml from\nfreegamestore-online/ci-workflows. This decouples CI logic from the\nstorefront repo and enables centralized workflow management.\n\nCo-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-09-01T09:19:08Z"
+            "date": "2026-10-05T03:17:36Z"
           }
         }
       },
       {
-        "sha": "482518af8cfd2fd79afab5d10ee5852e9fc2f704",
-        "html_url": "https://github.com/freegamestore-online/star-dodger/commit/482518af8cfd2fd79afab5d10ee5852e9fc2f704",
+        "sha": "99f59bdc5fe7a9bf681e147bb0b1409b6fbbbc82",
+        "html_url": "https://github.com/freegamestore-online/star-dodger/commit/99f59bdc5fe7a9bf681e147bb0b1409b6fbbbc82",
         "commit": {
-          "message": "chore: monthly dependency refresh (latest)",
+          "message": "Revert \"ci: add workflow calling game-ci.yml from ci-workflows repo\"\n\nThis reverts commit e4c1e553fca5975097c7c433750fc9707e625495.",
           "author": {
-            "date": "2026-08-01T06:36:00Z"
+            "date": "2026-10-05T03:08:25Z"
           }
         }
       }
@@ -3896,9 +3896,29 @@
   "freegamestore-online/good-pizza-great-pizza": {
     "meta": {
       "created_at": "2026-07-19T04:54:52Z",
-      "pushed_at": "2026-10-01T10:50:57Z"
+      "pushed_at": "2026-10-05T03:07:14Z"
     },
     "commits": [
+      {
+        "sha": "f69f598ca47fdaca3e13bdc10cc6ce52e940372c",
+        "html_url": "https://github.com/freegamestore-online/good-pizza-great-pizza/commit/f69f598ca47fdaca3e13bdc10cc6ce52e940372c",
+        "commit": {
+          "message": "Revert \"ci: add workflow calling game-ci.yml from ci-workflows repo\"\n\nThis reverts commit f2b1128b73193a7eef4594af8b2ebae4515d6213.",
+          "author": {
+            "date": "2026-10-05T03:07:11Z"
+          }
+        }
+      },
+      {
+        "sha": "f2b1128b73193a7eef4594af8b2ebae4515d6213",
+        "html_url": "https://github.com/freegamestore-online/good-pizza-great-pizza/commit/f2b1128b73193a7eef4594af8b2ebae4515d6213",
+        "commit": {
+          "message": "ci: add workflow calling game-ci.yml from ci-workflows repo\n\nRepoints game CI to centralized reusable workflow hosted in\nfreegamestore-online/ci-workflows, decoupling CI logic from the\nstorefront repo. Keeps existing workflows intact for backward\ncompatibility.\n\nCo-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T03:05:58Z"
+          }
+        }
+      },
       {
         "sha": "6f0311398182140fde8f03b5992a1e200f6335b4",
         "html_url": "https://github.com/freegamestore-online/good-pizza-great-pizza/commit/6f0311398182140fde8f03b5992a1e200f6335b4",
@@ -3906,26 +3926,6 @@
           "message": "chore: monthly dependency refresh (latest)",
           "author": {
             "date": "2026-10-01T10:50:56Z"
-          }
-        }
-      },
-      {
-        "sha": "1435e55d2a626256eba41cb38620d7a7dca3b8aa",
-        "html_url": "https://github.com/freegamestore-online/good-pizza-great-pizza/commit/1435e55d2a626256eba41cb38620d7a7dca3b8aa",
-        "commit": {
-          "message": "chore: monthly dependency refresh (latest)",
-          "author": {
-            "date": "2026-09-01T09:19:20Z"
-          }
-        }
-      },
-      {
-        "sha": "da99a07d51062d584ba73a36c428898a0fe8e631",
-        "html_url": "https://github.com/freegamestore-online/good-pizza-great-pizza/commit/da99a07d51062d584ba73a36c428898a0fe8e631",
-        "commit": {
-          "message": "chore: monthly dependency refresh (latest)",
-          "author": {
-            "date": "2026-08-01T06:36:20Z"
           }
         }
       }
@@ -4960,9 +4960,19 @@
   "freegamestore-online/zombie123": {
     "meta": {
       "created_at": "2026-08-30T04:18:27Z",
-      "pushed_at": "2026-10-01T10:46:29Z"
+      "pushed_at": "2026-10-05T03:31:15Z"
     },
     "commits": [
+      {
+        "sha": "02c9b7ee0cf402ae3e0e5463c3e1bfa6e5f7f5df",
+        "html_url": "https://github.com/freegamestore-online/zombie123/commit/02c9b7ee0cf402ae3e0e5463c3e1bfa6e5f7f5df",
+        "commit": {
+          "message": "ci: migrate to ci-workflows reusable workflow\n\nReplace inline deployment workflow with reusable game-ci.yml from\nfreegamestore-online/ci-workflows. This decouples CI logic from the\nstorefront repo and enables centralized workflow management.\n\nCo-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T03:31:11Z"
+          }
+        }
+      },
       {
         "sha": "6959b091b115e6d29285f0ee43821b2538c770db",
         "html_url": "https://github.com/freegamestore-online/zombie123/commit/6959b091b115e6d29285f0ee43821b2538c770db",
@@ -4980,16 +4990,6 @@
           "message": "chore: monthly dependency refresh (latest)",
           "author": {
             "date": "2026-09-01T09:15:12Z"
-          }
-        }
-      },
-      {
-        "sha": "7df174ff156da93a64adc681b32b7e74dee76f8f",
-        "html_url": "https://github.com/freegamestore-online/zombie123/commit/7df174ff156da93a64adc681b32b7e74dee76f8f",
-        "commit": {
-          "message": "Set game name to \"Zombie\"",
-          "author": {
-            "date": "2026-08-30T04:18:38Z"
           }
         }
       }
@@ -5074,9 +5074,29 @@
   "freegamestore-online/puppy-fashion": {
     "meta": {
       "created_at": "2026-09-13T04:36:40Z",
-      "pushed_at": "2026-10-01T10:50:43Z"
+      "pushed_at": "2026-10-05T03:28:20Z"
     },
     "commits": [
+      {
+        "sha": "056454d18855a246e9c72536d93ed9a854177ef3",
+        "html_url": "https://github.com/freegamestore-online/puppy-fashion/commit/056454d18855a246e9c72536d93ed9a854177ef3",
+        "commit": {
+          "message": "fix: correct deploy.yml YAML syntax (remove orphaned code)\n\nThe previous edit left behind orphaned code from the original inline workflow,\nbreaking the YAML syntax. This commit removes all extraneous content and keeps\nonly the clean reusable workflow reference to ci-workflows.\n\nCo-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T03:28:16Z"
+          }
+        }
+      },
+      {
+        "sha": "2db9fef3ea6ab7173a11779ff7926df87119c42a",
+        "html_url": "https://github.com/freegamestore-online/puppy-fashion/commit/2db9fef3ea6ab7173a11779ff7926df87119c42a",
+        "commit": {
+          "message": "ci: migrate to ci-workflows reusable workflow\n\nReplace inline deployment workflow with reusable game-ci.yml from\nfreegamestore-online/ci-workflows. This decouples CI logic from the\nstorefront repo and enables centralized workflow management.\n\nCo-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T03:25:47Z"
+          }
+        }
+      },
       {
         "sha": "139ef358cdbc5542f73b8c03400eabf2cc0b680b",
         "html_url": "https://github.com/freegamestore-online/puppy-fashion/commit/139ef358cdbc5542f73b8c03400eabf2cc0b680b",
@@ -5084,26 +5104,6 @@
           "message": "chore: monthly dependency refresh (latest)",
           "author": {
             "date": "2026-10-01T10:50:42Z"
-          }
-        }
-      },
-      {
-        "sha": "c90b5066e13dcca4cc520020e739524ea8bfb6d1",
-        "html_url": "https://github.com/freegamestore-online/puppy-fashion/commit/c90b5066e13dcca4cc520020e739524ea8bfb6d1",
-        "commit": {
-          "message": "Fully realistic detailed SVG animals: pug with bulging eyes/dark mask/wrinkles, tabby cat with slit pupils/whiskers/ear tufts, budgie with barred feathers/cheek patches/hooked beak/throat spots. Split into CatSVG.tsx and BudgieSVG.tsx. Gorgeous accessories panel.",
-          "author": {
-            "date": "2026-09-13T06:05:08Z"
-          }
-        }
-      },
-      {
-        "sha": "e44303644bfb786981cd49dc67751e2dbe1cf375",
-        "html_url": "https://github.com/freegamestore-online/puppy-fashion/commit/e44303644bfb786981cd49dc67751e2dbe1cf375",
-        "commit": {
-          "message": "Realistic cute pug, cat & budgie SVGs with detailed features + gorgeous new accessories (tiara, flowerband, beret, pearls, bowtie, bandana, dress, raincoat, boots, sneakers, socks)",
-          "author": {
-            "date": "2026-09-13T05:56:46Z"
           }
         }
       }
