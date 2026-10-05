@@ -2,9 +2,19 @@
   "freegamestore-online/asteroids": {
     "meta": {
       "created_at": "2026-05-04T10:38:55Z",
-      "pushed_at": "2026-06-04T06:15:37Z"
+      "pushed_at": "2026-10-05T06:18:08Z"
     },
     "commits": [
+      {
+        "sha": "1a633e0b59730e2ea7e5ae5ddc40178b9760e408",
+        "html_url": "https://github.com/freegamestore-online/asteroids/commit/1a633e0b59730e2ea7e5ae5ddc40178b9760e408",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:18:05Z"
+          }
+        }
+      },
       {
         "sha": "5202facecb28b41c975bcb58ef2281ef01d08751",
         "html_url": "https://github.com/freegamestore-online/asteroids/commit/5202facecb28b41c975bcb58ef2281ef01d08751",
@@ -24,25 +34,25 @@
             "date": "2026-06-01T23:18:45Z"
           }
         }
-      },
-      {
-        "sha": "70c27b6bdb7b224dc67be662c2e0af25af53fa42",
-        "html_url": "https://github.com/freegamestore-online/asteroids/commit/70c27b6bdb7b224dc67be662c2e0af25af53fa42",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:15:56Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/connect4": {
     "meta": {
       "created_at": "2026-05-04T10:14:16Z",
-      "pushed_at": "2026-06-04T06:19:14Z"
+      "pushed_at": "2026-10-05T06:45:10Z"
     },
     "commits": [
+      {
+        "sha": "7fca5d05edd2a4b444d3c42fdc255091945e8cab",
+        "html_url": "https://github.com/freegamestore-online/connect4/commit/7fca5d05edd2a4b444d3c42fdc255091945e8cab",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:45:08Z"
+          }
+        }
+      },
       {
         "sha": "faebef36ebbf2ff452f6cc8b83a2d5d57f729784",
         "html_url": "https://github.com/freegamestore-online/connect4/commit/faebef36ebbf2ff452f6cc8b83a2d5d57f729784",
@@ -60,16 +70,6 @@
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-06-01T23:19:08Z"
-          }
-        }
-      },
-      {
-        "sha": "5ae5e2d42ffbb4fb055f8abac78c1dbb56122a7e",
-        "html_url": "https://github.com/freegamestore-online/connect4/commit/5ae5e2d42ffbb4fb055f8abac78c1dbb56122a7e",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:31Z"
           }
         }
       }
@@ -116,9 +116,19 @@
   "freegamestore-online/billiards": {
     "meta": {
       "created_at": "2026-05-08T21:52:47Z",
-      "pushed_at": "2026-06-04T06:15:51Z"
+      "pushed_at": "2026-10-05T06:18:03Z"
     },
     "commits": [
+      {
+        "sha": "d6631c132f428e45d578b7de1b0d1998044aa599",
+        "html_url": "https://github.com/freegamestore-online/billiards/commit/d6631c132f428e45d578b7de1b0d1998044aa599",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:18:00Z"
+          }
+        }
+      },
       {
         "sha": "08f71823b9488003ab903bfb871ccea4b38c9d27",
         "html_url": "https://github.com/freegamestore-online/billiards/commit/08f71823b9488003ab903bfb871ccea4b38c9d27",
@@ -138,25 +148,25 @@
             "date": "2026-06-01T23:18:48Z"
           }
         }
-      },
-      {
-        "sha": "10346f88766263f82f4f069f6b6735bd3b48581b",
-        "html_url": "https://github.com/freegamestore-online/billiards/commit/10346f88766263f82f4f069f6b6735bd3b48581b",
-        "commit": {
-          "message": "fix: add maskable icon purpose to PWA manifest\n\nAdds \"purpose\": \"any maskable\" to icon entries in manifest.json\nfor PWA compliance.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:04Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bowling": {
     "meta": {
       "created_at": "2026-05-04T09:48:37Z",
-      "pushed_at": "2026-06-04T06:17:39Z"
+      "pushed_at": "2026-10-05T06:17:59Z"
     },
     "commits": [
+      {
+        "sha": "92793fc29b140986b8e0038ddfedecd26af94b2d",
+        "html_url": "https://github.com/freegamestore-online/bowling/commit/92793fc29b140986b8e0038ddfedecd26af94b2d",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:17:56Z"
+          }
+        }
+      },
       {
         "sha": "41e2455b7217117298878f039bc56e469ee687c0",
         "html_url": "https://github.com/freegamestore-online/bowling/commit/41e2455b7217117298878f039bc56e469ee687c0",
@@ -176,25 +186,25 @@
             "date": "2026-06-01T23:18:53Z"
           }
         }
-      },
-      {
-        "sha": "0e5ae0b74c284010fb0ed96cdac1f3bda1fdd41e",
-        "html_url": "https://github.com/freegamestore-online/bowling/commit/0e5ae0b74c284010fb0ed96cdac1f3bda1fdd41e",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:08Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/chess": {
     "meta": {
       "created_at": "2026-05-03T02:32:48Z",
-      "pushed_at": "2026-06-04T06:18:51Z"
+      "pushed_at": "2026-10-05T07:25:43Z"
     },
     "commits": [
+      {
+        "sha": "19b3fcf2228c2e787630d00c93c783205773466e",
+        "html_url": "https://github.com/freegamestore-online/chess/commit/19b3fcf2228c2e787630d00c93c783205773466e",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:25:41Z"
+          }
+        }
+      },
       {
         "sha": "14ad40e6ba7c7851ff17d3ecefcac36f5da8930b",
         "html_url": "https://github.com/freegamestore-online/chess/commit/14ad40e6ba7c7851ff17d3ecefcac36f5da8930b",
@@ -214,25 +224,25 @@
             "date": "2026-05-27T12:18:58Z"
           }
         }
-      },
-      {
-        "sha": "c969361db71bd6df17dbeb04870c9c1cc39d517a",
-        "html_url": "https://github.com/freegamestore-online/chess/commit/c969361db71bd6df17dbeb04870c9c1cc39d517a",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:23Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/bubbleshooter": {
     "meta": {
       "created_at": "2026-05-18T23:17:44Z",
-      "pushed_at": "2026-06-04T06:18:23Z"
+      "pushed_at": "2026-10-05T07:24:57Z"
     },
     "commits": [
+      {
+        "sha": "06ff2975fb4d94149da1c822878f78895bf54f5a",
+        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/06ff2975fb4d94149da1c822878f78895bf54f5a",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:24:54Z"
+          }
+        }
+      },
       {
         "sha": "7760a7fda171f31eace191cb9d88240e12e7e467",
         "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/7760a7fda171f31eace191cb9d88240e12e7e467",
@@ -252,25 +262,25 @@
             "date": "2026-06-01T23:18:59Z"
           }
         }
-      },
-      {
-        "sha": "8f48157c147543124df2012f4eff52c2da89dc6b",
-        "html_url": "https://github.com/freegamestore-online/bubbleshooter/commit/8f48157c147543124df2012f4eff52c2da89dc6b",
-        "commit": {
-          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:31Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/flappy": {
     "meta": {
       "created_at": "2026-05-04T10:14:08Z",
-      "pushed_at": "2026-06-04T06:19:24Z"
+      "pushed_at": "2026-10-05T06:47:23Z"
     },
     "commits": [
+      {
+        "sha": "6bcb6f0552f6748cc17195e43365547bb0e629c0",
+        "html_url": "https://github.com/freegamestore-online/flappy/commit/6bcb6f0552f6748cc17195e43365547bb0e629c0",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:47:20Z"
+          }
+        }
+      },
       {
         "sha": "77502b4233c4ed2301cb79170dc40dd8a323b8d8",
         "html_url": "https://github.com/freegamestore-online/flappy/commit/77502b4233c4ed2301cb79170dc40dd8a323b8d8",
@@ -290,25 +300,25 @@
             "date": "2026-06-01T23:19:17Z"
           }
         }
-      },
-      {
-        "sha": "8239a0b2ef80491cd180a27f6223fc156b0687a2",
-        "html_url": "https://github.com/freegamestore-online/flappy/commit/8239a0b2ef80491cd180a27f6223fc156b0687a2",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:43Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/coinflip": {
     "meta": {
       "created_at": "2026-05-06T05:39:33Z",
-      "pushed_at": "2026-06-04T06:19:02Z"
+      "pushed_at": "2026-10-05T06:18:12Z"
     },
     "commits": [
+      {
+        "sha": "304869be30284614df5ea928da2d8e0e7af229d4",
+        "html_url": "https://github.com/freegamestore-online/coinflip/commit/304869be30284614df5ea928da2d8e0e7af229d4",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:18:10Z"
+          }
+        }
+      },
       {
         "sha": "0cb243e7a1a137b7542ad43b66faf955cbec2ca4",
         "html_url": "https://github.com/freegamestore-online/coinflip/commit/0cb243e7a1a137b7542ad43b66faf955cbec2ca4",
@@ -326,16 +336,6 @@
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-06-01T23:19:05Z"
-          }
-        }
-      },
-      {
-        "sha": "0852c742d78e28bfe2ee7e2883bfb71527144b49",
-        "html_url": "https://github.com/freegamestore-online/coinflip/commit/0852c742d78e28bfe2ee7e2883bfb71527144b49",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:27Z"
           }
         }
       }
@@ -382,9 +382,19 @@
   "freegamestore-online/breakout": {
     "meta": {
       "created_at": "2026-05-04T09:48:46Z",
-      "pushed_at": "2026-06-04T06:18:07Z"
+      "pushed_at": "2026-10-05T06:42:58Z"
     },
     "commits": [
+      {
+        "sha": "9c7243a1acb035d1272342ea0c39b37b22049e4d",
+        "html_url": "https://github.com/freegamestore-online/breakout/commit/9c7243a1acb035d1272342ea0c39b37b22049e4d",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:42:55Z"
+          }
+        }
+      },
       {
         "sha": "e9ea76ae8837ad4f7e8fdc699cd68777d982a513",
         "html_url": "https://github.com/freegamestore-online/breakout/commit/e9ea76ae8837ad4f7e8fdc699cd68777d982a513",
@@ -404,25 +414,25 @@
             "date": "2026-06-01T23:18:56Z"
           }
         }
-      },
-      {
-        "sha": "1072f6f45457f394d37dc78d5319ad7b755db13c",
-        "html_url": "https://github.com/freegamestore-online/breakout/commit/1072f6f45457f394d37dc78d5319ad7b755db13c",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:12Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/dice": {
     "meta": {
       "created_at": "2026-05-06T07:50:44Z",
-      "pushed_at": "2026-06-04T06:19:19Z"
+      "pushed_at": "2026-10-05T06:46:17Z"
     },
     "commits": [
+      {
+        "sha": "7dec67acd4fe9a63eb87fb35954ef7cd2bc9bd66",
+        "html_url": "https://github.com/freegamestore-online/dice/commit/7dec67acd4fe9a63eb87fb35954ef7cd2bc9bd66",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:46:14Z"
+          }
+        }
+      },
       {
         "sha": "2dcc52e2bb0d815906bd75b1e40d4616b7d5cdf4",
         "html_url": "https://github.com/freegamestore-online/dice/commit/2dcc52e2bb0d815906bd75b1e40d4616b7d5cdf4",
@@ -442,25 +452,25 @@
             "date": "2026-06-01T23:19:11Z"
           }
         }
-      },
-      {
-        "sha": "d83d3334c85c103f7eac1351a199085d29f5eb78",
-        "html_url": "https://github.com/freegamestore-online/dice/commit/d83d3334c85c103f7eac1351a199085d29f5eb78",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/highlow": {
     "meta": {
       "created_at": "2026-05-06T07:52:08Z",
-      "pushed_at": "2026-06-04T06:19:38Z"
+      "pushed_at": "2026-10-05T06:18:17Z"
     },
     "commits": [
+      {
+        "sha": "bee460eb6807b5d414498f57f802e467d2e3836a",
+        "html_url": "https://github.com/freegamestore-online/highlow/commit/bee460eb6807b5d414498f57f802e467d2e3836a",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:18:14Z"
+          }
+        }
+      },
       {
         "sha": "d8cd5963ebe0193ca988d6192236a09504b4c131",
         "html_url": "https://github.com/freegamestore-online/highlow/commit/d8cd5963ebe0193ca988d6192236a09504b4c131",
@@ -480,25 +490,25 @@
             "date": "2026-06-01T23:19:26Z"
           }
         }
-      },
-      {
-        "sha": "6d81c2610797249821bccbb318173e2a7f78ffaf",
-        "html_url": "https://github.com/freegamestore-online/highlow/commit/6d81c2610797249821bccbb318173e2a7f78ffaf",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:55Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/frogger": {
     "meta": {
       "created_at": "2026-05-04T10:38:40Z",
-      "pushed_at": "2026-06-04T06:19:29Z"
+      "pushed_at": "2026-10-05T06:18:21Z"
     },
     "commits": [
+      {
+        "sha": "8af19692eb568927483861db21a65b93086a1303",
+        "html_url": "https://github.com/freegamestore-online/frogger/commit/8af19692eb568927483861db21a65b93086a1303",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:18:19Z"
+          }
+        }
+      },
       {
         "sha": "80af5c5a9f1f5958a7b3e7e0045f9db19ed60f60",
         "html_url": "https://github.com/freegamestore-online/frogger/commit/80af5c5a9f1f5958a7b3e7e0045f9db19ed60f60",
@@ -518,25 +528,25 @@
             "date": "2026-06-01T23:19:20Z"
           }
         }
-      },
-      {
-        "sha": "5d85a80eb17949cae54de1c3d3a98ba406e51493",
-        "html_url": "https://github.com/freegamestore-online/frogger/commit/5d85a80eb17949cae54de1c3d3a98ba406e51493",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:47Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pacman": {
     "meta": {
       "created_at": "2026-05-04T10:13:58Z",
-      "pushed_at": "2026-06-04T06:20:08Z"
+      "pushed_at": "2026-10-05T06:58:20Z"
     },
     "commits": [
+      {
+        "sha": "999dd2cc1c027bf73239c37f4ab4b8fa8bf306a9",
+        "html_url": "https://github.com/freegamestore-online/pacman/commit/999dd2cc1c027bf73239c37f4ab4b8fa8bf306a9",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:58:16Z"
+          }
+        }
+      },
       {
         "sha": "26b08062423f1756e96d50d3dba6bf7dd8890e65",
         "html_url": "https://github.com/freegamestore-online/pacman/commit/26b08062423f1756e96d50d3dba6bf7dd8890e65",
@@ -556,25 +566,25 @@
             "date": "2026-06-01T23:19:44Z"
           }
         }
-      },
-      {
-        "sha": "4b8ca21a2673a480c914ac2b684fbeb1ea9aa59d",
-        "html_url": "https://github.com/freegamestore-online/pacman/commit/4b8ca21a2673a480c914ac2b684fbeb1ea9aa59d",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:17:45Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/hangman": {
     "meta": {
       "created_at": "2026-05-04T10:38:32Z",
-      "pushed_at": "2026-06-04T06:19:34Z"
+      "pushed_at": "2026-10-05T06:17:40Z"
     },
     "commits": [
+      {
+        "sha": "745a262e841315b61512f74aa5b04055cd45181d",
+        "html_url": "https://github.com/freegamestore-online/hangman/commit/745a262e841315b61512f74aa5b04055cd45181d",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:17:38Z"
+          }
+        }
+      },
       {
         "sha": "e510b05f7bd153860cbd3fc08888dc17b43c041b",
         "html_url": "https://github.com/freegamestore-online/hangman/commit/e510b05f7bd153860cbd3fc08888dc17b43c041b",
@@ -594,25 +604,25 @@
             "date": "2026-06-01T23:19:23Z"
           }
         }
-      },
-      {
-        "sha": "ae54df602acb5a254e62904151ed32db1956b126",
-        "html_url": "https://github.com/freegamestore-online/hangman/commit/ae54df602acb5a254e62904151ed32db1956b126",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:51Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pinball": {
     "meta": {
       "created_at": "2026-05-19T02:33:08Z",
-      "pushed_at": "2026-06-04T06:20:13Z"
+      "pushed_at": "2026-10-05T07:28:21Z"
     },
     "commits": [
+      {
+        "sha": "a1c84eebd59faa3d784fc65fa9692fafed2b73a9",
+        "html_url": "https://github.com/freegamestore-online/pinball/commit/a1c84eebd59faa3d784fc65fa9692fafed2b73a9",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:28:19Z"
+          }
+        }
+      },
       {
         "sha": "af4595173b090b08ac26c14ca31ae57bcf8e2d64",
         "html_url": "https://github.com/freegamestore-online/pinball/commit/af4595173b090b08ac26c14ca31ae57bcf8e2d64",
@@ -632,25 +642,25 @@
             "date": "2026-06-01T23:19:47Z"
           }
         }
-      },
-      {
-        "sha": "35de70556dd71a9fa0604530dd58fc8fe5cf7945",
-        "html_url": "https://github.com/freegamestore-online/pinball/commit/35de70556dd71a9fa0604530dd58fc8fe5cf7945",
-        "commit": {
-          "message": "fix: add missing PWA icons and maskable purpose\n\nAdds platform icon-192.png and icon-512.png, and declares\n\"purpose\": \"any maskable\" on manifest icon entries.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:35Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/mahjong": {
     "meta": {
       "created_at": "2026-05-04T10:14:26Z",
-      "pushed_at": "2026-06-04T06:19:43Z"
+      "pushed_at": "2026-10-05T06:48:29Z"
     },
     "commits": [
+      {
+        "sha": "f14a638ca254e52bf67456abe50bb098bd0b5e8f",
+        "html_url": "https://github.com/freegamestore-online/mahjong/commit/f14a638ca254e52bf67456abe50bb098bd0b5e8f",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:48:26Z"
+          }
+        }
+      },
       {
         "sha": "4c209b965a617a5c919177a3b0d23ee09cae46e1",
         "html_url": "https://github.com/freegamestore-online/mahjong/commit/4c209b965a617a5c919177a3b0d23ee09cae46e1",
@@ -670,25 +680,25 @@
             "date": "2026-06-01T23:19:29Z"
           }
         }
-      },
-      {
-        "sha": "b9208622fa3a8545176c94a85e15baa4c2661d0c",
-        "html_url": "https://github.com/freegamestore-online/mahjong/commit/b9208622fa3a8545176c94a85e15baa4c2661d0c",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:59Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/2048": {
     "meta": {
       "created_at": "2026-05-04T06:07:36Z",
-      "pushed_at": "2026-06-04T06:15:22Z"
+      "pushed_at": "2026-10-05T06:17:36Z"
     },
     "commits": [
+      {
+        "sha": "41dd8addc8e3bcbc4bca1bce53d70753b2d6d691",
+        "html_url": "https://github.com/freegamestore-online/2048/commit/41dd8addc8e3bcbc4bca1bce53d70753b2d6d691",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:17:33Z"
+          }
+        }
+      },
       {
         "sha": "c6a7fd7972f1b49eebd8f8191bd0a5f815d9abf2",
         "html_url": "https://github.com/freegamestore-online/2048/commit/c6a7fd7972f1b49eebd8f8191bd0a5f815d9abf2",
@@ -708,25 +718,25 @@
             "date": "2026-06-01T23:18:42Z"
           }
         }
-      },
-      {
-        "sha": "8d701d4fa3ff9178f5b8957e76f197f3fa2d02bf",
-        "html_url": "https://github.com/freegamestore-online/2048/commit/8d701d4fa3ff9178f5b8957e76f197f3fa2d02bf",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:15:53Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/memory": {
     "meta": {
       "created_at": "2026-05-04T10:38:36Z",
-      "pushed_at": "2026-06-04T06:19:53Z"
+      "pushed_at": "2026-10-05T06:56:04Z"
     },
     "commits": [
+      {
+        "sha": "ef817c155cab2d08ac03225deaaa9fb1cb0f97e0",
+        "html_url": "https://github.com/freegamestore-online/memory/commit/ef817c155cab2d08ac03225deaaa9fb1cb0f97e0",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:56:01Z"
+          }
+        }
+      },
       {
         "sha": "e765dedd0efd12be45e95b7ae271fbc452121632",
         "html_url": "https://github.com/freegamestore-online/memory/commit/e765dedd0efd12be45e95b7ae271fbc452121632",
@@ -746,25 +756,25 @@
             "date": "2026-06-01T23:19:35Z"
           }
         }
-      },
-      {
-        "sha": "7be07cbacd9edbe89e14ca88e47bb10804202048",
-        "html_url": "https://github.com/freegamestore-online/memory/commit/7be07cbacd9edbe89e14ca88e47bb10804202048",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:17:09Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/checkers": {
     "meta": {
       "created_at": "2026-05-04T10:38:28Z",
-      "pushed_at": "2026-06-04T06:18:37Z"
+      "pushed_at": "2026-10-05T06:44:04Z"
     },
     "commits": [
+      {
+        "sha": "b023f79adb90067ba3c5cbb87affbba7ba48ccde",
+        "html_url": "https://github.com/freegamestore-online/checkers/commit/b023f79adb90067ba3c5cbb87affbba7ba48ccde",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:44:01Z"
+          }
+        }
+      },
       {
         "sha": "c582b8ec356c7a9148c136916dcdda5bd495f5c2",
         "html_url": "https://github.com/freegamestore-online/checkers/commit/c582b8ec356c7a9148c136916dcdda5bd495f5c2",
@@ -784,25 +794,25 @@
             "date": "2026-06-01T23:19:02Z"
           }
         }
-      },
-      {
-        "sha": "a041f1e3138852217b465e06d783b2858e6da015",
-        "html_url": "https://github.com/freegamestore-online/checkers/commit/a041f1e3138852217b465e06d783b2858e6da015",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:16:19Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/match3": {
     "meta": {
       "created_at": "2026-05-04T10:38:44Z",
-      "pushed_at": "2026-06-04T06:19:48Z"
+      "pushed_at": "2026-10-05T06:55:18Z"
     },
     "commits": [
+      {
+        "sha": "a700be9bb83e3911492d493f368f90fe16374040",
+        "html_url": "https://github.com/freegamestore-online/match3/commit/a700be9bb83e3911492d493f368f90fe16374040",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:55:15Z"
+          }
+        }
+      },
       {
         "sha": "16a6395f5f13ece475fb8a03fe4379ab30c7933a",
         "html_url": "https://github.com/freegamestore-online/match3/commit/16a6395f5f13ece475fb8a03fe4379ab30c7933a",
@@ -820,16 +830,6 @@
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-06-01T23:19:32Z"
-          }
-        }
-      },
-      {
-        "sha": "90edfca8550665748eacaab55e8e76d10f3c289e",
-        "html_url": "https://github.com/freegamestore-online/match3/commit/90edfca8550665748eacaab55e8e76d10f3c289e",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:17:03Z"
           }
         }
       }
@@ -876,9 +876,19 @@
   "freegamestore-online/musicbot": {
     "meta": {
       "created_at": "2026-05-27T14:50:52Z",
-      "pushed_at": "2026-07-14T00:56:32Z"
+      "pushed_at": "2026-10-05T07:27:36Z"
     },
     "commits": [
+      {
+        "sha": "3804cd36de8b768be9d24e56bc4957819737bcd2",
+        "html_url": "https://github.com/freegamestore-online/musicbot/commit/3804cd36de8b768be9d24e56bc4957819737bcd2",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:27:33Z"
+          }
+        }
+      },
       {
         "sha": "083e042f9b22ff8816426b24b946a773f442e7b3",
         "html_url": "https://github.com/freegamestore-online/musicbot/commit/083e042f9b22ff8816426b24b946a773f442e7b3",
@@ -898,25 +908,25 @@
             "date": "2026-07-14T00:54:06Z"
           }
         }
-      },
-      {
-        "sha": "3043940d6887e20ec81f227ff481cb6957153809",
-        "html_url": "https://github.com/freegamestore-online/musicbot/commit/3043940d6887e20ec81f227ff481cb6957153809",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:19:41Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/war": {
     "meta": {
       "created_at": "2026-05-19T00:05:08Z",
-      "pushed_at": "2026-07-06T23:43:26Z"
+      "pushed_at": "2026-10-05T07:36:27Z"
     },
     "commits": [
+      {
+        "sha": "0e8228abd9be524898a2a421eb66a3be6fd0bf94",
+        "html_url": "https://github.com/freegamestore-online/war/commit/0e8228abd9be524898a2a421eb66a3be6fd0bf94",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:36:25Z"
+          }
+        }
+      },
       {
         "sha": "0e8411d0c6b07a8f6401d8b7a12a14e61effabf1",
         "html_url": "https://github.com/freegamestore-online/war/commit/0e8411d0c6b07a8f6401d8b7a12a14e61effabf1",
@@ -936,25 +946,25 @@
             "date": "2026-06-04T06:21:32Z"
           }
         }
-      },
-      {
-        "sha": "e917df110244c88ec0c2fd7d398ea84588f6d622",
-        "html_url": "https://github.com/freegamestore-online/war/commit/e917df110244c88ec0c2fd7d398ea84588f6d622",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:21:01Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordle": {
     "meta": {
       "created_at": "2026-05-04T10:14:20Z",
-      "pushed_at": "2026-06-04T06:21:44Z"
+      "pushed_at": "2026-10-05T07:38:19Z"
     },
     "commits": [
+      {
+        "sha": "41757fc7fa1f487942068cb237acbf5af893e790",
+        "html_url": "https://github.com/freegamestore-online/wordle/commit/41757fc7fa1f487942068cb237acbf5af893e790",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:38:16Z"
+          }
+        }
+      },
       {
         "sha": "3f15b66e625ecf03653e57e68b9aaa76fc17436a",
         "html_url": "https://github.com/freegamestore-online/wordle/commit/3f15b66e625ecf03653e57e68b9aaa76fc17436a",
@@ -974,25 +984,25 @@
             "date": "2026-06-01T23:20:41Z"
           }
         }
-      },
-      {
-        "sha": "7cc578f48b596ccc354efe3a3eeffda2ab116b79",
-        "html_url": "https://github.com/freegamestore-online/wordle/commit/7cc578f48b596ccc354efe3a3eeffda2ab116b79",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:19:34Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/pixelcode": {
     "meta": {
       "created_at": "2026-05-27T14:50:59Z",
-      "pushed_at": "2026-07-06T22:54:38Z"
+      "pushed_at": "2026-10-05T07:28:47Z"
     },
     "commits": [
+      {
+        "sha": "cfebdf426a0bdcb485fcd421b1d07bdc5d43d708",
+        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/cfebdf426a0bdcb485fcd421b1d07bdc5d43d708",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:28:44Z"
+          }
+        }
+      },
       {
         "sha": "e76e583c1257181a499dd6603c396e995b2b2d09",
         "html_url": "https://github.com/freegamestore-online/pixelcode/commit/e76e583c1257181a499dd6603c396e995b2b2d09",
@@ -1012,25 +1022,25 @@
             "date": "2026-06-01T23:19:50Z"
           }
         }
-      },
-      {
-        "sha": "dba75c3cbc5b223388ce8f4491f88be753544585",
-        "html_url": "https://github.com/freegamestore-online/pixelcode/commit/dba75c3cbc5b223388ce8f4491f88be753544585",
-        "commit": {
-          "message": "fix: add Fraunces brand display font (compliance brand-fonts check)\n\nThe game loaded Manrope but not Fraunces, failing the platform\nbrand-fonts compliance check. Added Fraunces to the Google Fonts link.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-28T02:33:40Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/solitaire": {
     "meta": {
       "created_at": "2026-05-04T10:14:12Z",
-      "pushed_at": "2026-07-06T23:21:42Z"
+      "pushed_at": "2026-10-05T07:31:30Z"
     },
     "commits": [
+      {
+        "sha": "e033a7d66ca16433ed999194f235715b69d65b90",
+        "html_url": "https://github.com/freegamestore-online/solitaire/commit/e033a7d66ca16433ed999194f235715b69d65b90",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:31:28Z"
+          }
+        }
+      },
       {
         "sha": "2a46ea4ff306cacc7fc13d9d49c7fb4a61b30ade",
         "html_url": "https://github.com/freegamestore-online/solitaire/commit/2a46ea4ff306cacc7fc13d9d49c7fb4a61b30ade",
@@ -1050,25 +1060,25 @@
             "date": "2026-06-04T06:10:37Z"
           }
         }
-      },
-      {
-        "sha": "66cdc547ddbe483f06d2382fd626b2adda69d461",
-        "html_url": "https://github.com/freegamestore-online/solitaire/commit/66cdc547ddbe483f06d2382fd626b2adda69d461",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:20:17Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/spaceinvaders": {
     "meta": {
       "created_at": "2026-05-18T23:17:56Z",
-      "pushed_at": "2026-06-04T06:21:05Z"
+      "pushed_at": "2026-10-05T07:32:16Z"
     },
     "commits": [
+      {
+        "sha": "dc97269eaf306ed60e4e730afe63c5f736635b3e",
+        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/dc97269eaf306ed60e4e730afe63c5f736635b3e",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:32:13Z"
+          }
+        }
+      },
       {
         "sha": "8b41c322a07ad4600370533747febc53f649214a",
         "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/8b41c322a07ad4600370533747febc53f649214a",
@@ -1088,25 +1098,25 @@
             "date": "2026-06-01T23:20:20Z"
           }
         }
-      },
-      {
-        "sha": "48197f1399a27f834c5e3935a5fb1e10d907a638",
-        "html_url": "https://github.com/freegamestore-online/spaceinvaders/commit/48197f1399a27f834c5e3935a5fb1e10d907a638",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:52Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/riichi": {
     "meta": {
       "created_at": "2026-05-19T02:31:10Z",
-      "pushed_at": "2026-06-04T06:20:44Z"
+      "pushed_at": "2026-10-05T07:02:50Z"
     },
     "commits": [
+      {
+        "sha": "d24fad5e4a46df4af3715a496dcbca56be2c38a4",
+        "html_url": "https://github.com/freegamestore-online/riichi/commit/d24fad5e4a46df4af3715a496dcbca56be2c38a4",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:02:46Z"
+          }
+        }
+      },
       {
         "sha": "b452fd18a999e42f0e17e91569cf34e102ddbafa",
         "html_url": "https://github.com/freegamestore-online/riichi/commit/b452fd18a999e42f0e17e91569cf34e102ddbafa",
@@ -1126,25 +1136,25 @@
             "date": "2026-05-27T12:18:39Z"
           }
         }
-      },
-      {
-        "sha": "40109bb605c22f1c456fe1c4f124851c54c2ad08",
-        "html_url": "https://github.com/freegamestore-online/riichi/commit/40109bb605c22f1c456fe1c4f124851c54c2ad08",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:34Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/roboclean": {
     "meta": {
       "created_at": "2026-05-27T14:51:03Z",
-      "pushed_at": "2026-06-01T23:20:07Z"
+      "pushed_at": "2026-10-05T07:30:44Z"
     },
     "commits": [
+      {
+        "sha": "0176a44127a855144b04723a46ee19d8937268a9",
+        "html_url": "https://github.com/freegamestore-online/roboclean/commit/0176a44127a855144b04723a46ee19d8937268a9",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:30:41Z"
+          }
+        }
+      },
       {
         "sha": "639eda3ac0c91ce1538ddf344167e203de80a611",
         "html_url": "https://github.com/freegamestore-online/roboclean/commit/639eda3ac0c91ce1538ddf344167e203de80a611",
@@ -1162,16 +1172,6 @@
           "message": "fix: add Fraunces brand display font (compliance brand-fonts check)\n\nThe game loaded Manrope but not Fraunces, failing the platform\nbrand-fonts compliance check. Added Fraunces to the Google Fonts link.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-05-28T02:33:40Z"
-          }
-        }
-      },
-      {
-        "sha": "7c30291a2cf64b8abd6139c541ed60bd8b1f2a7e",
-        "html_url": "https://github.com/freegamestore-online/roboclean/commit/7c30291a2cf64b8abd6139c541ed60bd8b1f2a7e",
-        "commit": {
-          "message": "fix: add PWA setup (vite-plugin-pwa, manifest, icons, meta tags)\n\nRequired for FGS compliance and deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T23:45:52Z"
           }
         }
       }
@@ -1218,9 +1218,19 @@
   "freegamestore-online/reversi": {
     "meta": {
       "created_at": "2026-05-18T23:16:14Z",
-      "pushed_at": "2026-07-06T22:54:51Z"
+      "pushed_at": "2026-10-05T07:30:18Z"
     },
     "commits": [
+      {
+        "sha": "ad612885ea54532f0e2055bb57fa4c303e20ee65",
+        "html_url": "https://github.com/freegamestore-online/reversi/commit/ad612885ea54532f0e2055bb57fa4c303e20ee65",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:30:15Z"
+          }
+        }
+      },
       {
         "sha": "b8965eae0124c28405c67a224d4b5374ddaacd2c",
         "html_url": "https://github.com/freegamestore-online/reversi/commit/b8965eae0124c28405c67a224d4b5374ddaacd2c",
@@ -1240,25 +1250,25 @@
             "date": "2026-06-04T06:20:37Z"
           }
         }
-      },
-      {
-        "sha": "809ed1c3e4d9f18734569cb62225b025a8130b69",
-        "html_url": "https://github.com/freegamestore-online/reversi/commit/809ed1c3e4d9f18734569cb62225b025a8130b69",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:29Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/puzzle": {
     "meta": {
       "created_at": "2026-05-03T02:32:55Z",
-      "pushed_at": "2026-06-04T06:20:29Z"
+      "pushed_at": "2026-10-05T07:29:33Z"
     },
     "commits": [
+      {
+        "sha": "b4e15d40da7d24afc01a0627663826d5b3c79260",
+        "html_url": "https://github.com/freegamestore-online/puzzle/commit/b4e15d40da7d24afc01a0627663826d5b3c79260",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:29:30Z"
+          }
+        }
+      },
       {
         "sha": "adb62ab6da62394cfbf84d927b71349d260e3eb7",
         "html_url": "https://github.com/freegamestore-online/puzzle/commit/adb62ab6da62394cfbf84d927b71349d260e3eb7",
@@ -1278,25 +1288,25 @@
             "date": "2026-05-27T12:18:15Z"
           }
         }
-      },
-      {
-        "sha": "591847ccea9914fec874b895cfa634c5d8ea15f4",
-        "html_url": "https://github.com/freegamestore-online/puzzle/commit/591847ccea9914fec874b895cfa634c5d8ea15f4",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:54Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/sudoku": {
     "meta": {
       "created_at": "2026-05-04T09:58:03Z",
-      "pushed_at": "2026-06-04T06:21:15Z"
+      "pushed_at": "2026-10-05T07:33:02Z"
     },
     "commits": [
+      {
+        "sha": "621d6ff959ae47532a8c99311d53276e8c1f4d78",
+        "html_url": "https://github.com/freegamestore-online/sudoku/commit/621d6ff959ae47532a8c99311d53276e8c1f4d78",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:32:59Z"
+          }
+        }
+      },
       {
         "sha": "47ffe492383f05a71075f5ed090cc55a50c771ed",
         "html_url": "https://github.com/freegamestore-online/sudoku/commit/47ffe492383f05a71075f5ed090cc55a50c771ed",
@@ -1314,16 +1324,6 @@
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-06-01T23:20:26Z"
-          }
-        }
-      },
-      {
-        "sha": "ab202df06ccc5c2f7d2357d46b9984b04167a73c",
-        "html_url": "https://github.com/freegamestore-online/sudoku/commit/ab202df06ccc5c2f7d2357d46b9984b04167a73c",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:59Z"
           }
         }
       }
@@ -1370,9 +1370,19 @@
   "freegamestore-online/simon": {
     "meta": {
       "created_at": "2026-05-04T10:14:22Z",
-      "pushed_at": "2026-06-04T06:20:49Z"
+      "pushed_at": "2026-10-05T07:03:56Z"
     },
     "commits": [
+      {
+        "sha": "a187549c8a7ad820684e473231f792570d529104",
+        "html_url": "https://github.com/freegamestore-online/simon/commit/a187549c8a7ad820684e473231f792570d529104",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:03:53Z"
+          }
+        }
+      },
       {
         "sha": "f5494379de09c28e2b50f58572970cf467a286f8",
         "html_url": "https://github.com/freegamestore-online/simon/commit/f5494379de09c28e2b50f58572970cf467a286f8",
@@ -1390,16 +1400,6 @@
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-06-01T23:20:08Z"
-          }
-        }
-      },
-      {
-        "sha": "dcf56868593608c4608dcbd848895a0149e83f34",
-        "html_url": "https://github.com/freegamestore-online/simon/commit/dcf56868593608c4608dcbd848895a0149e83f34",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:37Z"
           }
         }
       }
@@ -1484,9 +1484,19 @@
   "freegamestore-online/spaceshooter": {
     "meta": {
       "created_at": "2026-05-04T09:48:41Z",
-      "pushed_at": "2026-06-04T06:21:10Z"
+      "pushed_at": "2026-10-05T06:18:26Z"
     },
     "commits": [
+      {
+        "sha": "cc93408cd193504807129776b97268a45e7f482f",
+        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/cc93408cd193504807129776b97268a45e7f482f",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:18:23Z"
+          }
+        }
+      },
       {
         "sha": "fb619a59401859dd3b1a583ab1f8ca8322285956",
         "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/fb619a59401859dd3b1a583ab1f8ca8322285956",
@@ -1506,25 +1516,25 @@
             "date": "2026-06-01T23:20:23Z"
           }
         }
-      },
-      {
-        "sha": "121f309e85a5e95093bd10cd85bec680c66320af",
-        "html_url": "https://github.com/freegamestore-online/spaceshooter/commit/121f309e85a5e95093bd10cd85bec680c66320af",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:56Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/turtlecode": {
     "meta": {
       "created_at": "2026-05-27T14:51:06Z",
-      "pushed_at": "2026-06-01T23:20:37Z"
+      "pushed_at": "2026-10-05T07:35:41Z"
     },
     "commits": [
+      {
+        "sha": "00107a26b84fa6a13b75875c99dd3de453bfa7ac",
+        "html_url": "https://github.com/freegamestore-online/turtlecode/commit/00107a26b84fa6a13b75875c99dd3de453bfa7ac",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:35:39Z"
+          }
+        }
+      },
       {
         "sha": "e949368f61aa547965ddc9b54e0882a2a7f2aacf",
         "html_url": "https://github.com/freegamestore-online/turtlecode/commit/e949368f61aa547965ddc9b54e0882a2a7f2aacf",
@@ -1544,25 +1554,25 @@
             "date": "2026-05-28T02:33:40Z"
           }
         }
-      },
-      {
-        "sha": "7ab65024991ee641f960c7e7aa918db2f00aa28c",
-        "html_url": "https://github.com/freegamestore-online/turtlecode/commit/7ab65024991ee641f960c7e7aa918db2f00aa28c",
-        "commit": {
-          "message": "fix: add PWA setup (vite-plugin-pwa, manifest, icons, meta tags)\n\nRequired for FGS compliance and deploy.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T23:45:54Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tictactoe": {
     "meta": {
       "created_at": "2026-05-18T22:50:34Z",
-      "pushed_at": "2026-06-04T06:21:30Z"
+      "pushed_at": "2026-10-05T06:17:54Z"
     },
     "commits": [
+      {
+        "sha": "87a68e65d987f7ac8f5489f1c50d5b47b08641c0",
+        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/87a68e65d987f7ac8f5489f1c50d5b47b08641c0",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:17:51Z"
+          }
+        }
+      },
       {
         "sha": "491c79cd9e53f719245f0ded44059db3728e0a0b",
         "html_url": "https://github.com/freegamestore-online/tictactoe/commit/491c79cd9e53f719245f0ded44059db3728e0a0b",
@@ -1582,25 +1592,25 @@
             "date": "2026-05-27T12:19:19Z"
           }
         }
-      },
-      {
-        "sha": "e105e5cc3630a422969543aa99f054a02475b9a7",
-        "html_url": "https://github.com/freegamestore-online/tictactoe/commit/e105e5cc3630a422969543aa99f054a02475b9a7",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:19:34Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/wordsearch": {
     "meta": {
       "created_at": "2026-05-04T10:38:51Z",
-      "pushed_at": "2026-06-04T06:21:50Z"
+      "pushed_at": "2026-10-05T07:39:25Z"
     },
     "commits": [
+      {
+        "sha": "b2b9a0204aa90da57327428f4697c3d9141a9be2",
+        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/b2b9a0204aa90da57327428f4697c3d9141a9be2",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:39:22Z"
+          }
+        }
+      },
       {
         "sha": "72ded7fe0ef5c5d338a5c75c9372b68e5d474ad2",
         "html_url": "https://github.com/freegamestore-online/wordsearch/commit/72ded7fe0ef5c5d338a5c75c9372b68e5d474ad2",
@@ -1618,16 +1628,6 @@
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-06-01T23:20:44Z"
-          }
-        }
-      },
-      {
-        "sha": "281af40acb594fb0913c42178665b5bb6e757f55",
-        "html_url": "https://github.com/freegamestore-online/wordsearch/commit/281af40acb594fb0913c42178665b5bb6e757f55",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:19:38Z"
           }
         }
       }
@@ -1674,9 +1674,19 @@
   "freegamestore-online/memorymatch": {
     "meta": {
       "created_at": "2026-05-06T07:53:20Z",
-      "pushed_at": "2026-06-04T06:19:58Z"
+      "pushed_at": "2026-10-05T06:57:12Z"
     },
     "commits": [
+      {
+        "sha": "88b5dc9ad7863bc8b0d2e398e2a22dc55c88d46c",
+        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/88b5dc9ad7863bc8b0d2e398e2a22dc55c88d46c",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:57:08Z"
+          }
+        }
+      },
       {
         "sha": "16c10a767b047b83a03e62b63723c43d910a718b",
         "html_url": "https://github.com/freegamestore-online/memorymatch/commit/16c10a767b047b83a03e62b63723c43d910a718b",
@@ -1696,25 +1706,25 @@
             "date": "2026-05-27T12:17:15Z"
           }
         }
-      },
-      {
-        "sha": "38f88a8b884cbdbbd2647bf98c2373415d8e1838",
-        "html_url": "https://github.com/freegamestore-online/memorymatch/commit/38f88a8b884cbdbbd2647bf98c2373415d8e1838",
-        "commit": {
-          "message": "fix: bump SDK to 0.14.0, fix branding to FreeGameStore\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-26T04:18:34Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/tanks": {
     "meta": {
       "created_at": "2026-05-19T00:51:54Z",
-      "pushed_at": "2026-06-04T06:21:20Z"
+      "pushed_at": "2026-10-05T07:34:08Z"
     },
     "commits": [
+      {
+        "sha": "b615def039b1de6ee585a394636a36c573273f96",
+        "html_url": "https://github.com/freegamestore-online/tanks/commit/b615def039b1de6ee585a394636a36c573273f96",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:34:05Z"
+          }
+        }
+      },
       {
         "sha": "d3056db8ed89a3d0ea83dbd4f5523371d8c406bb",
         "html_url": "https://github.com/freegamestore-online/tanks/commit/d3056db8ed89a3d0ea83dbd4f5523371d8c406bb",
@@ -1732,16 +1742,6 @@
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-06-01T23:20:29Z"
-          }
-        }
-      },
-      {
-        "sha": "0269e543171b139b2cb4af00341b30e04de176bd",
-        "html_url": "https://github.com/freegamestore-online/tanks/commit/0269e543171b139b2cb4af00341b30e04de176bd",
-        "commit": {
-          "message": "fix: make Level 2 passable + larger, reliable touch controls\n\n- Level 2 row 7 steel line (.S.S.S.S.S.S.) had only 1-tile gaps; tanks\n  are 2 tiles wide, so it bisected the field and was unwinnable. Opened\n  two 3-wide passages (.S...S.S...S.).\n- D-pad and Fire buttons enlarged; switched touchAction to \"none\" and\n  added pointer capture so presses near edges/corners register reliably\n  and held directions don't drop on finger jitter.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:11:12Z"
           }
         }
       }
@@ -1826,9 +1826,19 @@
   "freegamestore-online/tetris": {
     "meta": {
       "created_at": "2026-05-04T05:54:37Z",
-      "pushed_at": "2026-07-04T03:32:04Z"
+      "pushed_at": "2026-10-05T07:34:55Z"
     },
     "commits": [
+      {
+        "sha": "6986c5ec65d2c3cb1f42b2e9392126fcb01c19c6",
+        "html_url": "https://github.com/freegamestore-online/tetris/commit/6986c5ec65d2c3cb1f42b2e9392126fcb01c19c6",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:34:52Z"
+          }
+        }
+      },
       {
         "sha": "1276991b4f295ccacfe900b0770266bfd0203ccd",
         "html_url": "https://github.com/freegamestore-online/tetris/commit/1276991b4f295ccacfe900b0770266bfd0203ccd",
@@ -1848,25 +1858,25 @@
             "date": "2026-06-04T06:21:22Z"
           }
         }
-      },
-      {
-        "sha": "a36b351a9901f1d3848db23cb3fe11d7309027fc",
-        "html_url": "https://github.com/freegamestore-online/tetris/commit/a36b351a9901f1d3848db23cb3fe11d7309027fc",
-        "commit": {
-          "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-01T23:20:32Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/minesweeper": {
     "meta": {
       "created_at": "2026-05-04T06:07:34Z",
-      "pushed_at": "2026-10-05T03:10:32Z"
+      "pushed_at": "2026-10-05T07:26:29Z"
     },
     "commits": [
+      {
+        "sha": "fb131366d4ad79aef094a83494b5e209afd0a4a4",
+        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/fb131366d4ad79aef094a83494b5e209afd0a4a4",
+        "commit": {
+          "message": "ci: repoint to ci-workflows repo (#123)\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:26:26Z"
+          }
+        }
+      },
       {
         "sha": "7a5b66f44d058b101d88a003178b2f3c5d622e2b",
         "html_url": "https://github.com/freegamestore-online/minesweeper/commit/7a5b66f44d058b101d88a003178b2f3c5d622e2b",
@@ -1884,16 +1894,6 @@
           "message": "ci: repoint to ci-workflows repo\n\nRepoint workflow reference from freegamestore-online/freegamestore to\nthe dedicated freegamestore-online/ci-workflows repository, decoupling\nCI logic from the storefront.\n\nCo-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>",
           "author": {
             "date": "2026-10-05T03:09:29Z"
-          }
-        }
-      },
-      {
-        "sha": "06997c98b21aa19e17f1e2500846de5c5d46fbd0",
-        "html_url": "https://github.com/freegamestore-online/minesweeper/commit/06997c98b21aa19e17f1e2500846de5c5d46fbd0",
-        "commit": {
-          "message": "fix: sync pnpm-lock with @freegamestore/games ^0.14.0 bump\n\nCI install (--frozen-lockfile) failed since the 0.14.0 SDK bump updated\nweb/package.json but not pnpm-lock.yaml — blocking build+deploy for ~2\nweeks. Regenerate the lockfile to unblock the pipeline.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-06-04T06:20:00Z"
           }
         }
       }
@@ -2016,9 +2016,19 @@
   "freegamestore-online/racing": {
     "meta": {
       "created_at": "2026-05-04T06:53:40Z",
-      "pushed_at": "2026-06-04T06:20:35Z"
+      "pushed_at": "2026-10-05T07:01:42Z"
     },
     "commits": [
+      {
+        "sha": "fdaff68a3df08c6ae93b407f1e2b5e959f72f0c1",
+        "html_url": "https://github.com/freegamestore-online/racing/commit/fdaff68a3df08c6ae93b407f1e2b5e959f72f0c1",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T07:01:39Z"
+          }
+        }
+      },
       {
         "sha": "92feea562b4377e02f465711b7a8c32fe6af2035",
         "html_url": "https://github.com/freegamestore-online/racing/commit/92feea562b4377e02f465711b7a8c32fe6af2035",
@@ -2038,25 +2048,25 @@
             "date": "2026-06-01T23:20:02Z"
           }
         }
-      },
-      {
-        "sha": "2a82f008bd7288d545330217c18ff7a7c5c166df",
-        "html_url": "https://github.com/freegamestore-online/racing/commit/2a82f008bd7288d545330217c18ff7a7c5c166df",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:25Z"
-          }
-        }
       }
     ]
   },
   "freegamestore-online/snake": {
     "meta": {
       "created_at": "2026-05-04T06:07:31Z",
-      "pushed_at": "2026-06-04T06:20:59Z"
+      "pushed_at": "2026-10-05T06:17:45Z"
     },
     "commits": [
+      {
+        "sha": "8baf7f6a601d5e263c6e93cb65a8ec3434f987e1",
+        "html_url": "https://github.com/freegamestore-online/snake/commit/8baf7f6a601d5e263c6e93cb65a8ec3434f987e1",
+        "commit": {
+          "message": "ci: repoint game-ci.yml to freegamestore-online/ci-workflows\n\nRefs freegamestore-online/platform#123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-10-05T06:17:42Z"
+          }
+        }
+      },
       {
         "sha": "6d70863305338379ab4112362b3f8b5051a57858",
         "html_url": "https://github.com/freegamestore-online/snake/commit/6d70863305338379ab4112362b3f8b5051a57858",
@@ -2074,16 +2084,6 @@
           "message": "fix: disable pinch/double-tap zoom on mobile\n\nAdd user-scalable=no to the viewport meta so taps during gameplay don't\naccidentally zoom the page.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
           "author": {
             "date": "2026-06-01T23:20:14Z"
-          }
-        }
-      },
-      {
-        "sha": "dedcb78fc5ab30081c3b7c4da70cb316c7c049b5",
-        "html_url": "https://github.com/freegamestore-online/snake/commit/dedcb78fc5ab30081c3b7c4da70cb316c7c049b5",
-        "commit": {
-          "message": "fix: add .env to gitignore, update SKILLS.md pointer\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
-          "author": {
-            "date": "2026-05-27T12:18:45Z"
           }
         }
       }
